@@ -1,13 +1,14 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'node:20.10.0-alpine3.19' 
+            args '-p 3000:3000' 
+        }
+    }
     stages {
         stage('Build') { 
             steps {
-                sh '''
-                #!/bin/bash
-                cd /home/obio/obio/obio-ui
-                npm install
-                ''' 
+                sh 'npm install' 
             }
         }
     }
