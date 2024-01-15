@@ -4,7 +4,7 @@ describe('My First Test', function () {
   })
 
   it('visits the app root url', function () {
-    browser.assert.textContains('.green', 'OBIO')
+    browser.assert.textContains('.green', 'OBiO')
   })
 
   after((browser) => browser.end())

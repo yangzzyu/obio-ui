@@ -1,33 +1,44 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
+import FooterView from "@/views/FooterView.vue";
 </script>
 
 <template>
   <header>
-    <img
+    <!-- <img
       alt="Vue logo"
       class="logo"
       src="@/assets/logo.svg"
       width="125"
       height="125"
-    />
+    /> -->
 
     <div class="wrapper">
-      <HelloWorld msg="OBIO" />
+      <HelloWorld msg="OBiO" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/about">About Us</RouterLink>
+        <RouterLink to="/sys">Laboratory Sciences</RouterLink>
+        <RouterLink to="/cdmo">CDMO Solutions</RouterLink>
+        <RouterLink to="/cx">Innovations</RouterLink>
+        <RouterLink to="/news">Insights</RouterLink>
+        <RouterLink to="/investor-relations">Investor Relations</RouterLink>
+        <RouterLink to="/contact">Contact Us</RouterLink>
       </nav>
     </div>
   </header>
 
   <RouterView />
+
+  <footer class="mb-3">
+    <FooterView />
+  </footer>
 </template>
 
-<style scoped>
-header {
+<style lang="scss" scoped>
+/* header {
   line-height: 1.5;
   max-height: 100vh;
 }
@@ -35,7 +46,7 @@ header {
 .logo {
   display: block;
   margin: 0 auto 2rem;
-}
+} */
 
 nav {
   width: 100%;
@@ -60,6 +71,11 @@ nav a {
 
 nav a:first-of-type {
   border: 0;
+}
+
+footer {
+  max-height: 100vh;
+  border: 1px solid var(--color-border);
 }
 
 @media (min-width: 1024px) {
