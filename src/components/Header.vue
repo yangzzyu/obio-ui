@@ -15,8 +15,10 @@
         <div class="menu-wrapper">
           <el-menu
             :ellipsis="false"
+            default-active="/"
             mode="horizontal"
             background-color="transparent"
+            router
             >
             <!-- style="width: 600px"
             :popper-offset="60" -->
@@ -24,8 +26,8 @@
             <!-- text-color="#ffffff"
           active-text-color="#ffffff" -->
             <!-- @select="handleSelect" -->
-            <el-menu-item index="1">Home</el-menu-item>
-            <el-menu-item index="1-3">About</el-menu-item>
+            <el-menu-item index="/">Home</el-menu-item>
+            <el-menu-item index="/about">About</el-menu-item>
             <el-sub-menu index="2">
               <template #title>Laboratory Sciences</template>
               <el-menu-item index="2-1">item one</el-menu-item>

@@ -1,53 +1,71 @@
 <template>
-  <div class="footer_container" :style="footerHeight + 'px'">
-    <div class="footer_content">
-      <div class="footer_logo footer-content-column">
-        <div class="logo-container">
-          <img :src="logo_url" alt="" />
-          <div class="logo-text">
-            <p class="text1">Xanadu</p>
-            <p class="text2">INTERNET COMPANY</p>
-          </div>
-        </div>
-        <h2>© 2020-2021 Xanadu&nbsp;科技有限公司</h2>
-        <h2>X公网安备 xxxxxxxxxxxxxx号 I ICP备xxxxxxxx号-1</h2>
-      </div>
-      <div class="about_us footer-content-column">
-        <h2>关于我们</h2>
-        <ul class="about_list">
-          <li>
-            <router-link to="/job" target="_blank">企业文化</router-link>
-          </li>
-        </ul>
-      </div>
-      <div class="contact_us footer-content-column">
-        <h2>联系我们</h2>
-        <ul class="contact_list">
-          <li v-for="(item, index) in contact_way" :key="index">
-            <a :href="'mailto:' + item.email">{{ item.name }}</a>
-          </li>
-        </ul>
-      </div>
-      <div class="focus_us footer-content-column">
-        <h2>实时动态与招聘信息，扫码关注我们</h2>
-        <div class="media">
-          <div
-            :class="item.name"
-            v-for="(item, index) in focus_icon"
-            :key="index"
+  <div class="foot-wrap">
+    <div class="container">
+      <el-col :xs="24" :sm="16" :md="18" :lg="20" :xl="22" class="container">
+        <el-row class="row">
+          <el-col :sm="6" :xs="24">
+            <div class="foot-log">
+              <img
+                src="https://www.obio-tech.com/public/uploads/20230630/a4e158c16a5cb2bf4e6506a46adf9c57.png"
+                alt="OBiO Technology (Shanghai) Corp., Ltd."
+              />
+            </div>
+            <div class="p font-size18 fontf2"></div
+          ></el-col>
+          <el-col :sm="6" :xs="12"
+            ><dl class="dl-foot-nav">
+              <dt class="font-size20"><a href="/cn/home/about">About Us</a></dt>
+              <dt class="font-size20">
+                <a href="/cn/home/sys">Laboratory Services</a>
+              </dt>
+              <dt class="font-size20"><a href="/cn/home/news">Insights</a></dt>
+              <dt class="font-size20"><a href="/cn/home/cx">Innovations</a></dt>
+              <dt class="font-size20">
+                <a href="https://www.obiosh.com/tzz/gg/" target="_blank"
+                  >Investor Relations</a
+                >
+              </dt>
+            </dl></el-col
           >
-            <el-popover placement="top" trigger="hover">
-              <template #reference>
-                <div class="qr_popover">
-                  <img :src="item.qr" alt="" />
-                  <h2>{{ item.info }}</h2>
-                </div>
-              </template>
-              <img :src="item.path" :alt="item.name" />
-            </el-popover>
-          </div>
-        </div>
-      </div>
+          <el-col :sm="6" :xs="12">
+            <dl class="dl-foot-nav">
+              <dt class="font-size20">
+                <a href="/cn/home/cdmo">CDMO Solutions</a>
+              </dt>
+              <dd><a href="/cn/home/cdmo/cid/862">Process Development</a></dd>
+              <dd><a href="/cn/home/cdmo/cid/868">cGMP Manufacturing</a></dd>
+              <dd>
+                <a href="/cn/home/cdmo/cid/875">Quality &amp; Regulatory</a>
+              </dd>
+              <dd><a href="/cn/home/cdmo/cid/879">Cold Chain Logistics</a></dd>
+              <dt class="font-size20">
+                <a xhref="/cn/home/ys/cid/861">Privacy Policy</a>
+              </dt>
+            </dl></el-col
+          >
+          <el-col :sm="6" :xs="24">
+            <div class="foot-link ub ">
+              <a
+                href="https://www.linkedin.com/company/obiosh"
+                target="_blank"
+                class="k1"
+              ></a>
+              <a
+                href="https://www.youtube.com/channel/UCFBQ9g386UNn_WluHw_GdOg"
+                target="_blank"
+                class="k2"
+              ></a>
+              <a
+                href="https://mp.weixin.qq.com/s/SeARdjD_mAN8Uft4hBwQgg"
+                target="_blank"
+                class="k3"
+              ></a></div
+          ></el-col>
+        </el-row>
+      </el-col>
+    </div>
+    <div class="icp">
+      © 2023 OBiO Technology (Shanghai) Corp., Ltd. All Rights Reserved
     </div>
   </div>
 </template>
@@ -116,11 +134,6 @@ onMounted(() => {
 });
 </script>
 <style lang="scss" scoped>
-* {
-  margin: 0;
-  padding: 0;
-}
-
 h2 {
   font-size: 100%;
   font-weight: 400;

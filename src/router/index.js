@@ -1,4 +1,14 @@
+/*
+ * @Author: yangyu 1431330771@qq.com
+ * @Date: 2024-01-18 08:59:26
+ * @LastEditors: yangyu 1431330771@qq.com
+ * @LastEditTime: 2024-01-18 16:23:16
+ * @FilePath: \obio-ui\src\router\index.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import { createRouter, createWebHistory } from "vue-router";
+// 首页
+import Index from "@/views/index.vue";
 import HomeView from "@/views/HomeView.vue";
 import AboutView from "@/views/AboutView.vue";
 import LabSciencesView from "@/views/LabSciencesView.vue";
@@ -13,47 +23,52 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "home",
-      component: HomeView,
-    },
-    {
-      path: "/about",
-      name: "about",
-      component: AboutView,
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      // component: () => import("../views/AboutView.vue"),
-    },
-    {
-      path: "/sys",
-      name: "lab-sciences",
-      component: LabSciencesView,
-    },
-    {
-      path: "/cdmo",
-      name: "cdmo",
-      component: CdmoView,
-    },
-    {
-      path: "/cx",
-      name: "innovations",
-      component: InnoView,
-    },
-    {
-      path: "/news",
-      name: "insights",
-      component: InsightsView,
-    },
-    {
-      path: "/investor-relations",
-      name: "investor-relations",
-      component: InvestorRelationsView,
-    },
-    {
-      path: "/contact",
-      name: "contact",
-      component: ContactView,
+      redirect: '/home', 
+      name: "首页",
+      component: Index,
+      children: [
+        {
+          
+          path: "/home",
+          name: "home",
+          component: HomeView,
+        },
+        {
+          path: "/about",
+          name: "about",
+          component: AboutView,
+        },
+        {
+          path: "/sys",
+          name: "lab-sciences",
+          component: LabSciencesView,
+        },
+        {
+          path: "/cdmo",
+          name: "cdmo",
+          component: CdmoView,
+        },
+        {
+          path: "/cx",
+          name: "innovations",
+          component: InnoView,
+        },
+        {
+          path: "/news",
+          name: "insights",
+          component: InsightsView,
+        },
+        {
+          path: "/investor-relations",
+          name: "investor-relations",
+          component: InvestorRelationsView,
+        },
+        {
+          path: "/contact",
+          name: "contact",
+          component: ContactView,
+        },
+      ],
     },
   ],
 });
