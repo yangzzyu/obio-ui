@@ -1,5 +1,34 @@
+<!--
+ * @Author: yangyu 1431330771@qq.com
+ * @Date: 2024-01-18 08:59:26
+ * @LastEditors: yangyu 1431330771@qq.com
+ * @LastEditTime: 2024-01-18 17:18:20
+ * @FilePath: \obio-ui\src\views\AboutView.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <template>
   <div class="about">
+    <div class="focus">
+      <div class="hidden-xs">
+        <img
+          src="https://www.obio-tech.com/public/uploads/20220328/ad95627baa62ec4288fe6823b9571ee6.jpg"
+          alt="About Us"
+        />
+      </div>
+      <div class="visible-xs-block">
+        <img
+          src="https://www.obio-tech.com/public/uploads/20220401/fbacb8fb46400e71bf84d29d77c57ea4.jpg"
+          alt="About Us"
+        />
+      </div>
+      <div class="txt ub ub-ac">
+        <div class="ub-f1">
+          <div class="container">
+            <div class="fontf7 font-size70 focus-title">About Us</div>
+          </div>
+        </div>
+      </div>
+    </div>
     <h1 class="mt-3">About Us</h1>
     <h3 class="my-3">
       OBiO Tech is committed to becoming a global leader in gene and cell

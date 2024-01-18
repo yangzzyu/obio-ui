@@ -11,15 +11,17 @@
             <img :src="logo_img[1].path" alt="logo" v-else />
           </router-link>
         </div>
+      
         <!-- :default-active="activeIndex" -->
         <div class="menu-wrapper">
+         
           <el-menu
             :ellipsis="false"
-            default-active="/"
+            :default-active="activeIndex"
             mode="horizontal"
             background-color="transparent"
             router
-            >
+          >
             <!-- style="width: 600px"
             :popper-offset="60" -->
             <!-- text-color="#ffffff" -->
@@ -27,7 +29,20 @@
           active-text-color="#ffffff" -->
             <!-- @select="handleSelect" -->
             <el-menu-item index="/">Home</el-menu-item>
-            <el-menu-item index="/about">About</el-menu-item>
+            <el-sub-menu index="/about">
+              <template #title>
+                <div @click="router.push('/about')">About Us</div>
+              </template>
+              <el-menu-item index="/about">item one</el-menu-item>
+              <el-menu-item index="2-2">item two</el-menu-item>
+              <el-menu-item index="2-3">item three</el-menu-item>
+              <el-sub-menu index="2-4">
+                <template #title>item four</template>
+                <el-menu-item index="2-4-1">item one</el-menu-item>
+                <el-menu-item index="2-4-2">item two</el-menu-item>
+                <el-menu-item index="2-4-3">item three</el-menu-item>
+              </el-sub-menu>
+            </el-sub-menu>
             <el-sub-menu index="2">
               <template #title>Laboratory Sciences</template>
               <el-menu-item index="2-1">item one</el-menu-item>
@@ -60,15 +75,16 @@
   </div>
 </template>
 <script lang="ts" setup name="AwHeader">
+import { useRouter } from "vue-router";
 import { computed, onBeforeMount, ref, toRefs } from "vue";
 import { handleViteImages } from "@/utils";
 // import { mapState, useStore } from 'pinia'
-
+const router = useRouter();
+console.log(router,'router')
 // import type { MainStates } from '@/store'
 import mainStore from "@/stores/main";
 
-const activeIndex = ref("1");
-
+const activeIndex = computed(() => router.currentRoute.value.path);
 type NavItem = {
   title: string;
   path: string;
