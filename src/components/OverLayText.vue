@@ -1,0 +1,89 @@
+<!--
+ * @Author: yangyu 1431330771@qq.com
+ * @Date: 2024-01-17 14:08:07
+ * @LastEditors: yangyu 1431330771@qq.com
+ * @LastEditTime: 2024-01-17 15:37:03
+ * @FilePath: \obio-ui\src\components\OverLayText.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<template>
+  <div class="overlay">
+    <div class="overlay-content">
+      <div class="slogan sofiaBold">
+        <div class="slogan-title">{{ itemData.title }}</div>
+        <div class="slogan-subtitle">
+          {{ itemData.content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script lang="ts" setup name="">
+const props = defineProps({
+  itemData: {
+    type: Object,
+    default: () => {},
+  },
+});
+</script>
+<style lang="scss" scoped>
+.overlay {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  cursor: default;
+
+  //background: rgba(51,112,255,.2);
+  .slogan {
+    font-size: 54px;
+    line-height: 61px;
+    color: #fff;
+    margin-bottom: 67px;
+    letter-spacing: 1px;
+    font-weight: 800;
+
+    .slogan-subtitle {
+      //   letter-spacing: 16px;
+      //   text-indent: 16px;
+      font-size: 14px;
+      line-height: 17px;
+      opacity: 0.8;
+      margin-top: 14px;
+      position: relative;
+    }
+  }
+}
+
+// .slogan .slogan-subtitle:after,
+// .slogan .slogan-subtitle:before {
+//   content: "";
+//   display: block;
+//   width: 74px;
+//   height: 2px;
+//   position: absolute;
+//   top: calc(50% - 1px);
+//   background-image: linear-gradient(
+//     270deg,
+//     hsla(0, 0%, 100%, 0),
+//     #fff 47%,
+//     hsla(0, 0%, 100%, 0)
+//   );
+// }
+
+.slogan .slogan-subtitle:before {
+  left: -50px;
+}
+
+.slogan .slogan-subtitle:after {
+  right: -50px;
+}
+</style>

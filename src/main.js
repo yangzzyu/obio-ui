@@ -1,7 +1,18 @@
+/*
+ * @Author: yangyu 1431330771@qq.com
+ * @Date: 2024-01-17 09:07:47
+ * @LastEditors: yangyu 1431330771@qq.com
+ * @LastEditTime: 2024-01-17 15:08:00
+ * @FilePath: \obio-ui\src\main.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import "@/styles/main.css";
 
 import { createApp } from "vue";
 import { createPinia } from "pinia";
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+import 'animate.css/animate.min.css'
 
 import App from "./App.vue";
 import router from "./router";
@@ -22,5 +33,6 @@ const app = createApp(App);
 app.use(createPinia());
 app.use(router);
 app.use(vuetify);
+app.use(ElementPlus)
 
 app.mount("#app");

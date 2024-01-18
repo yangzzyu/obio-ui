@@ -1,19 +1,20 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
-import FooterView from "@/views/FooterView.vue";
+// import HelloWorld from "./components/HelloWorld.vue";
+// import FooterView from "@/views/FooterView.vue";
 </script>
 
 <template>
-  <header>
-    <!-- <img
+  <router-view></router-view>
+  <!-- <header> -->
+  <!-- <img
       alt="Vue logo"
       class="logo"
       src="@/assets/logo.svg"
       width="125"
       height="125"
     /> -->
-
+  <!-- 
     <div class="wrapper">
       <HelloWorld msg="OBiO" />
 
@@ -27,14 +28,14 @@ import FooterView from "@/views/FooterView.vue";
         <RouterLink to="/investor-relations">Investor Relations</RouterLink>
         <RouterLink to="/contact">Contact Us</RouterLink>
       </nav>
-    </div>
-  </header>
+    </div> -->
+  <!-- </header> -->
 
-  <RouterView />
+  <!-- <RouterView /> -->
 
-  <footer class="mb-3">
+  <!-- <footer class="mb-3">
     <FooterView />
-  </footer>
+  </footer> -->
 </template>
 
 <style lang="scss" scoped>
