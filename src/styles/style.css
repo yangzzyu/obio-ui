@@ -1681,7 +1681,7 @@ a:focus {
 }
 .CDMO-Solutions-wrap .section-2 .infor {
   padding-left: 20px;
-  margin: 50px 0;
+  /* margin: 50px 0; */
 }
 .CDMO-Solutions-wrap .section-2 .list {
   position: relative;
@@ -1698,7 +1698,7 @@ a:focus {
 }
 .CDMO-Solutions-wrap .section-2 .list .img1 {
   position: relative;
-  height: 229px;
+  height: 140px;
 }
 .CDMO-Solutions-wrap .section-2 .list .img1 .img-a {
   margin: 0 auto;
@@ -1711,7 +1711,7 @@ a:focus {
   position: absolute;
   top: 30px;
   left: 50%;
-  width: 147px;
+  width: 100px;
   height: 194px;
   background: url(@/assets/icons/bg10.png) no-repeat center top/100%;
   -webkit-transform: translateX(-50%);
@@ -1729,7 +1729,7 @@ a:focus {
   position: absolute;
   top: 30px;
   left: 50%;
-  max-width: 80%;
+  max-width: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
@@ -1744,7 +1744,7 @@ a:focus {
 }
 .CDMO-Solutions-wrap .section-2 .list-mes .group {
   padding-bottom: 70px;
-  display: none;
+  /* display: none; */
 }
 .CDMO-Solutions-wrap .section-2 .list-mes .group .boxs {
   padding: 40px;
@@ -2185,7 +2185,7 @@ a:focus {
 .number-main .fh {
   color: #039d8f;
   font-size: 68px;
-  vertical-align: top;
+  vertical-align: super;
   line-height: 1;
 }
 .number-main .pn {

@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-19 15:09:21
+ * @LastEditTime: 2024-01-19 15:13:12
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -136,33 +136,6 @@
                 </div></el-col
               >
             </el-row>
-            <!-- <div class="item row" id="2">
-              <div class="col-sm-6 col-sm-push-6">
-                <div class="img block">
-                  <img
-                    src="https://www.obio-tech.com/public/uploads/20220328/3356c9237a4a9f9e07774eb87e9fa841.png"
-                    class="img-responsive"
-                  />
-                  <i class="line"></i>
-                </div>
-              </div>
-              <div class="col-sm-6 col-sm-pull-6">
-                <div class="txt">
-                  <div class="font-size50 fontf8 title">Viral Vector</div>
-                  <div class="p font-size20">
-                    Viral vectors are widely used as gene transduction tools in
-                    biomedical research and gene therapy product development. At
-                    OBiO, we provide the design, construction and packaging
-                    services for adeno-associated virus, adenovirus, lentivirus,
-                    and retrovirus. We will help you complete a variety of
-                    biomolecular operations for your gene of interest, including
-                    overexpression, interference, knock-out, cell marking and
-                    physiological regulation, fully meeting your diversified
-                    demands in your study.
-                  </div>
-                </div>
-              </div>
-            </div> -->
             <el-row class="item row">
               <el-col :xs="22" :sm="10" :md="10" :lg="8" :xl="6">
                 <div class="img block">
@@ -210,53 +183,6 @@
                 </div></el-col
               >
             </el-row>
-            <!-- <div class="item row" id="3">
-              <div class="col-sm-6">
-                <div class="img block">
-                  <img
-                    src="https://www.obio-tech.com/public/uploads/20220328/093b15d78dc1fd4a455cb07e200f5ea2.png"
-                    class="img-responsive"
-                  />
-                  <i class="line"></i>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="txt">
-                  <div class="font-size50 fontf8 title">
-                    Experiment Solutions
-                  </div>
-                  <div class="p font-size20">
-                    “Bridging resources for life science” as our commitment, we
-                    provide a wide spectrum of contract research services for
-                    functional genomics studies including stable producer cell
-                    line construction at laboratory phase, cell biology
-                    experiments, animal model construction, and parameter
-                    testing, as well as other specialty services for exosome,
-                    CRISPR/Cas9 library and non-coding RNA.
-                  </div>
-                  <ul class="ul-pop font-size24 fontf5 color666">
-                    <li class="ub">
-                      <div class="ub ub-ac stn" onclick="popLabora(10)">
-                        <i class="pub-ico-rights2"></i>
-                        <div class="stx">Cell Biology</div>
-                      </div>
-                    </li>
-                    <li class="ub">
-                      <div class="ub ub-ac stn" onclick="popLabora(9)">
-                        <i class="pub-ico-rights2"></i>
-                        <div class="stx">Stable Cell Line</div>
-                      </div>
-                    </li>
-                    <li class="ub">
-                      <div class="ub ub-ac stn" onclick="popLabora(8)">
-                        <i class="pub-ico-rights2"></i>
-                        <div class="stx">Animal Studies</div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div> -->
             <el-row class="item row">
               <el-col
                 :xs="{ span: 22, push: 0 }"
@@ -311,50 +237,6 @@
                 </div></el-col
               >
             </el-row>
-            <!-- <div class="item row" id="4">
-              <div class="col-sm-6 col-sm-push-6">
-                <div class="img block">
-                  <img
-                    src="https://www.obio-tech.com/public/uploads/20220328/100084be2d003db1e0326fa639675f73.png"
-                    class="img-responsive"
-                  />
-                  <i class="line"></i>
-                </div>
-              </div>
-              <div class="col-sm-6 col-sm-pull-6">
-                <div class="txt">
-                  <div class="font-size50 fontf8 title">Related Products</div>
-                  <div class="p font-size20">
-                    In addition to our contract research service, we provide
-                    in-stock virus vectors, proteins, gRNA library, and relevant
-                    reagent, meeting your research demand from different
-                    aspects.
-                  </div>
-                  <ul class="ul-pop font-size24 fontf5 color666">
-                    <li class="ub">
-                      <div class="ub ub-ac stn" onclick="popLabora(7)">
-                        <i class="pub-ico-rights2"></i>
-                        <div class="stx">In-stock viral vectors</div>
-                      </div>
-                    </li>
-                    <li class="ub">
-                      <div class="ub ub-ac stn" onclick="popLabora(78)">
-                        <i class="pub-ico-rights2"></i>
-                        <div class="stx">
-                          In-stock protein and relevant reagents
-                        </div>
-                      </div>
-                    </li>
-                    <li class="ub">
-                      <div class="ub ub-ac stn" onclick="popLabora(77)">
-                        <i class="pub-ico-rights2"></i>
-                        <div class="stx">gRNA library</div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div> -->
             <el-row class="item row">
               <el-col :xs="22" :sm="10" :md="10" :lg="8" :xl="6">
                 <div class="img block">
@@ -382,33 +264,6 @@
                 </div></el-col
               >
             </el-row>
-            <!-- <div class="item row" id="5">
-              <div class="col-sm-6">
-                <div class="img block">
-                  <img
-                    src="https://www.obio-tech.com/public/uploads/20220328/b2b256a7f88419a9892e559af40522b9.png"
-                    class="img-responsive"
-                  />
-                  <i class="line"></i>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="txt">
-                  <div class="font-size50 fontf8 title">
-                    Extracellular Vesicle
-                  </div>
-                  <div class="p font-size20">
-                    Our services for extracellular vesicle include isolation,
-                    identification, and functional research at the laboratory
-                    stage. For samples from different sources, our scientist
-                    team has developed multiple isolation solutions which have
-                    been successfully applied in samples of cells, body fluids
-                    and tissue exosomes such as cerebrospinal fluid, urine,
-                    brain tissue and liver.
-                  </div>
-                </div>
-              </div>
-            </div> -->
           </div>
         </el-col>
       </div>

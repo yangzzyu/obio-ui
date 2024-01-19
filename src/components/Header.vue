@@ -53,8 +53,10 @@
               <el-menu-item index="/team">Leadership Team</el-menu-item>
             </el-sub-menu>
             <el-menu-item index="/sys">Laboratory Sciences</el-menu-item>
-            <el-sub-menu index="2">
-              <template #title>Laboratory Sciences</template>
+            <el-sub-menu index="/cdmo">
+              <template #title>
+                <div @click="router.push('/cdmo')">CDMO Solutions</div>
+              </template>
               <el-menu-item index="2-1">item one</el-menu-item>
               <el-menu-item index="2-2">item two</el-menu-item>
               <el-menu-item index="2-3">item three</el-menu-item>
