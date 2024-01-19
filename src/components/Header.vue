@@ -11,10 +11,9 @@
             <img :src="logo_img[1].path" alt="logo" v-else />
           </router-link>
         </div>
-      
+
         <!-- :default-active="activeIndex" -->
         <div class="menu-wrapper">
-         
           <el-menu
             :ellipsis="false"
             :default-active="activeIndex"
@@ -33,6 +32,12 @@
               <template #title>
                 <div @click="router.push('/about')">About Us</div>
               </template>
+              <el-sub-menu index="/Facilities">
+                <template #title>Our Facilities</template>
+                <el-menu-item index="/spiroSite">SPIRO Site</el-menu-item>
+                <el-menu-item index="2-4-2">item two</el-menu-item>
+                <el-menu-item index="2-4-3">item three</el-menu-item>
+              </el-sub-menu>
               <el-menu-item index="/about">item one</el-menu-item>
               <el-menu-item index="2-2">item two</el-menu-item>
               <el-menu-item index="2-3">item three</el-menu-item>
@@ -80,7 +85,7 @@ import { computed, onBeforeMount, ref, toRefs } from "vue";
 import { handleViteImages } from "@/utils";
 // import { mapState, useStore } from 'pinia'
 const router = useRouter();
-console.log(router,'router')
+console.log(router, "router");
 // import type { MainStates } from '@/store'
 import mainStore from "@/stores/main";
 
@@ -167,6 +172,13 @@ h2 {
   //transition: all 0.3s ease;
   .header_container {
     height: 100%;
+    background-image: linear-gradient(
+      45deg,
+      rgba(0, 95, 146, 0.75),
+      rgba(0, 157, 133, 0.75)
+    );
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 

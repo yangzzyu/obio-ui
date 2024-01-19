@@ -1254,6 +1254,7 @@ a:focus {
   background: url(@/assets/icons/ico13.png) no-repeat center/100%;
   padding-top: 485px;
   pointer-events: none;
+  box-sizing: border-box;
 }
 .about-history-swp .swiper-slide.odd .boxs {
   background: url(@/assets/icons/ico14.png) no-repeat center/100%;
