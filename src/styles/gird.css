@@ -431,7 +431,7 @@
   }
   .CDMO-Solutions-wrap .section-2 .list .img1,
   .CDMO-Solutions-wrap .section-2 .list .active .img1 {
-    height: auto;
+    /* height: auto; */
   }
   .CDMO-Solutions-wrap .section-2 .list .t {
     font-size: 14px;
@@ -681,7 +681,7 @@
   .number-main {
     padding-bottom: 15px;
   }
-  .number-main .number-c {
+  .number-main .number-c .statistic__number {
     font-size: 40px;
   }
   .number-main .fh {

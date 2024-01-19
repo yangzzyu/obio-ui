@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-19 16:44:58
+ * @LastEditTime: 2024-01-19 17:29:29
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -68,15 +68,7 @@
           <div class="number-main text-center cGMP-zIndex active" id="numgo">
             <el-row class="row color666">
               <el-col :span="8">
-                <el-statistic
-                  :value="cellSourceValue"
-                  :value-style="{
-                    fontSize: '90px',
-                    color: '#039d8f',
-                    lineHeight: 0.75,
-                  }"
-                >
-                  <template #title> </template>
+                <el-statistic :value="cellSourceValue" class="number-c">
                   <template #suffix>
                     <div class="nums fontf9">
                       <span class="fh">+</span>
@@ -88,15 +80,7 @@
                 </div>
               </el-col>
               <el-col :span="8">
-                <el-statistic
-                  :value="processSourceValue"
-                  :value-style="{
-                    fontSize: '90px',
-                    color: '#039d8f',
-                    lineHeight: 0.75,
-                  }"
-                >
-                  <template #title> </template>
+                <el-statistic :value="processSourceValue" class="number-c">
                   <template #suffix>
                     <div class="nums fontf9">
                       <span class="fh">+</span>
@@ -108,15 +92,7 @@
                 </div>
               </el-col>
               <el-col :span="8">
-                <el-statistic
-                  :value="analyticalSourceValue"
-                  :value-style="{
-                    fontSize: '90px',
-                    color: '#039d8f',
-                    lineHeight: 0.75,
-                  }"
-                >
-                  <template #title> </template>
+                <el-statistic class="number-c" :value="analyticalSourceValue">
                   <template #suffix>
                     <div class="nums fontf9">
                       <span class="fh">+</span>
@@ -304,7 +280,7 @@
                 :md="{ span: 10, push: 14 }"
                 :lg="{ span: 8, push: 16 }"
               >
-              <div class="list">
+                <div class="list">
                   <div class="item">
                     <div class="t">
                       <div class="f fontf8 font-color-ts">F</div>
@@ -364,7 +340,8 @@
                     </div>
                   </div>
                 </div>
-            </el-col></el-row>
+              </el-col></el-row
+            >
           </div>
         </el-col>
       </div>
@@ -398,4 +375,19 @@ analyticalSource.value = 500;
 const activeIndex = ref(0);
 </script>
 
-<style></style>
+<style lang="scss">
+.number-main .number-c {
+  .el-statistic__number {
+    font-size: 90px;
+    color: #039d8f;
+    line-height: 0.75;
+  }
+}
+@media (max-width: 765px) {
+  .number-main .number-c .el-statistic__number {
+    font-size: 40px;
+    color: #039d8f;
+    line-height: 0.75;
+  }
+}
+</style>
