@@ -2,24 +2,23 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-19 13:57:50
+ * @LastEditTime: 2024-01-19 14:00:42
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
-  <div class="spiro-site">
-
+  <div class="intelli-m">
     <div class="focus">
       <div class="hidden-xs">
         <img
-          src="https://www.obio-tech.com/public/uploads/20220330/ba3c5468f02cdd8aa3f75a58fc00fdff.jpg"
-          alt="SPIRO Site"
+          src="https://www.obio-tech.com/public/uploads/20231212/880325aa48c9982b1a9851a9fe36f90d.jpg"
+          alt="OBiO Intelli-M"
         />
       </div>
       <div class="visible-xs-block">
         <img
-          src="https://www.obio-tech.com/public/uploads/20220402/40fd25acf5baaecdcf7db3ac15f705f2.jpg"
-          alt="SPIRO Site"
+          src="https://www.obio-tech.com/public/uploads/20220402/2e0726ccc43f2f2c0bd315cd476d0b6f.jpg"
+          alt="OBiO Intelli-M"
         />
       </div>
       <div class="txt ub ub-ac">
@@ -32,7 +31,7 @@
             :xl="22"
             style="margin: auto"
           >
-            <h1>SPIRO Site</h1>
+            <h1>OBiO Intelli-M</h1>
           </el-col>
         </div>
       </div>
@@ -49,35 +48,46 @@
       >
         <el-breadcrumb :separator-icon="ArrowRight">
           <el-breadcrumb-item :to="{ path: '/' }">Home</el-breadcrumb-item>
-          <el-breadcrumb-item :to="{ path: '/about' }">About</el-breadcrumb-item>
-          <el-breadcrumb-item :to="{ path: '/Facilities' }">Our Facilities</el-breadcrumb-item>
-          <el-breadcrumb-item>SPIRO Site</el-breadcrumb-item>
+          <el-breadcrumb-item :to="{ path: '/about' }"
+            >About</el-breadcrumb-item
+          >
+          <el-breadcrumb-item :to="{ path: '/Facilities' }"
+            >Our Facilities</el-breadcrumb-item
+          >
+          <el-breadcrumb-item>OBiO Intelli-M</el-breadcrumb-item>
         </el-breadcrumb>
       </el-col>
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto">
         <div class="pub-title pub-title-p ub ub-ver ub-pe">
           <i class="line"></i>
-          <h1 class="fontf8 font-size50">Quality from Constant Innovations</h1>
+          <h1 class="fontf8 font-size50">In China for Global Customers</h1>
         </div>
         <div class="font-size18 pub-pal20" style="padding-top: 30px">
           <p style="line-height: 2">
-            SPIRO Site, operating as the Research &amp; Development Center, is
-            located at Ziping Road in Shanghai International Medical Zone. The
-            name SPIRO originates from the name of Ziping Road (Spirodela
-            polyrhiza), a herb in Traditional Chinese Medicine.&nbsp;At SPIRO
-            Site, we enhance our service capabilities through constant
-            innovations in basic science, and provide customers with contract
-            research services, process development, analytical development and
-            extend services of gene and cell therapy products, including:
+            In sync with the growing global demand, we have initiated the
+            construction of OBiO Intelli-M GMP manufacturing site with a
+            footprint of 77,000 square meter at Lin-Gang Free Trade Zone in
+            Shanghai. Complemented by digitalized management system and enhanced
+            manufacturing & testing facilities, OBiO Intelli-M will be able to
+            capture diverse manufacturing needs and offer high-quality contract
+            development and manufacturing services to customers worldwide.
+            <br />
+            <br />
+            Stage 1 construction with 11 GMP production lines will be
+            accomplished by 2023. The full site with 33 GMP production lines
+            will be operating by 2025.
+            <br />
+            <br />
+            At OBiO Intelli-M, we will provide our customers worldwide with
+            following services:
           </p>
-          <br />
           <el-row>
             <el-col
               :span="12"
-              v-for="(item, index) in InnovationsList"
+              v-for="(item, index) in IntelliMItemList"
               :key="index"
             >
-            ● {{ item.txt }}
+              ● {{ item.txt }}
             </el-col>
           </el-row>
           <span style="line-height: 2">
@@ -98,28 +108,34 @@
           <!-- <span class="fontf8 font-size50">Contact Information</span> -->
           <h1 class="fontf8 font-size50">Contact Information</h1>
         </div>
-
         <div class="text font-size18" style="margin-top: 30px" s="">
+          <span style="line-height: 2">3888 Canghai Rd,&nbsp;</span><br />
+          <span style="line-height: 2">Lin-Gang Free-Trade Zone,</span><br />
+          <span style="line-height: 2">Pudong New District,&nbsp;</span><br />
+          <span style="line-height: 2">Shanghai, China</span><br />
+          <br />
           <p>
-            <span style="line-height: 2"
-              >Building No.19, Lane 908, Ziping Rd,&nbsp;</span
-            ><br />
-            <span style="line-height: 2">Pudong New District,</span><br />
-            <span style="line-height: 2">Shanghai, China</span><br />
-            <br />
             <span style="line-height: 2">Main: +86 400-151-5198<br /> </span>
           </p>
+          <iframe
+            width="100%"
+            height="615"
+            src="https://www.youtube.com/embed/R6UtDlJShKo"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen=""
+          ></iframe>
         </div>
       </el-col>
     </div>
-    
   </div>
 </template>
 
-<script lang="ts" setup name="SpiroSite">
+<script lang="ts" setup name="IntelliM">
 import { ArrowRight } from "@element-plus/icons-vue";
-import { InnovationsList } from "./data/SpiroSite";
-import ScrollHint from '@/components/ScrollHint.vue'
+import { IntelliMItemList } from "./data/IntelliM";
+import ScrollHint from "@/components/ScrollHint.vue";
 </script>
 
 <style></style>

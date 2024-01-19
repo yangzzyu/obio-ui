@@ -33,14 +33,24 @@
                 <div @click="router.push('/about')">About Us</div>
               </template>
               <el-sub-menu index="/Facilities">
-                <template #title>Our Facilities</template>
+                <template #title>
+                  <div
+                    @click="router.push('/about')"
+                    v-scroll-to="{
+                      element: '.section-3',
+                      duration: 300,
+                      easing: 'ease',
+                      offset: 1,
+                    }"
+                  >
+                    Our Facilities
+                  </div>
+                </template>
                 <el-menu-item index="/spiroSite">SPIRO Site</el-menu-item>
-                <el-menu-item index="2-4-2">item two</el-menu-item>
-                <el-menu-item index="2-4-3">item three</el-menu-item>
+                <el-menu-item index="/pineSite">PINE Site</el-menu-item>
+                <el-menu-item index="/intelliM">OBiO Intelli-M</el-menu-item>
               </el-sub-menu>
-              <el-menu-item index="/about">item one</el-menu-item>
-              <el-menu-item index="2-2">item two</el-menu-item>
-              <el-menu-item index="2-3">item three</el-menu-item>
+              <el-menu-item index="/team">Leadership Team</el-menu-item>
               <el-sub-menu index="2-4">
                 <template #title>item four</template>
                 <el-menu-item index="2-4-1">item one</el-menu-item>
