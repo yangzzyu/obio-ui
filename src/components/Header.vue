@@ -14,12 +14,19 @@
 
         <!-- :default-active="activeIndex" -->
         <div class="menu-wrapper">
+          <!-- <el-icon><Fold /></el-icon> -->
+          <Fold
+            class="hidden-md-only hidden-lg-only hidden-xl-only"
+            style="width: 1.5em; height: 1.5em; margin-right: 8px"
+            @click="drawerMenu = true"
+          />
           <el-menu
             :ellipsis="false"
             :default-active="activeIndex"
             mode="horizontal"
             background-color="transparent"
             router
+            class="hidden-sm-and-down"
           >
             <!-- style="width: 600px"
             :popper-offset="60" -->
@@ -83,28 +90,80 @@
               </template>
               <el-menu-item index="/releases">Press Releases</el-menu-item>
               <el-menu-item index="/events">Events</el-menu-item>
-              <el-menu-item index="/logistics"
-                >Cold Chain Logistics</el-menu-item
-              >
+              <el-menu-item index="/news">
+                <!-- @click="router.push('/news')" -->
+                <div
+                  v-scroll-to="{
+                    element: '.section-3',
+                    duration: 300,
+                    easing: 'ease',
+                    offset: 1,
+                  }"
+                >
+                  Knowledge Center
+                </div>
+              </el-menu-item>
             </el-sub-menu>
+            <el-menu-item @click="openUrl">Investor Relations</el-menu-item>
+            <el-menu-item index="/contact">Contact Us</el-menu-item>
           </el-menu>
         </div>
-        <!-- <div class="menu-wrapper">
-          <div class="menu-item" v-for="(nav, index) in navList" :key="index">
-            <h2 class="menu-item-link">
-              <router-link :to="nav.path">
-                <span :class="{ a_text_dark: navDarkActive }">{{
-                  nav.title
-                }}</span>
-              </router-link>
-            </h2>
-          </div>
-        </div> -->
       </div>
     </div>
+    <el-drawer
+      v-model="drawerMenu"
+      direction="ltr"
+      size="70%"
+      :show-close="false"
+      z-index="999999"
+      :append-to-body="true"
+      class="menu-drawer"
+    >
+      <!-- <template #header>
+        <h4>set title by slot</h4>
+      </template> -->
+      <el-menu
+        active-text-color="#ffd04b"
+        background-color="#545c64"
+        class="el-menu-vertical-demo"
+        default-active="2"
+        text-color="#fff"
+      >
+        <el-sub-menu index="1">
+          <template #title>
+            <el-icon><location /></el-icon>
+            <span>Navigator One</span>
+          </template>
+          <el-menu-item-group title="Group One">
+            <el-menu-item index="1-1">item one</el-menu-item>
+            <el-menu-item index="1-2">item two</el-menu-item>
+          </el-menu-item-group>
+          <el-menu-item-group title="Group Two">
+            <el-menu-item index="1-3">item three</el-menu-item>
+          </el-menu-item-group>
+          <el-sub-menu index="1-4">
+            <template #title>item four</template>
+            <el-menu-item index="1-4-1">item one</el-menu-item>
+          </el-sub-menu>
+        </el-sub-menu>
+        <el-menu-item index="2">
+          <el-icon><icon-menu /></el-icon>
+          <span>Navigator Two</span>
+        </el-menu-item>
+        <el-menu-item index="3" disabled>
+          <el-icon><document /></el-icon>
+          <span>Navigator Three</span>
+        </el-menu-item>
+        <el-menu-item index="4">
+          <el-icon><setting /></el-icon>
+          <span>Navigator Four</span>
+        </el-menu-item>
+      </el-menu>
+    </el-drawer>
   </div>
 </template>
 <script lang="ts" setup name="AwHeader">
+import { Fold } from "@element-plus/icons-vue";
 import { useRouter } from "vue-router";
 import { computed, onBeforeMount, ref, toRefs } from "vue";
 import { handleViteImages } from "@/utils";
@@ -122,6 +181,7 @@ type NavItem = {
 type ImgItem = {
   path: string;
 };
+const drawerMenu = ref(false);
 const navList = ref<NavItem[]>([]);
 const logo_img = ref<ImgItem[]>([]);
 const store = mainStore();
@@ -138,6 +198,9 @@ logo_img.value = [
     path: handleViteImages("@/assets/icons/logo1.png"),
   },
 ];
+function openUrl() {
+  window.open("https://www.obiosh.com/tzz/gg/");
+}
 onBeforeMount(() => {
   navList.value = [
     {
@@ -167,6 +230,13 @@ onBeforeMount(() => {
   ];
 });
 </script>
+<style lang="scss">
+.menu-drawer {
+  .el-drawer__body {
+    padding: 0;
+  }
+}
+</style>
 <style lang="scss" scoped>
 $nav_active_color: #3370ff;
 

@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 09:07:47
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-19 11:41:14
+ * @LastEditTime: 2024-01-22 10:25:42
  * @FilePath: \obio-ui\src\main.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -12,6 +12,7 @@ import { createApp } from "vue";
 import { createPinia } from "pinia";
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
+import 'element-plus/theme-chalk/display.css';
 import 'animate.css/animate.min.css'
 
 import App from "./App.vue";

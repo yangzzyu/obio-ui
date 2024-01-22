@@ -24,7 +24,8 @@ import AwFooter from "@/components/Footer.vue";
   margin: 0px;
 }
 .index-header,
-.index-main {
+.index-main,
+.el-footer {
   padding: 0px;
   /* border-left: 2px solid #333; */
 }
