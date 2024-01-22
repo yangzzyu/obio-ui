@@ -14,10 +14,15 @@
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^1.2.1",
+    "animate.css": "^4.1.1",
+    "element-plus": "^2.5.1",
     "pinia": "^2.1.7",
+    "swiper": "^11.0.5",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5",
-    "vuetify": "^3.4.10"
+    "vue-scrollto": "^2.20.0",
+    "vuetify": "^3.4.10",
+    "wow.js": "^1.2.2"
   },
   "devDependencies": {
     "@nightwatch/vue": "^0.4.5",
