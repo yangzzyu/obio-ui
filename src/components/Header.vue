@@ -24,22 +24,19 @@
             :ellipsis="false"
             :default-active="activeIndex"
             mode="horizontal"
-            background-color="transparent"
+            text-color="#fff"
             router
             class="hidden-sm-and-down"
+            active-text-color="#87ffd9" 
+            background-color="transparent"
           >
-            <!-- style="width: 600px"
-            :popper-offset="60" -->
-            <!-- text-color="#ffffff" -->
-            <!-- text-color="#ffffff"
-          active-text-color="#ffffff" -->
-            <!-- @select="handleSelect" -->
+          
             <el-menu-item index="/">Home</el-menu-item>
-            <el-sub-menu index="/about">
+            <el-sub-menu index="/about" popper-class="sub-popper">
               <template #title>
                 <div @click="router.push('/about')">About Us</div>
               </template>
-              <el-sub-menu index="/Facilities">
+              <el-sub-menu index="/Facilities" popper-class="sub-popper">
                 <template #title>
                   <div
                     @click="router.push('/about')"
@@ -60,12 +57,12 @@
               <el-menu-item index="/team">Leadership Team</el-menu-item>
             </el-sub-menu>
             <el-menu-item index="/sys">Laboratory Sciences</el-menu-item>
-            <el-sub-menu index="/cdmo">
+            <el-sub-menu index="/cdmo" popper-class="sub-popper">
               <template #title>
                 <div @click="router.push('/cdmo')">CDMO Solutions</div>
               </template>
               <el-menu-item index="/process">Process Development</el-menu-item>
-              <el-sub-menu index="/cgmp">
+              <el-sub-menu index="/cgmp" popper-class="sub-popper">
                 <template #title>
                   <div @click="router.push('/cgmp')">CGMP Manufacturing</div>
                 </template>
@@ -84,7 +81,7 @@
               >
             </el-sub-menu>
             <el-menu-item index="/cx">Innovations</el-menu-item>
-            <el-sub-menu index="/news">
+            <el-sub-menu index="/news" popper-class="sub-popper">
               <template #title>
                 <div @click="router.push('/news')">Insights</div>
               </template>
@@ -234,6 +231,13 @@ onBeforeMount(() => {
 .menu-drawer {
   .el-drawer__body {
     padding: 0;
+  }
+}
+.sub-popper {
+  border-top: 3px solid #0093dd;
+  .el-sub-menu__title,
+  .el-menu-item {
+    color: #000 !important;
   }
 }
 </style>

@@ -2,18 +2,31 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-19 17:03:25
+ * @LastEditTime: 2024-01-22 16:13:07
  * @FilePath: \obio-ui\src\App.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
-<script setup>
-import { RouterLink, RouterView } from "vue-router";
+<script setup lang="ts">
+import { computed, onBeforeMount, ref, toRefs, watch } from "vue";
+import { RouterLink, RouterView, useRouter } from "vue-router";
+const router = useRouter();
+const currentRoute = router.currentRoute.value;
 // import HelloWorld from "./components/HelloWorld.vue";
 // import FooterView from "@/views/FooterView.vue";
+const fullPath = ref("");
+watch(
+  () => currentRoute,
+  (newValue: any) => {
+    fullPath.value = newValue.fullPath;
+    // FocusData.value.title = obj.title;
+    // FocusData.value.imgUrl = obj.imgUrl;
+  },
+  { immediate: true, deep: true }
+);
 </script>
 
 <template>
-  <router-view></router-view>
+  <router-view :key="fullPath"></router-view>
   <!-- <header> -->
   <!-- <img
       alt="Vue logo"
@@ -46,5 +59,4 @@ import { RouterLink, RouterView } from "vue-router";
   </footer> -->
 </template>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
