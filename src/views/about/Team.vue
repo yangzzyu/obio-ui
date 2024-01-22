@@ -2,51 +2,13 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-19 14:03:06
+ * @LastEditTime: 2024-01-22 15:49:27
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
   <div class="intelli-m">
-    <div class="focus">
-      <div class="hidden-xs">
-        <img
-          src="https://www.obio-tech.com/public/uploads/20220330/1d7540463fb4aecf7bd741586c761067.jpg"
-          alt="Leadership Team"
-        />
-      </div>
-      <div class="visible-xs-block">
-        <img
-          src="https://www.obio-tech.com/public/uploads/20220401/0d6612cd60e36741f2ad2f3fe90eebf3.jpg"
-          alt="Leadership Team"
-        />
-      </div>
-      <div class="txt ub ub-ac">
-        <div class="ub-f1">
-          <div class="container">
-            <div class="fontf7 font-size70 focus-title">Leadership Team</div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="Intelli-M-wrap">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="location fontf3"
-      >
-        <el-breadcrumb :separator-icon="ArrowRight">
-          <el-breadcrumb-item :to="{ path: '/' }">Home</el-breadcrumb-item>
-          <el-breadcrumb-item :to="{ path: '/about' }"
-            >About</el-breadcrumb-item
-          >
-          <el-breadcrumb-item>Leadership Team</el-breadcrumb-item>
-        </el-breadcrumb>
-      </el-col>
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto">
         <div class="text font-size20">
           <p>

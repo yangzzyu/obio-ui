@@ -8,55 +8,7 @@
 -->
 <template>
   <div class="pine-site">
-    <div class="focus">
-      <div class="hidden-xs">
-        <img
-          src="https://www.obio-tech.com/public/uploads/20220330/4f73b36b43411ab86c464b5e5477c842.jpg"
-          alt="PINE Site"
-        />
-      </div>
-      <div class="visible-xs-block">
-        <img
-          src="https://www.obio-tech.com/public/uploads/20220402/4738c4eb8c6cbcc0917281c987f1c57b.jpg"
-          alt="PINE Site"
-        />
-      </div>
-      <div class="txt ub ub-ac">
-        <div class="ub-f1">
-          <el-col
-            :xs="22"
-            :sm="20"
-            :md="20"
-            :lg="20"
-            :xl="22"
-            style="margin: auto"
-          >
-            <h1>PINE Site</h1>
-          </el-col>
-        </div>
-      </div>
-    </div>
     <div class="Intelli-M-wrap">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="location fontf3"
-      >
-        <el-breadcrumb :separator-icon="ArrowRight">
-          <el-breadcrumb-item :to="{ path: '/' }">Home</el-breadcrumb-item>
-          <el-breadcrumb-item :to="{ path: '/about' }"
-            >About</el-breadcrumb-item
-          >
-          <el-breadcrumb-item :to="{ path: '/Facilities' }"
-            >Our Facilities</el-breadcrumb-item
-          >
-          <el-breadcrumb-item>PINE Site</el-breadcrumb-item>
-        </el-breadcrumb>
-      </el-col>
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto">
         <div class="pub-title pub-title-p ub ub-ver ub-pe">
           <i class="line"></i>

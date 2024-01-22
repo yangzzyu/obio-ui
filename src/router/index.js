@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-22 15:24:11
+ * @LastEditTime: 2024-01-22 15:51:49
  * @FilePath: \obio-ui\src\router\index.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -11,12 +11,7 @@ import {
   createWebHistory,
   createWebHashHistory,
 } from "vue-router";
-import LabSciencesView from "@/views/LabSciencesView.vue";
-import CdmoView from "@/views/CdmoView.vue";
-import InnoView from "@/views/InnoView.vue";
-import InsightsView from "@/views/InsightsView.vue";
-import InvestorRelationsView from "@/views/InvestorRelationsView.vue";
-import ContactView from "@/views/ContactView.vue";
+// import InvestorRelationsView from "@/views/InvestorRelationsView.vue";
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -36,37 +31,37 @@ const router = createRouter({
         {
           path: "/aboutRouter",
           redirect: "/about",
-          name: "aboutRouter",
+          name: "About Us",
           component: () => import("@/views/about/Index.vue"),
           children: [
             {
               path: "/about",
-              name: "about",
-              component: () => import("@/views/about/Home.vue"),
+              name: "About Us",
+              component: () => import("@/views/about/About.vue"),
             },
             {
               path: "/Facilities",
               name: "Facilities",
-              component: () => import("@/views/about/Home.vue"),
+              component: () => import("@/views/about/About.vue"),
             },
             {
               path: "/spiroSite",
-              name: "spiroSite",
+              name: "SPIRO Site",
               component: () => import("@/views/about/SpiroSite.vue"),
             },
             {
               path: "/pineSite",
-              name: "pineSite",
+              name: "PINE Site",
               component: () => import("@/views/about/PineSite.vue"),
             },
             {
               path: "/intelliM",
-              name: "intelliM",
+              name: "OBiO Intelli-M",
               component: () => import("@/views/about/IntelliM.vue"),
             },
             {
               path: "/team",
-              name: "team",
+              name: "Leadership Team",
               component: () => import("@/views/about/Team.vue"),
             },
           ],
@@ -168,12 +163,11 @@ const router = createRouter({
           name: "Contact Us",
           component: () => import("@/views/contact/Contact.vue"),
         },
-        {
-          path: "/investor-relations",
-          name: "investor-relations",
-          component: InvestorRelationsView,
-        },
-        
+        // {
+        //   path: "/investor-relations",
+        //   name: "investor-relations",
+        //   component: InvestorRelationsView,
+        // },
       ],
     },
   ],
