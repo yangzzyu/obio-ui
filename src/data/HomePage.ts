@@ -46,11 +46,11 @@ export const imgList = ref<ImgItem[]>([
 ]);
 
 type FacilitiesDataItem = {
-  id: number;
-  imgUrl: string;
+  id?: number;
   title: string;
   pmText: string[];
   pTxt: string;
+  imgUrl: string;
   bgUrl: string;
 };
 export const homeFacilitiesData = ref<FacilitiesDataItem[]>([

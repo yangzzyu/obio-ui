@@ -8,7 +8,6 @@
 -->
 <template>
   <div class="spiro-site">
-
     <div class="focus">
       <div class="hidden-xs">
         <img
@@ -49,8 +48,12 @@
       >
         <el-breadcrumb :separator-icon="ArrowRight">
           <el-breadcrumb-item :to="{ path: '/' }">Home</el-breadcrumb-item>
-          <el-breadcrumb-item :to="{ path: '/about' }">About</el-breadcrumb-item>
-          <el-breadcrumb-item :to="{ path: '/Facilities' }">Our Facilities</el-breadcrumb-item>
+          <el-breadcrumb-item :to="{ path: '/about' }"
+            >About</el-breadcrumb-item
+          >
+          <el-breadcrumb-item :to="{ path: '/Facilities' }"
+            >Our Facilities</el-breadcrumb-item
+          >
           <el-breadcrumb-item>SPIRO Site</el-breadcrumb-item>
         </el-breadcrumb>
       </el-col>
@@ -77,7 +80,7 @@
               v-for="(item, index) in InnovationsList"
               :key="index"
             >
-            ● {{ item.txt }}
+              ● {{ item.txt }}
             </el-col>
           </el-row>
           <span style="line-height: 2">
@@ -112,14 +115,13 @@
         </div>
       </el-col>
     </div>
-    
   </div>
 </template>
 
 <script lang="ts" setup name="SpiroSite">
-import { ArrowRight } from "@element-plus/icons-vue";
+// import { ArrowRight } from "@element-plus/icons-vue";
 import { InnovationsList } from "./data/SpiroSite";
-import ScrollHint from '@/components/ScrollHint.vue'
+import ScrollHint from "@/components/ScrollHint.vue";
 </script>
 
 <style></style>

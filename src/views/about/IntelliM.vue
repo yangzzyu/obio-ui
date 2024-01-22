@@ -133,7 +133,7 @@
 </template>
 
 <script lang="ts" setup name="IntelliM">
-import { ArrowRight } from "@element-plus/icons-vue";
+// import { ArrowRight } from "@element-plus/icons-vue";
 import { IntelliMItemList } from "./data/IntelliM";
 import ScrollHint from "@/components/ScrollHint.vue";
 </script>

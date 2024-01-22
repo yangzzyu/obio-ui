@@ -907,7 +907,7 @@ a:focus {
 }
 .Viral-Vector-wrap .section-2 .swiper-con .swiper-slide .boxs {
   width: 120%;
-  height: 290px;
+  height: 220px;
   position: relative;
   padding-top: 64px;
 }
@@ -1603,6 +1603,9 @@ a:focus {
   cursor: pointer;
   margin-top: 12px;
 }
+.Insights-wrap .section-3 .groups .boxs img {
+  width: 100%;
+}
 .Insights-wrap .section-3 .groups .boxs:hover {
   -webkit-transform: translateY(-12px);
   transform: translateY(-12px);
@@ -2233,7 +2236,7 @@ a:focus {
 }
 .Process-Development-wrap .process-mkid-ul .item-2 > div {
   margin-top: 130px;
-  margin-left: 0px;
+  margin-left: 0;
 }
 .Process-Development-wrap .process-mkid-ul .item-3 > div {
   margin-top: 20px;
@@ -2361,6 +2364,7 @@ a:focus {
 ul.ul-square li {
   list-style: square;
   color: #039d8f;
+  width: 50%;
 }
 
 .about-history-swp .swiper-slide .txt {

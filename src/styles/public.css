@@ -1220,7 +1220,7 @@ li {
 .visible-lg-inline-block {
   display: none !important;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .visible-xs-block {
     display: block !important;
   }

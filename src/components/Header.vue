@@ -57,18 +57,36 @@
               <template #title>
                 <div @click="router.push('/cdmo')">CDMO Solutions</div>
               </template>
-              <el-menu-item index="2-1">item one</el-menu-item>
-              <el-menu-item index="2-2">item two</el-menu-item>
-              <el-menu-item index="2-3">item three</el-menu-item>
-              <el-sub-menu index="2-4">
-                <template #title>item four</template>
-                <el-menu-item index="2-4-1">item one</el-menu-item>
-                <el-menu-item index="2-4-2">item two</el-menu-item>
-                <el-menu-item index="2-4-3">item three</el-menu-item>
+              <el-menu-item index="/process">Process Development</el-menu-item>
+              <el-sub-menu index="/cgmp">
+                <template #title>
+                  <div @click="router.push('/cgmp')">CGMP Manufacturing</div>
+                </template>
+                <el-menu-item index="/vector">Viral Vector</el-menu-item>
+                <el-menu-item index="/virus">Oncolytic Virus</el-menu-item>
+                <el-menu-item index="/products"
+                  >Cell Therapy Products</el-menu-item
+                >
+                <el-menu-item index="/nucleotides"
+                  >Plasmid & Nucleotides</el-menu-item
+                >
               </el-sub-menu>
+              <el-menu-item index="/quality">Quality & Regulatory</el-menu-item>
+              <el-menu-item index="/logistics"
+                >Cold Chain Logistics</el-menu-item
+              >
             </el-sub-menu>
-            <el-menu-item index="3">Info</el-menu-item>
-            <el-menu-item index="4">Orders</el-menu-item>
+            <el-menu-item index="/cx">Innovations</el-menu-item>
+            <el-sub-menu index="/news">
+              <template #title>
+                <div @click="router.push('/news')">Insights</div>
+              </template>
+              <el-menu-item index="/releases">Press Releases</el-menu-item>
+              <el-menu-item index="/events">Events</el-menu-item>
+              <el-menu-item index="/logistics"
+                >Cold Chain Logistics</el-menu-item
+              >
+            </el-sub-menu>
           </el-menu>
         </div>
         <!-- <div class="menu-wrapper">

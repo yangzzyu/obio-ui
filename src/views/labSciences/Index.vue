@@ -274,7 +274,6 @@
 
 <script lang="ts" setup name="LabSciences">
 import Events from "@/components/Events.vue";
-import { ArrowRight } from "@element-plus/icons-vue";
 </script>
 
 <style></style>
