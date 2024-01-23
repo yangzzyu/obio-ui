@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 09:07:47
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-23 16:27:38
+ * @LastEditTime: 2024-01-23 16:44:25
  * @FilePath: \obio-ui\src\views\HomeView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -335,7 +335,8 @@ import TheWelcome from "../components/TheWelcome.vue";
                         class="more wow fadeInUp animated"
                         style="visibility: visible; animation-name: fadeInUp"
                       >
-                        <a href="/cn/home/news/id/559">ALL PRESS RELEASES</a>
+                        <!-- <a href="/cn/home/news/id/559">ALL PRESS RELEASES</a> -->
+                        <span class="m-span" @click="router.push('/releases')">ALL PRESS RELEASES</span>
                       </div>
                     </li>
                     <li
@@ -343,7 +344,8 @@ import TheWelcome from "../components/TheWelcome.vue";
                       v-if="InsightsType === 2"
                     >
                       <div class="more">
-                        <a href="/cn/home/news/id/719">ALL EVENTS</a>
+                        <!-- <a href="/cn/home/news/id/719">ALL EVENTS</a> -->
+                        <span class="m-span" @click="router.push('/events')">ALL EVENTS</span>
                       </div>
                     </li>
                   </ul>

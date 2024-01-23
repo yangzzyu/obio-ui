@@ -355,6 +355,7 @@ a:focus {
   width: 56px;
   height: 43px;
   background: url(@/assets/icons/ico3.png) no-repeat left center / contain;
+  cursor: pointer;
 }
 .home-facilities {
   background: #fafafa;
@@ -527,6 +528,7 @@ a:focus {
   padding: 0 12px;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
 .home-insights-wrap .more .m-span:hover {
   background: #014099;

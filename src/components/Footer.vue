@@ -13,51 +13,61 @@
         ></el-col>
         <el-col :sm="6" :xs="12" class="wow fadeInLeft animated"
           ><dl class="dl-foot-nav">
-            <dt class="font-size20"><a href="/cn/home/about">About Us</a></dt>
             <dt class="font-size20">
-              <a href="/cn/home/sys">Laboratory Services</a>
+              <router-link to="/about">About Us</router-link>
             </dt>
-            <dt class="font-size20"><a href="/cn/home/news">Insights</a></dt>
-            <dt class="font-size20"><a href="/cn/home/cx">Innovations</a></dt>
             <dt class="font-size20">
-              <a href="https://www.obiosh.com/tzz/gg/" target="_blank"
-                >Investor Relations</a
-              >
+              <router-link to="/sys">Laboratory Services</router-link>
+            </dt>
+            <dt class="font-size20">
+              <router-link to="/news">Insights</router-link>
+            </dt>
+            <dt class="font-size20">
+              <router-link to="/cx">Innovations</router-link>
+            </dt>
+            <dt class="font-size20">
+              <!-- <router-link to="https://www.obiosh.com/tzz/gg/" target="_blank"
+                >Investor Relations</router-link
+              > -->
             </dt>
             <dd></dd></dl
         ></el-col>
         <el-col :sm="6" :xs="12" class="wow fadeInRight animated">
           <dl class="dl-foot-nav">
             <dt class="font-size20">
-              <a href="/cn/home/cdmo">CDMO Solutions</a>
+              <router-link to="/cdmo">CDMO Solutions</router-link>
             </dt>
-            <dd><a href="/cn/home/cdmo/cid/862">Process Development</a></dd>
-            <dd><a href="/cn/home/cdmo/cid/868">cGMP Manufacturing</a></dd>
             <dd>
-              <a href="/cn/home/cdmo/cid/875">Quality &amp; Regulatory</a>
+              <router-link to="/process">Process Development</router-link>
             </dd>
-            <dd><a href="/cn/home/cdmo/cid/879">Cold Chain Logistics</a></dd>
+            <dd><router-link to="/cgmp">cGMP Manufacturing</router-link></dd>
+            <dd>
+              <router-link to="/quality">Quality &amp; Regulatory</router-link>
+            </dd>
+            <dd>
+              <router-link to="/logistics">Cold Chain Logistics</router-link>
+            </dd>
             <dt class="font-size20">
-              <a xhref="/cn/home/ys/cid/861">Privacy Policy</a>
+              <!-- <router-link href="/cn/home/ys/cid/861">Privacy Policy</router-link> -->
             </dt>
           </dl></el-col
         >
         <el-col :sm="6" :xs="24" class="wow fadeInRight animated">
           <div class="foot-link ub">
-            <a>
+            <a href="https://www.linkedin.com/company/obiosh">
               <font-awesome-icon
                 class="footer-icon"
                 size="lg"
                 :icon="['fab', 'weixin']"
               />
             </a>
-            <a>
+            <a href="https://www.youtube.com/channel/UCFBQ9g386UNn_WluHw_GdOg">
               <font-awesome-icon
                 class="footer-icon"
                 size="lg"
                 :icon="['fab', 'linkedin']"
             /></a>
-            <a>
+            <a href="https://mp.weixin.qq.com/s/SeARdjD_mAN8Uft4hBwQgg">
               <font-awesome-icon
                 class="footer-icon"
                 size="lg"
@@ -65,21 +75,21 @@
             /></a>
           </div>
           <!-- <div class="foot-link ub">
-              <a
-                href="https://www.linkedin.com/company/obiosh"
+              <router-link
+                to="https://www.linkedin.com/company/obiosh"
                 target="_blank"
                 class="k1"
-              ></a>
-              <a
-                href="https://www.youtube.com/channel/UCFBQ9g386UNn_WluHw_GdOg"
+              ></router-link>
+              <router-link
+                to="https://www.youtube.com/channel/UCFBQ9g386UNn_WluHw_GdOg"
                 target="_blank"
                 class="k2"
-              ></a>
-              <a
-                href="https://mp.weixin.qq.com/s/SeARdjD_mAN8Uft4hBwQgg"
+              ></router-link>
+              <router-link
+                to="https://mp.weixin.qq.com/s/SeARdjD_mAN8Uft4hBwQgg"
                 target="_blank"
                 class="k3"
-              ></a></div
+              ></router-link></div
           > -->
         </el-col>
       </el-row>
@@ -180,7 +190,7 @@ h2 {
         margin-bottom: 15px;
       }
 
-      a {
+      router-link {
         color: #d2d3d4;
       }
     }
