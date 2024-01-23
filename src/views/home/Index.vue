@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 09:07:47
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-23 15:08:38
+ * @LastEditTime: 2024-01-23 16:27:38
  * @FilePath: \obio-ui\src\views\HomeView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -86,10 +86,14 @@ import TheWelcome from "../components/TheWelcome.vue";
                 <i class="bg"></i>
                 <div class="txt-con ub ub-ver ub-pc">
                   <div class="title color1 font-size50 fontf7">
-                    <a href="/cn/home/cdmo"
+                    <router-link to="/cdmo">
+                      CDMO <br />
+                      Solutions</router-link
+                    >
+                    <!-- <a href="/cn/home/cdmo"
                       >CDMO <br />
                       Solutions</a
-                    >
+                    > -->
                   </div>
                   <div class="line"><i></i></div>
                   <div class="p font-size18 fontf2">
@@ -100,7 +104,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                   </div>
                   <div class="more">
                     <!-- <a href="/cn/home/cdmo" class="m-a"></a> -->
-                    <span class="m-span"></span>
+                    <span class="m-span" @click="router.push('/cdmo')"></span>
                   </div>
                 </div>
               </div>
@@ -119,10 +123,14 @@ import TheWelcome from "../components/TheWelcome.vue";
                 <i class="bg"></i>
                 <div class="txt-con ub ub-ver ub-pc">
                   <div class="title color1 font-size50 fontf7">
-                    <a href="/cn/home/sys">
+                    <router-link to="/sys">
+                      Laboratory <br />
+                      Sciences</router-link
+                    >
+                    <!-- <a @click="goRouter('/sys')">
                       Laboratory <br />
                       Sciences</a
-                    >
+                    > -->
                   </div>
                   <div class="line"><i></i></div>
                   <div class="p font-size18 fontf2">
@@ -131,7 +139,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                     services for biomedical researchers.
                   </div>
                   <div class="more">
-                    <span class="m-span"></span>
+                    <span class="m-span" @click="router.push('/sys')"></span>
                     <!-- <a href="/cn/home/sys" class="m-a" target="_blank"></a> -->
                     <!-- <div class="m"><span class="m-a"></span></div> -->
                   </div>
@@ -221,7 +229,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                       alt="International Medical Park Shanghai, China"
                     />
                   </div>
-                  <a href="/cn/home/about/cid/881" class="shaw">
+                  <router-link :to="item.path" class="shaw">
                     <img
                       src="@/assets/icons/bg3.png"
                       :style="{
@@ -245,7 +253,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                       </div>
                       <div class="m"><span class="m-a"></span></div>
                     </div>
-                  </a>
+                  </router-link>
                 </div>
                 <div class="p font-size24 fontf3">
                   {{ item.pTxt }}
@@ -548,12 +556,13 @@ import WOW from "wow.js";
 import Banner from "@/components/Banner.vue";
 // import ScrollHint from '@/components/ScrollHint.vue'
 import { homeFacilitiesData, insightsData } from "@/data/HomePage";
-import { handleViteImages } from "@/utils";
-
+import { handleViteImages, goRouter } from "@/utils";
 import { onMounted, onUnmounted, ref } from "vue";
+import { useRouter } from "vue-router";
 
 import mainStore from "@/stores/main";
 import { handleError } from "vue";
+const router = useRouter();
 const store = mainStore();
 
 const index_header = ref("");
@@ -592,7 +601,7 @@ onUnmounted(() => {
   window.removeEventListener("resize", setBannerHeight);
   window.removeEventListener("scroll", scrollHandle);
 });
-const activeIndex = ref(0);
+const activeIndex = ref("/");
 function changeActive(index) {
   // $event.currentTarget.className = "item wow fadeInUp animated active";
   activeIndex.value = index;

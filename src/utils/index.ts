@@ -1,3 +1,4 @@
+import { useRouter } from "vue-router";
 export const handleViteImages = (imgPath: string) => {
   try {
     const getSplit = imgPath.split("/");
@@ -6,4 +7,11 @@ export const handleViteImages = (imgPath: string) => {
   } catch (error) {
     console.warn(error);
   }
+};
+
+export const goRouter = (path: string) => {
+  const router = useRouter();
+  console.log(path, router, "uuuuu");
+
+  router.push(path);
 };

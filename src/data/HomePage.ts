@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 09:26:06
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-18 14:11:03
+ * @LastEditTime: 2024-01-23 16:25:34
  * @FilePath: \obio-ui\src\data\HomePage.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -52,6 +52,7 @@ type FacilitiesDataItem = {
   pTxt: string;
   imgUrl: string;
   bgUrl: string;
+  path:string
 };
 export const homeFacilitiesData = ref<FacilitiesDataItem[]>([
   {
@@ -64,6 +65,7 @@ export const homeFacilitiesData = ref<FacilitiesDataItem[]>([
     pTxt: "International Medical Park Shanghai, China",
     imgUrl: handleViteImages("@/assets/icons/facilities_img1.jpg"),
     bgUrl: handleViteImages("@/assets/icons/facilities_bg1.png"),
+    path:'/spiroSite'
   },
   {
     title: "OBiO Intelli-M",
@@ -75,6 +77,7 @@ export const homeFacilitiesData = ref<FacilitiesDataItem[]>([
     pTxt: "Lin-Gang Free-Trade Zone Shanghai, China",
     imgUrl: handleViteImages("@/assets/icons/facilities_img2.jpg"),
     bgUrl: handleViteImages("@/assets/icons/facilities_bg2.png"),
+    path:'/pineSite'
   },
   {
     title: "PINE Site",
@@ -86,6 +89,7 @@ export const homeFacilitiesData = ref<FacilitiesDataItem[]>([
     pTxt: "International Medical Park Shanghai, China",
     imgUrl: handleViteImages("@/assets/icons/facilities_img3.jpg"),
     bgUrl: handleViteImages("@/assets/icons/facilities_bg3.png"),
+    path:'/intelliM'
   },
 ]);
 
