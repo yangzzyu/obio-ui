@@ -3,7 +3,7 @@
     <div class="container">
       <el-col :xs="24" :sm="16" :md="18" :lg="20" :xl="22" class="container">
         <el-row class="row">
-          <el-col :sm="6" :xs="24">
+          <el-col :sm="6" :xs="24" class="wow fadeInLeft animated">
             <div class="foot-log">
               <img
                 src="https://www.obio-tech.com/public/uploads/20230630/a4e158c16a5cb2bf4e6506a46adf9c57.png"
@@ -12,7 +12,7 @@
             </div>
             <div class="p font-size18 fontf2"></div
           ></el-col>
-          <el-col :sm="6" :xs="12"
+          <el-col :sm="6" :xs="12" class="wow fadeInLeft animated"
             ><dl class="dl-foot-nav">
               <dt class="font-size20"><a href="/cn/home/about">About Us</a></dt>
               <dt class="font-size20">
@@ -27,7 +27,7 @@
               </dt>
             </dl></el-col
           >
-          <el-col :sm="6" :xs="12">
+          <el-col :sm="6" :xs="12" class="wow fadeInRight animated">
             <dl class="dl-foot-nav">
               <dt class="font-size20">
                 <a href="/cn/home/cdmo">CDMO Solutions</a>
@@ -43,8 +43,29 @@
               </dt>
             </dl></el-col
           >
-          <el-col :sm="6" :xs="24">
-            <div class="foot-link ub ">
+          <el-col :sm="6" :xs="24" class="wow fadeInRight animated">
+            <div class="foot-link ub">
+              <a>
+                <font-awesome-icon
+                  class="footer-icon"
+                  size="lg"
+                  :icon="['fab', 'weixin']"
+                />
+              </a>
+              <a>
+                <font-awesome-icon
+                  class="footer-icon"
+                  size="lg"
+                  :icon="['fab', 'linkedin']"
+              /></a>
+              <a>
+                <font-awesome-icon
+                  class="footer-icon"
+                  size="lg"
+                  :icon="['fab', 'youtube']"
+              /></a>
+            </div>
+            <!-- <div class="foot-link ub">
               <a
                 href="https://www.linkedin.com/company/obiosh"
                 target="_blank"
@@ -60,7 +81,8 @@
                 target="_blank"
                 class="k3"
               ></a></div
-          ></el-col>
+          > -->
+          </el-col>
         </el-row>
       </el-col>
     </div>

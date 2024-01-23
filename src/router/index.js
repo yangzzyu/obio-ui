@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-22 15:51:49
+ * @LastEditTime: 2024-01-23 11:13:57
  * @FilePath: \obio-ui\src\router\index.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -14,8 +14,8 @@ import {
 // import InvestorRelationsView from "@/views/InvestorRelationsView.vue";
 
 const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
-  // history: createWebHistory(import.meta.env.BASE_URL),
+  // history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/",
@@ -40,7 +40,7 @@ const router = createRouter({
               component: () => import("@/views/about/About.vue"),
             },
             {
-              path: "/Facilities",
+              path: "/facilities",
               name: "Facilities",
               component: () => import("@/views/about/About.vue"),
             },
@@ -171,6 +171,9 @@ const router = createRouter({
       ],
     },
   ],
+});
+router.afterEach((to, from, next) => {
+  window.scrollTo(0, 0);
 });
 
 export default router;

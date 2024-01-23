@@ -27,16 +27,16 @@
             text-color="#fff"
             router
             class="hidden-sm-and-down"
-            active-text-color="#87ffd9" 
+            active-text-color="#87ffd9"
             background-color="transparent"
+            :popper-offset="0"
           >
-          
             <el-menu-item index="/">Home</el-menu-item>
             <el-sub-menu index="/about" popper-class="sub-popper">
               <template #title>
                 <div @click="router.push('/about')">About Us</div>
               </template>
-              <el-sub-menu index="/Facilities" popper-class="sub-popper">
+              <el-sub-menu index="/facilities" popper-class="sub-popper ">
                 <template #title>
                   <div
                     @click="router.push('/about')"
@@ -62,7 +62,7 @@
                 <div @click="router.push('/cdmo')">CDMO Solutions</div>
               </template>
               <el-menu-item index="/process">Process Development</el-menu-item>
-              <el-sub-menu index="/cgmp" popper-class="sub-popper">
+              <el-sub-menu index="/cgmp" popper-class="sub-popper ">
                 <template #title>
                   <div @click="router.push('/cgmp')">CGMP Manufacturing</div>
                 </template>
@@ -114,47 +114,85 @@
       :show-close="false"
       z-index="999999"
       :append-to-body="true"
-      class="menu-drawer"
+      class="menu-drawer hidden-md-only hidden-lg-only hidden-xl-only"
     >
-      <!-- <template #header>
-        <h4>set title by slot</h4>
-      </template> -->
       <el-menu
-        active-text-color="#ffd04b"
-        background-color="#545c64"
-        class="el-menu-vertical-demo"
-        default-active="2"
+        :ellipsis="false"
+        :default-active="activeIndex"
         text-color="#fff"
+        router
+        active-text-color="#87ffd9"
+        background-color="transparent"
+        :popper-offset="0"
       >
-        <el-sub-menu index="1">
+        <el-menu-item index="/">Home</el-menu-item>
+        <el-sub-menu index="/about" popper-class="sub-popper">
           <template #title>
-            <el-icon><location /></el-icon>
-            <span>Navigator One</span>
+            <div @click="router.push('/about')">About Us</div>
           </template>
-          <el-menu-item-group title="Group One">
-            <el-menu-item index="1-1">item one</el-menu-item>
-            <el-menu-item index="1-2">item two</el-menu-item>
-          </el-menu-item-group>
-          <el-menu-item-group title="Group Two">
-            <el-menu-item index="1-3">item three</el-menu-item>
-          </el-menu-item-group>
-          <el-sub-menu index="1-4">
-            <template #title>item four</template>
-            <el-menu-item index="1-4-1">item one</el-menu-item>
+          <el-sub-menu index="/facilities" popper-class="sub-popper ">
+            <template #title>
+              <div
+                @click="router.push('/about')"
+                v-scroll-to="{
+                  element: '.section-3',
+                  duration: 300,
+                  easing: 'ease',
+                  offset: 1,
+                }"
+              >
+                Our Facilities
+              </div>
+            </template>
+            <el-menu-item index="/spiroSite">SPIRO Site</el-menu-item>
+            <el-menu-item index="/pineSite">PINE Site</el-menu-item>
+            <el-menu-item index="/intelliM">OBiO Intelli-M</el-menu-item>
           </el-sub-menu>
+          <el-menu-item index="/team">Leadership Team</el-menu-item>
         </el-sub-menu>
-        <el-menu-item index="2">
-          <el-icon><icon-menu /></el-icon>
-          <span>Navigator Two</span>
-        </el-menu-item>
-        <el-menu-item index="3" disabled>
-          <el-icon><document /></el-icon>
-          <span>Navigator Three</span>
-        </el-menu-item>
-        <el-menu-item index="4">
-          <el-icon><setting /></el-icon>
-          <span>Navigator Four</span>
-        </el-menu-item>
+        <el-menu-item index="/sys">Laboratory Sciences</el-menu-item>
+        <el-sub-menu index="/cdmo" popper-class="sub-popper">
+          <template #title>
+            <div @click="router.push('/cdmo')">CDMO Solutions</div>
+          </template>
+          <el-menu-item index="/process">Process Development</el-menu-item>
+          <el-sub-menu index="/cgmp" popper-class="sub-popper ">
+            <template #title>
+              <div @click="router.push('/cgmp')">CGMP Manufacturing</div>
+            </template>
+            <el-menu-item index="/vector">Viral Vector</el-menu-item>
+            <el-menu-item index="/virus">Oncolytic Virus</el-menu-item>
+            <el-menu-item index="/products">Cell Therapy Products</el-menu-item>
+            <el-menu-item index="/nucleotides"
+              >Plasmid & Nucleotides</el-menu-item
+            >
+          </el-sub-menu>
+          <el-menu-item index="/quality">Quality & Regulatory</el-menu-item>
+          <el-menu-item index="/logistics">Cold Chain Logistics</el-menu-item>
+        </el-sub-menu>
+        <el-menu-item index="/cx">Innovations</el-menu-item>
+        <el-sub-menu index="/news" popper-class="sub-popper">
+          <template #title>
+            <div @click="router.push('/news')">Insights</div>
+          </template>
+          <el-menu-item index="/releases">Press Releases</el-menu-item>
+          <el-menu-item index="/events">Events</el-menu-item>
+          <el-menu-item index="/news">
+            <!-- @click="router.push('/news')" -->
+            <div
+              v-scroll-to="{
+                element: '.section-3',
+                duration: 300,
+                easing: 'ease',
+                offset: 1,
+              }"
+            >
+              Knowledge Center
+            </div>
+          </el-menu-item>
+        </el-sub-menu>
+        <el-menu-item @click="openUrl">Investor Relations</el-menu-item>
+        <el-menu-item index="/contact">Contact Us</el-menu-item>
       </el-menu>
     </el-drawer>
   </div>
@@ -231,6 +269,19 @@ onBeforeMount(() => {
 .menu-drawer {
   .el-drawer__body {
     padding: 0;
+  }
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  width: 100%;
+  // max-width: 20em;
+  background: #022350 url(@/assets/icons/up_downbg.jpg) no-repeat center;
+  z-index: 1;
+  // transform: translateX(100%);
+  transition: all 0.5s ease;
+  .el-menu {
+    border-right: none;
   }
 }
 .sub-popper {

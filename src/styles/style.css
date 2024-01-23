@@ -656,8 +656,10 @@ a:focus {
   background-position: center;
   background-repeat: no-repeat;
   margin-left: 20px;
+  text-align: center;
+  line-height: 40px;
 }
-.foot-link a.k1 {
+/* .foot-link a.k1 {
   background-image: url(@/assets/icons/ft_01.png);
 }
 .foot-link a.k2 {
@@ -665,9 +667,9 @@ a:focus {
 }
 .foot-link a.k3 {
   background-image: url(@/assets/icons/ft_03.png);
-}
+} */
 .foot-link a:hover {
-  background-color: #25b096;
+  /* background-color: #25b096; */
 }
 
 /* Viral-Vector-wrap */
