@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-19 14:28:45
+ * @LastEditTime: 2024-01-23 14:49:11
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -58,6 +58,14 @@ const pageData = ref([
       title: "Viral Vector",
       imgUrl:
         "https://www.obio-tech.com/public/uploads/20220330/6fbdf45356950a4b251f06186fe587df.jpg",
+    },
+  },
+  {
+    path: "/virus",
+    focusObj: {
+      title: "Oncolytic Virus",
+      imgUrl:
+        "https://www.obio-tech.com/public/uploads/20220330/1d3be6a7e78174e244dee6cc9a6320cd.jpg",
     },
   },
   {

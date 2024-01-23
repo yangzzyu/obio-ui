@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-19 14:28:45
+ * @LastEditTime: 2024-01-23 14:50:49
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -18,6 +18,7 @@
                 <img
                   src="https://www.obio-tech.com/public/uploads/20220516/d8b8355145a015301357a31e5dd4d335.png"
                   class="img-responsive"
+                  alt="AAVneO™ System：Next-Generation Capsid Screening Platform"
                 />
                 <i class="line"></i>
               </div>
@@ -54,6 +55,7 @@
                 <img
                   src="https://www.obio-tech.com/public/uploads/20220516/4ab34faa4be936bbde3c5e3445913f4a.png"
                   class="img-responsive"
+                  alt="OVersatileTM Platform: Versatility for Various Needs"
                 />
                 <i class="line line-rotate"></i>
               </div>
@@ -92,6 +94,8 @@
                 <img
                   src="https://www.obio-tech.com/public/uploads/20220516/7764b7189eacd23a0fc6c0bb9d5f8777.png"
                   class="img-responsive"
+                  alt="Proprietary Cell Line Development: High-Yielding Cell Line for
+                  Suspension Culture"
                 />
                 <i class="line"></i>
               </div>

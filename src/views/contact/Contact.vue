@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-22 15:29:22
+ * @LastEditTime: 2024-01-23 14:59:25
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -115,14 +115,15 @@
                   </el-form-item>
                   <el-form-item label="Security Code" required>
                     <el-col :span="11">
-                      <el-form-item>
+                      <!-- <el-form-item> -->
                         <el-input v-model="ruleForm.verify" />
-                      </el-form-item>
+                      <!-- </el-form-item> -->
                     </el-col>
                     <el-col :span="11">
                       <div class="put ub-f1" style="margin-left: 12px">
                         <img
                           class="verifyImg"
+                          alt="verifyImg"
                           id="captcha"
                           style="width: 150px; cursor: pointer; height: 38px"
                         />

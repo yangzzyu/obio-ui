@@ -214,7 +214,9 @@
                   >
                 </div>
                 <div class="more-psa fontf5 font-size20">
-                  <a href="/cn/home/team"></a></div
+                  <!-- <a href="/cn/home/team"></a> -->
+                  <span class="m-span"></span>
+                  </div
               ></el-col>
             </el-row>
           </el-col>

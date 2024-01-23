@@ -1,23 +1,18 @@
 <template>
-  <div
-    class="header"
-    :class="{ header_show: headerShow, shadow: headerShowActive }"
-  >
+  <div class="header">
     <div class="header_container">
       <div class="header_content">
         <div class="logo">
           <router-link to="/">
-            <img :src="logo_img[0].path" alt="logo" v-if="headerLogoShow" />
-            <img :src="logo_img[1].path" alt="logo" v-else />
+            <!-- <img :src="logo_img[0].path" alt="logo" v-if="headerLogoShow" /> -->
+            <img :src="logo_img[1].path" alt="logo" />
           </router-link>
         </div>
 
-        <!-- :default-active="activeIndex" -->
         <div class="menu-wrapper">
-          <!-- <el-icon><Fold /></el-icon> -->
           <Fold
             class="hidden-md-only hidden-lg-only hidden-xl-only"
-            style="width: 1.5em; height: 1.5em; margin-right: 8px"
+            style="width: 1.5em; height: 1.5em; margin-right: 8px; color: #fff"
             @click="drawerMenu = true"
           />
           <el-menu
@@ -36,10 +31,10 @@
               <template #title>
                 <div @click="router.push('/about')">About Us</div>
               </template>
-              <el-sub-menu index="/facilities" popper-class="sub-popper ">
+              <el-sub-menu index="/facilities" popper-class="sub-popper">
                 <template #title>
                   <div
-                    @click="router.push('/about')"
+                    @click="router.push('/facilities')"
                     v-scroll-to="{
                       element: '.section-3',
                       duration: 300,
@@ -124,6 +119,7 @@
         active-text-color="#87ffd9"
         background-color="transparent"
         :popper-offset="0"
+        @select="drawerMenu = false"
       >
         <el-menu-item index="/">Home</el-menu-item>
         <el-sub-menu index="/about" popper-class="sub-popper">
@@ -133,7 +129,7 @@
           <el-sub-menu index="/facilities" popper-class="sub-popper ">
             <template #title>
               <div
-                @click="router.push('/about')"
+                @click="router.push('/facilities')"
                 v-scroll-to="{
                   element: '.section-3',
                   duration: 300,
@@ -206,7 +202,6 @@ import { handleViteImages } from "@/utils";
 const router = useRouter();
 console.log(router, "router");
 // import type { MainStates } from '@/store'
-import mainStore from "@/stores/main";
 
 const activeIndex = computed(() => router.currentRoute.value.path);
 type NavItem = {
@@ -217,14 +212,30 @@ type ImgItem = {
   path: string;
 };
 const drawerMenu = ref(false);
-const navList = ref<NavItem[]>([]);
+const navList = ref<NavItem[]>([
+  {
+    title: "Home",
+    path: "/",
+  },
+  {
+    title: "About Us",
+    path: "/about",
+  },
+  {
+    title: "Our Facilities",
+    path: "/facilities",
+  },
+  {
+    title: "SPIRO Site",
+    path: "/spiroSite",
+  },
+  {
+    title: "PINE Site",
+    path: "/spiroSite",
+  },
+]);
 const logo_img = ref<ImgItem[]>([]);
-const store = mainStore();
 
-const headerShowActive = computed(() => store.headerShadowActive);
-const headerShow = computed(() => store.headerShow);
-const headerLogoShow = computed(() => store.headerLogoShow);
-const navDarkActive = computed(() => store.navDarkActive);
 logo_img.value = [
   {
     path: handleViteImages("@/assets/icons/logo1.png"),
@@ -236,34 +247,12 @@ logo_img.value = [
 function openUrl() {
   window.open("https://www.obiosh.com/tzz/gg/");
 }
-onBeforeMount(() => {
-  navList.value = [
-    {
-      title: "首页",
-      path: "/index",
-    },
-    {
-      title: "新闻中心",
-      path: "/news",
-    },
-    {
-      title: "产品与服务",
-      path: "/product",
-    },
-    {
-      title: "人才招聘",
-      path: "/job",
-    },
-    // {
-    //   title: '客户服务',
-    //   path: '/customer'
-    // },
-    {
-      title: "登录",
-      path: "/login",
-    },
-  ];
-});
+
+function goPage(params) {
+  router.push(params);
+  drawerMenu.value = false;
+}
+onBeforeMount(() => {});
 </script>
 <style lang="scss">
 .menu-drawer {

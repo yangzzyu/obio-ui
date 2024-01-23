@@ -329,10 +329,10 @@ a:focus {
 .home-offering-wrap .list .item .box:hover .line i {
   background-color: #fff;
 }
-.home-offering-wrap .list .item .box:hover .txt-con .more a {
+.home-offering-wrap .list .item .box:hover .txt-con .more .m-span {
   background-image: url(@/assets/icons/ico3a.png);
 }
-.home-offering-wrap .list .item .box:hover .txt-con .more a:hover {
+.home-offering-wrap .list .item .box:hover .txt-con .more .m-span:hover {
   background-image: url(@/assets/icons/ico3c.png);
 }
 .home-offering-wrap .list .item:nth-child(2n) .box {
@@ -350,7 +350,7 @@ a:focus {
 .home-offering-wrap .list .item .txt-con .more {
   margin-top: 40px;
 }
-.home-offering-wrap .list .item .txt-con .more a {
+.home-offering-wrap .list .item .txt-con .more .m-span {
   display: inline-block;
   width: 56px;
   height: 43px;
@@ -520,7 +520,7 @@ a:focus {
   text-align: right;
   margin-top: 80px;
 }
-.home-insights-wrap .more a {
+.home-insights-wrap .more .m-span {
   color: #fff;
   display: inline-block;
   line-height: 28px;
@@ -528,7 +528,7 @@ a:focus {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
-.home-insights-wrap .more a:hover {
+.home-insights-wrap .more .m-span:hover {
   background: #014099;
   border-color: #014099;
 }
@@ -1374,7 +1374,7 @@ a:focus {
   line-height: 1.8;
   margin-bottom: 30px;
 }
-.more-psa a {
+.more-psa .m-span {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -1384,7 +1384,7 @@ a:focus {
   font-style: italic;
   padding-right: 6px;
 }
-.more-psa a:hover {
+.more-psa .m-span:hover {
   background-image: url(@/assets/icons/ico12b.png);
   color: #fff;
 }
@@ -1517,13 +1517,13 @@ a:focus {
   line-height: 1.8;
   margin-bottom: 30px;
 }
-.Innovations-wrap .list .item .txt .more a {
+.Innovations-wrap .list .item .txt .more .m-span {
   display: inline-block;
   width: 85px;
   height: 65px;
   background: url(@/assets/icons/ico15.png) no-repeat left center/70px;
 }
-.Innovations-wrap .list .item .txt .more a:hover {
+.Innovations-wrap .list .item .txt .more .m-span:hover {
   background-image: url("@/assets/icons/ico_btn_fs.png");
 }
 .Insights-wrap .section-1 {

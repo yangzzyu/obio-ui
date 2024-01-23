@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-19 15:13:12
+ * @LastEditTime: 2024-01-23 14:44:32
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -76,6 +76,7 @@
                   <img
                     src="https://www.obio-tech.com/public/uploads/20220328/fb31c3bc021f9b0de1ac68c274c4861b.png"
                     class="img-responsive"
+                    alt="Plasmid"
                   />
                   <i class="line"></i>
                 </div>
@@ -110,6 +111,7 @@
                   <img
                     src="https://www.obio-tech.com/public/uploads/20220328/3356c9237a4a9f9e07774eb87e9fa841.png"
                     class="img-responsive"
+                    alt="Viral Vector"
                   />
                   <i class="line line-rotate"></i>
                 </div>
@@ -142,6 +144,7 @@
                   <img
                     src="https://www.obio-tech.com/public/uploads/20220328/093b15d78dc1fd4a455cb07e200f5ea2.png"
                     class="img-responsive"
+                    alt="Experiment Solutions"
                   />
                   <i class="line"></i>
                 </div>
@@ -194,6 +197,7 @@
                   <img
                     src="https://www.obio-tech.com/public/uploads/20220328/100084be2d003db1e0326fa639675f73.png"
                     class="img-responsive"
+                    alt="Related Products"
                   />
                   <i class="line line-rotate"></i>
                 </div>
@@ -243,6 +247,7 @@
                   <img
                     src="https://www.obio-tech.com/public/uploads/20220328/b2b256a7f88419a9892e559af40522b9.png"
                     class="img-responsive"
+                    alt="Extracellular Vesicle"
                   />
                   <i class="line"></i>
                 </div>

@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 09:07:47
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-23 11:07:01
+ * @LastEditTime: 2024-01-23 15:08:38
  * @FilePath: \obio-ui\src\views\HomeView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -31,7 +31,14 @@ import TheWelcome from "../components/TheWelcome.vue";
         ></scroll-hint> -->
       <div class="home-about-wrap animation-name: fadeInUp">
         <div class="home-about-content">
-          <div class="container">
+          <el-col
+            :xs="18"
+            :sm="20"
+            :md="20"
+            :lg="20"
+            :xl="22"
+            style="margin: auto"
+          >
             <div class="pub-title"><i class="line"></i></div>
             <div
               class="txt fontf8 font-size50 line-height18 wow fadeInUp animated"
@@ -43,12 +50,19 @@ import TheWelcome from "../components/TheWelcome.vue";
               commitment, we strive to become a world leading gene and cell
               therapy CRO/CDMO group.
             </div>
-          </div>
+          </el-col>
         </div>
       </div>
 
       <div class="home-offering-wrap">
-        <div class="container">
+        <el-col
+          :xs="18"
+          :sm="20"
+          :md="20"
+          :lg="20"
+          :xl="22"
+          style="margin: auto"
+        >
           <div class="pub-title style2 ub ub-ver ub-pe">
             <i class="line"></i
             ><span
@@ -85,7 +99,8 @@ import TheWelcome from "../components/TheWelcome.vue";
                     cell therapy products.
                   </div>
                   <div class="more">
-                    <a href="/cn/home/cdmo" class="m-a"></a>
+                    <!-- <a href="/cn/home/cdmo" class="m-a"></a> -->
+                    <span class="m-span"></span>
                   </div>
                 </div>
               </div>
@@ -116,17 +131,26 @@ import TheWelcome from "../components/TheWelcome.vue";
                     services for biomedical researchers.
                   </div>
                   <div class="more">
-                    <a href="/cn/home/sys" class="m-a"></a>
+                    <span class="m-span"></span>
+                    <!-- <a href="/cn/home/sys" class="m-a" target="_blank"></a> -->
+                    <!-- <div class="m"><span class="m-a"></span></div> -->
                   </div>
                 </div>
               </div>
             </el-col>
           </el-row>
-        </div>
+        </el-col>
       </div>
       <!-- v-on:mouseover="changeActive($event)" v-on:mouseout="removeActive($event)"> -->
       <div class="home-facilities">
-        <div class="container">
+        <el-col
+          :xs="18"
+          :sm="20"
+          :md="20"
+          :lg="20"
+          :xl="22"
+          style="margin: auto"
+        >
           <div class="pub-title ub ub-ver ub-pe">
             <i class="line"></i
             ><span
@@ -200,8 +224,12 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <a href="/cn/home/about/cid/881" class="shaw">
                     <img
                       src="@/assets/icons/bg3.png"
-                      :style="{ backgroundImage: 'url(' + item.bgUrl + ')' }"
+                      :style="{
+                        backgroundImage:
+                          'url(' + handleViteImages(item.bgUrl) + ')',
+                      }"
                       class="shaw-bg"
+                      :alt="item.title"
                     />
                     <div class="txt">
                       <div class="title fontf3 font-size30">
@@ -225,13 +253,20 @@ import TheWelcome from "../components/TheWelcome.vue";
               </div>
             </div>
           </div>
-        </div>
+        </el-col>
       </div>
       <div class="home-insights">
         <div class="bg1"></div>
         <div class="home-insights-wrap">
           <div class="bg2"></div>
-          <div class="container">
+          <el-col
+            :xs="18"
+            :sm="20"
+            :md="20"
+            :lg="20"
+            :xl="22"
+            style="margin: auto"
+          >
             <div class="pub-title style2 ub ub-ver ub-pe">
               <i class="line"></i
               ><span
@@ -307,12 +342,19 @@ import TheWelcome from "../components/TheWelcome.vue";
                 </div>
               </el-col>
             </el-row>
-          </div>
+          </el-col>
         </div>
       </div>
 
       <div class="home-contact">
-        <div class="container">
+        <el-col
+          :xs="18"
+          :sm="20"
+          :md="20"
+          :lg="20"
+          :xl="22"
+          style="margin: auto"
+        >
           <div class="pub-title ub ub-ver ub-pe">
             <i class="line"></i
             ><span class="fontf8 font-size70">Contact Us</span>
@@ -401,15 +443,16 @@ import TheWelcome from "../components/TheWelcome.vue";
                 </el-form-item>
                 <el-form-item label="Security Code" required>
                   <el-col :span="11">
-                    <el-form-item>
-                      <el-input v-model="ruleForm.verify" />
-                    </el-form-item>
+                    <!-- <el-form-item > -->
+                    <el-input v-model="ruleForm.verify" />
+                    <!-- </el-form-item> -->
                   </el-col>
                   <el-col :span="11">
                     <div class="put ub-f1" style="margin-left: 12px">
                       <img
                         class="verifyImg"
                         id="captcha"
+                        alt="verifyImg"
                         style="width: 150px; cursor: pointer; height: 38px"
                       />
                     </div>
@@ -492,7 +535,7 @@ import TheWelcome from "../components/TheWelcome.vue";
               </div>
             </el-col>
           </el-row>
-        </div>
+        </el-col>
       </div>
     </div>
     <!-- <index-service></index-service> -->
@@ -505,6 +548,7 @@ import WOW from "wow.js";
 import Banner from "@/components/Banner.vue";
 // import ScrollHint from '@/components/ScrollHint.vue'
 import { homeFacilitiesData, insightsData } from "@/data/HomePage";
+import { handleViteImages } from "@/utils";
 
 import { onMounted, onUnmounted, ref } from "vue";
 
@@ -599,29 +643,6 @@ function scrollHandle() {
     position: relative;
   }
 
-  @media (min-width: 768px) {
-    .container {
-      width: 750px;
-    }
-  }
-  @media (min-width: 992px) {
-    .container {
-      width: 970px;
-    }
-  }
-  @media (min-width: 1200px) {
-    .container {
-      width: 1170px;
-    }
-  }
-  @media (min-width: 1710px) {
-    .container {
-      width: 1430px;
-    }
-    .home-facilities .list .item.active .p {
-      margin-top: 130px;
-    }
-  }
   .home-about-wrap .txt {
     padding: 6vh 0 20vh;
     background-image: linear-gradient(135deg, #0d9cad, #009d85);

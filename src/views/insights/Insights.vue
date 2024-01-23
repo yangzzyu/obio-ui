@@ -23,6 +23,7 @@
         </div>
         <div class="in-news-all-btn font-size20 fontf3">
           <a href="/cn/home/news/cid/559">ALL PRESS RELEASES</a>
+          <!-- <span class="m-span">ALL PRESS RELEASES</span> -->
         </div>
       </el-col>
     </div>
