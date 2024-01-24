@@ -291,10 +291,20 @@
         <a name="a2"></a>
 
         <div class="cGMP-title-t3 cGMP-zIndex font-size24 fontf5">
-          <span
-            ><a href="/cn/home/about#a1"
-              >Learn more about our state-of-the-art facility</a
-            ></span
+          <span>
+            <router-link
+              to="/facilities"
+              v-scroll-to="{
+                element: '.section-3',
+                duration: 300,
+                easing: 'ease',
+                offset: 1,
+              }"
+            >
+              <!-- <a href="/cn/home/about#a1"> -->
+              Learn more about our state-of-the-art facility
+              <!-- </a> -->
+            </router-link></span
           >
         </div>
       </el-col>

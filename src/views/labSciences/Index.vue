@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-23 14:44:32
+ * @LastEditTime: 2024-01-24 14:30:12
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -165,19 +165,19 @@
                   </div>
                   <ul class="ul-pop font-size24 fontf5 color666">
                     <li class="ub">
-                      <div class="ub ub-ac stn" onclick="popLabora(10)">
+                      <div class="ub ub-ac stn" @click="popLabora(1)">
                         <i class="pub-ico-rights2"></i>
                         <div class="stx">Cell Biology</div>
                       </div>
                     </li>
                     <li class="ub">
-                      <div class="ub ub-ac stn" onclick="popLabora(9)">
+                      <div class="ub ub-ac stn" @click="popLabora(9)">
                         <i class="pub-ico-rights2"></i>
                         <div class="stx">Stable Cell Line</div>
                       </div>
                     </li>
                     <li class="ub">
-                      <div class="ub ub-ac stn" onclick="popLabora(8)">
+                      <div class="ub ub-ac stn" @click="popLabora(8)">
                         <i class="pub-ico-rights2"></i>
                         <div class="stx">Animal Studies</div>
                       </div>
@@ -218,13 +218,13 @@
                   </div>
                   <ul class="ul-pop font-size24 fontf5 color666">
                     <li class="ub">
-                      <div class="ub ub-ac stn" onclick="popLabora(7)">
+                      <div class="ub ub-ac stn" @click="popLabora(7)">
                         <i class="pub-ico-rights2"></i>
                         <div class="stx">In-stock viral vectors</div>
                       </div>
                     </li>
                     <li class="ub">
-                      <div class="ub ub-ac stn" onclick="popLabora(78)">
+                      <div class="ub ub-ac stn" @click="popLabora(78)">
                         <i class="pub-ico-rights2"></i>
                         <div class="stx">
                           In-stock protein and relevant reagents
@@ -232,7 +232,7 @@
                       </div>
                     </li>
                     <li class="ub">
-                      <div class="ub ub-ac stn" onclick="popLabora(77)">
+                      <div class="ub ub-ac stn" @click="popLabora(77)">
                         <i class="pub-ico-rights2"></i>
                         <div class="stx">gRNA library</div>
                       </div>
@@ -275,10 +275,65 @@
     </div>
     <Events />
   </div>
+  <el-dialog
+    v-model="dialogVisible"
+    title=""
+    width="40%"
+    :before-close="handleClose"
+  >
+    <!-- <span>This is a message</span> -->
+    <div class="popLaboraBox-main">
+      <div class="font-size50 fontf8 title">
+        <span>{{ Labora.title }}</span>
+      </div>
+      <div class="text color666 font-size18">
+        <p>
+          <span style="line-height: 2"> {{ Labora.txt }}</span>
+        </p>
+        <p>
+          <br />
+        </p>
+        <p style="text-align: center">
+          <img :src="Labora.imgUrl" :alt="Labora.title" />
+        </p>
+      </div>
+    </div>
+    <!-- <template #footer>
+      <span class="dialog-footer">
+        <el-button @click="dialogVisible = false">Cancel</el-button>
+        <el-button type="primary" @click="dialogVisible = false">
+          Confirm
+        </el-button>
+      </span>
+    </template> -->
+  </el-dialog>
 </template>
 
 <script lang="ts" setup name="LabSciences">
+import { ref } from "vue";
 import Events from "@/components/Events.vue";
+const dialogVisible = ref(false);
+function handleClose() {
+  Labora.value = {};
+  dialogVisible.value = false;
+}
+const Labora = ref({});
+const LaboraList = ref([
+  {
+    id: 1,
+    title: "Cell Biology",
+    txt: `We provide services for cytology experiment to verify cellular
+            functions like proliferation, migration, and apoptosis. We can also
+            conduct Western blot experiment to determine protein expression
+            level, qPCR for RNA determination in addition to SEM inspection,
+            particle diameter analysis and pathological examination.`,
+    imgUrl: "",
+  },
+]);
+function popLabora(id) {
+  Labora.value = LaboraList.value.find((i) => i.id === id) || {};
+  dialogVisible.value = true;
+}
 </script>
 
 <style></style>

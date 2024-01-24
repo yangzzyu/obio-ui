@@ -167,7 +167,7 @@
           <div class="list">
             <div class="list-con clearfix">
               <div class="item">
-                <a href="/cn/home/cdmo/cid/862" class="boxs block">
+                <router-link to="/process" class="boxs block">
                   <img
                     src="https://www.obio-tech.com/public/uploads/20220329/86aefe6d84551370527d380db3102723.png"
                     alt="Process Development"
@@ -179,10 +179,10 @@
                       Product Spectrum
                     </div>
                   </div>
-                </a>
+                </router-link>
               </div>
               <div class="item">
-                <a href="/cn/home/cdmo/cid/868" class="boxs block">
+                <router-link to="/cgmp" class="boxs block">
                   <img
                     src="https://www.obio-tech.com/public/uploads/20220329/37608c12bbed338f24bebdae54947878.png"
                     alt="cGMP Manufacturing"
@@ -193,10 +193,10 @@
                       Flexible Large-Scale GMP Manufacturing Platform
                     </div>
                   </div>
-                </a>
+                </router-link>
               </div>
               <div class="item">
-                <a href="/cn/home/cdmo/cid/875" class="boxs block">
+                <router-link to="/quality" class="boxs block">
                   <img
                     src="https://www.obio-tech.com/public/uploads/20220329/1421f3595888e8220c1c70678a63751c.png"
                     alt="Quality &amp; Regulatory"
@@ -209,10 +209,10 @@
                       International Compliant Quality Control System
                     </div>
                   </div>
-                </a>
+                </router-link>
               </div>
               <div class="item">
-                <a href="/cn/home/cdmo/cid/879" class="boxs block">
+                <router-link to="/logistics" class="boxs block">
                   <img
                     src="https://www.obio-tech.com/public/uploads/20220325/27eb574fecde7e40f15b4be3c86a2d78.png"
                     alt="Cold Chain Logistics"
@@ -223,7 +223,7 @@
                       Traceable Cold-Chain Logistics with Controllable Risk
                     </div>
                   </div>
-                </a>
+                </router-link>
               </div>
             </div>
           </div>

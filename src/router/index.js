@@ -159,6 +159,11 @@ const router = createRouter({
           ],
         },
         {
+          name: "News Details",
+          path: "/news-details/:id",
+          component: () => import("@/views/insights/Detail.vue"),
+        },
+        {
           path: "/contact",
           name: "Contact Us",
           component: () => import("@/views/contact/Contact.vue"),

@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-23 14:59:25
+ * @LastEditTime: 2024-01-23 17:25:22
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -30,7 +30,7 @@
           </div>
           <div class="in-contact-form">
             <el-row>
-              <el-col :span="12" :xs="24">
+              <el-col :span="24" :xs="24">
                 <el-form
                   ref="ruleFormRef"
                   :model="ruleForm"
@@ -162,51 +162,6 @@
                     />
                   </div>
                 </el-form>
-              </el-col>
-              <el-col :span="12" :xs="24">
-                <div class="right-wrap">
-                  <div class="ico-r6">
-                    <img
-                      src="@/assets/icons/ico6.png"
-                      class="img-responsive"
-                      style="max-width: 100%"
-                      alt=""
-                    />
-                  </div>
-                  <div class="ico-rline"></div>
-                  <ul class="right-mes">
-                    <li>
-                      <div class="labr fontf3">Main</div>
-                      <div class="ms ico1 fontf3 font-size18">
-                        +86 400-151-5198
-                      </div>
-                    </li>
-                    <li>
-                      <div class="labr fontf3">Tel</div>
-                      <div class="ms icn1 fontf3 font-size18">
-                        +1-408-807-5641
-                      </div>
-                    </li>
-                    <li>
-                      <div class="labr fontf3">For General Inquiry</div>
-                      <div class="ms ico2 fontf3 font-size18">
-                        oobio@obiosh.com
-                      </div>
-                    </li>
-                    <li>
-                      <div class="labr fontf3">For Business Inquiry</div>
-                      <div class="ms ico2 fontf3 font-size18">
-                        bd@obiosh.com
-                      </div>
-                    </li>
-                    <li>
-                      <div class="labr fontf3">Address</div>
-                      <div class="ms icn2 fontf3 font-size18">
-                        446 S Hillview Dr Milpitas, CA 95035 U.S.A
-                      </div>
-                    </li>
-                  </ul>
-                </div>
               </el-col>
             </el-row>
           </div>

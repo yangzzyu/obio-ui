@@ -26,7 +26,7 @@ const matchedData = ref([]);
 const FocusData = ref({});
 const pageData = ref([
   {
-    path: "/news",
+    name: "Insights",
     focusObj: {
       title: "Insights",
       imgUrl:
@@ -34,7 +34,7 @@ const pageData = ref([
     },
   },
   {
-    path: "/releases",
+    name: "Press Releases",
     focusObj: {
       title: "Insights",
       imgUrl:
@@ -42,7 +42,7 @@ const pageData = ref([
     },
   },
   {
-    path: "/events",
+    name: "Events",
     focusObj: {
       title: "Insights",
       imgUrl:
@@ -50,27 +50,35 @@ const pageData = ref([
     },
   },
   {
-    path: "/cgmp",
+    name: "News Details",
     focusObj: {
-      title: "cGMP Manufacturing",
+      title: "Insights",
       imgUrl:
-        "https://www.obio-tech.com/public/uploads/20220330/34ae01f5908db621bb95a22d16206e8f.jpg",
+        "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
     },
   },
-  {
-    path: "/vector",
-    focusObj: {
-      title: "Viral Vector",
-      imgUrl:
-        "https://www.obio-tech.com/public/uploads/20220330/6fbdf45356950a4b251f06186fe587df.jpg",
-    },
-  },
+  // {
+  //   path: "/cgmp",
+  //   focusObj: {
+  //     title: "cGMP Manufacturing",
+  //     imgUrl:
+  //       "https://www.obio-tech.com/public/uploads/20220330/34ae01f5908db621bb95a22d16206e8f.jpg",
+  //   },
+  // },
+  // {
+  //   path: "/vector",
+  //   focusObj: {
+  //     title: "Viral Vector",
+  //     imgUrl:
+  //       "https://www.obio-tech.com/public/uploads/20220330/6fbdf45356950a4b251f06186fe587df.jpg",
+  //   },
+  // },
 ]);
 watch(
   () => router.currentRoute.value,
   (newValue: any) => {
     FocusData.value =
-      pageData.value.find((i) => i.path === newValue.path)?.focusObj || {};
+      pageData.value.find((i) => i.name === newValue.name)?.focusObj || {};
     matchedData.value = newValue.matched || [];
     routerName.value = newValue.name;
     // FocusData.value.title = obj.title;

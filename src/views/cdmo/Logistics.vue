@@ -36,11 +36,14 @@
           <br />
           <span style="line-height: 2"
             ><strong
-              ><u
-                ><a href="/cn/home/contact" target="_blank"
-                  >Any questions about cold-chain transportation, please feel
-                  free to contact one of our technical consultants.</a
-                ></u
+              ><u>
+                <router-link to="/contact">
+                  <!-- <a href="/cn/home/contact" target="_blank"
+                    > -->
+                  Any questions about cold-chain transportation, please feel
+                  free to contact one of our technical consultants.
+                  <!-- </a> -->
+                </router-link></u
               ></strong
             ></span
           ><br />

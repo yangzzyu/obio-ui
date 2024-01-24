@@ -1385,6 +1385,7 @@ a:focus {
   color: #039d8f;
   font-style: italic;
   padding-right: 6px;
+  cursor: pointer;
 }
 .more-psa .m-span:hover {
   background-image: url(@/assets/icons/ico12b.png);
@@ -2157,7 +2158,7 @@ a:focus {
   height: 16px;
   background: url(@/assets/icons/ico_yd2.png) no-repeat center;
   content: "";
-  z-index: -1;
+  /* z-index: -1; */
   margin-top: -8px;
   transform: rotateZ(180deg);
 }
@@ -2169,7 +2170,7 @@ a:focus {
   height: 1px;
   background: #ddd;
   content: "";
-  z-index: -2;
+  /* z-index: -2; */
 }
 .layer-top-right {
   border-top-left-radius: 30px !important;
