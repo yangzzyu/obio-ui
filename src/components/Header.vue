@@ -1,41 +1,48 @@
+<!--
+ * @Author: yangyu 1431330771@qq.com
+ * @Date: 2024-01-22 21:59:54
+ * @LastEditors: yangyu 1431330771@qq.com
+ * @LastEditTime: 2024-01-24 15:58:12
+ * @FilePath: \obio-ui\src\components\Header.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <template>
-  <div
-    class="header"
-    :class="{ header_show: headerShow, shadow: headerShowActive }"
-  >
+  <div class="header">
     <div class="header_container">
       <div class="header_content">
         <div class="logo">
           <router-link to="/">
-            <img :src="logo_img[0].path" alt="logo" v-if="headerLogoShow" />
-            <img :src="logo_img[1].path" alt="logo" v-else />
+            <!-- <img :src="logo_img[0].path" alt="logo" v-if="headerLogoShow" /> -->
+            <img :src="logo_img[1].path" alt="logo" />
           </router-link>
         </div>
 
-        <!-- :default-active="activeIndex" -->
         <div class="menu-wrapper">
+          <Fold
+            class="hidden-md-only hidden-lg-only hidden-xl-only"
+            style="width: 1.5em; height: 1.5em; margin-right: 8px; color: #fff"
+            @click="drawerMenu = true"
+          />
           <el-menu
             :ellipsis="false"
             :default-active="activeIndex"
             mode="horizontal"
-            background-color="transparent"
+            text-color="#fff"
             router
+            class="hidden-sm-and-down"
+            active-text-color="#87ffd9"
+            background-color="transparent"
+            :popper-offset="0"
           >
-            <!-- style="width: 600px"
-            :popper-offset="60" -->
-            <!-- text-color="#ffffff" -->
-            <!-- text-color="#ffffff"
-          active-text-color="#ffffff" -->
-            <!-- @select="handleSelect" -->
             <el-menu-item index="/">Home</el-menu-item>
-            <el-sub-menu index="/about">
+            <el-sub-menu index="/about" popper-class="sub-popper">
               <template #title>
                 <div @click="router.push('/about')">About Us</div>
               </template>
-              <el-sub-menu index="/Facilities">
+              <el-sub-menu index="/facilities" popper-class="sub-popper">
                 <template #title>
                   <div
-                    @click="router.push('/about')"
+                    @click="router.push('/facilities')"
                     v-scroll-to="{
                       element: '.section-3',
                       duration: 300,
@@ -53,40 +60,149 @@
               <el-menu-item index="/team">Leadership Team</el-menu-item>
             </el-sub-menu>
             <el-menu-item index="/sys">Laboratory Sciences</el-menu-item>
-            <el-sub-menu index="/cdmo">
+            <el-sub-menu index="/cdmo" popper-class="sub-popper">
               <template #title>
                 <div @click="router.push('/cdmo')">CDMO Solutions</div>
               </template>
-              <el-menu-item index="2-1">item one</el-menu-item>
-              <el-menu-item index="2-2">item two</el-menu-item>
-              <el-menu-item index="2-3">item three</el-menu-item>
-              <el-sub-menu index="2-4">
-                <template #title>item four</template>
-                <el-menu-item index="2-4-1">item one</el-menu-item>
-                <el-menu-item index="2-4-2">item two</el-menu-item>
-                <el-menu-item index="2-4-3">item three</el-menu-item>
+              <el-menu-item index="/process">Process Development</el-menu-item>
+              <el-sub-menu index="/cgmp" popper-class="sub-popper ">
+                <template #title>
+                  <div @click="router.push('/cgmp')">CGMP Manufacturing</div>
+                </template>
+                <el-menu-item index="/vector">Viral Vector</el-menu-item>
+                <el-menu-item index="/virus">Oncolytic Virus</el-menu-item>
+                <el-menu-item index="/products"
+                  >Cell Therapy Products</el-menu-item
+                >
+                <el-menu-item index="/nucleotides"
+                  >Plasmid & Nucleotides</el-menu-item
+                >
               </el-sub-menu>
+              <el-menu-item index="/quality">Quality & Regulatory</el-menu-item>
+              <el-menu-item index="/logistics"
+                >Cold Chain Logistics</el-menu-item
+              >
             </el-sub-menu>
-            <el-menu-item index="3">Info</el-menu-item>
-            <el-menu-item index="4">Orders</el-menu-item>
+            <el-menu-item index="/cx">Innovations</el-menu-item>
+            <el-sub-menu index="/news" popper-class="sub-popper">
+              <template #title>
+                <div @click="router.push('/news')">Insights</div>
+              </template>
+              <el-menu-item index="/releases">Press Releases</el-menu-item>
+              <el-menu-item index="/events">Events</el-menu-item>
+              <el-menu-item index="/news">
+                <!-- @click="router.push('/news')" -->
+                <div
+                  v-scroll-to="{
+                    element: '.section-3',
+                    duration: 300,
+                    easing: 'ease',
+                    offset: 1,
+                  }"
+                >
+                  Knowledge Center
+                </div>
+              </el-menu-item>
+            </el-sub-menu>
+            <el-menu-item @click="openUrl">Investor Relations</el-menu-item>
+            <el-menu-item index="/contact">Contact Us</el-menu-item>
           </el-menu>
         </div>
-        <!-- <div class="menu-wrapper">
-          <div class="menu-item" v-for="(nav, index) in navList" :key="index">
-            <h2 class="menu-item-link">
-              <router-link :to="nav.path">
-                <span :class="{ a_text_dark: navDarkActive }">{{
-                  nav.title
-                }}</span>
-              </router-link>
-            </h2>
-          </div>
-        </div> -->
       </div>
     </div>
+    <el-drawer
+      v-model="drawerMenu"
+      direction="rtl"
+      size="70%"
+      :show-close="false"
+      z-index="999999"
+      :append-to-body="true"
+      class="menu-drawer hidden-md-only hidden-lg-only hidden-xl-only"
+    >
+      <el-menu
+        :ellipsis="false"
+        :default-active="activeIndex"
+        text-color="#fff"
+        router
+        active-text-color="#87ffd9"
+        background-color="transparent"
+        :popper-offset="0"
+        @select="drawerMenu = false"
+      >
+        <el-menu-item index="/">Home</el-menu-item>
+        <el-sub-menu index="/about" popper-class="sub-popper">
+          <template #title>
+            <div @click="router.push('/about')">About Us</div>
+          </template>
+          <el-sub-menu index="/facilities" popper-class="sub-popper ">
+            <template #title>
+              <div
+                @click="router.push('/facilities')"
+                v-scroll-to="{
+                  element: '.section-3',
+                  duration: 300,
+                  easing: 'ease',
+                  offset: 1,
+                }"
+              >
+                Our Facilities
+              </div>
+            </template>
+            <el-menu-item index="/spiroSite">SPIRO Site</el-menu-item>
+            <el-menu-item index="/pineSite">PINE Site</el-menu-item>
+            <el-menu-item index="/intelliM">OBiO Intelli-M</el-menu-item>
+          </el-sub-menu>
+          <el-menu-item index="/team">Leadership Team</el-menu-item>
+        </el-sub-menu>
+        <el-menu-item index="/sys">Laboratory Sciences</el-menu-item>
+        <el-sub-menu index="/cdmo" popper-class="sub-popper">
+          <template #title>
+            <div @click="router.push('/cdmo')">CDMO Solutions</div>
+          </template>
+          <el-menu-item index="/process">Process Development</el-menu-item>
+          <el-sub-menu index="/cgmp" popper-class="sub-popper ">
+            <template #title>
+              <div @click="router.push('/cgmp')">CGMP Manufacturing</div>
+            </template>
+            <el-menu-item index="/vector">Viral Vector</el-menu-item>
+            <el-menu-item index="/virus">Oncolytic Virus</el-menu-item>
+            <el-menu-item index="/products">Cell Therapy Products</el-menu-item>
+            <el-menu-item index="/nucleotides"
+              >Plasmid & Nucleotides</el-menu-item
+            >
+          </el-sub-menu>
+          <el-menu-item index="/quality">Quality & Regulatory</el-menu-item>
+          <el-menu-item index="/logistics">Cold Chain Logistics</el-menu-item>
+        </el-sub-menu>
+        <el-menu-item index="/cx">Innovations</el-menu-item>
+        <el-sub-menu index="/news" popper-class="sub-popper">
+          <template #title>
+            <div @click="router.push('/news')">Insights</div>
+          </template>
+          <el-menu-item index="/releases">Press Releases</el-menu-item>
+          <el-menu-item index="/events">Events</el-menu-item>
+          <el-menu-item index="/news">
+            <!-- @click="router.push('/news')" -->
+            <div
+              v-scroll-to="{
+                element: '.section-3',
+                duration: 300,
+                easing: 'ease',
+                offset: 1,
+              }"
+            >
+              Knowledge Center
+            </div>
+          </el-menu-item>
+        </el-sub-menu>
+        <el-menu-item @click="openUrl">Investor Relations</el-menu-item>
+        <el-menu-item index="/contact">Contact Us</el-menu-item>
+      </el-menu>
+    </el-drawer>
   </div>
 </template>
 <script lang="ts" setup name="AwHeader">
+import { Fold } from "@element-plus/icons-vue";
 import { useRouter } from "vue-router";
 import { computed, onBeforeMount, ref, toRefs } from "vue";
 import { handleViteImages } from "@/utils";
@@ -94,7 +210,6 @@ import { handleViteImages } from "@/utils";
 const router = useRouter();
 console.log(router, "router");
 // import type { MainStates } from '@/store'
-import mainStore from "@/stores/main";
 
 const activeIndex = computed(() => router.currentRoute.value.path);
 type NavItem = {
@@ -104,14 +219,31 @@ type NavItem = {
 type ImgItem = {
   path: string;
 };
-const navList = ref<NavItem[]>([]);
+const drawerMenu = ref(false);
+const navList = ref<NavItem[]>([
+  {
+    title: "Home",
+    path: "/",
+  },
+  {
+    title: "About Us",
+    path: "/about",
+  },
+  {
+    title: "Our Facilities",
+    path: "/facilities",
+  },
+  {
+    title: "SPIRO Site",
+    path: "/spiroSite",
+  },
+  {
+    title: "PINE Site",
+    path: "/spiroSite",
+  },
+]);
 const logo_img = ref<ImgItem[]>([]);
-const store = mainStore();
 
-const headerShowActive = computed(() => store.headerShadowActive);
-const headerShow = computed(() => store.headerShow);
-const headerLogoShow = computed(() => store.headerLogoShow);
-const navDarkActive = computed(() => store.navDarkActive);
 logo_img.value = [
   {
     path: handleViteImages("@/assets/icons/logo1.png"),
@@ -120,35 +252,43 @@ logo_img.value = [
     path: handleViteImages("@/assets/icons/logo1.png"),
   },
 ];
-onBeforeMount(() => {
-  navList.value = [
-    {
-      title: "首页",
-      path: "/index",
-    },
-    {
-      title: "新闻中心",
-      path: "/news",
-    },
-    {
-      title: "产品与服务",
-      path: "/product",
-    },
-    {
-      title: "人才招聘",
-      path: "/job",
-    },
-    // {
-    //   title: '客户服务',
-    //   path: '/customer'
-    // },
-    {
-      title: "登录",
-      path: "/login",
-    },
-  ];
-});
+function openUrl() {
+  window.open("https://www.obiosh.com/tzz/gg/");
+}
+
+function goPage(params) {
+  router.push(params);
+  drawerMenu.value = false;
+}
+onBeforeMount(() => {});
 </script>
+<style lang="scss">
+.menu-drawer {
+  .el-drawer__body {
+    padding: 0;
+  }
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  width: 100%;
+  // max-width: 20em;
+  background: #022350 url(@/assets/icons/up_downbg.jpg) no-repeat center;
+  z-index: 1;
+  // transform: translateX(100%);
+  transition: all 0.5s ease;
+  .el-menu {
+    border-right: none;
+  }
+}
+.sub-popper {
+  border-top: 3px solid #0093dd;
+  .el-sub-menu__title,
+  .el-menu-item {
+    color: #000 !important;
+  }
+}
+</style>
 <style lang="scss" scoped>
 $nav_active_color: #3370ff;
 

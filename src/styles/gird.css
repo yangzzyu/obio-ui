@@ -120,7 +120,7 @@
   .home-offering-wrap .list .item .txt-con .more {
     margin-top: 5px;
   }
-  .home-offering-wrap .list .item .txt-con .more a {
+  .home-offering-wrap .list .item .txt-con .more .m-span {
     background-size: 30px;
   }
   .home-offering-wrap .list .item .box i.bg {
@@ -283,7 +283,7 @@
     margin-bottom: 10px;
     margin-top: 10px;
   }
-  .more-psa a {
+  .more-psa .m-span {
     background-size: 32px;
   }
   .pub-contact-form {
@@ -431,7 +431,7 @@
   }
   .CDMO-Solutions-wrap .section-2 .list .img1,
   .CDMO-Solutions-wrap .section-2 .list .active .img1 {
-    height: auto;
+    /* height: auto; */
   }
   .CDMO-Solutions-wrap .section-2 .list .t {
     font-size: 14px;
@@ -681,7 +681,7 @@
   .number-main {
     padding-bottom: 15px;
   }
-  .number-main .number-c {
+  .number-main .number-c .statistic__number {
     font-size: 40px;
   }
   .number-main .fh {
@@ -958,7 +958,7 @@
   .home-offering-wrap .list .item .txt-con .more {
     margin-top: 20px;
   }
-  .home-offering-wrap .list .item .txt-con .more a {
+  .home-offering-wrap .list .item .txt-con .more .m-span {
     height: 30px;
   }
   .home-facilities .list .item .img {

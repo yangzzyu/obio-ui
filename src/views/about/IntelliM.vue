@@ -2,61 +2,13 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-19 14:00:42
+ * @LastEditTime: 2024-01-23 17:27:13
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
   <div class="intelli-m">
-    <div class="focus">
-      <div class="hidden-xs">
-        <img
-          src="https://www.obio-tech.com/public/uploads/20231212/880325aa48c9982b1a9851a9fe36f90d.jpg"
-          alt="OBiO Intelli-M"
-        />
-      </div>
-      <div class="visible-xs-block">
-        <img
-          src="https://www.obio-tech.com/public/uploads/20220402/2e0726ccc43f2f2c0bd315cd476d0b6f.jpg"
-          alt="OBiO Intelli-M"
-        />
-      </div>
-      <div class="txt ub ub-ac">
-        <div class="ub-f1">
-          <el-col
-            :xs="22"
-            :sm="20"
-            :md="20"
-            :lg="20"
-            :xl="22"
-            style="margin: auto"
-          >
-            <h1>OBiO Intelli-M</h1>
-          </el-col>
-        </div>
-      </div>
-    </div>
     <div class="Intelli-M-wrap">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="location fontf3"
-      >
-        <el-breadcrumb :separator-icon="ArrowRight">
-          <el-breadcrumb-item :to="{ path: '/' }">Home</el-breadcrumb-item>
-          <el-breadcrumb-item :to="{ path: '/about' }"
-            >About</el-breadcrumb-item
-          >
-          <el-breadcrumb-item :to="{ path: '/Facilities' }"
-            >Our Facilities</el-breadcrumb-item
-          >
-          <el-breadcrumb-item>OBiO Intelli-M</el-breadcrumb-item>
-        </el-breadcrumb>
-      </el-col>
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto">
         <div class="pub-title pub-title-p ub ub-ver ub-pe">
           <i class="line"></i>
@@ -91,11 +43,11 @@
             </el-col>
           </el-row>
           <span style="line-height: 2">
-            <span style="color: #003399"
-              ><a href="/cn/home/contact" target="_blank"
+            <span style="color: #003399"></span>
+              <router-link to="/contact"
                 ><strong
                   ><u>Please contact us for customization needs.</u></strong
-                > </a
+                ></router-link
               >Our experts will be responsive to your requirements at first
               instance.</span
             ><br /> </span
@@ -133,7 +85,7 @@
 </template>
 
 <script lang="ts" setup name="IntelliM">
-import { ArrowRight } from "@element-plus/icons-vue";
+// import { ArrowRight } from "@element-plus/icons-vue";
 import { IntelliMItemList } from "./data/IntelliM";
 import ScrollHint from "@/components/ScrollHint.vue";
 </script>

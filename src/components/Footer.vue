@@ -1,69 +1,99 @@
 <template>
   <div class="foot-wrap">
-    <div class="container">
-      <el-col :xs="24" :sm="16" :md="18" :lg="20" :xl="22" class="container">
-        <el-row class="row">
-          <el-col :sm="6" :xs="24">
-            <div class="foot-log">
-              <img
-                src="https://www.obio-tech.com/public/uploads/20230630/a4e158c16a5cb2bf4e6506a46adf9c57.png"
-                alt="OBiO Technology (Shanghai) Corp., Ltd."
+    <el-col :xs="24" :sm="16" :md="18" :lg="20" :xl="22" style="margin: auto">
+      <el-row class="row">
+        <el-col :sm="6" :xs="24" class="wow fadeInLeft animated">
+          <div class="foot-log">
+            <img
+              src="https://www.obio-tech.com/public/uploads/20230630/a4e158c16a5cb2bf4e6506a46adf9c57.png"
+              alt="OBiO Technology (Shanghai) Corp., Ltd."
+            />
+          </div>
+          <div class="p font-size18 fontf2"></div
+        ></el-col>
+        <el-col :sm="6" :xs="12" class="wow fadeInLeft animated"
+          ><dl class="dl-foot-nav">
+            <dt class="font-size20">
+              <router-link to="/about">About Us</router-link>
+            </dt>
+            <dt class="font-size20">
+              <router-link to="/sys">Laboratory Services</router-link>
+            </dt>
+            <dt class="font-size20">
+              <router-link to="/news">Insights</router-link>
+            </dt>
+            <dt class="font-size20">
+              <router-link to="/cx">Innovations</router-link>
+            </dt>
+            <dt class="font-size20">
+              <!-- <router-link to="https://www.obiosh.com/tzz/gg/" target="_blank"
+                >Investor Relations</router-link
+              > -->
+            </dt>
+            <dd></dd></dl
+        ></el-col>
+        <el-col :sm="6" :xs="12" class="wow fadeInRight animated">
+          <dl class="dl-foot-nav">
+            <dt class="font-size20">
+              <router-link to="/cdmo">CDMO Solutions</router-link>
+            </dt>
+            <dd>
+              <router-link to="/process">Process Development</router-link>
+            </dd>
+            <dd><router-link to="/cgmp">cGMP Manufacturing</router-link></dd>
+            <dd>
+              <router-link to="/quality">Quality &amp; Regulatory</router-link>
+            </dd>
+            <dd>
+              <router-link to="/logistics">Cold Chain Logistics</router-link>
+            </dd>
+            <dt class="font-size20">
+              <!-- <router-link href="/cn/home/ys/cid/861">Privacy Policy</router-link> -->
+            </dt>
+          </dl></el-col
+        >
+        <el-col :sm="6" :xs="24" class="wow fadeInRight animated">
+          <div class="foot-link ub">
+            <a href="https://www.linkedin.com/company/obiosh">
+              <font-awesome-icon
+                class="footer-icon"
+                size="lg"
+                :icon="['fab', 'weixin']"
               />
-            </div>
-            <div class="p font-size18 fontf2"></div
-          ></el-col>
-          <el-col :sm="6" :xs="12"
-            ><dl class="dl-foot-nav">
-              <dt class="font-size20"><a href="/cn/home/about">About Us</a></dt>
-              <dt class="font-size20">
-                <a href="/cn/home/sys">Laboratory Services</a>
-              </dt>
-              <dt class="font-size20"><a href="/cn/home/news">Insights</a></dt>
-              <dt class="font-size20"><a href="/cn/home/cx">Innovations</a></dt>
-              <dt class="font-size20">
-                <a href="https://www.obiosh.com/tzz/gg/" target="_blank"
-                  >Investor Relations</a
-                >
-              </dt>
-            </dl></el-col
-          >
-          <el-col :sm="6" :xs="12">
-            <dl class="dl-foot-nav">
-              <dt class="font-size20">
-                <a href="/cn/home/cdmo">CDMO Solutions</a>
-              </dt>
-              <dd><a href="/cn/home/cdmo/cid/862">Process Development</a></dd>
-              <dd><a href="/cn/home/cdmo/cid/868">cGMP Manufacturing</a></dd>
-              <dd>
-                <a href="/cn/home/cdmo/cid/875">Quality &amp; Regulatory</a>
-              </dd>
-              <dd><a href="/cn/home/cdmo/cid/879">Cold Chain Logistics</a></dd>
-              <dt class="font-size20">
-                <a xhref="/cn/home/ys/cid/861">Privacy Policy</a>
-              </dt>
-            </dl></el-col
-          >
-          <el-col :sm="6" :xs="24">
-            <div class="foot-link ub ">
-              <a
-                href="https://www.linkedin.com/company/obiosh"
+            </a>
+            <a href="https://www.youtube.com/channel/UCFBQ9g386UNn_WluHw_GdOg">
+              <font-awesome-icon
+                class="footer-icon"
+                size="lg"
+                :icon="['fab', 'linkedin']"
+            /></a>
+            <a href="https://mp.weixin.qq.com/s/SeARdjD_mAN8Uft4hBwQgg">
+              <font-awesome-icon
+                class="footer-icon"
+                size="lg"
+                :icon="['fab', 'youtube']"
+            /></a>
+          </div>
+          <!-- <div class="foot-link ub">
+              <router-link
+                to="https://www.linkedin.com/company/obiosh"
                 target="_blank"
                 class="k1"
-              ></a>
-              <a
-                href="https://www.youtube.com/channel/UCFBQ9g386UNn_WluHw_GdOg"
+              ></router-link>
+              <router-link
+                to="https://www.youtube.com/channel/UCFBQ9g386UNn_WluHw_GdOg"
                 target="_blank"
                 class="k2"
-              ></a>
-              <a
-                href="https://mp.weixin.qq.com/s/SeARdjD_mAN8Uft4hBwQgg"
+              ></router-link>
+              <router-link
+                to="https://mp.weixin.qq.com/s/SeARdjD_mAN8Uft4hBwQgg"
                 target="_blank"
                 class="k3"
-              ></a></div
-          ></el-col>
-        </el-row>
-      </el-col>
-    </div>
+              ></router-link></div
+          > -->
+        </el-col>
+      </el-row>
+    </el-col>
     <div class="icp">
       © 2023 OBiO Technology (Shanghai) Corp., Ltd. All Rights Reserved
     </div>
@@ -72,6 +102,8 @@
 <script lang="ts" setup>
 import { onMounted, ref } from "vue";
 import { handleViteImages } from "@/utils";
+import "wow.js/css/libs/animate.css";
+import WOW from "wow.js";
 
 type ConcatItem = {
   name: string;
@@ -93,44 +125,18 @@ const contact_way = ref<ConcatItem[]>([]);
 const focus_icon = ref<FocusItem[]>([]);
 
 onMounted(() => {
-  contact_way.value = [
-    {
-      name: "媒体问询",
-      email: "aerowangue@126.com",
-    },
-    {
-      name: "招聘相关",
-      email: "aerowangue@126.com",
-    },
-    {
-      name: "商务合作",
-      email: "aerowangue@126.com",
-    },
-    {
-      name: "广告相关",
-      email: "aerowangue@126.com",
-    },
-  ];
-  focus_icon.value = [
-    {
-      name: "weibo",
-      path: handleViteImages("@/assets/img/focus/weibo.png"),
-      qr: handleViteImages("@/assets/img/focus/qr_weibo.png"),
-      info: "关注官方微博",
-    },
-    {
-      name: "weixin",
-      path: handleViteImages("@/assets/img/focus/weixin.svg"),
-      qr: handleViteImages("@/assets/img/focus/qr_weixin.png"),
-      info: "关注官方微信公众号",
-    },
-    {
-      name: "bilibili",
-      path: handleViteImages("@/assets/img/focus/bilibili.png"),
-      qr: handleViteImages("@/assets/img/focus/qr_bilibili.png"),
-      info: "关注官方 bilibili 号",
-    },
-  ];
+  var wow = new WOW({
+    boxClass: "wow",
+    animateClass: "animated",
+    offset: 0,
+    mobile: true,
+    live: true,
+    callback: function (box) {},
+    scrollContainer: null,
+    resetAnimation: true,
+  });
+
+  wow.init();
 });
 </script>
 <style lang="scss" scoped>
@@ -184,7 +190,7 @@ h2 {
         margin-bottom: 15px;
       }
 
-      a {
+      router-link {
         color: #d2d3d4;
       }
     }

@@ -11,6 +11,7 @@ type ViralItem = {
   imgUrl: string;
   title: string;
   content: string;
+  path: string;
 };
 
 import { ref } from "vue";
@@ -25,6 +26,7 @@ export const ViralList = ref<ViralItem[]>([
     virus vectors including adeno-associated virus and lentivirus,
     we can flexibly adjust to adherent or suspension-based platform
     to meet your manufacturing demands.`,
+    path: "/process",
   },
   {
     id: 1,
@@ -36,6 +38,7 @@ export const ViralList = ref<ViralItem[]>([
     stomatitis virus and new castle disease virus. Our cell culture
     processes and flexible cGMP manufacturing can flexibly
     accommodate your manufacturing demands at different scales.`,
+    path: "/cgmp",
   },
   {
     id: 2,
@@ -44,6 +47,7 @@ export const ViralList = ref<ViralItem[]>([
     content: `We provide autologous, such as CAR-T therapy, and allogeneic
     cell therapy products, such as universal T-cell therapy, natural
     killer cell therapy, and hematopoietic stem cell therapy.`,
+    path: "/quality",
   },
   {
     id: 3,
@@ -55,5 +59,6 @@ export const ViralList = ref<ViralItem[]>([
     addition, we provide process development and cGMP manufacturing
     services for nucleotides including mini-circle plasmid and mRNA
     therapy.`,
+    path: "/logistics",
   },
 ]);

@@ -329,10 +329,10 @@ a:focus {
 .home-offering-wrap .list .item .box:hover .line i {
   background-color: #fff;
 }
-.home-offering-wrap .list .item .box:hover .txt-con .more a {
+.home-offering-wrap .list .item .box:hover .txt-con .more .m-span {
   background-image: url(@/assets/icons/ico3a.png);
 }
-.home-offering-wrap .list .item .box:hover .txt-con .more a:hover {
+.home-offering-wrap .list .item .box:hover .txt-con .more .m-span:hover {
   background-image: url(@/assets/icons/ico3c.png);
 }
 .home-offering-wrap .list .item:nth-child(2n) .box {
@@ -350,11 +350,12 @@ a:focus {
 .home-offering-wrap .list .item .txt-con .more {
   margin-top: 40px;
 }
-.home-offering-wrap .list .item .txt-con .more a {
+.home-offering-wrap .list .item .txt-con .more .m-span {
   display: inline-block;
   width: 56px;
   height: 43px;
   background: url(@/assets/icons/ico3.png) no-repeat left center / contain;
+  cursor: pointer;
 }
 .home-facilities {
   background: #fafafa;
@@ -520,15 +521,16 @@ a:focus {
   text-align: right;
   margin-top: 80px;
 }
-.home-insights-wrap .more a {
+.home-insights-wrap .more .m-span {
   color: #fff;
   display: inline-block;
   line-height: 28px;
   padding: 0 12px;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
 }
-.home-insights-wrap .more a:hover {
+.home-insights-wrap .more .m-span:hover {
   background: #014099;
   border-color: #014099;
 }
@@ -656,8 +658,10 @@ a:focus {
   background-position: center;
   background-repeat: no-repeat;
   margin-left: 20px;
+  text-align: center;
+  line-height: 40px;
 }
-.foot-link a.k1 {
+/* .foot-link a.k1 {
   background-image: url(@/assets/icons/ft_01.png);
 }
 .foot-link a.k2 {
@@ -665,9 +669,9 @@ a:focus {
 }
 .foot-link a.k3 {
   background-image: url(@/assets/icons/ft_03.png);
-}
+} */
 .foot-link a:hover {
-  background-color: #25b096;
+  /* background-color: #25b096; */
 }
 
 /* Viral-Vector-wrap */
@@ -907,7 +911,7 @@ a:focus {
 }
 .Viral-Vector-wrap .section-2 .swiper-con .swiper-slide .boxs {
   width: 120%;
-  height: 290px;
+  height: 220px;
   position: relative;
   padding-top: 64px;
 }
@@ -1372,7 +1376,7 @@ a:focus {
   line-height: 1.8;
   margin-bottom: 30px;
 }
-.more-psa a {
+.more-psa .m-span {
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -1381,8 +1385,9 @@ a:focus {
   color: #039d8f;
   font-style: italic;
   padding-right: 6px;
+  cursor: pointer;
 }
-.more-psa a:hover {
+.more-psa .m-span:hover {
   background-image: url(@/assets/icons/ico12b.png);
   color: #fff;
 }
@@ -1515,13 +1520,13 @@ a:focus {
   line-height: 1.8;
   margin-bottom: 30px;
 }
-.Innovations-wrap .list .item .txt .more a {
+.Innovations-wrap .list .item .txt .more .m-span {
   display: inline-block;
   width: 85px;
   height: 65px;
   background: url(@/assets/icons/ico15.png) no-repeat left center/70px;
 }
-.Innovations-wrap .list .item .txt .more a:hover {
+.Innovations-wrap .list .item .txt .more .m-span:hover {
   background-image: url("@/assets/icons/ico_btn_fs.png");
 }
 .Insights-wrap .section-1 {
@@ -1602,6 +1607,9 @@ a:focus {
 .Insights-wrap .section-3 .groups .boxs {
   cursor: pointer;
   margin-top: 12px;
+}
+.Insights-wrap .section-3 .groups .boxs img {
+  width: 100%;
 }
 .Insights-wrap .section-3 .groups .boxs:hover {
   -webkit-transform: translateY(-12px);
@@ -2150,7 +2158,7 @@ a:focus {
   height: 16px;
   background: url(@/assets/icons/ico_yd2.png) no-repeat center;
   content: "";
-  z-index: -1;
+  /* z-index: -1; */
   margin-top: -8px;
   transform: rotateZ(180deg);
 }
@@ -2162,7 +2170,7 @@ a:focus {
   height: 1px;
   background: #ddd;
   content: "";
-  z-index: -2;
+  /* z-index: -2; */
 }
 .layer-top-right {
   border-top-left-radius: 30px !important;
@@ -2233,7 +2241,7 @@ a:focus {
 }
 .Process-Development-wrap .process-mkid-ul .item-2 > div {
   margin-top: 130px;
-  margin-left: 0px;
+  margin-left: 0;
 }
 .Process-Development-wrap .process-mkid-ul .item-3 > div {
   margin-top: 20px;
@@ -2361,6 +2369,7 @@ a:focus {
 ul.ul-square li {
   list-style: square;
   color: #039d8f;
+  width: 50%;
 }
 
 .about-history-swp .swiper-slide .txt {
