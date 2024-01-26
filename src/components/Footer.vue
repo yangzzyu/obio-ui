@@ -2,23 +2,15 @@
   <div class="foot-wrap">
     <el-col :xs="24" :sm="16" :md="18" :lg="20" :xl="22" style="margin: auto">
       <el-row class="row">
-        <transition
-          appear
-          name="animate__animated animate__bounce"
-          enter-active-class="wow animate__fadeInLeft"
-          leave-active-class="animate__bounceOutRight"
-        >
-          <el-col :sm="6" :xs="24" class="wow">
-            <div class="foot-log">
-              <img
-                src="https://www.obio-tech.com/public/uploads/20230630/a4e158c16a5cb2bf4e6506a46adf9c57.png"
-                alt="OBiO Technology (Shanghai) Corp., Ltd."
-              />
-            </div>
-            <div class="p font-size18 fontf2"></div
-          ></el-col>
-        </transition>
-
+        <el-col :sm="6" :xs="24" class="wow fadeInLeft animated">
+          <div class="foot-log">
+            <img
+              src="https://www.obio-tech.com/public/uploads/20230630/a4e158c16a5cb2bf4e6506a46adf9c57.png"
+              alt="OBiO Technology (Shanghai) Corp., Ltd."
+            />
+          </div>
+          <div class="p font-size18 fontf2"></div
+        ></el-col>
         <el-col :sm="6" :xs="12" class="wow fadeInLeft animated"
           ><dl class="dl-foot-nav">
             <dt class="font-size20">

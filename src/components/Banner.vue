@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 11:39:49
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-26 15:46:12
+ * @LastEditTime: 2024-01-26 15:50:40
  * @FilePath: \obio-ui\src\components\Banner.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -46,7 +46,7 @@
                 :itemData="item"
               ></over-lay> -->
               <over-lay
-                v-show="isShow"
+                v-if="isShow"
                 :key="item.id + Math.random()"
                 :itemData="item"
               ></over-lay>
@@ -101,34 +101,6 @@ function carouselChange() {
   },1000)
 }
 onBeforeMount(() => {
-  // imgList.value = [
-  //   {
-  //     id: 0,
-  //     imgUrl:
-  //       "https://cdn.jsdelivr.net/gh/xanaduwang/aerowang/img/20210604161353.jpg",
-  //     title: "",
-  //   },
-  //   {
-  //     id: 1,
-  //     imgUrl:
-  //       "https://cdn.jsdelivr.net/gh/xanaduwang/aerowang/img/20210604161737.jpg",
-  //   },
-  //   {
-  //     id: 2,
-  //     imgUrl:
-  //       "https://cdn.jsdelivr.net/gh/xanaduwang/aerowang/img/20210604161757.png",
-  //   },
-  //   {
-  //     id: 3,
-  //     imgUrl:
-  //       "https://cdn.jsdelivr.net/gh/xanaduwang/aerowang/img/20210604161818.jpg",
-  //   },
-  //   {
-  //     id: 4,
-  //     imgUrl:
-  //       "https://cdn.jsdelivr.net/gh/xanaduwang/aerowang/img/20210604161834.jpg",
-  //   },
-  // ];
 });
 </script>
 <style lang="scss" scoped>

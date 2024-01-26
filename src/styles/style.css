@@ -280,7 +280,7 @@ a:focus {
   color: #666;
 }
 .pub-title.style2 {
-  color: #fff ;
+  color: #fff;
 }
 .pub-title.style2 .line {
   background: url(@/assets/icons/ico_ly2.png) no-repeat left bottom;
@@ -1483,7 +1483,7 @@ a:focus {
   position: relative;
   z-index: 9;
   transition: all 0.3s;
-  margin: auto;
+  /* margin: auto; */
 }
 .Innovations-wrap .list .item .img img {
   transition: all 0.3s;
@@ -1496,17 +1496,18 @@ a:focus {
   position: absolute;
   top: 110px;
   left: 68%;
-  width: 266px;
+  width: 160px;
+  /* width: 266px; */
   height: 12px;
   background: url(@/assets/icons/ico_ly3.png) no-repeat right bottom;
   z-index: -1;
 }
-.Innovations-wrap .list .item .img .line-rotate {
+/* .Innovations-wrap .list .item .img .line-rotate {
   left: auto;
   right: 68%;
   -webkit-transform: rotateZ(180deg);
   transform: rotateZ(180deg);
-}
+} */
 .Innovations-wrap .list .item .txt {
   padding-top: 90px;
   position: relative;
