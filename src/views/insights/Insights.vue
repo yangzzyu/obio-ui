@@ -9,7 +9,10 @@
         </div>
         <div class="in-news-list1">
           <div class="item" v-for="(item, index) in releases" :key="index">
-            <router-link :to="'/news-details/' + item.id" class="block">
+            <router-link
+              :to="'/news-details/releases/' + item.id"
+              class="block"
+            >
               <!-- <a href="/cn/home/news/id/241" class="block"> -->
               <div class="font-size16">{{ item.time }}</div>
               <div class="title fontf4 font-size24">
@@ -92,7 +95,7 @@
       </div>
     </div>
     <a name="a1"></a>
-    <div class="section-3">
+    <!-- <div class="section-3">
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto">
         <div class="pub-title pub-title-p ub ub-ver ub-pe">
           <i class="line"></i>
@@ -192,7 +195,7 @@
           </div>
         </div>
       </el-col>
-    </div>
+    </div> -->
   </div>
 </template>
 

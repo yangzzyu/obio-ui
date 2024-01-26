@@ -2,72 +2,73 @@
 @font-face {
   font-family: puhuiti-2-35;
   src:
-    url("../Fonts/AlibabaPuHuiTi_2_35_Thin.woff") format("woff"),
-    url("../Fonts/AlibabaPuHuiTi_2_35_Thin.ttf") format("TrueType");
+    url("@/assets/Fonts/AlibabaPuHuiTi_2_35_Thin.ttf") format("woff"),
+    url("@/assets/Fonts/AlibabaPuHuiTi_2_35_Thin.ttf") format("TrueType");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: puhuiti-2-45;
   src:
-    url("../Fonts/AlibabaPuHuiTi_2_45_Light.woff") format("woff"),
-    url("../Fonts/AlibabaPuHuiTi_2_45_Light.ttf") format("TrueType");
+    url("@/assets/Fonts/AlibabaPuHuiTi_2_45_Light.woff") format("woff"),
+    url("@/assets/Fonts/AlibabaPuHuiTi_2_45_Light.ttf") format("TrueType");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: puhuiti-2-55;
   src:
-    url("../Fonts/AlibabaPuHuiTi_2_55_Regular.woff") format("woff"),
-    url("../Fonts/AlibabaPuHuiTi_2_55_Regular.ttf") format("TrueType");
+    url("@/assets/Fonts/AlibabaPuHuiTi_2_55_Regular.woff") format("woff"),
+    url("@/assets/Fonts/AlibabaPuHuiTi_2_55_Regular.ttf") format("TrueType");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: puhuiti-2-65;
   src:
-    url("../Fonts/AlibabaPuHuiTi_2_65_Medium.woff") format("woff"),
-    url("../Fonts/AlibabaPuHuiTi_2_65_Medium.ttf") format("TrueType");
+    url("@/assets/Fonts/AlibabaPuHuiTi_2_65_Medium.woff") format("woff"),
+    url("@/assets/Fonts/AlibabaPuHuiTi_2_65_Medium.ttf") format("TrueType");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: puhuiti-2-75;
   src:
-    url("../Fonts/AlibabaPuHuiTi_2_75_SemiBold.woff") format("woff"),
-    url("../Fonts/AlibabaPuHuiTi_2_75_SemiBold.ttf") format("TrueType");
+    url("@/assets/Fonts/AlibabaPuHuiTi_2_75_SemiBold.woff") format("woff"),
+    url("@/assets/Fonts/AlibabaPuHuiTi_2_75_SemiBold.ttf") format("TrueType");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: puhuiti-2-85;
   src:
-    url("../Fonts/AlibabaPuHuiTi_2_85_Bold.woff") format("woff"),
-    url("../Fonts/AlibabaPuHuiTi_2_85_Bold.ttf") format("TrueType");
+    url("@/assets/Fonts/AlibabaPuHuiTi_2_85_Bold.woff") format("woff"),
+    url("@/assets/Fonts/AlibabaPuHuiTi_2_85_Bold.ttf") format("TrueType");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: puhuiti-2-95;
   src:
-    url("../Fonts/AlibabaPuHuiTi_2_95_ExtraBold.woff") format("woff"),
-    url("../Fonts/AlibabaPuHuiTi_2_95_ExtraBold.ttf") format("TrueType");
+    url("@/assets/Fonts/AlibabaPuHuiTi_2_95_ExtraBold.woff") format("woff"),
+    url("@/assets/Fonts/AlibabaPuHuiTi_2_95_ExtraBold.ttf") format("TrueType");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: puhuiti-2-105;
   src:
-    url("../Fonts/AlibabaPuHuiTi_2_105_Heavy.woff") format("woff"),
-    url("../Fonts/AlibabaPuHuiTi_2_105_Heavy.ttf") format("TrueType");
+    url("@/assets/Fonts/AlibabaPuHuiTi_2_105_Heavy.woff") format("woff"),
+    url("@/assets/Fonts/AlibabaPuHuiTi_2_105_Heavy.ttf") format("TrueType");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: puhuiti-2-115;
   src:
-    url("../Fonts/AlibabaPuHuiTi_2_115_Black.woff") format("woff"),
-    url("../Fonts/AlibabaPuHuiTi_2_115_Black.ttf") format("TrueType");
+    url("@/assets/Fonts/AlibabaPuHuiTi_2_115_Black.woff") format("woff"),
+    url("@/assets/Fonts/AlibabaPuHuiTi_2_115_Black.ttf") format("TrueType");
   font-weight: normal;
   font-style: normal;
 }
@@ -123,7 +124,6 @@ h3 {
 a {
   text-decoration: none;
   outline: none;
-  blr: expression(this.onFocus=this.blur());
   color: inherit;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

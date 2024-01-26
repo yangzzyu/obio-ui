@@ -286,3 +286,40 @@ information about OBiO Technology, visit&nbsp;</span><a href="https://www.obio-t
 </p>                </div>`,
   },
 ]);
+
+export const events = ref([
+  {
+    id: 1,
+    title: `Cell&Gene meeting on the Mesa`,
+    time: "10th-12th Oct. ,2023",
+    html: `<div class="Insights-detail-text text"><div class="font-size20 color666">Carlsbad, CA, United States</div></div>`,
+  },
+  {
+    id: 2,
+    title: `BioProcess International Conference & Exhibition`,
+    time: "18th-21st Sep. ,2023",
+    html: `<div class="Insights-detail-text text"><p>Related Links:</p>
+	<p>
+	<a href="https://informaconnect.com/cell-therapy-bioprocessing/" target="_blank">https://informaconnect.com/cell-therapy-bioprocessing/</a>
+</p></div>`,
+  },
+  {
+    id: 3,
+    title: `ASGCT 26th Annual Meeting`,
+    time: "16th-20th May ,2023",
+    html: `<div class="Insights-detail-text text">
+                   <p>
+	<span style="font-size:18px;">Los Angeles, CA</span> 
+</p>
+<p>
+	<span style="font-size:18px;"><br>
+    </span> 
+</p>
+<p>
+	Related Links:
+</p>
+<p>
+	 <a href="https://asgct.org/" target="_blank">https://annualmeeting.asgct.org/</a> 
+</p> </div>      `,
+  },
+]);

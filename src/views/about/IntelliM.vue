@@ -43,15 +43,16 @@
             </el-col>
           </el-row>
           <span style="line-height: 2">
-            <span style="color: #003399"></span>
+            <span style="color: #003399">
               <router-link to="/contact"
                 ><strong
                   ><u>Please contact us for customization needs.</u></strong
                 ></router-link
               >Our experts will be responsive to your requirements at first
-              instance.</span
-            ><br /> </span
-          ><span style="line-height: 2"
+              instance. </span
+            ><br />
+          </span>
+          <span style="line-height: 2"
             ><br />
             <br />
           </span>

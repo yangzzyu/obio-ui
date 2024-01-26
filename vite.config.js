@@ -9,6 +9,7 @@ import nightwatchPlugin from "vite-plugin-nightwatch";
 export default defineConfig({
   base: "./",
   // publicPath: "./",
+  publicPath: "../../",
   plugins: [
     vue(),
     nightwatchPlugin(),

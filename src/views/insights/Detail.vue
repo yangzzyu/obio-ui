@@ -13,19 +13,17 @@
   <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto">
     <div class="pub-title pub-title-p ub ub-ver ub-pe">
       <i class="line"></i>
-      <span class="fontf8 font-size30 font-color-ts">{{
-        releaseItem.title
-      }}</span>
+      <span class="fontf8 font-size30 font-color-ts">{{ newsItem.title }}</span>
       <div class="p font-size18">
         <div class="font-size24 fontf5" style="color: #000; margin: 5px 0">
-          {{ releaseItem.time }}
+          {{ newsItem.time }}
         </div>
         <div class="font-size20 color666">
-          {{ releaseItem.subhead }}
+          {{ newsItem.subhead }}
         </div>
       </div>
     </div>
-    <div v-html="releaseItem.html"></div>
+    <div v-html="newsItem.html"></div>
   </el-col>
   <Events />
 </template>
@@ -36,7 +34,8 @@ import Focus from "@/components/Focus.vue";
 import Breadcrumb from "@/components/Breadcrumb.vue";
 import { useRouter } from "vue-router";
 import { computed, onBeforeMount, ref, toRefs, watch, onMounted } from "vue";
-import { releases } from "./data/Index";
+import { releases, events } from "./data/Index";
+import { log } from "node:console";
 const router = useRouter();
 const currentRoute = router.currentRoute.value;
 console.log(currentRoute, "currentRoute");
@@ -61,12 +60,26 @@ const FocusData = ref({
     "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
 });
 const ReleasesList = ref([]);
-const releaseItem = ref({});
+const newsItem = ref({});
 onMounted(() => {
   // const currentRoute = router.currentRoute.value;
-  releaseItem.value =
-    releases.value.find((i) => i.id == currentRoute.params.id) || {};
-  matchedData.value.at(-1).name = releaseItem.value.title;
+  // console.log(router, "currentRout2121212121e");
+  const routerType = currentRoute.params.type;
+  console.log(routerType, "routerType");
+  if (routerType == "releases") {
+    newsItem.value =
+      releases.value.find((i) => i.id == currentRoute.params.id) || {};
+  } else {
+    newsItem.value =
+      events.value.find((i) => i.id == currentRoute.params.id) || {};
+  }
+
+  // console.log(releaseItem, eventsItem, "releaseItem : eventsItem");
+
+  // newsItem.value =
+  //   currentRoute.params.type == "releases" ? releaseItem : eventsItem;
+  // releases.value.find((i) => i.id == currentRoute.params.id) || {};
+  matchedData.value.at(-1).name = newsItem.value.title;
 });
 </script>
 

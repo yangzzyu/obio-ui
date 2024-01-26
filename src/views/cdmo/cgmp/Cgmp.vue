@@ -97,26 +97,40 @@
         </div>
         <div class="cGMP-main-tab cGMP-zIndex">
           <div class="tcon ub ub-ac font-size24 fontf5">
-            <div class="item ub ub-ac active" tabidb="cGMPTgroup1">
+            <div
+              class="item ub ub-ac"
+              tabidb="cGMPTgroup1"
+              :class="activeIndex == '1' ? 'active' : ''"
+              @mouseenter="activeIndex = '1'"
+            >
               <span class="ub-f1">Pre-IND service</span>
             </div>
             <div class="line"></div>
-            <div class="item ub ub-ac" tabidb="cGMPTgroup2">
+            <div
+              class="item ub ub-ac"
+              tabidb="cGMPTgroup2"
+              :class="activeIndex == '2' ? 'active' : ''"
+              @mouseenter="activeIndex = '2'"
+            >
               <span class="ub-f1">Post-IND service</span>
             </div>
           </div>
         </div>
         <div class="cGMP-main-tab-group cGMP-zIndex">
-          <div class="group" id="cGMPTgroup1" style="display: block">
-            <div class="sti font-size30 fontf7">Pre-IND services</div>
+          <div
+            class="group"
+            v-for="(item, index) in tabsData"
+            :key="index"
+            v-show="activeIndex === item.id"
+          >
+            <!-- v-show="activeIndex === item.id" -->
+            <!-- style="display: none" -->
+            <div class="sti font-size30 fontf7">{{ item.title }}</div>
             <div class="list ub ub-pj">
-              <div class="item">
+              <div class="item" v-for="(i, k) in item.list" :key="k">
                 <div class="img">
                   <div class="img1 animate-img">
-                    <img
-                      src="https://www.obio-tech.com/public/uploads/20220402/0dd1829ea25cc3712d552a685d7bda79.jpg"
-                      alt="Non-IND (IIT) services"
-                    />
+                    <img :src="i.imgUrl" :alt="i.subHead" />
                   </div>
                 </div>
                 <div class="txt text-center">
@@ -124,18 +138,20 @@
                     class="fontf7 font-size24 ub ub-ac ub-pc"
                     style="max-width: 330px; margin: 0 auto"
                   >
-                    Non-IND (IIT) services
+                    <!-- Non-IND (IIT) services -->
+                    {{ i.subHead }}
                   </div>
                   <div class="font-size20 color666 p">
-                    Manufacturing gene and cell therapy products in pilot
+                    <!-- Manufacturing gene and cell therapy products in pilot
                     testing scale that is compliant with cGMP management system,
                     delivering quality inspection report and samples to
                     facilitate non-IND clinical trials (IIT) initiated by
-                    investigators.
+                    investigators. -->
+                    {{ i.txt }}
                   </div>
                 </div>
               </div>
-              <div class="item">
+              <!-- <div class="item">
                 <div class="img">
                   <div class="img1 animate-img">
                     <img
@@ -186,11 +202,11 @@
                     testing, and quality control consultation.
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
-          <div class="group" id="cGMPTgroup2" style="display:">
+          <!-- <div class="group" id="cGMPTgroup2" style="display: block">
             <div class="sti font-size30 fontf7">Post-IND service</div>
             <div class="list ub ub-pj">
               <div class="item">
@@ -266,7 +282,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <a name="a1"></a>
         <div class="cGMP-title-t2">
@@ -316,4 +332,78 @@
 import { ref } from "vue";
 import { useTransition } from "@vueuse/core";
 import { ArrowRight } from "@element-plus/icons-vue";
+const activeIndex = ref("1");
+const tabsData = ref([
+  {
+    id: "1",
+    title: "Pre-IND service",
+    list: [
+      {
+        imgUrl:
+          "https://www.obio-tech.com/public/uploads/20220402/0dd1829ea25cc3712d552a685d7bda79.jpg",
+        subHead: "Non-IND (IIT) services",
+        txt: `Manufacturing gene and cell therapy products in pilot
+                    testing scale that is compliant with cGMP management system,
+                    delivering quality inspection report and samples to
+                    facilitate non-IND clinical trials (IIT) initiated by
+                    investigators.`,
+      },
+      {
+        imgUrl:
+          "https://www.obio-tech.com/public/uploads/20220402/016a22b87b27dee61874936c5f34e00c.jpg",
+        subHead: "IND-CMC services",
+        txt: `We provide IND-CMC services to support the IND/CTA
+                    application in China, America, Europe, and Australia. After
+                    process and analytical method development at
+                    laboratory-scale, we will carry out process scale-up test in
+                    cGMP production lines, implement the manufacturing, quality
+                    control and product release for a consecutive 3-4 batches,
+                    and provide you with a complete set of CMC dossier and
+                    samples required for IND application.`,
+      },
+      {
+        imgUrl:
+          "https://www.obio-tech.com/public/uploads/20220402/96a6ab94bb314303a251c008a0cc4ee1.jpg",
+        subHead: "Pre-IND extended services",
+        txt: `We provide a variety of Pre-IND extended services including
+                    bank construction for plasmid, cell or strain, aseptic fill
+                    and finish, stability studies, AAV capsid screening, sample
+                    testing, and quality control consultation.`,
+      },
+    ],
+  },
+  {
+    id: "2",
+    title: "Post-IND service",
+    list: [
+      {
+        imgUrl:
+          "https://www.obio-tech.com/public/uploads/20220402/865e3b4b09a7e62f1d6657bef945c4a1.jpg",
+        subHead: "Clinical manufacturing service (for Phase I, II, III)",
+        txt: `With the single-use and large-scale manufacturing
+                    technologies as the core, our cGMP platform can facilitate
+                    the manufacturing and quality control of clinical gene and
+                    cell therapy samples in strict accordance with regulatory
+                    requirements at multiple countries, and meet the gene and
+                    cell therapy sample demands for phase I, II and III clinical
+                    trials.`,
+      },
+      {
+        imgUrl:
+          "https://www.obio-tech.com/public/uploads/20220402/3848eecae41836458e0924144a389905.jpg",
+        subHead: "Commercial manufacturing",
+        txt: `We provide commercial manufacturing services for marketed
+                    gene and cell therapy products at our OBiO Intelli-M site.`,
+      },
+      {
+        imgUrl:
+          "https://www.obio-tech.com/public/uploads/20220402/1391fdf6a83bc8b0c7405368e9f5664a.jpg",
+        subHead: "Post-IND extended services",
+        txt: `We provide a wide range of Post-IND extended services
+                    covering technology transfer consultation, process
+                    characterization and aseptic fill and finish.`,
+      },
+    ],
+  },
+]);
 </script>

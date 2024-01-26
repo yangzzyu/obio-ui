@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 14:08:07
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-17 15:37:03
+ * @LastEditTime: 2024-01-26 15:38:00
  * @FilePath: \obio-ui\src\components\OverLayText.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -10,8 +10,8 @@
   <div class="overlay">
     <div class="overlay-content">
       <div class="slogan sofiaBold">
-        <div class="slogan-title">{{ itemData.title }}</div>
-        <div class="slogan-subtitle">
+        <div class="slogan-title p1 wowx animated fontf8 fadeInDown">{{ itemData.title }}</div>
+        <div class="slogan-subtitle p2 wowx animated fontf4 fadeInDown">
           {{ itemData.content }}
         </div>
       </div>

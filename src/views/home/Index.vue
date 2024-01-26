@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 09:07:47
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-23 16:44:25
+ * @LastEditTime: 2024-01-26 15:23:27
  * @FilePath: \obio-ui\src\views\HomeView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -220,16 +220,22 @@ import TheWelcome from "../components/TheWelcome.vue";
                 v-for="(item, index) in homeFacilitiesData"
                 :key="index"
                 :class="activeIndex == index ? 'active animated' : 'animated'"
-                @mouseenter="changeActive(index)"
+                @mouseenter.stop="changeActive(index)"
               >
                 <div class="img">
                   <div class="img1">
-                    <img
-                      :src="item.imgUrl"
-                      alt="International Medical Park Shanghai, China"
-                    />
+                    <img :src="item.imgUrl" :alt="item.title" />
                   </div>
                   <router-link :to="item.path" class="shaw">
+                    <!-- <div
+                      class="shaw-bg"
+                      :style="{
+                        backgroundImage: `url(${handleViteImages(item.bgUrl)})`,
+                      }"
+                    >
+                      <img src="@/assets/icons/bg3.png" :alt="item.title" />
+                    </div> -->
+
                     <img
                       src="@/assets/icons/bg3.png"
                       :style="{
@@ -336,7 +342,9 @@ import TheWelcome from "../components/TheWelcome.vue";
                         style="visibility: visible; animation-name: fadeInUp"
                       >
                         <!-- <a href="/cn/home/news/id/559">ALL PRESS RELEASES</a> -->
-                        <span class="m-span" @click="router.push('/releases')">ALL PRESS RELEASES</span>
+                        <span class="m-span" @click="router.push('/releases')"
+                          >ALL PRESS RELEASES</span
+                        >
                       </div>
                     </li>
                     <li
@@ -345,7 +353,9 @@ import TheWelcome from "../components/TheWelcome.vue";
                     >
                       <div class="more">
                         <!-- <a href="/cn/home/news/id/719">ALL EVENTS</a> -->
-                        <span class="m-span" @click="router.push('/events')">ALL EVENTS</span>
+                        <span class="m-span" @click="router.push('/events')"
+                          >ALL EVENTS</span
+                        >
                       </div>
                     </li>
                   </ul>
@@ -603,7 +613,7 @@ onUnmounted(() => {
   window.removeEventListener("resize", setBannerHeight);
   window.removeEventListener("scroll", scrollHandle);
 });
-const activeIndex = ref("/");
+const activeIndex = ref(-1);
 function changeActive(index) {
   // $event.currentTarget.className = "item wow fadeInUp animated active";
   activeIndex.value = index;
@@ -686,23 +696,6 @@ function scrollHandle() {
     right: 50%;
     margin-right: 310px;
     z-index: -1;
-  }
-  @media (max-width: 1700px) and (min-width: 768px) {
-    .pub-title {
-      height: 120px;
-    }
-  }
-
-  // .pub-title {
-  //   padding-left: 20px;
-  //   height: 160px;
-  //   position: relative;
-  //   color: #014099;
-  // }
-  @media (max-width: 1700px) and (min-width: 768px) {
-    .pub-title .line {
-      height: 120px;
-    }
   }
 
   .pub-title .line {

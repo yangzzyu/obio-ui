@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-24 14:30:12
+ * @LastEditTime: 2024-01-26 16:30:27
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -70,8 +70,8 @@
           style="margin: auto"
         >
           <div class="list">
-            <el-row class="item row">
-              <el-col :xs="22" :sm="10" :md="10" :lg="8" :xl="6">
+            <el-row class="item row" :gutter="10">
+              <el-col :xs="22" :sm="10" :md="10" :lg="8" :xl="6" >
                 <div class="img block">
                   <img
                     src="https://www.obio-tech.com/public/uploads/20220328/fb31c3bc021f9b0de1ac68c274c4861b.png"
@@ -100,12 +100,13 @@
                 </div></el-col
               >
             </el-row>
-            <el-row class="item row">
+            <el-row class="item row" :gutter="10">
               <el-col
                 :xs="{ span: 22, push: 0 }"
                 :sm="{ span: 10, push: 14 }"
                 :md="{ span: 10, push: 14 }"
                 :lg="{ span: 8, push: 16 }"
+                class="col-sm-push-6"
               >
                 <div class="img block">
                   <img
@@ -138,7 +139,7 @@
                 </div></el-col
               >
             </el-row>
-            <el-row class="item row">
+            <el-row class="item row"  :gutter="10">
               <el-col :xs="22" :sm="10" :md="10" :lg="8" :xl="6">
                 <div class="img block">
                   <img
@@ -186,12 +187,13 @@
                 </div></el-col
               >
             </el-row>
-            <el-row class="item row">
+            <el-row class="item row" :gutter="10">
               <el-col
                 :xs="{ span: 22, push: 0 }"
                 :sm="{ span: 10, push: 14 }"
                 :md="{ span: 10, push: 14 }"
                 :lg="{ span: 8, push: 16 }"
+                class="col-sm-push-6"
               >
                 <div class="img block">
                   <img
@@ -241,7 +243,7 @@
                 </div></el-col
               >
             </el-row>
-            <el-row class="item row">
+            <el-row class="item row" :gutter="10">
               <el-col :xs="22" :sm="10" :md="10" :lg="8" :xl="6">
                 <div class="img block">
                   <img

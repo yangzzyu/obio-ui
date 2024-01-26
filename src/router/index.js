@@ -14,8 +14,8 @@ import {
 // import InvestorRelationsView from "@/views/InvestorRelationsView.vue";
 
 const router = createRouter({
-  // history: createWebHashHistory(import.meta.env.BASE_URL),
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
+  // history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/",
@@ -160,7 +160,7 @@ const router = createRouter({
         },
         {
           name: "News Details",
-          path: "/news-details/:id",
+          path: "/news-details/:type/:id",
           component: () => import("@/views/insights/Detail.vue"),
         },
         {
