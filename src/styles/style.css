@@ -33,12 +33,12 @@
 .col-zs {
   color: #327cbe;
 }
-.font-18 {
+/* .font-18 {
   font-size: 18px;
 }
 .font-46 {
   font-size: 46px;
-}
+} */
 .dtable {
   display: table;
   width: 100%;
@@ -91,7 +91,7 @@ a:focus {
   color: #014099;
 }
 .wow {
-  opacity: 0;
+  /* opacity: 0; */
 }
 .foot-log img,
 .logo img {
@@ -280,7 +280,7 @@ a:focus {
   color: #666;
 }
 .pub-title.style2 {
-  color: #fff !;
+  color: #fff ;
 }
 .pub-title.style2 .line {
   background: url(@/assets/icons/ico_ly2.png) no-repeat left bottom;
@@ -1994,7 +1994,7 @@ a:focus {
   flex: 1;
 }
 .cGMP-main-tab-group .group {
-  display: none;
+  /* display: none; */
 }
 .cGMP-main-tab-group .list {
   margin-top: 50px;

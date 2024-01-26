@@ -90,8 +90,7 @@
               </template>
               <el-menu-item index="/releases">Press Releases</el-menu-item>
               <el-menu-item index="/events">Events</el-menu-item>
-              <el-menu-item index="/news">
-                <!-- @click="router.push('/news')" -->
+              <!-- <el-menu-item index="/news">
                 <div
                   v-scroll-to="{
                     element: '.section-3',
@@ -102,7 +101,7 @@
                 >
                   Knowledge Center
                 </div>
-              </el-menu-item>
+              </el-menu-item> -->
             </el-sub-menu>
             <el-menu-item @click="openUrl">Investor Relations</el-menu-item>
             <el-menu-item index="/contact">Contact Us</el-menu-item>
@@ -181,8 +180,7 @@
           </template>
           <el-menu-item index="/releases">Press Releases</el-menu-item>
           <el-menu-item index="/events">Events</el-menu-item>
-          <el-menu-item index="/news">
-            <!-- @click="router.push('/news')" -->
+          <!-- <el-menu-item index="/news">
             <div
               v-scroll-to="{
                 element: '.section-3',
@@ -193,7 +191,7 @@
             >
               Knowledge Center
             </div>
-          </el-menu-item>
+          </el-menu-item> -->
         </el-sub-menu>
         <el-menu-item @click="openUrl">Investor Relations</el-menu-item>
         <el-menu-item index="/contact">Contact Us</el-menu-item>

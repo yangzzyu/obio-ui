@@ -1,6 +1,6 @@
 @import "./base.scss";
 @import "./style.css";
-@import "./gird.css";
+@import "./gird.scss";
 @import "./public.css";
 
 #app {

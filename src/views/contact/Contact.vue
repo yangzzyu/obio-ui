@@ -41,12 +41,12 @@
                   status-icon
                 >
                   <el-row :gutter="20">
-                    <el-col :span="12">
+                    <el-col :span="12" :xs="24">
                       <el-form-item label="First Name" required>
                         <el-input v-model="ruleForm.fname" />
                       </el-form-item>
                     </el-col>
-                    <el-col :span="12">
+                    <el-col :span="12" :xs="24">
                       <el-form-item label="Last Name" required>
                         <el-input
                           v-model="ruleForm.lname"
@@ -56,11 +56,11 @@
                     <el-input v-model="ruleForm.company" />
                   </el-form-item>
                   <el-row :gutter="20">
-                    <el-col :span="12">
+                    <el-col :span="12" :xs="24">
                       <el-form-item label="Email" required>
                         <el-input v-model="ruleForm.email" /> </el-form-item
                     ></el-col>
-                    <el-col :span="12">
+                    <el-col :span="12" :xs="24">
                       <el-form-item label="Phone Number" required>
                         <el-input
                           v-model="ruleForm.dh"
@@ -116,7 +116,7 @@
                   <el-form-item label="Security Code" required>
                     <el-col :span="11">
                       <!-- <el-form-item> -->
-                        <el-input v-model="ruleForm.verify" />
+                      <el-input v-model="ruleForm.verify" />
                       <!-- </el-form-item> -->
                     </el-col>
                     <el-col :span="11">

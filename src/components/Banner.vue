@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 11:39:49
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-17 17:08:07
+ * @LastEditTime: 2024-01-26 15:46:12
  * @FilePath: \obio-ui\src\components\Banner.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -23,7 +23,7 @@
       >
         <el-carousel-item v-for="item in imgList" :key="item.id">
           <div class="img_con">
-            <transition-group
+            <!-- <transition-group
               :duration="5000"
               appear
               name="animate__animated animate__bounce"
@@ -40,7 +40,21 @@
                 :key="item.id"
                 :itemData="item"
               ></over-lay>
-            </transition-group>
+            </transition-group> -->
+            <!-- <over-lay
+                :key="item.id"
+                :itemData="item"
+              ></over-lay> -->
+              <over-lay
+                v-show="isShow"
+                :key="item.id + Math.random()"
+                :itemData="item"
+              ></over-lay>
+              <!-- <over-lay
+                v-show="!isShow"
+                :key="item.id"
+                :itemData="item"
+              ></over-lay> -->
             <img class="element-img" alt="" :src="item.imgUrl" />
           </div>
         </el-carousel-item>
@@ -78,8 +92,13 @@ function arrowClick(val) {
 }
 const duration = ref(1000);
 const transitionName = ref("");
+carouselChange()
 function carouselChange() {
-  isShow.value = !isShow.value;
+  isShow.value=false
+  setTimeout(()=>{
+    isShow.value=true
+    // isShow.value = !isShow.value;
+  },1000)
 }
 onBeforeMount(() => {
   // imgList.value = [
