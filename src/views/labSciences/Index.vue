@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-27 10:52:18
+ * @LastEditTime: 2024-01-27 15:24:39
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -145,13 +145,13 @@
                       </div>
                     </li>
                     <li class="ub">
-                      <div class="ub ub-ac stn" @click="popLabora(9)">
+                      <div class="ub ub-ac stn" @click="popLabora(2)">
                         <i class="pub-ico-rights2"></i>
                         <div class="stx">Stable Cell Line</div>
                       </div>
                     </li>
                     <li class="ub">
-                      <div class="ub ub-ac stn" @click="popLabora(8)">
+                      <div class="ub ub-ac stn" @click="popLabora(3)">
                         <i class="pub-ico-rights2"></i>
                         <div class="stx">Animal Studies</div>
                       </div>
@@ -193,13 +193,13 @@
                   </div>
                   <ul class="ul-pop font-size24 fontf5 color666">
                     <li class="ub">
-                      <div class="ub ub-ac stn" @click="popLabora(7)">
+                      <div class="ub ub-ac stn" @click="popLabora(4)">
                         <i class="pub-ico-rights2"></i>
                         <div class="stx">In-stock viral vectors</div>
                       </div>
                     </li>
                     <li class="ub">
-                      <div class="ub ub-ac stn" @click="popLabora(78)">
+                      <div class="ub ub-ac stn" @click="popLabora(5)">
                         <i class="pub-ico-rights2"></i>
                         <div class="stx">
                           In-stock protein and relevant reagents
@@ -207,7 +207,7 @@
                       </div>
                     </li>
                     <li class="ub">
-                      <div class="ub ub-ac stn" @click="popLabora(77)">
+                      <div class="ub ub-ac stn" @click="popLabora(6)">
                         <i class="pub-ico-rights2"></i>
                         <div class="stx">gRNA library</div>
                       </div>
@@ -253,7 +253,7 @@
   <el-dialog
     v-model="dialogVisible"
     title=""
-    width="40%"
+    width="60%"
     :before-close="handleClose"
   >
     <!-- <span>This is a message</span> -->
@@ -290,15 +290,17 @@ import Focus from "@/components/Focus.vue";
 import Events from "@/components/Events.vue";
 const FocusData = ref({
   title: "Laboratory Sciences",
-  imgUrl:
+  hiddenXsImgUrl:
     "https://www.obio-tech.com/public/uploads/20220402/39c0eb1d2e5cf6c9f1d40cc78ce30544.jpg",
+  visibleXsImgUrl:
+    "https://www.obio-tech.com/public/uploads/20220402/c513fa4925451a1f43f4227509d942c3.jpg",
 });
 const dialogVisible = ref(false);
 function handleClose() {
   Labora.value = {};
   dialogVisible.value = false;
 }
-const Labora = ref({});
+const Labora = ref(<any>{});
 const LaboraList = ref([
   {
     id: 1,
@@ -308,7 +310,44 @@ const LaboraList = ref([
             conduct Western blot experiment to determine protein expression
             level, qPCR for RNA determination in addition to SEM inspection,
             particle diameter analysis and pathological examination.`,
-    imgUrl: "",
+    imgUrl:
+      "https://www.obio-tech.com/public/uploads/image/20220328/20220328151428_83605.jpg",
+  },
+  {
+    id: 2,
+    title: "Stable Cell Line",
+    txt: `At OBiO, we can help you construct a stable producer cell line with molecular operations such as knock-out, overexpression, or knock-down of your target gene.`,
+    imgUrl:
+      "https://www.obio-tech.com/public/uploads/image/20220328/20220328151533_63357.jpg",
+  },
+  {
+    id: 3,
+    title: "Animal Studies",
+    txt: `We provide animal model construction for human disease, animal behavior study, pharmacodynamics, pharmacokinetic, and efficacy studies in experimental animals for a certain drug, gene of interest, or gene therapy product. `,
+    imgUrl:
+      "https://www.obio-tech.com/public/uploads/image/20220328/20220328151717_86002.jpg",
+  },
+  {
+    id: 4,
+    title: "In-stock viral vectors",
+    txt: `In-stock viral vector plays as a handy tool in your radioactive labelling, physiological regulation, observation, and verification studies. We provide in stock adeno-associated virus as tools for experiments including optogenetics, chemical genetics, calcium/voltage indicator, neurotransmitter probe, and Cre/Flp recombinase.
+To request a list of the available in-stock viral vector, please contact one of our professional technical support.`,
+    imgUrl:
+      "https://www.obio-tech.com/public/uploads/image/20220328/20220328151702_80624.jpg",
+  },
+  {
+    id: 5,
+    title: "In-stock protein and relevant reagents",
+    txt: `We provide recombinant protein expression systems covering bacteria, yeast, mammalian cell and insect cell, meeting your varied bioengineering demands in protein functional research, protease preparation, therapeutics development, and medical diagnosis. We have optimized our manufacturing process starting from the construction of recombinant protein expression vector, and are able to express and purify your target recombinant protein with high quality standard. We can also offer recombinant protein expression services based on the vector you provided.`,
+    imgUrl:
+      "https://www.obio-tech.com/public/uploads/image/20220328/20220328152007_37456.jpg",
+  },
+  {
+    id: 6,
+    title: "gRNA library",
+    txt: `We provide CRISPR knock-out (GeCKO V2) gRNA library and transcriptional activation (SAM) gRNA library for human and mouse genome, enabling genome-wide high throughput screening for functional gene. We also provide gRNA library customization services according to your research demand. `,
+    imgUrl:
+      "https://www.obio-tech.com/public/uploads/image/20220328/20220328151955_77566.jpg",
   },
 ]);
 function popLabora(id) {

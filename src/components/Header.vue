@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-22 21:59:54
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-27 12:00:29
+ * @LastEditTime: 2024-01-27 14:36:30
  * @FilePath: \obio-ui\src\components\Header.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -246,28 +246,7 @@ type ImgItem = {
   path: string;
 };
 const drawerMenu = ref(false);
-const navList = ref<NavItem[]>([
-  {
-    title: "Home",
-    path: "/",
-  },
-  {
-    title: "About Us",
-    path: "/about",
-  },
-  {
-    title: "Our Facilities",
-    path: "/facilities",
-  },
-  {
-    title: "SPIRO Site",
-    path: "/spiroSite",
-  },
-  {
-    title: "PINE Site",
-    path: "/spiroSite",
-  },
-]);
+const navList = ref<NavItem[]>([]);
 const logo_img = ref<ImgItem[]>([]);
 
 logo_img.value = [
@@ -293,10 +272,6 @@ onBeforeMount(() => {});
   .el-drawer__body {
     padding: 0;
   }
-  // position: absolute;
-  // top: 0;
-  // right: 0;
-  // bottom: 0;
   width: 100%;
   // max-width: 20em;
   background: #022350 url(@/assets/icons/up_downbg.jpg) no-repeat center;
@@ -383,12 +358,6 @@ h2 {
     }
   }
 }
-.el-sub-menu {
-  // font-size: 24px;
-  .el-menu-item {
-    // color: #000 !important;
-  }
-}
 
 .menu-wrapper {
   display: flex;
@@ -424,41 +393,6 @@ h2 {
   > .menu-item + .menu-item {
     margin-left: 40px;
   }
-
-  // .menu-item-link {
-  //   //color: #646a73;
-  //   font-weight: 400;
-  //   font-size: 14px;
-  //   line-height: 60px;
-  //   cursor: pointer;
-  //   position: relative;
-
-  //   a {
-  //     display: inline-block;
-  //     color: rgba(255, 255, 255, 1);
-  //     transition: color 0.3s;
-
-  //     :hover {
-  //       color: $nav_active_color;
-  //     }
-  //   }
-
-  //   .router-link-exact-active {
-  //     color: $nav_active_color;
-  //     font-weight: 600;
-
-  //     span:after {
-  //       content: "";
-  //       display: block;
-  //       height: 2px;
-  //       position: absolute;
-  //       width: 26px;
-  //       left: calc(50% - 13px);
-  //       bottom: 14px;
-  //       background-color: $nav_active_color;
-  //     }
-  //   }
-  // }
 }
 
 .nav_text_white {

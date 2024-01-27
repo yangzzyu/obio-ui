@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-23 17:25:22
+ * @LastEditTime: 2024-01-27 15:20:11
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -248,17 +248,20 @@
 <script lang="ts" setup name="CdmoIndex">
 import Events from "@/components/Events.vue";
 import Focus from "@/components/Focus.vue";
-import Breadcrumb from "@/components/Breadcrumb.vue";
 import { useRouter } from "vue-router";
 import { computed, onBeforeMount, ref, toRefs, watch } from "vue";
+type FormItem = {
+  [key: string]: string;
+};
 const router = useRouter();
-const currentRoute = router.currentRoute.value;
 const FocusData = ref({
   title: "Contact Us",
-  imgUrl:
+  hiddenXsImgUrl:
     "https://www.obio-tech.com/public/uploads/20220328/d8ba4b5c00df5c25ba5c242f186d0cbd.jpg",
+  visibleXsImgUrl:
+    "https://www.obio-tech.com/public/uploads/20220401/252db05533e1f9c457f58a33d5c8c994.jpg",
 });
-const ruleForm = ref({});
+const ruleForm = ref<FormItem>({});
 const rules = ref([]);
 </script>
 

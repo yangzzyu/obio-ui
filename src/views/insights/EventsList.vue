@@ -47,42 +47,9 @@
 
 <script lang="ts" setup name="Cdmo">
 import { ref } from "vue";
-import { useTransition } from "@vueuse/core";
-import { ArrowRight } from "@element-plus/icons-vue";
+import { events } from "./data/Index";
 const tableData = ref<any>();
 
-const tableDatas = ref([
-  {
-    id: "1",
-    time: "10th-12th Oct. ,2023",
-    title: `Cell Gene meeting on the Mesa`,
-    content: `Carlsbad, CA, United States`,
-  },
-  {
-    id: "2",
-    time: "18th-21st Sep. ,2023",
-    title: `BioProcess International Conference Exhibition`,
-    content: `Boston, MA`,
-  },
-  {
-    id: "3",
-    time: "16th-20th May ,2023",
-    title: `ASGCT 26th Annual Meeting`,
-    content: `Los Angeles, CA`,
-  },
-  {
-    id: "4",
-    time: "15th-16th Apr. ,2022",
-    title: `SAPA-GP 2022 Annual Conference (Hybrid)`,
-    content: `King of Prussia, PA`,
-  },
-  {
-    id: "5",
-    time: "16th-19th May ,2022",
-    title: `ASGCT 25th Annual Meeting`,
-    content: `Washington, D.C.`,
-  },
-]);
 const pageinfo = ref({
   total: 0,
   currPage: 1,
@@ -90,11 +57,11 @@ const pageinfo = ref({
 });
 
 const getProp = () => {
-  tableData.value = tableDatas.value.slice(
+  tableData.value = events.value.slice(
     (pageinfo.value.currPage - 1) * pageinfo.value.pageSize,
     pageinfo.value.currPage * pageinfo.value.pageSize
   );
-  pageinfo.value.total = tableDatas.value.length;
+  pageinfo.value.total = events.value.length;
 };
 
 const handleSizeChange = (val: number) => {

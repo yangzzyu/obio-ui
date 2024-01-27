@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-23 14:50:49
+ * @LastEditTime: 2024-01-27 15:11:10
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -135,13 +135,12 @@ import { useRouter } from "vue-router";
 import { computed, onBeforeMount, ref, toRefs, watch } from "vue";
 const router = useRouter();
 const currentRoute = router.currentRoute.value;
-console.log(currentRoute, "currentRoute");
-const routerName = ref("");
-const matchedData = ref([]);
 const FocusData = ref({
   title: "Innovations",
-  imgUrl:
+  hiddenXsImgUrl:
     "https://www.obio-tech.com/public/uploads/20220326/4ab814317bb256727a28d9a4db4ab985.jpg",
+  visibleXsImgUrl:
+    "https://www.obio-tech.com/public/uploads/20220401/738cbfe8dcb34bdd6fbb7f55611297fa.jpg",
 });
 </script>
 

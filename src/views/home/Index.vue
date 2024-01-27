@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 09:07:47
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-26 16:37:12
+ * @LastEditTime: 2024-01-27 14:36:15
  * @FilePath: \obio-ui\src\views\HomeView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -20,15 +20,6 @@ import TheWelcome from "../components/TheWelcome.vue";
   <div class="index">
     <div class="banner-wrap">
       <Banner :banner-height="BannerHeight"></Banner>
-      <!-- <over-lay></over-lay> -->
-      <!-- <scroll-hint
-          v-scroll-to="{
-            element: '.wrap-block',
-            duration: 300,
-            easing: 'ease',
-            offset: 1,
-          }"
-        ></scroll-hint> -->
       <div class="home-about-wrap animation-name: fadeInUp">
         <div class="home-about-content">
           <el-col
@@ -90,10 +81,6 @@ import TheWelcome from "../components/TheWelcome.vue";
                       CDMO <br />
                       Solutions</router-link
                     >
-                    <!-- <a href="/cn/home/cdmo"
-                      >CDMO <br />
-                      Solutions</a
-                    > -->
                   </div>
                   <div class="line"><i></i></div>
                   <div class="p font-size18 fontf2">
@@ -127,10 +114,6 @@ import TheWelcome from "../components/TheWelcome.vue";
                       Laboratory <br />
                       Sciences</router-link
                     >
-                    <!-- <a @click="goRouter('/sys')">
-                      Laboratory <br />
-                      Sciences</a
-                    > -->
                   </div>
                   <div class="line"><i></i></div>
                   <div class="p font-size18 fontf2">
@@ -149,7 +132,6 @@ import TheWelcome from "../components/TheWelcome.vue";
           </el-row>
         </el-col>
       </div>
-      <!-- v-on:mouseover="changeActive($event)" v-on:mouseout="removeActive($event)"> -->
       <div class="home-facilities">
         <el-col
           :xs="18"
@@ -168,51 +150,6 @@ import TheWelcome from "../components/TheWelcome.vue";
             >
           </div>
           <div class="home-facilities-mob">
-            <!-- <el-row class="list ub ub-ac ub-pj">
-              <el-col
-                :xs="22"
-                :span="8"
-                class="item wow fadeInUp animated"
-                style="visibility: visible; animation-name: fadeInUp"
-                v-for="(item, index) in homeFacilitiesData"
-                :key="index"
-                :class="activeIndex == index ? 'active animated' : 'animated'"
-                @mouseenter="changeActive(index)"
-              >
-                <div class="img">
-                  <div class="img1">
-                    <img
-                      :src="item.imgUrl"
-                      alt="International Medical Park Shanghai, China"
-                    />
-                  </div>
-                  <a href="/cn/home/about/cid/881" class="shaw">
-                    <img
-                      src="@/assets/icons/bg3.png"
-                      :style="{ backgroundImage: 'url(' + item.bgUrl + ')' }"
-                      class="shaw-bg"
-                    />
-                    <div class="txt">
-                      <div class="title fontf3 font-size30">
-                        {{ item.title }}
-                      </div>
-                      <div class="line"></div>
-                      <div class="pm font-size20">
-                        <ul>
-                          <li v-for="(i, n) in item.pmText" :key="n">
-                            {{ i }}
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="m"><span class="m-a"></span></div>
-                    </div>
-                  </a>
-                </div>
-                <div class="p font-size24 fontf3">
-                  {{ item.pTxt }}
-                </div>
-              </el-col>
-            </el-row> -->
             <div class="list ub ub-ac ub-pj" id="facilities">
               <div
                 class="item wow fadeInUp animated"
@@ -227,15 +164,6 @@ import TheWelcome from "../components/TheWelcome.vue";
                     <img :src="item.imgUrl" :alt="item.title" />
                   </div>
                   <router-link :to="item.path" class="shaw">
-                    <!-- <div
-                      class="shaw-bg"
-                      :style="{
-                        backgroundImage: `url(${handleViteImages(item.bgUrl)})`,
-                      }"
-                    >
-                      <img src="@/assets/icons/bg3.png" :alt="item.title" />
-                    </div> -->
-
                     <img
                       src="@/assets/icons/bg3.png"
                       :style="{
@@ -319,7 +247,10 @@ import TheWelcome from "../components/TheWelcome.vue";
                       v-for="(item, index) in InsightsList"
                       :key="index"
                     >
-                      <a href="/cn/home/news/id/241" class="block">
+                      <router-link
+                        :to="`/news-details/${InsightsType === 1 ? 'releases' : 'events'}/${item.id}`"
+                        class="block"
+                      >
                         <div class="time">{{ item.time }}</div>
                         <div class="title fontf3 font-size24">
                           {{ item.title }}
@@ -329,7 +260,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                             {{ item.pText }}
                           </div>
                         </div>
-                      </a>
+                      </router-link>
                     </li>
 
                     <li
@@ -558,36 +489,34 @@ import TheWelcome from "../components/TheWelcome.vue";
         </el-col>
       </div>
     </div>
-    <!-- <index-service></index-service> -->
   </div>
 </template>
 <script lang="ts" setup name="Home">
 import "wow.js/css/libs/animate.css";
 import WOW from "wow.js";
-// import IndexService from '@/components/IndexService.vue'
 import Banner from "@/components/Banner.vue";
-// import ScrollHint from '@/components/ScrollHint.vue'
 import { homeFacilitiesData, insightsData } from "@/data/HomePage";
 import { handleViteImages, goRouter } from "@/utils";
 import { onMounted, onUnmounted, ref } from "vue";
 import { useRouter } from "vue-router";
-
-import mainStore from "@/stores/main";
-import { handleError } from "vue";
+import { releases, events } from "@/views/insights/data/Index";
+type FormItem = {
+  [key: string]: string;
+};
 const router = useRouter();
-const store = mainStore();
-
-const index_header = ref("");
 const BannerHeight = ref(0);
 
 const InsightsType = ref(1);
 const InsightsList = ref([]);
-InsightsList.value = insightsData.value.filter((i) => i.type === 1);
 function handleInsightsType(params) {
   InsightsType.value = params;
-  InsightsList.value = insightsData.value.filter((i) => i.type === params);
+  if (params === 1) {
+    InsightsList.value = releases.value.slice(0, 3);
+  } else if (params === 2) {
+    InsightsList.value = events.value.slice(0, 3);
+  }
 }
-const ruleForm = ref({});
+const ruleForm = ref<FormItem>({});
 const rules = ref([]);
 const scrollTop = ref(0);
 onMounted(() => {
@@ -605,94 +534,25 @@ onMounted(() => {
   wow.init();
   window.addEventListener("resize", setBannerHeight);
   setBannerHeight();
-  // window.addEventListener("scroll", scrollHandle);
+  handleInsightsType(1);
 });
 
 onUnmounted(() => {
   window.removeEventListener("resize", setBannerHeight);
-  // window.removeEventListener("scroll", scrollHandle);
 });
 const activeIndex = ref(-1);
 function changeActive(index) {
-  // $event.currentTarget.className = "item wow fadeInUp animated active";
   activeIndex.value = index;
 }
 function setBannerHeight() {
   BannerHeight.value = window.innerHeight;
 }
-
 </script>
 <style lang="scss" scoped>
-// .home-about-wrap .home-about-content,
-// .home-about-wrap {
-//   @media (max-width: 765px) {
-//     background-size: 90%;
-//   }
-// }
 .banner-wrap {
   overflow: hidden;
   position: relative;
-  // .home-about-wrap {
-  //   padding-top: 24vh;
-  //   position: relative;
-  //   z-index: 9;
-  //   margin-top: -24vh;
-  //   pointer-events: none;
-  // }
-  // .home-about-wrap .home-about-content {
-  //   overflow: hidden;
-  //   position: relative;
-  // }
-
-  // .home-about-wrap .txt {
-  //   padding: 6vh 0 20vh;
-  //   background-image: linear-gradient(135deg, #0d9cad, #009d85);
-  //   background-clip: text;
-  //   -webkit-background-clip: text;
-  //   color: transparent;
-  //   pointer-events: auto;
-  //   font-weight: bold;
-  // }
-  // .home-about-wrap .home-about-content:after {
-  //   display: block;
-  //   width: 605px;
-  //   height: 706px;
-  //   background: url(@/assets/icons/home_bg1.png) no-repeat right -13vh / auto 100%;
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   right: 50%;
-  //   margin-right: 310px;
-  //   z-index: -1;
-  // }
-  // .home-about-wrap .home-about-content:after {
-  //   display: block;
-  //   width: 605px;
-  //   height: 706px;
-  //   background: url(@/assets/icons/home_bg1.png) no-repeat right -13vh / auto 100%;
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   right: 50%;
-  //   margin-right: 310px;
-  //   z-index: -1;
-  // }
-
-  // .pub-title .line {
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: -10px;
-  //   width: 12px;
-  //   height: 160px;
-  //   background: url(@/assets/icons/ico_ly.png) no-repeat left bottom;
-  // }
 }
-// .home-offering-wrap {
-//   background: url(@/assets/icons/offering_bg.jpg) no-repeat center/cover;
-//   background-attachment: fixed;
-//   padding-bottom: 120px;
-//   overflow: hidden;
-// }
 .overlay {
   z-index: 666;
 }
