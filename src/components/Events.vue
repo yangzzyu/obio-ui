@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-19 14:27:52
+ * @LastEditTime: 2024-01-27 14:04:43
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -16,32 +16,25 @@
           <div class="p font-size18"></div>
         </div>
         <el-row class="list row" :gutter="20">
-          <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-            <a href="/cn/home/news/id/228" class="block tans font-size16">
-              <div class="time">10th-12th Oct. ,2023</div>
+          <el-col
+            :xs="24"
+            :sm="8"
+            :md="8"
+            :lg="8"
+            :xl="8"
+            v-for="(item, index) in eventsList"
+            :key="index"
+          >
+            <router-link
+              :to="'/news-details/events/' + item.id"
+              class="block tans font-size16"
+            >
+              <div class="time">{{ item.time }}</div>
               <div class="title ut-s2 font-size24 fontf3">
-                Cell&amp;Gene meeting on the Mesa
+                {{ item.title }}
               </div>
-              <div class="add">Carlsbad, CA, United States</div>
-            </a>
-          </el-col>
-          <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-            <a href="/cn/home/news/id/223" class="block tans font-size16">
-              <div class="time">18th-21st Sep. ,2023</div>
-              <div class="title ut-s2 font-size24 fontf3">
-                BioProcess International Conference &amp; Exhibition
-              </div>
-              <div class="add">Boston, MA</div>
-            </a>
-          </el-col>
-          <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-            <a href="/cn/home/news/id/218" class="block tans font-size16">
-              <div class="time">16th-20th May ,2023</div>
-              <div class="title ut-s2 font-size24 fontf3">
-                ASGCT 26th Annual Meeting
-              </div>
-              <div class="add">Los Angeles, CA</div>
-            </a>
+              <div class="add">{{ item.content }}</div>
+            </router-link>
           </el-col>
         </el-row>
       </el-col>
@@ -49,4 +42,10 @@
   </div>
 </template>
 
-<script lang="ts" setup name="Events"></script>
+<script lang="ts" setup name="Events">
+import { ref } from "vue";
+import { events } from "@/views/insights/data/Index";
+
+const eventsList = ref([]);
+eventsList.value = events.value.slice(0, 3);
+</script>

@@ -307,7 +307,7 @@
 <script lang="ts" setup name="Process">
 import { ref } from "vue";
 // import { useTransition } from "@vueuse/core";
-import { ViralList } from "./data/Index.ts";
+// import { ViralList } from "./data/Index.ts";
 import { handleViteImages } from "@/utils";
 import { ArrowRight } from "@element-plus/icons-vue";
 

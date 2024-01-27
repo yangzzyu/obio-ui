@@ -9,137 +9,424 @@ export const releases = ref([
     content: `The First Condor Life and OBiO Technology have reached a strategic cooperation. In this collaboration, The First Condor Life and OBiO Technology will share resources, complement each other's advantages, jointly address market changes and competitive pressures, and achieve win-win cooperation and sustainable development.
     On December 27th, Shenzhen First Condor Life Science Co. Ltd. (hereinafter referred to as " First Condor Life") in Shenzhen and OBiO Biotechnology (Shanghai) Co., Ltd. (stock code: 688238) (hereinafter referred to as " OBiO Biotech") signed a strategic cooperation agreement in Lingang, Shanghai. First Condor Life's co-founder and CTO, Maria Ma, Quality Director Liu Dong, Early R&D Director Wang Zhongsheng, CAR-NK Platform Head Huang Jing, OBiO Biotech CEO Jia Guodong, Deputy General Manager Yin Shan, and Marketing Director Wang Yao attended the signing ceremony."`,
     html: `<div class="Insights-detail-text text">
-        <p class="MsoNormal" style="font-size:11pt;font-family:Calibri, sans-serif;text-align:justify;">
-<span style="font-size:13.5pt;line-height:19.26px;font-family:&quot;"> </span> 
-</p>
-<p class="MsoNormal" style="font-size:12pt;font-family:&quot;text-align:justify;">
-<span style="font-family:Tahoma, sans-serif;">The First Condor Life and OBiO Technology have reached a strategic cooperation. In this collaboration, The First Condor Life and OBiO Technology will share resources, complement each other's advantages, jointly address market changes and competitive pressures, and achieve win-win cooperation and sustainable development.</span> 
-</p>
-<p class="MsoNormal" style="font-size:12pt;font-family:&quot;text-align:justify;">
-<span style="font-family:Tahoma, sans-serif;"><br>
-</span> 
-</p>
-<span style="font-size:12pt;font-family:Tahoma, sans-serif;">On December 27th, Shenzhen First Condor Life Science Co. Ltd. (hereinafter referred to as " First Condor Life") in Shenzhen and OBiO Biotechnology (Shanghai) Co., Ltd. (stock code: 688238) (hereinafter referred to as " OBiO Biotech") signed a strategic cooperation agreement in Lingang, Shanghai. First Condor Life's co-founder and CTO, Maria Ma, Quality Director Liu Dong, Early R&amp;D Director Wang Zhongsheng, CAR-NK Platform Head Huang Jing, OBiO Biotech CEO Jia Guodong, Deputy General Manager Yin Shan, and Marketing Director Wang Yao attended the signing ceremony."</span><span style="font-size:medium;"></span> 
-<p>
-<br>
-</p>
-<p class="MsoNormal" style="font-size:11pt;font-family:Calibri, sans-serif;text-align:justify;">
-<span style="font-size:13.5pt;line-height:19.26px;font-family:&quot;"><span style="font-size:12pt;font-family:Tahoma, sans-serif;"><br>
-</span></span> 
-</p>
-<p class="MsoNormal" style="font-size:11pt;font-family:Calibri, sans-serif;text-align:justify;">
-<span style="font-size:13.5pt;line-height:19.26px;font-family:&quot;"></span> 
-</p>
-<p class="MsoNormal" align="center" style="font-size:11pt;font-family:Calibri, sans-serif;text-align:center;">
-<img src="/public/uploads/image/20240114/20240114104316_42738.png" alt=""> 
-</p>
-<p class="MsoNormal" style="font-size:11pt;font-family:Calibri, sans-serif;text-align:justify;">
-<span style="font-size:11pt;">&nbsp;</span> 
-</p>
-<p class="MsoNormal" style="font-size:11pt;font-family:Calibri, sans-serif;text-align:justify;">
-<span style="font-size:13.5pt;line-height:19.26px;font-family:&quot;"> </span> 
-</p>
-<p class="MsoNormal" style="font-size:12pt;font-family:&quot;text-align:justify;">
-<span style="font-family:Tahoma, sans-serif;">With the vigorous development of biomedicine, lentiviral vectors, due to their characteristics of safety, stable integration and expression, and the ability to carry large gene segments, have been widely used as a core tool for gene delivery in both basic research and clinical treatment. Scientists continue to conduct in-depth research on lentiviral vectors, and their many iterations have laid the foundation for industry development. CAR-NK therapy is expected to become another blockbuster product after CAR-T therapy. The gene delivery of NK cells is an extremely important part of the CAR-NK production process and is currently a significant industry challenge. Solving the problem of efficiently transducing NK cells with lentiviruses can provide strong support for the development of CAR-NK therapy.</span> 
-</p>
-<p class="MsoNormal" style="font-size:12pt;font-family:&quot;text-align:justify;">
-<span style="font-family:Tahoma, sans-serif;"><br>
-</span> 
-</p>
-<span style="font-size:12pt;font-family:Tahoma, sans-serif;">Both parties will leverage their respective strengths to engage&nbsp; in-depth strategic cooperation, focusing on innovative lentiviral gene delivery vectors for efficiently infecting NK cells. Areas of cooperation include, but are not limited to, the application and commercial promotion of innovative vectors in basic research and drug development, optimization of the production process for innovative vectors, and enhancements in safety, efficacy, and stability. Additionally, the two parties will collaborate closely to advance further technical exchanges in cell therapy, collectively promoting the cell therapy clinical application for the benefit of more patients.</span><span style="font-size:medium;"></span> 
-<p>
-<br>
-</p>
-<p class="MsoNormal" style="font-size:11pt;font-family:Calibri, sans-serif;text-align:justify;">
-<span style="font-size:13.5pt;line-height:19.26px;font-family:&quot;"><span style="font-size:12pt;font-family:Tahoma, sans-serif;"><br>
-</span></span> 
-</p>
-<p class="MsoNormal" style="font-size:11pt;font-family:Calibri, sans-serif;text-align:justify;">
-<span style="font-size:13.5pt;line-height:19.26px;font-family:&quot;"></span> 
-</p>
-<p style="text-align:center;">
-<img src="/public/uploads/image/20240114/20240114104336_15375.png" alt=""> 
-</p>
-<p style="text-align:center;">
-<br>
-</p>
-<p class="MsoNormal" style="font-size:11pt;font-family:Calibri, sans-serif;text-align:justify;">
-<span style="font-size:13.5pt;line-height:19.26px;font-family:&quot;"> </span> 
-</p>
-<p class="MsoNormal" style="font-size:12pt;font-family:&quot;text-align:justify;">
-<span style="font-family:Tahoma, sans-serif;">First Condor Life's co-founder and CTO, Maria Ma, expressed deep gratitude for the trust and support from OBiO Tech. She stated, “We are delighted to collaborate with OBiO Tech to explore possibilities in the field of life sciences. First Condor Life has been committed to developing cell therapies for solid tumors, including CAR-T and CAR-NK. In this collaboration we are focusing on lentiviral system specifically designed for NK cells. The modified and optimized lentiviral system achieved a breakthrough in the efficiency of NK cell infection, which will have profound implications for NK cell based research and drug development. As a leading CDMO company, OBiO Tech possesses excellent technical capabilities and market promotion abilities. Through Leveraging the strengths of both parties, we believes that this collaboration will not only bring mutual benefits but will also make a positive contribution to the entire industry and society”</span> 
-</p>
-<p class="MsoNormal" style="font-size:12pt;font-family:&quot;text-align:justify;">
-<span style="font-family:Tahoma, sans-serif;"><br>
-</span> 
-</p>
-<p class="MsoNormal" style="font-size:12pt;font-family:&quot;text-align:justify;">
-<span style="font-family:Tahoma, sans-serif;">CEO of OBiO Biotech, Guodong Jia, expressed his pleasure in establishing a strategic cooperation with First Condor Life, emphasizing that OBiO Tech has consistently focused on the fields of gene and cell therapy, with the mission of "enable gene therapy for better lives”. The company specializes in the research and development of viral vectors and large-scale manufacturing. as its two core technology clusters and continuously commits to addressing challenges to meet the unmet needs of customers and patients. Since its establishment, the company has consistently pursued technological innovation, balancing between independent research and development and external collaboration in order to make innovative breakthroughs to empower industry development. Looking ahead, OBiO Biotech expects that the lentiviral system for NK cells developed in this collaboration can be utilized by more researchers or pharmaceutical companies, maximizing its value.</span> 
-</p>
-<p class="MsoNormal" style="font-size:12pt;font-family:&quot;text-align:justify;">
-<span style="font-family:Tahoma, sans-serif;"><br>
-</span> 
-</p>
-<p class="MsoNormal" style="font-size:12pt;font-family:&quot;text-align:justify;">
-<span style="font-family:Tahoma, sans-serif;">He expressed the hope for sincere cooperation between the two parties, anticipating that more collaboration in the future.</span> 
-</p>
-<p class="MsoNormal" style="font-size:12pt;font-family:&quot;text-align:justify;">
-<span style="font-family:Tahoma, sans-serif;"><br>
-</span> 
-</p>
-<p class="MsoNormal" style="font-size:12pt;font-family:&quot;text-align:justify;">
-<span style="font-size:12pt;font-family:Tahoma, sans-serif;"> </span>
-</p>
-<p class="MsoNormal" style="font-size:12pt;font-family:&quot;text-align:justify;">
-<span style="font-family:Tahoma, sans-serif;"><strong>About OBiO Technology</strong></span> 
-</p>
-<br>
-<p>
-<br>
-</p>
-<p class="MsoNormal" style="font-size:12pt;font-family:&quot;text-align:justify;">
-<span style="font-size:12pt;font-family:Tahoma, sans-serif;">OBiO Technology (Shanghai) Corp., Ltd. (OBiO, SSE:688238.SH)&nbsp;</span><span style="font-size:12pt;font-family:Tahoma, sans-serif;">was established in 2013. It is a biotechnology company focusing in the field of gene and cell therapy, providing CRO and CDMO services such as viral&nbsp; vector development and gene function study for basic research as well as CMC development and GMP manufacture of&nbsp; plasmids, viral vectors, oncolytic viruses, CAR-T cell therapy products, With "enable gene therapy for better lives" as our mission, we are committed to providing high-quality service to global customers, advancing product from bench to clinic, and bringing benefit to patients around the world. For more information about OBiO, visit&nbsp;</span><a href="http://www.obio-tech.com/" target="_blank"><span style="color:black;">www.obio-tech.com</span></a><span style="font-size:12pt;font-family:Tahoma, sans-serif;">.</span>
-</p>
-<p class="MsoNormal" style="font-size:12pt;font-family:&quot;text-align:justify;">
-<br>
-</p>
-<div style="text-align:center;">
-<img src="/public/uploads/image/20240114/20240114104414_98575.png" alt=""> 
-</div>
-<p class="MsoNormal" style="font-size:11pt;font-family:Calibri, sans-serif;text-align:justify;">
-<b><span style="font-size:14pt;line-height:19.9733px;font-family:&quot;color:#1F4E79;">&nbsp;</span></b> 
-</p>
-<p class="MsoNormal" style="font-size:11pt;font-family:Calibri, sans-serif;text-align:justify;">
-<b><span style="font-size:14pt;line-height:19.9733px;font-family:&quot;color:#1F4E79;"> </span></b>
-</p>
-<p class="MsoNormal" style="font-size:12pt;font-family:&quot;text-align:justify;">
-<b><span style="font-family:Tahoma, sans-serif;">About First Condor Life</span> </b>
-</p>
-<p class="MsoNormal" style="font-size:11pt;font-family:Calibri, sans-serif;text-align:justify;">
-<b><b><span style="font-size:14pt;line-height:19.9733px;font-family:&quot;color:#1F4E79;"></span></b> </b>
-</p>
-<p>
-<br>
-</p>
-<p class="MsoNormal" style="font-size:12pt;font-family:&quot;text-align:justify;">
-<br>
-</p>
-<p class="MsoNormal" style="font-size:12pt;font-family:&quot;text-align:justify;">
-<span style="font-family:Tahoma, sans-serif;">First Condor Life Science Co., Ltd. was established in March 2020 in Shenzhen, with its research and production base located in the Songshan Lake High-tech Zone in Dongguan. It is a national high-tech enterprise dedicated to the research and industrialization of solid tumor cell immunotherapy. The company, guided by independent research and development of CAR-T products, simultaneously explores international cutting-edge technologies such as CAR-NK and CAR-T. &nbsp;First Condor Life has developed three technology platforms with independent intellectual property rights: Trans-CAR, Boost-CAR, and R-Star. Clinical studies on solid tumor CAR-T targeting CLDN18.2, GCC, and Nectin-4 are currently underway in multiple hospitals.</span> 
-</p>
-<p class="MsoNormal" style="font-size:12pt;font-family:&quot;text-align:justify;">
-<span style="font-family:Tahoma, sans-serif;"><br>
-</span> 
-</p>
-<p>
-<br>
-</p>
-<p class="MsoNormal" align="center" style="font-size:11pt;font-family:Calibri, sans-serif;text-align:center;">
-<img src="/public/uploads/image/20240114/20240114104435_61351.png" alt=""> 
-</p>
-<p class="MsoNormal" style="font-size:11pt;font-family:Calibri, sans-serif;text-align:justify;">
-&nbsp;
-</p>                </div>`,
+    <p
+      class="MsoNormal"
+      style="
+        font-size: 11pt;
+        font-family: Calibri, sans-serif;
+        text-align: justify;
+      "
+    >
+      <span style='font-size:13.5pt;line-height:19.26px;font-family:"'> </span>
+    </p>
+    <p
+      class="MsoNormal"
+      style='font-size:12pt;font-family:"text-align:justify;'
+    >
+      <span style="font-family: Tahoma, sans-serif"
+        >The First Condor Life and OBiO Technology have reached a strategic
+        cooperation. In this collaboration, The First Condor Life and OBiO
+        Technology will share resources, complement each other's advantages,
+        jointly address market changes and competitive pressures, and achieve
+        win-win cooperation and sustainable development.</span
+      >
+    </p>
+    <p
+      class="MsoNormal"
+      style='font-size:12pt;font-family:"text-align:justify;'
+    >
+      <span style="font-family: Tahoma, sans-serif"><br /> </span>
+    </p>
+    <span style="font-size: 12pt; font-family: Tahoma, sans-serif"
+      >On December 27th, Shenzhen First Condor Life Science Co. Ltd.
+      (hereinafter referred to as " First Condor Life") in Shenzhen and OBiO
+      Biotechnology (Shanghai) Co., Ltd. (stock code: 688238) (hereinafter
+      referred to as " OBiO Biotech") signed a strategic cooperation agreement
+      in Lingang, Shanghai. First Condor Life's co-founder and CTO, Maria Ma,
+      Quality Director Liu Dong, Early R&amp;D Director Wang Zhongsheng, CAR-NK
+      Platform Head Huang Jing, OBiO Biotech CEO Jia Guodong, Deputy General
+      Manager Yin Shan, and Marketing Director Wang Yao attended the signing
+      ceremony."</span
+    ><span style="font-size: medium"></span>
+    <p>
+      <br />
+    </p>
+    <p
+      class="MsoNormal"
+      style="
+        font-size: 11pt;
+        font-family: Calibri, sans-serif;
+        text-align: justify;
+      "
+    >
+      <span style='font-size:13.5pt;line-height:19.26px;font-family:"'
+        ><span style="font-size: 12pt; font-family: Tahoma, sans-serif"
+          ><br /> </span
+      ></span>
+    </p>
+    <p
+      class="MsoNormal"
+      style="
+        font-size: 11pt;
+        font-family: Calibri, sans-serif;
+        text-align: justify;
+      "
+    >
+      <span style='font-size:13.5pt;line-height:19.26px;font-family:"'></span>
+    </p>
+    <p
+      class="MsoNormal"
+      align="center"
+      style="
+        font-size: 11pt;
+        font-family: Calibri, sans-serif;
+        text-align: center;
+      "
+    >
+      <img
+        src="https://www.obio-tech.com/public/uploads/image/20240114/20240114104316_42738.png"
+        alt=""
+      />
+    </p>
+    <p
+      class="MsoNormal"
+      style="
+        font-size: 11pt;
+        font-family: Calibri, sans-serif;
+        text-align: justify;
+      "
+    >
+      <span style="font-size: 11pt">&nbsp;</span>
+    </p>
+    <p
+      class="MsoNormal"
+      style="
+        font-size: 11pt;
+        font-family: Calibri, sans-serif;
+        text-align: justify;
+      "
+    >
+      <span style='font-size:13.5pt;line-height:19.26px;font-family:"'> </span>
+    </p>
+    <p
+      class="MsoNormal"
+      style='font-size:12pt;font-family:"text-align:justify;'
+    >
+      <span style="font-family: Tahoma, sans-serif"
+        >With the vigorous development of biomedicine, lentiviral vectors, due
+        to their characteristics of safety, stable integration and expression,
+        and the ability to carry large gene segments, have been widely used as a
+        core tool for gene delivery in both basic research and clinical
+        treatment. Scientists continue to conduct in-depth research on
+        lentiviral vectors, and their many iterations have laid the foundation
+        for industry development. CAR-NK therapy is expected to become another
+        blockbuster product after CAR-T therapy. The gene delivery of NK cells
+        is an extremely important part of the CAR-NK production process and is
+        currently a significant industry challenge. Solving the problem of
+        efficiently transducing NK cells with lentiviruses can provide strong
+        support for the development of CAR-NK therapy.</span
+      >
+    </p>
+    <p
+      class="MsoNormal"
+      style='font-size:12pt;font-family:"text-align:justify;'
+    >
+      <span style="font-family: Tahoma, sans-serif"><br /> </span>
+    </p>
+    <span style="font-size: 12pt; font-family: Tahoma, sans-serif"
+      >Both parties will leverage their respective strengths to engage&nbsp;
+      in-depth strategic cooperation, focusing on innovative lentiviral gene
+      delivery vectors for efficiently infecting NK cells. Areas of cooperation
+      include, but are not limited to, the application and commercial promotion
+      of innovative vectors in basic research and drug development, optimization
+      of the production process for innovative vectors, and enhancements in
+      safety, efficacy, and stability. Additionally, the two parties will
+      collaborate closely to advance further technical exchanges in cell
+      therapy, collectively promoting the cell therapy clinical application for
+      the benefit of more patients.</span
+    ><span style="font-size: medium"></span>
+    <p>
+      <br />
+    </p>
+    <p
+      class="MsoNormal"
+      style="
+        font-size: 11pt;
+        font-family: Calibri, sans-serif;
+        text-align: justify;
+      "
+    >
+      <span style='font-size:13.5pt;line-height:19.26px;font-family:"'
+        ><span style="font-size: 12pt; font-family: Tahoma, sans-serif"
+          ><br /> </span
+      ></span>
+    </p>
+    <p
+      class="MsoNormal"
+      style="
+        font-size: 11pt;
+        font-family: Calibri, sans-serif;
+        text-align: justify;
+      "
+    >
+      <span style='font-size:13.5pt;line-height:19.26px;font-family:"'></span>
+    </p>
+    <p style="text-align: center">
+      <img
+        src="https://www.obio-tech.com/public/uploads/image/20240114/20240114104336_15375.png"
+        alt=""
+      />
+    </p>
+    <p style="text-align: center">
+      <br />
+    </p>
+    <p
+      class="MsoNormal"
+      style="
+        font-size: 11pt;
+        font-family: Calibri, sans-serif;
+        text-align: justify;
+      "
+    >
+      <span style='font-size:13.5pt;line-height:19.26px;font-family:"'> </span>
+    </p>
+    <p
+      class="MsoNormal"
+      style='font-size:12pt;font-family:"text-align:justify;'
+    >
+      <span style="font-family: Tahoma, sans-serif"
+        >First Condor Life's co-founder and CTO, Maria Ma, expressed deep
+        gratitude for the trust and support from OBiO Tech. She stated, “We are
+        delighted to collaborate with OBiO Tech to explore possibilities in the
+        field of life sciences. First Condor Life has been committed to
+        developing cell therapies for solid tumors, including CAR-T and CAR-NK.
+        In this collaboration we are focusing on lentiviral system specifically
+        designed for NK cells. The modified and optimized lentiviral system
+        achieved a breakthrough in the efficiency of NK cell infection, which
+        will have profound implications for NK cell based research and drug
+        development. As a leading CDMO company, OBiO Tech possesses excellent
+        technical capabilities and market promotion abilities. Through
+        Leveraging the strengths of both parties, we believes that this
+        collaboration will not only bring mutual benefits but will also make a
+        positive contribution to the entire industry and society”</span
+      >
+    </p>
+    <p
+      class="MsoNormal"
+      style='font-size:12pt;font-family:"text-align:justify;'
+    >
+      <span style="font-family: Tahoma, sans-serif"><br /> </span>
+    </p>
+    <p
+      class="MsoNormal"
+      style='font-size:12pt;font-family:"text-align:justify;'
+    >
+      <span style="font-family: Tahoma, sans-serif"
+        >CEO of OBiO Biotech, Guodong Jia, expressed his pleasure in
+        establishing a strategic cooperation with First Condor Life, emphasizing
+        that OBiO Tech has consistently focused on the fields of gene and cell
+        therapy, with the mission of "enable gene therapy for better lives”. The
+        company specializes in the research and development of viral vectors and
+        large-scale manufacturing. as its two core technology clusters and
+        continuously commits to addressing challenges to meet the unmet needs of
+        customers and patients. Since its establishment, the company has
+        consistently pursued technological innovation, balancing between
+        independent research and development and external collaboration in order
+        to make innovative breakthroughs to empower industry development.
+        Looking ahead, OBiO Biotech expects that the lentiviral system for NK
+        cells developed in this collaboration can be utilized by more
+        researchers or pharmaceutical companies, maximizing its value.</span
+      >
+    </p>
+    <p
+      class="MsoNormal"
+      style='font-size:12pt;font-family:"text-align:justify;'
+    >
+      <span style="font-family: Tahoma, sans-serif"><br /> </span>
+    </p>
+    <p
+      class="MsoNormal"
+      style='font-size:12pt;font-family:"text-align:justify;'
+    >
+      <span style="font-family: Tahoma, sans-serif"
+        >He expressed the hope for sincere cooperation between the two parties,
+        anticipating that more collaboration in the future.</span
+      >
+    </p>
+    <p
+      class="MsoNormal"
+      style='font-size:12pt;font-family:"text-align:justify;'
+    >
+      <span style="font-family: Tahoma, sans-serif"><br /> </span>
+    </p>
+    <p
+      class="MsoNormal"
+      style='font-size:12pt;font-family:"text-align:justify;'
+    >
+      <span style="font-size: 12pt; font-family: Tahoma, sans-serif"> </span>
+    </p>
+    <p
+      class="MsoNormal"
+      style='font-size:12pt;font-family:"text-align:justify;'
+    >
+      <span style="font-family: Tahoma, sans-serif"
+        ><strong>About OBiO Technology</strong></span
+      >
+    </p>
+    <br />
+    <p>
+      <br />
+    </p>
+    <p
+      class="MsoNormal"
+      style='font-size:12pt;font-family:"text-align:justify;'
+    >
+      <span style="font-size: 12pt; font-family: Tahoma, sans-serif"
+        >OBiO Technology (Shanghai) Corp., Ltd. (OBiO,
+        SSE:688238.SH)&nbsp;</span
+      ><span style="font-size: 12pt; font-family: Tahoma, sans-serif"
+        >was established in 2013. It is a biotechnology company focusing in the
+        field of gene and cell therapy, providing CRO and CDMO services such as
+        viral&nbsp; vector development and gene function study for basic
+        research as well as CMC development and GMP manufacture of&nbsp;
+        plasmids, viral vectors, oncolytic viruses, CAR-T cell therapy products,
+        With "enable gene therapy for better lives" as our mission, we are
+        committed to providing high-quality service to global customers,
+        advancing product from bench to clinic, and bringing benefit to patients
+        around the world. For more information about OBiO, visit&nbsp;</span
+      ><a href="http://www.obio-tech.com/" target="_blank"
+        ><span style="color: black">www.obio-tech.com</span></a
+      ><span style="font-size: 12pt; font-family: Tahoma, sans-serif">.</span>
+    </p>
+    <p
+      class="MsoNormal"
+      style='font-size:12pt;font-family:"text-align:justify;'
+    >
+      <br />
+    </p>
+    <div style="text-align: center">
+      <img
+        src="https://www.obio-tech.com/public/uploads/image/20240114/20240114104414_98575.png"
+        alt=""
+      />
+    </div>
+    <p
+      class="MsoNormal"
+      style="
+        font-size: 11pt;
+        font-family: Calibri, sans-serif;
+        text-align: justify;
+      "
+    >
+      <b
+        ><span
+          style='font-size:14pt;line-height:19.9733px;font-family:"color:#1F4E79;'
+          >&nbsp;</span
+        ></b
+      >
+    </p>
+    <p
+      class="MsoNormal"
+      style="
+        font-size: 11pt;
+        font-family: Calibri, sans-serif;
+        text-align: justify;
+      "
+    >
+      <b
+        ><span
+          style='font-size:14pt;line-height:19.9733px;font-family:"color:#1F4E79;'
+        >
+        </span
+      ></b>
+    </p>
+    <p
+      class="MsoNormal"
+      style='font-size:12pt;font-family:"text-align:justify;'
+    >
+      <b
+        ><span style="font-family: Tahoma, sans-serif"
+          >About First Condor Life</span
+        >
+      </b>
+    </p>
+    <p
+      class="MsoNormal"
+      style="
+        font-size: 11pt;
+        font-family: Calibri, sans-serif;
+        text-align: justify;
+      "
+    >
+      <b
+        ><b
+          ><span
+            style='font-size:14pt;line-height:19.9733px;font-family:"color:#1F4E79;'
+          ></span
+        ></b>
+      </b>
+    </p>
+    <p>
+      <br />
+    </p>
+    <p
+      class="MsoNormal"
+      style='font-size:12pt;font-family:"text-align:justify;'
+    >
+      <br />
+    </p>
+    <p
+      class="MsoNormal"
+      style='font-size:12pt;font-family:"text-align:justify;'
+    >
+      <span style="font-family: Tahoma, sans-serif"
+        >First Condor Life Science Co., Ltd. was established in March 2020 in
+        Shenzhen, with its research and production base located in the Songshan
+        Lake High-tech Zone in Dongguan. It is a national high-tech enterprise
+        dedicated to the research and industrialization of solid tumor cell
+        immunotherapy. The company, guided by independent research and
+        development of CAR-T products, simultaneously explores international
+        cutting-edge technologies such as CAR-NK and CAR-T. &nbsp;First Condor
+        Life has developed three technology platforms with independent
+        intellectual property rights: Trans-CAR, Boost-CAR, and R-Star. Clinical
+        studies on solid tumor CAR-T targeting CLDN18.2, GCC, and Nectin-4 are
+        currently underway in multiple hospitals.</span
+      >
+    </p>
+    <p
+      class="MsoNormal"
+      style='font-size:12pt;font-family:"text-align:justify;'
+    >
+      <span style="font-family: Tahoma, sans-serif"><br /> </span>
+    </p>
+    <p>
+      <br />
+    </p>
+    <p
+      class="MsoNormal"
+      align="center"
+      style="
+        font-size: 11pt;
+        font-family: Calibri, sans-serif;
+        text-align: center;
+      "
+    >
+      <img
+        src="https://www.obio-tech.com/public/uploads/image/20240114/20240114104435_61351.png"
+        alt=""
+      />
+    </p>
+    <p
+      class="MsoNormal"
+      style="
+        font-size: 11pt;
+        font-family: Calibri, sans-serif;
+        text-align: justify;
+      "
+    >
+      &nbsp;
+    </p>
+  </div>`,
   },
   {
     id: 2,
@@ -148,8 +435,7 @@ export const releases = ref([
     time: "24th Oct. 2023",
     subhead: "Visit OBiO at ESGCT 30th Annual Congress in Brussels",
     content: `OBiO Technology (Shanghai) Corp., Ltd. (OBiO, 688238.SH), a world leading contract development and manufacturing organization for cell and gene therapy, officially announced an agreement with Refreshgene Therapeutics (Refreshgene). Under the agreement, OBiO leverages its capabilities of process development, large-scale cGMP commercial production and global business development to provide high-quality CDMO/CMO services and authorized cooperation services for Refreshgene's RRG-001 pipeline, and jointly promote the development of advanced therapies to benefit patients around the world.`,
-    html: `
-        <div class="Insights-detail-text text">
+    html: `<div class="Insights-detail-text text">
                    <p style="text-align:justify;">
 	<span style="line-height:1.5;font-size:16px;">&nbsp; &nbsp; </span><span style="line-height:1.5;font-size:16px;">OBiO Technology (Shanghai) Corp., Ltd.
 (OBiO, 688238.SH), a world leading contract development and manufacturing
@@ -292,12 +578,14 @@ export const events = ref([
     id: 1,
     title: `Cell&Gene meeting on the Mesa`,
     time: "10th-12th Oct. ,2023",
+    content: `Carlsbad, CA, United States`,
     html: `<div class="Insights-detail-text text"><div class="font-size20 color666">Carlsbad, CA, United States</div></div>`,
   },
   {
     id: 2,
     title: `BioProcess International Conference & Exhibition`,
     time: "18th-21st Sep. ,2023",
+    content: `Boston, MA`,
     html: `<div class="Insights-detail-text text"><p>Related Links:</p>
 	<p>
 	<a href="https://informaconnect.com/cell-therapy-bioprocessing/" target="_blank">https://informaconnect.com/cell-therapy-bioprocessing/</a>
@@ -307,19 +595,78 @@ export const events = ref([
     id: 3,
     title: `ASGCT 26th Annual Meeting`,
     time: "16th-20th May ,2023",
+    content: `Los Angeles, CA`,
     html: `<div class="Insights-detail-text text">
-                   <p>
-	<span style="font-size:18px;">Los Angeles, CA</span> 
-</p>
-<p>
-	<span style="font-size:18px;"><br>
-    </span> 
-</p>
-<p>
-	Related Links:
-</p>
-<p>
-	 <a href="https://asgct.org/" target="_blank">https://annualmeeting.asgct.org/</a> 
-</p> </div>      `,
+    <p>
+      <span style="font-size: 18px">Los Angeles, CA</span>
+    </p>
+    <p>
+      <span style="font-size: 18px"><br /> </span>
+    </p>
+    <p>Related Links:</p>
+    <p>
+      <a href="https://asgct.org/" target="_blank"
+        >https://annualmeeting.asgct.org/</a
+      >
+    </p>
+  </div>`,
+  },
+
+  {
+    id: 4,
+    time: "15th-16th Apr. ,2022",
+    title: "SAPA-GP 2022 Annual Conference (Hybrid)",
+    content: "King of Prussia, PA",
+    html: `<div class="Insights-detail-text text">
+    <p>
+      <span style="font-size: 18px">Los Angeles, CA</span>
+    </p>
+    <p>
+      <span style="font-size: 18px"><br /> </span>
+    </p>
+    <p>Related Links:</p>
+    <p>
+      <a href="https://asgct.org/" target="_blank"
+        >https://annualmeeting.asgct.org/</a
+      >
+    </p>
+  </div>`,
+  },
+  {
+    id: 5,
+    time: "16th-19th May ,2022",
+    title: "ASGCT 25th Annual Meeting",
+    content: "Washington, D.C.",
+    html: `<div class="Insights-detail-text text">
+    <span style="font-size: 18px; line-height: 2">WASHINGTON, D.C.</span
+    ><br />
+    <br />
+    <span style="font-size: 18px; line-height: 2">Related Links:</span><br />
+    <span style="font-size: 18px; line-height: 2"
+      ><a href="https://annualmeeting.asgct.org/" target="_blank"
+        >https://annualmeeting.asgct.org/</a
+      ></span
+    ><br />
+    <span style="font-size: 18px; line-height: 2"></span>
+  </div>`,
+  },
+  {
+    id: 6,
+    time: "15th-16th Jul. ,2022",
+    title: "China Oncolytic Virus Conference 2022 (Hybrid)",
+    content: "Shanghai, China",
+    html: `<div class="Insights-detail-text text">
+    <span style="font-size: 18px; line-height: 2">SHANGHAI, China</span><br />
+    <br />
+    <span style="font-size: 18px; line-height: 2">Related Links:</span><br />
+    <span style="font-size: 18px; line-height: 2"
+      ><a
+        href="https://www.bagevent.com/event/8106755?code=061OMvGa1j6bRC0K6bHa145GHz1OMvGK&amp;state=STATE"
+        target="_blank"
+        >https://www.bagevent.com/event/8106755?code=061OMvGa1j6bRC0K6bHa145GHz1OMvGK&amp;state=STATE</a
+      ></span
+    ><br />
+    <span style="font-size: 18px; line-height: 2"></span>
+  </div>`,
   },
 ]);

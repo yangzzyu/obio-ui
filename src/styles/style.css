@@ -2142,6 +2142,7 @@ a:focus {
 }
 .popLaboraBox-main {
   overflow: hidden;
+  padding: 0 40px;
 }
 .popLaboraBox-main .title {
   margin-bottom: 30px;

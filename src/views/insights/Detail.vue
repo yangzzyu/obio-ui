@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-24 15:49:11
+ * @LastEditTime: 2024-01-27 15:42:39
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -56,8 +56,10 @@ const matchedData = ref([
 ]);
 const FocusData = ref({
   title: "Insights",
-  imgUrl:
+  hiddenXsImgUrl:
     "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+  visibleXsImgUrl:
+    "https://www.obio-tech.com/public/uploads/20220401/fed2a39854c2e2e0bd6d7d8434597de8.jpg",
 });
 const ReleasesList = ref([]);
 const newsItem = ref({});
@@ -68,17 +70,12 @@ onMounted(() => {
   console.log(routerType, "routerType");
   if (routerType == "releases") {
     newsItem.value =
-      releases.value.find((i) => i.id == currentRoute.params.id) || {};
+      releases.value.find((i: any) => i.id == currentRoute.params.id) || {};
   } else {
     newsItem.value =
-      events.value.find((i) => i.id == currentRoute.params.id) || {};
+      events.value.find((i: any) => i.id == currentRoute.params.id) || {};
   }
 
-  // console.log(releaseItem, eventsItem, "releaseItem : eventsItem");
-
-  // newsItem.value =
-  //   currentRoute.params.type == "releases" ? releaseItem : eventsItem;
-  // releases.value.find((i) => i.id == currentRoute.params.id) || {};
   matchedData.value.at(-1).name = newsItem.value.title;
 });
 </script>
