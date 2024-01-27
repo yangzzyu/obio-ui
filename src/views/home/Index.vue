@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 09:07:47
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-27 14:36:15
+ * @LastEditTime: 2024-01-27 15:28:50
  * @FilePath: \obio-ui\src\views\HomeView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -518,7 +518,6 @@ function handleInsightsType(params) {
 }
 const ruleForm = ref<FormItem>({});
 const rules = ref([]);
-const scrollTop = ref(0);
 onMounted(() => {
   var wow = new WOW({
     boxClass: "wow",
