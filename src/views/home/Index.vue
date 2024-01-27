@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 09:07:47
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-26 15:23:27
+ * @LastEditTime: 2024-01-26 16:37:12
  * @FilePath: \obio-ui\src\views\HomeView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -590,7 +590,6 @@ function handleInsightsType(params) {
 const ruleForm = ref({});
 const rules = ref([]);
 const scrollTop = ref(0);
-const wow = ref("");
 onMounted(() => {
   var wow = new WOW({
     boxClass: "wow",
@@ -606,106 +605,87 @@ onMounted(() => {
   wow.init();
   window.addEventListener("resize", setBannerHeight);
   setBannerHeight();
-  window.addEventListener("scroll", scrollHandle);
+  // window.addEventListener("scroll", scrollHandle);
 });
 
 onUnmounted(() => {
   window.removeEventListener("resize", setBannerHeight);
-  window.removeEventListener("scroll", scrollHandle);
+  // window.removeEventListener("scroll", scrollHandle);
 });
 const activeIndex = ref(-1);
 function changeActive(index) {
   // $event.currentTarget.className = "item wow fadeInUp animated active";
   activeIndex.value = index;
 }
-function removeActive($event) {
-  $event.currentTarget.className = "item wow fadeInUp animated";
-}
 function setBannerHeight() {
   BannerHeight.value = window.innerHeight;
-  store.setBannerHeight(BannerHeight.value);
 }
 
-function scrollHandle() {
-  scrollTop.value =
-    document.documentElement.scrollTop ||
-    window.pageYOffset ||
-    document.body.scrollTop;
-  if (scrollTop.value <= BannerHeight.value - 35) {
-    store.setHeaderLogo(true);
-    store.setShadowActive(false);
-    store.setNavDarkActive(false);
-  } else {
-    store.setHeaderLogo(false);
-    store.setShadowActive(true);
-    store.setNavDarkActive(true);
-  }
-}
 </script>
 <style lang="scss" scoped>
-.home-about-wrap .home-about-content,
-.home-about-wrap {
-  @media (max-width: 765px) {
-    background-size: 90%;
-  }
-}
+// .home-about-wrap .home-about-content,
+// .home-about-wrap {
+//   @media (max-width: 765px) {
+//     background-size: 90%;
+//   }
+// }
 .banner-wrap {
   overflow: hidden;
   position: relative;
-  .home-about-wrap {
-    padding-top: 24vh;
-    position: relative;
-    z-index: 9;
-    margin-top: -24vh;
-    pointer-events: none;
-  }
-  .home-about-wrap .home-about-content {
-    overflow: hidden;
-    position: relative;
-  }
+  // .home-about-wrap {
+  //   padding-top: 24vh;
+  //   position: relative;
+  //   z-index: 9;
+  //   margin-top: -24vh;
+  //   pointer-events: none;
+  // }
+  // .home-about-wrap .home-about-content {
+  //   overflow: hidden;
+  //   position: relative;
+  // }
 
-  .home-about-wrap .txt {
-    padding: 6vh 0 20vh;
-    background-image: linear-gradient(135deg, #0d9cad, #009d85);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    pointer-events: auto;
-    font-weight: bold;
-  }
-  .home-about-wrap .home-about-content:after {
-    display: block;
-    width: 605px;
-    height: 706px;
-    background: url(@/assets/icons/home_bg1.png) no-repeat right -13vh / auto 100%;
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 50%;
-    margin-right: 310px;
-    z-index: -1;
-  }
-  .home-about-wrap .home-about-content:after {
-    display: block;
-    width: 605px;
-    height: 706px;
-    background: url(@/assets/icons/home_bg1.png) no-repeat right -13vh / auto 100%;
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 50%;
-    margin-right: 310px;
-    z-index: -1;
-  }
+  // .home-about-wrap .txt {
+  //   padding: 6vh 0 20vh;
+  //   background-image: linear-gradient(135deg, #0d9cad, #009d85);
+  //   background-clip: text;
+  //   -webkit-background-clip: text;
+  //   color: transparent;
+  //   pointer-events: auto;
+  //   font-weight: bold;
+  // }
+  // .home-about-wrap .home-about-content:after {
+  //   display: block;
+  //   width: 605px;
+  //   height: 706px;
+  //   background: url(@/assets/icons/home_bg1.png) no-repeat right -13vh / auto 100%;
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   right: 50%;
+  //   margin-right: 310px;
+  //   z-index: -1;
+  // }
+  // .home-about-wrap .home-about-content:after {
+  //   display: block;
+  //   width: 605px;
+  //   height: 706px;
+  //   background: url(@/assets/icons/home_bg1.png) no-repeat right -13vh / auto 100%;
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   right: 50%;
+  //   margin-right: 310px;
+  //   z-index: -1;
+  // }
 
-  .pub-title .line {
-    position: absolute;
-    bottom: 0;
-    left: -10px;
-    width: 12px;
-    height: 160px;
-    background: url(@/assets/icons/ico_ly.png) no-repeat left bottom;
-  }
+  // .pub-title .line {
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: -10px;
+  //   width: 12px;
+  //   height: 160px;
+  //   background: url(@/assets/icons/ico_ly.png) no-repeat left bottom;
+  // }
 }
 // .home-offering-wrap {
 //   background: url(@/assets/icons/offering_bg.jpg) no-repeat center/cover;

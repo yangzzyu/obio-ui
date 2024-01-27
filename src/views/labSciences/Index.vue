@@ -2,40 +2,13 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-26 16:30:27
+ * @LastEditTime: 2024-01-27 10:52:18
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
   <div class="lab-sciences">
-    <div class="focus">
-      <div class="hidden-xs">
-        <img
-          src="https://www.obio-tech.com/public/uploads/20220402/39c0eb1d2e5cf6c9f1d40cc78ce30544.jpg"
-          alt="Laboratory Sciences"
-        />
-      </div>
-      <div class="visible-xs-block">
-        <img
-          src="https://www.obio-tech.com/public/uploads/20220402/c513fa4925451a1f43f4227509d942c3.jpg"
-          alt="Laboratory Sciences"
-        />
-      </div>
-      <div class="txt ub ub-ac">
-        <div class="ub-f1">
-          <el-col
-            :xs="22"
-            :sm="20"
-            :md="20"
-            :lg="20"
-            :xl="22"
-            style="margin: auto"
-          >
-            <h1>Laboratory Sciences</h1>
-          </el-col>
-        </div>
-      </div>
-    </div>
+    <Focus :focusObj="FocusData" />
     <div class="Laboratory-wrap">
       <div class="top-txt">
         <el-col
@@ -71,7 +44,7 @@
         >
           <div class="list">
             <el-row class="item row" :gutter="10">
-              <el-col :xs="22" :sm="10" :md="10" :lg="8" :xl="6" >
+              <el-col :xs="22" :sm="10" :md="10" :lg="8" :xl="6">
                 <div class="img block">
                   <img
                     src="https://www.obio-tech.com/public/uploads/20220328/fb31c3bc021f9b0de1ac68c274c4861b.png"
@@ -139,7 +112,7 @@
                 </div></el-col
               >
             </el-row>
-            <el-row class="item row"  :gutter="10">
+            <el-row class="item row" :gutter="10">
               <el-col :xs="22" :sm="10" :md="10" :lg="8" :xl="6">
                 <div class="img block">
                   <img
@@ -313,7 +286,13 @@
 
 <script lang="ts" setup name="LabSciences">
 import { ref } from "vue";
+import Focus from "@/components/Focus.vue";
 import Events from "@/components/Events.vue";
+const FocusData = ref({
+  title: "Laboratory Sciences",
+  imgUrl:
+    "https://www.obio-tech.com/public/uploads/20220402/39c0eb1d2e5cf6c9f1d40cc78ce30544.jpg",
+});
 const dialogVisible = ref(false);
 function handleClose() {
   Labora.value = {};

@@ -2,12 +2,12 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-22 21:59:54
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-24 15:58:12
+ * @LastEditTime: 2024-01-27 12:00:29
  * @FilePath: \obio-ui\src\components\Header.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
-  <div class="header">
+  <div class="header" :class="{ shadow: headerShadowActive }">
     <div class="header_container">
       <div class="header_content">
         <div class="logo">
@@ -34,10 +34,12 @@
             background-color="transparent"
             :popper-offset="0"
           >
-            <el-menu-item index="/">Home</el-menu-item>
+            <el-menu-item index="/" class="menu-t1">Home</el-menu-item>
             <el-sub-menu index="/about" popper-class="sub-popper">
               <template #title>
-                <div @click="router.push('/about')">About Us</div>
+                <div @click="router.push('/about')" class="menu-t1">
+                  About Us
+                </div>
               </template>
               <el-sub-menu index="/facilities" popper-class="sub-popper">
                 <template #title>
@@ -59,10 +61,18 @@
               </el-sub-menu>
               <el-menu-item index="/team">Leadership Team</el-menu-item>
             </el-sub-menu>
-            <el-menu-item index="/sys">Laboratory Sciences</el-menu-item>
-            <el-sub-menu index="/cdmo" popper-class="sub-popper">
+            <el-menu-item index="/sys" class="menu-t1"
+              >Laboratory Sciences</el-menu-item
+            >
+            <el-sub-menu
+              index="/cdmo"
+              popper-class="sub-popper"
+              class="menu-t1"
+            >
               <template #title>
-                <div @click="router.push('/cdmo')">CDMO Solutions</div>
+                <div @click="router.push('/cdmo')" class="menu-t1">
+                  CDMO Solutions
+                </div>
               </template>
               <el-menu-item index="/process">Process Development</el-menu-item>
               <el-sub-menu index="/cgmp" popper-class="sub-popper ">
@@ -83,10 +93,12 @@
                 >Cold Chain Logistics</el-menu-item
               >
             </el-sub-menu>
-            <el-menu-item index="/cx">Innovations</el-menu-item>
+            <el-menu-item index="/cx" class="menu-t1">Innovations</el-menu-item>
             <el-sub-menu index="/news" popper-class="sub-popper">
               <template #title>
-                <div @click="router.push('/news')">Insights</div>
+                <div @click="router.push('/news')" class="menu-t1">
+                  Insights
+                </div>
               </template>
               <el-menu-item index="/releases">Press Releases</el-menu-item>
               <el-menu-item index="/events">Events</el-menu-item>
@@ -103,8 +115,12 @@
                 </div>
               </el-menu-item> -->
             </el-sub-menu>
-            <el-menu-item @click="openUrl">Investor Relations</el-menu-item>
-            <el-menu-item index="/contact">Contact Us</el-menu-item>
+            <el-menu-item @click="openUrl" class="menu-t1"
+              >Investor Relations</el-menu-item
+            >
+            <el-menu-item index="/contact" class="menu-t1"
+              >Contact Us</el-menu-item
+            >
           </el-menu>
         </div>
       </div>
@@ -128,10 +144,10 @@
         :popper-offset="0"
         @select="drawerMenu = false"
       >
-        <el-menu-item index="/">Home</el-menu-item>
+        <el-menu-item index="/" class="menu-t1">Home</el-menu-item>
         <el-sub-menu index="/about" popper-class="sub-popper">
           <template #title>
-            <div @click="router.push('/about')">About Us</div>
+            <div @click="router.push('/about')" class="menu-t1">About Us</div>
           </template>
           <el-sub-menu index="/facilities" popper-class="sub-popper ">
             <template #title>
@@ -153,10 +169,14 @@
           </el-sub-menu>
           <el-menu-item index="/team">Leadership Team</el-menu-item>
         </el-sub-menu>
-        <el-menu-item index="/sys">Laboratory Sciences</el-menu-item>
+        <el-menu-item index="/sys" class="menu-t1"
+          >Laboratory Sciences</el-menu-item
+        >
         <el-sub-menu index="/cdmo" popper-class="sub-popper">
           <template #title>
-            <div @click="router.push('/cdmo')">CDMO Solutions</div>
+            <div @click="router.push('/cdmo')" class="menu-t1">
+              CDMO Solutions
+            </div>
           </template>
           <el-menu-item index="/process">Process Development</el-menu-item>
           <el-sub-menu index="/cgmp" popper-class="sub-popper ">
@@ -173,10 +193,10 @@
           <el-menu-item index="/quality">Quality & Regulatory</el-menu-item>
           <el-menu-item index="/logistics">Cold Chain Logistics</el-menu-item>
         </el-sub-menu>
-        <el-menu-item index="/cx">Innovations</el-menu-item>
+        <el-menu-item index="/cx" class="menu-t1">Innovations</el-menu-item>
         <el-sub-menu index="/news" popper-class="sub-popper">
           <template #title>
-            <div @click="router.push('/news')">Insights</div>
+            <div @click="router.push('/news')" class="menu-t1">Insights</div>
           </template>
           <el-menu-item index="/releases">Press Releases</el-menu-item>
           <el-menu-item index="/events">Events</el-menu-item>
@@ -193,8 +213,10 @@
             </div>
           </el-menu-item> -->
         </el-sub-menu>
-        <el-menu-item @click="openUrl">Investor Relations</el-menu-item>
-        <el-menu-item index="/contact">Contact Us</el-menu-item>
+        <el-menu-item @click="openUrl" class="menu-t1"
+          >Investor Relations</el-menu-item
+        >
+        <el-menu-item index="/contact" class="menu-t1">Contact Us</el-menu-item>
       </el-menu>
     </el-drawer>
   </div>
@@ -205,6 +227,12 @@ import { useRouter } from "vue-router";
 import { computed, onBeforeMount, ref, toRefs } from "vue";
 import { handleViteImages } from "@/utils";
 // import { mapState, useStore } from 'pinia'
+const props = defineProps({
+  headerShadowActive: {
+    type: Boolean,
+    default: false,
+  },
+});
 const router = useRouter();
 console.log(router, "router");
 // import type { MainStates } from '@/store'
@@ -286,6 +314,14 @@ onBeforeMount(() => {});
     color: #000 !important;
   }
 }
+.menu-t1 {
+  font-size: 1.1vw;
+}
+.menu-drawer {
+  .menu-t1 {
+    font-size: 18px;
+  }
+}
 </style>
 <style lang="scss" scoped>
 $nav_active_color: #3370ff;
@@ -305,30 +341,27 @@ h2 {
 .header {
   width: 100%;
   height: 60px;
-  background-color: rgba(255, 255, 255, 0);
-  //backdrop-filter: blur(0);
   box-shadow: none;
 
   position: fixed;
   z-index: 999;
   transition: transform 0.2s ease;
 
-  //color: rgba(255, 255, 255, 1) !important;
-  //transition: all 0.3s ease;
+  font-family: "puhuiti-2-55";
+
   .header_container {
     height: 100%;
-    background-image: linear-gradient(
-      45deg,
-      rgba(0, 95, 146, 0.75),
-      rgba(0, 157, 133, 0.75)
-    );
     padding-top: 10px;
     padding-bottom: 10px;
   }
 }
 
 .shadow {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-image: linear-gradient(
+    45deg,
+    rgba(0, 95, 146, 0.75),
+    rgba(0, 157, 133, 0.75)
+  );
   backdrop-filter: blur(8px);
   box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
 }
@@ -339,7 +372,7 @@ h2 {
   flex-direction: row;
   height: 100%;
   align-items: center;
-  padding: 0 96px;
+  padding: 0 4%;
   margin: 0 auto;
 
   .logo {
@@ -351,6 +384,7 @@ h2 {
   }
 }
 .el-sub-menu {
+  // font-size: 24px;
   .el-menu-item {
     // color: #000 !important;
   }
@@ -391,40 +425,40 @@ h2 {
     margin-left: 40px;
   }
 
-  .menu-item-link {
-    //color: #646a73;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 60px;
-    cursor: pointer;
-    position: relative;
+  // .menu-item-link {
+  //   //color: #646a73;
+  //   font-weight: 400;
+  //   font-size: 14px;
+  //   line-height: 60px;
+  //   cursor: pointer;
+  //   position: relative;
 
-    a {
-      display: inline-block;
-      color: rgba(255, 255, 255, 1);
-      transition: color 0.3s;
+  //   a {
+  //     display: inline-block;
+  //     color: rgba(255, 255, 255, 1);
+  //     transition: color 0.3s;
 
-      :hover {
-        color: $nav_active_color;
-      }
-    }
+  //     :hover {
+  //       color: $nav_active_color;
+  //     }
+  //   }
 
-    .router-link-exact-active {
-      color: $nav_active_color;
-      font-weight: 600;
+  //   .router-link-exact-active {
+  //     color: $nav_active_color;
+  //     font-weight: 600;
 
-      span:after {
-        content: "";
-        display: block;
-        height: 2px;
-        position: absolute;
-        width: 26px;
-        left: calc(50% - 13px);
-        bottom: 14px;
-        background-color: $nav_active_color;
-      }
-    }
-  }
+  //     span:after {
+  //       content: "";
+  //       display: block;
+  //       height: 2px;
+  //       position: absolute;
+  //       width: 26px;
+  //       left: calc(50% - 13px);
+  //       bottom: 14px;
+  //       background-color: $nav_active_color;
+  //     }
+  //   }
+  // }
 }
 
 .nav_text_white {
