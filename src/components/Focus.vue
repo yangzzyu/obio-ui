@@ -11,7 +11,9 @@
     <div class="hidden-xs-only focus-img">
       <img :src="focusObj.hiddenXsImgUrl" :alt="focusObj.title" />
     </div>
-    <div class="hidden-sm-only hidden-md-only hidden-lg-only hidden-xl-only focus-img">
+    <div
+      class="hidden-sm-only hidden-md-only hidden-lg-only hidden-xl-only focus-img"
+    >
       <img :src="focusObj.visibleXsImgUrl" :alt="focusObj.title" />
     </div>
     <div class="txt ub ub-ac">
@@ -23,6 +25,7 @@
           :lg="20"
           :xl="22"
           style="margin: auto"
+          class="container"
         >
           <h1 class="fontf7 font-size70 focus-title">{{ focusObj.title }}</h1>
         </el-col>

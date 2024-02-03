@@ -76,12 +76,12 @@ textarea {
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
 } */
-.container {
+/* .container {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
+} */
 a:hover,
 a:focus {
   color: #25b096;
@@ -302,12 +302,16 @@ a:focus {
   height: 100%;
   background: url(@/assets/icons/ico2.png) no-repeat center / cover;
   pointer-events: none;
+  background-size: auto 420px;
 }
 .home-offering-wrap .list .item .txt-con {
   position: relative;
-  height: 592px;
+  max-width: 400px;
+  height: 420px;
+  /* height: 440px; */
+  /* height: 592px; */
   z-index: 3;
-  max-width: 470px;
+  /* max-width: 470px; */
   margin: 0 auto;
 }
 .home-offering-wrap .list .item .line {
@@ -356,6 +360,24 @@ a:focus {
   height: 43px;
   background: url(@/assets/icons/ico3.png) no-repeat left center / contain;
   cursor: pointer;
+}
+/* .home-offering-wrap .list .item:nth-child(2n) .txt-con {
+  margin-left: 180px;
+}
+.home-offering-wrap .list .item:nth-child(2n + 1) .txt-con {
+  margin-right: 180px;
+} */
+.home-offering-wrap .list .item .line {
+  margin: 6px 0 15px;
+}
+.home-offering-wrap .list .item .title {
+  line-height: 1.2;
+}
+.home-offering-wrap .list .item .txt-con .more {
+  margin-top: 20px;
+}
+.home-offering-wrap .list .item .txt-con .more .m-span {
+  height: 30px;
 }
 .home-facilities {
   background: #fafafa;
@@ -2450,4 +2472,11 @@ ul.ul-square li {
 .menu-lang a + a {
   border-left: 1px solid #fff;
   padding-left: 8px;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
 }

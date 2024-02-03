@@ -1,4 +1,3 @@
-
 @import "./variables.module.scss";
 .line-height16 {
   line-height: 1.6;
@@ -26,6 +25,9 @@
 }
 .font-size30 {
   font-size: $size30;
+}
+.font-size38 {
+  font-size: $size38;
 }
 .font-size50 {
   font-size: $size50;
@@ -82,7 +84,11 @@
   .font-size28 {
     font-size: 18px;
   }
+
   .font-size30 {
+    font-size: 20px;
+  }
+  .font-size38 {
     font-size: 20px;
   }
   .font-size50 {
@@ -158,11 +164,13 @@
     overflow-x: auto;
   }
   .home-facilities-mob .list {
-    width: 200%;
+    // width: 200%;
     padding: 70px 0 50px;
   }
   .home-facilities-mob .list .item {
-    width: 33.3333%;
+    // width: 33.3333%;
+    display: flex;
+    justify-content: center;
   }
   .home-facilities .list .item .img {
     width: 100%;
@@ -1071,5 +1079,24 @@
 @media (max-width: 1700px) and (min-width: 768px) {
   .in-about-wrap .about-history-swp {
     padding: 0 55px;
+  }
+}
+.checks_text {
+  display: flex;
+  align-items: baseline;
+  .checks_inpt {
+    margin-right: 10px !important;
+  }
+  .checks_txt {
+    line-height: normal;
+  }
+}
+
+@media (max-width: 2560px) and (min-width: 1700px) {
+  .home-offering-wrap .list .item:nth-child(2n) .txt-con {
+    margin-left: 195px;
+  }
+  .home-offering-wrap .list .item:nth-child(2n + 1) .txt-con {
+    margin-right: 195px;
   }
 }

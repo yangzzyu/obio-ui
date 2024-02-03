@@ -7,7 +7,124 @@
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
-  <div class="header" :class="{ shadow: headerShadowActive }">
+  <div id="top-bar-wrap" class="clr" v-if="shadowTop">
+    <div id="top-bar" class="clr container has-no-content">
+      <div id="top-bar-inner" class="clr">
+        <div id="top-bar-content" class="clr top-bar-right">
+          <div
+            id="top-bar-nav"
+            class="navigation clr"
+            role="navigation"
+            aria-label="secondary"
+          >
+            <ul
+              id="menu-top-bar-menu"
+              class="top-bar-menu dropdown-menu sf-menu"
+            >
+              <li
+                id="menu-item-2100"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2100"
+              >
+                <router-link to="/contact" class="menu-link"
+                  >CONTACT US</router-link
+                >
+                <!-- <a title="Contact" href="/contact-us" class="menu-link"
+                  >CONTACT US</a
+                > -->
+              </li>
+              <!-- <li
+                id="menu-item-2099"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2099"
+              >
+                <a href="/careers" class="menu-link">CAREERS</a>
+              </li> -->
+              <li
+                id="menu-item-146"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-146"
+              >
+                <a
+                  title="LinkedIn"
+                  href="https://www.linkedin.com/company/allogene-therapeutics/"
+                  class="menu-link"
+                  ><i
+                    class="fab fa-linkedin-in alg-tb-icon"
+                    aria-hidden="true"
+                  ></i
+                ></a>
+              </li>
+              <li
+                id="menu-item-147"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-147"
+              >
+                <a
+                  title="Twitter"
+                  href="https://twitter.com/AllogeneTx"
+                  class="menu-link"
+                >
+                  <font-awesome-icon
+                    class="footer-icon"
+                    size="lg"
+                    :icon="['fab', 'weixin']"
+                  />
+                  <!--                   
+                  <i class="fab fa-twitter alg-tb-icon" aria-hidden="true"></i
+                > -->
+                </a>
+              </li>
+              <li
+                id="menu-item-148"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-148"
+              >
+                <a title="Share" href="#" class="menu-link"
+                  ><span class="modal-61a916ebae560">Share</span></a
+                >
+              </li>
+              <li
+                id="menu-item-149"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-149"
+              >
+                <a
+                  title="Email Us"
+                  href="mailto://info@allogene.com"
+                  class="menu-link"
+                >
+                  <font-awesome-icon
+                    class="footer-icon"
+                    size="lg"
+                    :icon="['fab', 'linkedin']"
+                  />
+                  <!-- <i class="fal fa-envelope alg-tb-ifs" aria-hidden="true"></i
+                > -->
+                </a>
+              </li>
+              <li
+                id="menu-item-150"
+                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-150"
+              >
+                <a title="Print" href="#" class="menu-link">
+                  <font-awesome-icon
+                    class="footer-icon"
+                    size="lg"
+                    :icon="['fab', 'youtube']"
+                  />
+                  <!-- <i
+                    class="fal fa-print alg-tb-ifs allogene-print"
+                    aria-hidden="true"
+                  ></i
+                > -->
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- #top-bar-content -->
+      </div>
+      <!-- #top-bar-inner -->
+    </div>
+    <!-- #top-bar -->
+  </div>
+  <!-- :class="{ shadow: headerShadowActive }" -->
+  <div class="header">
     <div class="header_container">
       <div class="header_content">
         <div class="logo">
@@ -20,28 +137,34 @@
         <div class="menu-wrapper">
           <Fold
             class="hidden-md-only hidden-lg-only hidden-xl-only"
-            style="width: 1.5em; height: 1.5em; margin-right: 8px; color: #fff"
+            style="
+              width: 1.5em;
+              height: 1.5em;
+              margin-right: 8px;
+              color: #0e686f;
+            "
             @click="drawerMenu = true"
           />
           <el-menu
             :ellipsis="false"
             :default-active="activeIndex"
             mode="horizontal"
-            text-color="#fff"
+            text-color="#0e686f"
             router
             class="hidden-sm-and-down"
-            active-text-color="#87ffd9"
+            active-text-color="#bd242a"
             background-color="transparent"
             :popper-offset="0"
           >
+            <!-- popper-class="sub-popper" -->
             <el-menu-item index="/" class="menu-t1">Home</el-menu-item>
-            <el-sub-menu index="/about" popper-class="sub-popper">
+            <el-sub-menu index="/about">
               <template #title>
                 <div @click="router.push('/about')" class="menu-t1">
                   About Us
                 </div>
               </template>
-              <el-sub-menu index="/facilities" popper-class="sub-popper">
+              <el-sub-menu index="/facilities">
                 <template #title>
                   <div
                     @click="router.push('/facilities')"
@@ -64,18 +187,15 @@
             <el-menu-item index="/sys" class="menu-t1"
               >Laboratory Sciences</el-menu-item
             >
-            <el-sub-menu
-              index="/cdmo"
-              popper-class="sub-popper"
-              class="menu-t1"
-            >
+            <!-- popper-class="sub-popper" -->
+            <el-sub-menu index="/cdmo" class="menu-t1">
               <template #title>
                 <div @click="router.push('/cdmo')" class="menu-t1">
                   CDMO Solutions
                 </div>
               </template>
               <el-menu-item index="/process">Process Development</el-menu-item>
-              <el-sub-menu index="/cgmp" popper-class="sub-popper ">
+              <el-sub-menu index="/cgmp">
                 <template #title>
                   <div @click="router.push('/cgmp')">CGMP Manufacturing</div>
                 </template>
@@ -94,7 +214,7 @@
               >
             </el-sub-menu>
             <el-menu-item index="/cx" class="menu-t1">Innovations</el-menu-item>
-            <el-sub-menu index="/news" popper-class="sub-popper">
+            <el-sub-menu index="/news">
               <template #title>
                 <div @click="router.push('/news')" class="menu-t1">
                   Insights
@@ -118,9 +238,9 @@
             <el-menu-item @click="openUrl" class="menu-t1"
               >Investor Relations</el-menu-item
             >
-            <el-menu-item index="/contact" class="menu-t1"
+            <!-- <el-menu-item index="/contact" class="menu-t1"
               >Contact Us</el-menu-item
-            >
+            > -->
           </el-menu>
         </div>
       </div>
@@ -216,7 +336,7 @@
         <el-menu-item @click="openUrl" class="menu-t1"
           >Investor Relations</el-menu-item
         >
-        <el-menu-item index="/contact" class="menu-t1">Contact Us</el-menu-item>
+        <!-- <el-menu-item index="/contact" class="menu-t1">Contact Us</el-menu-item> -->
       </el-menu>
     </el-drawer>
   </div>
@@ -229,6 +349,10 @@ import { handleViteImages } from "@/utils";
 // import { mapState, useStore } from 'pinia'
 const props = defineProps({
   headerShadowActive: {
+    type: Boolean,
+    default: false,
+  },
+  shadowTop: {
     type: Boolean,
     default: false,
   },
@@ -323,7 +447,7 @@ h2 {
   transition: transform 0.2s ease;
 
   font-family: "puhuiti-2-55";
-
+  background: #fff;
   .header_container {
     height: 100%;
     padding-top: 10px;
@@ -407,5 +531,52 @@ h2 {
   .header_content {
     padding: 0 32px;
   }
+}
+#top-bar-wrap {
+  color: #fff;
+  border-color: #1f757b;
+  position: relative;
+  // background-color: #fff;
+  background-color: #1f757b;
+  font-size: 12px;
+  // border-bottom: 1px solid #f1f1f1;
+  z-index: 101;
+  #top-bar {
+    padding: 8px 0;
+    margin: auto;
+  }
+  #top-bar-inner {
+    position: relative;
+  }
+  #top-bar-content,
+  #top-bar-social-alt {
+    font-family: HCo Gotham Rounded Medium SSm;
+    font-size: 11px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+  .top-bar-right {
+    display: flex;
+    justify-content: end;
+  }
+  #top-bar-nav {
+    display: inline-block !important;
+  }
+  #top-bar-nav > ul > li {
+    display: inline-block;
+    float: none;
+    margin-right: 15px;
+  }
+  .dropdown-menu,
+  .dropdown-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+.el-menu--horizontal .el-menu-item:not(.is-disabled):focus,
+.el-menu--horizontal .el-menu-item:not(.is-disabled):hover {
+  background: #0e686f;
+  color: #fff;
 }
 </style>

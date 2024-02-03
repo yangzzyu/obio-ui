@@ -15,7 +15,7 @@
       :lg="20"
       :xl="22"
       style="margin: auto"
-      class="ub"
+      class="ub container"
     >
       <el-breadcrumb :separator-icon="ArrowRight">
         <el-breadcrumb-item

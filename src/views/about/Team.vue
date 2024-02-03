@@ -9,7 +9,15 @@
 <template>
   <div class="intelli-m">
     <div class="Intelli-M-wrap">
-      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
         <div class="text font-size20">
           <p>
             <span style="line-height: 2"

@@ -10,7 +10,15 @@
   <div class="cdmo">
     <Focus :focusObj="FocusData" />
     <div class="Innovations-wrap">
-      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
         <div class="list">
           <el-row class="item row">
             <el-col :xs="22" :sm="10" :md="10" :lg="8" :xl="6">

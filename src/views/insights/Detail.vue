@@ -10,7 +10,15 @@
   <Focus :focusObj="FocusData" />
   <Breadcrumb :matchedData="matchedData" />
   <!-- <router-view></router-view> -->
-  <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto">
+  <el-col
+    :xs="22"
+    :sm="20"
+    :md="20"
+    :lg="20"
+    :xl="22"
+    style="margin: auto"
+    class="container"
+  >
     <div class="pub-title pub-title-p ub ub-ver ub-pe">
       <i class="line"></i>
       <span class="fontf8 font-size30 font-color-ts">{{ newsItem.title }}</span>
