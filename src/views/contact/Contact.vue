@@ -18,6 +18,7 @@
           :lg="20"
           :xl="22"
           style="margin: auto"
+          class="container"
         >
           <div class="pub-title pub-title-p ub ub-ver ub-pe">
             <i class="line"></i>
@@ -29,139 +30,138 @@
             </div>
           </div>
           <div class="in-contact-form">
-              <el-col :span="24" :xs="24">
-                <el-form
-                  ref="ruleFormRef"
-                  :model="ruleForm"
-                  :rules="rules"
-                  label-width="180px"
-                  class="form-contact-main"
-                  :label-position="'top'"
-                  status-icon
-                >
-                  <el-row :gutter="20">
-                    <el-col :span="12" :xs="24">
-                      <el-form-item label="First Name" required>
-                        <el-input v-model="ruleForm.fname" />
-                      </el-form-item>
-                    </el-col>
-                    <el-col :span="12" :xs="24">
-                      <el-form-item label="Last Name" required>
-                        <el-input
-                          v-model="ruleForm.lname"
-                        /> </el-form-item></el-col
-                  ></el-row>
-                  <el-form-item label="Company" required>
-                    <el-input v-model="ruleForm.company" />
-                  </el-form-item>
-                  <el-row :gutter="20">
-                    <el-col :span="12" :xs="24">
-                      <el-form-item label="Email" required>
-                        <el-input v-model="ruleForm.email" /> </el-form-item
-                    ></el-col>
-                    <el-col :span="12" :xs="24">
-                      <el-form-item label="Phone Number" required>
-                        <el-input
-                          v-model="ruleForm.dh"
-                        /> </el-form-item></el-col
-                  ></el-row>
-                  <el-form-item label="I'm interested in…" required>
-                    <el-select v-model="ruleForm.xq" placeholder="">
-                      <el-option
-                        label="General Inquiry"
-                        value="General Inquiry"
-                      />
-                      <el-option
-                        label="Laboratory Sciences"
-                        value="Laboratory Sciences"
-                      />
-                      <el-option
-                        label="Process Development"
-                        value="Process Development"
-                      />
-                      <el-option
-                        label="Analytical/Formulation Development"
-                        value="Analytical/Formulation Development"
-                      />
-                      <el-option
-                        label="Non-IND (IIT) Service"
-                        value="Non-IND (IIT) Service"
-                      />
-                      <el-option
-                        label="IND-Enabling CMC (IND-CMC) Service"
-                        value="IND-Enabling CMC (IND-CMC) Service"
-                      />
-                      <el-option
-                        label="Clinical Manufacturing"
-                        value="Clinical Manufacturing"
-                      />
-                      <el-option
-                        label="Commercial Manufacturing"
-                        value="Commercial Manufacturing"
-                      />
-                      <el-option
-                        label="Extended Services (Pre-IND/Post-IND)"
-                        value="Extended Services (Pre-IND/Post-IND)"
-                      />
-                      <el-option
-                        label="Investor Relations"
-                        value="Investor Relations"
-                      />
-                    </el-select>
-                  </el-form-item>
-                  <el-form-item label="Questions or Comments" prop="content">
-                    <el-input v-model="ruleForm.content" type="textarea" />
-                  </el-form-item>
-                  <el-form-item label="Security Code" required>
-                    <el-col :span="11">
-                      <!-- <el-form-item> -->
-                      <el-input v-model="ruleForm.verify" />
-                      <!-- </el-form-item> -->
-                    </el-col>
-                    <el-col :span="11">
-                      <div class="put ub-f1" style="margin-left: 12px">
-                        <img
-                          class="verifyImg"
-                          alt="verifyImg"
-                          id="captcha"
-                          style="width: 150px; cursor: pointer; height: 38px"
-                        />
-                      </div>
-                    </el-col>
-                  </el-form-item>
-                  <el-form-item label="I AGREE" required>
-                    <div class="checks_text">
-                      <el-checkbox
-                        v-model="ruleForm.checked"
-                        size="large"
-                        class="checks_inpt"
-                      />
-                      <span
-                        >By submitting this form I agree that OBiO may process
-                        my data in the manner described in OBiO’s<a
-                          xhref="/cn/home/ys/cid/861"
-                          target="_blank"
-                          style="color: #25b096"
-                          >Privacy Policy</a
-                        ></span
-                      >
-                    </div>
-                  </el-form-item>
-                  <el-form-item label="">
-                    <div class="lab fontf3 font-size18">
-                      We won’t share your information.
-                    </div>
-                  </el-form-item>
-                  <div class="sub fontf3 font-size14">
-                    <input
-                      lay-submit=""
-                      lay-filter="dataPost"
-                      type="button"
-                      value="SUBMIT"
+            <el-col :span="24" :xs="24">
+              <el-form
+                ref="ruleFormRef"
+                :model="ruleForm"
+                :rules="rules"
+                label-width="180px"
+                class="form-contact-main"
+                :label-position="'top'"
+                status-icon
+              >
+                <el-row :gutter="20">
+                  <el-col :span="12" :xs="24">
+                    <el-form-item label="First Name" required>
+                      <el-input v-model="ruleForm.fname" />
+                    </el-form-item>
+                  </el-col>
+                  <el-col :span="12" :xs="24">
+                    <el-form-item label="Last Name" required>
+                      <el-input
+                        v-model="ruleForm.lname"
+                      /> </el-form-item></el-col
+                ></el-row>
+                <el-form-item label="Company" required>
+                  <el-input v-model="ruleForm.company" />
+                </el-form-item>
+                <el-row :gutter="20">
+                  <el-col :span="12" :xs="24">
+                    <el-form-item label="Email" required>
+                      <el-input v-model="ruleForm.email" /> </el-form-item
+                  ></el-col>
+                  <el-col :span="12" :xs="24">
+                    <el-form-item label="Phone Number" required>
+                      <el-input v-model="ruleForm.dh" /> </el-form-item></el-col
+                ></el-row>
+                <el-form-item label="I'm interested in…" required>
+                  <el-select v-model="ruleForm.xq" placeholder="">
+                    <el-option
+                      label="General Inquiry"
+                      value="General Inquiry"
                     />
+                    <el-option
+                      label="Laboratory Sciences"
+                      value="Laboratory Sciences"
+                    />
+                    <el-option
+                      label="Process Development"
+                      value="Process Development"
+                    />
+                    <el-option
+                      label="Analytical/Formulation Development"
+                      value="Analytical/Formulation Development"
+                    />
+                    <el-option
+                      label="Non-IND (IIT) Service"
+                      value="Non-IND (IIT) Service"
+                    />
+                    <el-option
+                      label="IND-Enabling CMC (IND-CMC) Service"
+                      value="IND-Enabling CMC (IND-CMC) Service"
+                    />
+                    <el-option
+                      label="Clinical Manufacturing"
+                      value="Clinical Manufacturing"
+                    />
+                    <el-option
+                      label="Commercial Manufacturing"
+                      value="Commercial Manufacturing"
+                    />
+                    <el-option
+                      label="Extended Services (Pre-IND/Post-IND)"
+                      value="Extended Services (Pre-IND/Post-IND)"
+                    />
+                    <el-option
+                      label="Investor Relations"
+                      value="Investor Relations"
+                    />
+                  </el-select>
+                </el-form-item>
+                <el-form-item label="Questions or Comments" prop="content">
+                  <el-input v-model="ruleForm.content" type="textarea" />
+                </el-form-item>
+                <el-form-item label="Security Code" required>
+                  <el-col :span="11">
+                    <!-- <el-form-item> -->
+                    <el-input v-model="ruleForm.verify" />
+                    <!-- </el-form-item> -->
+                  </el-col>
+                  <el-col :span="11">
+                    <div class="put ub-f1" style="margin-left: 12px">
+                      <img
+                        class="verifyImg"
+                        alt="verifyImg"
+                        id="captcha"
+                        src="@/assets/icons/captcha.png"
+                        style="width: 150px; cursor: pointer; height: 38px"
+                      />
+                    </div>
+                  </el-col>
+                </el-form-item>
+                <el-form-item label="I AGREE" required>
+                  <div class="checks_text">
+                    <el-checkbox
+                      v-model="ruleForm.checked"
+                      size="large"
+                      class="checks_inpt"
+                    />
+                    <span
+                      >By submitting this form I agree that OBiO may process my
+                      data in the manner described in OBiO’s<a
+                        xhref="/cn/home/ys/cid/861"
+                        target="_blank"
+                        style="color: #25b096"
+                        >Privacy Policy</a
+                      ></span
+                    >
                   </div>
-                </el-form>
-              </el-col>
+                </el-form-item>
+                <el-form-item label="">
+                  <div class="lab fontf3 font-size18">
+                    We won’t share your information.
+                  </div>
+                </el-form-item>
+                <div class="sub fontf3 font-size14">
+                  <input
+                    lay-submit=""
+                    lay-filter="dataPost"
+                    type="button"
+                    value="SUBMIT"
+                  />
+                </div>
+              </el-form>
+            </el-col>
           </div>
         </el-col>
       </div>
@@ -173,6 +173,7 @@
           :lg="20"
           :xl="22"
           style="margin: auto"
+          class="container"
         >
           <div class="list ub ub-ac ub-pj">
             <div class="item">

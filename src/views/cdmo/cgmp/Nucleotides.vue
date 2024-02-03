@@ -9,7 +9,15 @@
 <template>
   <div class="Viral-Vector-wrap">
     <div class="section-1" style="padding-top: 0">
-      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
         <div class="pub-title pub-title-p ub ub-ver ub-pe">
           <i class="line"></i>
           <span class="fontf8 font-size50"
@@ -36,6 +44,7 @@
               :key="k"
               class="item"
               :span="12"
+              :xs="22"
             >
               <div class="box">
                 <div class="num">

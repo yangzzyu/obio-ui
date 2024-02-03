@@ -451,7 +451,7 @@ world.</span>
 	<br>
 </p>
 <p class="MsoNormal" style="text-align:center;margin-left:0cm;">
-	<span style="font-size:16px;"></span><img src="/public/uploads/image/20231025/20231025110251_39104.jpg" alt=""> 
+	<span style="font-size:16px;"></span><img src="https://www.obio-tech.com/public/uploads/image/20231025/20231025110251_39104.jpg" alt=""> 
 </p>
 <p class="MsoNormal" style="text-align:justify;margin-left:0cm;">
 	<br>
