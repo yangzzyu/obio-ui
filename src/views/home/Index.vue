@@ -23,12 +23,13 @@ import TheWelcome from "../components/TheWelcome.vue";
       <div class="home-about-wrap animation-name: fadeInUp">
         <div class="home-about-content">
           <el-col
-            :xs="18"
+            :xs="22"
             :sm="20"
             :md="20"
             :lg="20"
             :xl="22"
             style="margin: auto"
+            class="container"
           >
             <div class="pub-title"><i class="line"></i></div>
             <div
@@ -44,15 +45,30 @@ import TheWelcome from "../components/TheWelcome.vue";
           </el-col>
         </div>
       </div>
-
-      <div class="home-offering-wrap">
+      <!-- <div class="home-about-wrap"> -->
+      <div class="Viral-Vector-wrap">
         <el-col
-          :xs="18"
+          :xs="22"
           :sm="20"
           :md="20"
           :lg="20"
           :xl="22"
           style="margin: auto"
+          class="container"
+        >
+          <ObioFooter :list="vectorFooterList" />
+        </el-col>
+      </div>
+      <!-- </div> -->
+      <div class="home-offering-wrap">
+        <el-col
+          :xs="22"
+          :sm="20"
+          :md="20"
+          :lg="20"
+          :xl="22"
+          style="margin: auto"
+          class="container"
         >
           <div class="pub-title style2 ub ub-ver ub-pe">
             <i class="line"></i
@@ -65,7 +81,7 @@ import TheWelcome from "../components/TheWelcome.vue";
           <el-row :gutter="0" class="list">
             <el-col
               class="item"
-              :xs="{ span: 12, push: 12 }"
+              :xs="{ span: 24, push: 0 }"
               :sm="{ span: 12, push: 16 }"
               :lg="{ span: 12, push: 12 }"
               :md="{ span: 10, push: 16 }"
@@ -76,7 +92,7 @@ import TheWelcome from "../components/TheWelcome.vue";
               >
                 <i class="bg"></i>
                 <div class="txt-con ub ub-ver ub-pc">
-                  <div class="title color1 font-size50 fontf7">
+                  <div class="title color1 font-size38 fontf7">
                     <router-link to="/cdmo">
                       CDMO <br />
                       Solutions</router-link
@@ -98,7 +114,7 @@ import TheWelcome from "../components/TheWelcome.vue";
             </el-col>
             <el-col
               class="item"
-              :xs="{ span: 12, pull: 12 }"
+              :xs="{ span: 24, pull: 0 }"
               :sm="{ span: 12, pull: 16 }"
               :lg="{ span: 12, pull: 12 }"
               :md="{ span: 10, pull: 12 }"
@@ -109,7 +125,7 @@ import TheWelcome from "../components/TheWelcome.vue";
               >
                 <i class="bg"></i>
                 <div class="txt-con ub ub-ver ub-pc">
-                  <div class="title color1 font-size50 fontf7">
+                  <div class="title color1 font-size38 fontf7">
                     <router-link to="/sys">
                       Laboratory <br />
                       Sciences</router-link
@@ -134,12 +150,13 @@ import TheWelcome from "../components/TheWelcome.vue";
       </div>
       <div class="home-facilities">
         <el-col
-          :xs="18"
+          :xs="22"
           :sm="20"
           :md="20"
           :lg="20"
           :xl="22"
           style="margin: auto"
+          class="container"
         >
           <div class="pub-title ub ub-ver ub-pe">
             <i class="line"></i
@@ -150,49 +167,55 @@ import TheWelcome from "../components/TheWelcome.vue";
             >
           </div>
           <div class="home-facilities-mob">
-            <div class="list ub ub-ac ub-pj" id="facilities">
-              <div
-                class="item wow fadeInUp animated"
-                style="visibility: visible; animation-name: fadeInUp"
-                v-for="(item, index) in homeFacilitiesData"
-                :key="index"
-                :class="activeIndex == index ? 'active animated' : 'animated'"
-                @mouseenter.stop="changeActive(index)"
-              >
-                <div class="img">
-                  <div class="img1">
-                    <img :src="item.imgUrl" :alt="item.title" />
-                  </div>
-                  <router-link :to="item.path" class="shaw">
-                    <img
-                      src="@/assets/icons/bg3.png"
-                      :style="{
-                        backgroundImage:
-                          'url(' + handleViteImages(item.bgUrl) + ')',
-                      }"
-                      class="shaw-bg"
-                      :alt="item.title"
-                    />
-                    <div class="txt">
-                      <div class="title fontf3 font-size30">
-                        {{ item.title }}
+            <div class="list ub-ac ub-pj" id="facilities">
+              <el-row>
+                <el-col
+                  :xs="24"
+                  :span="8"
+                  class="item wow fadeInUp animated"
+                  style="visibility: visible; animation-name: fadeInUp"
+                  v-for="(item, index) in homeFacilitiesData"
+                  :key="index"
+                  :class="activeIndex == index ? 'active animated' : 'animated'"
+                  @mouseenter.stop="changeActive(index)"
+                >
+                  <div>
+                    <div class="img">
+                      <div class="img1">
+                        <img :src="item.imgUrl" :alt="item.title" />
                       </div>
-                      <div class="line"></div>
-                      <div class="pm font-size20">
-                        <ul>
-                          <li v-for="(i, n) in item.pmText" :key="n">
-                            {{ i }}
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="m"><span class="m-a"></span></div>
+                      <router-link :to="item.path" class="shaw">
+                        <img
+                          src="@/assets/icons/bg3.png"
+                          :style="{
+                            backgroundImage:
+                              'url(' + handleViteImages(item.bgUrl) + ')',
+                          }"
+                          class="shaw-bg"
+                          :alt="item.title"
+                        />
+                        <div class="txt">
+                          <div class="title fontf3 font-size30">
+                            {{ item.title }}
+                          </div>
+                          <div class="line"></div>
+                          <div class="pm font-size20">
+                            <ul>
+                              <li v-for="(i, n) in item.pmText" :key="n">
+                                {{ i }}
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="m"><span class="m-a"></span></div>
+                        </div>
+                      </router-link>
                     </div>
-                  </router-link>
-                </div>
-                <div class="p font-size24 fontf3">
-                  {{ item.pTxt }}
-                </div>
-              </div>
+                    <div class="p font-size24 fontf3">
+                      {{ item.pTxt }}
+                    </div>
+                  </div>
+                </el-col>
+              </el-row>
             </div>
           </div>
         </el-col>
@@ -202,12 +225,13 @@ import TheWelcome from "../components/TheWelcome.vue";
         <div class="home-insights-wrap">
           <div class="bg2"></div>
           <el-col
-            :xs="18"
+            :xs="22"
             :sm="20"
             :md="20"
             :lg="20"
             :xl="22"
             style="margin: auto"
+            class="container"
           >
             <div class="pub-title style2 ub ub-ver ub-pe">
               <i class="line"></i
@@ -248,7 +272,9 @@ import TheWelcome from "../components/TheWelcome.vue";
                       :key="index"
                     >
                       <router-link
-                        :to="`/news-details/${InsightsType === 1 ? 'releases' : 'events'}/${item.id}`"
+                        :to="`/news-details/${
+                          InsightsType === 1 ? 'releases' : 'events'
+                        }/${item.id}`"
                         class="block"
                       >
                         <div class="time">{{ item.time }}</div>
@@ -299,12 +325,13 @@ import TheWelcome from "../components/TheWelcome.vue";
 
       <div class="home-contact">
         <el-col
-          :xs="18"
+          :xs="22"
           :sm="20"
           :md="20"
           :lg="20"
           :xl="22"
           style="margin: auto"
+          class="container"
         >
           <div class="pub-title ub ub-ver ub-pe">
             <i class="line"></i
@@ -322,12 +349,12 @@ import TheWelcome from "../components/TheWelcome.vue";
                 status-icon
               >
                 <el-row :gutter="20">
-                  <el-col :span="12">
+                  <el-col :span="12" :xs="24">
                     <el-form-item label="First Name" required>
                       <el-input v-model="ruleForm.fname" />
                     </el-form-item>
                   </el-col>
-                  <el-col :span="12">
+                  <el-col :span="12" :xs="24">
                     <el-form-item label="Last Name" required>
                       <el-input
                         v-model="ruleForm.lname"
@@ -337,11 +364,11 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <el-input v-model="ruleForm.company" />
                 </el-form-item>
                 <el-row :gutter="20">
-                  <el-col :span="12">
+                  <el-col :span="12" :xs="24">
                     <el-form-item label="Email" required>
                       <el-input v-model="ruleForm.email" /> </el-form-item
                   ></el-col>
-                  <el-col :span="12">
+                  <el-col :span="12" :xs="24">
                     <el-form-item label="Phone Number" required>
                       <el-input v-model="ruleForm.dh" /> </el-form-item></el-col
                 ></el-row>
@@ -403,6 +430,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                       <img
                         class="verifyImg"
                         id="captcha"
+                        src="@/assets/icons/captcha.png"
                         alt="verifyImg"
                         style="width: 150px; cursor: pointer; height: 38px"
                       />
@@ -416,15 +444,15 @@ import TheWelcome from "../components/TheWelcome.vue";
                       size="large"
                       class="checks_inpt"
                     />
-                    <span
-                      >By submitting this form I agree that OBiO may process my
+                    <div class="checks_txt">
+                      By submitting this form I agree that OBiO may process my
                       data in the manner described in OBiO’s<a
                         xhref="/cn/home/ys/cid/861"
                         target="_blank"
                         style="color: #25b096"
                         >Privacy Policy</a
-                      ></span
-                    >
+                      >
+                    </div>
                   </div>
                 </el-form-item>
                 <el-form-item label="">
@@ -495,6 +523,7 @@ import TheWelcome from "../components/TheWelcome.vue";
 import "wow.js/css/libs/animate.css";
 import WOW from "wow.js";
 import Banner from "@/components/Banner.vue";
+import ObioFooter from "@/components/ObioFooter.vue";
 import { homeFacilitiesData, insightsData } from "@/data/HomePage";
 import { handleViteImages, goRouter } from "@/utils";
 import { onMounted, onUnmounted, ref } from "vue";
@@ -518,6 +547,42 @@ function handleInsightsType(params) {
 }
 const ruleForm = ref<FormItem>({});
 const rules = ref([]);
+const vectorFooterList = ref([
+  {
+    bgUrl:
+      "https://www.obio-tech.com/public/uploads/20220327/3fe6acf22f4fcd938628771fdeabbef9.png",
+    txt: "10+ years of dedication to gene and cell therapy",
+  },
+  {
+    bgUrl:
+      "https://www.obio-tech.com/public/uploads/20220327/b7b2b3abc455d13f3a93c100cc0ae008.png",
+    txt: `Track record of 100 gene and cell therapy projects`,
+  },
+  {
+    bgUrl:
+      "https://www.obio-tech.com/public/uploads/20220327/28357454cd094b26b016a3fd15727a39.png",
+    txt: `Compliant manufacturing for successful initiation of
+                  multi-center clinical trials`,
+  },
+  {
+    bgUrl:
+      "https://www.obio-tech.com/public/uploads/20220327/e6bfcf1cb84b0254cea3aefadf2f1e5c.png",
+    txt: `Comprehensive quality system with regulatory compliant
+                  facilities`,
+  },
+  {
+    bgUrl:
+      "https://www.obio-tech.com/public/uploads/20220402/b31aa85b97d72ef8e77c7297b11d1867.png",
+    txt: `Sufficient capacity and state-of-the-art facilities for global
+                  manufacturing needs`,
+  },
+  {
+    bgUrl:
+      "https://www.obio-tech.com/public/uploads/20220327/71ad488b3a8b061d5bbbafebc1239290.png",
+    txt: `End-to-end professional project management for in-time
+                  supports and on-time delivery`,
+  },
+]);
 onMounted(() => {
   var wow = new WOW({
     boxClass: "wow",
@@ -563,5 +628,9 @@ function setBannerHeight() {
 .shaw-bg {
   background-repeat: no-repeat;
   background: no-repeat center/cover;
+}
+.home-facilities-mob .list .item {
+  display: flex;
+  justify-content: center;
 }
 </style>

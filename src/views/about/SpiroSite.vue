@@ -9,7 +9,15 @@
 <template>
   <div class="spiro-site">
     <div class="Intelli-M-wrap">
-      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
         <div class="pub-title pub-title-p ub ub-ver ub-pe">
           <i class="line"></i>
           <h1 class="fontf8 font-size50">Quality from Constant Innovations</h1>
@@ -29,6 +37,7 @@
           <el-row>
             <el-col
               :span="12"
+              :xs="22"
               v-for="(item, index) in InnovationsList"
               :key="index"
             >

@@ -8,13 +8,13 @@
 -->
 <template>
   <div class="section-3">
-    <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto">
-      <div class="pub-title pub-title-p ub ub-ver ub-pe">
+    <el-col :xs="22" :span="22" class="container">
+      <!-- <div class="pub-title pub-title-p ub ub-ver ub-pe">
         <i class="line"></i>
         <span class="fontf8 font-size50">Why OBiO?</span>
         <div class="p font-size18"></div>
-      </div>
-      <el-row class="list row" style="margin-top: 0">
+      </div> -->
+      <el-row class="list row">
         <el-col :sm="12" v-for="(i, k) in list" :key="k">
           <div class="boxs">
             <div class="ub ub-ac">

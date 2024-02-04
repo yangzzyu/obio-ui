@@ -18,6 +18,7 @@
           :lg="20"
           :xl="22"
           style="margin: auto"
+          class="container"
         >
           <div class="text font-size20 color666">
             <p>
@@ -41,6 +42,7 @@
           :lg="20"
           :xl="22"
           style="margin: auto"
+          class="container"
         >
           <div class="list">
             <el-row class="item row" :gutter="10">

@@ -9,7 +9,15 @@
 <template>
   <div class="process">
     <div class="Process-Development-wrap Quality-Regulatory-wrap">
-      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
         <div class="text font-size20 color666">
           <p>
             <span style="line-height: 2"

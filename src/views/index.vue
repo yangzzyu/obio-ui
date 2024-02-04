@@ -9,7 +9,10 @@
 <template>
   <el-container>
     <el-header class="index-header">
-      <AwHeader :headerShadowActive="headerShadowActive"></AwHeader
+      <AwHeader
+        :headerShadowActive="headerShadowActive"
+        :shadowTop="shadowTop"
+      ></AwHeader
     ></el-header>
     <el-main class="index-main"><router-view></router-view></el-main>
     <el-footer><AwFooter></AwFooter></el-footer>
@@ -30,11 +33,17 @@ onUnmounted(() => {
   window.removeEventListener("scroll", scrollHandle);
 });
 const headerShadowActive = ref(false);
+const shadowTop = ref(true);
 function scrollHandle() {
   scrollTop.value =
     document.documentElement.scrollTop ||
     window.pageYOffset ||
     document.body.scrollTop;
+  if (scrollTop.value <= 34) {
+    shadowTop.value = true;
+  } else {
+    shadowTop.value = false;
+  }
   if (scrollTop.value <= 300) {
     headerShadowActive.value = false;
   } else {

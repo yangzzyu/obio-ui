@@ -1,6 +1,6 @@
 <template>
   <div class="foot-wrap">
-    <el-col :xs="24" :sm="16" :md="18" :lg="20" :xl="22" style="margin: auto">
+    <el-col :xs="24" :sm="16" :md="18" :lg="20" :xl="22" style="margin: 0 15px">
       <el-row class="row">
         <el-col :sm="6" :xs="24" class="wow fadeInLeft animated">
           <div class="foot-log">

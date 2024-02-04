@@ -9,7 +9,15 @@
 <template>
   <div class="process">
     <div class="Process-Development-wrap">
-      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
         <div class="text font-size20 color666 cGMP-zIndex">
           <p>
             <span style="line-height: 2"
@@ -42,7 +50,94 @@
             <br />
           </p>
         </div>
-        <div class="cGMP-title-t2">
+        <div class="cGMP-main-tab cGMP-zIndex">
+          <div class="tcon ub ub-ac font-size24 fontf5">
+            <div
+              class="item ub ub-ac"
+              tabidb="cGMPTgroup1"
+              :class="activeProcessIndex == '1' ? 'active' : ''"
+              @mouseenter="activeProcessIndex = '1'"
+            >
+              <span class="ub-f1">Upstream Process</span>
+            </div>
+            <div class="line"></div>
+            <div
+              class="item ub ub-ac"
+              tabidb="cGMPTgroup2"
+              :class="activeProcessIndex == '2' ? 'active' : ''"
+              @mouseenter="activeProcessIndex = '2'"
+            >
+              <span class="ub-f1">Downstream Process</span>
+            </div>
+          </div>
+        </div>
+        <div class="cGMP-main-tab-group cGMP-zIndex">
+          <div
+            class="group"
+            v-for="(item, index) in tabsData"
+            :key="index"
+            v-show="activeProcessIndex === item.id"
+          >
+            <div class="cGMP-title-t2">
+              <div class="fontf7 font-size50 ct">
+                <span>{{ item.title }}</span>
+              </div>
+              <!-- <i class="bg"></i> -->
+            </div>
+            <div class="text font-size20 color666 cGMP-zIndex">
+              <p style="margin-bottom: 30px">
+                {{ item.pTxt }}
+              </p>
+              <el-row :gutter="20">
+                <el-col
+                  class="visible-xs-block"
+                  :span="12"
+                  :xs="22"
+                  :sm="22"
+                  :md="12"
+                  :lg="12"
+                  :xl="12"
+                >
+                  <img :src="item.imgUrl" alt="" srcset="" />
+                </el-col>
+                <el-col
+                  :span="12"
+                  :xs="22"
+                  :sm="22"
+                  :md="12"
+                  :lg="12"
+                  :xl="12"
+                  class="cGMP-Process"
+                >
+                  <div
+                    class="icon-list"
+                    v-for="(i, k) in item.iconList"
+                    :key="k"
+                  >
+                    <div class="icon-list-l">
+                      <img :src="i.imgUrl" alt="" srcset="" />
+                    </div>
+                    <p>
+                      {{ i.txt }}
+                    </p>
+                  </div>
+                </el-col>
+                <el-col
+                  class="hidden-xs"
+                  :span="12"
+                  :xs="22"
+                  :sm="22"
+                  :md="12"
+                  :lg="12"
+                  :xl="12"
+                >
+                  <img :src="item.imgUrl" alt="" srcset="" />
+                </el-col>
+              </el-row>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="cGMP-title-t2">
           <div class="fontf7 font-size50 ct"><span>Upstream Process</span></div>
           <i class="bg"></i>
         </div>
@@ -139,7 +234,7 @@
               </div>
             </el-col>
           </el-row>
-        </div>
+        </div> -->
         <div class="cGMP-title-t2">
           <div class="fontf7 font-size50 ct">
             <span>Analytical Development</span>
@@ -457,6 +552,82 @@ const vectorList = ref([
     bgUrl:
       "https://www.obio-tech.com/public/uploads/20220327/71ad488b3a8b061d5bbbafebc1239290.png",
     txt: `End-to-end regulatory support with side-by-side navigation`,
+  },
+]);
+const activeProcessIndex = ref("1");
+const tabsData = ref([
+  {
+    id: "1",
+    title: "Upstream Process",
+    pTxt: ` Our versatile upstream process platform covers adherent and
+                suspension cell culture technologies, large-scale transient
+                transfection, and serum-free cell culture, fulfilling your
+                differentiated upstream process development demands for gene and
+                cell therapy products.`,
+    imgUrl: handleViteImages("@/assets/icons/upstream_img.png"),
+    iconList: [
+      {
+        imgUrl: handleViteImages("@/assets/icons/process_icon1.png"),
+        txt: `Adherent cell culture: cell factories, microcarriers, fixed bed bioreactor, and roller bottles`,
+      },
+      {
+        imgUrl: handleViteImages("@/assets/icons/process_icon2.png"),
+        txt: `Serum-free suspension cell culture technologies with improved yield for adenovirus, adeno-associated virus, and lentivirus products`,
+      },
+      {
+        imgUrl: handleViteImages("@/assets/icons/process_icon3.png"),
+        txt: `Transient transfection at large-scale: 200 L suspension culture and 600㎡ fixed bed culture`,
+      },
+      {
+        imgUrl: handleViteImages("@/assets/icons/process_icon4.png"),
+        txt: `	
+Cell line development: 293 producer cell line (293A, 293T, and HEK293), Vero, Hela, CHO, A549, and Sf9`,
+      },
+      {
+        imgUrl: handleViteImages("@/assets/icons/process_icon5.png"),
+        txt: `High-yield cell line domestication based on HEK293, with a 30% yield improvement than commercial HEK293. Further cell line development is still in process`,
+      },
+    ],
+  },
+  {
+    id: "2",
+    title: "Downstream Process",
+    pTxt: `At OBiO, our downstream process platform includes chromatography and
+            ultrafiltration technologies. We have established a downstream
+            process platform for a convenient large-scale purification and
+            process scale-up with a wide spectrum of technologies including
+            ion-exchange chromatography, hydrophobic interaction chromatography,
+            affinity chromatography, molecular exclusion chromatography and
+            crossflow ultrafiltration. With the integrated downstream process
+            platform, we offer a high throughput, high yield purification
+            process with high quality standard for your gene and cell therapy
+            product.`,
+    imgUrl: handleViteImages("@/assets/icons/downstream_img.png"),
+    iconList: [
+      {
+        imgUrl: handleViteImages("@/assets/icons/downstream_icon1.png"),
+        txt: `
+    Harvest Process: cell lysis, clarification, and filtration`,
+      },
+      {
+        imgUrl: handleViteImages("@/assets/icons/downstream_icon2.png"),
+        txt: `Column Chromatography: affinity chromatography, gel filtration chromatography, ion-exchange chromatography, mixed-mode chromatography`,
+      },
+      {
+        imgUrl: handleViteImages("@/assets/icons/downstream_icon3.png"),
+        txt: `	
+Tangential Flow Filtration: flat sheet membrane cassette, hollow fibers`,
+      },
+      {
+        imgUrl: handleViteImages("@/assets/icons/downstream_icon4.png"),
+        txt: `
+    Linear Scale-up of Purification Process`,
+      },
+      {
+        imgUrl: handleViteImages("@/assets/icons/downstream_icon5.png"),
+        txt: `Product Formulation Development`,
+      },
+    ],
   },
 ]);
 </script>
