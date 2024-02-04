@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-22 21:59:54
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-27 14:36:30
+ * @LastEditTime: 2024-02-04 09:11:36
  * @FilePath: \obio-ui\src\components\Header.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -130,7 +130,7 @@
         <div class="logo">
           <router-link to="/">
             <!-- <img :src="logo_img[0].path" alt="logo" v-if="headerLogoShow" /> -->
-            <img :src="logo_img[1].path" alt="logo" />
+            <img src="@/assets/icons/logo2.png" alt="logo" />
           </router-link>
         </div>
 
