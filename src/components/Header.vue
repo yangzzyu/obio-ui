@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-22 21:59:54
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-02-04 13:44:37
+ * @LastEditTime: 2024-02-06 10:39:04
  * @FilePath: \obio-ui\src\components\Header.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -157,8 +157,14 @@
             :popper-offset="0"
           >
             <!-- popper-class="sub-popper" -->
-            <el-menu-item index="/" class="menu-t1">Home</el-menu-item>
-            <el-sub-menu index="/about">
+            <el-menu-item index="/home" class="menu-t1">Home</el-menu-item>
+            <el-sub-menu
+              index="/about"
+              :class="{
+                'is-active': ['/about', '/facilities'].includes(activeIndex),
+              }"
+              popper-class="sub-popper"
+            >
               <template #title>
                 <div @click="router.push('/about')" class="menu-t1">
                   About Us
@@ -188,7 +194,14 @@
               >Laboratory Sciences</el-menu-item
             >
             <!-- popper-class="sub-popper" -->
-            <el-sub-menu index="/cdmo" class="menu-t1">
+            <el-sub-menu
+              index="/cdmo"
+              class="menu-t1"
+              popper-class="sub-popper"
+              :class="{
+                'is-active': ['/cdmo', '/cgmp'].includes(activeIndex),
+              }"
+            >
               <template #title>
                 <div @click="router.push('/cdmo')" class="menu-t1">
                   CDMO Solutions
@@ -214,7 +227,13 @@
               >
             </el-sub-menu>
             <el-menu-item index="/cx" class="menu-t1">Innovations</el-menu-item>
-            <el-sub-menu index="/news">
+            <el-sub-menu
+              index="/news"
+              popper-class="sub-popper"
+              :class="{
+                'is-active': ['/news'].includes(activeIndex),
+              }"
+            >
               <template #title>
                 <div @click="router.push('/news')" class="menu-t1">
                   Insights
@@ -407,15 +426,27 @@ onBeforeMount(() => {});
   }
 }
 .sub-popper {
-  border-top: 3px solid #0093dd;
+  // border-top: 3px solid #0093dd;
   .el-sub-menu__title,
   .el-menu-item {
-    color: #000 !important;
+    font-size: 20px;
+    // color: #000 !important;
+    &:not(.is-disabled):focus,
+    &:not(.is-disabled):hover {
+      background: #0e686f;
+      color: #fff;
+    }
   }
 }
-// .menu-t1 {
-//   font-size: 1.1vw;
-// }
+.menu-t1 {
+  // font-size: 1.1vw;
+  font-size: 20px;
+  &:not(.is-disabled):focus,
+  &:not(.is-disabled):hover {
+    background: transparent !important;
+    // color: #fff;
+  }
+}
 // .menu-drawer {
 //   .menu-t1 {
 //     font-size: 18px;
@@ -551,7 +582,7 @@ h2 {
   #top-bar-content,
   #top-bar-social-alt {
     font-family: HCo Gotham Rounded Medium SSm;
-    font-size: 11px;
+    font-size: 14px;
     letter-spacing: 0.6px;
     text-transform: uppercase;
   }
@@ -573,10 +604,5 @@ h2 {
     padding: 0;
     list-style: none;
   }
-}
-.el-menu--horizontal .el-menu-item:not(.is-disabled):focus,
-.el-menu--horizontal .el-menu-item:not(.is-disabled):hover {
-  background: #0e686f;
-  color: #fff;
 }
 </style>
