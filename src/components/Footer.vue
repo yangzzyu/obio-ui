@@ -54,24 +54,24 @@
         >
         <el-col :sm="6" :xs="24" class="wow fadeInRight animated">
           <div class="foot-link ub">
-            <a href="https://www.linkedin.com/company/obiosh">
+            <a href="https://www.youtube.com/@obiotechnology">
               <font-awesome-icon
                 class="footer-icon"
                 size="lg"
-                :icon="['fab', 'weixin']"
+                :icon="['fab', 'Youtube']"
               />
             </a>
-            <a href="https://www.youtube.com/channel/UCFBQ9g386UNn_WluHw_GdOg">
+            <a href="https://www.linkedin.com/company/41870372">
               <font-awesome-icon
                 class="footer-icon"
                 size="lg"
                 :icon="['fab', 'linkedin']"
             /></a>
-            <a href="https://mp.weixin.qq.com/s/SeARdjD_mAN8Uft4hBwQgg">
+            <a href="https://www.facebook.com/profile.php?id=61555811491695">
               <font-awesome-icon
                 class="footer-icon"
                 size="lg"
-                :icon="['fab', 'youtube']"
+                :icon="['fab', 'Facebook']"
             /></a>
           </div>
           <!-- <div class="foot-link ub">
@@ -95,7 +95,8 @@
       </el-row>
     </el-col>
     <div class="icp">
-      © 2023 OBiO Technology (Shanghai) Corp., Ltd. All Rights Reserved
+      <!-- © 2023 OBiO Technology (Shanghai) Corp., Ltd. All Rights Reserved -->
+      7133 Koll Center Parkway, Suite 200, Pleasanton, CA 94566
     </div>
   </div>
 </template>
