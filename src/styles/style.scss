@@ -1432,6 +1432,12 @@ a:focus {
   position: relative;
   max-width: 90px;
 }
+.service--box_link:hover .service--box .service--box_icon .icon--white {
+  display: block;
+}
+.service--box_link:hover .service--box .service--box_icon .icon--colour {
+  display: none;
+}
 .service--box_link .service--box .service--box_icon .icon--white {
   display: none;
   transition: color 0.3s ease-in-out;
