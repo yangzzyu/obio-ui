@@ -8,7 +8,7 @@
 -->
 <template>
   <div class="section-3">
-    <el-col :xs="22" :span="22" class="container">
+    <el-col :xs="22" :span="22" class="container" style="margin: auto">
       <!-- <div class="pub-title pub-title-p ub ub-ver ub-pe">
         <i class="line"></i>
         <span class="fontf8 font-size50">Why OBiO?</span>

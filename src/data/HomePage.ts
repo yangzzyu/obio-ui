@@ -77,7 +77,7 @@ export const homeFacilitiesData = ref<FacilitiesDataItem[]>([
     pTxt: "Lin-Gang Free-Trade Zone Shanghai, China",
     imgUrl: handleViteImages("@/assets/icons/facilities_img2.jpg"),
     bgUrl: "./assets/icons/facilities_bg2.png",
-    path: "/pineSite",
+    path: "/intelliM",
   },
   {
     title: "PINE Site",
@@ -89,7 +89,7 @@ export const homeFacilitiesData = ref<FacilitiesDataItem[]>([
     pTxt: "International Medical Park Shanghai, China",
     imgUrl: handleViteImages("@/assets/icons/facilities_img3.jpg"),
     bgUrl: "./assets/icons/facilities_bg3.png",
-    path: "/intelliM",
+    path: "/pineSite",
   },
 ]);
 
