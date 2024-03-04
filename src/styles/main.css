@@ -1,7 +1,8 @@
 @import "./base.scss";
-@import "./style.css";
+@import "./style.scss";
 @import "./gird.scss";
 @import "./public.css";
+/* @import "./layout.css"; */
 
 #app {
   /* max-width: 1280px;

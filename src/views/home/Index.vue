@@ -46,7 +46,268 @@ import TheWelcome from "../components/TheWelcome.vue";
         </div>
       </div>
       <!-- <div class="home-about-wrap"> -->
-      <div class="Viral-Vector-wrap">
+      <div class="in-about-wrap">
+        <div class="section-3">
+          <el-col
+            :xs="22"
+            :sm="20"
+            :md="20"
+            :lg="20"
+            :xl="22"
+            style="margin: auto"
+            class="container"
+          >
+            <div class="fac-con">
+              <el-row class="row" :gutter="10">
+                <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
+                  <router-link to="/spiroSite" class="block tans">
+                    <div class="animate-imgxx uof img">
+                      <img
+                        src="https://www.obio-tech.com/public/uploads/20220330/0b0fe1e2c354c50f919655666ccfd951.jpg"
+                        alt="SPIRO Site"
+                      />
+                    </div>
+                  </router-link>
+                  <div class="font-size24 fontf7 iti">
+                    Lin-Gang Free-Trade ZoneShanghai, China
+                  </div>
+                  <div class="font-size38 fontf7 iti">OBlO Intelli-M</div>
+                  <p>
+                    Process Development CharacterizationClinical and Commercial
+                    Manufacturing77,000-square-meter Facility for Global Supply
+                  </p>
+                  <router-link to="/spiroSite" class="read-more font-size28"
+                    >Read more</router-link
+                  >
+                </el-col>
+                <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
+                  <router-link to="/pineSite" class="block tans">
+                    <div class="animate-imgxx uof img">
+                      <img
+                        src="https://www.obio-tech.com/public/uploads/20231212/55a4fdd1f7a358da8a3de3e938f99114.jpg"
+                        alt="PINE Site"
+                      />
+                    </div>
+                  </router-link>
+                  <div class="font-size24 fontf7 iti">
+                    International Medical ParkShanghai, China
+                  </div>
+                  <div class="font-size38 fontf7 iti">SPIRO Site</div>
+
+                  <p>
+                    Integrated Laboratory Services Processand Analytical Method
+                    DevelopmentResearch and Development Center
+                  </p>
+                  <router-link to="/pineSite" class="read-more font-size28"
+                    >Read more</router-link
+                  >
+                </el-col>
+                <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
+                  <router-link to="/intelliM" class="block tans">
+                    <div class="animate-imgxx uof img">
+                      <img
+                        src="https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg"
+                        alt="OBiO Intelli-M"
+                      />
+                    </div>
+                  </router-link>
+                  <div class="font-size24 fontf7 iti">
+                    International Medical ParkShanghai, China
+                  </div>
+                  <div class="font-size38 fontf7 iti">PINE Site</div>
+                  <p>
+                    Process and Analytical MethodDevelopment Pre-clinical and
+                    ClinicalManufacturing Three-building,10,000-square-meter
+                    campus
+                  </p>
+                  <router-link to="/intelliM" class="read-more font-size28"
+                    >Read more</router-link
+                  >
+                </el-col>
+              </el-row>
+            </div></el-col
+          >
+        </div>
+      </div>
+      <section id="callout" class="">
+        <el-col
+          :xs="22"
+          :sm="20"
+          :md="20"
+          :lg="20"
+          :xl="22"
+          style="margin: auto"
+          class="container"
+        >
+          <p class="p-title font-size50">CDMO Service</p>
+          <el-row class="image--callout">
+            <el-col :span="8" :xs="24" class="visible-xs-block">
+              <div
+                class="image--callout_image"
+                style="
+                  background-image: url(https://www.genezen.com/wp-content/uploads/2021/07/AdobeStock_76101021.jpg);
+                "
+              ></div>
+            </el-col>
+            <el-col
+              :span="16"
+              :xs="24"
+              class="cdmo-txt bg-pinkbluelfr font-size20"
+              >We provide comprehensive CDMO services encompassing
+              processdevelopment, analytical methods, IND-enabling CMc
+              (Chemistry,Manufacturing, and Controls), as well as clinical and
+              commercialmanufacturing for viral vector, oncolytic virus, and
+              cell therapyproducts. Our expertise extends to offering holistic
+              solutionstailored to support the industrialization and
+              commercializationof various products at the Pre-lND stage and
+              beyond.</el-col
+            >
+            <el-col :span="8" :xs="24" class="hidden-xs">
+              <div
+                class="image--callout_image"
+                style="
+                  background-image: url(https://www.genezen.com/wp-content/uploads/2021/07/AdobeStock_76101021.jpg);
+                "
+              ></div>
+            </el-col>
+          </el-row>
+
+          <el-row class="news--slider row" :gutter="10">
+            <el-col :xs="24" :span="6">
+              <router-link
+                to="/spiroSite"
+                class="block tans service--box_link bg-pinkbluelfr"
+              >
+                <div class="service--box align-items-start">
+                  <div class="service--box_icon mb-3 min-width-70">
+                    <!-- <img
+                      class="icon--white"
+                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
+                      alt="GMP Vector Manufacturing icon"
+                    />
+                    <img
+                      class="icon--colour"
+                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
+                      alt="GMP Vector Manufacturing icon"
+                    /> -->
+                  </div>
+                  <h2 class="font-bold p-large mb-3">
+                    GMP Vector Manufacturing
+                  </h2>
+                  <p class="mb-3 p-med matchHeight" style="height: 209px">
+                    Unique expertise in GMP lentiviral and retroviral vector
+                    manufacturing, paired with a new state-of-the-art facility,
+                    we have the capacity and know-how to support your
+                    manufacturing needs.
+                  </p>
+                  <span class="mt-auto flex-shrink-0 btn--underline"
+                    >Read more</span
+                  >
+                </div>
+              </router-link>
+            </el-col>
+            <el-col :xs="24" :span="6">
+              <router-link
+                to="/spiroSite"
+                class="block tans service--box_link bg-pinkbluelfr"
+              >
+                <div class="service--box align-items-start">
+                  <div class="service--box_icon mb-3 min-width-70">
+                    <!-- <img
+                      class="icon--white"
+                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
+                      alt="GMP Vector Manufacturing icon"
+                    />
+                    <img
+                      class="icon--colour"
+                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
+                      alt="GMP Vector Manufacturing icon"
+                    /> -->
+                  </div>
+                  <h2 class="font-bold p-large mb-3">
+                    GMP Vector Manufacturing
+                  </h2>
+                  <p class="mb-3 p-med matchHeight" style="height: 209px">
+                    Unique expertise in GMP lentiviral and retroviral vector
+                    manufacturing, paired with a new state-of-the-art facility,
+                    we have the capacity and know-how to support your
+                    manufacturing needs.
+                  </p>
+                  <span class="mt-auto flex-shrink-0 btn--underline"
+                    >Read more</span
+                  >
+                </div>
+              </router-link>
+            </el-col>
+            <el-col :xs="24" :span="6">
+              <router-link
+                to="/spiroSite"
+                class="block tans service--box_link bg-pinkbluelfr"
+              >
+                <div class="service--box align-items-start">
+                  <div class="service--box_icon mb-3 min-width-70">
+                    <!-- <img
+                      class="icon--white"
+                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
+                      alt="GMP Vector Manufacturing icon"
+                    />
+                    <img
+                      class="icon--colour"
+                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
+                      alt="GMP Vector Manufacturing icon"
+                    /> -->
+                  </div>
+                  <h2 class="font-bold p-large mb-3">
+                    GMP Vector Manufacturing
+                  </h2>
+                  <p class="mb-3 p-med matchHeight" style="height: 209px">
+                    Unique expertise in GMP lentiviral and retroviral vector
+                    manufacturing, paired with a new state-of-the-art facility,
+                    we have the capacity and know-how to support your
+                    manufacturing needs.
+                  </p>
+                  <span class="mt-auto flex-shrink-0 btn--underline"
+                    >Read more</span
+                  >
+                </div>
+              </router-link>
+            </el-col>
+            <el-col :xs="24" :span="6">
+              <router-link
+                to="/spiroSite"
+                class="block tans service--box_link bg-pinkbluelfr"
+              >
+                <div class="service--box align-items-start">
+                  <div class="service--box_icon mb-3 min-width-70">
+                    <img
+                      class="icon--white"
+                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
+                      alt="GMP Vector Manufacturing icon"
+                    />
+                    <img
+                      class="icon--colour"
+                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
+                      alt="GMP Vector Manufacturing icon"
+                    />
+                  </div>
+                  <h2 class="font-bold p-large mb-3">Viral Vectors AAV:</h2>
+                  <p class="mb-3 p-med matchHeight" style="height: 209px">
+                    Unique expertise in GMP lentiviral and retroviral vector
+                    manufacturing, paired with a new state-of-the-art facility,
+                    we have the capacity and know-how to support your
+                    manufacturing needs.
+                  </p>
+                  <span class="mt-auto flex-shrink-0 btn--underline"
+                    >Read more</span
+                  >
+                </div>
+              </router-link>
+            </el-col>
+          </el-row>
+        </el-col>
+      </section>
+
+      <!-- <div class="Viral-Vector-wrap">
         <el-col
           :xs="22"
           :sm="20"
@@ -58,7 +319,7 @@ import TheWelcome from "../components/TheWelcome.vue";
         >
           <ObioFooter :list="vectorFooterList" />
         </el-col>
-      </div>
+      </div> -->
       <!-- </div> -->
       <div class="home-offering-wrap">
         <el-col
@@ -633,4 +894,23 @@ function setBannerHeight() {
   display: flex;
   justify-content: center;
 }
+// .image--callout_image {
+//   // position: absolute;
+//   // top: 0;
+//   // right: 0;
+//   // bottom: 0;
+//   // left: 0;
+//   height: 100%;
+// }
+// .p-lg-3 {
+//   padding: 1.5rem;
+// }
+// .p-md-5 {
+//   padding: 4.5rem;
+// }
+// .order-md-1 {
+// }
+// .bg-pinkbluelfr {
+//   background: linear-gradient(50deg, #014c97 0, #00818b 66%);
+// }
 </style>

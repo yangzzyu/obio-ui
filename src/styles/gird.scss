@@ -163,6 +163,7 @@
     width: 100%;
     overflow-x: auto;
   }
+
   .home-facilities-mob .list {
     // width: 200%;
     padding: 70px 0 50px;
@@ -861,6 +862,17 @@
   padding-top: 20px;
 }
 @media (min-width: 768px) {
+  .image--callout {
+    border-radius: 30px;
+  }
+  .image--callout .image--callout_image {
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    // left: 0;
+    height: 100%;
+  }
   .header__navigation .header__navigation-container {
     max-width: 40em;
     width: 50%;
