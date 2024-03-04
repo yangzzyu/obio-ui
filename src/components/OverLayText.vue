@@ -10,10 +10,18 @@
   <div class="overlay">
     <div class="overlay-content">
       <div class="slogan sofiaBold">
-        <div class="slogan-title p1 wowx animated fontf8 fadeInDown">{{ itemData.title }}</div>
+        <div class="slogan-title p1 wowx animated fontf8 fadeInDown">
+          {{ itemData.title }}
+        </div>
         <div class="slogan-subtitle p2 wowx animated fontf4 fadeInDown">
           {{ itemData.content }}
         </div>
+      </div>
+      <div class="slogan-txt font-size24">{{ itemData.text }}</div>
+      <h1 class="btn-content">Mission:</h1>
+      <div class="btn title-color">
+        <div class="btn-i">Our Solutions</div>
+        <div class="btn-i">Our Commitment</div>
       </div>
     </div>
   </div>
@@ -30,36 +38,43 @@ const props = defineProps({
 .overlay {
   position: absolute;
   width: 80%;
-  height: 80%;
+  // height: 80%;
   top: 10%;
-  left: 10%;
+  left: 5%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: center;
   justify-content: center;
-  text-align: center;
+  // text-align: center;
   cursor: default;
+  padding-right: 20px;
 
   //background: rgba(51,112,255,.2);
   .slogan {
-    font-size: 54px;
-    line-height: 61px;
-    color: #fff;
+    font-size: 34px;
+    // line-height: 61px;
+    color: #00ffea;
     margin-bottom: 67px;
-    letter-spacing: 1px;
+    // letter-spacing: 1px;
     font-weight: 800;
+    text-align: start;
+    line-height: 1em;
 
     .slogan-subtitle {
       //   letter-spacing: 16px;
       //   text-indent: 16px;
-      font-size: 14px;
-      line-height: 17px;
+      // font-size: 14px;
+      // line-height: 17px;
+      line-height: 1em;
       opacity: 0.8;
       margin-top: 14px;
       position: relative;
     }
+  }
+  .slogan-txt {
+    color: #fff;
   }
 }
 
@@ -78,6 +93,30 @@ const props = defineProps({
 //     hsla(0, 0%, 100%, 0)
 //   );
 // }
+.btn-content {
+  color: #fff;
+}
+.btn {
+  display: flex;
+  position: relative;
+  width: 260px;
+  .btn-i {
+    background: #fff;
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 999999;
+    &:nth-child(2) {
+      margin-left: 30px;
+      right: 0;
+    }
+  }
+  .btn-i:hover {
+    background: linear-gradient(50deg, #014c97 0, #00818b 66%);
+    color: #fff;
+  }
+}
 
 .slogan .slogan-subtitle:before {
   left: -50px;

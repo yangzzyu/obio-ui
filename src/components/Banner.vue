@@ -8,7 +8,7 @@
 -->
 <template>
   <section id="Hero-Slider" class="custom--form">
-    <div class="container">
+    <div class="container" style="margin: auto">
       <div class="row justify-content-center">
         <div class="Limit">
           <div class="pub-ico leftArrow" @click="arrowClick('left')"></div>
@@ -18,7 +18,7 @@
             :interval="5000"
             arrow="never"
             :height="600 + 'px'"
-            :autoplay="true"
+            :autoplay="false"
             trigger="click"
             indicator-position="none"
             @change="carouselChange"
@@ -95,7 +95,7 @@ onBeforeMount(() => {});
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  bottom: 10vh;
+  bottom: 15vh;
   z-index: 9999;
   cursor: pointer;
 }
@@ -177,6 +177,7 @@ onBeforeMount(() => {});
 }
 .Limit {
   width: 100%;
+  position: relative;
 }
 .custom--form {
   //   background-image: url(../../_dist/images/icons/carousel_bg.png);

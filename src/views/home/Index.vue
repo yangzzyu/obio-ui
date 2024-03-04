@@ -20,7 +20,7 @@ import TheWelcome from "../components/TheWelcome.vue";
   <div class="index">
     <div class="banner-wrap">
       <Banner :banner-height="BannerHeight"></Banner>
-      <div class="home-about-wrap animation-name: fadeInUp">
+      <!-- <div class="home-about-wrap animation-name: fadeInUp">
         <div class="home-about-content">
           <el-col
             :xs="22"
@@ -44,7 +44,7 @@ import TheWelcome from "../components/TheWelcome.vue";
             </div>
           </el-col>
         </div>
-      </div>
+      </div> -->
       <!-- <div class="home-about-wrap"> -->
       <div class="in-about-wrap">
         <div class="section-3">
@@ -57,6 +57,9 @@ import TheWelcome from "../components/TheWelcome.vue";
             style="margin: auto"
             class="container"
           >
+            <h1 class="title-color our-txt font-size50 txt-bold">
+              Our Solutions Manufacturing
+            </h1>
             <div class="fac-con">
               <el-row class="row" :gutter="10">
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
@@ -139,7 +142,7 @@ import TheWelcome from "../components/TheWelcome.vue";
           style="margin: auto"
           class="container"
         >
-          <p class="p-title font-size50">CDMO Service</p>
+          <h1 class="p-title font-size50 txt-bold">CDMO Service</h1>
           <el-row class="image--callout">
             <el-col :span="8" :xs="24" class="visible-xs-block">
               <div
@@ -173,106 +176,13 @@ import TheWelcome from "../components/TheWelcome.vue";
           </el-row>
 
           <el-row class="news--slider row" :gutter="10">
-            <el-col :xs="24" :span="6">
-              <router-link
-                to="/spiroSite"
-                class="block tans service--box_link bg-pinkbluelfr"
-              >
-                <div class="service--box align-items-start">
-                  <div class="service--box_icon mb-3 min-width-70">
-                    <!-- <img
-                      class="icon--white"
-                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
-                      alt="GMP Vector Manufacturing icon"
-                    />
-                    <img
-                      class="icon--colour"
-                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
-                      alt="GMP Vector Manufacturing icon"
-                    /> -->
-                  </div>
-                  <h2 class="font-bold p-large mb-3">
-                    GMP Vector Manufacturing
-                  </h2>
-                  <p class="mb-3 p-med matchHeight" style="height: 209px">
-                    Unique expertise in GMP lentiviral and retroviral vector
-                    manufacturing, paired with a new state-of-the-art facility,
-                    we have the capacity and know-how to support your
-                    manufacturing needs.
-                  </p>
-                  <span class="mt-auto flex-shrink-0 btn--underline"
-                    >Read more</span
-                  >
-                </div>
-              </router-link>
-            </el-col>
-            <el-col :xs="24" :span="6">
-              <router-link
-                to="/spiroSite"
-                class="block tans service--box_link bg-pinkbluelfr"
-              >
-                <div class="service--box align-items-start">
-                  <div class="service--box_icon mb-3 min-width-70">
-                    <!-- <img
-                      class="icon--white"
-                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
-                      alt="GMP Vector Manufacturing icon"
-                    />
-                    <img
-                      class="icon--colour"
-                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
-                      alt="GMP Vector Manufacturing icon"
-                    /> -->
-                  </div>
-                  <h2 class="font-bold p-large mb-3">
-                    GMP Vector Manufacturing
-                  </h2>
-                  <p class="mb-3 p-med matchHeight" style="height: 209px">
-                    Unique expertise in GMP lentiviral and retroviral vector
-                    manufacturing, paired with a new state-of-the-art facility,
-                    we have the capacity and know-how to support your
-                    manufacturing needs.
-                  </p>
-                  <span class="mt-auto flex-shrink-0 btn--underline"
-                    >Read more</span
-                  >
-                </div>
-              </router-link>
-            </el-col>
-            <el-col :xs="24" :span="6">
-              <router-link
-                to="/spiroSite"
-                class="block tans service--box_link bg-pinkbluelfr"
-              >
-                <div class="service--box align-items-start">
-                  <div class="service--box_icon mb-3 min-width-70">
-                    <!-- <img
-                      class="icon--white"
-                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
-                      alt="GMP Vector Manufacturing icon"
-                    />
-                    <img
-                      class="icon--colour"
-                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
-                      alt="GMP Vector Manufacturing icon"
-                    /> -->
-                  </div>
-                  <h2 class="font-bold p-large mb-3">
-                    GMP Vector Manufacturing
-                  </h2>
-                  <p class="mb-3 p-med matchHeight" style="height: 209px">
-                    Unique expertise in GMP lentiviral and retroviral vector
-                    manufacturing, paired with a new state-of-the-art facility,
-                    we have the capacity and know-how to support your
-                    manufacturing needs.
-                  </p>
-                  <span class="mt-auto flex-shrink-0 btn--underline"
-                    >Read more</span
-                  >
-                </div>
-              </router-link>
-            </el-col>
-            <el-col :xs="24" :span="6">
+            <el-col
+              :xs="24"
+              :span="6"
+              class="news--slider-i"
+              v-for="(item, index) in cdmoList"
+              :key="index"
+            >
               <router-link
                 to="/spiroSite"
                 class="block tans service--box_link bg-pinkbluelfr"
@@ -290,13 +200,15 @@ import TheWelcome from "../components/TheWelcome.vue";
                       alt="GMP Vector Manufacturing icon"
                     />
                   </div>
-                  <h2 class="font-bold p-large mb-3">Viral Vectors AAV:</h2>
-                  <p class="mb-3 p-med matchHeight" style="height: 209px">
-                    Unique expertise in GMP lentiviral and retroviral vector
-                    manufacturing, paired with a new state-of-the-art facility,
-                    we have the capacity and know-how to support your
-                    manufacturing needs.
-                  </p>
+                  <h3 class="font-bold p-large mb-3">
+                    {{ item.title }}
+                  </h3>
+                  <div style="height: 200px" class="cdmo-cont">
+                    <ul class="txt-ul">
+                      <h4 v-if="item.headTit">{{ item.headTit }}</h4>
+                      <li v-for="(i, idx) in item.list" :key="idx">{{ i }}</li>
+                    </ul>
+                  </div>
                   <span class="mt-auto flex-shrink-0 btn--underline"
                     >Read more</span
                   >
@@ -306,8 +218,7 @@ import TheWelcome from "../components/TheWelcome.vue";
           </el-row>
         </el-col>
       </section>
-
-      <!-- <div class="Viral-Vector-wrap">
+      <section id="CROout" class="">
         <el-col
           :xs="22"
           :sm="20"
@@ -317,99 +228,40 @@ import TheWelcome from "../components/TheWelcome.vue";
           style="margin: auto"
           class="container"
         >
-          <ObioFooter :list="vectorFooterList" />
-        </el-col>
-      </div> -->
-      <!-- </div> -->
-      <div class="home-offering-wrap">
-        <el-col
-          :xs="22"
-          :sm="20"
-          :md="20"
-          :lg="20"
-          :xl="22"
-          style="margin: auto"
-          class="container"
-        >
-          <div class="pub-title style2 ub ub-ver ub-pe">
-            <i class="line"></i
-            ><span
-              class="fontf8 font-size70 wow fadeInUp animated"
-              style="visibility: visible; animation-name: fadeInUp"
-              >Our Offering</span
-            >
+          <h1 class="p-title font-size50 txt-bold">CRO Service</h1>
+          <div class="wysiwyg--content colour-white">
+            <p>
+              OBi0 provides an integrated portfolio of plasmid construction,
+              viral packagingcell biology and animal study services for
+              biomedical researchers
+            </p>
           </div>
-          <el-row :gutter="0" class="list">
+
+          <el-row class="cro--service row" :gutter="20">
             <el-col
-              class="item"
-              :xs="{ span: 24, push: 0 }"
-              :sm="{ span: 12, push: 16 }"
-              :lg="{ span: 12, push: 12 }"
-              :md="{ span: 10, push: 16 }"
+              :xs="24"
+              :span="5"
+              class="cro--service-i"
+              v-for="(item, index) in croList"
+              :key="index"
             >
-              <div
-                class="box wow fadeInUp animated"
-                style="visibility: visible; animation-name: fadeInUp"
-              >
-                <i class="bg"></i>
-                <div class="txt-con ub ub-ver ub-pc">
-                  <div class="title color1 font-size38 fontf7">
-                    <router-link to="/cdmo">
-                      CDMO <br />
-                      Solutions</router-link
-                    >
-                  </div>
-                  <div class="line"><i></i></div>
-                  <div class="p font-size18 fontf2">
-                    OBiO offers holistic solutions in process development,
-                    analytical method, IND-enabling CMC, clinical and commercial
-                    contract manufacturing of viral vector, oncolytic virus, and
-                    cell therapy products.
-                  </div>
-                  <div class="more">
-                    <!-- <a href="/cn/home/cdmo" class="m-a"></a> -->
-                    <span class="m-span" @click="router.push('/cdmo')"></span>
-                  </div>
+              <router-link to="/spiroSite" class="block tans">
+                <div class="animate-imgxx uof img">
+                  <img :src="item.imgUrl" alt="SPIRO Site" />
                 </div>
-              </div>
-            </el-col>
-            <el-col
-              class="item"
-              :xs="{ span: 24, pull: 0 }"
-              :sm="{ span: 12, pull: 16 }"
-              :lg="{ span: 12, pull: 12 }"
-              :md="{ span: 10, pull: 12 }"
-            >
-              <div
-                class="box wow fadeInUp animated"
-                style="visibility: visible; animation-name: fadeInUp"
+              </router-link>
+              <h4 class="font-size28 fontf7 iti">{{ item.title }}</h4>
+              <p>
+                {{ item.text }}
+              </p>
+              <router-link to="/spiroSite" class="read-more font-size28"
+                >Read more</router-link
               >
-                <i class="bg"></i>
-                <div class="txt-con ub ub-ver ub-pc">
-                  <div class="title color1 font-size38 fontf7">
-                    <router-link to="/sys">
-                      Laboratory <br />
-                      Sciences</router-link
-                    >
-                  </div>
-                  <div class="line"><i></i></div>
-                  <div class="p font-size18 fontf2">
-                    OBiO provides an integrated portfolio of plasmid
-                    construction, viral packaging, cell biology and animal study
-                    services for biomedical researchers.
-                  </div>
-                  <div class="more">
-                    <span class="m-span" @click="router.push('/sys')"></span>
-                    <!-- <a href="/cn/home/sys" class="m-a" target="_blank"></a> -->
-                    <!-- <div class="m"><span class="m-a"></span></div> -->
-                  </div>
-                </div>
-              </div>
             </el-col>
           </el-row>
         </el-col>
-      </div>
-      <div class="home-facilities">
+      </section>
+      <section id="Ourout" class="">
         <el-col
           :xs="22"
           :sm="20"
@@ -417,174 +269,215 @@ import TheWelcome from "../components/TheWelcome.vue";
           :lg="20"
           :xl="22"
           style="margin: auto"
-          class="container"
+          class="container CDMO-Solutions-wrap"
         >
-          <div class="pub-title ub ub-ver ub-pe">
-            <i class="line"></i
-            ><span
-              class="fontf8 font-size70 wow fadeInUp animated"
-              style="visibility: visible; animation-name: fadeInUp"
-              >Our Facilities</span
-            >
-          </div>
-          <div class="home-facilities-mob">
-            <div class="list ub-ac ub-pj" id="facilities">
-              <el-row>
+          <h1 class="p-title font-size50 txt-bold">Our Commitment</h1>
+          <div class="section-2">
+            <div class="pub-title-p ub ub-ver ub-pe">
+              <i class="line"></i>
+              <div class="p font-size18"></div>
+            </div>
+            <div class="list">
+              <el-row class="row">
                 <el-col
-                  :xs="24"
-                  :span="8"
-                  class="item wow fadeInUp animated"
-                  style="visibility: visible; animation-name: fadeInUp"
-                  v-for="(item, index) in homeFacilitiesData"
-                  :key="index"
-                  :class="activeIndex == index ? 'active animated' : 'animated'"
-                  @mouseenter.stop="changeActive(index)"
-                >
-                  <div>
-                    <div class="img">
-                      <div class="img1">
-                        <img :src="item.imgUrl" :alt="item.title" />
+                  :span="6"
+                  class="item"
+                  v-for="(i, k) in ViralList"
+                  :key="k"
+                  :class="activeIndex === i.id ? 'active' : ''"
+                  @mouseenter="activeIndex = i.id"
+                  ><a href="/cn/home/cgmp/cid/896" class="boxs block">
+                    <div class="img1">
+                      <div class="icos">
+                        <img :src="i.imgUrl" class="icos-a" :alt="i.title" />
                       </div>
-                      <router-link :to="item.path" class="shaw">
-                        <img
-                          src="@/assets/icons/bg3.png"
-                          :style="{
-                            backgroundImage:
-                              'url(' + handleViteImages(item.bgUrl) + ')',
-                          }"
-                          class="shaw-bg"
-                          :alt="item.title"
-                        />
-                        <div class="txt">
-                          <div class="title fontf3 font-size30">
-                            {{ item.title }}
-                          </div>
-                          <div class="line"></div>
-                          <div class="pm font-size20">
-                            <ul>
-                              <li v-for="(i, n) in item.pmText" :key="n">
-                                {{ i }}
-                              </li>
-                            </ul>
-                          </div>
-                          <div class="m"><span class="m-a"></span></div>
-                        </div>
-                      </router-link>
                     </div>
-                    <div class="p font-size24 fontf3">
-                      {{ item.pTxt }}
-                    </div>
-                  </div>
+                    <div class="font-size24 fontf5 t">{{ i.title }}</div>
+                  </a>
                 </el-col>
               </el-row>
             </div>
           </div>
         </el-col>
-      </div>
-      <div class="home-insights">
-        <div class="bg1"></div>
-        <div class="home-insights-wrap">
-          <div class="bg2"></div>
-          <el-col
-            :xs="22"
-            :sm="20"
-            :md="20"
-            :lg="20"
-            :xl="22"
-            style="margin: auto"
-            class="container"
-          >
-            <div class="pub-title style2 ub ub-ver ub-pe">
-              <i class="line"></i
-              ><span
-                class="fontf8 font-size70 wow fadeInUp animated"
-                style="visibility: visible; animation-name: fadeInUp"
-                >Insights</span
+      </section>
+      <section id="Seeout" class="">
+        <el-col
+          :xs="22"
+          :sm="20"
+          :md="20"
+          :lg="20"
+          :xl="22"
+          style="margin: auto"
+          class="container"
+        >
+          <h1 class="p-title font-size50 txt-bold">See Our Capabilities</h1>
+          <el-row :gutter="20">
+            <!-- https://youtu.be/EqjpDvB0zJY?si=6NRlH_2xp7an93Xr
+            https://youtu.be/otK0yzBYHZ0?si=YtjJ-M8Q8EUxg93m
+            https://youtu.be/CZaS7IvYMJc?si=8go0JVTGqKO03r5l -->
+            <el-col :span="8">
+              <iframe
+                width="100%"
+                height="615"
+                src="https://www.youtube.com/embed/R6UtDlJShKo"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
+              Experience Innovation: Explore OBiO Tech's Intelli-M GMP-Compliant
+              Plasmid Production Line Today!</el-col
+            >
+            <el-col :span="8">
+              <iframe
+                width="100%"
+                height="615"
+                src="https://www.youtube.com/embed/R6UtDlJShKo"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe
+              >Exciting Milestone: OBiO Lingang Facility Launches Operations in
+              2023!</el-col
+            >
+            <el-col :span="8">
+              <iframe
+                width="100%"
+                height="615"
+                src="https://www.youtube.com/embed/R6UtDlJShKo"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe
+              >Elevate Your Production Efficiency Today! OBiO Intelli-M GMP
+              offers Capacities from 20L to 2000L</el-col
+            >
+          </el-row>
+        </el-col>
+      </section>
+      <section id="newsout" class="news-container">
+        <el-col
+          :xs="22"
+          :sm="20"
+          :md="20"
+          :lg="20"
+          :xl="22"
+          style="margin: auto"
+          class="container"
+        >
+          <h1 class="p-title font-size50 txt-bold">News and Events</h1>
+          <el-row class="image--callout" :gutter="40">
+            <el-col :span="10" :xs="24">
+              <img class="img" src="@/assets/icons/news.png" alt="" />
+            </el-col>
+            <el-col :span="14" :xs="24" class="font-size20 news-list">
+              <div class="news-i">
+                <!-- bg-pinkbluelfr -->
+                <h3 class="title-color">Jan.13th 2024</h3>
+                <p>
+                  Focusing on efficient gene delivery of NK cells, The First
+                  Condor Lifeand OBi0 Technology reach a strategic cooperation!
+                </p>
+                <div class="btn bg-pinkbluelfr">Read more</div>
+              </div>
+              <div class="news-i">
+                <h3 class="title-color">Oct. 24th 2023</h3>
+                <p>
+                  0Bi0 Announces Strategic Partnership with Refreshgene to
+                  RealizeCommercialization of Gene Therapy Product
+                </p>
+                <div class="btn bg-pinkbluelfr">Read more</div>
+              </div>
+              <div class="news-i">
+                <h3 class="title-color">Oct. 10th-12th 2023</h3>
+                <p>Cell&Gene meeting on the Mesa</p>
+                <div class="btn bg-pinkbluelfr">Read more</div>
+              </div>
+            </el-col>
+          </el-row>
+        </el-col>
+      </section>
+      <section id="careerout" class="career-container">
+        <el-col
+          :xs="22"
+          :sm="20"
+          :md="20"
+          :lg="20"
+          :xl="22"
+          style="margin: auto"
+          class="container"
+        >
+          <h1 class="p-title font-size50 txt-bold">
+            Career and CultureOur Culture
+          </h1>
+          <div class="wysiwyg--content colour-white">
+            <p>
+              Mission: Enable gene therapy for a better lives Value: Customer
+              First, Efficient Execution, Pursuit of Excellence, lnnovation
+              Breakthroughs, integrity and Pragmatism
+            </p>
+          </div>
+          <el-row class="news--slider row" :gutter="10">
+            <el-col :xs="24" :span="12" class="news--slider-i">
+              <router-link
+                to="/spiroSite"
+                class="block tans service--box_link bg-pinkbluelfr"
               >
-            </div>
-            <el-row>
-              <el-col class="item" :xs="24" :sm="6" :md="6" :lg="4" :xl="3">
-                <ul class="ul-side font-size28 fontf4">
-                  <li
-                    class="wow fadeInUp animated"
-                    style="visibility: visible; animation-name: fadeInUp"
-                    @click="handleInsightsType(1)"
-                    :class="InsightsType === 1 ? 'active animated' : 'animated'"
+                <el-row
+                  :gutter="20"
+                  class="service--box align-items-start career-i"
+                >
+                  <el-col :span="8" class="career-i"
+                    ><div class="service--box_icon mb-3 min-width-70">
+                      <img
+                        class="icon--white"
+                        src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
+                        alt="GMP Vector Manufacturing icon"
+                      />
+                      <img
+                        class="icon--colour"
+                        src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
+                        alt="GMP Vector Manufacturing icon"
+                      /></div
+                  ></el-col>
+                  <el-col :span="16" class="career-i">
+                    <h1 class="font-bold p-large mb-3">Life in OBIO</h1></el-col
                   >
-                    <span>Press Releases</span>
-                  </li>
-                  <li
-                    class="wow fadeInUp animated"
-                    style="visibility: visible; animation-name: fadeInUp"
-                    @click="handleInsightsType(2)"
-                    :class="InsightsType === 2 ? 'active animated' : 'animated'"
+                </el-row>
+              </router-link>
+            </el-col>
+            <el-col :xs="24" :span="12" class="news--slider-i">
+              <router-link
+                to="/spiroSite"
+                class="block tans service--box_link bg-pinkbluelfr"
+              >
+                <el-row
+                  :gutter="20"
+                  class="service--box align-items-start career-i"
+                >
+                  <el-col :span="8" class="career-i"
+                    ><div class="service--box_icon mb-3 min-width-70">
+                      <img
+                        class="icon--white"
+                        src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
+                        alt="GMP Vector Manufacturing icon"
+                      />
+                      <img
+                        class="icon--colour"
+                        src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
+                        alt="GMP Vector Manufacturing icon"
+                      /></div
+                  ></el-col>
+                  <el-col :span="16" class="career-i">
+                    <h1 class="font-bold p-large mb-3">Job Opening</h1></el-col
                   >
-                    <span>Events</span>
-                  </li>
-                </ul>
-              </el-col>
-              <el-col class="item" :xs="24" :sm="18" :md="18" :lg="20" :xl="21">
-                <div class="insights-group">
-                  <ul class="ul-list active">
-                    <li
-                      class="wow fadeInUp animated active"
-                      style="visibility: visible; animation-name: fadeInUp"
-                      v-for="(item, index) in InsightsList"
-                      :key="index"
-                    >
-                      <router-link
-                        :to="`/news-details/${
-                          InsightsType === 1 ? 'releases' : 'events'
-                        }/${item.id}`"
-                        class="block"
-                      >
-                        <div class="time">{{ item.time }}</div>
-                        <div class="title fontf3 font-size24">
-                          {{ item.title }}
-                        </div>
-                        <div class="p font-size18">
-                          <div class="ut-s2">
-                            {{ item.pText }}
-                          </div>
-                        </div>
-                      </router-link>
-                    </li>
+                </el-row>
+              </router-link>
+            </el-col>
+          </el-row>
+        </el-col>
+      </section>
 
-                    <li
-                      style="border-bottom-width: 0"
-                      class=""
-                      v-if="InsightsType === 1"
-                    >
-                      <div
-                        class="more wow fadeInUp animated"
-                        style="visibility: visible; animation-name: fadeInUp"
-                      >
-                        <!-- <a href="/cn/home/news/id/559">ALL PRESS RELEASES</a> -->
-                        <span class="m-span" @click="router.push('/releases')"
-                          >ALL PRESS RELEASES</span
-                        >
-                      </div>
-                    </li>
-                    <li
-                      style="border-bottom-width: 0"
-                      v-if="InsightsType === 2"
-                    >
-                      <div class="more">
-                        <!-- <a href="/cn/home/news/id/719">ALL EVENTS</a> -->
-                        <span class="m-span" @click="router.push('/events')"
-                          >ALL EVENTS</span
-                        >
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </el-col>
-            </el-row>
-          </el-col>
-        </div>
-      </div>
-
-      <div class="home-contact">
+      <!-- <div class="home-contact">
         <el-col
           :xs="22"
           :sm="20"
@@ -682,9 +575,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                 </el-form-item>
                 <el-form-item label="Security Code" required>
                   <el-col :span="11">
-                    <!-- <el-form-item > -->
                     <el-input v-model="ruleForm.verify" />
-                    <!-- </el-form-item> -->
                   </el-col>
                   <el-col :span="11">
                     <div class="put ub-f1" style="margin-left: 12px">
@@ -776,7 +667,7 @@ import TheWelcome from "../components/TheWelcome.vue";
             </el-col>
           </el-row>
         </el-col>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -844,6 +735,116 @@ const vectorFooterList = ref([
                   supports and on-time delivery`,
   },
 ]);
+const cdmoList = ref([
+  {
+    imgUrl: "",
+    actImgUrl: "",
+    title: "Viral Vectors AAV:",
+    list: [
+      "Adenoviral vector for delivery of genes",
+      "Lentiviral vectors",
+      "Retroviral vectors",
+    ],
+  },
+  {
+    imgUrl: "",
+    actImgUrl: "",
+    title: "Oncolytic Virus",
+    list: [
+      "Oncolytic adenoviruses",
+      "Oncolytic herpes simplex virus",
+      "Oncolytic vaccinia viruses",
+      "Oncolytic vesicular",
+    ],
+  },
+  {
+    imgUrl: "",
+    actImgUrl: "",
+    title: "Cell Therapy Products",
+    headTit: "Autologous and homologous immunocyte therapies",
+    list: [
+      "CAR-TTherapy",
+      "NK Cell Therapy",
+      "TCR-T Therapy",
+      "DC Therapy",
+      "ГóT Therapy",
+      "Treg Therapy",
+      "Stem cell therapy",
+    ],
+  },
+  {
+    imgUrl: "",
+    actImgUrl: "",
+    title: "Plasmid & Nucleotides",
+    list: [
+      "Plasmid DNA",
+      "Minicircle plasmids",
+      "dsDNA",
+      "ssDNA",
+      "mRNA drug substance",
+    ],
+  },
+]);
+const croList = ref([
+  {
+    imgUrl: handleViteImages("@/assets/icons/croIcon1.png"),
+    title: "Plasmid",
+    text: `At 0Bi0, our dedicateddevelopment team iscommitted to assistingyou in designing,constructing, andmanufacturing plasmidsfor fuctional genomicsresearch, as well asprovidingexpertise inviral packaging.`,
+  },
+  {
+    imgUrl: handleViteImages("@/assets/icons/croIcon2.png"),
+    title: "Viral Vector",
+    text: `We specialize in offeringcomprehensive servicesencompassing thedesign, construction, andpackaging of varioustypes of viral vectors.Additionally, we assist inexecuting a diverserange of biomolecularoperations tailored toyour specific gene ofinterest, ensuringthorough supportthroughout the process.`,
+  },
+  {
+    imgUrl: handleViteImages("@/assets/icons/croIcon3.png"),
+    title: "Experiment Solutions",
+    text: `We offer an extensivearray of contractresearch servicestailored for functionalgenomics studies.`,
+  },
+  {
+    imgUrl: handleViteImages("@/assets/icons/croIcon4.png"),
+    title: "Related Products",
+    text: `We offer a comprehensive range ofin-stock virus vectors,proteins, gRNA libraries.and relevant reagents,catering to diverse research needs acrossvarious aspects of your project.`,
+  },
+  {
+    imgUrl: handleViteImages("@/assets/icons/croIcon5.png"),
+    title: "Extracellular Vesicle",
+    text: `Our services for extracellularvesicle include isolation,identification, and functionalresearch at the laboratory stage.For samples from differentsources, our scientist team hasdeveloped multiple isolationsolutions which have beensuccessfully applied in samplesof cells, body fluids and tissueexosomes such as cerebrospinalfluid, urine, brain tissue and liver.`,
+  },
+]);
+type ViralItem = {
+  id: number;
+  imgUrl: string;
+  title: string;
+  path: string;
+};
+const ViralList = ref<ViralItem[]>([
+  {
+    id: 0,
+    imgUrl: handleViteImages("@/assets/icons/cdmo_icon1.png"),
+    title: "Focus",
+    path: "/process",
+  },
+  {
+    id: 1,
+    imgUrl: handleViteImages("@/assets/icons/cdmo_icon2.png"),
+    title: "Acceleration",
+    path: "/cgmp",
+  },
+  {
+    id: 2,
+    imgUrl: handleViteImages("@/assets/icons/cdmo_icon3.png"),
+    title: "Standardization",
+    path: "/quality",
+  },
+  {
+    id: 3,
+    imgUrl: handleViteImages("@/assets/icons/cdmo_icon4.png"),
+    title: "Team",
+    path: "/logistics",
+  },
+]);
+
 onMounted(() => {
   var wow = new WOW({
     boxClass: "wow",

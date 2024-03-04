@@ -11,6 +11,7 @@ type ImgItem = {
   imgUrl: string;
   title: string;
   content: string;
+  text: string;
 };
 
 import { ref } from "vue";
@@ -23,18 +24,21 @@ export const imgList = ref<ImgItem[]>([
     title: "Enable Gene Therapy For Better Lives",
     content:
       "Your Trustful Partner in Research and Manufacturing for Gene and Cell Therapy",
+    text: "Providing client-centered and high-quality service as our commitment, we strive to become a world leading gene and cell therapy CRO/CDMO group.",
   },
   {
     id: 1,
     imgUrl: handleViteImages("@/assets/icons/img1.jpg"),
     title: "Make Gene Delivery Accessible",
     content: "Side-by-Side Navigation for Your Innovations",
+    text: "Providing client-centered and high-quality service as our commitment, we strive to become a world leading gene and cell therapy CRO/CDMO group.",
   },
   {
     id: 2,
     imgUrl: handleViteImages("@/assets/icons/carousel_bg1.jpg"),
     title: "Industrialize Your Product At OBiO",
     content: "End-to-End Offerings with Versatile Technical Platform",
+    text: "Providing client-centered and high-quality service as our commitment, we strive to become a world leading gene and cell therapy CRO/CDMO group.",
   },
   {
     id: 3,
@@ -42,6 +46,7 @@ export const imgList = ref<ImgItem[]>([
     title: "For Global Customers",
     content:
       "OBiO has launched its state-of-the-art GMp facility Intelli-M in 2023",
+    text: "Providing client-centered and high-quality service as our commitment, we strive to become a world leading gene and cell therapy CRO/CDMO group.",
   },
 ]);
 
