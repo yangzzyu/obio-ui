@@ -7,60 +7,37 @@
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
-  <div class="banner">
-    <div class="Limit">
-      <div class="pub-ico leftArrow" @click="arrowClick('left')"></div>
-      <div class="pub-ico rightArrow" @click="arrowClick('right')"></div>
-      <el-carousel
-        ref="cardShow"
-        :interval="5000"
-        arrow="never"
-        :height="bannerHeight + 'px'"
-        :autoplay="true"
-        trigger="click"
-        indicator-position="none"
-        @change="carouselChange"
-      >
-        <el-carousel-item v-for="item in imgList" :key="item.id">
-          <div class="img_con">
-            <!-- <transition-group
-              :duration="5000"
-              appear
-              name="animate__animated animate__bounce"
-              enter-active-class="animate__fadeInDown"
-              leave-active-class="animate__backOutRight"
-            >
-              <over-lay
-                v-show="isShow"
-                :key="item.id + Math.random()"
-                :itemData="item"
-              ></over-lay>
-              <over-lay
-                v-show="!isShow"
-                :key="item.id"
-                :itemData="item"
-              ></over-lay>
-            </transition-group> -->
-            <!-- <over-lay
-                :key="item.id"
-                :itemData="item"
-              ></over-lay> -->
-              <over-lay
-                v-if="isShow"
-                :key="item.id + Math.random()"
-                :itemData="item"
-              ></over-lay>
-              <!-- <over-lay
-                v-show="!isShow"
-                :key="item.id"
-                :itemData="item"
-              ></over-lay> -->
-            <img class="element-img" alt="" :src="item.imgUrl" />
-          </div>
-        </el-carousel-item>
-      </el-carousel>
+  <section id="Hero-Slider" class="custom--form">
+    <div class="container" style="margin: auto">
+      <div class="row justify-content-center">
+        <div class="Limit">
+          <div class="pub-ico leftArrow" @click="arrowClick('left')"></div>
+          <div class="pub-ico rightArrow" @click="arrowClick('right')"></div>
+          <el-carousel
+            ref="cardShow"
+            :interval="5000"
+            arrow="never"
+            :height="600 + 'px'"
+            :autoplay="false"
+            trigger="click"
+            indicator-position="none"
+            @change="carouselChange"
+          >
+            <el-carousel-item v-for="item in imgList" :key="item.id">
+              <div class="img_con">
+                <over-lay
+                  v-if="isShow"
+                  :key="item.id + Math.random()"
+                  :itemData="item"
+                ></over-lay>
+                <!-- <img class="element-img" alt="" :src="item.imgUrl" /> -->
+              </div>
+            </el-carousel-item>
+          </el-carousel>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 <script lang="ts" setup>
 import { onBeforeMount, ref, watch } from "vue";
@@ -92,16 +69,15 @@ function arrowClick(val) {
 }
 const duration = ref(1000);
 const transitionName = ref("");
-carouselChange()
+carouselChange();
 function carouselChange() {
-  isShow.value=false
-  setTimeout(()=>{
-    isShow.value=true
+  isShow.value = false;
+  setTimeout(() => {
+    isShow.value = true;
     // isShow.value = !isShow.value;
-  },1000)
+  }, 1000);
 }
-onBeforeMount(() => {
-});
+onBeforeMount(() => {});
 </script>
 <style lang="scss" scoped>
 //.img_cover{
@@ -119,7 +95,7 @@ onBeforeMount(() => {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  bottom: 10vh;
+  bottom: 15vh;
   z-index: 9999;
   cursor: pointer;
 }
@@ -152,14 +128,16 @@ onBeforeMount(() => {
   line-height: 300px;
   margin: 0;
 }
-
-.el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;
+.el-carousel__item {
+  background-color: transparent;
 }
+// .el-carousel__item:nth-child(2n) {
+//   background-color: #99a9bf;
+// }
 
-.el-carousel__item:nth-child(2n + 1) {
-  background-color: #d3dce6;
-}
+// .el-carousel__item:nth-child(2n + 1) {
+//   background-color: #d3dce6;
+// }
 
 .img_con {
   width: 100%;
@@ -196,5 +174,16 @@ onBeforeMount(() => {
 
 :deep(.el-carousel__arrow:hover) {
   background-color: rgba(16, 15, 15, 0.3);
+}
+.Limit {
+  width: 100%;
+  position: relative;
+}
+.custom--form {
+  //   background-image: url(../../_dist/images/icons/carousel_bg.png);
+  background: url(@/assets/icons/carousel_bg.png) no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 </style>
