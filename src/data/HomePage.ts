@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 09:26:06
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-26 10:59:06
+ * @LastEditTime: 2024-03-05 09:00:09
  * @FilePath: \obio-ui\src\data\HomePage.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -26,6 +26,30 @@ export const imgList = ref<ImgItem[]>([
       "Your Trustful Partner in Research and Manufacturing for Gene and Cell Therapy",
     text: "Providing client-centered and high-quality service as our commitment, we strive to become a world leading gene and cell therapy CRO/CDMO group.",
   },
+<<<<<<< HEAD
+  // {
+  //   id: 1,
+  //   imgUrl: handleViteImages("@/assets/icons/img1.jpg"),
+  //   title: "Make Gene Delivery Accessible",
+  //   content: "Side-by-Side Navigation for Your Innovations",
+  //   text: "Providing client-centered and high-quality service as our commitment, we strive to become a world leading gene and cell therapy CRO/CDMO group.",
+  // },
+  // {
+  //   id: 2,
+  //   imgUrl: handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+  //   title: "Industrialize Your Product At OBiO",
+  //   content: "End-to-End Offerings with Versatile Technical Platform",
+  //   text: "Providing client-centered and high-quality service as our commitment, we strive to become a world leading gene and cell therapy CRO/CDMO group.",
+  // },
+  // {
+  //   id: 3,
+  //   imgUrl: handleViteImages("@/assets/icons/carousel_bg2.jpg"),
+  //   title: "For Global Customers",
+  //   content:
+  //     "OBiO has launched its state-of-the-art GMp facility Intelli-M in 2023",
+  //   text: "Providing client-centered and high-quality service as our commitment, we strive to become a world leading gene and cell therapy CRO/CDMO group.",
+  // },
+=======
   {
     id: 1,
     imgUrl: handleViteImages("@/assets/icons/img1.jpg"),
@@ -48,6 +72,7 @@ export const imgList = ref<ImgItem[]>([
       "OBiO has launched its state-of-the-art GMp facility Intelli-M in 2023",
     text: "Providing client-centered and high-quality service as our commitment, we strive to become a world leading gene and cell therapy CRO/CDMO group.",
   },
+>>>>>>> 58728ee37a52ebfc096f18b949284167eb42e5cb
 ]);
 
 type FacilitiesDataItem = {

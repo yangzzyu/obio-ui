@@ -661,12 +661,24 @@ a:focus {
 .dl-foot-nav dt {
   line-height: 28px;
   margin-bottom: 12px;
+  a {
+    font-family: Roboto;
+    font-weight: bold;
+  }
+  font-family: Roboto;
+  font-weight: bold;
 }
 .dl-foot-nav dd {
   font-size: 16px;
   margin-bottom: 8px;
   line-height: 24px;
-  opacity: 0.75;
+  // opacity: 0.75;
+  font-family: Roboto;
+  font-weight: bold;
+  a {
+    font-family: Roboto;
+    font-weight: bold;
+  }
 }
 .icp {
   text-align: center;
@@ -1354,20 +1366,57 @@ a:focus {
   right: -90px;
   background: url(@/assets/icons/ico_right3.png) no-repeat center/contain;
 }
+.ab-svg_color {
+  bottom: -25px;
+  position: absolute;
+  left: 0;
+  // bottom: -37px;
+  width: 100%;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+}
+.in-about-wrap {
+  position: relative;
+  margin-top: -150px;
+
+  .section-title {
+    font-family: Roboto;
+    font-weight: bold;
+  }
+}
+
 .in-about-wrap {
   margin-top: -100px;
 }
 .in-about-wrap .section-3 {
+  position: relative;
   padding-bottom: 80px;
+  // padding-top: 50px;
   // background: #f7f7f7 url(@/assets/icons/about_bg.jpg) no-repeat left bottom;
   overflow: hidden;
 }
 .in-about-wrap .section-3 .fac-con {
   padding-left: 20px;
-  background: #f7f7f7 url(@/assets/icons/about_bg.jpg) no-repeat left bottom;
+  .el-col {
+    margin-bottom: 30px;
+  }
+  // background: #f7f7f7 url(@/assets/icons/about_bg.jpg) no-repeat left bottom;
 }
 .in-about-wrap .section-3 .fac-con .stxt {
   margin: 30px 0;
+}
+.manufacturing-list {
+  overflow: hidden;
+  border-radius: 10px;
+  .content {
+    margin-bottom: 10px;
+    transition: all 0.5s;
+    &:hover {
+      transform: translateY(-7px);
+    }
+  }
 }
 /*.in-about-wrap .section-3 .fac-con .row .img{
     border-radius: 0 20px 0 20px;
@@ -1385,9 +1434,31 @@ a:focus {
 .in-about-wrap .section-3 .fac-con .row img {
   width: 100%;
 }
+.cro-p {
+  color: $textColor;
+  margin-bottom: 20px;
+}
 .p-title {
   color: $fontColor;
   text-align: center;
+  font-weight: 500;
+}
+.fontFamily {
+  font-family: $fontFamily;
+}
+.title-color {
+  color: $fontColor;
+}
+.txt-bold {
+  font-weight: bold;
+}
+.textColor {
+  color: $textColor;
+}
+.our-txt {
+  // width: 200px;
+  // font-weight: 800;
+  margin-bottom: 20px;
 }
 .title-color {
   color: $fontColor;
@@ -1434,17 +1505,36 @@ a:focus {
   border-radius: 10px;
   box-shadow: 1px -1px 13px 3px rgba(0, 0, 0, 0.13);
   overflow: hidden;
+  height: 500px;
+  .blog-btn {
+    position: absolute;
+    bottom: 20px;
+    text-decoration: underline;
+    font-family: Roboto;
+    font-weight: bold;
+    color: #1f757b;
+  }
+  .p-large {
+    font-family: Roboto;
+    font-weight: bold;
+    color: #1f757b;
+  }
 }
 .service--box_link:hover .service--box {
   background-color: transparent;
   color: #fff;
+  .p-large,
+  .blog-btn {
+    color: #fff;
+  }
 }
 .service--box_link .service--box {
-  padding: 2.5rem;
+  padding: 0.5rem 2.5rem;
   border-radius: 7px 7px 3px 3px;
   // transition: all 0.3s ease-in-out;
   position: relative;
   margin-bottom: 10px;
+  height: 98%;
 }
 .service--box_link .service--box .service--box_icon {
   position: relative;
@@ -1484,9 +1574,15 @@ header {
 }
 .news--slider-i {
   margin-bottom: 20px;
+  .career-a {
+    max-height: 180px;
+    .service--box {
+      height: 94%;
+    }
+  }
 }
 .cdmo-cont {
-  height: 200px;
+  // height: 200px;
   margin-bottom: 2rem;
 }
 .txt-ul {
@@ -1512,7 +1608,7 @@ header {
 .mb-3,
 .my-3,
 .scroll--down {
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1rem !important;
 }
 .image--callout_image {
   height: 100%;
@@ -1530,6 +1626,13 @@ header {
   }
 }
 .news-container {
+  background: rgba(8, 74, 159, 0.05);
+  padding: 20px 0;
+  .left-content {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
   img {
     width: 100%;
   }
@@ -1543,6 +1646,7 @@ header {
     padding: 20px;
     margin: 10px 0;
     box-shadow: 1px -1px 13px 3px rgba(0, 0, 0, 0.13);
+    background: #fff;
     .btn {
       width: 120px;
       color: #fff;
@@ -1873,10 +1977,24 @@ header {
   padding-left: 20px;
   margin: 100px 0 60px;
 }
-.CDMO-Solutions-wrap .section-1 {
-  background: #f7f7f7;
-  padding-top: 80px;
-  padding-bottom: 80px;
+#Ourout {
+  margin-bottom: 30px;
+  background: rgba(8, 74, 159, 0.05);
+}
+.CDMO-Solutions-wrap {
+  // background: #f7f7f7;
+
+  // padding-top: 80px;
+}
+.video-p {
+  padding: 10px;
+  margin-top: -10px;
+  background: #fff;
+  height: 100px;
+}
+#Seeout .video-list {
+  box-shadow: 1px -1px 13px 3px rgba(0, 0, 0, 0.13);
+  margin-bottom: 20px;
 }
 .CDMO-Solutions-wrap .section-2 {
   // background: url(@/assets/icons/Viral_Vector_bg3.jpg) no-repeat center top /

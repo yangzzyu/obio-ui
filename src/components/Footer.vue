@@ -9,7 +9,129 @@
       class="container"
       style="margin: 0 auto"
     >
-      <el-row class="row" :gutter="50">
+      <div class="link-list">
+        <div class="link-list-i fontFamily">
+          <div class="foot-log">
+            <img
+              src="https://www.obio-tech.com/public/uploads/20230630/a4e158c16a5cb2bf4e6506a46adf9c57.png"
+              alt="OBiO Technology (Shanghai) Corp., Ltd."
+            />
+          </div>
+
+          <dl class="dl-foot-nav">
+            <dt class="font-size14">Phone:4084228642</dt>
+            <dt class="font-size14">General: 0Bi0.US@OBiOSH.COM</dt>
+            <dt class="font-size14">Business:BD@OBiOSH.COM</dt>
+            <dt class="font-size14">
+              Address: 7133 Koll Center Parkway,Suite 200, Pleasanton, CA 94566
+            </dt>
+            <dt class="font-size14"></dt>
+            <dd></dd>
+          </dl>
+        </div>
+        <div class="link-list-i fontFamily">
+          <dl class="dl-foot-nav">
+            <dt class="font-size20 first-tit">
+              <router-link to="/about">About Us</router-link>
+            </dt>
+            <dt class="font-size14">
+              <router-link to="/sys">History</router-link>
+            </dt>
+            <dt class="font-size14">
+              <router-link to="/news">Facilities</router-link>
+            </dt>
+            <dt class="font-size14">
+              <router-link to="/cx">Leadship Team</router-link>
+            </dt>
+            <dd></dd>
+          </dl>
+        </div>
+        <div class="link-list-i fontFamily">
+          <dl class="dl-foot-nav">
+            <dt class="font-size20 first-tit">
+              <router-link to="/cdmo">Capability & Commitment</router-link>
+            </dt>
+            <dd class="font-size14">
+              <router-link to="/process">Industrialize</router-link>
+            </dd>
+            <dd class="font-size14">
+              <router-link to="/cgmp">Commitment</router-link>
+            </dd>
+          </dl>
+        </div>
+        <div class="link-list-i fontFamily">
+          <dl class="dl-foot-nav">
+            <dt class="font-size20 first-tit">
+              <router-link to="/cdmo">CDMO Solutions</router-link>
+            </dt>
+            <dd class="font-size14">
+              <router-link to="/process">Manufacturing</router-link>
+            </dd>
+            <dd class="font-size14">
+              <router-link to="/cgmp">CDMO</router-link>
+            </dd>
+            <dd class="font-size14">
+              <router-link to="/logistics">Innovation</router-link>
+            </dd>
+          </dl>
+        </div>
+        <div class="link-list-i fontFamily">
+          <dl class="dl-foot-nav">
+            <dt class="font-size20 first-tit">
+              <router-link to="/cdmo">News & Events</router-link>
+            </dt>
+            <dd class="font-size14">
+              <router-link to="/process">News</router-link>
+            </dd>
+            <dd class="font-size14">
+              <router-link to="/process">Events</router-link>
+            </dd>
+            <dd class="font-size14">
+              <router-link to="/process">Learn More</router-link>
+            </dd>
+            <dd class="font-size14">
+              <router-link to="/process">Partnership</router-link>
+            </dd>
+          </dl>
+        </div>
+        <div class="link-list-i fontFamily">
+          <dl class="dl-foot-nav">
+            <dt class="font-size20 first-tit">
+              <router-link to="/cdmo">Careers & Culture</router-link>
+            </dt>
+            <dd class="font-size14">
+              <router-link to="/process">Our Culture</router-link>
+            </dd>
+            <dd class="font-size14">
+              <router-link to="/cgmp">Mission</router-link>
+            </dd>
+            <dd class="font-size14">
+              <router-link to="/quality">Life at OBIO</router-link>
+            </dd>
+            <dd class="font-size14">
+              <router-link to="/logistics">Job Opening</router-link>
+            </dd>
+            <dt class="font-size14">
+              <!-- <router-link href="/cn/home/ys/cid/861">Privacy Policy</router-link> -->
+            </dt>
+          </dl>
+        </div>
+        <div class="link-list-i fontFamily">
+          <dl class="dl-foot-nav">
+            <dt class="font-size20 first-tit">
+              <router-link to="/cdmo">CRO Service</router-link>
+            </dt>
+          </dl>
+        </div>
+        <div class="link-list-i fontFamily">
+          <dl class="dl-foot-nav">
+            <dt class="font-size20 first-tit">
+              <router-link to="/cdmo">Contact</router-link>
+            </dt>
+          </dl>
+        </div>
+      </div>
+      <!-- <el-row class="row" :gutter="50">
         <el-col :span="6" :xs="24" class="wow fadeInLeft animated">
           <div class="foot-log">
             <img
@@ -58,7 +180,6 @@
           </dl></el-col
         >
         <el-col :span="3" :xs="12" class="wow fadeInRight animated">
-          Manufacturing CDMO Innovation
           <dl class="dl-foot-nav">
             <dt class="font-size30 first-tit">
               <router-link to="/cdmo">CDMO Solutions</router-link>
@@ -107,7 +228,6 @@
               <router-link to="/logistics">Job Opening</router-link>
             </dd>
             <dt class="font-size20">
-              <!-- <router-link href="/cn/home/ys/cid/861">Privacy Policy</router-link> -->
             </dt>
           </dl></el-col
         >
@@ -118,55 +238,50 @@
             </dt>
           </dl></el-col
         >
-        <!-- <el-col :span="3" :xs="12" class="wow fadeInRight animated">
-          <dl class="dl-foot-nav">
-            <dt class="font-size30 first-tit">
-              <router-link to="/cdmo">Contact</router-link>
-            </dt>
-          </dl></el-col
-        > -->
-        <!-- <el-col :sm="6" :xs="24" class="wow fadeInRight animated">
-          <div class="foot-link ub">
-            <a href="https://www.youtube.com/@obiotechnology">
-              <font-awesome-icon
-                class="footer-icon"
-                size="lg"
-                :icon="['fab', 'Youtube']"
-              />
-            </a>
-            <a href="https://www.linkedin.com/company/41870372">
-              <font-awesome-icon
-                class="footer-icon"
-                size="lg"
-                :icon="['fab', 'linkedin']"
-            /></a>
-            <a href="https://www.facebook.com/profile.php?id=61555811491695">
-              <font-awesome-icon
-                class="footer-icon"
-                size="lg"
-                :icon="['fab', 'Facebook']"
-            /></a>
-          </div>
-          <div class="foot-link ub">
-            <router-link
-              to="https://www.linkedin.com/company/obiosh"
-              target="_blank"
-              class="k1"
-            ></router-link>
-            <router-link
-              to="https://www.youtube.com/channel/UCFBQ9g386UNn_WluHw_GdOg"
-              target="_blank"
-              class="k2"
-            ></router-link>
-            <router-link
-              to="https://mp.weixin.qq.com/s/SeARdjD_mAN8Uft4hBwQgg"
-              target="_blank"
-              class="k3"
-            ></router-link>
-          </div>
-        </el-col> -->
-      </el-row>
+       
+      </el-row> -->
+      <div class="foot-link ub">
+      <a href="https://www.youtube.com/@obiotechnology">
+        <font-awesome-icon
+          class="footer-icon"
+          size="lg"
+          :icon="['fab', 'Youtube']"
+        />
+      </a>
+      <a href="https://www.linkedin.com/company/41870372">
+        <font-awesome-icon
+          class="footer-icon"
+          size="lg"
+          :icon="['fab', 'linkedin']"
+      /></a>
+      <a href="https://www.facebook.com/profile.php?id=61555811491695">
+        <font-awesome-icon
+          class="footer-icon"
+          size="lg"
+          :icon="['fab', 'Facebook']"
+      /></a>
+    </div>
     </el-col>
+    <!-- <el-col :sm="6" :xs="24" :offset="18" class="wow fadeInRight animated"> -->
+  
+    <!-- <div class="foot-link ub">
+        <router-link
+          to="https://www.linkedin.com/company/obiosh"
+          target="_blank"
+          class="k1"
+        ></router-link>
+        <router-link
+          to="https://www.youtube.com/channel/UCFBQ9g386UNn_WluHw_GdOg"
+          target="_blank"
+          class="k2"
+        ></router-link>
+        <router-link
+          to="https://mp.weixin.qq.com/s/SeARdjD_mAN8Uft4hBwQgg"
+          target="_blank"
+          class="k3"
+        ></router-link>
+      </div> -->
+    <!-- </el-col> -->
     <div class="icp">
       <!-- © 2023 OBiO Technology (Shanghai) Corp., Ltd. All Rights Reserved -->
       <!-- 7133 Koll Center Parkway, Suite 200, Pleasanton, CA 94566 -->
@@ -387,5 +502,13 @@ h2 {
 }
 .foot-log {
   margin-bottom: 20px;
+}
+.link-list {
+  display: grid;
+  grid-template-columns: repeat(8, auto); /* 设置8列 */
+  gap: 10px; /* 添加间距（可选）*/
+}
+.foot-link{
+  justify-content: end;
 }
 </style>

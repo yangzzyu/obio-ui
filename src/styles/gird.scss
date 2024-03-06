@@ -26,6 +26,9 @@
 .font-size30 {
   font-size: $size30;
 }
+.font-size36 {
+  font-size: $size36;
+}
 .font-size38 {
   font-size: $size38;
 }
@@ -39,6 +42,18 @@
   color: #666;
 }
 @media (max-width: 765px) {
+  .foot-link{
+    justify-content: start !important;
+  }
+  .link-list {
+    grid-template-columns: repeat(2, auto) !important; /* 设置8列 */
+  }
+  .in-about-wrap {
+    margin-top: -30px;
+  }
+  .ab-svg_color {
+    // top: -50px;
+  }
   .row {
     margin-right: -5px;
     margin-left: -5px;
@@ -86,6 +101,9 @@
   }
 
   .font-size30 {
+    font-size: 20px;
+  }
+  .font-size36 {
     font-size: 20px;
   }
   .font-size38 {
@@ -866,6 +884,7 @@
   padding-top: 20px;
 }
 @media (min-width: 768px) {
+  
   .image--callout {
     border-radius: 30px;
   }
@@ -912,6 +931,35 @@
     margin-top: 50px;
   }
 }
+@media screen and (min-width: 1200px) and (max-width: 1366px) {
+  .ab-svg_color {
+    left: 0;
+    // top: -115px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.99px) {
+  .in-about-wrap {
+    margin-top: -100px;
+  }
+  .ab-svg_color {
+    left: 0;
+    // top: -95px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .link-list {
+    grid-template-columns: repeat(4, auto) !important; /* 设置8列 */
+  }
+  .foot-link{
+    justify-content: start !important;
+  }
+  .in-about-wrap {
+    margin-top: -70px;
+  }
+  .ab-svg_color {
+    // top: -73px;
+  }
+}
 @media (min-width: 1310px) {
   .row.row30 {
     margin-right: -30px;
@@ -922,7 +970,12 @@
     padding-left: 30px;
   }
 }
-
+@media screen and (min-width: 1366px) and (max-width: 1900px) {
+  .ab-svg_color {
+    left: 0;
+    // top: -205px;
+  }
+}
 @media (min-width: 1510px) {
 }
 @media (min-width: 1710px) {
@@ -1100,6 +1153,14 @@
     .home-offering-wrap .list .item:nth-child(2n+1) .txt-con{margin-right:80px;}
     .home-offering-wrap .list .item:nth-child(2n) .txt-con{margin-left:80px;}
 }*/
+@media (max-width: 1199px) {
+  .btn1,
+  .btn2 {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 5px;
+  }
+}
 
 @media (max-width: 1700px) and (min-width: 768px) {
   .in-about-wrap .about-history-swp {
