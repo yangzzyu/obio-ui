@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 09:07:47
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-06 09:04:09
+ * @LastEditTime: 2024-03-06 10:15:44
  * @FilePath: \obio-ui\src\views\HomeView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -57,15 +57,19 @@ import TheWelcome from "../components/TheWelcome.vue";
                       />
                     </div>
                   </router-link> -->
-                  <div class="font-size24 fontf7 iti">
+                  <div class="font-size24 fontf7 iti fontFamily">
                     Lin-Gang Free-Trade ZoneShanghai, China
                   </div>
-                  <div class="font-size38 fontf7 iti">OBlO Intelli-M</div>
-                  <p>
+                  <div class="font-size38 fontf7 iti fontFamily">
+                    OBlO Intelli-M
+                  </div>
+                  <p class="font-size18 fontFamily textColor">
                     Process Development CharacterizationClinical and Commercial
                     Manufacturing77,000-square-meter Facility for Global Supply
                   </p>
-                  <router-link to="/spiroSite" class="read-more font-size28"
+                  <router-link
+                    to="/spiroSite"
+                    class="read-more font-size18 fontf7 fontFamily"
                     >Read more</router-link
                   >
                 </el-col>
@@ -86,16 +90,16 @@ import TheWelcome from "../components/TheWelcome.vue";
                       />
                     </div>
                   </router-link> -->
-                  <div class="font-size24 fontf7 iti">
+                  <div class="font-size24 fontf7 iti fontFamily">
                     International Medical ParkShanghai, China
                   </div>
-                  <div class="font-size38 fontf7 iti">SPIRO Site</div>
+                  <div class="font-size38 fontf7 iti fontFamily">SPIRO Site</div>
 
-                  <p>
+                  <p class="font-size18 fontFamily textColor">
                     Integrated Laboratory Services Processand Analytical Method
                     DevelopmentResearch and Development Center
                   </p>
-                  <router-link to="/pineSite" class="read-more font-size28"
+                  <router-link to="/pineSite"  class="read-more font-size18 fontf7 fontFamily"
                     >Read more</router-link
                   >
                 </el-col>
@@ -116,16 +120,16 @@ import TheWelcome from "../components/TheWelcome.vue";
                       />
                     </div>
                   </router-link> -->
-                  <div class="font-size24 fontf7 iti">
+                  <div class="font-size24 fontf7 iti fontFamily">
                     International Medical ParkShanghai, China
                   </div>
-                  <div class="font-size38 fontf7 iti">PINE Site</div>
-                  <p>
+                  <div class="font-size38 fontf7 iti fontFamily">PINE Site</div>
+                  <p class="font-size18 fontFamily textColor">
                     Process and Analytical MethodDevelopment Pre-clinical and
                     ClinicalManufacturing Three-building,10,000-square-meter
                     campus
                   </p>
-                  <router-link to="/intelliM" class="read-more font-size28"
+                  <router-link to="/intelliM"  class="read-more font-size18 fontf7 fontFamily"
                     >Read more</router-link
                   >
                 </el-col>
@@ -157,7 +161,7 @@ import TheWelcome from "../components/TheWelcome.vue";
             <el-col
               :span="16"
               :xs="24"
-              class="cdmo-txt bg-pinkbluelfr font-size20"
+              class="cdmo-txt bg-pinkbluelfr font-size24 fontFamily"
               >We provide comprehensive CDMO services encompassing
               processdevelopment, analytical methods, IND-enabling CMc
               (Chemistry,Manufacturing, and Controls), as well as clinical and
