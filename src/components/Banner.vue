@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 11:39:49
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-06 09:09:12
+ * @LastEditTime: 2024-03-06 10:37:21
  * @FilePath: \obio-ui\src\components\Banner.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -19,14 +19,14 @@
         class="container"
       >
         <div class="slide-title">
-          <h2 class="font-size38">Enable Gene Therapy for Better Lives</h2>
-          <h2 class="font-size36">
+          <h2 class="font-size38 fontFamily">Enable Gene Therapy for Better Lives</h2>
+          <h2 class="font-size36 fontFamily">
             Your Trustful Partner in Research and Manufacturing for Gene and
             Cell Therapy
           </h2>
         </div>
         <div class="slide-subtitle">
-          <p class="font-size20">
+          <p class="font-size20 fontFamily">
             Providing client-centered and high-quality service as our
             commitment, we strive to become a world leading gene and cell
             therapy CRO/CDMO group.
@@ -41,9 +41,6 @@
             >Our Commitment</a
           >
         </div>
-        <!-- <div class="btns">
-          <a href="#" class="theme-btn">Learn More</a>
-        </div> -->
       </el-col>
       <div class="ab-svg_color">
         <img src="@/assets/icons/radian.svg" alt="ab-svg" />

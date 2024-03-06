@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 09:07:47
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-06 10:15:44
+ * @LastEditTime: 2024-03-06 10:29:06
  * @FilePath: \obio-ui\src\views\HomeView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -93,13 +93,17 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <div class="font-size24 fontf7 iti fontFamily">
                     International Medical ParkShanghai, China
                   </div>
-                  <div class="font-size38 fontf7 iti fontFamily">SPIRO Site</div>
+                  <div class="font-size38 fontf7 iti fontFamily">
+                    SPIRO Site
+                  </div>
 
                   <p class="font-size18 fontFamily textColor">
                     Integrated Laboratory Services Processand Analytical Method
                     DevelopmentResearch and Development Center
                   </p>
-                  <router-link to="/pineSite"  class="read-more font-size18 fontf7 fontFamily"
+                  <router-link
+                    to="/pineSite"
+                    class="read-more font-size18 fontf7 fontFamily"
                     >Read more</router-link
                   >
                 </el-col>
@@ -129,7 +133,9 @@ import TheWelcome from "../components/TheWelcome.vue";
                     ClinicalManufacturing Three-building,10,000-square-meter
                     campus
                   </p>
-                  <router-link to="/intelliM"  class="read-more font-size18 fontf7 fontFamily"
+                  <router-link
+                    to="/intelliM"
+                    class="read-more font-size18 fontf7 fontFamily"
                     >Read more</router-link
                   >
                 </el-col>
@@ -300,7 +306,9 @@ import TheWelcome from "../components/TheWelcome.vue";
                         <img :src="i.imgUrl" class="icos-a" :alt="i.title" />
                       </div>
                     </div>
-                    <div class="font-size24 fontf5 t">{{ i.title }}</div>
+                    <div class="font-size50 t fontFamily p-title txt-bold">
+                      {{ i.title }}
+                    </div>
                   </a>
                 </el-col>
               </el-row>
