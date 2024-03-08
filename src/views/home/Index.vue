@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 09:07:47
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-08 16:03:04
+ * @LastEditTime: 2024-03-08 17:30:35
  * @FilePath: \obio-ui\src\views\HomeView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -346,12 +346,15 @@ import TheWelcome from "../components/TheWelcome.vue";
 
               <div class="manufacturing-list bg-pinkbluelfr video-list">
                 <div class="content">
-                  <video controls width="100%">
-                    <source
-                      src="https://youtu.be/EqjpDvB0zJY?si=6NRlH_2xp7an93Xr"
-                      type="video/mp4"
-                    />
-                  </video>
+                  <iframe
+                    width="100%"
+                    height="315"
+                    src="https://www.youtube.com/embed/EqjpDvB0zJY?si=eOSNuif51qAlIRjt"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
                   <p class="video-p font-size20 textColor fontFamily">
                     Experience Innovation: Explore OBiO Tech's Intelli-M
                     GMP-Compliant Plasmid Production Line Today!
@@ -362,12 +365,16 @@ import TheWelcome from "../components/TheWelcome.vue";
             <el-col :span="8" :xs="24">
               <div class="manufacturing-list bg-pinkbluelfr video-list">
                 <div class="content">
-                  <video controls width="100%">
-                    <source
-                      src="https://youtu.be/EqjpDvB0zJY?si=6NRlH_2xp7an93Xr"
-                      type="video/mp4"
-                    />
-                  </video>
+                  <iframe
+                    width="100%"
+                    height="315"
+                    src="https://www.youtube.com/embed/EqjpDvB0zJY?si=eakjsutJS8zO01Hy"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+
                   <!-- <iframe
                     width="100%"
                     height="300"
@@ -386,20 +393,23 @@ import TheWelcome from "../components/TheWelcome.vue";
             <el-col :span="8" :xs="24">
               <div class="manufacturing-list bg-pinkbluelfr video-list">
                 <div class="content">
-                  <!-- <video controls width="100%">
-                    <source
-                      src="https://youtu.be/EqjpDvB0zJY?si=6NRlH_2xp7an93Xr"
-                      type="video/mp4"
-                    />
-                  </video> -->
                   <!-- height="300" -->
                   <iframe
                     width="100%"
-                    src="https://youtu.be/EqjpDvB0zJY?si=6NRlH_2xp7an93Xr"
+                    height="315"
+                    src="https://www.youtube.com/embed/EqjpDvB0zJY?si=-Yg1_knqtXA8v-Xb"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                  <!-- <iframe
+                    width="100%"
+                    src="https://youtu.be/EqjpDvB0zJY?si=-Yg1_knqtXA8v-Xb"
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  ></iframe>
+                  ></iframe> -->
                   <p class="video-p font-size20 textColor fontFamily">
                     Elevate Your Production Efficiency Today! OBiO Intelli-M GMP
                     offers Capacities from 20L to 2000L
