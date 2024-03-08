@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 09:07:47
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-08 17:30:35
+ * @LastEditTime: 2024-03-08 17:32:56
  * @FilePath: \obio-ui\src\views\HomeView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -368,7 +368,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <iframe
                     width="100%"
                     height="315"
-                    src="https://www.youtube.com/embed/EqjpDvB0zJY?si=eakjsutJS8zO01Hy"
+                    src="https://www.youtube.com/embed/otK0yzBYHZ0?si=X_V-n6mUrJiF9n23"
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -397,7 +397,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <iframe
                     width="100%"
                     height="315"
-                    src="https://www.youtube.com/embed/EqjpDvB0zJY?si=-Yg1_knqtXA8v-Xb"
+                    src="https://www.youtube.com/embed/CZaS7IvYMJc?si=ROl6eljt6sLjkmb_"
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
