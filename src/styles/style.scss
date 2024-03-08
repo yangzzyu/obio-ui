@@ -537,6 +537,33 @@ a:focus {
   display: none;
   transition: all 0.3s;
 }
+.hero-style-1,
+.hero-style-2 {
+  height: 900px;
+  position: relative;
+}
+.btn-a {
+  width: 140px;
+  margin: 0 10px;
+  display: inline-block;
+  line-height: 40px;
+  height: 40px;
+  border-radius: 50px;
+  padding: 0 15px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  // background: linear-gradient(50deg, #014c97 0, #00818b 66%);
+  background: linear-gradient(
+    to right,
+    rgba(1, 76, 151, 1) 0%,
+    rgba(0, 129, 139, 1) 100%
+  );
+}
+// .btn-a:hover {
+//   background: #fff;
+//   color: #1f757b;
+// }
 /*.home-insights-wrap .ul-list li.active .p{height: 52px;display: block;}*/
 .home-insights-wrap .ul-list li a {
   color: #fff;
@@ -2099,12 +2126,18 @@ header {
   content: "";
   z-index: 2;
 }
+.CDMO-Solutions-wrap {
+  overflow: hidden;
+}
 .CDMO-Solutions-wrap .section-3 {
-  background: #f7f7f7 url(@/assets/icons/Viral_Vector_bg4.jpg) no-repeat center
-    top / 100%;
+  // background: #f7f7f7 url(@/assets/icons/Viral_Vector_bg4.jpg) no-repeat center
+  //   top / 100%;
   padding-top: 20px;
   padding-bottom: 0;
   overflow: hidden;
+}
+.CDMO-Solutions-wrap .section-3 .p-title {
+  margin-bottom: 20px;
 }
 .CDMO-Solutions-wrap .section-3 .list {
   max-width: 1140px;
@@ -2499,7 +2532,7 @@ header {
   overflow: hidden;
 }
 .number-main {
-  margin-top: 80px;
+  margin-top: 40px;
   padding-bottom: 50px;
 }
 .number-main .number-c {

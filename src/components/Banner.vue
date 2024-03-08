@@ -19,7 +19,9 @@
         class="container"
       >
         <div class="slide-title">
-          <h2 class="font-size38 fontFamily">Enable Gene Therapy for Better Lives</h2>
+          <h2 class="font-size38 fontFamily">
+            Enable Gene Therapy for Better Lives
+          </h2>
           <h2 class="font-size36 fontFamily">
             Your Trustful Partner in Research and Manufacturing for Gene and
             Cell Therapy
@@ -34,10 +36,10 @@
         </div>
         <p class="mission-content font-size38">Mission:</p>
         <div class="btns">
-          <a href="#" class="btn1" data-animation="animated bounceInUp"
+          <a href="#" class="btn1 btn-i" data-animation="animated bounceInUp"
             >Our Solutions</a
           >
-          <a href="#" class="btn2" data-animation="animated bounceInUp"
+          <a href="#" class="btn2 btn-i" data-animation="animated bounceInUp"
             >Our Commitment</a
           >
         </div>
@@ -104,12 +106,6 @@ function carouselChange() {
 onBeforeMount(() => {});
 </script>
 <style lang="scss" scoped>
-.hero-style-1,
-.hero-style-2 {
-  height: 900px;
-  position: relative;
-}
-
 .hero-style-1:before,
 .hero-style-2:before {
   content: "";
@@ -137,7 +133,7 @@ onBeforeMount(() => {});
   overflow: hidden;
 }
 .hero-slider {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 .mission-content {
   font-family: Roboto;
@@ -148,47 +144,27 @@ onBeforeMount(() => {});
 }
 .btns {
   overflow: hidden;
-  a {
-    margin: 0 10px;
-    display: inline-block;
-    line-height: 40px;
-    height: 40px;
-    border-radius: 50px;
-    padding: 0 15px;
-    font-weight: 700;
-    color: #ffffff;
-    text-transform: uppercase;
-    // background: linear-gradient(50deg, #014c97 0, #00818b 66%);
-    background: linear-gradient(
-      to right,
-      rgba(1, 76, 151, 1) 0%,
-      rgba(0, 129, 139, 1) 100%
-    );
+
+  display: flex;
+  position: relative;
+  width: 360px;
+  .btn-i {
+    background: linear-gradient(50deg, #014c97 0, #00818b 66%);
+    border-radius: 30px;
+    padding: 5px 10px;
+    cursor: pointer;
+    // position: absolute;
+    z-index: 999999;
+    color: #fff;
+    &:nth-child(2) {
+      margin-left: 30px;
+      right: 0;
+    }
   }
-  a:hover {
+  .btn-i:hover {
     background: #fff;
     color: #1f757b;
   }
-  // display: flex;
-  // position: relative;
-  // width: 360px;
-  // .btn-i {
-  //   background: linear-gradient(50deg, #014c97 0, #00818b 66%);
-  //   border-radius: 30px;
-  //   padding: 5px 10px;
-  //   cursor: pointer;
-  //   position: absolute;
-  //   z-index: 999999;
-  //   color: #fff;
-  //   &:nth-child(2) {
-  //     margin-left: 30px;
-  //     right: 0;
-  //   }
-  // }
-  // .btn-i:hover {
-  //   background: #fff;
-  //   color: #1f757b;
-  // }
 }
 .slide-caption {
   z-index: 99;

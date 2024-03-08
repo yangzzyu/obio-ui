@@ -9,8 +9,7 @@
 <template>
   <div class="lab-sciences">
     <Focus :focusObj="FocusData" />
-    <div class="Laboratory-wrap">
-      <div class="top-txt">
+    <!-- <div class="top-txt">
         <el-col
           :xs="22"
           :sm="20"
@@ -33,8 +32,13 @@
             </p>
           </div>
         </el-col>
-      </div>
-      <div class="Innovations-wrap">
+      </div> -->
+    <section id="cro" class="cro-list">
+      <div
+        class="cro-list-item row"
+        v-for="(item, index) in croList"
+        :key="index"
+      >
         <el-col
           :xs="22"
           :sm="20"
@@ -44,212 +48,240 @@
           style="margin: auto"
           class="container"
         >
-          <div class="list">
-            <el-row class="item row" :gutter="10">
-              <el-col :xs="22" :sm="10" :md="10" :lg="8" :xl="6">
-                <div class="img block">
-                  <img
-                    src="https://www.obio-tech.com/public/uploads/20220328/fb31c3bc021f9b0de1ac68c274c4861b.png"
-                    class="img-responsive"
-                    alt="Plasmid"
-                  />
-                  <i class="line"></i>
-                </div>
-              </el-col>
-              <el-col :xs="22" :sm="14" :md="14" :lg="16" :xl="18">
-                <div class="txt">
-                  <div class="font-size50 fontf8 title">Plasmid</div>
-                  <div class="p font-size20">
-                    Artificial constructed plasmid DNA is one of the most
-                    commonly used vector tools for gene therapy research. At
-                    OBiO, our reliable development team will help you design,
-                    construct and manufacture plasmid for functional genomics
-                    research and viral packaging. We provide you with efficient
-                    vector construction services in a shorten delivery cycle,
-                    optimize your molecule cloning operation with reduced time
-                    and cost, and advance the progress of your research project.
-                    All customized plasmid products are regulated with strict
-                    internal quality controls to ensure that our product
-                    fulfills your design requirements.
-                  </div>
-                </div></el-col
-              >
-            </el-row>
-            <el-row class="item row" :gutter="10">
-              <el-col
-                :xs="{ span: 22, push: 0 }"
-                :sm="{ span: 10, push: 14 }"
-                :md="{ span: 10, push: 14 }"
-                :lg="{ span: 8, push: 16 }"
-                class="col-sm-push-6"
-              >
-                <div class="img block">
-                  <img
-                    src="https://www.obio-tech.com/public/uploads/20220328/3356c9237a4a9f9e07774eb87e9fa841.png"
-                    class="img-responsive"
-                    alt="Viral Vector"
-                  />
-                  <i class="line line-rotate"></i>
-                </div>
-              </el-col>
-              <el-col
-                :xs="{ span: 22, pull: 0 }"
-                :sm="{ span: 14, pull: 10 }"
-                :md="{ span: 14, pull: 10 }"
-                :lg="{ span: 16, pull: 8 }"
-              >
-                <div class="txt">
-                  <div class="font-size50 fontf8 title">Viral Vector</div>
-                  <div class="p font-size20">
-                    Viral vectors are widely used as gene transduction tools in
-                    biomedical research and gene therapy product development. At
-                    OBiO, we provide the design, construction and packaging
-                    services for adeno-associated virus, adenovirus, lentivirus,
-                    and retrovirus. We will help you complete a variety of
-                    biomolecular operations for your gene of interest, including
-                    overexpression, interference, knock-out, cell marking and
-                    physiological regulation, fully meeting your diversified
-                    demands in your study.
-                  </div>
-                </div></el-col
-              >
-            </el-row>
-            <el-row class="item row" :gutter="10">
-              <el-col :xs="22" :sm="10" :md="10" :lg="8" :xl="6">
-                <div class="img block">
-                  <img
-                    src="https://www.obio-tech.com/public/uploads/20220328/093b15d78dc1fd4a455cb07e200f5ea2.png"
-                    class="img-responsive"
-                    alt="Experiment Solutions"
-                  />
-                  <i class="line"></i>
-                </div>
-              </el-col>
-              <el-col :xs="22" :sm="14" :md="14" :lg="16" :xl="18">
-                <div class="txt">
-                  <div class="font-size50 fontf8 title">
-                    Experiment Solutions
-                  </div>
-                  <div class="p font-size20">
-                    “Bridging resources for life science” as our commitment, we
-                    provide a wide spectrum of contract research services for
-                    functional genomics studies including stable producer cell
-                    line construction at laboratory phase, cell biology
-                    experiments, animal model construction, and parameter
-                    testing, as well as other specialty services for exosome,
-                    CRISPR/Cas9 library and non-coding RNA.
-                  </div>
-                  <ul class="ul-pop font-size24 fontf5 color666">
-                    <li class="ub">
-                      <div class="ub ub-ac stn" @click="popLabora(1)">
-                        <i class="pub-ico-rights2"></i>
-                        <div class="stx">Cell Biology</div>
-                      </div>
-                    </li>
-                    <li class="ub">
-                      <div class="ub ub-ac stn" @click="popLabora(2)">
-                        <i class="pub-ico-rights2"></i>
-                        <div class="stx">Stable Cell Line</div>
-                      </div>
-                    </li>
-                    <li class="ub">
-                      <div class="ub ub-ac stn" @click="popLabora(3)">
-                        <i class="pub-ico-rights2"></i>
-                        <div class="stx">Animal Studies</div>
-                      </div>
-                    </li>
-                  </ul>
-                </div></el-col
-              >
-            </el-row>
-            <el-row class="item row" :gutter="10">
-              <el-col
-                :xs="{ span: 22, push: 0 }"
-                :sm="{ span: 10, push: 14 }"
-                :md="{ span: 10, push: 14 }"
-                :lg="{ span: 8, push: 16 }"
-                class="col-sm-push-6"
-              >
-                <div class="img block">
-                  <img
-                    src="https://www.obio-tech.com/public/uploads/20220328/100084be2d003db1e0326fa639675f73.png"
-                    class="img-responsive"
-                    alt="Related Products"
-                  />
-                  <i class="line line-rotate"></i>
-                </div>
-              </el-col>
-              <el-col
-                :xs="{ span: 22, pull: 0 }"
-                :sm="{ span: 14, pull: 10 }"
-                :md="{ span: 14, pull: 10 }"
-                :lg="{ span: 16, pull: 8 }"
-              >
-                <div class="txt">
-                  <div class="font-size50 fontf8 title">Related Products</div>
-                  <div class="p font-size20">
-                    In addition to our contract research service, we provide
-                    in-stock virus vectors, proteins, gRNA library, and relevant
-                    reagent, meeting your research demand from different
-                    aspects.
-                  </div>
-                  <ul class="ul-pop font-size24 fontf5 color666">
-                    <li class="ub">
-                      <div class="ub ub-ac stn" @click="popLabora(4)">
-                        <i class="pub-ico-rights2"></i>
-                        <div class="stx">In-stock viral vectors</div>
-                      </div>
-                    </li>
-                    <li class="ub">
-                      <div class="ub ub-ac stn" @click="popLabora(5)">
-                        <i class="pub-ico-rights2"></i>
-                        <div class="stx">
-                          In-stock protein and relevant reagents
-                        </div>
-                      </div>
-                    </li>
-                    <li class="ub">
-                      <div class="ub ub-ac stn" @click="popLabora(6)">
-                        <i class="pub-ico-rights2"></i>
-                        <div class="stx">gRNA library</div>
-                      </div>
-                    </li>
-                  </ul>
-                </div></el-col
-              >
-            </el-row>
-            <el-row class="item row" :gutter="10">
-              <el-col :xs="22" :sm="10" :md="10" :lg="8" :xl="6">
-                <div class="img block">
-                  <img
-                    src="https://www.obio-tech.com/public/uploads/20220328/b2b256a7f88419a9892e559af40522b9.png"
-                    class="img-responsive"
-                    alt="Extracellular Vesicle"
-                  />
-                  <i class="line"></i>
-                </div>
-              </el-col>
-              <el-col :xs="22" :sm="14" :md="14" :lg="16" :xl="18">
-                <div class="txt">
-                  <div class="font-size50 fontf8 title">
-                    Extracellular Vesicle
-                  </div>
-                  <div class="p font-size20">
-                    Our services for extracellular vesicle include isolation,
-                    identification, and functional research at the laboratory
-                    stage. For samples from different sources, our scientist
-                    team has developed multiple isolation solutions which have
-                    been successfully applied in samples of cells, body fluids
-                    and tissue exosomes such as cerebrospinal fluid, urine,
-                    brain tissue and liver.
-                  </div>
-                </div></el-col
-              >
-            </el-row>
-          </div>
+          <el-row :gutter="100">
+            <el-col :xs="24" :span="10"
+              ><div class="animate-imgxx uof img">
+                <img :src="item.imgUrl" alt="SPIRO Site" />
+              </div>
+            </el-col>
+            <el-col :xs="24" :span="14">
+              <h1 class="font-size50 fontf7 iti fontFamily item-tit">
+                {{ item.title }}
+              </h1>
+              <p class="font-size30 fontf7 fontFamily cro-p textColor">
+                {{ item.text }}
+              </p>
+              <router-link
+                to="/spiroSite"
+                class="font-size18 fontf7 fontFamily btn-a"
+                >Read more</router-link
+              ></el-col
+            >
+          </el-row>
         </el-col>
       </div>
-    </div>
+    </section>
+    <!-- <div class="Innovations-wrap">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
+        <div class="list">
+          <el-row class="item row" :gutter="10">
+            <el-col :xs="22" :sm="10" :md="10" :lg="8" :xl="6">
+              <div class="img block">
+                <img
+                  src="https://www.obio-tech.com/public/uploads/20220328/fb31c3bc021f9b0de1ac68c274c4861b.png"
+                  class="img-responsive"
+                  alt="Plasmid"
+                />
+                <i class="line"></i>
+              </div>
+            </el-col>
+            <el-col :xs="22" :sm="14" :md="14" :lg="16" :xl="18">
+              <div class="txt">
+                <div class="font-size50 fontf8 title">Plasmid</div>
+                <div class="p font-size20">
+                  Artificial constructed plasmid DNA is one of the most commonly
+                  used vector tools for gene therapy research. At OBiO, our
+                  reliable development team will help you design, construct and
+                  manufacture plasmid for functional genomics research and viral
+                  packaging. We provide you with efficient vector construction
+                  services in a shorten delivery cycle, optimize your molecule
+                  cloning operation with reduced time and cost, and advance the
+                  progress of your research project. All customized plasmid
+                  products are regulated with strict internal quality controls
+                  to ensure that our product fulfills your design requirements.
+                </div>
+              </div></el-col
+            >
+          </el-row>
+          <el-row class="item row" :gutter="10">
+            <el-col
+              :xs="{ span: 22, push: 0 }"
+              :sm="{ span: 10, push: 14 }"
+              :md="{ span: 10, push: 14 }"
+              :lg="{ span: 8, push: 16 }"
+              class="col-sm-push-6"
+            >
+              <div class="img block">
+                <img
+                  src="https://www.obio-tech.com/public/uploads/20220328/3356c9237a4a9f9e07774eb87e9fa841.png"
+                  class="img-responsive"
+                  alt="Viral Vector"
+                />
+                <i class="line line-rotate"></i>
+              </div>
+            </el-col>
+            <el-col
+              :xs="{ span: 22, pull: 0 }"
+              :sm="{ span: 14, pull: 10 }"
+              :md="{ span: 14, pull: 10 }"
+              :lg="{ span: 16, pull: 8 }"
+            >
+              <div class="txt">
+                <div class="font-size50 fontf8 title">Viral Vector</div>
+                <div class="p font-size20">
+                  Viral vectors are widely used as gene transduction tools in
+                  biomedical research and gene therapy product development. At
+                  OBiO, we provide the design, construction and packaging
+                  services for adeno-associated virus, adenovirus, lentivirus,
+                  and retrovirus. We will help you complete a variety of
+                  biomolecular operations for your gene of interest, including
+                  overexpression, interference, knock-out, cell marking and
+                  physiological regulation, fully meeting your diversified
+                  demands in your study.
+                </div>
+              </div></el-col
+            >
+          </el-row>
+          <el-row class="item row" :gutter="10">
+            <el-col :xs="22" :sm="10" :md="10" :lg="8" :xl="6">
+              <div class="img block">
+                <img
+                  src="https://www.obio-tech.com/public/uploads/20220328/093b15d78dc1fd4a455cb07e200f5ea2.png"
+                  class="img-responsive"
+                  alt="Experiment Solutions"
+                />
+                <i class="line"></i>
+              </div>
+            </el-col>
+            <el-col :xs="22" :sm="14" :md="14" :lg="16" :xl="18">
+              <div class="txt">
+                <div class="font-size50 fontf8 title">Experiment Solutions</div>
+                <div class="p font-size20">
+                  “Bridging resources for life science” as our commitment, we
+                  provide a wide spectrum of contract research services for
+                  functional genomics studies including stable producer cell
+                  line construction at laboratory phase, cell biology
+                  experiments, animal model construction, and parameter testing,
+                  as well as other specialty services for exosome, CRISPR/Cas9
+                  library and non-coding RNA.
+                </div>
+                <ul class="ul-pop font-size24 fontf5 color666">
+                  <li class="ub">
+                    <div class="ub ub-ac stn" @click="popLabora(1)">
+                      <i class="pub-ico-rights2"></i>
+                      <div class="stx">Cell Biology</div>
+                    </div>
+                  </li>
+                  <li class="ub">
+                    <div class="ub ub-ac stn" @click="popLabora(2)">
+                      <i class="pub-ico-rights2"></i>
+                      <div class="stx">Stable Cell Line</div>
+                    </div>
+                  </li>
+                  <li class="ub">
+                    <div class="ub ub-ac stn" @click="popLabora(3)">
+                      <i class="pub-ico-rights2"></i>
+                      <div class="stx">Animal Studies</div>
+                    </div>
+                  </li>
+                </ul>
+              </div></el-col
+            >
+          </el-row>
+          <el-row class="item row" :gutter="10">
+            <el-col
+              :xs="{ span: 22, push: 0 }"
+              :sm="{ span: 10, push: 14 }"
+              :md="{ span: 10, push: 14 }"
+              :lg="{ span: 8, push: 16 }"
+              class="col-sm-push-6"
+            >
+              <div class="img block">
+                <img
+                  src="https://www.obio-tech.com/public/uploads/20220328/100084be2d003db1e0326fa639675f73.png"
+                  class="img-responsive"
+                  alt="Related Products"
+                />
+                <i class="line line-rotate"></i>
+              </div>
+            </el-col>
+            <el-col
+              :xs="{ span: 22, pull: 0 }"
+              :sm="{ span: 14, pull: 10 }"
+              :md="{ span: 14, pull: 10 }"
+              :lg="{ span: 16, pull: 8 }"
+            >
+              <div class="txt">
+                <div class="font-size50 fontf8 title">Related Products</div>
+                <div class="p font-size20">
+                  In addition to our contract research service, we provide
+                  in-stock virus vectors, proteins, gRNA library, and relevant
+                  reagent, meeting your research demand from different aspects.
+                </div>
+                <ul class="ul-pop font-size24 fontf5 color666">
+                  <li class="ub">
+                    <div class="ub ub-ac stn" @click="popLabora(4)">
+                      <i class="pub-ico-rights2"></i>
+                      <div class="stx">In-stock viral vectors</div>
+                    </div>
+                  </li>
+                  <li class="ub">
+                    <div class="ub ub-ac stn" @click="popLabora(5)">
+                      <i class="pub-ico-rights2"></i>
+                      <div class="stx">
+                        In-stock protein and relevant reagents
+                      </div>
+                    </div>
+                  </li>
+                  <li class="ub">
+                    <div class="ub ub-ac stn" @click="popLabora(6)">
+                      <i class="pub-ico-rights2"></i>
+                      <div class="stx">gRNA library</div>
+                    </div>
+                  </li>
+                </ul>
+              </div></el-col
+            >
+          </el-row>
+          <el-row class="item row" :gutter="10">
+            <el-col :xs="22" :sm="10" :md="10" :lg="8" :xl="6">
+              <div class="img block">
+                <img
+                  src="https://www.obio-tech.com/public/uploads/20220328/b2b256a7f88419a9892e559af40522b9.png"
+                  class="img-responsive"
+                  alt="Extracellular Vesicle"
+                />
+                <i class="line"></i>
+              </div>
+            </el-col>
+            <el-col :xs="22" :sm="14" :md="14" :lg="16" :xl="18">
+              <div class="txt">
+                <div class="font-size50 fontf8 title">
+                  Extracellular Vesicle
+                </div>
+                <div class="p font-size20">
+                  Our services for extracellular vesicle include isolation,
+                  identification, and functional research at the laboratory
+                  stage. For samples from different sources, our scientist team
+                  has developed multiple isolation solutions which have been
+                  successfully applied in samples of cells, body fluids and
+                  tissue exosomes such as cerebrospinal fluid, urine, brain
+                  tissue and liver.
+                </div>
+              </div></el-col
+            >
+          </el-row>
+        </div>
+      </el-col>
+    </div> -->
     <Events />
   </div>
   <el-dialog
@@ -290,8 +322,10 @@
 import { ref } from "vue";
 import Focus from "@/components/Focus.vue";
 import Events from "@/components/Events.vue";
+import { handleViteImages, goRouter } from "@/utils";
+
 const FocusData = ref({
-  title: "Laboratory Sciences",
+  title: "CRO Service",
   hiddenXsImgUrl:
     "https://www.obio-tech.com/public/uploads/20220402/39c0eb1d2e5cf6c9f1d40cc78ce30544.jpg",
   visibleXsImgUrl:
@@ -302,6 +336,33 @@ function handleClose() {
   Labora.value = {};
   dialogVisible.value = false;
 }
+const croList = ref([
+  {
+    imgUrl: handleViteImages("@/assets/icons/croIcon1.png"),
+    title: "Plasmid",
+    text: `At 0Bi0, our dedicateddevelopment team iscommitted to assistingyou in designing,constructing, andmanufacturing plasmidsfor fuctional genomicsresearch, as well asprovidingexpertise inviral packaging.`,
+  },
+  {
+    imgUrl: handleViteImages("@/assets/icons/croIcon2.png"),
+    title: "Viral Vector",
+    text: `We specialize in offeringcomprehensive servicesencompassing thedesign, construction, andpackaging of varioustypes of viral vectors.Additionally, we assist inexecuting a diverserange of biomolecularoperations tailored toyour specific gene ofinterest, ensuringthorough supportthroughout the process.`,
+  },
+  {
+    imgUrl: handleViteImages("@/assets/icons/croIcon3.png"),
+    title: "Experiment Solutions",
+    text: `We offer an extensivearray of contractresearch servicestailored for functionalgenomics studies.`,
+  },
+  {
+    imgUrl: handleViteImages("@/assets/icons/croIcon4.png"),
+    title: "Related Products",
+    text: `We offer a comprehensive range ofin-stock virus vectors,proteins, gRNA libraries.and relevant reagents,catering to diverse research needs acrossvarious aspects of your project.`,
+  },
+  {
+    imgUrl: handleViteImages("@/assets/icons/croIcon5.png"),
+    title: "Extracellular Vesicle",
+    text: `Our services for extracellularvesicle include isolation,identification, and functionalresearch at the laboratory stage.For samples from differentsources, our scientist team hasdeveloped multiple isolationsolutions which have beensuccessfully applied in samplesof cells, body fluids and tissueexosomes such as cerebrospinalfluid, urine, brain tissue and liver.`,
+  },
+]);
 const Labora = ref(<any>{});
 const LaboraList = ref([
   {
@@ -358,4 +419,27 @@ function popLabora(id) {
 }
 </script>
 
-<style></style>
+<style lang='scss'>
+.cro-list {
+  .cro-list-item {
+    // margin-bottom: 40px;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:nth-child(odd) {
+      background: #fff;
+    }
+    &:nth-child(even) {
+      background: rgba(8, 74, 159, 0.05);
+    }
+    img {
+      width: 100%;
+    }
+    .item-tit {
+      color: #1f757b;
+      margin-bottom: 20px;
+    }
+  }
+}
+</style>

@@ -7,7 +7,7 @@
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
-  <div class="focus">
+  <div class="focus hero-style-1 hero-style-2">
     <div class="hidden-xs-only focus-img">
       <img :src="focusObj.hiddenXsImgUrl" :alt="focusObj.title" />
     </div>
@@ -31,6 +31,9 @@
         </el-col>
       </div>
     </div>
+    <div class="ab-svg_color">
+      <img src="@/assets/icons/radian.svg" alt="ab-svg" />
+    </div>
   </div>
 </template>
 
@@ -48,5 +51,7 @@ const props = defineProps({
 <style>
 .focus-img {
   display: flex;
+  width: 100%;
+  height: 100%;
 }
 </style>

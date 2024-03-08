@@ -169,8 +169,9 @@
               <el-menu-item index="/team">Leadership Team</el-menu-item>
             </el-sub-menu>
             <el-menu-item index="/sys" class="menu-t1"
-              >Laboratory Sciences</el-menu-item
+              >Capability & Commitment</el-menu-item
             >
+            <!-- Laboratory Sciences -->
             <!-- popper-class="sub-popper" -->
             <el-sub-menu
               index="/cdmo"
@@ -204,7 +205,10 @@
                 >Cold Chain Logistics</el-menu-item
               >
             </el-sub-menu>
-            <el-menu-item index="/cx" class="menu-t1">Innovations</el-menu-item>
+            <el-menu-item index="/sys" class="menu-t1"
+              >CRO Service</el-menu-item
+            >
+            <!-- <el-menu-item index="/cx" class="menu-t1">Innovations</el-menu-item> -->
             <el-sub-menu
               index="/news"
               popper-class="sub-popper"

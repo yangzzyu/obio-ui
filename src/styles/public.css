@@ -288,19 +288,23 @@ li {
 .focus {
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 /* .focus a{display:block;width:100%;background-position:center center;background-size:100% auto;background-repeat:no-repeat;} */
 .focus img {
-  width: 100%;
+  /* width: 100%; */
 }
 .focus .txt {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 60%;
   z-index: 2;
-  color: #fff;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 56px;
+  color: #00ffea;
 }
 .focus-title {
   margin-top: 30px;

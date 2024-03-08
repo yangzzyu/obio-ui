@@ -410,7 +410,8 @@ import TheWelcome from "../components/TheWelcome.vue";
           </el-row>
         </el-col>
       </section>
-      <section id="newsout" class="news-container">
+      <Events />
+      <!-- <section id="newsout" class="news-container">
         <el-col
           :xs="22"
           :sm="20"
@@ -429,7 +430,6 @@ import TheWelcome from "../components/TheWelcome.vue";
             </el-col>
             <el-col :span="14" :xs="24" class="font-size20 news-list">
               <div class="news-i">
-                <!-- bg-pinkbluelfr -->
                 <h3 class="title-color font-size24 fontFamily">
                   Jan.13th 2024
                 </h3>
@@ -461,7 +461,7 @@ import TheWelcome from "../components/TheWelcome.vue";
             </el-col>
           </el-row>
         </el-col>
-      </section>
+      </section> -->
       <section id="careerout" class="career-container">
         <el-col
           :xs="22"
@@ -755,6 +755,8 @@ import { handleViteImages, goRouter } from "@/utils";
 import { onMounted, onUnmounted, ref } from "vue";
 import { useRouter } from "vue-router";
 import { releases, events } from "@/views/insights/data/Index";
+import Events from "@/components/Events.vue";
+
 type FormItem = {
   [key: string]: string;
 };
