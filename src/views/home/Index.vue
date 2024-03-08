@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 09:07:47
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-06 10:29:06
+ * @LastEditTime: 2024-03-08 16:03:04
  * @FilePath: \obio-ui\src\views\HomeView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -386,20 +386,20 @@ import TheWelcome from "../components/TheWelcome.vue";
             <el-col :span="8" :xs="24">
               <div class="manufacturing-list bg-pinkbluelfr video-list">
                 <div class="content">
-                  <video controls width="100%">
+                  <!-- <video controls width="100%">
                     <source
                       src="https://youtu.be/EqjpDvB0zJY?si=6NRlH_2xp7an93Xr"
                       type="video/mp4"
                     />
-                  </video>
-                  <!-- <iframe
+                  </video> -->
+                  <!-- height="300" -->
+                  <iframe
                     width="100%"
-                    height="300"
-                    src="https://www.youtube.com/embed/R6UtDlJShKo"
+                    src="https://youtu.be/EqjpDvB0zJY?si=6NRlH_2xp7an93Xr"
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  ></iframe> -->
+                  ></iframe>
                   <p class="video-p font-size20 textColor fontFamily">
                     Elevate Your Production Efficiency Today! OBiO Intelli-M GMP
                     offers Capacities from 20L to 2000L
@@ -462,7 +462,8 @@ import TheWelcome from "../components/TheWelcome.vue";
           </el-row>
         </el-col>
       </section> -->
-      <section id="careerout" class="career-container">
+      <Career />
+      <!-- <section id="careerout" class="career-container">
         <el-col
           :xs="22"
           :sm="20"
@@ -549,7 +550,7 @@ import TheWelcome from "../components/TheWelcome.vue";
             </el-col>
           </el-row>
         </el-col>
-      </section>
+      </section> -->
 
       <!-- <div class="home-contact">
         <el-col
@@ -756,6 +757,7 @@ import { onMounted, onUnmounted, ref } from "vue";
 import { useRouter } from "vue-router";
 import { releases, events } from "@/views/insights/data/Index";
 import Events from "@/components/Events.vue";
+import Career from "@/components/Career.vue";
 
 type FormItem = {
   [key: string]: string;

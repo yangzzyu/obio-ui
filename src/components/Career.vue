@@ -1,0 +1,104 @@
+<!--
+ * @Author: yangyu 1431330771@qq.com
+ * @Date: 2024-01-18 08:59:26
+ * @LastEditors: yangyu 1431330771@qq.com
+ * @LastEditTime: 2024-03-08 15:59:46
+ * @FilePath: \obio-ui\src\views\AboutView.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<template>
+  <section id="careerout" class="career-container">
+    <el-col
+      :xs="22"
+      :sm="20"
+      :md="20"
+      :lg="20"
+      :xl="22"
+      style="margin: auto"
+      class="container"
+    >
+      <h1 class="p-title font-size50 txt-bold fontFamily">
+        Career and CultureOur Culture
+      </h1>
+      <div class="wysiwyg--content colour-white">
+        <p class="fontFamily textColor">
+          Mission: Enable gene therapy for a better lives Value: Customer First,
+          Efficient Execution, Pursuit of Excellence, lnnovation Breakthroughs,
+          integrity and Pragmatism
+        </p>
+      </div>
+      <el-row class="news--slider row" :gutter="10">
+        <el-col :xs="24" :span="12" class="news--slider-i">
+          <router-link
+            to="/spiroSite"
+            class="block tans service--box_link bg-pinkbluelfr career-a"
+          >
+            <el-row
+              :gutter="20"
+              class="service--box align-items-start career-i"
+            >
+              <el-col :span="8" class="career-i"
+                ><div class="service--box_icon mb-3 min-width-70">
+                  <img
+                    class="icon--white"
+                    src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
+                    alt="GMP Vector Manufacturing icon"
+                  />
+                  <img
+                    class="icon--colour"
+                    src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
+                    alt="GMP Vector Manufacturing icon"
+                  /></div
+              ></el-col>
+              <el-col :span="16" class="career-i">
+                <h1
+                  class="font-bold p-large mb-3 font-size30 txt-bold fontFamily"
+                >
+                  Life in OBIO
+                </h1></el-col
+              >
+            </el-row>
+          </router-link>
+        </el-col>
+        <el-col :xs="24" :span="12" class="news--slider-i">
+          <router-link
+            to="/spiroSite"
+            class="block tans service--box_link bg-pinkbluelfr career-a"
+          >
+            <el-row
+              :gutter="20"
+              class="service--box align-items-start career-i"
+            >
+              <el-col :span="8" class="career-i"
+                ><div class="service--box_icon mb-3 min-width-70">
+                  <img
+                    class="icon--white"
+                    src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
+                    alt="GMP Vector Manufacturing icon"
+                  />
+                  <img
+                    class="icon--colour"
+                    src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
+                    alt="GMP Vector Manufacturing icon"
+                  /></div
+              ></el-col>
+              <el-col :span="16" class="career-i">
+                <h1
+                  class="font-bold p-large mb-3 font-size30 txt-bold fontFamily"
+                >
+                  Job Opening
+                </h1></el-col
+              >
+            </el-row>
+          </router-link>
+        </el-col>
+      </el-row>
+    </el-col>
+  </section>
+</template>
+
+<script lang="ts" setup name="Career">
+import { ref } from "vue";
+</script>
+
+<style scoped></style>

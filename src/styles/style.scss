@@ -1445,6 +1445,28 @@ a:focus {
     }
   }
 }
+.cro-list {
+  .cro-list-item {
+    // margin-bottom: 40px;
+    padding: 40px 0;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    &:nth-child(odd) {
+      background: #fff;
+    }
+    &:nth-child(even) {
+      background: rgba(8, 74, 159, 0.05);
+    }
+    img {
+      width: 100%;
+    }
+    .item-tit {
+      color: #1f757b;
+      margin-bottom: 20px;
+    }
+  }
+}
 /*.in-about-wrap .section-3 .fac-con .row .img{
     border-radius: 0 20px 0 20px;
 }*/

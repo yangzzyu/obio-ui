@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-22 21:59:54
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-04 09:58:32
+ * @LastEditTime: 2024-03-08 16:16:27
  * @FilePath: \obio-ui\src\components\Header.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -168,7 +168,7 @@
               </el-sub-menu>
               <el-menu-item index="/team">Leadership Team</el-menu-item>
             </el-sub-menu>
-            <el-menu-item index="/sys" class="menu-t1"
+            <el-menu-item index="/cap" class="menu-t1"
               >Capability & Commitment</el-menu-item
             >
             <!-- Laboratory Sciences -->
@@ -218,7 +218,7 @@
             >
               <template #title>
                 <div @click="router.push('/news')" class="menu-t1">
-                  Insights
+                  News
                 </div>
               </template>
               <el-menu-item index="/releases">Press Releases</el-menu-item>
@@ -236,9 +236,13 @@
                 </div>
               </el-menu-item> -->
             </el-sub-menu>
-            <el-menu-item @click="openUrl" class="menu-t1"
-              >Investor Relations</el-menu-item
+            <!-- Careers -->
+            <el-menu-item index="/careers" class="menu-t1"
+              >Careers</el-menu-item
             >
+            <!-- <el-menu-item @click="openUrl" class="menu-t1"
+              >Investor Relations</el-menu-item
+            > -->
             <!-- <el-menu-item index="/contact" class="menu-t1"
               >Contact Us</el-menu-item
             > -->
