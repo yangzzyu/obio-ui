@@ -2,42 +2,68 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 11:39:49
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-02-04 13:42:28
+ * @LastEditTime: 2024-03-06 10:37:21
  * @FilePath: \obio-ui\src\components\Banner.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
-  <section id="Hero-Slider" class="custom--form">
-    <div class="container" style="margin: auto">
-      <div class="row justify-content-center">
-        <div class="Limit">
-          <div class="pub-ico leftArrow" @click="arrowClick('left')"></div>
-          <div class="pub-ico rightArrow" @click="arrowClick('right')"></div>
-          <el-carousel
-            ref="cardShow"
-            :interval="5000"
-            arrow="never"
-            :height="600 + 'px'"
-            :autoplay="false"
-            trigger="click"
-            indicator-position="none"
-            @change="carouselChange"
-          >
-            <el-carousel-item v-for="item in imgList" :key="item.id">
-              <div class="img_con">
-                <over-lay
-                  v-if="isShow"
-                  :key="item.id + Math.random()"
-                  :itemData="item"
-                ></over-lay>
-                <!-- <img class="element-img" alt="" :src="item.imgUrl" /> -->
-              </div>
-            </el-carousel-item>
-          </el-carousel>
+  <section class="hero hero-slider-wrapper hero-style-1 hero-style-2">
+    <div class="hero-slider">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
+        <div class="slide-title">
+          <h2 class="font-size38 fontFamily">
+            Enable Gene Therapy for Better Lives
+          </h2>
+          <h2 class="font-size36 fontFamily">
+            Your Trustful Partner in Research and Manufacturing for Gene and
+            Cell Therapy
+          </h2>
         </div>
+        <div class="slide-subtitle">
+          <p class="font-size20 fontFamily">
+            Providing client-centered and high-quality service as our
+            commitment, we strive to become a world leading gene and cell
+            therapy CRO/CDMO group.
+          </p>
+        </div>
+        <p class="mission-content font-size38">Mission:</p>
+        <div class="btns">
+          <a href="#" class="btn1 btn-i" data-animation="animated bounceInUp"
+            >Our Solutions</a
+          >
+          <a href="#" class="btn2 btn-i" data-animation="animated bounceInUp"
+            >Our Commitment</a
+          >
+        </div>
+      </el-col>
+      <div class="ab-svg_color">
+        <img src="@/assets/icons/radian.svg" alt="ab-svg" />
       </div>
     </div>
   </section>
+  <!-- <section id="Hero-Slider" class="custom--form">
+    <div class="container" style="margin: auto">
+      <div class="row justify-content-center">
+        <div class="Limit">
+          <div class="img_con" v-for="item in imgList" :key="item.id">
+            <over-lay
+              v-if="isShow"
+              :key="item.id + Math.random()"
+              :itemData="item"
+            ></over-lay>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
 </template>
 <script lang="ts" setup>
 import { onBeforeMount, ref, watch } from "vue";
@@ -80,110 +106,87 @@ function carouselChange() {
 onBeforeMount(() => {});
 </script>
 <style lang="scss" scoped>
-//.img_cover{
-//  width: 100%;
-//  height: 100%;
-//  background: rgba(51,112,255,.2);
-//}
-.banner {
-  position: relative;
-}
-.pub-ico {
-  width: 38px;
-  height: 30px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
+.hero-style-1:before,
+.hero-style-2:before {
+  content: "";
+  width: 100%;
+  height: 110%;
   position: absolute;
-  bottom: 15vh;
-  z-index: 9999;
-  cursor: pointer;
+  left: 0;
+  top: -10%;
+  background: url(@/assets/icons/carousel_bg1.jpg) no-repeat center center /
+    cover;
+  z-index: -2;
 }
-.leftArrow {
-  background-image: url("@/assets/icons/ico_left1.png");
-  right: 50%;
-  margin-right: 5px;
+.slide-title {
+  font-family: Roboto;
+  font-weight: bold;
+  color: #00ffea;
+  overflow: hidden;
 }
-.leftArrow:not(.swiper-button-disabled):hover {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("@/assets/icons/ico_left2.png");
+.slide-subtitle {
+  font-family: Roboto;
+  font-weight: 500;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
-.rightArrow {
-  background-image: url("@/assets/icons/ico_right1.png");
-  left: 50%;
-  margin-left: 5px;
+.hero-slider {
+  padding: 4rem 0;
 }
-.rightArrow:not(.swiper-button-disabled):hover {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("@/assets/icons/ico_right2.png");
+.mission-content {
+  font-family: Roboto;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
-.el-carousel__item h3 {
-  color: #475669;
-  font-size: 18px;
-  opacity: 0.75;
-  line-height: 300px;
-  margin: 0;
-}
-.el-carousel__item {
-  background-color: transparent;
-}
-// .el-carousel__item:nth-child(2n) {
-//   background-color: #99a9bf;
-// }
+.btns {
+  overflow: hidden;
 
-// .el-carousel__item:nth-child(2n + 1) {
-//   background-color: #d3dce6;
-// }
-
-.img_con {
-  width: 100%;
-  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  :after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    // background: rgba(51, 112, 255, 0.2);
-    height: 100%;
-    z-index: 666;
-  }
-
-  .element-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-:deep(.el-carousel__arrow) {
-  display: block !important;
-  width: 70px;
-  height: 70px;
-  font-size: 40px;
-  background-color: rgba(90, 88, 88, 0.1);
-}
-
-:deep(.el-carousel__arrow:hover) {
-  background-color: rgba(16, 15, 15, 0.3);
-}
-.Limit {
-  width: 100%;
   position: relative;
+  width: 360px;
+  .btn-i {
+    background: linear-gradient(50deg, #014c97 0, #00818b 66%);
+    border-radius: 30px;
+    padding: 5px 10px;
+    cursor: pointer;
+    // position: absolute;
+    z-index: 999999;
+    color: #fff;
+    &:nth-child(2) {
+      margin-left: 30px;
+      right: 0;
+    }
+  }
+  .btn-i:hover {
+    background: #fff;
+    color: #1f757b;
+  }
 }
-.custom--form {
-  //   background-image: url(../../_dist/images/icons/carousel_bg.png);
-  background: url(@/assets/icons/carousel_bg.png) no-repeat;
-  background-position: center center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+.slide-caption {
+  z-index: 99;
+}
+@media (max-width: 1199px) {
+  .hero-style-1,
+  .hero-style-2 {
+    height: 750px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-style-1,
+  .hero-style-2 {
+    height: 725px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-style-1,
+  .hero-style-2 {
+    height: 450px;
+  }
 }
 </style>

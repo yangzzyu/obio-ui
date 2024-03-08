@@ -7,7 +7,7 @@
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
-  <div id="top-bar-wrap" class="clr" v-if="shadowTop">
+  <!-- <div id="top-bar-wrap" class="clr" v-if="shadowTop">
     <div id="top-bar" class="clr container has-no-content">
       <div id="top-bar-inner" class="clr">
         <div id="top-bar-content" class="clr top-bar-right">
@@ -28,16 +28,7 @@
                 <router-link to="/contact" class="menu-link"
                   >CONTACT US</router-link
                 >
-                <!-- <a title="Contact" href="/contact-us" class="menu-link"
-                  >CONTACT US</a
-                > -->
               </li>
-              <!-- <li
-                id="menu-item-2099"
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2099"
-              >
-                <a href="/careers" class="menu-link">CAREERS</a>
-              </li> -->
               <li
                 id="menu-item-146"
                 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-146"
@@ -66,9 +57,6 @@
                     size="lg"
                     :icon="['fab', 'weixin']"
                   />
-                  <!--                   
-                  <i class="fab fa-twitter alg-tb-icon" aria-hidden="true"></i
-                > -->
                 </a>
               </li>
               <li
@@ -93,8 +81,6 @@
                     size="lg"
                     :icon="['fab', 'linkedin']"
                   />
-                  <!-- <i class="fal fa-envelope alg-tb-ifs" aria-hidden="true"></i
-                > -->
                 </a>
               </li>
               <li
@@ -107,22 +93,14 @@
                     size="lg"
                     :icon="['fab', 'youtube']"
                   />
-                  <!-- <i
-                    class="fal fa-print alg-tb-ifs allogene-print"
-                    aria-hidden="true"
-                  ></i
-                > -->
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        <!-- #top-bar-content -->
       </div>
-      <!-- #top-bar-inner -->
     </div>
-    <!-- #top-bar -->
-  </div>
+  </div> -->
   <!-- :class="{ shadow: headerShadowActive }" -->
   <div class="header">
     <div class="header_container">
@@ -149,7 +127,7 @@
             :ellipsis="false"
             :default-active="activeIndex"
             mode="horizontal"
-            text-color="#0e686f"
+            text-color="#0D4DA1"
             router
             class="hidden-sm-and-down"
             active-text-color="#bd242a"
@@ -191,8 +169,9 @@
               <el-menu-item index="/team">Leadership Team</el-menu-item>
             </el-sub-menu>
             <el-menu-item index="/sys" class="menu-t1"
-              >Laboratory Sciences</el-menu-item
+              >Capability & Commitment</el-menu-item
             >
+            <!-- Laboratory Sciences -->
             <!-- popper-class="sub-popper" -->
             <el-sub-menu
               index="/cdmo"
@@ -226,7 +205,10 @@
                 >Cold Chain Logistics</el-menu-item
               >
             </el-sub-menu>
-            <el-menu-item index="/cx" class="menu-t1">Innovations</el-menu-item>
+            <el-menu-item index="/sys" class="menu-t1"
+              >CRO Service</el-menu-item
+            >
+            <!-- <el-menu-item index="/cx" class="menu-t1">Innovations</el-menu-item> -->
             <el-sub-menu
               index="/news"
               popper-class="sub-popper"
@@ -261,6 +243,76 @@
               >Contact Us</el-menu-item
             > -->
           </el-menu>
+          <ul class="icon-list">
+            <li
+              id="menu-item-146"
+              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-146"
+            >
+              <a
+                title="LinkedIn"
+                href="https://www.linkedin.com/company/allogene-therapeutics/"
+                class="menu-link"
+                ><i
+                  class="fab fa-linkedin-in alg-tb-icon"
+                  aria-hidden="true"
+                ></i
+              ></a>
+            </li>
+            <li
+              id="menu-item-147"
+              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-147"
+            >
+              <a
+                title="Twitter"
+                href="https://twitter.com/AllogeneTx"
+                class="menu-link"
+              >
+                <font-awesome-icon
+                  class="footer-icon"
+                  size="lg"
+                  :icon="['fab', 'weixin']"
+                />
+              </a>
+            </li>
+            <li
+              id="menu-item-148"
+              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-148"
+            >
+              <a title="Share" href="#" class="menu-link"
+                ><span class="modal-61a916ebae560">Share</span></a
+              >
+            </li>
+            <li
+              id="menu-item-149"
+              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-149"
+            >
+              <a
+                title="Email Us"
+                href="mailto://info@allogene.com"
+                class="menu-link"
+              >
+                <font-awesome-icon
+                  class="footer-icon"
+                  size="lg"
+                  :icon="['fab', 'linkedin']"
+                />
+                <!-- <i class="fal fa-envelope alg-tb-ifs" aria-hidden="true"></i
+                > -->
+              </a>
+            </li>
+            <li
+              id="menu-item-150"
+              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-150"
+            >
+              <a title="Print" href="#" class="menu-link">
+                <font-awesome-icon
+                  class="footer-icon"
+                  size="lg"
+                  :icon="['fab', 'youtube']"
+                />
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -603,6 +655,22 @@ h2 {
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+}
+.icon-list {
+  display: flex;
+  .menu-item {
+    margin-right: 10px;
+    // background: linear-gradient(
+    //   to right,
+    //   rgba(1, 76, 151, 1) 0%,
+    //   rgba(0, 129, 139, 1) 100%
+    // );
+    // -webkit-background-clip: text; /*将设置的背景颜色限制在文字中*/
+    // -webkit-text-fill-color: transparent; /*给文字设置成透明*/
+    a:hover {
+      color: #000;
+    }
   }
 }
 </style>

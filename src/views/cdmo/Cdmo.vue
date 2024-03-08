@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-27 15:32:33
+ * @LastEditTime: 2024-03-08 08:59:22
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -18,67 +18,256 @@
         style="margin: auto"
         class="container"
       >
-        <div class="text font-size20">
-          <p>
-            <span style="line-height: 2"
-              >Through years of dedicated effort, OBiO has built an integrated
-              process development system, supported by a flexible cGMP
-              manufacturing platform, comprehensive quality system and efficient
-              project management. Our experienced team of experts will navigate
-              the industrialization process with you side-by-side. With our
-              technical expertise in viral vector, oncolytic virus and cell
-              therapy, we will help you to accelerate your product life-cycle
-              from pre-clinical to commercially ready.&nbsp;</span
-            ><br />
-            <span style="line-height: 2"></span>
-          </p>
-          <p>
-            <br />
-          </p>
-        </div>
+        <el-row :gutter="50" class="cdmo-top">
+          <el-col :xs="24" :span="8"
+            ><div class="animate-imgxx uof img">
+              <img
+                :src="handleViteImages('@/assets/icons/cdmo_top.png')"
+                alt="SPIRO Site"
+              />
+            </div>
+          </el-col>
+          <el-col :xs="24" :span="16">
+            <p class="font-size20 fontf7 fontFamily cro-p textColor">
+              We provide comprehensive CDMO services encompassing process
+              development, analytical methods, IND-enabling CMC (Chemistry,
+              Manufacturing, and Controls), as well as clinical and commercial
+              manufacturing for viral vector, oncolytic virus, and cell therapy
+              products. Our expertise extends to offering holistic solutions
+              tailored to support the industrialization and commercialization of
+              various products at the Pre-IND stage and beyond. Through years of
+              dedicated effort, OBiO has built an integrated process development
+              system, supported by a flexible cGMP manufacturing platform,
+              comprehensive quality system and efficient project management. Our
+              experienced team of experts will navigate the industrialization
+              process with you side-by-side. With our technical expertise in
+              viral vector, oncolytic virus and cell therapy, we will help you
+              to accelerate your product life-cycle from pre-clinical to
+              commercially ready.
+            </p>
+          </el-col>
+        </el-row>
         <div class="number-main text-center cGMP-zIndex active" id="numgo">
-          <el-row class="row color666">
-            <el-col :span="8" class="tx-c">
-              <el-statistic :value="cellSourceValue" class="number-c">
-                <template #suffix>
-                  <div class="nums fontf9">
-                    <span class="fh">+</span>
+          <el-row class="row color666" :gutter="100">
+            <el-col :span="8" :xs="24" class="tx-c">
+              <div class="nums-list bg-pinkbluelfr">
+                <div class="content">
+                  <el-statistic :value="cellSourceValue" class="number-c">
+                    <template #suffix>
+                      <div class="nums fontf9">
+                        <span class="fh">+</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size28">
+                    Gene and Cell Therapy Programs
                   </div>
-                </template>
-              </el-statistic>
-              <div class="pn fontf7 font-size28">
-                Gene and Cell Therapy Programs
+                </div>
               </div>
             </el-col>
-            <el-col :span="8" class="tx-c">
-              <el-statistic :value="processSourceValue" class="number-c">
-                <template #suffix>
-                  <div class="nums fontf9">
-                    <span class="fh">+</span>
+            <el-col :span="8" :xs="24" class="tx-c">
+              <div class="nums-list bg-pinkbluelfr">
+                <div class="content">
+                  <el-statistic :value="processSourceValue" class="number-c">
+                    <template #suffix>
+                      <div class="nums fontf9">
+                        <span class="fh">+</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size28">
+                    Process Development Projects
                   </div>
-                </template>
-              </el-statistic>
-              <div class="pn fontf7 font-size28">
-                Process Development Projects
+                </div>
               </div>
             </el-col>
-            <el-col :span="8" class="tx-c">
-              <el-statistic class="number-c" :value="analyticalSourceValue">
-                <template #suffix>
-                  <div class="nums fontf9">
-                    <span class="fh">+</span>
+            <el-col :span="8" :xs="24" class="tx-c">
+              <div class="nums-list bg-pinkbluelfr">
+                <div class="content">
+                  <el-statistic class="number-c" :value="analyticalSourceValue">
+                    <template #suffix>
+                      <div class="nums fontf9">
+                        <span class="fh">+</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size28">
+                    Analytical Method Development Projects
                   </div>
-                </template>
-              </el-statistic>
-              <div class="pn fontf7 font-size28">
-                Analytical Method Development Projects
+                </div>
               </div>
             </el-col>
           </el-row>
         </div>
       </el-col>
     </div>
-    <div class="section-2">
+    <div class="in-about-wrap facilities-box">
+      <div class="section-3">
+        <el-col
+          :xs="22"
+          :sm="20"
+          :md="20"
+          :lg="20"
+          :xl="22"
+          style="margin: auto"
+          class="container"
+        >
+          <h1 class="p-title font-size50 txt-bold fontFamily">Facilities</h1>
+
+          <div class="fac-con">
+            <el-row class="row" :gutter="10">
+              <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
+                <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="content">
+                    <img
+                      src="https://www.obio-tech.com/public/uploads/20220330/0b0fe1e2c354c50f919655666ccfd951.jpg"
+                      alt="SPIRO Site"
+                    />
+                  </div>
+                </div>
+                <!-- <router-link to="/spiroSite" class="block tans">
+                    <div class="animate-imgxx uof img">
+                      <img
+                        src="https://www.obio-tech.com/public/uploads/20220330/0b0fe1e2c354c50f919655666ccfd951.jpg"
+                        alt="SPIRO Site"
+                      />
+                    </div>
+                  </router-link> -->
+                <div class="font-size24 fontf7 iti fontFamily">
+                  Lin-Gang Free-Trade ZoneShanghai, China
+                </div>
+                <div class="font-size38 fontf7 iti fontFamily">
+                  OBlO Intelli-M
+                </div>
+                <p class="font-size18 fontFamily textColor">
+                  Process Development CharacterizationClinical and Commercial
+                  Manufacturing77,000-square-meter Facility for Global Supply
+                </p>
+                <router-link
+                  to="/spiroSite"
+                  class="read-more font-size18 fontf7 fontFamily"
+                  >Read more</router-link
+                >
+              </el-col>
+              <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
+                <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="content">
+                    <img
+                      src="https://www.obio-tech.com/public/uploads/20231212/55a4fdd1f7a358da8a3de3e938f99114.jpg"
+                      alt="PINE Site"
+                    />
+                  </div>
+                </div>
+                <!-- <router-link to="/pineSite" class="block tans">
+                    <div class="animate-imgxx uof img">
+                      <img
+                        src="https://www.obio-tech.com/public/uploads/20231212/55a4fdd1f7a358da8a3de3e938f99114.jpg"
+                        alt="PINE Site"
+                      />
+                    </div>
+                  </router-link> -->
+                <div class="font-size24 fontf7 iti fontFamily">
+                  International Medical ParkShanghai, China
+                </div>
+                <div class="font-size38 fontf7 iti fontFamily">SPIRO Site</div>
+
+                <p class="font-size18 fontFamily textColor">
+                  Integrated Laboratory Services Processand Analytical Method
+                  DevelopmentResearch and Development Center
+                </p>
+                <router-link
+                  to="/pineSite"
+                  class="read-more font-size18 fontf7 fontFamily"
+                  >Read more</router-link
+                >
+              </el-col>
+              <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
+                <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="content">
+                    <img
+                      src="https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg"
+                      alt="OBiO Intelli-M"
+                    />
+                  </div>
+                </div>
+                <!-- <router-link to="/intelliM" class="block tans">
+                    <div class="animate-imgxx uof img">
+                      <img
+                        src="https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg"
+                        alt="OBiO Intelli-M"
+                      />
+                    </div>
+                  </router-link> -->
+                <div class="font-size24 fontf7 iti fontFamily">
+                  International Medical ParkShanghai, China
+                </div>
+                <div class="font-size38 fontf7 iti fontFamily">PINE Site</div>
+                <p class="font-size18 fontFamily textColor">
+                  Process and Analytical MethodDevelopment Pre-clinical and
+                  ClinicalManufacturing Three-building,10,000-square-meter
+                  campus
+                </p>
+                <router-link
+                  to="/intelliM"
+                  class="read-more font-size18 fontf7 fontFamily"
+                  >Read more</router-link
+                >
+              </el-col>
+            </el-row>
+          </div></el-col
+        >
+      </div>
+    </div>
+    <section id="cro" class="cro-list">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
+        <h1 class="p-title font-size50 txt-bold fontFamily">CDMO Service</h1>
+      </el-col>
+      <div
+        class="cro-list-item row"
+        v-for="(item, index) in croList"
+        :key="index"
+      >
+        <el-col
+          :xs="22"
+          :sm="20"
+          :md="20"
+          :lg="20"
+          :xl="22"
+          style="margin: auto"
+          class="container"
+        >
+          <el-row :gutter="100">
+            <el-col :xs="24" :span="10"
+              ><div class="animate-imgxx uof img">
+                <img :src="item.imgUrl" alt="SPIRO Site" />
+              </div>
+            </el-col>
+            <el-col :xs="24" :span="14">
+              <h1 class="font-size50 fontf7 iti fontFamily item-tit">
+                {{ item.title }}
+              </h1>
+              <p class="font-size30 fontf7 fontFamily cro-p textColor">
+                {{ item.text }}
+              </p>
+              <router-link
+                to="/spiroSite"
+                class="font-size18 fontf7 fontFamily btn-a"
+                >Read more</router-link
+              ></el-col
+            >
+          </el-row>
+        </el-col>
+      </div>
+    </section>
+    <!-- <div class="section-2">
       <el-col
         :xs="22"
         :sm="20"
@@ -147,8 +336,8 @@
           </template>
         </div>
       </el-col>
-    </div>
-    <div class="section-3">
+    </div> -->
+    <!-- <div class="section-3">
       <el-col
         :xs="22"
         :sm="20"
@@ -227,9 +416,9 @@
           </div>
         </div>
       </el-col>
-    </div>
+    </div> -->
 
-    <div class="section-4">
+    <!-- <div class="section-4">
       <el-col
         :xs="22"
         :sm="20"
@@ -315,7 +504,7 @@
           >
         </div>
       </el-col>
-    </div>
+    </div> -->
     <div class="Insights-wrap">
       <div class="section-3">
         <el-col
@@ -434,6 +623,8 @@ import { ref } from "vue";
 import { useTransition } from "@vueuse/core";
 import { ViralList } from "./data/Index";
 import { ArrowRight } from "@element-plus/icons-vue";
+import { handleViteImages } from "@/utils";
+
 import {
   Autoplay,
   Navigation,
@@ -579,7 +770,33 @@ const SolutionsList = ref([
       "https://www.obio-tech.com/public/uploads/20230926/5da84fdce35d08986f725c27ca5d1f59.jpg",
   },
 ]);
-
+const croList = ref([
+  {
+    imgUrl: handleViteImages("@/assets/icons/croIcon1.png"),
+    title: "Plasmid",
+    text: `At 0Bi0, our dedicateddevelopment team iscommitted to assistingyou in designing,constructing, andmanufacturing plasmidsfor fuctional genomicsresearch, as well asprovidingexpertise inviral packaging.`,
+  },
+  {
+    imgUrl: handleViteImages("@/assets/icons/croIcon2.png"),
+    title: "Viral Vector",
+    text: `We specialize in offeringcomprehensive servicesencompassing thedesign, construction, andpackaging of varioustypes of viral vectors.Additionally, we assist inexecuting a diverserange of biomolecularoperations tailored toyour specific gene ofinterest, ensuringthorough supportthroughout the process.`,
+  },
+  {
+    imgUrl: handleViteImages("@/assets/icons/croIcon3.png"),
+    title: "Experiment Solutions",
+    text: `We offer an extensivearray of contractresearch servicestailored for functionalgenomics studies.`,
+  },
+  {
+    imgUrl: handleViteImages("@/assets/icons/croIcon4.png"),
+    title: "Related Products",
+    text: `We offer a comprehensive range ofin-stock virus vectors,proteins, gRNA libraries.and relevant reagents,catering to diverse research needs acrossvarious aspects of your project.`,
+  },
+  {
+    imgUrl: handleViteImages("@/assets/icons/croIcon5.png"),
+    title: "Extracellular Vesicle",
+    text: `Our services for extracellularvesicle include isolation,identification, and functionalresearch at the laboratory stage.For samples from differentsources, our scientist team hasdeveloped multiple isolationsolutions which have beensuccessfully applied in samplesof cells, body fluids and tissueexosomes such as cerebrospinalfluid, urine, brain tissue and liver.`,
+  },
+]);
 const cellSource = ref(0);
 const processSource = ref(0);
 const analyticalSource = ref(0);
@@ -613,5 +830,36 @@ const activeIndex = ref(0);
     color: #039d8f;
     line-height: 0.75;
   }
+}
+.cdmo-top {
+  align-items: center;
+  img {
+    width: 100%;
+  }
+}
+.number-main {
+  .tx-c {
+    margin-bottom: 20px;
+  }
+}
+.nums-list {
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 1px -1px 13px 3px rgba(0, 0, 0, 0.13);
+
+  .content {
+    border-radius: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #fff;
+    transition: all 0.5s;
+    // margin-top: -20px;
+    &:hover {
+      transform: translateY(-7px);
+    }
+  }
+}
+.facilities-box {
+  margin-top: 30px;
 }
 </style>

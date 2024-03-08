@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 09:07:47
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-27 15:28:50
+ * @LastEditTime: 2024-03-06 10:29:06
  * @FilePath: \obio-ui\src\views\HomeView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -20,31 +20,6 @@ import TheWelcome from "../components/TheWelcome.vue";
   <div class="index">
     <div class="banner-wrap">
       <Banner :banner-height="BannerHeight"></Banner>
-      <!-- <div class="home-about-wrap animation-name: fadeInUp">
-        <div class="home-about-content">
-          <el-col
-            :xs="22"
-            :sm="20"
-            :md="20"
-            :lg="20"
-            :xl="22"
-            style="margin: auto"
-            class="container"
-          >
-            <div class="pub-title"><i class="line"></i></div>
-            <div
-              class="txt fontf8 font-size50 line-height18 wow fadeInUp animated"
-              data-wow-offset="100"
-              data-wow-delay="0s"
-              style="visibility: visible; animation-name: fadeInUp"
-            >
-              Providing client-centered and high-quality service as our
-              commitment, we strive to become a world leading gene and cell
-              therapy CRO/CDMO group.
-            </div>
-          </el-col>
-        </div>
-      </div> -->
       <!-- <div class="home-about-wrap"> -->
       <div class="in-about-wrap">
         <div class="section-3">
@@ -57,73 +32,110 @@ import TheWelcome from "../components/TheWelcome.vue";
             style="margin: auto"
             class="container"
           >
-            <h1 class="title-color our-txt font-size50 txt-bold">
-              Our Solutions Manufacturing
+            <h1 class="title-color font-size70 txt-bold section-title">
+              Our Solutions
             </h1>
+            <h2 class="title-color our-txt font-size50 section-title">
+              Manufacturing
+            </h2>
             <div class="fac-con">
               <el-row class="row" :gutter="10">
-                <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-                  <router-link to="/spiroSite" class="block tans">
+                <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
+                  <div class="manufacturing-list bg-pinkbluelfr">
+                    <div class="content">
+                      <img
+                        src="https://www.obio-tech.com/public/uploads/20220330/0b0fe1e2c354c50f919655666ccfd951.jpg"
+                        alt="SPIRO Site"
+                      />
+                    </div>
+                  </div>
+                  <!-- <router-link to="/spiroSite" class="block tans">
                     <div class="animate-imgxx uof img">
                       <img
                         src="https://www.obio-tech.com/public/uploads/20220330/0b0fe1e2c354c50f919655666ccfd951.jpg"
                         alt="SPIRO Site"
                       />
                     </div>
-                  </router-link>
-                  <div class="font-size24 fontf7 iti">
+                  </router-link> -->
+                  <div class="font-size24 fontf7 iti fontFamily">
                     Lin-Gang Free-Trade ZoneShanghai, China
                   </div>
-                  <div class="font-size38 fontf7 iti">OBlO Intelli-M</div>
-                  <p>
+                  <div class="font-size38 fontf7 iti fontFamily">
+                    OBlO Intelli-M
+                  </div>
+                  <p class="font-size18 fontFamily textColor">
                     Process Development CharacterizationClinical and Commercial
                     Manufacturing77,000-square-meter Facility for Global Supply
                   </p>
-                  <router-link to="/spiroSite" class="read-more font-size28"
+                  <router-link
+                    to="/spiroSite"
+                    class="read-more font-size18 fontf7 fontFamily"
                     >Read more</router-link
                   >
                 </el-col>
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-                  <router-link to="/pineSite" class="block tans">
+                  <div class="manufacturing-list bg-pinkbluelfr">
+                    <div class="content">
+                      <img
+                        src="https://www.obio-tech.com/public/uploads/20231212/55a4fdd1f7a358da8a3de3e938f99114.jpg"
+                        alt="PINE Site"
+                      />
+                    </div>
+                  </div>
+                  <!-- <router-link to="/pineSite" class="block tans">
                     <div class="animate-imgxx uof img">
                       <img
                         src="https://www.obio-tech.com/public/uploads/20231212/55a4fdd1f7a358da8a3de3e938f99114.jpg"
                         alt="PINE Site"
                       />
                     </div>
-                  </router-link>
-                  <div class="font-size24 fontf7 iti">
+                  </router-link> -->
+                  <div class="font-size24 fontf7 iti fontFamily">
                     International Medical ParkShanghai, China
                   </div>
-                  <div class="font-size38 fontf7 iti">SPIRO Site</div>
+                  <div class="font-size38 fontf7 iti fontFamily">
+                    SPIRO Site
+                  </div>
 
-                  <p>
+                  <p class="font-size18 fontFamily textColor">
                     Integrated Laboratory Services Processand Analytical Method
                     DevelopmentResearch and Development Center
                   </p>
-                  <router-link to="/pineSite" class="read-more font-size28"
+                  <router-link
+                    to="/pineSite"
+                    class="read-more font-size18 fontf7 fontFamily"
                     >Read more</router-link
                   >
                 </el-col>
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-                  <router-link to="/intelliM" class="block tans">
+                  <div class="manufacturing-list bg-pinkbluelfr">
+                    <div class="content">
+                      <img
+                        src="https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg"
+                        alt="OBiO Intelli-M"
+                      />
+                    </div>
+                  </div>
+                  <!-- <router-link to="/intelliM" class="block tans">
                     <div class="animate-imgxx uof img">
                       <img
                         src="https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg"
                         alt="OBiO Intelli-M"
                       />
                     </div>
-                  </router-link>
-                  <div class="font-size24 fontf7 iti">
+                  </router-link> -->
+                  <div class="font-size24 fontf7 iti fontFamily">
                     International Medical ParkShanghai, China
                   </div>
-                  <div class="font-size38 fontf7 iti">PINE Site</div>
-                  <p>
+                  <div class="font-size38 fontf7 iti fontFamily">PINE Site</div>
+                  <p class="font-size18 fontFamily textColor">
                     Process and Analytical MethodDevelopment Pre-clinical and
                     ClinicalManufacturing Three-building,10,000-square-meter
                     campus
                   </p>
-                  <router-link to="/intelliM" class="read-more font-size28"
+                  <router-link
+                    to="/intelliM"
+                    class="read-more font-size18 fontf7 fontFamily"
                     >Read more</router-link
                   >
                 </el-col>
@@ -142,7 +154,7 @@ import TheWelcome from "../components/TheWelcome.vue";
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size50 txt-bold">CDMO Service</h1>
+          <h1 class="p-title font-size50 txt-bold fontFamily">CDMO Service</h1>
           <el-row class="image--callout">
             <el-col :span="8" :xs="24" class="visible-xs-block">
               <div
@@ -155,7 +167,7 @@ import TheWelcome from "../components/TheWelcome.vue";
             <el-col
               :span="16"
               :xs="24"
-              class="cdmo-txt bg-pinkbluelfr font-size20"
+              class="cdmo-txt bg-pinkbluelfr font-size24 fontFamily"
               >We provide comprehensive CDMO services encompassing
               processdevelopment, analytical methods, IND-enabling CMc
               (Chemistry,Manufacturing, and Controls), as well as clinical and
@@ -200,7 +212,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                       alt="GMP Vector Manufacturing icon"
                     />
                   </div>
-                  <h3 class="font-bold p-large mb-3">
+                  <h3 class="font-bold p-large mb-3 font-size24">
                     {{ item.title }}
                   </h3>
                   <div style="height: 200px" class="cdmo-cont">
@@ -209,7 +221,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                       <li v-for="(i, idx) in item.list" :key="idx">{{ i }}</li>
                     </ul>
                   </div>
-                  <span class="mt-auto flex-shrink-0 btn--underline"
+                  <span class="mt-auto flex-shrink-0 btn--underline blog-btn"
                     >Read more</span
                   >
                 </div>
@@ -228,9 +240,9 @@ import TheWelcome from "../components/TheWelcome.vue";
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size50 txt-bold">CRO Service</h1>
+          <h1 class="p-title font-size50 txt-bold fontFamily">CRO Service</h1>
           <div class="wysiwyg--content colour-white">
-            <p>
+            <p class="textColor fontFamily font-size24">
               OBi0 provides an integrated portfolio of plasmid construction,
               viral packagingcell biology and animal study services for
               biomedical researchers
@@ -250,11 +262,15 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <img :src="item.imgUrl" alt="SPIRO Site" />
                 </div>
               </router-link>
-              <h4 class="font-size28 fontf7 iti">{{ item.title }}</h4>
-              <p>
+              <h4 class="font-size24 fontf7 iti fontFamily">
+                {{ item.title }}
+              </h4>
+              <p class="font-size18 fontf7 fontFamily cro-p">
                 {{ item.text }}
               </p>
-              <router-link to="/spiroSite" class="read-more font-size28"
+              <router-link
+                to="/spiroSite"
+                class="read-more font-size18 fontf7 fontFamily"
                 >Read more</router-link
               >
             </el-col>
@@ -262,21 +278,19 @@ import TheWelcome from "../components/TheWelcome.vue";
         </el-col>
       </section>
       <section id="Ourout" class="">
+        <!-- <div class="pub-title-p ub ub-ver ub-pe">
+          <i class="line"></i>
+          <div class="p font-size18"></div>
+        </div> -->
         <el-col
-          :xs="22"
-          :sm="20"
-          :md="20"
-          :lg="20"
-          :xl="22"
+          :span="24"
           style="margin: auto"
           class="container CDMO-Solutions-wrap"
         >
-          <h1 class="p-title font-size50 txt-bold">Our Commitment</h1>
+          <h1 class="p-title font-size50 txt-bold fontFamily">
+            Our Commitment
+          </h1>
           <div class="section-2">
-            <div class="pub-title-p ub ub-ver ub-pe">
-              <i class="line"></i>
-              <div class="p font-size18"></div>
-            </div>
             <div class="list">
               <el-row class="row">
                 <el-col
@@ -292,7 +306,9 @@ import TheWelcome from "../components/TheWelcome.vue";
                         <img :src="i.imgUrl" class="icos-a" :alt="i.title" />
                       </div>
                     </div>
-                    <div class="font-size24 fontf5 t">{{ i.title }}</div>
+                    <div class="font-size50 t fontFamily p-title txt-bold">
+                      {{ i.title }}
+                    </div>
                   </a>
                 </el-col>
               </el-row>
@@ -300,6 +316,7 @@ import TheWelcome from "../components/TheWelcome.vue";
           </div>
         </el-col>
       </section>
+
       <section id="Seeout" class="">
         <el-col
           :xs="22"
@@ -310,51 +327,91 @@ import TheWelcome from "../components/TheWelcome.vue";
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size50 txt-bold">See Our Capabilities</h1>
+          <h1 class="p-title font-size50 txt-bold fontFamily">
+            See Our Capabilities
+          </h1>
           <el-row :gutter="20">
             <!-- https://youtu.be/EqjpDvB0zJY?si=6NRlH_2xp7an93Xr
             https://youtu.be/otK0yzBYHZ0?si=YtjJ-M8Q8EUxg93m
             https://youtu.be/CZaS7IvYMJc?si=8go0JVTGqKO03r5l -->
-            <el-col :span="8">
-              <iframe
+            <el-col :span="8" :xs="24">
+              <!-- <iframe
                 width="100%"
                 height="615"
-                src="https://www.youtube.com/embed/R6UtDlJShKo"
+                src="https://youtu.be/EqjpDvB0zJY?si=6NRlH_2xp7an93Xr"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
-              Experience Innovation: Explore OBiO Tech's Intelli-M GMP-Compliant
-              Plasmid Production Line Today!</el-col
+              ></iframe> -->
+
+              <div class="manufacturing-list bg-pinkbluelfr video-list">
+                <div class="content">
+                  <video controls width="100%">
+                    <source
+                      src="https://youtu.be/EqjpDvB0zJY?si=6NRlH_2xp7an93Xr"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <p class="video-p font-size20 textColor fontFamily">
+                    Experience Innovation: Explore OBiO Tech's Intelli-M
+                    GMP-Compliant Plasmid Production Line Today!
+                  </p>
+                </div>
+              </div></el-col
             >
-            <el-col :span="8">
-              <iframe
-                width="100%"
-                height="615"
-                src="https://www.youtube.com/embed/R6UtDlJShKo"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe
-              >Exciting Milestone: OBiO Lingang Facility Launches Operations in
-              2023!</el-col
+            <el-col :span="8" :xs="24">
+              <div class="manufacturing-list bg-pinkbluelfr video-list">
+                <div class="content">
+                  <video controls width="100%">
+                    <source
+                      src="https://youtu.be/EqjpDvB0zJY?si=6NRlH_2xp7an93Xr"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <!-- <iframe
+                    width="100%"
+                    height="300"
+                    src="https://www.youtube.com/embed/R6UtDlJShKo"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  ></iframe> -->
+                  <p class="video-p font-size20 textColor fontFamily">
+                    Exciting Milestone: OBiO Lingang Facility Launches
+                    Operations in 2023!
+                  </p>
+                </div>
+              </div></el-col
             >
-            <el-col :span="8">
-              <iframe
-                width="100%"
-                height="615"
-                src="https://www.youtube.com/embed/R6UtDlJShKo"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe
-              >Elevate Your Production Efficiency Today! OBiO Intelli-M GMP
-              offers Capacities from 20L to 2000L</el-col
-            >
+            <el-col :span="8" :xs="24">
+              <div class="manufacturing-list bg-pinkbluelfr video-list">
+                <div class="content">
+                  <video controls width="100%">
+                    <source
+                      src="https://youtu.be/EqjpDvB0zJY?si=6NRlH_2xp7an93Xr"
+                      type="video/mp4"
+                    />
+                  </video>
+                  <!-- <iframe
+                    width="100%"
+                    height="300"
+                    src="https://www.youtube.com/embed/R6UtDlJShKo"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  ></iframe> -->
+                  <p class="video-p font-size20 textColor fontFamily">
+                    Elevate Your Production Efficiency Today! OBiO Intelli-M GMP
+                    offers Capacities from 20L to 2000L
+                  </p>
+                </div>
+              </div>
+            </el-col>
           </el-row>
         </el-col>
       </section>
-      <section id="newsout" class="news-container">
+      <Events />
+      <!-- <section id="newsout" class="news-container">
         <el-col
           :xs="22"
           :sm="20"
@@ -364,38 +421,47 @@ import TheWelcome from "../components/TheWelcome.vue";
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size50 txt-bold">News and Events</h1>
+          <h1 class="p-title font-size50 txt-bold fontFamily">
+            News and Events
+          </h1>
           <el-row class="image--callout" :gutter="40">
-            <el-col :span="10" :xs="24">
+            <el-col :span="10" :xs="24" class="left-content">
               <img class="img" src="@/assets/icons/news.png" alt="" />
             </el-col>
             <el-col :span="14" :xs="24" class="font-size20 news-list">
               <div class="news-i">
-                <!-- bg-pinkbluelfr -->
-                <h3 class="title-color">Jan.13th 2024</h3>
-                <p>
+                <h3 class="title-color font-size24 fontFamily">
+                  Jan.13th 2024
+                </h3>
+                <p class="font-size24 fontFamily textColor">
                   Focusing on efficient gene delivery of NK cells, The First
                   Condor Lifeand OBi0 Technology reach a strategic cooperation!
                 </p>
                 <div class="btn bg-pinkbluelfr">Read more</div>
               </div>
               <div class="news-i">
-                <h3 class="title-color">Oct. 24th 2023</h3>
-                <p>
+                <h3 class="title-color font-size24 fontFamily">
+                  Oct. 24th 2023
+                </h3>
+                <p class="font-size24 fontFamily textColor">
                   0Bi0 Announces Strategic Partnership with Refreshgene to
                   RealizeCommercialization of Gene Therapy Product
                 </p>
                 <div class="btn bg-pinkbluelfr">Read more</div>
               </div>
               <div class="news-i">
-                <h3 class="title-color">Oct. 10th-12th 2023</h3>
-                <p>Cell&Gene meeting on the Mesa</p>
+                <h3 class="title-color font-size24 fontFamily">
+                  Oct. 10th-12th 2023
+                </h3>
+                <p class="font-size24 fontFamily textColor">
+                  Cell&Gene meeting on the Mesa
+                </p>
                 <div class="btn bg-pinkbluelfr">Read more</div>
               </div>
             </el-col>
           </el-row>
         </el-col>
-      </section>
+      </section> -->
       <section id="careerout" class="career-container">
         <el-col
           :xs="22"
@@ -406,11 +472,11 @@ import TheWelcome from "../components/TheWelcome.vue";
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size50 txt-bold">
+          <h1 class="p-title font-size50 txt-bold fontFamily">
             Career and CultureOur Culture
           </h1>
           <div class="wysiwyg--content colour-white">
-            <p>
+            <p class="fontFamily textColor">
               Mission: Enable gene therapy for a better lives Value: Customer
               First, Efficient Execution, Pursuit of Excellence, lnnovation
               Breakthroughs, integrity and Pragmatism
@@ -420,7 +486,7 @@ import TheWelcome from "../components/TheWelcome.vue";
             <el-col :xs="24" :span="12" class="news--slider-i">
               <router-link
                 to="/spiroSite"
-                class="block tans service--box_link bg-pinkbluelfr"
+                class="block tans service--box_link bg-pinkbluelfr career-a"
               >
                 <el-row
                   :gutter="20"
@@ -440,7 +506,11 @@ import TheWelcome from "../components/TheWelcome.vue";
                       /></div
                   ></el-col>
                   <el-col :span="16" class="career-i">
-                    <h1 class="font-bold p-large mb-3">Life in OBIO</h1></el-col
+                    <h1
+                      class="font-bold p-large mb-3 font-size30 txt-bold fontFamily"
+                    >
+                      Life in OBIO
+                    </h1></el-col
                   >
                 </el-row>
               </router-link>
@@ -448,7 +518,7 @@ import TheWelcome from "../components/TheWelcome.vue";
             <el-col :xs="24" :span="12" class="news--slider-i">
               <router-link
                 to="/spiroSite"
-                class="block tans service--box_link bg-pinkbluelfr"
+                class="block tans service--box_link bg-pinkbluelfr career-a"
               >
                 <el-row
                   :gutter="20"
@@ -468,7 +538,11 @@ import TheWelcome from "../components/TheWelcome.vue";
                       /></div
                   ></el-col>
                   <el-col :span="16" class="career-i">
-                    <h1 class="font-bold p-large mb-3">Job Opening</h1></el-col
+                    <h1
+                      class="font-bold p-large mb-3 font-size30 txt-bold fontFamily"
+                    >
+                      Job Opening
+                    </h1></el-col
                   >
                 </el-row>
               </router-link>
@@ -681,6 +755,8 @@ import { handleViteImages, goRouter } from "@/utils";
 import { onMounted, onUnmounted, ref } from "vue";
 import { useRouter } from "vue-router";
 import { releases, events } from "@/views/insights/data/Index";
+import Events from "@/components/Events.vue";
+
 type FormItem = {
   [key: string]: string;
 };
@@ -739,7 +815,7 @@ const cdmoList = ref([
   {
     imgUrl: "",
     actImgUrl: "",
-    title: "Viral Vectors AAV:",
+    title: "Viral Vectors",
     list: [
       "Adenoviral vector for delivery of genes",
       "Lentiviral vectors",
