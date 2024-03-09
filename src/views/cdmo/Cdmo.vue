@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-08 08:59:22
+ * @LastEditTime: 2024-03-08 14:30:00
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -267,245 +267,93 @@
         </el-col>
       </div>
     </section>
-    <!-- <div class="section-2">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
-        <div class="pub-title pub-title-p ub ub-ver ub-pe">
-          <i class="line"></i>
-          <span class="fontf8 font-size50"> Versatility for Variety</span>
-          <div class="p font-size18"></div>
-        </div>
-        <div class="infor font-size20">
-          <p>
-            <span style="line-height: 2"
-              >Our extensive technical expertise and process scale-up experience
-              make us a strong and reliable partner for your gene and cell
-              therapy project. We have successfully provided cGMP manufacturing
-              services for multiple clients to support their gene and cell
-              therapy clinical trials in the United States, China, and
-              Australia.&nbsp;</span
-            ><br />
-            <br />
-            <span style="line-height: 2"
-              >We provide process development and cGMP manufacturing for the
-              following gene and cell therapy products:</span
-            ><br />
-            <span style="line-height: 2"></span>
-          </p>
-          <p>
-            <br />
-          </p>
-        </div>
-
-        <div class="list">
-          <el-row class="row">
-            <el-col
-              :span="6"
-              class="item"
-              v-for="(i, k) in ViralList"
-              :key="k"
-              :class="activeIndex === i.id ? 'active' : ''"
-              @mouseenter="activeIndex = i.id"
-              ><a href="/cn/home/cgmp/cid/896" class="boxs block">
-                <div class="img1">
-                  <div class="icos">
-                    <img :src="i.imgUrl" class="icos-a" :alt="i.title" />
-                  </div>
-                </div>
-                <div class="font-size24 fontf5 t">{{ i.title }}</div>
-              </a>
-            </el-col>
-          </el-row>
-        </div>
-
-        <div class="list-mes" id="cdmoMes">
-          <template v-for="(i, k) in ViralList" :key="k">
-            <div class="group" v-show="activeIndex === i.id">
-              <div class="boxs font-size20">
-                {{ i.content }}
-                <p></p>
-              </div>
-            </div>
-          </template>
-        </div>
-      </el-col>
-    </div> -->
-    <!-- <div class="section-3">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
-        <div class="pub-title pub-title-p ub ub-ver ub-pe">
-          <i class="line"></i>
-          <span class="fontf8 font-size50"
-            >Industrialize Your Product at OBiO</span
+    <section>
+      <div class="in-about-wrap innovation-box">
+        <div class="section-3">
+          <el-col
+            :xs="22"
+            :sm="20"
+            :md="20"
+            :lg="20"
+            :xl="22"
+            style="margin: auto"
+            class="container"
           >
-          <div class="p font-size18"></div>
-        </div>
-        <div class="list">
-          <div class="list-con clearfix">
-            <div class="item">
-              <router-link to="/process" class="boxs block">
-                <img
-                  src="https://www.obio-tech.com/public/uploads/20220329/86aefe6d84551370527d380db3102723.png"
-                  alt="Process Development"
-                />
-                <div class="shaw">
-                  <div class="font-size50 fontf7">Process Development</div>
-                  <div class="font-size20 p">
-                    Efficient and Customized Process Development with Board
-                    Product Spectrum
-                  </div>
-                </div>
-              </router-link>
-            </div>
-            <div class="item">
-              <router-link to="/cgmp" class="boxs block">
-                <img
-                  src="https://www.obio-tech.com/public/uploads/20220329/37608c12bbed338f24bebdae54947878.png"
-                  alt="cGMP Manufacturing"
-                />
-                <div class="shaw">
-                  <div class="font-size50 fontf7">cGMP Manufacturing</div>
-                  <div class="font-size20 p">
-                    Flexible Large-Scale GMP Manufacturing Platform
-                  </div>
-                </div>
-              </router-link>
-            </div>
-            <div class="item">
-              <router-link to="/quality" class="boxs block">
-                <img
-                  src="https://www.obio-tech.com/public/uploads/20220329/1421f3595888e8220c1c70678a63751c.png"
-                  alt="Quality &amp; Regulatory"
-                />
-                <div class="shaw">
-                  <div class="font-size50 fontf7">Quality &amp; Regulatory</div>
-                  <div class="font-size20 p">
-                    International Compliant Quality Control System
-                  </div>
-                </div>
-              </router-link>
-            </div>
-            <div class="item">
-              <router-link to="/logistics" class="boxs block">
-                <img
-                  src="https://www.obio-tech.com/public/uploads/20220325/27eb574fecde7e40f15b4be3c86a2d78.png"
-                  alt="Cold Chain Logistics"
-                />
-                <div class="shaw">
-                  <div class="font-size50 fontf7">Cold Chain Logistics</div>
-                  <div class="font-size20 p">
-                    Traceable Cold-Chain Logistics with Controllable Risk
-                  </div>
-                </div>
-              </router-link>
-            </div>
-          </div>
-        </div>
-      </el-col>
-    </div> -->
+            <h1 class="p-title font-size50 txt-bold fontFamily">Innovation</h1>
 
-    <!-- <div class="section-4">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
-        <div class="pub-title pub-title-p ub ub-ver ub-pe">
-          <i class="line"></i>
-          <span class="fontf8 font-size50">F-A-S-T Commitment from OBiO</span>
-          <div class="p font-size18"></div>
-        </div>
-        <div class="content">
-          <el-row class="row">
-            <el-col
-              :xs="{ span: 22, push: 0 }"
-              :sm="{ span: 10, push: 14 }"
-              :md="{ span: 10, push: 14 }"
-              :lg="{ span: 8, push: 16 }"
-            >
-              <div class="list">
-                <div class="item">
-                  <div class="t">
-                    <div class="f fontf8 font-color-ts">F</div>
-                    <div class="tr fontf7">ocus:</div>
+            <div class="fac-con">
+              <el-row class="row" :gutter="10">
+                <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
+                  <div class="manufacturing-list bg-pinkbluelfr">
+                    <div class="content">
+                      <img
+                        src="https://www.obio-tech.com/public/uploads/20220330/0b0fe1e2c354c50f919655666ccfd951.jpg"
+                        alt="SPIRO Site"
+                      />
+                    </div>
                   </div>
-                  <div class="p font-size20 fontf3">
-                    Dedication to Contract Development and Manufacturing Service
+                  <h1 class="font-size38 fontf7 iti fontFamily">
+                    AAVneO™ System
+                  </h1>
+                  <p class="font-size18 fontFamily  txt">
+                    LNext-Generation Capsid Screening Platform
+                  </p>
+                  <router-link
+                    to="/spiroSite"
+                    class="read-more font-size18 fontf7 fontFamily"
+                    >Read more</router-link
+                  >
+                </el-col>
+                <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
+                  <div class="manufacturing-list bg-pinkbluelfr">
+                    <div class="content">
+                      <img
+                        src="https://www.obio-tech.com/public/uploads/20231212/55a4fdd1f7a358da8a3de3e938f99114.jpg"
+                        alt="PINE Site"
+                      />
+                    </div>
                   </div>
-                  <div class="pm font-size18 color666">
-                    Strict Internal Data Management<br />
-                    Comprehensive Patent System<br />
-                    Professional Intellectual Property Protection
+                  <!-- <div class="font-size24 fontf7 iti fontFamily">
+                    International Medical ParkShanghai, China
+                  </div> -->
+                  <h1 class="font-size38 fontf7 iti fontFamily">
+                    OVersatileTM Platform
+                  </h1>
+                  <p class="font-size18 fontFamily textColor txt">
+                    Versatility for Various Needs
+                  </p>
+                  <router-link
+                    to="/pineSite"
+                    class="read-more font-size18 fontf7 fontFamily"
+                    >Read more</router-link
+                  >
+                </el-col>
+                <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
+                  <div class="manufacturing-list bg-pinkbluelfr">
+                    <div class="content">
+                      <img
+                        src="https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg"
+                        alt="OBiO Intelli-M"
+                      />
+                    </div>
                   </div>
-                </div>
-
-                <div class="item">
-                  <div class="t">
-                    <div class="f fontf8 font-color-ts">A</div>
-                    <div class="tr fontf7">cceleration:</div>
-                  </div>
-                  <div class="p font-size20 fontf3">
-                    Commercial Readiness from Technical Expertise
-                  </div>
-                  <div class="pm font-size18 color666">
-                    Advanced Process Development Technologies<br />
-                    Large-Scale Manufacturing Capabilities<br />
-                    Fully-Closed &amp; Automated Downstream Purification
-                  </div>
-                </div>
-
-                <div class="item">
-                  <div class="t">
-                    <div class="f fontf8 font-color-ts">S</div>
-                    <div class="tr fontf7">tandardization:</div>
-                  </div>
-                  <div class="p font-size20 fontf3">
-                    Fully Regulatory Compliance
-                  </div>
-                  <div class="pm font-size18 color666">
-                    GMP-Compliant Facilities and Equipment<br />
-                    Robust Quality Management System<br />
-                    Comprehensive Quality Control Platform
-                  </div>
-                </div>
-
-                <div class="item">
-                  <div class="t">
-                    <div class="f fontf8 font-color-ts">T</div>
-                    <div class="tr fontf7">eam:</div>
-                  </div>
-                  <div class="p font-size20 fontf3">Trustful Expertise</div>
-                  <div class="pm font-size18 color666">
-                    10+ years of Experience in Gene and Cell Therapy<br />
-                    Extensive Experience in IND-Enabling Support<br />
-                    Responses at First Instance
-                  </div>
-                </div>
-              </div>
-            </el-col></el-row
+                  <h1 class="font-size38 fontf7 iti fontFamily"> Proprietary Cell Line  Development</h1>
+                  <p class="font-size18 fontFamily textColor txt">
+                    High-Yielding Cell Line for
+                  </p>
+                  <router-link
+                    to="/intelliM"
+                    class="read-more font-size18 fontf7 fontFamily"
+                    >Read more</router-link
+                  >
+                </el-col>
+              </el-row>
+            </div></el-col
           >
         </div>
-      </el-col>
-    </div> -->
-    <div class="Insights-wrap">
+      </div>
+    </section>
+    <!-- <div class="Insights-wrap">
       <div class="section-3">
         <el-col
           :xs="22"
@@ -614,7 +462,7 @@
           </div>
         </el-col>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -861,5 +709,11 @@ const activeIndex = ref(0);
 }
 .facilities-box {
   margin-top: 30px;
+}
+.innovation-box{
+  margin: 0;
+  .txt{
+    text-align: center;
+  }
 }
 </style>

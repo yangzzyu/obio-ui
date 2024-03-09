@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-27 15:25:11
+ * @LastEditTime: 2024-03-08 16:54:39
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -52,6 +52,146 @@
         </div>
       </el-col>
     </div>
+    <section id="steps" class="steps-details bg-mg">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
+        <div class="row">
+          <div
+            class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-md-offset-1 col-lg-offset-1"
+          >
+            <div class="steps-cont">
+              <ul>
+                <li class="l-con">
+                  <div
+                    class="cont wow fadeIn animated"
+                    data-wow-duration="1.0s"
+                    style="
+                      visibility: visible;
+                      animation-duration: 1s;
+                      animation-name: fadeIn;
+                    "
+                  >
+                    <h2>01. Registration On The Platform</h2>
+                    <p>
+                      Nam in lectus eget nisi aliquam ultrices. Aliquam at
+                      efficitur <br />nulla. Cras sodales eu nibh vel
+                      scelerisque.
+                    </p>
+                  </div>
+                  <span>
+                    2013
+                    
+                  </span>
+                </li>
+                <li class="r-con">
+                  <div
+                    class="cont wow fadeIn animated"
+                    data-wow-duration="1.3s"
+                    style="
+                      visibility: visible;
+                      animation-duration: 1.3s;
+                      animation-name: fadeIn;
+                    "
+                  >
+                    <h2>02. Passing Verification</h2>
+                    <p>
+                      Nam in lectus eget nisi aliquam ultrices. Aliquam at
+                      efficitur <br />nulla. Cras sodales eu nibh vel
+                      scelerisque.
+                    </p>
+                  </div>
+                  <span><i class="fa fa-check-square-o"></i></span>
+                </li>
+                <li class="l-con">
+                  <div
+                    class="cont wow fadeIn animated"
+                    data-wow-duration="1.6s"
+                    style="
+                      visibility: visible;
+                      animation-duration: 1.6s;
+                      animation-name: fadeIn;
+                    "
+                  >
+                    <h2>03. Creating An Application For a Loan</h2>
+                    <p>
+                      Nam in lectus eget nisi aliquam ultrices. Aliquam at
+                      efficitur <br />nulla. Cras sodales eu nibh vel
+                      scelerisque.
+                    </p>
+                  </div>
+                  <span><i class="fa fa-edit"></i></span>
+                  <div class="mid-icons"></div>
+                </li>
+                <li class="r-con">
+                  <div
+                    class="cont wow fadeIn animated"
+                    data-wow-duration="1.9s"
+                    style="
+                      visibility: visible;
+                      animation-duration: 1.9s;
+                      animation-name: fadeIn;
+                    "
+                  >
+                    <h2>04. Financing a Loan</h2>
+                    <p>
+                      Nam in lectus eget nisi aliquam ultrices. Aliquam at
+                      efficitur <br />nulla. Cras sodales eu nibh vel
+                      scelerisque.
+                    </p>
+                  </div>
+                  <span><i class="fa fa-university"></i></span>
+                </li>
+                <li class="l-con">
+                  <div
+                    class="cont wow fadeIn animated"
+                    data-wow-duration="2.1s"
+                    style="
+                      visibility: visible;
+                      animation-duration: 2.1s;
+                      animation-name: fadeIn;
+                    "
+                  >
+                    <h2>05. Activating a Loan</h2>
+                    <p>
+                      Nam in lectus eget nisi aliquam ultrices. Aliquam at
+                      efficitur <br />nulla. Cras sodales eu nibh vel
+                      scelerisque.
+                    </p>
+                  </div>
+                  <span><i class="fa fa-bell"></i></span>
+                </li>
+                <li class="r-con">
+                  <div
+                    class="cont wow fadeIn animated"
+                    data-wow-duration="2.4s"
+                    style="
+                      visibility: visible;
+                      animation-duration: 2.4s;
+                      animation-name: fadeIn;
+                    "
+                  >
+                    <h2>06. Receiving Funds</h2>
+                    <p>
+                      Nam in lectus eget nisi aliquam ultrices. Aliquam at
+                      efficitur <br />nulla. Cras sodales eu nibh vel
+                      scelerisque.
+                    </p>
+                  </div>
+                  <span><i class="fa fa-paw"></i></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </el-col>
+    </section>
     <div class="section-2">
       <el-col
         :xs="14"
@@ -250,5 +390,4 @@ const navigation = ref({
 onMounted(() => {});
 </script>
 
-<style>
-</style>
+<style></style>
