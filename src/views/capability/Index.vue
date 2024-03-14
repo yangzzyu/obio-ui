@@ -40,7 +40,7 @@
                 <div class="service--box_icon mb-3 min-width-70">
                   <img
                     class="icon--white"
-                    src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
+                    :src="item.actImgUrl"
                     alt="GMP Vector Manufacturing icon"
                   />
                   <img
@@ -123,7 +123,7 @@
         </h1>
         <el-row class="our-box-content" :gutter="40">
           <el-col :span="10" :xs="24" class="left-content">
-            <img class="img" src="@/assets/icons/news.png" alt="" />
+            <img class="img" src="@/assets/icons/Viral_Vector_bg3.png" alt="" />
           </el-col>
           <el-col :span="14" :xs="24" class="font-size20 news-list">
             <div class="content-i" v-for="(i, idx) in ourList" :key="idx">
@@ -195,7 +195,7 @@ function handleClose() {
 const cdmoList = ref([
   {
     imgUrl: "",
-    actImgUrl: "",
+    actImgUrl: handleViteImages("@/assets/icons/cap_act1.png"),
     text: `Experienced experts with
 over 10 years inGCT,
 ensuring timely
@@ -205,7 +205,7 @@ product lifecycle.
   },
   {
     imgUrl: "",
-    actImgUrl: "",
+    actImgUrl: handleViteImages("@/assets/icons/cap_act2.png"),
     text: `Efficient technology
 transfer with optimized
 process validation
@@ -213,7 +213,7 @@ process validation
   },
   {
     imgUrl: "",
-    actImgUrl: "",
+    actImgUrl: handleViteImages("@/assets/icons/cap_act3.png"),
     text: `State-of-the-art facilities
 with cGMP compliant
 quality systems
@@ -221,7 +221,7 @@ quality systems
   },
   {
     imgUrl: "",
-    actImgUrl: "",
+    actImgUrl: handleViteImages("@/assets/icons/cap_act4.png"),
     text: `130+ process
 development projects,
 230+analytical
@@ -230,7 +230,7 @@ methods developed.
   },
   {
     imgUrl: "",
-    actImgUrl: "",
+    actImgUrl: handleViteImages("@/assets/icons/cap_act5.png"),
     text: `High standard and
 comprehensive quality
 controls.
@@ -238,7 +238,7 @@ controls.
   },
   {
     imgUrl: "",
-    actImgUrl: "",
+    actImgUrl: handleViteImages("@/assets/icons/cap_act6.png"),
     text: `End-to-End regulatory
 support with guided
 navigation
@@ -429,20 +429,5 @@ Responses at First Instance`,
 }
 .industrialize-box {
   margin: 0;
-}
-.our-box {
-  .our-box-content {
-    .left-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    img {
-      width: 100%;
-    }
-    .content-i {
-      margin-bottom: 20px;
-    }
-  }
 }
 </style>

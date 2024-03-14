@@ -26,7 +26,7 @@ const pageData = ref([
   {
     name: "Insights",
     focusObj: {
-      title: "Insights",
+      title: "News and Events",
       hiddenXsImgUrl:
         "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
       visibleXsImgUrl:

@@ -241,29 +241,33 @@
        
       </el-row> -->
       <div class="foot-link ub">
-      <a href="https://www.youtube.com/@obiotechnology">
-        <font-awesome-icon
-          class="footer-icon"
-          size="lg"
-          :icon="['fab', 'Youtube']"
-        />
-      </a>
-      <a href="https://www.linkedin.com/company/41870372">
-        <font-awesome-icon
-          class="footer-icon"
-          size="lg"
-          :icon="['fab', 'linkedin']"
-      /></a>
-      <a href="https://www.facebook.com/profile.php?id=61555811491695">
-        <font-awesome-icon
-          class="footer-icon"
-          size="lg"
-          :icon="['fab', 'Facebook']"
-      /></a>
-    </div>
+        <a href="https://www.youtube.com/@obiotechnology">
+          <font-awesome-icon
+            class="footer-icon"
+            size="lg"
+            :icon="['fab', 'weixin']"
+          />
+        </a>
+        <a href="https://www.linkedin.com/company/41870372">
+          <font-awesome-icon
+            class="footer-icon"
+            size="lg"
+            :icon="['fab', 'linkedin']"
+        /></a>
+        <a href="https://www.facebook.com/profile.php?id=61555811491695">
+          <font-awesome-icon
+            class="footer-icon"
+            size="lg"
+            :icon="['fab', 'youtube']"
+        /></a>
+        <a href="https://www.facebook.com/profile.php?id=61555811491695">
+          <!-- <font-awesome-icon class="footer-icon" size="lg" :icon="['fab', 'f']" -->
+          <font-awesome-icon :icon="['fas', 'f']" />
+        </a>
+      </div>
     </el-col>
     <!-- <el-col :sm="6" :xs="24" :offset="18" class="wow fadeInRight animated"> -->
-  
+
     <!-- <div class="foot-link ub">
         <router-link
           to="https://www.linkedin.com/company/obiosh"
@@ -508,7 +512,7 @@ h2 {
   grid-template-columns: repeat(8, auto); /* 设置8列 */
   gap: 10px; /* 添加间距（可选）*/
 }
-.foot-link{
+.foot-link {
   justify-content: end;
 }
 </style>

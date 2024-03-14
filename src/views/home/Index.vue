@@ -63,9 +63,11 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <div class="font-size38 fontf7 iti fontFamily">
                     OBlO Intelli-M
                   </div>
-                  <p class="font-size18 fontFamily textColor">
-                    Process Development CharacterizationClinical and Commercial
-                    Manufacturing77,000-square-meter Facility for Global Supply
+                  <p class="font-size18 fontFamily textColor txt-bold">
+                    Process Development Characterization Clinical and Commercial
+                    Manufacturing<text class="fontFamily title-color txt-bold"
+                      >77,000</text
+                    >-square-meter Facility for Global Supply
                   </p>
                   <router-link
                     to="/spiroSite"
@@ -97,7 +99,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                     SPIRO Site
                   </div>
 
-                  <p class="font-size18 fontFamily textColor">
+                  <p class="font-size18 fontFamily textColor txt-bold">
                     Integrated Laboratory Services Processand Analytical Method
                     DevelopmentResearch and Development Center
                   </p>
@@ -128,10 +130,12 @@ import TheWelcome from "../components/TheWelcome.vue";
                     International Medical ParkShanghai, China
                   </div>
                   <div class="font-size38 fontf7 iti fontFamily">PINE Site</div>
-                  <p class="font-size18 fontFamily textColor">
-                    Process and Analytical MethodDevelopment Pre-clinical and
-                    ClinicalManufacturing Three-building,10,000-square-meter
-                    campus
+                  <p class="font-size18 fontFamily textColor txt-bold">
+                    Process and Analytical Method Development Pre-clinical and
+                    Clinical Manufacturing Three-building,<text
+                      class="fontFamily title-color txt-bold"
+                      >10,000</text
+                    >-square-meter campus
                   </p>
                   <router-link
                     to="/intelliM"
@@ -168,14 +172,13 @@ import TheWelcome from "../components/TheWelcome.vue";
               :span="16"
               :xs="24"
               class="cdmo-txt bg-pinkbluelfr font-size24 fontFamily"
-              >We provide comprehensive CDMO services encompassing
-              processdevelopment, analytical methods, IND-enabling CMc
-              (Chemistry,Manufacturing, and Controls), as well as clinical and
-              commercialmanufacturing for viral vector, oncolytic virus, and
-              cell therapyproducts. Our expertise extends to offering holistic
-              solutionstailored to support the industrialization and
-              commercializationof various products at the Pre-lND stage and
-              beyond.</el-col
+              >We provide comprehensive CDMO services encompassing process
+              development, analytical methods, IND-enabling CMC (Chemistry,
+              Manufacturing, and Controls), as well as clinical and commercial
+              manufacturing for viral vector, oncolytic virus, and cell therapy
+              products. Our expertise extends to offering holistic solutions
+              tailored to support the industrialization and commercialization of
+              various products at the Pre-IND stage and beyond.</el-col
             >
             <el-col :span="8" :xs="24" class="hidden-xs">
               <div
@@ -203,12 +206,12 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <div class="service--box_icon mb-3 min-width-70">
                     <img
                       class="icon--white"
-                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
+                      :src="item.actImgUrl"
                       alt="GMP Vector Manufacturing icon"
                     />
                     <img
                       class="icon--colour"
-                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
+                      :src="item.imgUrl"
                       alt="GMP Vector Manufacturing icon"
                     />
                   </div>
@@ -825,8 +828,8 @@ const vectorFooterList = ref([
 ]);
 const cdmoList = ref([
   {
-    imgUrl: "",
-    actImgUrl: "",
+    imgUrl: handleViteImages("@/assets/icons/cdmo_service1.png"),
+    actImgUrl: handleViteImages("@/assets/icons/cdmo_service_act1.png"),
     title: "Viral Vectors",
     list: [
       "Adenoviral vector for delivery of genes",
@@ -835,8 +838,8 @@ const cdmoList = ref([
     ],
   },
   {
-    imgUrl: "",
-    actImgUrl: "",
+    imgUrl: handleViteImages("@/assets/icons/cdmo_service2.png"),
+    actImgUrl: handleViteImages("@/assets/icons/cdmo_service_act2.png"),
     title: "Oncolytic Virus",
     list: [
       "Oncolytic adenoviruses",
@@ -846,8 +849,8 @@ const cdmoList = ref([
     ],
   },
   {
-    imgUrl: "",
-    actImgUrl: "",
+    imgUrl: handleViteImages("@/assets/icons/cdmo_service3.png"),
+    actImgUrl: handleViteImages("@/assets/icons/cdmo_service_act3.png"),
     title: "Cell Therapy Products",
     headTit: "Autologous and homologous immunocyte therapies",
     list: [
@@ -861,8 +864,8 @@ const cdmoList = ref([
     ],
   },
   {
-    imgUrl: "",
-    actImgUrl: "",
+    imgUrl: handleViteImages("@/assets/icons/cdmo_service4.png"),
+    actImgUrl: handleViteImages("@/assets/icons/cdmo_service_act4.png"),
     title: "Plasmid & Nucleotides",
     list: [
       "Plasmid DNA",

@@ -20,31 +20,37 @@
         class="container"
       >
         <h1 class="title-color font-size70 txt-bold section-title fontFamily">
-          Our Culture
+          Life at OBiO
         </h1>
         <h2 class="title-color our-txt font-size30 section-title fontFamily">
-          Mission: Enable gene therapy for better lives
+          As OBiO Tech swiftly evolves, every OBiOers are immersed in an
+          environment fostering "enhanced capabilities, purposeful work, and a
+          fulfilling life."
         </h2>
+        <ul class="font-size24 fontFamily textColor">
+          <li>Enhanced Capabilities</li>
+          <li>Competitive compensation and benefits</li>
+          <li>
+            Opportunities for training, rotation, and continuous education
+          </li>
+          <li>Empowerment, accountability, and value creation</li>
+          <li>
+            Work-Life Balance: A harmonious blend of professional and personal
+            pursuits
+          </li>
+        </ul>
         <p class="font-size24 fontFamily textColor" style="margin-bottom: 20px">
-          At OBiO, we empower gene therapy, driving advancements in gene drug
-          development and clinical applications. We achieve this by providing
-          top-tier technical services to research institutions and companies in
-          the gene therapy field, thus empowering our clients to excel.
-        </p>
-        <p class="font-size24 fontFamily textColor">
-          We continuously collaborate with our clients, fostering the
-          development of the gene therapy industry and working together to
-          realize the noble aspiration of benefiting humanity and all living
-          beings through gene therapy.
+          This encapsulates our vibrant company culture, where every moment is
+          an opportunity for growth and fulfillment.
         </p>
       </el-col>
     </section>
-    <section id="cro" class="cro-list">
-      <div
-        class="cro-list-item row"
-        v-for="(item, index) in croList"
-        :key="index"
-      >
+    <div
+      class="in-about-wrap training-box"
+      v-for="(item, index) in lifeList"
+      :key="index"
+    >
+      <div class="section-3">
         <el-col
           :xs="22"
           :sm="20"
@@ -54,26 +60,31 @@
           style="margin: auto"
           class="container"
         >
-          <el-row :gutter="100">
-            <el-col :xs="24" :span="10"
-              ><div class="animate-imgxx uof img">
-                <img :src="item.imgUrl" alt="SPIRO Site" />
-              </div>
-            </el-col>
-            <el-col :xs="24" :span="14">
-              <h1 class="font-size50 fontf7 iti fontFamily item-tit">
-                {{ item.title }}
-              </h1>
-              <p class="font-size30 fontf7 fontFamily cro-p textColor">
-                {{ item.text }}
-              </p>
-            </el-col>
-          </el-row>
-        </el-col>
+          <h1 class="p-title font-size50 txt-bold fontFamily">
+            {{ item.title }}
+          </h1>
+
+          <div class="fac-con">
+            <el-row class="row" :gutter="10">
+              <el-col
+                :xs="24"
+                :span="6"
+                class=""
+                v-for="(i, index) in item.imgList"
+                :key="index"
+              >
+                <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="content">
+                    <img :src="i" alt="" srcset="" />
+                  </div>
+                </div>
+              </el-col>
+            </el-row></div
+        ></el-col>
       </div>
-    </section>
-    <!-- <Events /> -->
-    <section>
+    </div>
+    <!-- All Hands Meetin -->
+    <section id="meetin" class="meetin-container">
       <el-col
         :xs="22"
         :sm="20"
@@ -82,75 +93,15 @@
         :xl="22"
         style="margin: auto"
         class="container"
-        ><el-row class="news--slider row" :gutter="10">
-          <el-col :xs="24" :span="12" class="news--slider-i">
-            <router-link
-              to="/spiroSite"
-              class="block tans service--box_link bg-pinkbluelfr career-a"
-            >
-              <el-row
-                :gutter="20"
-                class="service--box align-items-start career-i"
-              >
-                <el-col :span="8" class="career-i"
-                  ><div class="service--box_icon mb-3 min-width-70">
-                    <img
-                      class="icon--white"
-                      :src="handleViteImages('@/assets/icons/career_act1.png')"
-                      alt="GMP Vector Manufacturing icon"
-                    />
-                    <img
-                      class="icon--colour"
-                      :src="handleViteImages('@/assets/icons/career1.png')"
-                      alt="GMP Vector Manufacturing icon"
-                    /></div
-                ></el-col>
-                <el-col :span="16" class="career-i">
-                  <h1
-                    class="font-bold p-large mb-3 font-size30 txt-bold fontFamily"
-                  >
-                    Life in OBIO
-                  </h1></el-col
-                >
-              </el-row>
-            </router-link>
-          </el-col>
-          <el-col :xs="24" :span="12" class="news--slider-i">
-            <router-link
-              to="/spiroSite"
-              class="block tans service--box_link bg-pinkbluelfr career-a"
-            >
-              <el-row
-                :gutter="20"
-                class="service--box align-items-start career-i"
-              >
-                <el-col :span="8" class="career-i"
-                  ><div class="service--box_icon mb-3 min-width-70">
-                    <img
-                      class="icon--white"
-                      :src="handleViteImages('@/assets/icons/career_act2.png')"
-                      alt="GMP Vector Manufacturing icon"
-                    />
-                    <img
-                      class="icon--colour"
-                      :src="handleViteImages('@/assets/icons/career2.png')"
-                      alt="GMP Vector Manufacturing icon"
-                    /></div
-                ></el-col>
-                <el-col :span="16" class="career-i">
-                  <h1
-                    class="font-bold p-large mb-3 font-size30 txt-bold fontFamily"
-                  >
-                    Job Opening
-                  </h1></el-col
-                >
-              </el-row>
-            </router-link>
-          </el-col>
-        </el-row></el-col
       >
+        <h1 class="p-title font-size50 txt-bold fontFamily">
+          All Hands Meetin
+        </h1>
+        <img src="@/assets/icons/meetin_bg.png" width="100%" alt="" srcset=""
+      /></el-col>
     </section>
   </div>
+
   <el-dialog
     v-model="dialogVisible"
     title=""
@@ -186,13 +137,13 @@
 </template>
 
 <script lang="ts" setup name="LabSciences">
-import { ref } from "vue";
+import { reactive, ref } from "vue";
 import Focus from "@/components/Focus.vue";
 import Events from "@/components/Events.vue";
 import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
-  title: "Careers",
+  title: "Life in OBIO",
   hiddenXsImgUrl:
     "https://www.obio-tech.com/public/uploads/20220402/39c0eb1d2e5cf6c9f1d40cc78ce30544.jpg",
   visibleXsImgUrl:
@@ -203,9 +154,47 @@ function handleClose() {
   Labora.value = {};
   dialogVisible.value = false;
 }
+const internshipList = reactive([
+  handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+  handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+  handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+  handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+]);
+type ViralItem = {
+  id: number;
+  imgUrl: string;
+  title: string;
+  path: string;
+};
+const ViralList = ref<ViralItem[]>([
+  {
+    id: 0,
+    imgUrl: handleViteImages("@/assets/icons/cdmo_icon1.png"),
+    title: "Focus",
+    path: "/process",
+  },
+  {
+    id: 1,
+    imgUrl: handleViteImages("@/assets/icons/cdmo_icon2.png"),
+    title: "Acceleration",
+    path: "/cgmp",
+  },
+  {
+    id: 2,
+    imgUrl: handleViteImages("@/assets/icons/cdmo_icon3.png"),
+    title: "Standardization",
+    path: "/quality",
+  },
+  {
+    id: 3,
+    imgUrl: handleViteImages("@/assets/icons/cdmo_icon4.png"),
+    title: "Team",
+    path: "/logistics",
+  },
+]);
 const croList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/careers1.png"),
+    imgUrl: handleViteImages("@/assets/icons/croIcon1.png"),
     title: "Vision by 2026:",
     text: `Providing client-centered and high-quality 
 service as our commitment, we strive to 
@@ -214,14 +203,14 @@ therapy CXO group.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/careers2.png"),
+    imgUrl: handleViteImages("@/assets/icons/croIcon2.png"),
     title: "Value:",
     text: `Customer Focus, Efficient Execution, 
 Excellence, Innovation, Integrity.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/careers3.png"),
+    imgUrl: handleViteImages("@/assets/icons/croIcon3.png"),
     title: "Original Aspiration：",
     text: `Developing gene therapies for the welfare ofmankind by virtue of its in-house developedall-round technology platform, its R&D and GMPproduction centers (floorage: 15,000 m2), and its77,000 m2 Lingang base (under construction),0Bi0 is dedicated to constantly acceleratinggene therapies researches, drug discovery,.pharmaceutical studies, clinical and commercialdevelopment of gene therapies`,
   },
@@ -280,11 +269,88 @@ function popLabora(id) {
   Labora.value = LaboraList.value.find((i) => i.id === id) || {};
   dialogVisible.value = true;
 }
+const lifeList = reactive([
+  {
+    title: "Training and Internship",
+    imgList: [
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+    ],
+  },
+  {
+    title: "Team Building",
+    imgList: [
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+    ],
+  },
+  {
+    title: "Life at OBiO",
+    imgList: [
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+    ],
+  },
+  {
+    title: "Mother's Day",
+    imgList: [
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+    ],
+  },
+  {
+    title: "Children's Day",
+    imgList: [
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+    ],
+  },
+  {
+    title: "Father's Day",
+    imgList: [
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+    ],
+  },
+  {
+    title: "Holiday party - Christmas",
+    imgList: [
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+    ],
+  },
+  {
+    title: "Charity Events - Walking 50KM",
+    imgList: [
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+    ],
+  },
+]);
 </script>
 
 <style lang="scss" scoped>
 .culture-box {
   margin-top: -100px;
   position: relative;
+}
+.training-box {
+  margin: 0;
 }
 </style>

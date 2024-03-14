@@ -178,6 +178,11 @@ const router = createRouter({
           name: "Careers",
           component: () => import("@/views/careers/Index.vue"),
         },
+        {
+          path: "/life",
+          name: "Life in OBIO",
+          component: () => import("@/views/careers/Life.vue"),
+        },
         // {
         //   path: "/investor-relations",
         //   name: "investor-relations",

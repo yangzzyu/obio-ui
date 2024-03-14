@@ -64,6 +64,12 @@
               >Read more</router-link
             >
           </div>
+          <router-link
+            v-if="isShow"
+            to="/intelliM"
+            class="btn-a font-size18 fontf7 fontFamily bg-pinkbluelfr events-btn"
+            >All News</router-link
+          >
         </el-col>
       </el-row>
     </el-col>
@@ -114,7 +120,12 @@
 <script lang="ts" setup name="Events">
 import { ref } from "vue";
 import { events } from "@/views/insights/data/Index";
-
+const props = defineProps({
+  isShow: {
+    type: Boolean,
+    default: false,
+  },
+});
 const eventsList = ref([]);
 eventsList.value = events.value.slice(0, 3);
 </script>
@@ -126,5 +137,8 @@ eventsList.value = events.value.slice(0, 3);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.btn-a {
+  margin-top: 20px;
 }
 </style>

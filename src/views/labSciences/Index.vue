@@ -338,27 +338,27 @@ function handleClose() {
 }
 const croList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon1.png"),
+    imgUrl: handleViteImages("@/assets/icons/cro1.png"),
     title: "Plasmid",
     text: `At 0Bi0, our dedicateddevelopment team iscommitted to assistingyou in designing,constructing, andmanufacturing plasmidsfor fuctional genomicsresearch, as well asprovidingexpertise inviral packaging.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon2.png"),
+    imgUrl: handleViteImages("@/assets/icons/cro2.png"),
     title: "Viral Vector",
     text: `We specialize in offeringcomprehensive servicesencompassing thedesign, construction, andpackaging of varioustypes of viral vectors.Additionally, we assist inexecuting a diverserange of biomolecularoperations tailored toyour specific gene ofinterest, ensuringthorough supportthroughout the process.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon3.png"),
+    imgUrl: handleViteImages("@/assets/icons/cro3.png"),
     title: "Experiment Solutions",
     text: `We offer an extensivearray of contractresearch servicestailored for functionalgenomics studies.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon4.png"),
+    imgUrl: handleViteImages("@/assets/icons/cro4.png"),
     title: "Related Products",
     text: `We offer a comprehensive range ofin-stock virus vectors,proteins, gRNA libraries.and relevant reagents,catering to diverse research needs acrossvarious aspects of your project.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon5.png"),
+    imgUrl: handleViteImages("@/assets/icons/cro5.png"),
     title: "Extracellular Vesicle",
     text: `Our services for extracellularvesicle include isolation,identification, and functionalresearch at the laboratory stage.For samples from differentsources, our scientist team hasdeveloped multiple isolationsolutions which have beensuccessfully applied in samplesof cells, body fluids and tissueexosomes such as cerebrospinalfluid, urine, brain tissue and liver.`,
   },
@@ -420,5 +420,4 @@ function popLabora(id) {
 </script>
 
 <style lang='scss'>
-
 </style>

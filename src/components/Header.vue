@@ -217,9 +217,7 @@
               }"
             >
               <template #title>
-                <div @click="router.push('/news')" class="menu-t1">
-                  News
-                </div>
+                <div @click="router.push('/news')" class="menu-t1">News</div>
               </template>
               <el-menu-item index="/releases">Press Releases</el-menu-item>
               <el-menu-item index="/events">Events</el-menu-item>
@@ -640,7 +638,7 @@ h2 {
     font-family: HCo Gotham Rounded Medium SSm;
     font-size: 14px;
     letter-spacing: 0.6px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
   }
   .top-bar-right {
     display: flex;

@@ -18,8 +18,10 @@
       class="container"
     >
       <h1 class="p-title font-size50 txt-bold fontFamily">
-        Career and CultureOur Culture
+        Career and Culture
       </h1>
+      <h1 class="p-title font-size50 txt-bold fontFamily">Our Culture</h1>
+
       <div class="wysiwyg--content colour-white">
         <p class="fontFamily textColor">
           Mission: Enable gene therapy for a better lives Value: Customer First,
@@ -30,7 +32,7 @@
       <el-row class="news--slider row" :gutter="10">
         <el-col :xs="24" :span="12" class="news--slider-i">
           <router-link
-            to="/spiroSite"
+            to="/life"
             class="block tans service--box_link bg-pinkbluelfr career-a"
           >
             <el-row
@@ -41,12 +43,12 @@
                 ><div class="service--box_icon mb-3 min-width-70">
                   <img
                     class="icon--white"
-                    src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
+                    :src="handleViteImages('@/assets/icons/career_act1.png')"
                     alt="GMP Vector Manufacturing icon"
                   />
                   <img
                     class="icon--colour"
-                    src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
+                    :src="handleViteImages('@/assets/icons/career1.png')"
                     alt="GMP Vector Manufacturing icon"
                   /></div
               ></el-col>
@@ -73,12 +75,12 @@
                 ><div class="service--box_icon mb-3 min-width-70">
                   <img
                     class="icon--white"
-                    src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
+                    :src="handleViteImages('@/assets/icons/career_act2.png')"
                     alt="GMP Vector Manufacturing icon"
                   />
                   <img
                     class="icon--colour"
-                    src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
+                    :src="handleViteImages('@/assets/icons/career2.png')"
                     alt="GMP Vector Manufacturing icon"
                   /></div
               ></el-col>
@@ -99,6 +101,7 @@
 
 <script lang="ts" setup name="Career">
 import { ref } from "vue";
+import { handleViteImages } from "@/utils";
 </script>
 
 <style scoped></style>
