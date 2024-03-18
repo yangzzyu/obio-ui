@@ -349,7 +349,7 @@
                       25 IND approval letters (8 of which were from FDA)
                     </p>
                   </div>
-                  <span>2023</span>
+                  <span>2023 future </span>
                 </li>
               </ul>
             </div>
@@ -398,9 +398,9 @@
                 >
               </p>
               <router-link
-                to="/spiroSite"
+                to="/intelliM"
                 class="read-more font-size18 fontf7 fontFamily"
-                >Read more</router-link
+                >Read More</router-link
               >
             </el-col>
             <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
@@ -427,9 +427,9 @@
                 >
               </p>
               <router-link
-                to="/pineSite"
+                to="/spiroSite"
                 class="read-more font-size18 fontf7 fontFamily"
-                >Read more</router-link
+                >Read More</router-link
               >
             </el-col>
             <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
@@ -459,9 +459,9 @@
                 >
               </p>
               <router-link
-                to="/intelliM"
+                to="/pineSite"
                 class="read-more font-size18 fontf7 fontFamily"
-                >Read more</router-link
+                >Read More</router-link
               >
             </el-col>
           </el-row>
@@ -490,10 +490,18 @@
                     </h1>
                     <p
                       class="font-size18 txt-bold fontFamily"
-                      style="color: #fff"
+                      style="color: #fff; margin-bottom: 20px"
                     >
                       OBiO Technology’s intelligent medical industrialization
                       base
+                    </p>
+                    <p
+                      class="font-size14 txt-bold fontFamily is-details"
+                      style="color: #fff"
+                    >
+                      The only 77,000m2 scale GMP-compliant facility in the
+                      world Gene cell therapy commercial production service base
+                      Large-scale; Large production capacity
                     </p>
                   </div>
                   <img
@@ -512,10 +520,24 @@
                     </h1>
                     <p
                       class="font-size18 txt-bold fontFamily"
-                      style="color: #fff"
+                      style="color: #fff; margin-bottom: 20px"
                     >
                       OBiO Technology’s intelligent medical industrialization
                       base
+                    </p>
+                    <p
+                      class="font-size14 txt-bold fontFamily is-details"
+                      style="color: #fff"
+                    >
+                      More than 30 gene cell therapy production lines
+                      Large-scale multi-option prokaryocyte production capacity
+                      20 cell therapy product manufacturing lines of varied
+                      characteristics 50-2000L comprehensive and flexible viral
+                      vector manufacturing process Filling and lyophilizing
+                      platform that meets the requirements for manufacturing
+                      multiple dosage forms…… Meeting the requirements of
+                      clients worldwide From DNA to IND to NDA Full-process
+                      business service requirements
                     </p>
                   </div>
                   <img
@@ -534,10 +556,19 @@
                     </h1>
                     <p
                       class="font-size18 txt-bold fontFamily"
-                      style="color: #fff"
+                      style="color: #fff; margin-bottom: 20px"
                     >
                       OBiO Technology’s intelligent medical industrialization
                       base
+                    </p>
+                    <p
+                      class="font-size14 txt-bold fontFamily is-details"
+                      style="color: #fff"
+                    >
+                      Single-use process vector production line Single-use
+                      process prokaryocyte culture production line
+                      Filling+lyophilizing integrated innovative filling system
+                      Positive sample cell therapy product manufacturing line
                     </p>
                   </div>
                   <img
@@ -556,10 +587,21 @@
                     </h1>
                     <p
                       class="font-size18 txt-bold fontFamily"
-                      style="color: #fff"
+                      style="color: #fff; margin-bottom: 20px"
                     >
                       OBiO Technology’s intelligent medical industrialization
                       base
+                    </p>
+                    <p
+                      class="font-size14 txt-bold fontFamily is-details"
+                      style="color: #fff"
+                    >
+                      Digitization and intelligentification based mechanical arm
+                      material charging system Automatic dispensing system
+                      Automatic sample storage system in liquid nitrogen
+                      Chip-based automatic management of cleanroom suits Remote
+                      electronic signature system Full-cycle visualization-based
+                      project management
                     </p>
                   </div>
                   <img
@@ -570,7 +612,7 @@
               </div>
             </el-col>
           </el-row></div
-      ></el-col> 
+      ></el-col>
     </section>
     <section class="our-box">
       <el-col
@@ -620,17 +662,13 @@
         </el-row>
         <ul class="btn-ul">
           <li>
-            <router-link
-              to="/intelliM"
-              class="btn-a font-size18 fontf7 fontFamily"
+            <router-link to="/team" class="btn-a font-size18 fontf7 fontFamily"
               >join our team</router-link
             >
           </li>
           <li>
-            <router-link
-              to="/intelliM"
-              class="btn-a font-size18 fontf7 fontFamily"
-              >Read more</router-link
+            <router-link to="/life" class="btn-a font-size18 fontf7 fontFamily"
+              >Read More</router-link
             >
           </li>
         </ul></el-col

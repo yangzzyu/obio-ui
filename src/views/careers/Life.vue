@@ -9,7 +9,7 @@
 <template>
   <div class="lab-sciences">
     <Focus :focusObj="FocusData" />
-    <section class="culture-box">
+    <section class="culture-box hero-style-top">
       <el-col
         :xs="22"
         :sm="20"
@@ -144,10 +144,8 @@ import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
   title: "Life in OBIO",
-  hiddenXsImgUrl:
-    "https://www.obio-tech.com/public/uploads/20220402/39c0eb1d2e5cf6c9f1d40cc78ce30544.jpg",
-  visibleXsImgUrl:
-    "https://www.obio-tech.com/public/uploads/20220402/c513fa4925451a1f43f4227509d942c3.jpg",
+  hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg3.png"),
+  visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg3.png"),
 });
 const dialogVisible = ref(false);
 function handleClose() {

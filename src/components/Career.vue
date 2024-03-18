@@ -24,9 +24,9 @@
 
       <div class="wysiwyg--content colour-white">
         <p class="fontFamily textColor">
-          Mission: Enable gene therapy for a better lives Value: Customer First,
-          Efficient Execution, Pursuit of Excellence, lnnovation Breakthroughs,
-          integrity and Pragmatism
+          Mission: Enable gene therapy for a better lives<br />
+          Value: Customer First, Efficient Execution, Pursuit of Excellence,
+          Innovation Breakthroughs, Integrity and Pragmatism
         </p>
       </div>
       <el-row class="news--slider row" :gutter="10">
@@ -64,7 +64,7 @@
         </el-col>
         <el-col :xs="24" :span="12" class="news--slider-i">
           <router-link
-            to="/spiroSite"
+            to="/job"
             class="block tans service--box_link bg-pinkbluelfr career-a"
           >
             <el-row

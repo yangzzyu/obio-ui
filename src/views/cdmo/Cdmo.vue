@@ -139,14 +139,16 @@
                 <div class="font-size38 fontf7 iti fontFamily">
                   OBlO Intelli-M
                 </div>
-                <p class="font-size18 fontFamily textColor">
-                  Process Development CharacterizationClinical and Commercial
-                  Manufacturing77,000-square-meter Facility for Global Supply
+                <p class="font-size18 fontFamily textColor txt-bold">
+                  Process Development Characterization Clinical and Commercial
+                  Manufacturing
+                  <text class="fontFamily title-color txt-bold">77,000</text
+                  >-square-meter Facility for Global Supply
                 </p>
                 <router-link
-                  to="/spiroSite"
+                  to="/intelliM"
                   class="read-more font-size18 fontf7 fontFamily"
-                  >Read more</router-link
+                  >Read More</router-link
                 >
               </el-col>
               <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
@@ -171,14 +173,14 @@
                 </div>
                 <div class="font-size38 fontf7 iti fontFamily">SPIRO Site</div>
 
-                <p class="font-size18 fontFamily textColor">
-                  Integrated Laboratory Services Processand Analytical Method
-                  DevelopmentResearch and Development Center
+                <p class="font-size18 fontFamily textColor txt-bold">
+                  Integrated Laboratory Services Process and Analytical Method
+                  Development Research and Development Center
                 </p>
                 <router-link
-                  to="/pineSite"
+                  to="/spiroSite"
                   class="read-more font-size18 fontf7 fontFamily"
-                  >Read more</router-link
+                  >Read More</router-link
                 >
               </el-col>
               <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
@@ -202,15 +204,17 @@
                   International Medical ParkShanghai, China
                 </div>
                 <div class="font-size38 fontf7 iti fontFamily">PINE Site</div>
-                <p class="font-size18 fontFamily textColor">
-                  Process and Analytical MethodDevelopment Pre-clinical and
-                  ClinicalManufacturing Three-building,10,000-square-meter
-                  campus
+                <p class="font-size18 fontFamily textColor txt-bold">
+                  Process and Analytical Method Development Pre-clinical and
+                  Clinical Manufacturing Three-building,<text
+                    class="fontFamily title-color txt-bold"
+                    >10,000</text
+                  >-square-meter campus
                 </p>
                 <router-link
-                  to="/intelliM"
+                  to="/pineSite"
                   class="read-more font-size18 fontf7 fontFamily"
-                  >Read more</router-link
+                  >Read More</router-link
                 >
               </el-col>
             </el-row>
@@ -271,7 +275,7 @@
               <router-link
                 to="/spiroSite"
                 class="font-size18 fontf7 fontFamily btn-a"
-                >Read more</router-link
+                >Read More</router-link
               ></el-col
             >
           </el-row>
@@ -308,13 +312,13 @@
                   <h1 class="font-size38 fontf7 iti fontFamily">
                     AAVneO™ System
                   </h1>
-                  <p class="font-size18 fontFamily txt">
-                    LNext-Generation Capsid Screening Platform
+                  <p class="font-size18 fontFamily txt textColor txt-bold">
+                    LNext-Generation Capsid <br />Screening Platform
                   </p>
                   <router-link
                     to="/spiroSite"
                     class="read-more font-size18 fontf7 fontFamily"
-                    >Read more</router-link
+                    >Read More</router-link
                   >
                 </el-col>
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
@@ -334,13 +338,13 @@
                   <h1 class="font-size38 fontf7 iti fontFamily">
                     OVersatileTM Platform
                   </h1>
-                  <p class="font-size18 fontFamily textColor txt">
+                  <p class="font-size18 fontFamily textColor txt txt-bold">
                     Versatility for Various Needs
                   </p>
                   <router-link
                     to="/pineSite"
                     class="read-more font-size18 fontf7 fontFamily"
-                    >Read more</router-link
+                    >Read More</router-link
                   >
                 </el-col>
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
@@ -357,13 +361,14 @@
                   <h1 class="font-size38 fontf7 iti fontFamily">
                     Proprietary Cell Line Development
                   </h1>
-                  <p class="font-size18 fontFamily textColor txt">
-                    High-Yielding Cell Line for
+                  <p class="font-size18 fontFamily textColor txt txt-bold">
+                    High-Yielding Cell Line for <br />
+                    Suspension Culture
                   </p>
                   <router-link
                     to="/intelliM"
                     class="read-more font-size18 fontf7 fontFamily"
-                    >Read more</router-link
+                    >Read More</router-link
                   >
                 </el-col>
               </el-row>
@@ -664,6 +669,7 @@ const croList = ref([
     imgUrl: handleViteImages("@/assets/icons/cdmo3.png"),
     title: "Cell Therapy Products",
     textArr: [
+      "Autologous and homologous immunocyte therapies",
       "CAR-T Therapy",
       "NK Cell Therapy",
       "TCR-T Therapy",

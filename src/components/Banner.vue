@@ -36,17 +36,17 @@
         </div>
         <p class="mission-content font-size38 txt-bold">Mission:</p>
         <div class="btns">
-          <a
-            href="#"
+          <router-link
+            to="/cdmo"
             class="btn1 btn-i txt-bold"
             data-animation="animated bounceInUp"
-            >Our Solutions</a
+            >Our Solutions</router-link
           >
-          <a
-            href="#"
+          <router-link
+            to="/cap"
             class="btn2 btn-i txt-bold"
             data-animation="animated bounceInUp"
-            >Our Commitment</a
+            >Our Commitment</router-link
           >
         </div>
       </el-col>
@@ -160,7 +160,7 @@ onBeforeMount(() => {});
     padding: 5px 10px;
     cursor: pointer;
     // position: absolute;
-    z-index: 999999;
+    z-index: 99;
     color: #fff;
     &:nth-child(2) {
       margin-left: 30px;

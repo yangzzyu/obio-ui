@@ -255,14 +255,11 @@
             :icon="['fab', 'linkedin']"
         /></a>
         <a href="https://www.facebook.com/profile.php?id=61555811491695">
-          <font-awesome-icon
-            class="footer-icon"
-            size="lg"
-            :icon="['fab', 'youtube']"
+          <font-awesome-icon size="lg" :icon="['fas', 'circle-play']"
         /></a>
         <a href="https://www.facebook.com/profile.php?id=61555811491695">
           <!-- <font-awesome-icon class="footer-icon" size="lg" :icon="['fab', 'f']" -->
-          <font-awesome-icon :icon="['fas', 'f']" />
+          <font-awesome-icon size="lg" :icon="['fass', 'f']" />
         </a>
       </div>
     </el-col>

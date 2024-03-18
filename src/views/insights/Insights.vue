@@ -36,9 +36,9 @@
                 {{ item.content }}
               </div>
               <router-link
-                to="/spiroSite"
+                :to="'/news-details/releases/' + item.id"
                 class="read-more font-size18 fontf7 fontFamily"
-                >Read more</router-link
+                >Read More</router-link
               ></el-col
             >
           </el-row>
@@ -48,8 +48,8 @@
         to="/releases"
         class="btn-a font-size18 fontf7 fontFamily bg-pinkbluelfr"
       >
-        ALL PRESS RELEASES</router-link
-      >
+        All Press Releases
+      </router-link>
     </section>
     <Events :isShow="true" />
     <section id="productions" class="productions-list">

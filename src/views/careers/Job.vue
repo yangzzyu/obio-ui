@@ -20,139 +20,65 @@
         class="container"
       >
         <h1 class="title-color font-size70 txt-bold section-title fontFamily">
-          Our Culture
+          Join an amazing energy
         </h1>
-        <h2
-          class="title-color our-txt font-size30 section-title fontFamily txt-bold"
-        >
-          Mission: Enable gene therapy for better lives
-        </h2>
+
         <p class="font-size24 fontFamily textColor" style="margin-bottom: 20px">
-          At OBiO, we empower gene therapy, driving advancements in gene drug
-          development and clinical applications. We achieve this by providing
-          top-tier technical services to research institutions and companies in
-          the gene therapy field, thus empowering our clients to excel.
+          As our company and industry grow and change, we commit to keeping OBIO
+          culture part of that growth conversation. By weaving our values into
+          that culture and regularly pointing back to our mission and vision, an
+          excitement is born and will grow.
         </p>
         <p class="font-size24 fontFamily textColor">
-          We continuously collaborate with our clients, fostering the
-          development of the gene therapy industry and working together to
-          realize the noble aspiration of benefiting humanity and all living
-          beings through gene therapy.
+          That happens with a leadership team steadfastly practicing what we
+          preach, yet culture does not stop there. We expect every employee to
+          join the effort of making OBIO amazing, embracing our values in the
+          day to day task list and speaking up when something’s not right. With
+          that collective resolve, we stand in anticipation of the growth we
+          will experience together.
         </p>
+        <el-row
+          class="news--slider row us-list"
+          :gutter="10"
+          style="margin-top: 20px"
+        >
+          <el-col
+            :xs="24"
+            :span="6"
+            class="news--slider-i us-list-i"
+            v-for="(item, index) in cdmoList"
+            :key="index"
+          >
+            <router-link
+              to="/spiroSite"
+              class="block tans service--box_link bg-pinkbluelfr"
+            >
+              <div class="service--box align-items-start">
+                <div class="service--box_icon mb-3 min-width-70">
+                  <img
+                    class="icon--white"
+                    :src="item.actImgUrl"
+                    alt="GMP Vector Manufacturing icon"
+                  />
+                  <img
+                    class="icon--colour"
+                    :src="item.imgUrl"
+                    alt="GMP Vector Manufacturing icon"
+                  />
+                </div>
+                <h3 class="font-bold p-large mb-3 font-size24">
+                  {{ item.title }}
+                </h3>
+                <p class="textColor fontFamily font-size14 txt-bold">
+                  {{ item.text }}
+                </p>
+              </div>
+            </router-link>
+          </el-col>
+        </el-row>
       </el-col>
     </section>
-    <section id="cro" class="cro-list">
-      <div
-        class="cro-list-item row"
-        v-for="(item, index) in croList"
-        :key="index"
-      >
-        <el-col
-          :xs="22"
-          :sm="20"
-          :md="20"
-          :lg="20"
-          :xl="22"
-          style="margin: auto"
-          class="container"
-        >
-          <el-row :gutter="100">
-            <el-col :xs="24" :span="10"
-              ><div class="animate-imgxx uof img">
-                <img :src="item.imgUrl" alt="SPIRO Site" />
-              </div>
-            </el-col>
-            <el-col :xs="24" :span="14">
-              <h1 class="font-size50 fontf7 iti fontFamily item-tit">
-                {{ item.title }}
-              </h1>
-              <p
-                class="font-size30 fontf7 fontFamily cro-p textColor"
-                v-html="item.text"
-              ></p>
-            </el-col>
-          </el-row>
-        </el-col>
-      </div>
-    </section>
     <!-- <Events /> -->
-    <section>
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-        ><el-row class="news--slider row" :gutter="10">
-          <el-col :xs="24" :span="12" class="news--slider-i">
-            <router-link
-              to="/life"
-              class="block tans service--box_link bg-pinkbluelfr career-a"
-            >
-              <el-row
-                :gutter="20"
-                class="service--box align-items-start career-i"
-              >
-                <el-col :span="8" class="career-i"
-                  ><div class="service--box_icon mb-3 min-width-70">
-                    <img
-                      class="icon--white"
-                      :src="handleViteImages('@/assets/icons/career_act1.png')"
-                      alt="GMP Vector Manufacturing icon"
-                    />
-                    <img
-                      class="icon--colour"
-                      :src="handleViteImages('@/assets/icons/career1.png')"
-                      alt="GMP Vector Manufacturing icon"
-                    /></div
-                ></el-col>
-                <el-col :span="16" class="career-i">
-                  <h1
-                    class="font-bold p-large mb-3 font-size30 txt-bold fontFamily"
-                  >
-                    Life in OBIO
-                  </h1></el-col
-                >
-              </el-row>
-            </router-link>
-          </el-col>
-          <el-col :xs="24" :span="12" class="news--slider-i">
-            <router-link
-              to="/job"
-              class="block tans service--box_link bg-pinkbluelfr career-a"
-            >
-              <el-row
-                :gutter="20"
-                class="service--box align-items-start career-i"
-              >
-                <el-col :span="8" class="career-i"
-                  ><div class="service--box_icon mb-3 min-width-70">
-                    <img
-                      class="icon--white"
-                      :src="handleViteImages('@/assets/icons/career_act2.png')"
-                      alt="GMP Vector Manufacturing icon"
-                    />
-                    <img
-                      class="icon--colour"
-                      :src="handleViteImages('@/assets/icons/career2.png')"
-                      alt="GMP Vector Manufacturing icon"
-                    /></div
-                ></el-col>
-                <el-col :span="16" class="career-i">
-                  <h1
-                    class="font-bold p-large mb-3 font-size30 txt-bold fontFamily"
-                  >
-                    Job Opening
-                  </h1></el-col
-                >
-              </el-row>
-            </router-link>
-          </el-col>
-        </el-row></el-col
-      >
-    </section>
   </div>
   <el-dialog
     v-model="dialogVisible"
@@ -195,15 +121,59 @@ import Events from "@/components/Events.vue";
 import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
-  title: "Careers",
-  hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg4.png"),
-  visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg4.png"),
+  title: "Job Opening",
+  hiddenXsImgUrl: handleViteImages("@/assets/icons/job_bg.png"),
+  visibleXsImgUrl: handleViteImages("@/assets/icons/job_bg.png"),
 });
 const dialogVisible = ref(false);
 function handleClose() {
   Labora.value = {};
   dialogVisible.value = false;
 }
+const cdmoList = ref([
+  {
+    imgUrl: handleViteImages("@/assets/icons/job1.png"),
+    actImgUrl: handleViteImages("@/assets/icons/job_act1.png"),
+    title: "Core Values",
+    text: `Everything we do is
+driven by our values. We
+lead with science, our
+people, and doing the
+right thing.
+`,
+  },
+  {
+    imgUrl: handleViteImages("@/assets/icons/job2.png"),
+    actImgUrl: handleViteImages("@/assets/icons/job_act2.png"),
+    title: "Diversity & Belonging",
+    text: `Together is how we get
+better. We are committed
+to a culture that
+embraces everyone.
+`,
+  },
+  {
+    imgUrl: handleViteImages("@/assets/icons/job3.png"),
+    actImgUrl: handleViteImages("@/assets/icons/job_act3.png"),
+    title: "Community",
+    text: `Love your life in
+Indianapolis. We are a
+proud part of the
+growing biotech hub
+community.
+`,
+  },
+  {
+    imgUrl: handleViteImages("@/assets/icons/job4.png"),
+    actImgUrl: handleViteImages("@/assets/icons/job_act4.png"),
+    title: "Benefits",
+    text: `Our people deserve the
+best. We provide a
+benefits package tha
+ttruly rewards our team.
+`,
+  },
+]);
 const croList = ref([
   {
     imgUrl: handleViteImages("@/assets/icons/careers1.png"),
@@ -300,5 +270,10 @@ function popLabora(id) {
 .culture-box {
   margin-top: -100px;
   position: relative;
+}
+.us-list-i:hover {
+  .textColor {
+    color: #fff;
+  }
 }
 </style>

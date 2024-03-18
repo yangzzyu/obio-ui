@@ -70,9 +70,9 @@ import TheWelcome from "../components/TheWelcome.vue";
                     >-square-meter Facility for Global Supply
                   </p>
                   <router-link
-                    to="/spiroSite"
+                    to="/intelliM"
                     class="read-more font-size18 fontf7 fontFamily"
-                    >Read more</router-link
+                    >Read More</router-link
                   >
                 </el-col>
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
@@ -104,9 +104,9 @@ import TheWelcome from "../components/TheWelcome.vue";
                     DevelopmentResearch and Development Center
                   </p>
                   <router-link
-                    to="/pineSite"
+                    to="/spiroSite"
                     class="read-more font-size18 fontf7 fontFamily"
-                    >Read more</router-link
+                    >Read More</router-link
                   >
                 </el-col>
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
@@ -138,9 +138,9 @@ import TheWelcome from "../components/TheWelcome.vue";
                     >-square-meter campus
                   </p>
                   <router-link
-                    to="/intelliM"
+                    to="/pineSite"
                     class="read-more font-size18 fontf7 fontFamily"
-                    >Read more</router-link
+                    >Read More</router-link
                   >
                 </el-col>
               </el-row>
@@ -224,8 +224,13 @@ import TheWelcome from "../components/TheWelcome.vue";
                       <li v-for="(i, idx) in item.list" :key="idx">{{ i }}</li>
                     </ul>
                   </div>
-                  <span class="mt-auto flex-shrink-0 btn--underline blog-btn"
-                    >Read more</span
+                  <!-- <span class="mt-auto flex-shrink-0 btn--underline blog-btn"
+                    >Read More</span
+                  > -->
+                  <router-link
+                    to="/cdmo"
+                    class="mt-auto flex-shrink-0 btn--underline blog-btn"
+                    >Read More</router-link
                   >
                 </div>
               </router-link>
@@ -246,9 +251,9 @@ import TheWelcome from "../components/TheWelcome.vue";
           <h1 class="p-title font-size50 txt-bold fontFamily">CRO Service</h1>
           <div class="wysiwyg--content colour-white">
             <p class="textColor fontFamily font-size24">
-              OBi0 provides an integrated portfolio of plasmid construction,
-              viral packagingcell biology and animal study services for
-              biomedical researchers
+              OBiO provides an integrated portfolio of plasmid construction,
+              viral packaging, <br />
+              cell biology and animal study services for biomedical researchers
             </p>
           </div>
 
@@ -260,7 +265,7 @@ import TheWelcome from "../components/TheWelcome.vue";
               v-for="(item, index) in croList"
               :key="index"
             >
-              <router-link to="/spiroSite" class="block tans">
+              <router-link to="/sys" class="block tans">
                 <div class="animate-imgxx uof img">
                   <img :src="item.imgUrl" alt="SPIRO Site" />
                 </div>
@@ -272,9 +277,9 @@ import TheWelcome from "../components/TheWelcome.vue";
                 {{ item.text }}
               </p>
               <router-link
-                to="/spiroSite"
+                to="/sys"
                 class="read-more font-size18 fontf7 fontFamily"
-                >Read more</router-link
+                >Read More</router-link
               >
             </el-col>
           </el-row>
@@ -288,7 +293,7 @@ import TheWelcome from "../components/TheWelcome.vue";
         <el-col
           :span="24"
           style="margin: auto"
-          class="container CDMO-Solutions-wrap"
+          class="container CDMO-Solutions-wrap CDMO-Solutions-wrap-line"
         >
           <h1 class="p-title font-size50 txt-bold fontFamily">
             Our Commitment
@@ -450,7 +455,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                   Focusing on efficient gene delivery of NK cells, The First
                   Condor Lifeand OBi0 Technology reach a strategic cooperation!
                 </p>
-                <div class="btn bg-pinkbluelfr">Read more</div>
+                <div class="btn bg-pinkbluelfr">Read More</div>
               </div>
               <div class="news-i">
                 <h3 class="title-color font-size24 fontFamily">
@@ -460,7 +465,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                   0Bi0 Announces Strategic Partnership with Refreshgene to
                   RealizeCommercialization of Gene Therapy Product
                 </p>
-                <div class="btn bg-pinkbluelfr">Read more</div>
+                <div class="btn bg-pinkbluelfr">Read More</div>
               </div>
               <div class="news-i">
                 <h3 class="title-color font-size24 fontFamily">
@@ -469,7 +474,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                 <p class="font-size24 fontFamily textColor">
                   Cell&Gene meeting on the Mesa
                 </p>
-                <div class="btn bg-pinkbluelfr">Read more</div>
+                <div class="btn bg-pinkbluelfr">Read More</div>
               </div>
             </el-col>
           </el-row>
@@ -880,27 +885,65 @@ const croList = ref([
   {
     imgUrl: handleViteImages("@/assets/icons/croIcon1.png"),
     title: "Plasmid",
-    text: `At 0Bi0, our dedicateddevelopment team iscommitted to assistingyou in designing,constructing, andmanufacturing plasmidsfor fuctional genomicsresearch, as well asprovidingexpertise inviral packaging.`,
+    text: `At OBiO, our dedicated
+development team is
+committed to assisting
+you in designing,
+constructing, and
+manufacturing plasmids
+for fuctional genomics
+research, as well as 
+providingexpertise in
+viral packaging.`,
   },
   {
     imgUrl: handleViteImages("@/assets/icons/croIcon2.png"),
     title: "Viral Vector",
-    text: `We specialize in offeringcomprehensive servicesencompassing thedesign, construction, andpackaging of varioustypes of viral vectors.Additionally, we assist inexecuting a diverserange of biomolecularoperations tailored toyour specific gene ofinterest, ensuringthorough supportthroughout the process.`,
+    text: `We specialize in offering
+comprehensive services
+encompassing the
+design, construction, and
+packaging of various
+types of viral vectors.
+Additionally, we assist in
+executing a diverse 
+range of biomolecular
+operations tailored to 
+your specific gene of
+interest, ensuring
+thorough support
+throughout the process.`,
   },
   {
     imgUrl: handleViteImages("@/assets/icons/croIcon3.png"),
     title: "Experiment Solutions",
-    text: `We offer an extensivearray of contractresearch servicestailored for functionalgenomics studies.`,
+    text: `We offer an extensive 
+array of contract 
+research services 
+tailored for functional 
+genomics studies.`,
   },
   {
     imgUrl: handleViteImages("@/assets/icons/croIcon4.png"),
     title: "Related Products",
-    text: `We offer a comprehensive range ofin-stock virus vectors,proteins, gRNA libraries.and relevant reagents,catering to diverse research needs acrossvarious aspects of your project.`,
+    text: `We offer a 
+comprehensive range of
+in-stock virus vectors, 
+proteins, gRNA libraries, 
+and relevant reagents, 
+catering to diverse 
+research needs across 
+various aspects of your 
+project.`,
   },
   {
     imgUrl: handleViteImages("@/assets/icons/croIcon5.png"),
     title: "Extracellular Vesicle",
-    text: `Our services for extracellularvesicle include isolation,identification, and functionalresearch at the laboratory stage.For samples from differentsources, our scientist team hasdeveloped multiple isolationsolutions which have beensuccessfully applied in samplesof cells, body fluids and tissueexosomes such as cerebrospinalfluid, urine, brain tissue and liver.`,
+    text: `Our services for extracellular vesicle include isolation, 
+identification, and functional 
+research at the laboratory stage. For samples from different sources, our scientist team has developed multiple isolation solutions which have been 
+successfully applied in samples of cells, body fluids and tissue exosomes such as cerebrospinal fluid, urine, brain tissue and liver.
+`,
   },
 ]);
 type ViralItem = {

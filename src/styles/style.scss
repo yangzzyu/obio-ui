@@ -86,7 +86,7 @@ textarea {
 a:hover,
 a:focus {
   // outline: 0;
-  color: #fff;
+  // color: #fff;
   text-decoration: none;
 }
 .color1 {
@@ -188,6 +188,14 @@ a:focus {
   opacity: 0;
   margin-bottom: 15px;
   font-weight: bold;
+}
+.is-details {
+  display: none;
+}
+.manufacturing-list:hover {
+  .is-details {
+    display: block;
+  }
 }
 .banner .txt .p2 {
   font-size: 20px;
@@ -543,6 +551,7 @@ a:focus {
   position: relative;
 }
 .btn-a {
+  text-align: center;
   width: 140px;
   margin: 0 10px;
   display: inline-block;
@@ -1661,7 +1670,7 @@ header {
   }
 }
 .wysiwyg--content {
-  width: 70%;
+  width: 100%;
   margin: auto;
   padding: 10px 0;
   p {
@@ -2089,7 +2098,7 @@ header {
 .team-box {
   position: relative;
 }
-.CDMO-Solutions-wrap:after {
+.CDMO-Solutions-wrap-line:after {
   position: absolute;
   top: 50%;
   left: 0;
@@ -3048,15 +3057,18 @@ hr {
   text-align: center;
   top: 39%;
   right: 3px;
-  line-height: 70px;
+  line-height: 20px;
   z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   // transform: translate(-50%, -50%);
 }
 @media only screen and (max-width: 480px) {
   .steps-details .steps-cont ul li.l-con span {
     height: 50px;
     width: 50px;
-    line-height: 50px;
+    // line-height: 50px;
     font-size: 20px;
     right: 12px;
   }
