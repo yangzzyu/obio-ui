@@ -1,45 +1,11 @@
 <template>
   <div class="Insights-wrap">
-    <div class="section-1">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
+    <section id="cro" class="cro-list">
+      <div
+        class="cro-list-item row"
+        v-for="(item, index) in releasesList"
+        :key="index"
       >
-        <div class="pub-title pub-title-p ub ub-ver ub-pe">
-          <i class="line"></i>
-          <span class="fontf8 font-size50"> Press Releases</span>
-          <div class="p font-size18"></div>
-        </div>
-        <div class="in-news-list1">
-          <div class="item" v-for="(item, index) in releases" :key="index">
-            <router-link
-              :to="'/news-details/releases/' + item.id"
-              class="block"
-            >
-              <div class="font-size16">{{ item.time }}</div>
-              <div class="title fontf4 font-size24">
-                {{ item.title }}
-              </div>
-              <div class="font-size18 ut-s2">
-                {{ item.content }}
-              </div>
-              <div class="more"><span class="sa"></span></div>
-            </router-link>
-          </div>
-        </div>
-        <div class="in-news-all-btn font-size20 fontf3">
-          <router-link to="/releases"> ALL PRESS RELEASES</router-link>
-          <!-- <a href="/cn/home/news/cid/559">ALL PRESS RELEASES</a> -->
-        </div>
-      </el-col>
-    </div>
-    <div class="section-2">
-      <div class="pub-events-wrap">
         <el-col
           :xs="22"
           :sm="20"
@@ -49,168 +15,254 @@
           style="margin: auto"
           class="container"
         >
-          <div class="pub-title style2 pub-title-p ub ub-ver ub-pe">
-            <i class="line"></i>
-            <span class="fontf8 font-size50">Events</span>
-            <div class="p font-size18"></div>
-          </div>
-          <Swiper
-            :modules="[Autoplay, Navigation, Scrollbar]"
-            :observer="true"
-            :slidesPerView="3"
-            :spaceBetween="30"
-            :watchSlidesVisibility="true"
-            :navigation="navigation"
-            slideVisibleClass="my-slide-visible"
-            :breakpoints="breakpoints"
-            class="list rowxx swiper-container"
-          >
-            <swiper-slide
-              v-for="(item, index) in events"
-              :key="index"
-              class="my-slide-visible"
-            >
+          <el-row :gutter="100">
+            <el-col :xs="24" :span="8"
+              ><div class="animate-imgxx uof img">
+                <!-- careers3 -->
+                <img
+                  :src="handleViteImages('@/assets/icons/careers3.png')"
+                  alt="SPIRO Site"
+                />
+              </div>
+            </el-col>
+            <el-col :xs="24" :span="16">
+              <h1 class="font-size24 iti fontFamily textColor">
+                {{ item.time }}
+              </h1>
+              <div class="title fontf4 font-size28 fontFamily title-color">
+                {{ item.title }}
+              </div>
+              <div class="font-size18 ut-s2 fontFamily">
+                {{ item.content }}
+              </div>
               <router-link
-                :to="'/news-details/events/' + item.id"
-                class="block tans font-size16"
-              >
-                <div class="time">{{ item.time }}</div>
-                <div class="title ut-s2 font-size24 fontf3">
-                  {{ item.title }}
-                </div>
-                <div class="add">{{ item.txt }}</div>
-              </router-link></swiper-slide
+                :to="'/news-details/releases/' + item.id"
+                class="read-more font-size18 fontf7 fontFamily"
+                >Read More</router-link
+              ></el-col
             >
-          </Swiper>
-          <div class="in-news-event-btn ub ub-ac ub-pc">
-            <div
-              class="pub-ico-left swiper-button-disabled"
-              id="inNewPrev"
-              tabindex="0"
-              role="button"
-              aria-label="Previous slide"
-              aria-disabled="true"
-            ></div>
-            <div
-              class="pub-ico-right"
-              id="inNewNext"
-              tabindex="0"
-              role="button"
-              aria-label="Next slide"
-              aria-disabled="false"
-            ></div>
-          </div>
+          </el-row>
         </el-col>
       </div>
-    </div>
-    <a name="a1"></a>
-    <!-- <div class="section-3">
-      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
-        <div class="pub-title pub-title-p ub ub-ver ub-pe">
-          <i class="line"></i>
-          <span class="fontf8 font-size50">Knowledge Center</span>
-          <div class="p font-size18"></div>
-        </div>
+      <router-link
+        to="/releases"
+        class="btn-a font-size18 fontf7 fontFamily bg-pinkbluelfr"
+      >
+        All Press Releases
+      </router-link>
+    </section>
+    <Events :isShow="true" />
+    <section id="productions" class="productions-list">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
+        <h1 class="p-title font-size50 txt-bold fontFamily">Productions</h1>
+        <el-row :gutter="50" class="cdmo-top">
+          <el-col :xs="24" :span="8"
+            ><div class="animate-imgxx uof img">
+              <img
+                width="100%"
+                :src="handleViteImages('@/assets/icons/productions.png')"
+                alt="SPIRO Site"
+              />
+            </div>
+          </el-col>
+          <el-col :xs="24" :span="16">
+            <p class="font-size20 fontf7 fontFamily cro-p textColor">
+              Discover OBiO Tech's Cutting-Edge Intelli-M GMP-Compliant Viral
+              Vector Production Line. Unlock Comprehensive and Diversified
+              Solutions for Large-Scale Production, Offering Capacities Ranging
+              from 20L to 2000L. Elevate Your Production Efficiency Today! #cgt
+              #cellandgenetherapy #genetherapy #celltherapy #cdmo #2024trends
+              #globaldata #asgct
+            </p>
+          </el-col>
+        </el-row>
+        <h1 class="p-title font-size50 txt-bold fontFamily">Inquiry</h1>
+        <el-row :gutter="50" class="cdmo-top">
+          <el-col :xs="24" :span="12">
+            <h3 class="title-color font-size36 txt-bold fontFamily">
+              Laboratory Sciences
+            </h3>
 
-        <div class="Knowledge-groups">
-          <div class="groups" id="1">
-            <div class="labs font-size30 fontf7">Laboratory Sciences</div>
-            <div class="in-news-Knowledge-swp">
-              <Swiper
-                :modules="[Autoplay, Navigation, Scrollbar]"
-                :observer="true"
-                :observeParents="true"
-                :slidesPerView="4"
-                :spaceBetween="25"
-                :navigation="sciencesNavigation"
-                :breakpoints="sciencesBreakpoints"
+            <el-checkbox-group
+              v-model="form.type"
+              style="
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: flex-start;
+              "
+            >
+              <el-checkbox value="AAV PACKAGING SERVICES" name="type">
+                AAV PACKAGING SERVICES
+              </el-checkbox>
+              <el-checkbox value="LENTIVIRUS PACKAGING SERVICES" name="type">
+                LENTIVIRUS PACKAGING SERVICES
+              </el-checkbox>
+              <el-checkbox value="AAV-Lung X AAV-Lung M3" name="type">
+                AAV-Lung X AAV-Lung M3
+              </el-checkbox>
+              <el-checkbox value="AAVneO + AAVMeta Platform" name="type">
+                AAVneO + AAVMeta Platform
+              </el-checkbox>
+              <el-checkbox value="Off-the-Shelf AAV PRODUCTS" name="type">
+                Off-the-Shelf AAV PRODUCTS
+              </el-checkbox>
+            </el-checkbox-group>
+          </el-col>
+          <el-col :xs="24" :span="12">
+            <h3 class="title-color font-size36 txt-bold fontFamily">
+              CDMO Solutions
+            </h3>
+            <el-checkbox-group
+              v-model="form.type"
+              style="
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: flex-start;
+              "
+            >
+              <el-checkbox
+                value="GENE AND CELL THERAPY CDMO SOLUTIONS AT OBIO"
+                name="type"
               >
-                <swiper-slide
-                  v-for="(item, index) in SciencesList"
-                  :key="index"
-                >
-                  <div class="block boxs tans">
-                    <img
-                      :src="item.imgUrl"
-                      class="img-responsive"
-                      :alt="item.tit"
-                    /></div
-                ></swiper-slide>
-              </Swiper>
-            </div>
-            <div class="in-news-event-btn2 ub ub-ac ub-pc">
-              <div
-                class="pub-ico-left swiper-button-disabled"
-                id="inNewsKnowledgeWp1Prev"
-                tabindex="0"
-                role="button"
-                aria-label="Previous slide"
-                aria-disabled="true"
-              ></div>
-              <div
-                class="pub-ico-right"
-                id="inNewsKnowledgeWp1Next"
-                tabindex="0"
-                role="button"
-                aria-label="Next slide"
-                aria-disabled="false"
-              ></div>
-            </div>
-          </div>
-
-          <div class="groups" id="2">
-            <div class="labs font-size30 fontf7">CDMO Solutions</div>
-            <div class="in-news-Knowledge-swp">
-              <Swiper
-                :modules="[Autoplay, Navigation, Scrollbar]"
-                :observer="true"
-                :observeParents="true"
-                :slidesPerView="4"
-                :spaceBetween="25"
-                :navigation="solutionsNavigation"
-                :breakpoints="sciencesBreakpoints"
+                GENE AND CELL THERAPY CDMO SOLUTIONS AT OBIO
+              </el-checkbox>
+              <el-checkbox value="CELL THERAPY CDMO SOLUTIONS" name="type">
+                CELL THERAPY CDMO SOLUTIONS
+              </el-checkbox>
+              <el-checkbox
+                value="ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS"
+                name="type"
               >
-                <swiper-slide
-                  v-for="(item, index) in SolutionsList"
-                  :key="index"
-                >
-                  <div class="block boxs tans">
+                ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS
+              </el-checkbox>
+              <el-checkbox value="iPSC CDMO SERVICES" name="type">
+                iPSC CDMO SERVICES
+              </el-checkbox>
+              <el-checkbox
+                value="PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS"
+                name="type"
+              >
+                PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS
+              </el-checkbox>
+              <el-checkbox value="LENTIVIRAL VECTOR CDMO SOLUTIONS" name="type">
+                LENTIVIRAL VECTOR CDMO SOLUTIONS
+              </el-checkbox>
+              <el-checkbox value="ONCOLYTIC VIRUS CDMO SOLUTIONS" name="type">
+                ONCOLYTIC VIRUS CDMO SOLUTIONS
+              </el-checkbox>
+            </el-checkbox-group>
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col :span="24" :xs="24">
+            <el-form
+              ref="formRef"
+              :model="form"
+              label-width="200px"
+              class="form-contact-main"
+              :label-position="'top'"
+              status-icon
+            >
+              <el-row :gutter="20">
+                <el-col :span="4" :xs="24">
+                  <el-form-item label="First Name" required>
+                    <el-input v-model="form.fname" />
+                  </el-form-item>
+                </el-col>
+                <el-col :span="5" :xs="24">
+                  <el-form-item label="Last Name" required>
+                    <el-input v-model="form.lname" /> </el-form-item
+                ></el-col>
+                <el-col :span="5" :xs="24">
+                  <el-form-item label="Company" required>
+                    <el-input v-model="form.lname" /> </el-form-item
+                ></el-col>
+                <el-col :span="5" :xs="24">
+                  <el-form-item label="Email" required>
+                    <el-input v-model="form.lname" /> </el-form-item
+                ></el-col>
+                <el-col :span="5" :xs="24">
+                  <el-form-item label="Phone Number" required>
+                    <el-input v-model="form.lname" /> </el-form-item></el-col
+              ></el-row>
+              <el-form-item label="Comments" prop="content">
+                <el-input v-model="form.content" type="textarea" />
+              </el-form-item>
+              <el-form-item label="Security Code" required>
+                <el-col :span="11">
+                  <el-input v-model="form.verify" />
+                </el-col>
+                <el-col :span="11">
+                  <div class="put ub-f1" style="margin-left: 12px">
                     <img
-                      :src="item.imgUrl"
-                      class="img-responsive"
-                      :alt="item.tit"
-                    /></div
-                ></swiper-slide>
-              </Swiper>
-            </div>
-            <div class="in-news-event-btn2 ub ub-ac ub-pc">
-              <div
-                class="pub-ico-left swiper-button-disabled"
-                id="inNewsKnowledgeWp2Prev"
-                tabindex="0"
-                role="button"
-                aria-label="Previous slide"
-                aria-disabled="true"
-              ></div>
-              <div
-                class="pub-ico-right"
-                id="inNewsKnowledgeWp2Next"
-                tabindex="0"
-                role="button"
-                aria-label="Next slide"
-                aria-disabled="false"
-              ></div>
-            </div>
-          </div>
-        </div>
+                      class="verifyImg"
+                      id="captcha"
+                      src="@/assets/icons/captcha.png"
+                      alt="verifyImg"
+                      style="width: 150px; cursor: pointer; height: 38px"
+                    />
+                  </div>
+                </el-col>
+              </el-form-item>
+              <el-form-item label="I AGREE" required>
+                <div class="checks_text">
+                  <el-checkbox
+                    v-model="form.checked"
+                    size="large"
+                    class="checks_inpt"
+                  />
+                  <div class="checks_txt">
+                    By submitting this form I agree that OBiO may process my
+                    data in the manner described in OBiO’s<a
+                      xhref="/cn/home/ys/cid/861"
+                      target="_blank"
+                      style="color: #25b096"
+                      >Privacy Policy</a
+                    >
+                  </div>
+                </div>
+              </el-form-item>
+              <el-form-item label="">
+                <div class="lab fontf3 font-size18">
+                  We won’t share your information.
+                </div>
+              </el-form-item>
+              <div class="fontf3 font-size14">
+                <!-- <input
+                  lay-submit=""
+                  lay-filter="dataPost"
+                  type="button"
+                  value="SUBMIT"
+                /> -->
+                <router-link
+                  to="/releases"
+                  class="btn-a font-size18 fontf7 fontFamily bg-pinkbluelfr"
+                >
+                  Submit</router-link
+                >
+              </div>
+            </el-form>
+          </el-col>
+        </el-row>
       </el-col>
-    </div> -->
+    </section>
   </div>
 </template>
 
 <script lang="ts" setup name="Cdmo">
-import { ref } from "vue";
+import { ref, reactive } from "vue";
 import { releases, events } from "./data/Index";
+import Events from "@/components/Events.vue";
+import { handleViteImages } from "@/utils";
+
 import {
   Autoplay,
   Navigation,
@@ -292,10 +344,27 @@ const solutionsBreakpoints = ref({
     spaceBetween: 25,
   },
 });
+const form = reactive({});
+const releasesList = ref([]);
+releasesList.value = releases.value.slice(0, 5);
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .my-slide-visible {
   margin-right: 10px;
+}
+.Insights-wrap {
+  .read-more {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+  .btn-a {
+    width: 255px;
+    text-align: center;
+    margin: 20px auto;
+    display: flex;
+    // width: fit-content;
+    justify-content: center;
+  }
 }
 </style>

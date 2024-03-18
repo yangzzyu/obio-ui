@@ -55,7 +55,7 @@ const matchedData = ref([
   },
   {
     path: "/news",
-    name: "Insights",
+    name: "news",
   },
   {
     path: currentRoute.path,
@@ -63,7 +63,7 @@ const matchedData = ref([
   },
 ]);
 const FocusData = ref({
-  title: "Insights",
+  title: "news",
   hiddenXsImgUrl:
     "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
   visibleXsImgUrl:

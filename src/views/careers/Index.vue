@@ -9,7 +9,7 @@
 <template>
   <div class="lab-sciences">
     <Focus :focusObj="FocusData" />
-    <section class="culture-box">
+    <section class="culture-box hero-style-top">
       <el-col
         :xs="22"
         :sm="20"
@@ -22,7 +22,9 @@
         <h1 class="title-color font-size70 txt-bold section-title fontFamily">
           Our Culture
         </h1>
-        <h2 class="title-color our-txt font-size30 section-title fontFamily">
+        <h2
+          class="title-color our-txt font-size30 section-title fontFamily txt-bold"
+        >
           Mission: Enable gene therapy for better lives
         </h2>
         <p class="font-size24 fontFamily textColor" style="margin-bottom: 20px">
@@ -64,9 +66,10 @@
               <h1 class="font-size50 fontf7 iti fontFamily item-tit">
                 {{ item.title }}
               </h1>
-              <p class="font-size30 fontf7 fontFamily cro-p textColor">
-                {{ item.text }}
-              </p>
+              <p
+                class="font-size30 fontf7 fontFamily cro-p textColor"
+                v-html="item.text"
+              ></p>
             </el-col>
           </el-row>
         </el-col>
@@ -85,7 +88,7 @@
         ><el-row class="news--slider row" :gutter="10">
           <el-col :xs="24" :span="12" class="news--slider-i">
             <router-link
-              to="/spiroSite"
+              to="/life"
               class="block tans service--box_link bg-pinkbluelfr career-a"
             >
               <el-row
@@ -96,12 +99,12 @@
                   ><div class="service--box_icon mb-3 min-width-70">
                     <img
                       class="icon--white"
-                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
+                      :src="handleViteImages('@/assets/icons/career_act1.png')"
                       alt="GMP Vector Manufacturing icon"
                     />
                     <img
                       class="icon--colour"
-                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
+                      :src="handleViteImages('@/assets/icons/career1.png')"
                       alt="GMP Vector Manufacturing icon"
                     /></div
                 ></el-col>
@@ -117,7 +120,7 @@
           </el-col>
           <el-col :xs="24" :span="12" class="news--slider-i">
             <router-link
-              to="/spiroSite"
+              to="/job"
               class="block tans service--box_link bg-pinkbluelfr career-a"
             >
               <el-row
@@ -128,12 +131,12 @@
                   ><div class="service--box_icon mb-3 min-width-70">
                     <img
                       class="icon--white"
-                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
+                      :src="handleViteImages('@/assets/icons/career_act2.png')"
                       alt="GMP Vector Manufacturing icon"
                     />
                     <img
                       class="icon--colour"
-                      src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
+                      :src="handleViteImages('@/assets/icons/career2.png')"
                       alt="GMP Vector Manufacturing icon"
                     /></div
                 ></el-col>
@@ -193,10 +196,8 @@ import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
   title: "Careers",
-  hiddenXsImgUrl:
-    "https://www.obio-tech.com/public/uploads/20220402/39c0eb1d2e5cf6c9f1d40cc78ce30544.jpg",
-  visibleXsImgUrl:
-    "https://www.obio-tech.com/public/uploads/20220402/c513fa4925451a1f43f4227509d942c3.jpg",
+  hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg4.png"),
+  visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg4.png"),
 });
 const dialogVisible = ref(false);
 function handleClose() {
@@ -205,7 +206,7 @@ function handleClose() {
 }
 const croList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon1.png"),
+    imgUrl: handleViteImages("@/assets/icons/careers1.png"),
     title: "Vision by 2026:",
     text: `Providing client-centered and high-quality 
 service as our commitment, we strive to 
@@ -214,16 +215,26 @@ therapy CXO group.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon2.png"),
+    imgUrl: handleViteImages("@/assets/icons/careers2.png"),
     title: "Value:",
     text: `Customer Focus, Efficient Execution, 
 Excellence, Innovation, Integrity.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon3.png"),
+    imgUrl: handleViteImages("@/assets/icons/careers3.png"),
     title: "Original Aspiration：",
-    text: `Developing gene therapies for the welfare ofmankind by virtue of its in-house developedall-round technology platform, its R&D and GMPproduction centers (floorage: 15,000 m2), and its77,000 m2 Lingang base (under construction),0Bi0 is dedicated to constantly acceleratinggene therapies researches, drug discovery,.pharmaceutical studies, clinical and commercialdevelopment of gene therapies`,
+    text: `Developing gene therapies for the welfare of 
+mankind by virtue of its in-house developed 
+all-round technology platform, its R&D and GMP 
+production centers (floorage: 15,000 m2), and its <text class="fontFamily title-color txt-bold">77,000</text>
+㎡  Lingang base (under construction), 
+OBiO is dedicated to constantly accelerating 
+gene therapies researches, drug discovery, 
+pharmaceutical studies, clinical and commercial 
+development of gene therapies
+
+`,
   },
 ]);
 const Labora = ref(<any>{});
@@ -283,6 +294,9 @@ function popLabora(id) {
 </script>
 
 <style lang="scss" scoped>
+.lab-sciences {
+  overflow: hidden;
+}
 .culture-box {
   margin-top: -100px;
   position: relative;

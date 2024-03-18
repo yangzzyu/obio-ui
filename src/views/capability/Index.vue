@@ -9,7 +9,7 @@
 <template>
   <div class="cap-sciences">
     <Focus :focusObj="FocusData" />
-    <section id="cap" class="cap-section">
+    <section id="cap" class="cap-section hero-style-top">
       <el-col
         :xs="22"
         :sm="20"
@@ -40,12 +40,12 @@
                 <div class="service--box_icon mb-3 min-width-70">
                   <img
                     class="icon--white"
-                    src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
+                    :src="item.actImgUrl"
                     alt="GMP Vector Manufacturing icon"
                   />
                   <img
                     class="icon--colour"
-                    src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
+                    :src="item.imgUrl"
                     alt="GMP Vector Manufacturing icon"
                   />
                 </div>
@@ -80,7 +80,7 @@
                 v-for="(item, index) in industrializeList"
                 :key="index"
               >
-                <div class="manufacturing-list bg-pinkbluelfr">
+                <div class="manufacturing-list">
                   <div class="content">
                     <img :src="item.imgUrl" alt="" srcset="" />
                   </div>
@@ -90,7 +90,7 @@
                 </div>
                 <ul class="txt-ul">
                   <li
-                    class="font-size18 fontFamily"
+                    class="font-size18 fontFamily txt-bold"
                     v-for="(i, idx) in item.txtList"
                     :key="idx"
                   >
@@ -100,7 +100,7 @@
                 <router-link
                   to="/spiroSite"
                   class="read-more font-size18 fontf7 fontFamily"
-                  >Read more</router-link
+                  >Read More</router-link
                 >
               </el-col>
             </el-row>
@@ -123,7 +123,7 @@
         </h1>
         <el-row class="our-box-content" :gutter="40">
           <el-col :span="10" :xs="24" class="left-content">
-            <img class="img" src="@/assets/icons/news.png" alt="" />
+            <img class="img" src="@/assets/icons/Viral_Vector_bg3.png" alt="" />
           </el-col>
           <el-col :span="14" :xs="24" class="font-size20 news-list">
             <div class="content-i" v-for="(i, idx) in ourList" :key="idx">
@@ -182,10 +182,8 @@ import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
   title: "Capability & Commitment",
-  hiddenXsImgUrl:
-    "https://www.obio-tech.com/public/uploads/20220402/39c0eb1d2e5cf6c9f1d40cc78ce30544.jpg",
-  visibleXsImgUrl:
-    "https://www.obio-tech.com/public/uploads/20220402/c513fa4925451a1f43f4227509d942c3.jpg",
+  hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg2.png"),
+  visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg2.png"),
 });
 const dialogVisible = ref(false);
 function handleClose() {
@@ -194,8 +192,8 @@ function handleClose() {
 }
 const cdmoList = ref([
   {
-    imgUrl: "",
-    actImgUrl: "",
+    imgUrl: handleViteImages("@/assets/icons/cap1.png"),
+    actImgUrl: handleViteImages("@/assets/icons/cap_act1.png"),
     text: `Experienced experts with
 over 10 years inGCT,
 ensuring timely
@@ -204,24 +202,24 @@ product lifecycle.
 `,
   },
   {
-    imgUrl: "",
-    actImgUrl: "",
+    imgUrl: handleViteImages("@/assets/icons/cap2.png"),
+    actImgUrl: handleViteImages("@/assets/icons/cap_act2.png"),
     text: `Efficient technology
 transfer with optimized
 process validation
 `,
   },
   {
-    imgUrl: "",
-    actImgUrl: "",
+    imgUrl: handleViteImages("@/assets/icons/cap3.png"),
+    actImgUrl: handleViteImages("@/assets/icons/cap_act3.png"),
     text: `State-of-the-art facilities
 with cGMP compliant
 quality systems
 `,
   },
   {
-    imgUrl: "",
-    actImgUrl: "",
+    imgUrl: handleViteImages("@/assets/icons/cap4.png"),
+    actImgUrl: handleViteImages("@/assets/icons/cap_act4.png"),
     text: `130+ process
 development projects,
 230+analytical
@@ -229,16 +227,16 @@ methods developed.
 `,
   },
   {
-    imgUrl: "",
-    actImgUrl: "",
+    imgUrl: handleViteImages("@/assets/icons/cap5.png"),
+    actImgUrl: handleViteImages("@/assets/icons/cap_act5.png"),
     text: `High standard and
 comprehensive quality
 controls.
 `,
   },
   {
-    imgUrl: "",
-    actImgUrl: "",
+    imgUrl: handleViteImages("@/assets/icons/cap6.png"),
+    actImgUrl: handleViteImages("@/assets/icons/cap_act6.png"),
     text: `End-to-End regulatory
 support with guided
 navigation
@@ -247,19 +245,18 @@ navigation
 ]);
 const industrializeList = reactive([
   {
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/20220330/0b0fe1e2c354c50f919655666ccfd951.jpg",
+    imgUrl: handleViteImages("@/assets/icons/industrialize1.png"),
     title: `Development:Efficient and Customized Process Development with
                   BoardProduct Spectrum`,
     txtList: [
       "Upstream Process",
       "Downstream Process",
       "Analytical Developmen",
+      "Process Validation",
     ],
   },
   {
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/20231212/55a4fdd1f7a358da8a3de3e938f99114.jpg",
+    imgUrl: handleViteImages("@/assets/icons/industrialize2.png"),
     title: `CcGMP Manufacturing: Flexible Large-Scale GMP Manufacturing
                   Platform:`,
     txtList: [
@@ -270,8 +267,7 @@ const industrializeList = reactive([
     ],
   },
   {
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg",
+    imgUrl: handleViteImages("@/assets/icons/industrialize3.png"),
     title: `Quality & Regulatory: 
 International Compliant
 Quality Control System`,
@@ -284,8 +280,7 @@ and review for your submission:`,
     ],
   },
   {
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg",
+    imgUrl: handleViteImages("@/assets/icons/industrialize4.png"),
     title: `Cold Chain Logistic: 
 Traceable 
 Cold-Chain Logistics with 
@@ -420,29 +415,24 @@ Responses at First Instance`,
   .service--box_link {
     height: 300px;
   }
-  a:hover,
-  a:focus {
-    .textColor {
-      color: #fff;
-    }
+  // &:hover {
+  //   .textColor {
+  //     color: #fff;
+  //   }
+  // }
+  // a:hover,
+  // a:focus {
+  //   .textColor {
+  //     color: #fff;
+  //   }
+  // }
+}
+.us-list-i:hover {
+  .textColor {
+    color: #fff;
   }
 }
 .industrialize-box {
   margin: 0;
-}
-.our-box {
-  .our-box-content {
-    .left-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    img {
-      width: 100%;
-    }
-    .content-i {
-      margin-bottom: 20px;
-    }
-  }
 }
 </style>

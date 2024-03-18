@@ -143,12 +143,12 @@ const router = createRouter({
         },
         {
           path: "/news",
-          name: "Insights",
+          name: "news",
           component: () => import("@/views/insights/Index.vue"),
           children: [
             {
               path: "/news",
-              name: "Insights",
+              name: "News and Events",
               component: () => import("@/views/insights/Insights.vue"),
             },
             {
@@ -177,6 +177,16 @@ const router = createRouter({
           path: "/careers",
           name: "Careers",
           component: () => import("@/views/careers/Index.vue"),
+        },
+        {
+          path: "/life",
+          name: "Life in OBIO",
+          component: () => import("@/views/careers/Life.vue"),
+        },
+        {
+          path: "/job",
+          name: "Job Opening",
+          component: () => import("@/views/careers/Job.vue"),
         },
         // {
         //   path: "/investor-relations",

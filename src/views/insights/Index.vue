@@ -17,6 +17,8 @@ import Focus from "@/components/Focus.vue";
 import Breadcrumb from "@/components/Breadcrumb.vue";
 import { useRouter } from "vue-router";
 import { computed, onBeforeMount, ref, toRefs, watch } from "vue";
+import { handleViteImages } from "@/utils";
+
 const router = useRouter();
 const currentRoute = router.currentRoute.value;
 const routerName = ref("");
@@ -24,13 +26,11 @@ const matchedData = ref([]);
 const FocusData = ref({});
 const pageData = ref([
   {
-    name: "Insights",
+    name: "News and Events",
     focusObj: {
-      title: "Insights",
-      hiddenXsImgUrl:
-        "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
-      visibleXsImgUrl:
-        "https://www.obio-tech.com/public/uploads/20220401/fed2a39854c2e2e0bd6d7d8434597de8.jpg",
+      title: "News and Events",
+      hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg3.png"),
+      visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg3.png"),
     },
   },
   {

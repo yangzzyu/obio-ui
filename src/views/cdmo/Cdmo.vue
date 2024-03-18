@@ -139,14 +139,16 @@
                 <div class="font-size38 fontf7 iti fontFamily">
                   OBlO Intelli-M
                 </div>
-                <p class="font-size18 fontFamily textColor">
-                  Process Development CharacterizationClinical and Commercial
-                  Manufacturing77,000-square-meter Facility for Global Supply
+                <p class="font-size18 fontFamily textColor txt-bold">
+                  Process Development Characterization Clinical and Commercial
+                  Manufacturing
+                  <text class="fontFamily title-color txt-bold">77,000</text
+                  >-square-meter Facility for Global Supply
                 </p>
                 <router-link
-                  to="/spiroSite"
+                  to="/intelliM"
                   class="read-more font-size18 fontf7 fontFamily"
-                  >Read more</router-link
+                  >Read More</router-link
                 >
               </el-col>
               <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
@@ -171,14 +173,14 @@
                 </div>
                 <div class="font-size38 fontf7 iti fontFamily">SPIRO Site</div>
 
-                <p class="font-size18 fontFamily textColor">
-                  Integrated Laboratory Services Processand Analytical Method
-                  DevelopmentResearch and Development Center
+                <p class="font-size18 fontFamily textColor txt-bold">
+                  Integrated Laboratory Services Process and Analytical Method
+                  Development Research and Development Center
                 </p>
                 <router-link
-                  to="/pineSite"
+                  to="/spiroSite"
                   class="read-more font-size18 fontf7 fontFamily"
-                  >Read more</router-link
+                  >Read More</router-link
                 >
               </el-col>
               <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
@@ -202,15 +204,17 @@
                   International Medical ParkShanghai, China
                 </div>
                 <div class="font-size38 fontf7 iti fontFamily">PINE Site</div>
-                <p class="font-size18 fontFamily textColor">
-                  Process and Analytical MethodDevelopment Pre-clinical and
-                  ClinicalManufacturing Three-building,10,000-square-meter
-                  campus
+                <p class="font-size18 fontFamily textColor txt-bold">
+                  Process and Analytical Method Development Pre-clinical and
+                  Clinical Manufacturing Three-building,<text
+                    class="fontFamily title-color txt-bold"
+                    >10,000</text
+                  >-square-meter campus
                 </p>
                 <router-link
-                  to="/intelliM"
+                  to="/pineSite"
                   class="read-more font-size18 fontf7 fontFamily"
-                  >Read more</router-link
+                  >Read More</router-link
                 >
               </el-col>
             </el-row>
@@ -254,13 +258,24 @@
               <h1 class="font-size50 fontf7 iti fontFamily item-tit">
                 {{ item.title }}
               </h1>
-              <p class="font-size30 fontf7 fontFamily cro-p textColor">
+              <ul>
+                <li
+                  style="padding: 5px 0"
+                  v-for="(i, idx) in item.textArr"
+                  :key="idx"
+                  class="fontFamily font-size24 textColor"
+                >
+                  • {{ i }}
+                </li>
+              </ul>
+              <!-- <p class="font-size30 fontf7 fontFamily cro-p textColor">
+
                 {{ item.text }}
-              </p>
+              </p> -->
               <router-link
                 to="/spiroSite"
                 class="font-size18 fontf7 fontFamily btn-a"
-                >Read more</router-link
+                >Read More</router-link
               ></el-col
             >
           </el-row>
@@ -284,10 +299,12 @@
             <div class="fac-con">
               <el-row class="row" :gutter="10">
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
-                  <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="manufacturing-list">
                     <div class="content">
                       <img
-                        src="https://www.obio-tech.com/public/uploads/20220330/0b0fe1e2c354c50f919655666ccfd951.jpg"
+                        :src="
+                          handleViteImages('@/assets/icons/innovation1.png')
+                        "
                         alt="SPIRO Site"
                       />
                     </div>
@@ -295,20 +312,22 @@
                   <h1 class="font-size38 fontf7 iti fontFamily">
                     AAVneO™ System
                   </h1>
-                  <p class="font-size18 fontFamily  txt">
-                    LNext-Generation Capsid Screening Platform
+                  <p class="font-size18 fontFamily txt textColor txt-bold">
+                    LNext-Generation Capsid <br />Screening Platform
                   </p>
                   <router-link
                     to="/spiroSite"
                     class="read-more font-size18 fontf7 fontFamily"
-                    >Read more</router-link
+                    >Read More</router-link
                   >
                 </el-col>
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-                  <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="manufacturing-list">
                     <div class="content">
                       <img
-                        src="https://www.obio-tech.com/public/uploads/20231212/55a4fdd1f7a358da8a3de3e938f99114.jpg"
+                        :src="
+                          handleViteImages('@/assets/icons/innovation2.png')
+                        "
                         alt="PINE Site"
                       />
                     </div>
@@ -319,32 +338,37 @@
                   <h1 class="font-size38 fontf7 iti fontFamily">
                     OVersatileTM Platform
                   </h1>
-                  <p class="font-size18 fontFamily textColor txt">
+                  <p class="font-size18 fontFamily textColor txt txt-bold">
                     Versatility for Various Needs
                   </p>
                   <router-link
                     to="/pineSite"
                     class="read-more font-size18 fontf7 fontFamily"
-                    >Read more</router-link
+                    >Read More</router-link
                   >
                 </el-col>
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-                  <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="manufacturing-list">
                     <div class="content">
                       <img
-                        src="https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg"
+                        :src="
+                          handleViteImages('@/assets/icons/innovation3.png')
+                        "
                         alt="OBiO Intelli-M"
                       />
                     </div>
                   </div>
-                  <h1 class="font-size38 fontf7 iti fontFamily"> Proprietary Cell Line  Development</h1>
-                  <p class="font-size18 fontFamily textColor txt">
-                    High-Yielding Cell Line for
+                  <h1 class="font-size38 fontf7 iti fontFamily">
+                    Proprietary Cell Line Development
+                  </h1>
+                  <p class="font-size18 fontFamily textColor txt txt-bold">
+                    High-Yielding Cell Line for <br />
+                    Suspension Culture
                   </p>
                   <router-link
                     to="/intelliM"
                     class="read-more font-size18 fontf7 fontFamily"
-                    >Read more</router-link
+                    >Read More</router-link
                   >
                 </el-col>
               </el-row>
@@ -620,29 +644,53 @@ const SolutionsList = ref([
 ]);
 const croList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon1.png"),
-    title: "Plasmid",
-    text: `At 0Bi0, our dedicateddevelopment team iscommitted to assistingyou in designing,constructing, andmanufacturing plasmidsfor fuctional genomicsresearch, as well asprovidingexpertise inviral packaging.`,
+    imgUrl: handleViteImages("@/assets/icons/cdmo1.png"),
+    title: "Viral Vectors",
+    textArr: [
+      "AAV",
+      "Adenoviral vector for delivery of genes",
+      "Lentiviral vectors",
+      "Retroviral vectors",
+      "Virus like particles (VLPs)",
+    ],
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon2.png"),
-    title: "Viral Vector",
-    text: `We specialize in offeringcomprehensive servicesencompassing thedesign, construction, andpackaging of varioustypes of viral vectors.Additionally, we assist inexecuting a diverserange of biomolecularoperations tailored toyour specific gene ofinterest, ensuringthorough supportthroughout the process.`,
+    imgUrl: handleViteImages("@/assets/icons/cdmo2.png"),
+    title: "Oncolytic Virus",
+    textArr: [
+      "Oncolytic adenoviruses",
+      "Oncolytic herpes simplex virus",
+      "Oncolytic vaccinia viruses",
+      "Oncolytic vesicular stomatitis virus",
+      "Oncolytic Newcastle disease virus",
+    ],
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon3.png"),
-    title: "Experiment Solutions",
-    text: `We offer an extensivearray of contractresearch servicestailored for functionalgenomics studies.`,
+    imgUrl: handleViteImages("@/assets/icons/cdmo3.png"),
+    title: "Cell Therapy Products",
+    textArr: [
+      "Autologous and homologous immunocyte therapies",
+      "CAR-T Therapy",
+      "NK Cell Therapy",
+      "TCR-T Therapy",
+      "DC Therapy",
+      "ΓδT Therapy",
+      "Treg Therapy",
+      "Stem cell therapy",
+    ],
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon4.png"),
-    title: "Related Products",
-    text: `We offer a comprehensive range ofin-stock virus vectors,proteins, gRNA libraries.and relevant reagents,catering to diverse research needs acrossvarious aspects of your project.`,
-  },
-  {
-    imgUrl: handleViteImages("@/assets/icons/croIcon5.png"),
-    title: "Extracellular Vesicle",
-    text: `Our services for extracellularvesicle include isolation,identification, and functionalresearch at the laboratory stage.For samples from differentsources, our scientist team hasdeveloped multiple isolationsolutions which have beensuccessfully applied in samplesof cells, body fluids and tissueexosomes such as cerebrospinalfluid, urine, brain tissue and liver.`,
+    imgUrl: handleViteImages("@/assets/icons/cdmo4.png"),
+    title: "Plasmid Nucleotides",
+    textArr: [
+      "Plasmid DNA",
+      "Minicircle plasmids",
+      "dsDNA",
+      "ssDNA",
+      "mRNA drug substance",
+      "mRNA-LNP finished product",
+      "Exosomes",
+    ],
   },
 ]);
 const cellSource = ref(0);
@@ -710,9 +758,9 @@ const activeIndex = ref(0);
 .facilities-box {
   margin-top: 30px;
 }
-.innovation-box{
+.innovation-box {
   margin: 0;
-  .txt{
+  .txt {
     text-align: center;
   }
 }

@@ -130,7 +130,7 @@
             text-color="#0D4DA1"
             router
             class="hidden-sm-and-down"
-            active-text-color="#bd242a"
+            active-text-color="#008689"
             background-color="transparent"
             :popper-offset="0"
           >
@@ -217,9 +217,7 @@
               }"
             >
               <template #title>
-                <div @click="router.push('/news')" class="menu-t1">
-                  News
-                </div>
+                <div @click="router.push('/news')" class="menu-t1">News</div>
               </template>
               <el-menu-item index="/releases">Press Releases</el-menu-item>
               <el-menu-item index="/events">Events</el-menu-item>
@@ -248,7 +246,7 @@
             > -->
           </el-menu>
           <ul class="icon-list">
-            <li
+            <!-- <li
               id="menu-item-146"
               class="menu-item menu-item-type-custom menu-item-object-custom menu-item-146"
             >
@@ -261,7 +259,7 @@
                   aria-hidden="true"
                 ></i
               ></a>
-            </li>
+            </li> -->
             <li
               id="menu-item-147"
               class="menu-item menu-item-type-custom menu-item-object-custom menu-item-147"
@@ -274,17 +272,14 @@
                 <font-awesome-icon
                   class="footer-icon"
                   size="lg"
-                  :icon="['fab', 'weixin']"
+                  :icon="['fab', 'linkedin']"
                 />
+                <!-- <font-awesome-icon
+                  class="footer-icon"
+                  size="lg"
+                  :icon="['fab', 'weixin']"
+                /> -->
               </a>
-            </li>
-            <li
-              id="menu-item-148"
-              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-148"
-            >
-              <a title="Share" href="#" class="menu-link"
-                ><span class="modal-61a916ebae560">Share</span></a
-              >
             </li>
             <li
               id="menu-item-149"
@@ -298,8 +293,9 @@
                 <font-awesome-icon
                   class="footer-icon"
                   size="lg"
-                  :icon="['fab', 'linkedin']"
+                  :icon="['fab', 'weixin']"
                 />
+
                 <!-- <i class="fal fa-envelope alg-tb-ifs" aria-hidden="true"></i
                 > -->
               </a>
@@ -309,11 +305,15 @@
               class="menu-item menu-item-type-custom menu-item-object-custom menu-item-150"
             >
               <a title="Print" href="#" class="menu-link">
-                <font-awesome-icon
-                  class="footer-icon"
-                  size="lg"
-                  :icon="['fab', 'youtube']"
-                />
+                <font-awesome-icon size="lg" :icon="['fas', 'circle-play']" />
+              </a>
+            </li>
+            <li
+              id="menu-item-151"
+              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-150"
+            >
+              <a title="Print" href="#" class="menu-link">
+                <font-awesome-icon size="lg" :icon="['fass', 'f']" />
               </a>
             </li>
           </ul>
@@ -497,6 +497,7 @@ onBeforeMount(() => {});
 .menu-t1 {
   // font-size: 1.1vw;
   font-size: 20px;
+  font-weight: bold;
   &:not(.is-disabled):focus,
   &:not(.is-disabled):hover {
     background: transparent !important;
@@ -640,7 +641,7 @@ h2 {
     font-family: HCo Gotham Rounded Medium SSm;
     font-size: 14px;
     letter-spacing: 0.6px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
   }
   .top-bar-right {
     display: flex;

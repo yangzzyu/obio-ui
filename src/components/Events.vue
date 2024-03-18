@@ -23,47 +23,27 @@
           <img class="img" src="@/assets/icons/news.png" alt="" />
         </el-col>
         <el-col :span="14" :xs="24" class="font-size20 news-list">
-          <div class="news-i">
+          <div class="news-i" v-for="(item, index) in eventsList" :key="index">
             <!-- bg-pinkbluelfr -->
-            <h3 class="title-color font-size24 fontFamily">Jan.13th 2024</h3>
+            <h3 class="title-color font-size24 fontFamily">{{ item.time }}</h3>
             <p class="font-size24 fontFamily textColor">
-              Focusing on efficient gene delivery of NK cells, The First Condor
-              Lifeand OBi0 Technology reach a strategic cooperation!
+              {{ item.title }}
+              <!-- Focusing on efficient gene delivery of NK cells, The First Condor
+              Life and OBiO Technology reach a strategic cooperation! -->
             </p>
-            <!-- <div class="btn bg-pinkbluelfr">Read more</div> -->
+            <!-- <div class="btn bg-pinkbluelfr">Read More</div> -->
             <router-link
-              to="/intelliM"
+              :to="'/news-details/events/' + item.id"
               class="btn-a font-size18 fontf7 fontFamily bg-pinkbluelfr events-btn"
-              >Read more</router-link
+              >Read More</router-link
             >
           </div>
-          <div class="news-i">
-            <h3 class="title-color font-size24 fontFamily">Oct. 24th 2023</h3>
-            <p class="font-size24 fontFamily textColor">
-              0Bi0 Announces Strategic Partnership with Refreshgene to
-              RealizeCommercialization of Gene Therapy Product
-            </p>
-            <!-- <div class="btn bg-pinkbluelfr">Read more</div> -->
-            <router-link
-              to="/intelliM"
-              class="btn-a font-size18 fontf7 fontFamily bg-pinkbluelfr events-btn"
-              >Read more</router-link
-            >
-          </div>
-          <div class="news-i">
-            <h3 class="title-color font-size24 fontFamily">
-              Oct. 10th-12th 2023
-            </h3>
-            <p class="font-size24 fontFamily textColor">
-              Cell&Gene meeting on the Mesa
-            </p>
-            <!-- <div class="btn bg-pinkbluelfr">Read more</div> -->
-            <router-link
-              to="/intelliM"
-              class="btn-a font-size18 fontf7 fontFamily bg-pinkbluelfr events-btn"
-              >Read more</router-link
-            >
-          </div>
+          <router-link
+            v-if="isShow"
+            to="/news"
+            class="btn-a font-size18 fontf7 fontFamily bg-pinkbluelfr events-btn"
+            >All News</router-link
+          >
         </el-col>
       </el-row>
     </el-col>
@@ -114,7 +94,12 @@
 <script lang="ts" setup name="Events">
 import { ref } from "vue";
 import { events } from "@/views/insights/data/Index";
-
+const props = defineProps({
+  isShow: {
+    type: Boolean,
+    default: false,
+  },
+});
 const eventsList = ref([]);
 eventsList.value = events.value.slice(0, 3);
 </script>
@@ -126,5 +111,8 @@ eventsList.value = events.value.slice(0, 3);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.btn-a {
+  margin-top: 20px;
 }
 </style>

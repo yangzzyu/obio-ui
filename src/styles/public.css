@@ -292,7 +292,7 @@ li {
 }
 /* .focus a{display:block;width:100%;background-position:center center;background-size:100% auto;background-repeat:no-repeat;} */
 .focus img {
-  /* width: 100%; */
+  width: 100%;
 }
 .focus .txt {
   position: absolute;
