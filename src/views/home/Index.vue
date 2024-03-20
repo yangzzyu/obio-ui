@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 09:07:47
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-08 17:32:56
+ * @LastEditTime: 2024-03-20 14:14:25
  * @FilePath: \obio-ui\src\views\HomeView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -41,14 +41,10 @@ import TheWelcome from "../components/TheWelcome.vue";
             <div class="fac-con">
               <el-row class="row" :gutter="10">
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
-                  <div class="manufacturing-list">
+                  <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
                       <img
-                        :src="
-                          handleViteImages(
-                            '@/assets/icons/International_bg1.png'
-                          )
-                        "
+                        src="https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg"
                         alt="OBIO Intelli-M"
                       />
                     </div>
@@ -70,14 +66,10 @@ import TheWelcome from "../components/TheWelcome.vue";
                   >
                 </el-col>
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-                  <div class="manufacturing-list">
+                  <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
                       <img
-                        :src="
-                          handleViteImages(
-                            '@/assets/icons/International_bg2.png'
-                          )
-                        "
+                        src="https://www.obio-tech.com/public/uploads/20220330/0b0fe1e2c354c50f919655666ccfd951.jpg"
                         alt="SPIRO Site"
                       />
                     </div>
@@ -98,14 +90,10 @@ import TheWelcome from "../components/TheWelcome.vue";
                   >
                 </el-col>
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-                  <div class="manufacturing-list">
+                  <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
                       <img
-                        :src="
-                          handleViteImages(
-                            '@/assets/icons/International_bg3.png'
-                          )
-                        "
+                        src="https://www.obio-tech.com/public/uploads/20231212/55a4fdd1f7a358da8a3de3e938f99114.jpg"
                         alt="PINE Site"
                       />
                     </div>
