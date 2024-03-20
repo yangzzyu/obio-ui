@@ -19,15 +19,15 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="title-color font-size70 txt-bold section-title fontFamily">
+        <h1 class="title-color font-size70 txt-bold section-title fontf8">
           Life at OBiO
         </h1>
-        <h2 class="title-color our-txt font-size30 section-title fontFamily">
+        <h2 class="title-color our-txt font-size30 section-title fontf7">
           As OBiO Tech swiftly evolves, every OBiOers are immersed in an
           environment fostering "enhanced capabilities, purposeful work, and a
           fulfilling life."
         </h2>
-        <ul class="font-size24 fontFamily textColor">
+        <ul class="font-size24 textColor">
           <li>Enhanced Capabilities</li>
           <li>Competitive compensation and benefits</li>
           <li>
@@ -39,7 +39,7 @@
             pursuits
           </li>
         </ul>
-        <p class="font-size24 fontFamily textColor" style="margin-bottom: 20px">
+        <p class="font-size24 textColor" style="margin-bottom: 20px">
           This encapsulates our vibrant company culture, where every moment is
           an opportunity for growth and fulfillment.
         </p>
@@ -60,7 +60,7 @@
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size50 txt-bold fontFamily">
+          <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
             {{ item.title }}
           </h1>
 
@@ -94,11 +94,17 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="p-title font-size50 txt-bold fontFamily">
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
           All Hands Meetin
         </h1>
-        <img src="@/assets/icons/meetin_bg.png" width="100%" alt="" srcset=""
-      /></el-col>
+        <el-col :xs="24" :span="20" style="margin: auto" class="container">
+          <img
+            src="@/assets/icons/meetin_bg.png"
+            width="100%"
+            alt=""
+            srcset=""
+            class="mb-5" /></el-col
+      ></el-col>
     </section>
   </div>
 
@@ -144,8 +150,12 @@ import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
   title: "Life in OBIO",
-  hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg3.png"),
-  visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg3.png"),
+  hiddenXsImgUrl:
+    "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+  visibleXsImgUrl:
+    "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+  // hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg3.png"),
+  // visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg3.png"),
 });
 const dialogVisible = ref(false);
 function handleClose() {

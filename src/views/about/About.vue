@@ -19,8 +19,8 @@
         class="container"
       >
         <div class="text font-size20">
-          <h3 class="fontFamily textColor">
-            <text class="txt-bold"
+          <h3 class="textColor">
+            <text class="txt-bold fontf8"
               >OBiO Technology is a pioneering gene and cell therapy CRO and
               CDMO,</text
             >
@@ -28,7 +28,7 @@
             vectorology studies, functional genomics, process and analytical
             development, as well as IND-enabling CMC and clinical and commercial
             manufacturing.
-            <text class="txt-bold"
+            <text class="txt-bold fontf8"
               >With our mission to "enable gene therapy for better lives," </text
             >we are dedicated to delivering top-tier services globally. From
             bench to clinic, we are committed to advancing your product and
@@ -43,7 +43,7 @@
         </div>
       </el-col>
     </div>
-    <section id="steps" class="steps-details bg-mg">
+    <!-- <section id="steps" class="steps-details bg-mg">
       <el-col
         :xs="22"
         :sm="20"
@@ -86,7 +86,6 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <!-- <h2>02. Passing Verification</h2> -->
                     <p class="fontFamily">
                       · The acquisition of Neuron Biotech Co., Ltd. (which has
                       become a wholly owned subsidiary of OBiO after the
@@ -113,7 +112,6 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <!-- <h2>03. Creating An Application For a Loan</h2> -->
                     <p class="fontFamily">
                       · Shareholding reform and
                       <text class="fontFamily title-color txt-bold"
@@ -127,7 +125,6 @@
                     </p>
                   </div>
                   <span>2015 </span>
-                  <!-- <div class="mid-icons"></div> -->
                 </li>
                 <li class="r-con">
                   <div
@@ -139,7 +136,6 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <!-- <h2>04. Financing a Loan</h2> -->
                     <p class="fontFamily">
                       · Listed in the
                       <text class="fontFamily title-color txt-bold"
@@ -167,7 +163,6 @@
                       · Viral vector GLP pilot-scale platform constructed and
                       commissioned
                     </p>
-                    <!-- <h2>05. Activating a Loan</h2> -->
                     <p class="fontFamily">
                       · Entered into an agreement with GE Medical for a global
                       strategic cooperation in
@@ -189,7 +184,6 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <!-- <h2>06. Receiving Funds</h2> -->
                     <p class="fontFamily">
                       · The first
                       <text class="fontFamily title-color txt-bold"
@@ -210,7 +204,6 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <!-- <h2>06. Receiving Funds</h2> -->
                     <p class="fontFamily">
                       · OBiO Intelli-M (Shanghai) Gene Technology Co., Ltd., a
                       subsidiary of OBiO, was founded;
@@ -239,7 +232,6 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <!-- <h2>06. Receiving Funds</h2> -->
                     <p class="fontFamily">
                       ·
                       <text class="fontFamily title-color txt-bold"
@@ -278,7 +270,6 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <!-- <h2>06. Receiving Funds</h2> -->
                     <p class="fontFamily">
                       ·
                       <text class="fontFamily title-color txt-bold">
@@ -311,7 +302,6 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <!-- <h2>06. Receiving Funds</h2> -->
                     <p class="fontFamily">
                       ·
                       <text class="fontFamily title-color txt-bold"
@@ -336,7 +326,6 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <!-- <h2>06. Receiving Funds</h2> -->
                     <p class="fontFamily">
                       ·
                       <text class="fontFamily title-color txt-bold">
@@ -356,7 +345,69 @@
           </div>
         </div>
       </el-col>
-    </section>
+    </section> -->
+    <div class="section-2">
+      <el-col
+        :xs="14"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
+        <div class="pub-title style2 ub ub-ver ub-pe">
+          <i class="line"></i><span class="fontf8 font-size50">History</span>
+        </div>
+        <div class="about-history-swp">
+          <div
+            class="historyNext"
+            id="historyNext"
+            tabindex="0"
+            role="button"
+            aria-label="Next slide"
+            aria-disabled="false"
+          ></div>
+          <div
+            class="historyPrev swiper-button-disabled"
+            id="historyPrev"
+            tabindex="0"
+            role="button"
+            aria-label="Previous slide"
+            aria-disabled="true"
+          ></div>
+          <Swiper
+            :modules="[Autoplay, Navigation, Scrollbar]"
+            :initialSlide="100"
+            slides-per-view="auto"
+            :simulateTouch="false"
+            :watchSlidesVisibility="true"
+            :navigation="navigation"
+            slideVisibleClass="my-slide-visible"
+            class="swiper-container"
+          >
+            <swiper-slide
+              v-for="(item, index) in historyList"
+              :key="index"
+              :class="index % 2 === 0 ? 'even' : 'odd'"
+            >
+              <div class="boxs">
+                <div class="cons">
+                  <div class="year">{{ item.year }} <i></i></div>
+                  <div class="txt font-size18">
+                    <ul>
+                      <li v-for="(i, k) in item.txt" :key="k">
+                        {{ i }}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div></swiper-slide
+            >
+          </Swiper>
+        </div>
+      </el-col>
+    </div>
     <section class="in-about-wrap about-box">
       <el-col
         :xs="22"
@@ -367,100 +418,81 @@
         style="margin: auto"
         class="container section-3"
       >
-        <h1 class="p-title font-size50 txt-bold fontFamily">Facility</h1>
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Facility</h1>
         <div class="fac-con">
           <el-row class="row" :gutter="10">
             <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
-              <div class="manufacturing-list bg-pinkbluelfr">
+              <div class="manufacturing-list">
                 <div class="content">
                   <img
-                    src="https://www.obio-tech.com/public/uploads/20220330/0b0fe1e2c354c50f919655666ccfd951.jpg"
+                    :src="
+                      handleViteImages('@/assets/icons/International_bg1.png')
+                    "
+                    alt="OBIO Intelli-M"
+                  />
+                </div>
+              </div>
+              <div class="font-size24 fontf7 iti">
+                Lin-Gang Free-Trade Zone<br />Shanghai, China
+              </div>
+              <div class="font-size38 fontf7 iti">OBIO Intelli-M</div>
+              <p class="font-size18 textColor txt-bold">
+                Process Development Characterization Clinical and Commercial
+                Manufacturing
+                <text class="title-color txt-bold">77,000</text>-square-meter
+                Facility for Global Supply
+              </p>
+              <router-link to="/intelliM" class="read-more font-size18 fontf7"
+                >Read More</router-link
+              >
+            </el-col>
+            <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
+              <div class="manufacturing-list">
+                <div class="content">
+                  <img
+                    :src="
+                      handleViteImages('@/assets/icons/International_bg2.png')
+                    "
                     alt="SPIRO Site"
                   />
                 </div>
               </div>
-              <div class="font-size24 fontf7 iti fontFamily">
-                Lin-Gang Free-Trade Zone Shanghai, China
+              <div class="font-size24 fontf7 iti">
+                International Medical Park<br />Shanghai, China
               </div>
-              <div class="font-size38 fontf7 iti fontFamily">
-                Intelli-M Facility
-              </div>
-              <p class="font-size18 fontFamily textColor">
-                Process Development Characterization Clinical and Commercial
-                Manufacturing
-                <text class="fontFamily title-color txt-bold">77,000</text>
-                -square-meter Facility for Global<br />
-                Supply<br />
-                3888 Canghai Rd, Lin-Gang Free-Trade <br />Zone, <br />Pudong
-                New District, Shanghai, China<br />
-                Main:<text class="fontFamily title-color txt-bold"
-                  >+86 400-151-5198</text
-                >
+              <div class="font-size38 fontf7 iti">SPIRO Site</div>
+
+              <p class="font-size18 textColor txt-bold">
+                Integrated Laboratory Services Processand Analytical Method
+                DevelopmentResearch and Development Center
               </p>
-              <router-link
-                to="/intelliM"
-                class="read-more font-size18 fontf7 fontFamily"
+              <router-link to="/spiroSite" class="read-more font-size18 fontf7"
                 >Read More</router-link
               >
             </el-col>
             <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-              <div class="manufacturing-list bg-pinkbluelfr">
+              <div class="manufacturing-list">
                 <div class="content">
                   <img
-                    src="https://www.obio-tech.com/public/uploads/20231212/55a4fdd1f7a358da8a3de3e938f99114.jpg"
+                    :src="
+                      handleViteImages('@/assets/icons/International_bg3.png')
+                    "
                     alt="PINE Site"
                   />
                 </div>
               </div>
-              <div class="font-size24 fontf7 iti fontFamily">
-                International Medical Park Shanghai, China
+              <div class="font-size24 fontf7 iti">
+                International Medical Park<br />Shanghai, China
               </div>
-              <div class="font-size38 fontf7 iti fontFamily">SPIRO Site</div>
-
-              <p class="font-size18 fontFamily textColor">
-                Integrated Laboratory Services<br />
-                Process and Analytical Method <br />Development<br />
-                Research and Development Center Building No.19, Lane 908, Ziping
-                Rd, Pudong New District, Shanghai, China <br />
-                Main:<text class="fontFamily title-color txt-bold"
-                  >+86 400-151-5198</text
-                >
+              <div class="font-size38 fontf7 iti">PINE Site</div>
+              <p class="font-size18 textColor txt-bold">
+                Process and Analytical Method Development Pre-clinical and
+                Clinical Manufacturing Three-building,<text
+                  class="title-color txt-bold"
+                  >10,000</text
+                >-square-meter campus
               </p>
-              <router-link
-                to="/spiroSite"
-                class="read-more font-size18 fontf7 fontFamily"
-                >Read More</router-link
-              >
-            </el-col>
-            <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-              <div class="manufacturing-list bg-pinkbluelfr">
-                <div class="content">
-                  <img
-                    src="https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg"
-                    alt="OBiO Intelli-M"
-                  />
-                </div>
-              </div>
-              <div class="font-size24 fontf7 iti fontFamily">
-                International Medical Park Shanghai, China
-              </div>
-              <div class="font-size38 fontf7 iti fontFamily">PINE Site</div>
-              <p class="font-size18 fontFamily textColor">
-                Process and Analytical Method
-                <br />
-                Development<br />
-                Pre-clinical and Clinical Manufacturing Three-building,
-                10,000-square-meter <br />
-                campus<br />
-                Building No.8, Lane 100, Banxia Rd, Pudong New District,
-                Shanghai, China<br />
-                Main:<text class="fontFamily title-color txt-bold"
-                  >+86 400-151-5198</text
-                >
-              </p>
-              <router-link
-                to="/pineSite"
-                class="read-more font-size18 fontf7 fontFamily"
+              <router-link to="/pineSite" class="read-more font-size18 fontf7"
                 >Read More</router-link
               >
             </el-col>
@@ -478,25 +510,27 @@
         style="margin: auto"
         class="container section-3"
       >
-        <h1 class="p-title font-size50 txt-bold fontFamily">Factory Images</h1>
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+          Factory Images
+        </h1>
         <div class="fac-con">
           <el-row class="row" :gutter="10">
             <el-col :xs="24" :span="6" class="">
               <div class="manufacturing-list">
                 <div class="content">
                   <div class="factory-text">
-                    <h1 class="font-size30 txt-bold fontFamily">
+                    <h1 class="font-size30 txt-bold fontf8">
                       LARGE <span class="text-sapn">大</span>
                     </h1>
                     <p
-                      class="font-size18 txt-bold fontFamily"
+                      class="font-size18 txt-bold fontf7"
                       style="color: #fff; margin-bottom: 20px"
                     >
                       OBiO Technology’s intelligent medical industrialization
                       base
                     </p>
                     <p
-                      class="font-size14 txt-bold fontFamily is-details"
+                      class="font-size14 txt-bold is-details"
                       style="color: #fff"
                     >
                       The only 77,000m2 scale GMP-compliant facility in the
@@ -508,6 +542,7 @@
                     :src="handleViteImages('@/assets/icons/facility1.png')"
                     alt="SPIRO Site"
                   />
+                  <div class="overlay"></div>
                 </div>
               </div>
             </el-col>
@@ -515,18 +550,18 @@
               <div class="manufacturing-list">
                 <div class="content">
                   <div class="factory-text">
-                    <h1 class="font-size30 txt-bold fontFamily">
+                    <h1 class="font-size30 txt-bold fontf8">
                       COMPREHENSIVE <span class="text-sapn">全</span>
                     </h1>
                     <p
-                      class="font-size18 txt-bold fontFamily"
+                      class="font-size18 txt-bold fontf7"
                       style="color: #fff; margin-bottom: 20px"
                     >
                       OBiO Technology’s intelligent medical industrialization
                       base
                     </p>
                     <p
-                      class="font-size14 txt-bold fontFamily is-details"
+                      class="font-size14 txt-bold is-details"
                       style="color: #fff"
                     >
                       More than 30 gene cell therapy production lines
@@ -551,18 +586,18 @@
               <div class="manufacturing-list">
                 <div class="content">
                   <div class="factory-text">
-                    <h1 class="font-size30 txt-bold fontFamily">
+                    <h1 class="font-size30 txt-bold fontf8">
                       INNOVATIVE <span class="text-sapn">新</span>
                     </h1>
                     <p
-                      class="font-size18 txt-bold fontFamily"
+                      class="font-size18 txt-bold fontf7"
                       style="color: #fff; margin-bottom: 20px"
                     >
                       OBiO Technology’s intelligent medical industrialization
                       base
                     </p>
                     <p
-                      class="font-size14 txt-bold fontFamily is-details"
+                      class="font-size14 txt-bold is-details"
                       style="color: #fff"
                     >
                       Single-use process vector production line Single-use
@@ -582,18 +617,18 @@
               <div class="manufacturing-list">
                 <div class="content">
                   <div class="factory-text">
-                    <h1 class="font-size30 txt-bold fontFamily">
+                    <h1 class="font-size30 txt-bold fontf8">
                       INTELLIGENT <span class="text-sapn">智</span>
                     </h1>
                     <p
-                      class="font-size18 txt-bold fontFamily"
+                      class="font-size18 txt-bold fontf7"
                       style="color: #fff; margin-bottom: 20px"
                     >
                       OBiO Technology’s intelligent medical industrialization
                       base
                     </p>
                     <p
-                      class="font-size14 txt-bold fontFamily is-details"
+                      class="font-size14 txt-bold is-details"
                       style="color: #fff"
                     >
                       Digitization and intelligentification based mechanical arm
@@ -624,25 +659,27 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="p-title font-size50 txt-bold fontFamily">Life at OBiO</h1>
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+          Life at OBiO
+        </h1>
         <el-row class="our-box-content" :gutter="40">
-          <el-col :span="10" :xs="24" class="left-content">
+          <el-col :span="8" :xs="24" class="left-content">
             <img
               class="img"
               :src="handleViteImages('@/assets/icons/life_bg.png')"
               alt=""
             />
           </el-col>
-          <el-col :span="14" :xs="24" class="font-size20 news-list">
+          <el-col :span="16" :xs="24" class="font-size20 news-list">
             <h3
-              class="title-color font-size30 fontFamily"
+              class="title-color font-size30 fontf7"
               style="margin-bottom: 30px"
             >
               As OBiO Tech swiftly evolves, every OBiOers are immersed in an
               environment fostering "enhanced capabilities, purposeful work, and
               a fulfilling life."
             </h3>
-            <ul class="font-size18 fontFamily textColor life-ul">
+            <ul class="font-size18 textColor life-ul">
               <li><i></i> Enhanced Capabilities</li>
               <li><i></i> Competitive compensation and benefits</li>
               <li>
@@ -662,12 +699,12 @@
         </el-row>
         <ul class="btn-ul">
           <li>
-            <router-link to="/team" class="btn-a font-size18 fontf7 fontFamily"
+            <router-link to="/team" class="btn-a font-size18 fontf7"
               >join our team</router-link
             >
           </li>
           <li>
-            <router-link to="/life" class="btn-a font-size18 fontf7 fontFamily"
+            <router-link to="/life" class="btn-a font-size18 fontf7"
               >Read More</router-link
             >
           </li>
@@ -867,10 +904,14 @@ Responses at First Instance`,
 <style lang="scss" scoped>
 .about-box {
   margin: 0 !important;
+  .manufacturing-list {
+    cursor: pointer;
+  }
 }
 .factory-text {
   position: absolute;
   padding: 10px;
+  height: 100%;
   h1 {
     background: linear-gradient(0deg, #26fddc 0%, #3d8bd3 100%);
     -webkit-background-clip: text;
@@ -883,6 +924,7 @@ Responses at First Instance`,
     color: #3c8fd3;
   }
 }
+
 .life-ul {
   li {
     padding: 10px 0;

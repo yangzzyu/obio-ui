@@ -19,21 +19,21 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="title-color font-size70 txt-bold section-title fontFamily">
+        <h1 class="title-color font-size70 txt-bold section-title fontf8">
           Our Culture
         </h1>
         <h2
-          class="title-color our-txt font-size30 section-title fontFamily txt-bold"
+          class="title-color our-txt font-size30 section-title fontf7 txt-bold"
         >
           Mission: Enable gene therapy for better lives
         </h2>
-        <p class="font-size24 fontFamily textColor" style="margin-bottom: 20px">
+        <p class="font-size24 textColor" style="margin-bottom: 20px">
           At OBiO, we empower gene therapy, driving advancements in gene drug
           development and clinical applications. We achieve this by providing
           top-tier technical services to research institutions and companies in
           the gene therapy field, thus empowering our clients to excel.
         </p>
-        <p class="font-size24 fontFamily textColor">
+        <p class="font-size24 textColor">
           We continuously collaborate with our clients, fostering the
           development of the gene therapy industry and working together to
           realize the noble aspiration of benefiting humanity and all living
@@ -57,19 +57,16 @@
           class="container"
         >
           <el-row :gutter="100">
-            <el-col :xs="24" :span="10"
+            <el-col :xs="24" :span="8"
               ><div class="animate-imgxx uof img">
                 <img :src="item.imgUrl" alt="SPIRO Site" />
               </div>
             </el-col>
-            <el-col :xs="24" :span="14">
-              <h1 class="font-size50 fontf7 iti fontFamily item-tit">
+            <el-col :xs="24" :span="16">
+              <h1 class="font-size50 fontf7 iti fontf8 item-tit">
                 {{ item.title }}
               </h1>
-              <p
-                class="font-size30 fontf7 fontFamily cro-p textColor"
-                v-html="item.text"
-              ></p>
+              <p class="font-size24 cro-p textColor" v-html="item.text"></p>
             </el-col>
           </el-row>
         </el-col>
@@ -110,7 +107,7 @@
                 ></el-col>
                 <el-col :span="16" class="career-i">
                   <h1
-                    class="font-bold p-large mb-3 font-size30 txt-bold fontFamily"
+                    class="font-bold p-large mb-3 font-size30 txt-bold fontf7"
                   >
                     Life in OBIO
                   </h1></el-col
@@ -142,7 +139,7 @@
                 ></el-col>
                 <el-col :span="16" class="career-i">
                   <h1
-                    class="font-bold p-large mb-3 font-size30 txt-bold fontFamily"
+                    class="font-bold p-large mb-3 font-size30 txt-bold fontf7"
                   >
                     Job Opening
                   </h1></el-col
@@ -196,8 +193,14 @@ import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
   title: "Careers",
-  hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg4.png"),
-  visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg4.png"),
+  hiddenXsImgUrl:
+    "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+
+  visibleXsImgUrl:
+    "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+
+  // hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg4.png"),
+  // visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg4.png"),
 });
 const dialogVisible = ref(false);
 function handleClose() {
@@ -227,7 +230,7 @@ Excellence, Innovation, Integrity.
     text: `Developing gene therapies for the welfare of 
 mankind by virtue of its in-house developed 
 all-round technology platform, its R&D and GMP 
-production centers (floorage: 15,000 m2), and its <text class="fontFamily title-color txt-bold">77,000</text>
+production centers (floorage: 15,000 ㎡), and its <text class="title-color txt-bold">77,000</text>
 ㎡  Lingang base (under construction), 
 OBiO is dedicated to constantly accelerating 
 gene therapies researches, drug discovery, 

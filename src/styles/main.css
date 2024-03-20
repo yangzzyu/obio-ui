@@ -2,6 +2,7 @@
 @import "./style.scss";
 @import "./gird.scss";
 @import "./public.css";
+@import "./layout.scss";
 /* @import "./layout.css"; */
 
 #app {

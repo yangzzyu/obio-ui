@@ -7,7 +7,7 @@
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
-  <section id="careerout" class="career-container">
+  <section id="careerout" class="career-container mb-4 mt-4">
     <el-col
       :xs="22"
       :sm="20"
@@ -17,14 +17,16 @@
       style="margin: auto"
       class="container"
     >
-      <h1 class="p-title font-size50 txt-bold fontFamily">
-        Career and Culture
-      </h1>
-      <h1 class="p-title font-size50 txt-bold fontFamily">Our Culture</h1>
+      <h1 class="p-title font-size50 txt-bold fontf8">Career and Culture</h1>
+      <h1 class="p-title font-size50 txt-bold fontf6">Our Culture</h1>
 
-      <div class="wysiwyg--content colour-white">
-        <p class="fontFamily textColor">
+      <div class="wysiwyg--content colour-white mb-3">
+        <p class="fontf4 textColor">
           Mission: Enable gene therapy for a better lives<br />
+          Vision: Providing client-centered and high-quality service as our
+          commitment, we strive to become a world-leading gene and cell therapy
+          CXO group
+          <br />
           Value: Customer First, Efficient Execution, Pursuit of Excellence,
           Innovation Breakthroughs, Integrity and Pragmatism
         </p>
@@ -53,9 +55,7 @@
                   /></div
               ></el-col>
               <el-col :span="16" class="career-i">
-                <h1
-                  class="font-bold p-large mb-3 font-size30 txt-bold fontFamily"
-                >
+                <h1 class="font-bold p-large mb-3 font-size30 txt-bold fontf7">
                   Life in OBIO
                 </h1></el-col
               >
@@ -85,9 +85,7 @@
                   /></div
               ></el-col>
               <el-col :span="16" class="career-i">
-                <h1
-                  class="font-bold p-large mb-3 font-size30 txt-bold fontFamily"
-                >
+                <h1 class="font-bold p-large mb-3 font-size30 txt-bold fontf7">
                   Job Opening
                 </h1></el-col
               >

@@ -10,7 +10,7 @@
       style="margin: 0 auto"
     >
       <div class="link-list">
-        <div class="link-list-i fontFamily">
+        <div class="link-list-i">
           <div class="foot-log">
             <img
               src="https://www.obio-tech.com/public/uploads/20230630/a4e158c16a5cb2bf4e6506a46adf9c57.png"
@@ -29,7 +29,7 @@
             <dd></dd>
           </dl>
         </div>
-        <div class="link-list-i fontFamily">
+        <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
               <router-link to="/about">About Us</router-link>
@@ -46,10 +46,13 @@
             <dd></dd>
           </dl>
         </div>
-        <div class="link-list-i fontFamily">
+        <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/cdmo">Capability & Commitment</router-link>
+              <router-link to="/cdmo"
+                >Capability &<br />
+                Commitment</router-link
+              >
             </dt>
             <dd class="font-size14">
               <router-link to="/process">Industrialize</router-link>
@@ -59,10 +62,10 @@
             </dd>
           </dl>
         </div>
-        <div class="link-list-i fontFamily">
+        <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/cdmo">CDMO Solutions</router-link>
+              <router-link to="/cdmo">CDMO <br />Solutions</router-link>
             </dt>
             <dd class="font-size14">
               <router-link to="/process">Manufacturing</router-link>
@@ -75,10 +78,10 @@
             </dd>
           </dl>
         </div>
-        <div class="link-list-i fontFamily">
+        <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/cdmo">News & Events</router-link>
+              <router-link to="/cdmo">News & <br />Events</router-link>
             </dt>
             <dd class="font-size14">
               <router-link to="/process">News</router-link>
@@ -94,10 +97,13 @@
             </dd>
           </dl>
         </div>
-        <div class="link-list-i fontFamily">
+        <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/cdmo">Careers & Culture</router-link>
+              <router-link to="/cdmo"
+                >Careers &<br />
+                Culture</router-link
+              >
             </dt>
             <dd class="font-size14">
               <router-link to="/process">Our Culture</router-link>
@@ -116,14 +122,14 @@
             </dt>
           </dl>
         </div>
-        <div class="link-list-i fontFamily">
+        <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/cdmo">CRO Service</router-link>
+              <router-link to="/cdmo">CRO <br />Service</router-link>
             </dt>
           </dl>
         </div>
-        <div class="link-list-i fontFamily">
+        <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
               <router-link to="/cdmo">Contact</router-link>

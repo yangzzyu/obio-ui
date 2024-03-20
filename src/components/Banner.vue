@@ -19,22 +19,22 @@
         class="container"
       >
         <div class="slide-title">
-          <h2 class="font-size38 fontFamily txt-bold">
+          <h2 class="font-size38 fontf8 txt-bold">
             Enable Gene Therapy for Better Lives
           </h2>
-          <h2 class="font-size36 fontFamily txt-bold">
+          <h2 class="font-size36 fontf8 txt-bold">
             Your Trustful Partner in Research and Manufacturing for Gene and
             Cell Therapy
           </h2>
         </div>
         <div class="slide-subtitle">
-          <p class="font-size20 fontFamily txt-bold">
+          <p class="font-size20 fontf8 txt-bold">
             Providing client-centered and high-quality service as our
             commitment, we strive to become a world leading gene and cell
             therapy CRO/CDMO group.
           </p>
         </div>
-        <p class="mission-content font-size38 txt-bold">Mission:</p>
+        <!-- <p class="mission-content font-size38 txt-bold">Mission:</p> -->
         <div class="btns">
           <router-link
             to="/cdmo"
@@ -120,8 +120,8 @@ onBeforeMount(() => {});
   position: absolute;
   left: 0;
   top: -10%;
-  background: url(@/assets/icons/carousel_bg1.jpg) no-repeat center center /
-    cover;
+  background: url(https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg)
+    no-repeat center center / cover;
   z-index: -2;
 }
 .slide-title {
@@ -149,11 +149,10 @@ onBeforeMount(() => {});
   overflow: hidden;
 }
 .btns {
-  overflow: hidden;
-
-  display: flex;
+  // overflow: hidden;
+  // display: flex;
   position: relative;
-  width: 360px;
+  // width: 360px;
   .btn-i {
     background: linear-gradient(50deg, #014c97 0, #00818b 66%);
     border-radius: 30px;

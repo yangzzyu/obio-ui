@@ -11,7 +11,7 @@ export const historyList = ref<HistoryItem[]>([
   {
     id: 0,
     year: "2013",
-    txt: ["Founding of OBiO Technology (Shanghai) Corp., Ltd."],
+    txt: ["OBiO founded"],
   },
   {
     id: 1,

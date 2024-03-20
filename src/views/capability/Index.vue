@@ -19,8 +19,10 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="title-color font-size70 txt-bold section-title">Why Us</h1>
-        <h2 class="title-color our-txt font-size30 section-title">
+        <h1 class="title-color font-size70 txt-bold section-title fontf8">
+          Why Us
+        </h1>
+        <h2 class="title-color our-txt font-size30 section-title fontf7">
           Core“hard strength”+ “soft strength” for accelerating the development
           process of CGT drugs
         </h2>
@@ -49,7 +51,7 @@
                     alt="GMP Vector Manufacturing icon"
                   />
                 </div>
-                <p class="textColor fontFamily font-size14">{{ item.text }}</p>
+                <p class="textColor font-size14">{{ item.text }}</p>
               </div>
             </router-link>
           </el-col>
@@ -67,7 +69,7 @@
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size50 txt-bold fontFamily">
+          <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
             Industrialize Your Product
           </h1>
 
@@ -85,12 +87,12 @@
                     <img :src="item.imgUrl" alt="" srcset="" />
                   </div>
                 </div>
-                <div class="font-size24 fontf7 iti fontFamily">
+                <div class="font-size24 fontf7 iti">
                   {{ item.title }}
                 </div>
                 <ul class="txt-ul">
                   <li
-                    class="font-size18 fontFamily txt-bold"
+                    class="font-size18 txt-bold textColor"
                     v-for="(i, idx) in item.txtList"
                     :key="idx"
                   >
@@ -99,7 +101,7 @@
                 </ul>
                 <router-link
                   to="/spiroSite"
-                  class="read-more font-size18 fontf7 fontFamily"
+                  class="read-more font-size18 fontf7 mt-3"
                   >Read More</router-link
                 >
               </el-col>
@@ -108,7 +110,7 @@
         >
       </div>
     </div>
-    <section class="our-box">
+    <section class="our-box mb-5">
       <el-col
         :xs="22"
         :sm="20"
@@ -118,17 +120,17 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="p-title font-size50 txt-bold fontFamily">
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
           Our Commitment: FAST
         </h1>
-        <el-row class="our-box-content" :gutter="40">
-          <el-col :span="10" :xs="24" class="left-content">
+        <el-row class="our-box-content" :gutter="60">
+          <el-col :span="8" :xs="24" class="left-content">
             <img class="img" src="@/assets/icons/Viral_Vector_bg3.png" alt="" />
           </el-col>
-          <el-col :span="14" :xs="24" class="font-size20 news-list">
+          <el-col :span="16" :xs="24" class="font-size20 news-list">
             <div class="content-i" v-for="(i, idx) in ourList" :key="idx">
-              <h3 class="title-color font-size36 fontFamily">{{ i.title }}</h3>
-              <p class="font-size24 fontFamily textColor">
+              <h3 class="title-color font-size36 fontf8">{{ i.title }}</h3>
+              <p class="font-size24 textColor">
                 {{ i.text }}
               </p>
             </div>
@@ -182,8 +184,14 @@ import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
   title: "Capability & Commitment",
-  hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg2.png"),
-  visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg2.png"),
+  hiddenXsImgUrl:
+    "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+
+  visibleXsImgUrl:
+    "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+
+  // hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg2.png"),
+  // visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg2.png"),
 });
 const dialogVisible = ref(false);
 function handleClose() {

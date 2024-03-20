@@ -19,17 +19,17 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="title-color font-size70 txt-bold section-title fontFamily">
+        <h1 class="title-color font-size70 txt-bold section-title fontf8">
           Join an amazing energy
         </h1>
 
-        <p class="font-size24 fontFamily textColor" style="margin-bottom: 20px">
+        <p class="font-size24 textColor" style="margin-bottom: 20px">
           As our company and industry grow and change, we commit to keeping OBIO
           culture part of that growth conversation. By weaving our values into
           that culture and regularly pointing back to our mission and vision, an
           excitement is born and will grow.
         </p>
-        <p class="font-size24 fontFamily textColor">
+        <p class="font-size24 textColor mb-5">
           That happens with a leadership team steadfastly practicing what we
           preach, yet culture does not stop there. We expect every employee to
           join the effort of making OBIO amazing, embracing our values in the
@@ -66,16 +66,61 @@
                     alt="GMP Vector Manufacturing icon"
                   />
                 </div>
-                <h3 class="font-bold p-large mb-3 font-size24">
+                <h1 class="font-bold p-large mb-3 font-size24 fontf7">
                   {{ item.title }}
-                </h3>
-                <p class="textColor fontFamily font-size14 txt-bold">
+                </h1>
+                <p class="textColor font-size14 txt-bold">
                   {{ item.text }}
                 </p>
               </div>
             </router-link>
           </el-col>
         </el-row>
+      </el-col>
+    </section>
+    <section id="" class="cap-section hero-style-top cro-list mb-5">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
+        <h1 class="title-color font-size70 txt-bold p-title fontf8 mb-3 mt-5">
+          Latest release
+        </h1>
+        <div
+          class="cro-list-item row"
+          v-for="(item, index) in releasesList"
+          :key="index"
+        >
+          <el-col
+            :xs="22"
+            :sm="20"
+            :md="20"
+            :lg="20"
+            :xl="22"
+            style="margin: auto"
+            class="container"
+          >
+            <p class="font-size24 iti textColor">
+              {{ item.time }}
+            </p>
+            <h1 class="title fontf4 font-size28 title-color">
+              {{ item.title }}
+            </h1>
+            <div class="font-size18 ut-s2">
+              {{ item.content }}
+            </div>
+            <router-link
+              :to="'/news-details/releases/' + item.id"
+              class="read-more font-size18 fontf7"
+              >Read More</router-link
+            >
+          </el-col>
+        </div>
       </el-col>
     </section>
     <!-- <Events /> -->
@@ -115,15 +160,19 @@
 </template>
 
 <script lang="ts" setup name="LabSciences">
-import { ref } from "vue";
+import { reactive, ref } from "vue";
 import Focus from "@/components/Focus.vue";
 import Events from "@/components/Events.vue";
 import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
   title: "Job Opening",
-  hiddenXsImgUrl: handleViteImages("@/assets/icons/job_bg.png"),
-  visibleXsImgUrl: handleViteImages("@/assets/icons/job_bg.png"),
+  hiddenXsImgUrl:
+    "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+  visibleXsImgUrl:
+    "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+  // hiddenXsImgUrl: handleViteImages("@/assets/icons/job_bg.png"),
+  // visibleXsImgUrl: handleViteImages("@/assets/icons/job_bg.png"),
 });
 const dialogVisible = ref(false);
 function handleClose() {
@@ -197,7 +246,7 @@ Excellence, Innovation, Integrity.
     text: `Developing gene therapies for the welfare of 
 mankind by virtue of its in-house developed 
 all-round technology platform, its R&D and GMP 
-production centers (floorage: 15,000 m2), and its <text class="fontFamily title-color txt-bold">77,000</text>
+production centers (floorage: 15,000 ㎡), and its <text class="title-color txt-bold">77,000</text>
 ㎡  Lingang base (under construction), 
 OBiO is dedicated to constantly accelerating 
 gene therapies researches, drug discovery, 
@@ -255,6 +304,22 @@ To request a list of the available in-stock viral vector, please contact one of 
     txt: `We provide CRISPR knock-out (GeCKO V2) gRNA library and transcriptional activation (SAM) gRNA library for human and mouse genome, enabling genome-wide high throughput screening for functional gene. We also provide gRNA library customization services according to your research demand. `,
     imgUrl:
       "https://www.obio-tech.com/public/uploads/image/20220328/20220328151955_77566.jpg",
+  },
+]);
+const releasesList = reactive([
+  {
+    id: 13,
+    title: `Please join us in welcoming Swati to OBiO Tech`,
+    time: "February 16th 2024",
+    subhead: "",
+    content: ``,
+  },
+  {
+    id: 14,
+    title: `Please join us in welcoming Swati to OBiO Tech`,
+    time: "February 16th 2024",
+    subhead: "",
+    content: ``,
   },
 ]);
 function popLabora(id) {
