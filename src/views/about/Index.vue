@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-27 15:03:44
+ * @LastEditTime: 2024-03-21 13:31:23
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -34,11 +34,9 @@ const pageData = ref([
     path: "/about",
     focusObj: {
       title: "About Us",
-      hiddenXsImgUrl:
-        "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+      hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg.png"),
       // "https://www.obio-tech.com/public/uploads/20220328/ad95627baa62ec4288fe6823b9571ee6.jpg",
-      visibleXsImgUrl:
-        "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+      visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg.png"),
       // "https://www.obio-tech.com/public/uploads/20220401/fbacb8fb46400e71bf84d29d77c57ea4.jpg",
       // hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg6.png"),
       // visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg6.png"),
@@ -48,11 +46,9 @@ const pageData = ref([
     path: "/facilities",
     focusObj: {
       title: "About Us",
-      hiddenXsImgUrl:
-        "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+      hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg.png"),
       // "https://www.obio-tech.com/public/uploads/20220328/ad95627baa62ec4288fe6823b9571ee6.jpg",
-      visibleXsImgUrl:
-        "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+      visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg.png"),
       // "https://www.obio-tech.com/public/uploads/20220401/fbacb8fb46400e71bf84d29d77c57ea4.jpg",
     },
   },
@@ -60,12 +56,10 @@ const pageData = ref([
     path: "/spiroSite",
     focusObj: {
       title: "SPIRO Site",
-      hiddenXsImgUrl:
-        "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+      hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg.png"),
 
       // "https://www.obio-tech.com/public/uploads/20220330/ba3c5468f02cdd8aa3f75a58fc00fdff.jpg",
-      visibleXsImgUrl:
-        "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+      visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg.png"),
 
       // "https://www.obio-tech.com/public/uploads/20220402/40fd25acf5baaecdcf7db3ac15f705f2.jpg",
     },
@@ -74,12 +68,10 @@ const pageData = ref([
     path: "/pineSite",
     focusObj: {
       title: "PINE Site",
-      hiddenXsImgUrl:
-        "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+      hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg.png"),
 
       // "https://www.obio-tech.com/public/uploads/20220330/4f73b36b43411ab86c464b5e5477c842.jpg",
-      visibleXsImgUrl:
-        "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+      visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg.png"),
 
       // "https://www.obio-tech.com/public/uploads/20220402/4738c4eb8c6cbcc0917281c987f1c57b.jpg",
     },
@@ -88,12 +80,10 @@ const pageData = ref([
     path: "/intelliM",
     focusObj: {
       title: "OBiO Intelli-M",
-      hiddenXsImgUrl:
-        "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+      hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg.png"),
 
       // "https://www.obio-tech.com/public/uploads/20231212/880325aa48c9982b1a9851a9fe36f90d.jpg",
-      visibleXsImgUrl:
-        "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+      visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg.png"),
 
       // "https://www.obio-tech.com/public/uploads/20220402/2e0726ccc43f2f2c0bd315cd476d0b6f.jpg",
     },
@@ -102,12 +92,10 @@ const pageData = ref([
     path: "/team",
     focusObj: {
       title: "Leadership Team",
-      hiddenXsImgUrl:
-        "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+      hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg.png"),
 
       // "https://www.obio-tech.com/public/uploads/20220330/1d7540463fb4aecf7bd741586c761067.jpg",
-      visibleXsImgUrl:
-        "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+      visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg.png"),
 
       // "https://www.obio-tech.com/public/uploads/20220401/0d6612cd60e36741f2ad2f3fe90eebf3.jpg",
     },

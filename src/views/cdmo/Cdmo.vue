@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-20 14:16:39
+ * @LastEditTime: 2024-03-21 13:36:12
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -120,7 +120,7 @@
                 <div class="manufacturing-list bg-pinkbluelfr">
                   <div class="content">
                     <img
-                      src="https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg"
+                      :src="handleViteImages('assets/icons/facilities1.png')"
                       alt="OBIO Intelli-M"
                     />
                   </div>
@@ -143,7 +143,7 @@
                 <div class="manufacturing-list bg-pinkbluelfr">
                   <div class="content">
                     <img
-                      src="https://www.obio-tech.com/public/uploads/20220330/0b0fe1e2c354c50f919655666ccfd951.jpg"
+                      :src="handleViteImages('assets/icons/facilities2.png')"
                       alt="SPIRO Site"
                     />
                   </div>
@@ -167,7 +167,7 @@
                 <div class="manufacturing-list bg-pinkbluelfr">
                   <div class="content">
                     <img
-                      src="https://www.obio-tech.com/public/uploads/20231212/55a4fdd1f7a358da8a3de3e938f99114.jpg"
+                      :src="handleViteImages('assets/icons/facilities3.png')"
                       alt="PINE Site"
                     />
                   </div>
@@ -547,70 +547,6 @@ const solutionsBreakpoints = ref({
     spaceBetween: 25,
   },
 });
-const SciencesList = ref([
-  {
-    tit: "AAV Packaging Services",
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/20231019/1060cdb3931cb402fb967659f4645f34.jpg",
-  },
-  {
-    tit: "Lentivirus Packaging Services",
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/20231019/ebcf10cfbdd41abcfa6cc931268def06.jpg",
-  },
-  {
-    tit: "AAV Lung M3 and X",
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/20231019/e53e45f75ece1ff8f79d5656b95360a9.jpg",
-  },
-  {
-    tit: "AAVneO + AAVMeta Platform",
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/20231019/1dcbaaaf9929529e54e508f5e1665dbd.jpg",
-  },
-  {
-    tit: "Off-the-Shelf AAV Products",
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/20231019/a14ccd438e1b10ca796397d236a88770.jpg",
-  },
-]);
-const SolutionsList = ref([
-  {
-    tit: "CGT CDMO Solutions at OBiO",
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/20231024/0a7db7cad0d47550e91ce323a47f29fe.jpg",
-  },
-  {
-    tit: "Cell Therapy CDMO Solutions",
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/20231024/d21963d4b5f977d1a9f5135472a56668.jpg",
-  },
-  {
-    tit: "Adeno Associated Virus CDMO Solutions",
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/20231024/e81a262802664819862f4f0d4be555ce.jpg",
-  },
-  {
-    tit: "IPSC CDMO Services",
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/20230926/28fffe992afb0c7f806ce8acaf4dc20f.jpg",
-  },
-  {
-    tit: "Phase-Appropriate Plasmid CDMO Solutions",
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/20230926/cd743d82fdf684f9fb1ef2866e28b52a.jpg",
-  },
-  {
-    tit: "Lentiviral Vector CDMO Solutions",
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/20230926/f03331ea03516eb0b7b58e9b150887f8.jpg",
-  },
-  {
-    tit: "Oncolytic Virus CDMO Solutions",
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/20230926/5da84fdce35d08986f725c27ca5d1f59.jpg",
-  },
-]);
 const croList = ref([
   {
     imgUrl: handleViteImages("@/assets/icons/cdmo1.png"),

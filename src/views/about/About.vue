@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-20 14:16:14
+ * @LastEditTime: 2024-03-21 14:17:13
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -53,7 +53,7 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="p-title font-size50 txt-bold fontFamily">
+        <h1 class="p-title font-size50 txt-bold ">
           OBiO Technology development milestones
         </h1>
         <div class="row">
@@ -72,7 +72,7 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <h2 class="fontFamily">· OBiO founded</h2>
+                    <h2 class="">· OBiO founded</h2>
                   </div>
                   <span> 2013 </span>
                 </li>
@@ -86,16 +86,16 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <p class="fontFamily">
+                    <p class="">
                       · The acquisition of Neuron Biotech Co., Ltd. (which has
                       become a wholly owned subsidiary of OBiO after the
                       acquisition)
-                      <text class="fontFamily title-color txt-bold"
+                      <text class=" title-color txt-bold"
                         >laid down a solid foundation</text
                       >
                       for OBiO as a leading AAV service provider
                     </p>
-                    <p class="fontFamily">
+                    <p class="">
                       · R&D of a number of gene therapy vectors and CRO service
                       started
                     </p>
@@ -112,14 +112,14 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <p class="fontFamily">
+                    <p class="">
                       · Shareholding reform and
-                      <text class="fontFamily title-color txt-bold"
+                      <text class=" title-color txt-bold"
                         >Round A equity financing</text
                       >
                       completed
                     </p>
-                    <p class="fontFamily">
+                    <p class="">
                       · Engaged in the first industry-academy-research strategic
                       cooperation with Chinese Academy of Medical Sciences
                     </p>
@@ -136,13 +136,13 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <p class="fontFamily">
+                    <p class="">
                       · Listed in the
-                      <text class="fontFamily title-color txt-bold"
+                      <text class=" title-color txt-bold"
                         >National Equities Exchange And Quotations(NEEQ) system
                       </text>
                     </p>
-                    <p class="fontFamily">
+                    <p class="">
                       · OBiO Zhangjiang Integrated R&D Building (Floorage: 5000
                       ㎡) commissioned
                     </p>
@@ -159,14 +159,14 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <p class="fontFamily">
+                    <p class="">
                       · Viral vector GLP pilot-scale platform constructed and
                       commissioned
                     </p>
-                    <p class="fontFamily">
+                    <p class="">
                       · Entered into an agreement with GE Medical for a global
                       strategic cooperation in
-                      <text class="fontFamily title-color txt-bold"
+                      <text class=" title-color txt-bold"
                         >gene therapy research as a step towards business
                         expansion into gene therapy CDMO sector
                       </text>
@@ -184,9 +184,9 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <p class="fontFamily">
+                    <p class="">
                       · The first
-                      <text class="fontFamily title-color txt-bold"
+                      <text class=" title-color txt-bold"
                         >OBiO CDMO project for IND submission of gene therapies
                         (will be) launched
                       </text>
@@ -204,17 +204,17 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <p class="fontFamily">
+                    <p class="">
                       · OBiO Intelli-M (Shanghai) Gene Technology Co., Ltd., a
                       subsidiary of OBiO, was founded;
                     </p>
-                    <p class="fontFamily">
+                    <p class="">
                       · Successfully delisted from the National Equities
                       Exchange And Quotations(NEEQ) system
                     </p>
-                    <p class="fontFamily">
+                    <p class="">
                       ·
-                      <text class="fontFamily title-color txt-bold"
+                      <text class=" title-color txt-bold"
                         >OBiO GMP production platform (Floorage: 5000 m2)
                         constructed and commissioned
                       </text>
@@ -232,28 +232,28 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <p class="fontFamily">
+                    <p class="">
                       ·
-                      <text class="fontFamily title-color txt-bold"
+                      <text class=" title-color txt-bold"
                         >Round 4 fund-raising completed
                       </text>
                       (Amount raised in RMB: XXX yuan)
                     </p>
-                    <p class="fontFamily">
+                    <p class="">
                       · GMP platform expanded to about 7000 ㎡
                     </p>
-                    <p class="fontFamily">
+                    <p class="">
                       · Construction of Lingang Precision Medicine Industry Base
                       started
                     </p>
-                    <p class="fontFamily">
+                    <p class="">
                       · Accredited to be cGMP-compliant in an audit by a
                       third-party Notified Body
                     </p>
-                    <p class="fontFamily">
+                    <p class="">
                       · Received CTA approval letters from drug administrations
                       in China, the United States, and Australia for
-                      <text class="fontFamily title-color txt-bold"
+                      <text class=" title-color txt-bold"
                         >the first oncolytic virus project of an OBiO client
                       </text>
                     </p>
@@ -270,22 +270,22 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <p class="fontFamily">
+                    <p class="">
                       ·
-                      <text class="fontFamily title-color txt-bold">
+                      <text class=" title-color txt-bold">
                         Successfully reviewed for the IPO in STAR Market
                       </text>
                     </p>
-                    <p class="fontFamily">
+                    <p class="">
                       · GMP platform expanded to more than 10000 ㎡
                     </p>
-                    <p class="fontFamily">
+                    <p class="">
                       ·
-                      <text class="fontFamily title-color txt-bold">
+                      <text class=" title-color txt-bold">
                         Multiple phase II clinical studies contracted
                       </text>
                     </p>
-                    <p class="fontFamily">
+                    <p class="">
                       · AAVneO® vector screening campaign launched, several
                       innovative vectors preliminarily identified
                     </p>
@@ -302,14 +302,14 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <p class="fontFamily">
+                    <p class="">
                       ·
-                      <text class="fontFamily title-color txt-bold"
+                      <text class=" title-color txt-bold"
                         >Listed as the first Chinese CGT CDMO in STAR Market on
                         March 22
                       </text>
                     </p>
-                    <p class="fontFamily">
+                    <p class="">
                       · The company’s US branch, OBiO Tech., founded for
                       expanding business outside China
                     </p>
@@ -326,14 +326,14 @@
                       animation-name: fadeIn;
                     "
                   >
-                    <p class="fontFamily">
+                    <p class="">
                       ·
-                      <text class="fontFamily title-color txt-bold">
+                      <text class=" title-color txt-bold">
                         Lingang CGT GMP production base (Floorage: 80,000m2)
                         commissioned on April 21
                       </text>
                     </p>
-                    <p class="fontFamily">
+                    <p class="">
                       · By 23H1, OBiO had helped its clients to get a total of
                       25 IND approval letters (8 of which were from FDA)
                     </p>
@@ -397,7 +397,8 @@
                   <div class="txt font-size18">
                     <ul>
                       <li v-for="(i, k) in item.txt" :key="k">
-                        {{ i }}
+                        <p v-html="i"></p>
+                        <!-- {{ i }} -->
                       </li>
                     </ul>
                   </div>
@@ -425,7 +426,7 @@
               <div class="manufacturing-list bg-pinkbluelfr">
                 <div class="content">
                   <img
-                    src="https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg"
+                    :src="handleViteImages('assets/icons/facilities1.png')"
                     alt="OBIO Intelli-M"
                   />
                 </div>
@@ -448,7 +449,7 @@
               <div class="manufacturing-list bg-pinkbluelfr">
                 <div class="content">
                   <img
-                    src="https://www.obio-tech.com/public/uploads/20220330/0b0fe1e2c354c50f919655666ccfd951.jpg"
+                    :src="handleViteImages('assets/icons/facilities2.png')"
                     alt="SPIRO Site"
                   />
                 </div>
@@ -470,7 +471,7 @@
               <div class="manufacturing-list bg-pinkbluelfr">
                 <div class="content">
                   <img
-                    src="https://www.obio-tech.com/public/uploads/20231212/55a4fdd1f7a358da8a3de3e938f99114.jpg"
+                    :src="handleViteImages('assets/icons/facilities3.png')"
                     alt="PINE Site"
                   />
                 </div>
@@ -705,135 +706,6 @@
         </ul></el-col
       >
     </section>
-    <!-- <div class="section-2">
-      <el-col
-        :xs="14"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
-        <div class="pub-title style2 ub ub-ver ub-pe">
-          <i class="line"></i><span class="fontf8 font-size50">History</span>
-        </div>
-        <div class="about-history-swp">
-          <div
-            class="historyNext"
-            id="historyNext"
-            tabindex="0"
-            role="button"
-            aria-label="Next slide"
-            aria-disabled="false"
-          ></div>
-          <div
-            class="historyPrev swiper-button-disabled"
-            id="historyPrev"
-            tabindex="0"
-            role="button"
-            aria-label="Previous slide"
-            aria-disabled="true"
-          ></div>
-          <Swiper
-            :modules="[Autoplay, Navigation, Scrollbar]"
-            :initialSlide="100"
-            slides-per-view="auto"
-            :simulateTouch="false"
-            :watchSlidesVisibility="true"
-            :navigation="navigation"
-            slideVisibleClass="my-slide-visible"
-            class="swiper-container"
-          >
-            <swiper-slide
-              v-for="(item, index) in historyList"
-              :key="index"
-              :class="index % 2 === 0 ? 'even' : 'odd'"
-            >
-              <div class="boxs">
-                <div class="cons">
-                  <div class="year">{{ item.year }} <i></i></div>
-                  <div class="txt font-size18">
-                    <ul>
-                      <li v-for="(i, k) in item.txt" :key="k">
-                        {{ i }}
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div></swiper-slide
-            >
-          </Swiper>
-        </div>
-      </el-col>
-    </div> -->
-    <!-- <div class="section-3">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
-        <div class="pub-title ub ub-ver ub-pe">
-          <i class="line"></i
-          ><span class="fontf8 font-size50"> Our Facilities</span>
-        </div>
-        <div class="fac-con">
-          <div class="font-size20 stxt">
-            <span style="line-height: 2"
-              >As a trustful contract development and manufacturing
-              organization, flexible capacities and regulatory compliant
-              facilities are the prerequisites for providing high-quality
-              services to gene and cell therapy developers. To offer services to
-              worldwide <span>customers</span>, we have established an
-              integrated research platform with over 5,000 sqm footprint, over
-              10,000 sqm GMP footprint at Shanghai International Medical Park,
-              and a 77,000 sqm GMP manufacturing site at Lin-Gang Free-Trade
-              Zone. We provide high-quality contract research and manufacturing
-              services at three locations：</span
-            >
-          </div>
-          <el-row class="row" :gutter="10">
-            <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-              <router-link to="/spiroSite" class="block tans">
-                <div class="animate-imgxx uof img">
-                  <img
-                    src="https://www.obio-tech.com/public/uploads/20220330/0b0fe1e2c354c50f919655666ccfd951.jpg"
-                    alt="SPIRO Site"
-                  />
-                </div>
-                <div class="font-size24 fontf7 iti">SPIRO Site</div>
-              </router-link>
-            </el-col>
-            <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-              <router-link to="/pineSite" class="block tans">
-                <div class="animate-imgxx uof img">
-                  <img
-                    src="https://www.obio-tech.com/public/uploads/20231212/55a4fdd1f7a358da8a3de3e938f99114.jpg"
-                    alt="PINE Site"
-                  />
-                </div>
-                <div class="font-size24 fontf7 iti">PINE Site</div>
-              </router-link>
-            </el-col>
-            <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-              <router-link to="/intelliM" class="block tans">
-                <div class="animate-imgxx uof img">
-                  <img
-                    src="https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg"
-                    alt="OBiO Intelli-M"
-                  />
-                </div>
-                <div class="font-size24 fontf7 iti">OBiO Intelli-M</div>
-              </router-link>
-            </el-col>
-          </el-row>
-        </div>
-      </el-col>
-    </div> -->
   </div>
 </template>
 
@@ -895,6 +767,10 @@ Responses at First Instance`,
 ]);
 </script>
 
+<style>
+.txt-color{
+  color: #5be2eb;
+}</style>
 <style lang="scss" scoped>
 .about-box {
   margin: 0 !important;
@@ -946,4 +822,5 @@ Responses at First Instance`,
     }
   }
 }
+
 </style>

@@ -13,7 +13,7 @@
         <div class="link-list-i">
           <div class="foot-log">
             <img
-              src="https://www.obio-tech.com/public/uploads/20230630/a4e158c16a5cb2bf4e6506a46adf9c57.png"
+              :src="handleViteImages('assets/icons/footer_logo.png')"
               alt="OBiO Technology (Shanghai) Corp., Ltd."
             />
           </div>
@@ -141,7 +141,7 @@
         <el-col :span="6" :xs="24" class="wow fadeInLeft animated">
           <div class="foot-log">
             <img
-              src="https://www.obio-tech.com/public/uploads/20230630/a4e158c16a5cb2bf4e6506a46adf9c57.png"
+              :src="handleViteImages('assets/icons/footer_logo.png')"
               alt="OBiO Technology (Shanghai) Corp., Ltd."
             />
           </div>

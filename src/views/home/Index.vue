@@ -1,5 +1,13 @@
 <!--
  * @Author: yangyu 1431330771@qq.com
+ * @Date: 2024-03-18 22:04:02
+ * @LastEditors: yangyu 1431330771@qq.com
+ * @LastEditTime: 2024-03-21 13:57:25
+ * @FilePath: \obio-ui\src\views\home\Index.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!--
+ * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 09:07:47
  * @LastEditors: yangyu 1431330771@qq.com
  * @LastEditTime: 2024-03-20 14:14:25
@@ -44,7 +52,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
                       <img
-                        src="https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg"
+                        :src="handleViteImages('assets/icons/facilities1.png')"
                         alt="OBIO Intelli-M"
                       />
                     </div>
@@ -69,7 +77,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
                       <img
-                        src="https://www.obio-tech.com/public/uploads/20220330/0b0fe1e2c354c50f919655666ccfd951.jpg"
+                        :src="handleViteImages('assets/icons/facilities2.png')"
                         alt="SPIRO Site"
                       />
                     </div>
@@ -93,7 +101,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
                       <img
-                        src="https://www.obio-tech.com/public/uploads/20231212/55a4fdd1f7a358da8a3de3e938f99114.jpg"
+                        :src="handleViteImages('assets/icons/facilities3.png')"
                         alt="PINE Site"
                       />
                     </div>
@@ -138,7 +146,7 @@ import TheWelcome from "../components/TheWelcome.vue";
               <div
                 class="image--callout_image"
                 style="
-                  background-image: url(https://www.genezen.com/wp-content/uploads/2021/07/AdobeStock_76101021.jpg);
+                  background-image: url(https://file.qjia.tech/obio-img/cdmo_img.png);
                 "
               ></div>
             </el-col>
@@ -158,7 +166,7 @@ import TheWelcome from "../components/TheWelcome.vue";
               <div
                 class="image--callout_image"
                 style="
-                  background-image: url(https://www.genezen.com/wp-content/uploads/2021/07/AdobeStock_76101021.jpg);
+                  background-image: url(https://file.qjia.tech/obio-img/cdmo_img.png);
                 "
               ></div>
             </el-col>
@@ -408,57 +416,6 @@ import TheWelcome from "../components/TheWelcome.vue";
         </el-col>
       </section>
       <Events />
-      <!-- <section id="newsout" class="news-container">
-        <el-col
-          :xs="22"
-          :sm="20"
-          :md="20"
-          :lg="20"
-          :xl="22"
-          style="margin: auto"
-          class="container"
-        >
-          <h1 class="p-title font-size50 txt-bold fontFamily">
-            News and Events
-          </h1>
-          <el-row class="image--callout" :gutter="40">
-            <el-col :span="10" :xs="24" class="left-content">
-              <img class="img" src="@/assets/icons/news.png" alt="" />
-            </el-col>
-            <el-col :span="14" :xs="24" class="font-size20 news-list">
-              <div class="news-i">
-                <h3 class="title-color font-size24 fontFamily">
-                  Jan.13th 2024
-                </h3>
-                <p class="font-size24 fontFamily textColor">
-                  Focusing on efficient gene delivery of NK cells, The First
-                  Condor Lifeand OBi0 Technology reach a strategic cooperation!
-                </p>
-                <div class="btn bg-pinkbluelfr">Read More</div>
-              </div>
-              <div class="news-i">
-                <h3 class="title-color font-size24 fontFamily">
-                  Oct. 24th 2023
-                </h3>
-                <p class="font-size24 fontFamily textColor">
-                  0Bi0 Announces Strategic Partnership with Refreshgene to
-                  RealizeCommercialization of Gene Therapy Product
-                </p>
-                <div class="btn bg-pinkbluelfr">Read More</div>
-              </div>
-              <div class="news-i">
-                <h3 class="title-color font-size24 fontFamily">
-                  Oct. 10th-12th 2023
-                </h3>
-                <p class="font-size24 fontFamily textColor">
-                  Cell&Gene meeting on the Mesa
-                </p>
-                <div class="btn bg-pinkbluelfr">Read More</div>
-              </div>
-            </el-col>
-          </el-row>
-        </el-col>
-      </section> -->
       <Career />
       <!-- <section id="careerout" class="career-container">
         <el-col
@@ -774,42 +731,6 @@ function handleInsightsType(params) {
 }
 const ruleForm = ref<FormItem>({});
 const rules = ref([]);
-const vectorFooterList = ref([
-  {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/3fe6acf22f4fcd938628771fdeabbef9.png",
-    txt: "10+ years of dedication to gene and cell therapy",
-  },
-  {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/b7b2b3abc455d13f3a93c100cc0ae008.png",
-    txt: `Track record of 100 gene and cell therapy projects`,
-  },
-  {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/28357454cd094b26b016a3fd15727a39.png",
-    txt: `Compliant manufacturing for successful initiation of
-                  multi-center clinical trials`,
-  },
-  {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/e6bfcf1cb84b0254cea3aefadf2f1e5c.png",
-    txt: `Comprehensive quality system with regulatory compliant
-                  facilities`,
-  },
-  {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220402/b31aa85b97d72ef8e77c7297b11d1867.png",
-    txt: `Sufficient capacity and state-of-the-art facilities for global
-                  manufacturing needs`,
-  },
-  {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/71ad488b3a8b061d5bbbafebc1239290.png",
-    txt: `End-to-end professional project management for in-time
-                  supports and on-time delivery`,
-  },
-]);
 const cdmoList = ref([
   {
     imgUrl: handleViteImages("@/assets/icons/cdmo_service1.png"),

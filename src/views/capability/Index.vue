@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-08 15:56:21
+ * @LastEditTime: 2024-03-21 13:31:41
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -185,10 +185,10 @@ import { handleViteImages, goRouter } from "@/utils";
 const FocusData = ref({
   title: "Capability & Commitment",
   hiddenXsImgUrl:
-    "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+     handleViteImages('@/assets/icons/head_bg.png'),
 
   visibleXsImgUrl:
-    "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+     handleViteImages('@/assets/icons/head_bg.png'),
 
   // hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg2.png"),
   // visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg2.png"),

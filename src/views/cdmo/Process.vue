@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-19 17:29:29
+ * @LastEditTime: 2024-03-21 13:55:29
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -378,12 +378,6 @@
               <el-col :sm="12" v-for="(i, k) in vectorList" :key="k">
                 <div class="boxs">
                   <div class="ub ub-ac">
-                    <!-- <div
-                      class="ico"
-                      style="
-                        background-image: url(https://www.obio-tech.com/public/uploads/20220327/3fe6acf22f4fcd938628771fdeabbef9.png);
-                      "
-                    ></div> -->
                     <img class="ico" :src="i.bgUrl" alt="" srcset="" />
                     <div class="txt fontf5 font-size20 color666 ub-f1">
                       {{ i.txt }}
