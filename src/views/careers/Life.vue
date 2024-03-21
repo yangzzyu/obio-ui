@@ -241,9 +241,9 @@ import { handleViteImages, goRouter } from "@/utils";
 const FocusData = ref({
   title: "Life in OBIO",
   hiddenXsImgUrl:
-     handleViteImages('@/assets/icons/head_bg.png'),
+     handleViteImages('@/assets/icons/head_bg.jpg'),
   visibleXsImgUrl:
-     handleViteImages('@/assets/icons/head_bg.png'),
+     handleViteImages('@/assets/icons/head_bg.jpg'),
   // hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg3.png"),
   // visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg3.png"),
 });

@@ -121,10 +121,10 @@ import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
   title: "CRO Service",
-  hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg.png"),
+  hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg.jpg"),
 
   // "https://www.obio-tech.com/public/uploads/20220402/39c0eb1d2e5cf6c9f1d40cc78ce30544.jpg",
-  visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg.png"),
+  visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg.jpg"),
 
   // "https://www.obio-tech.com/public/uploads/20220402/c513fa4925451a1f43f4227509d942c3.jpg",
 });

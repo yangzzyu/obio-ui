@@ -185,10 +185,10 @@ import { handleViteImages, goRouter } from "@/utils";
 const FocusData = ref({
   title: "Capability & Commitment",
   hiddenXsImgUrl:
-     handleViteImages('@/assets/icons/head_bg.png'),
+     handleViteImages('@/assets/icons/head_bg.jpg'),
 
   visibleXsImgUrl:
-     handleViteImages('@/assets/icons/head_bg.png'),
+     handleViteImages('@/assets/icons/head_bg.jpg'),
 
   // hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg2.png"),
   // visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg2.png"),

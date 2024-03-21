@@ -30,10 +30,10 @@ const pageData = ref([
     focusObj: {
       title: "News and Events",
       hiddenXsImgUrl:
-         handleViteImages('@/assets/icons/head_bg.png'),
+         handleViteImages('@/assets/icons/head_bg.jpg'),
 
       visibleXsImgUrl:
-         handleViteImages('@/assets/icons/head_bg.png'),
+         handleViteImages('@/assets/icons/head_bg.jpg'),
 
       // hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg3.png"),
       // visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg3.png"),
@@ -44,11 +44,11 @@ const pageData = ref([
     focusObj: {
       title: "Insights",
       hiddenXsImgUrl:
-         handleViteImages('@/assets/icons/head_bg.png'),
+         handleViteImages('@/assets/icons/head_bg.jpg'),
 
-      //  handleViteImages('@/assets/icons/head_bg.png'),
+      //  handleViteImages('@/assets/icons/head_bg.jpg'),
       visibleXsImgUrl:
-         handleViteImages('@/assets/icons/head_bg.png'),
+         handleViteImages('@/assets/icons/head_bg.jpg'),
 
       // "https://www.obio-tech.com/public/uploads/20220401/fed2a39854c2e2e0bd6d7d8434597de8.jpg",
     },
@@ -58,11 +58,11 @@ const pageData = ref([
     focusObj: {
       title: "Insights",
       hiddenXsImgUrl:
-         handleViteImages('@/assets/icons/head_bg.png'),
+         handleViteImages('@/assets/icons/head_bg.jpg'),
 
-      //  handleViteImages('@/assets/icons/head_bg.png'),
+      //  handleViteImages('@/assets/icons/head_bg.jpg'),
       visibleXsImgUrl:
-         handleViteImages('@/assets/icons/head_bg.png'),
+         handleViteImages('@/assets/icons/head_bg.jpg'),
 
       // "https://www.obio-tech.com/public/uploads/20220401/fed2a39854c2e2e0bd6d7d8434597de8.jpg",
     },
@@ -72,11 +72,11 @@ const pageData = ref([
     focusObj: {
       title: "Insights",
       hiddenXsImgUrl:
-         handleViteImages('@/assets/icons/head_bg.png'),
+         handleViteImages('@/assets/icons/head_bg.jpg'),
 
-      //  handleViteImages('@/assets/icons/head_bg.png'),
+      //  handleViteImages('@/assets/icons/head_bg.jpg'),
       visibleXsImgUrl:
-         handleViteImages('@/assets/icons/head_bg.png'),
+         handleViteImages('@/assets/icons/head_bg.jpg'),
 
       // "https://www.obio-tech.com/public/uploads/20220401/fed2a39854c2e2e0bd6d7d8434597de8.jpg",
     },

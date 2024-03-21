@@ -52,7 +52,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
                       <img
-                        :src="handleViteImages('assets/icons/facilities1.png')"
+                        :src="handleViteImages('assets/icons/facilities1.jpg')"
                         alt="OBIO Intelli-M"
                       />
                     </div>
@@ -77,7 +77,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
                       <img
-                        :src="handleViteImages('assets/icons/facilities2.png')"
+                        :src="handleViteImages('assets/icons/facilities2.jpg')"
                         alt="SPIRO Site"
                       />
                     </div>
@@ -101,7 +101,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
                       <img
-                        :src="handleViteImages('assets/icons/facilities3.png')"
+                        :src="handleViteImages('assets/icons/facilities3.jpg')"
                         alt="PINE Site"
                       />
                     </div>
@@ -146,7 +146,7 @@ import TheWelcome from "../components/TheWelcome.vue";
               <div
                 class="image--callout_image"
                 style="
-                  background-image: url(https://file.qjia.tech/obio-img/cdmo_img.png);
+                  background-image: url(https://file.qjia.tech/obio-img/cdmo_img.jpg);
                 "
               ></div>
             </el-col>
@@ -166,7 +166,7 @@ import TheWelcome from "../components/TheWelcome.vue";
               <div
                 class="image--callout_image"
                 style="
-                  background-image: url(https://file.qjia.tech/obio-img/cdmo_img.png);
+                  background-image: url(https://file.qjia.tech/obio-img/cdmo_img.jpg);
                 "
               ></div>
             </el-col>

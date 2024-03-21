@@ -167,8 +167,8 @@ import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
   title: "Job Opening",
-  hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg.png"),
-  visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg.png"),
+  hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg.jpg"),
+  visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg.jpg"),
   // hiddenXsImgUrl: handleViteImages("@/assets/icons/job_bg.png"),
   // visibleXsImgUrl: handleViteImages("@/assets/icons/job_bg.png"),
 });

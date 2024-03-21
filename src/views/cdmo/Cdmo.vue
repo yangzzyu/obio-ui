@@ -120,7 +120,7 @@
                 <div class="manufacturing-list bg-pinkbluelfr">
                   <div class="content">
                     <img
-                      :src="handleViteImages('assets/icons/facilities1.png')"
+                      :src="handleViteImages('assets/icons/facilities1.jpg')"
                       alt="OBIO Intelli-M"
                     />
                   </div>
@@ -143,7 +143,7 @@
                 <div class="manufacturing-list bg-pinkbluelfr">
                   <div class="content">
                     <img
-                      :src="handleViteImages('assets/icons/facilities2.png')"
+                      :src="handleViteImages('assets/icons/facilities2.jpg')"
                       alt="SPIRO Site"
                     />
                   </div>
@@ -167,7 +167,7 @@
                 <div class="manufacturing-list bg-pinkbluelfr">
                   <div class="content">
                     <img
-                      :src="handleViteImages('assets/icons/facilities3.png')"
+                      :src="handleViteImages('assets/icons/facilities3.jpg')"
                       alt="PINE Site"
                     />
                   </div>

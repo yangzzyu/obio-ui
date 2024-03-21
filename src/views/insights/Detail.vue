@@ -66,8 +66,8 @@ const matchedData = ref([
 ]);
 const FocusData = ref({
   title: "news",
-  hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg.png"),
-  visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg.png"),
+  hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg.jpg"),
+  visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg.jpg"),
 });
 const newsItem = ref({});
 onMounted(() => {
