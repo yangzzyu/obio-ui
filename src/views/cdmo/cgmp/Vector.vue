@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-19 17:29:29
+ * @LastEditTime: 2024-03-21 17:09:09
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -151,6 +151,8 @@ import { ref } from "vue";
 import { useTransition } from "@vueuse/core";
 import { ArrowRight } from "@element-plus/icons-vue";
 import ObioFooter from "@/components/ObioFooter.vue";
+import { handleViteImages } from "@/utils";
+
 import {
   Autoplay,
   Navigation,
@@ -265,36 +267,30 @@ const SwiperList = ref([
 ]);
 const vectorFooterList = ref([
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/3fe6acf22f4fcd938628771fdeabbef9.png",
+    bgUrl: handleViteImages("highlights/1.png"),
     txt: "10+ years of dedication to gene and cell therapy",
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/b7b2b3abc455d13f3a93c100cc0ae008.png",
+    bgUrl: handleViteImages("highlights/2.png"),
     txt: `Track record of 100 gene and cell therapy projects`,
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/28357454cd094b26b016a3fd15727a39.png",
+    bgUrl: handleViteImages("highlights/3.png"),
     txt: `Compliant manufacturing for successful initiation of
                   multi-center clinical trials`,
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/e6bfcf1cb84b0254cea3aefadf2f1e5c.png",
+    bgUrl: handleViteImages("highlights/4.png"),
     txt: `Comprehensive quality system with regulatory compliant
                   facilities`,
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220402/b31aa85b97d72ef8e77c7297b11d1867.png",
+    bgUrl: handleViteImages("highlights/5.png"),
     txt: `Sufficient capacity and state-of-the-art facilities for global
                   manufacturing needs`,
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/71ad488b3a8b061d5bbbafebc1239290.png",
+    bgUrl: handleViteImages("highlights/6.png"),
     txt: `End-to-end professional project management for in-time
                   supports and on-time delivery`,
   },

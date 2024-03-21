@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-03-18 22:04:02
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 13:57:25
+ * @LastEditTime: 2024-03-21 16:29:33
  * @FilePath: \obio-ui\src\views\home\Index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -52,7 +52,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
                       <img
-                        :src="handleViteImages('assets/icons/facilities1.jpg')"
+                        :src="handleViteImages('facilities1.jpg')"
                         alt="OBIO Intelli-M"
                       />
                     </div>
@@ -77,7 +77,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
                       <img
-                        :src="handleViteImages('assets/icons/facilities2.jpg')"
+                        :src="handleViteImages('facilities2.jpg')"
                         alt="SPIRO Site"
                       />
                     </div>
@@ -101,7 +101,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
                       <img
-                        :src="handleViteImages('assets/icons/facilities3.jpg')"
+                        :src="handleViteImages('facilities3.jpg')"
                         alt="PINE Site"
                       />
                     </div>
@@ -611,7 +611,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                       <img
                         class="verifyImg"
                         id="captcha"
-                        src="@/assets/icons/captcha.png"
+                        src="captcha.png"
                         alt="verifyImg"
                         style="width: 150px; cursor: pointer; height: 38px"
                       />
@@ -655,7 +655,7 @@ import TheWelcome from "../components/TheWelcome.vue";
               <div class="right-wrap">
                 <div class="ico-r6">
                   <img
-                    src="@/assets/icons/ico6.png"
+                    src="ico6.png"
                     class="img-responsive"
                     style="max-width: 100%"
                     alt=""
@@ -733,8 +733,8 @@ const ruleForm = ref<FormItem>({});
 const rules = ref([]);
 const cdmoList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/cdmo_service1.png"),
-    actImgUrl: handleViteImages("@/assets/icons/cdmo_service_act1.png"),
+    imgUrl: handleViteImages("cdmo_service1.png"),
+    actImgUrl: handleViteImages("cdmo_service_act1.png"),
     title: "Viral Vectors",
     list: [
       "AAV",
@@ -744,8 +744,8 @@ const cdmoList = ref([
     ],
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/cdmo_service2.png"),
-    actImgUrl: handleViteImages("@/assets/icons/cdmo_service_act2.png"),
+    imgUrl: handleViteImages("cdmo_service2.png"),
+    actImgUrl: handleViteImages("cdmo_service_act2.png"),
     title: "Oncolytic Virus",
     list: [
       "Oncolytic adenoviruses",
@@ -755,8 +755,8 @@ const cdmoList = ref([
     ],
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/cdmo_service3.png"),
-    actImgUrl: handleViteImages("@/assets/icons/cdmo_service_act3.png"),
+    imgUrl: handleViteImages("cdmo_service3.png"),
+    actImgUrl: handleViteImages("cdmo_service_act3.png"),
     title: "Cell Therapy Products",
     headTit: "Autologous and homologous immunocyte therapies",
     list: [
@@ -771,8 +771,8 @@ const cdmoList = ref([
     ],
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/cdmo_service4.png"),
-    actImgUrl: handleViteImages("@/assets/icons/cdmo_service_act4.png"),
+    imgUrl: handleViteImages("cdmo_service4.png"),
+    actImgUrl: handleViteImages("cdmo_service_act4.png"),
     title: "Plasmid & Nucleotides",
     list: [
       "Plasmid DNA",
@@ -785,7 +785,7 @@ const cdmoList = ref([
 ]);
 const croList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon1.png"),
+    imgUrl: handleViteImages("croIcon1.png"),
     title: "Plasmid",
     text: `At OBiO, our dedicated
 development team is
@@ -799,7 +799,7 @@ providingexpertise in
 viral packaging.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon2.png"),
+    imgUrl: handleViteImages("croIcon2.png"),
     title: "Viral Vector",
     text: `We specialize in offering
 comprehensive services
@@ -817,7 +817,7 @@ thorough support
 throughout the process.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon3.png"),
+    imgUrl: handleViteImages("croIcon3.png"),
     title: "Experiment Solutions",
     text: `We offer an extensive 
 array of contract 
@@ -826,7 +826,7 @@ tailored for functional
 genomics studies.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon4.png"),
+    imgUrl: handleViteImages("croIcon4.png"),
     title: "Related Products",
     text: `We offer a 
 comprehensive range of
@@ -839,7 +839,7 @@ various aspects of your
 project.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon5.png"),
+    imgUrl: handleViteImages("croIcon5.png"),
     title: "Extracellular Vesicle",
     text: `Our services for extracellular vesicle include isolation, 
 identification, and functional 
@@ -857,25 +857,25 @@ type ViralItem = {
 const ViralList = ref<ViralItem[]>([
   {
     id: 0,
-    imgUrl: handleViteImages("@/assets/icons/cdmo_icon1.png"),
+    imgUrl: handleViteImages("cdmo_icon1.png"),
     title: "Focus",
     path: "/process",
   },
   {
     id: 1,
-    imgUrl: handleViteImages("@/assets/icons/cdmo_icon2.png"),
+    imgUrl: handleViteImages("cdmo_icon2.png"),
     title: "Acceleration",
     path: "/cgmp",
   },
   {
     id: 2,
-    imgUrl: handleViteImages("@/assets/icons/cdmo_icon3.png"),
+    imgUrl: handleViteImages("cdmo_icon3.png"),
     title: "Standardization",
     path: "/quality",
   },
   {
     id: 3,
-    imgUrl: handleViteImages("@/assets/icons/cdmo_icon4.png"),
+    imgUrl: handleViteImages("cdmo_icon4.png"),
     title: "Team",
     path: "/logistics",
   },

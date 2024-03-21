@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-08 16:34:45
+ * @LastEditTime: 2024-03-21 16:32:25
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -96,12 +96,12 @@
                   ><div class="service--box_icon mb-3 min-width-70">
                     <img
                       class="icon--white"
-                      :src="handleViteImages('@/assets/icons/career_act1.png')"
+                      :src="handleViteImages('career_act1.png')"
                       alt="GMP Vector Manufacturing icon"
                     />
                     <img
                       class="icon--colour"
-                      :src="handleViteImages('@/assets/icons/career1.png')"
+                      :src="handleViteImages('career1.png')"
                       alt="GMP Vector Manufacturing icon"
                     /></div
                 ></el-col>
@@ -128,12 +128,12 @@
                   ><div class="service--box_icon mb-3 min-width-70">
                     <img
                       class="icon--white"
-                      :src="handleViteImages('@/assets/icons/career_act2.png')"
+                      :src="handleViteImages('career_act2.png')"
                       alt="GMP Vector Manufacturing icon"
                     />
                     <img
                       class="icon--colour"
-                      :src="handleViteImages('@/assets/icons/career2.png')"
+                      :src="handleViteImages('career2.png')"
                       alt="GMP Vector Manufacturing icon"
                     /></div
                 ></el-col>
@@ -194,13 +194,13 @@ import { handleViteImages, goRouter } from "@/utils";
 const FocusData = ref({
   title: "Careers",
   hiddenXsImgUrl:
-     handleViteImages('@/assets/icons/head_bg.jpg'),
+     handleViteImages('head_bg.jpg'),
 
   visibleXsImgUrl:
-     handleViteImages('@/assets/icons/head_bg.jpg'),
+     handleViteImages('head_bg.jpg'),
 
-  // hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg4.png"),
-  // visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg4.png"),
+  // hiddenXsImgUrl: handleViteImages("head_bg4.png"),
+  // visibleXsImgUrl: handleViteImages("head_bg4.png"),
 });
 const dialogVisible = ref(false);
 function handleClose() {
@@ -209,7 +209,7 @@ function handleClose() {
 }
 const croList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/careers1.png"),
+    imgUrl: handleViteImages("careers1.png"),
     title: "Vision by 2026:",
     text: `Providing client-centered and high-quality 
 service as our commitment, we strive to 
@@ -218,14 +218,14 @@ therapy CXO group.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/careers2.png"),
+    imgUrl: handleViteImages("careers2.png"),
     title: "Value:",
     text: `Customer Focus, Efficient Execution, 
 Excellence, Innovation, Integrity.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/careers3.png"),
+    imgUrl: handleViteImages("careers3.png"),
     title: "Original Aspiration：",
     text: `Developing gene therapies for the welfare of 
 mankind by virtue of its in-house developed 

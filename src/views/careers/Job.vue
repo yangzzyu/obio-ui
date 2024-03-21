@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 13:54:25
+ * @LastEditTime: 2024-03-21 16:32:40
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -167,10 +167,10 @@ import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
   title: "Job Opening",
-  hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg.jpg"),
-  visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg.jpg"),
-  // hiddenXsImgUrl: handleViteImages("@/assets/icons/job_bg.png"),
-  // visibleXsImgUrl: handleViteImages("@/assets/icons/job_bg.png"),
+  hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
+  visibleXsImgUrl: handleViteImages("head_bg.jpg"),
+  // hiddenXsImgUrl: handleViteImages("job_bg.png"),
+  // visibleXsImgUrl: handleViteImages("job_bg.png"),
 });
 const dialogVisible = ref(false);
 function handleClose() {
@@ -179,8 +179,8 @@ function handleClose() {
 }
 const cdmoList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/job1.png"),
-    actImgUrl: handleViteImages("@/assets/icons/job_act1.png"),
+    imgUrl: handleViteImages("job1.png"),
+    actImgUrl: handleViteImages("job_act1.png"),
     title: "Core Values",
     text: `Everything we do is
 driven by our values. We
@@ -190,8 +190,8 @@ right thing.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/job2.png"),
-    actImgUrl: handleViteImages("@/assets/icons/job_act2.png"),
+    imgUrl: handleViteImages("job2.png"),
+    actImgUrl: handleViteImages("job_act2.png"),
     title: "Diversity & Belonging",
     text: `Together is how we get
 better. We are committed
@@ -200,8 +200,8 @@ embraces everyone.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/job3.png"),
-    actImgUrl: handleViteImages("@/assets/icons/job_act3.png"),
+    imgUrl: handleViteImages("job3.png"),
+    actImgUrl: handleViteImages("job_act3.png"),
     title: "Community",
     text: `Love your life in
 Indianapolis. We are a
@@ -211,8 +211,8 @@ community.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/job4.png"),
-    actImgUrl: handleViteImages("@/assets/icons/job_act4.png"),
+    imgUrl: handleViteImages("job4.png"),
+    actImgUrl: handleViteImages("job_act4.png"),
     title: "Benefits",
     text: `Our people deserve the
 best. We provide a
@@ -223,7 +223,7 @@ ttruly rewards our team.
 ]);
 const croList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/careers1.png"),
+    imgUrl: handleViteImages("careers1.png"),
     title: "Vision by 2026:",
     text: `Providing client-centered and high-quality 
 service as our commitment, we strive to 
@@ -232,14 +232,14 @@ therapy CXO group.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/careers2.png"),
+    imgUrl: handleViteImages("careers2.png"),
     title: "Value:",
     text: `Customer Focus, Efficient Execution, 
 Excellence, Innovation, Integrity.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/careers3.png"),
+    imgUrl: handleViteImages("careers3.png"),
     title: "Original Aspiration：",
     text: `Developing gene therapies for the welfare of 
 mankind by virtue of its in-house developed 

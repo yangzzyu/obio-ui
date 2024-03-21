@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 13:36:12
+ * @LastEditTime: 2024-03-21 16:33:13
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -22,7 +22,7 @@
           <el-col :xs="24" :span="6"
             ><div class="animate-imgxx uof img">
               <img
-                :src="handleViteImages('@/assets/icons/cdmo_top.png')"
+                :src="handleViteImages('cdmo_top.png')"
                 alt="SPIRO Site"
               />
             </div>
@@ -120,7 +120,7 @@
                 <div class="manufacturing-list bg-pinkbluelfr">
                   <div class="content">
                     <img
-                      :src="handleViteImages('assets/icons/facilities1.jpg')"
+                      :src="handleViteImages('facilities1.jpg')"
                       alt="OBIO Intelli-M"
                     />
                   </div>
@@ -143,7 +143,7 @@
                 <div class="manufacturing-list bg-pinkbluelfr">
                   <div class="content">
                     <img
-                      :src="handleViteImages('assets/icons/facilities2.jpg')"
+                      :src="handleViteImages('facilities2.jpg')"
                       alt="SPIRO Site"
                     />
                   </div>
@@ -167,7 +167,7 @@
                 <div class="manufacturing-list bg-pinkbluelfr">
                   <div class="content">
                     <img
-                      :src="handleViteImages('assets/icons/facilities3.jpg')"
+                      :src="handleViteImages('facilities3.jpg')"
                       alt="PINE Site"
                     />
                   </div>
@@ -279,7 +279,7 @@
                     <div class="content">
                       <img
                         :src="
-                          handleViteImages('@/assets/icons/innovation1.png')
+                          handleViteImages('innovation1.png')
                         "
                         alt="SPIRO Site"
                       />
@@ -300,7 +300,7 @@
                     <div class="content">
                       <img
                         :src="
-                          handleViteImages('@/assets/icons/innovation2.png')
+                          handleViteImages('innovation2.png')
                         "
                         alt="PINE Site"
                       />
@@ -321,7 +321,7 @@
                     <div class="content">
                       <img
                         :src="
-                          handleViteImages('@/assets/icons/innovation3.png')
+                          handleViteImages('innovation3.png')
                         "
                         alt="OBiO Intelli-M"
                       />
@@ -549,7 +549,7 @@ const solutionsBreakpoints = ref({
 });
 const croList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/cdmo1.png"),
+    imgUrl: handleViteImages("cdmo1.png"),
     title: "Viral Vectors",
     textArr: [
       "AAV",
@@ -560,7 +560,7 @@ const croList = ref([
     ],
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/cdmo2.png"),
+    imgUrl: handleViteImages("cdmo2.png"),
     title: "Oncolytic Virus",
     textArr: [
       "Oncolytic adenoviruses",
@@ -571,7 +571,7 @@ const croList = ref([
     ],
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/cdmo3.png"),
+    imgUrl: handleViteImages("cdmo3.png"),
     title: "Cell Therapy Products",
     textArr: [
       "Autologous and homologous immunocyte therapies",
@@ -585,7 +585,7 @@ const croList = ref([
     ],
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/cdmo4.png"),
+    imgUrl: handleViteImages("cdmo4.png"),
     title: "Plasmid Nucleotides",
     textArr: [
       "Plasmid DNA",

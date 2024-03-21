@@ -13,7 +13,7 @@
         <div class="link-list-i">
           <div class="foot-log">
             <img
-              :src="handleViteImages('assets/icons/footer_logo.png')"
+              :src="handleViteImages('footer_logo.png')"
               alt="OBiO Technology (Shanghai) Corp., Ltd."
             />
           </div>
@@ -141,7 +141,7 @@
         <el-col :span="6" :xs="24" class="wow fadeInLeft animated">
           <div class="foot-log">
             <img
-              :src="handleViteImages('assets/icons/footer_logo.png')"
+              :src="handleViteImages('footer_logo.png')"
               alt="OBiO Technology (Shanghai) Corp., Ltd."
             />
           </div>
@@ -317,7 +317,7 @@ type FocusItem = {
 const footerHeight = ref("");
 const curWidth = ref("");
 const logo_url = ref<any>();
-logo_url.value = handleViteImages("@/assets/img/index/logoColor.png");
+logo_url.value = handleViteImages("logoColor.png");
 const contact_way = ref<ConcatItem[]>([]);
 const focus_icon = ref<FocusItem[]>([]);
 

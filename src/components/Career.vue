@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-08 15:59:46
+ * @LastEditTime: 2024-03-21 16:24:34
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -45,12 +45,12 @@
                 ><div class="service--box_icon mb-3 min-width-70">
                   <img
                     class="icon--white"
-                    :src="handleViteImages('@/assets/icons/career_act1.png')"
+                    :src="handleViteImages('career_act1.png')"
                     alt="GMP Vector Manufacturing icon"
                   />
                   <img
                     class="icon--colour"
-                    :src="handleViteImages('@/assets/icons/career1.png')"
+                    :src="handleViteImages('career1.png')"
                     alt="GMP Vector Manufacturing icon"
                   /></div
               ></el-col>
@@ -75,12 +75,12 @@
                 ><div class="service--box_icon mb-3 min-width-70">
                   <img
                     class="icon--white"
-                    :src="handleViteImages('@/assets/icons/career_act2.png')"
+                    :src="handleViteImages('career_act2.png')"
                     alt="GMP Vector Manufacturing icon"
                   />
                   <img
                     class="icon--colour"
-                    :src="handleViteImages('@/assets/icons/career2.png')"
+                    :src="handleViteImages('career2.png')"
                     alt="GMP Vector Manufacturing icon"
                   /></div
               ></el-col>

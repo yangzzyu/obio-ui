@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 15:47:00
+ * @LastEditTime: 2024-03-21 16:30:46
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -426,7 +426,7 @@
               <div class="manufacturing-list bg-pinkbluelfr">
                 <div class="content">
                   <img
-                    :src="handleViteImages('assets/icons/facilities1.jpg')"
+                    :src="handleViteImages('facilities1.jpg')"
                     alt="OBIO Intelli-M"
                   />
                 </div>
@@ -449,7 +449,7 @@
               <div class="manufacturing-list bg-pinkbluelfr">
                 <div class="content">
                   <img
-                    :src="handleViteImages('assets/icons/facilities2.jpg')"
+                    :src="handleViteImages('facilities2.jpg')"
                     alt="SPIRO Site"
                   />
                 </div>
@@ -471,7 +471,7 @@
               <div class="manufacturing-list bg-pinkbluelfr">
                 <div class="content">
                   <img
-                    :src="handleViteImages('assets/icons/facilities3.jpg')"
+                    :src="handleViteImages('facilities3.jpg')"
                     alt="PINE Site"
                   />
                 </div>
@@ -534,7 +534,7 @@
                     </p>
                   </div>
                   <img
-                    :src="handleViteImages('@/assets/icons/facility1.png')"
+                    :src="handleViteImages('facility1.png')"
                     alt="SPIRO Site"
                   />
                   <div class="overlay"></div>
@@ -571,7 +571,7 @@
                     </p>
                   </div>
                   <img
-                    :src="handleViteImages('@/assets/icons/facility2.png')"
+                    :src="handleViteImages('facility2.png')"
                     alt="PINE Site"
                   />
                 </div>
@@ -602,7 +602,7 @@
                     </p>
                   </div>
                   <img
-                    :src="handleViteImages('@/assets/icons/facility3.png')"
+                    :src="handleViteImages('facility3.png')"
                     alt="OBiO Intelli-M"
                   />
                 </div>
@@ -635,7 +635,7 @@
                     </p>
                   </div>
                   <img
-                    :src="handleViteImages('@/assets/icons/facility4.png')"
+                    :src="handleViteImages('facility4.png')"
                     alt="OBiO Intelli-M"
                   />
                 </div>
@@ -661,7 +661,7 @@
           <el-col :span="8" :xs="24" class="left-content">
             <img
               class="img"
-              :src="handleViteImages('@/assets/icons/life_bg.png')"
+              :src="handleViteImages('life_bg.png')"
               alt=""
             />
           </el-col>

@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 13:58:20
+ * @LastEditTime: 2024-03-21 16:34:57
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -121,10 +121,10 @@ import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
   title: "CRO Service",
-  hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg.jpg"),
+  hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
 
   // "https://www.obio-tech.com/public/uploads/20220402/39c0eb1d2e5cf6c9f1d40cc78ce30544.jpg",
-  visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg.jpg"),
+  visibleXsImgUrl: handleViteImages("head_bg.jpg"),
 
   // "https://www.obio-tech.com/public/uploads/20220402/c513fa4925451a1f43f4227509d942c3.jpg",
 });
@@ -135,7 +135,7 @@ function handleClose() {
 }
 const croList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/cro1.png"),
+    imgUrl: handleViteImages("cro1.png"),
     title: "Plasmid",
     text: `At OBiO, our dedicated development team is
 committed to assisting you in designing,
@@ -144,7 +144,7 @@ for fuctional genomics research, as well as
 providingexpertise in viral packaging.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/cro2.png"),
+    imgUrl: handleViteImages("cro2.png"),
     title: "Viral Vector",
     text: `We specialize in offering comprehensive services
 encompassing the design, construction, and
@@ -155,14 +155,14 @@ your specific gene of interest, ensuring
 thorough support throughout the process.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/cro3.png"),
+    imgUrl: handleViteImages("cro3.png"),
     title: "Experiment Solutions",
     text: `We offer an extensive array of contract 
 research services tailored for functional 
 genomics studies.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/cro4.png"),
+    imgUrl: handleViteImages("cro4.png"),
     title: "Related Products",
     text: `We offer a comprehensive range of
 in-stock virus vectors, proteins, 
@@ -171,7 +171,7 @@ catering to diverse research needs across
 various aspects of your project.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/cro5.png"),
+    imgUrl: handleViteImages("cro5.png"),
     title: "Extracellular Vesicle",
     text: `Our services for extracellular vesicle include
 isolation, identification, and functional 

@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 13:56:05
+ * @LastEditTime: 2024-03-21 17:03:02
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -161,7 +161,6 @@
               </div>
             </div>
           </div>
-
         </div>
         <a name="a1"></a>
         <div class="cGMP-title-t2">
@@ -211,6 +210,8 @@
 import { ref } from "vue";
 import { useTransition } from "@vueuse/core";
 import { ArrowRight } from "@element-plus/icons-vue";
+import { handleViteImages } from "@/utils";
+
 const activeIndex = ref("1");
 const tabsData = ref([
   {
@@ -218,8 +219,7 @@ const tabsData = ref([
     title: "Pre-IND service",
     list: [
       {
-        imgUrl:
-          "https://www.obio-tech.com/public/uploads/20220402/0dd1829ea25cc3712d552a685d7bda79.jpg",
+        imgUrl: handleViteImages("Pre-IND1.jpg"),
         subHead: "Non-IND (IIT) services",
         txt: `Manufacturing gene and cell therapy products in pilot
                     testing scale that is compliant with cGMP management system,
@@ -228,8 +228,7 @@ const tabsData = ref([
                     investigators.`,
       },
       {
-        imgUrl:
-          "https://www.obio-tech.com/public/uploads/20220402/016a22b87b27dee61874936c5f34e00c.jpg",
+        imgUrl: handleViteImages("Pre-IND2.jpg"),
         subHead: "IND-CMC services",
         txt: `We provide IND-CMC services to support the IND/CTA
                     application in China, America, Europe, and Australia. After
@@ -241,8 +240,7 @@ const tabsData = ref([
                     samples required for IND application.`,
       },
       {
-        imgUrl:
-          "https://www.obio-tech.com/public/uploads/20220402/96a6ab94bb314303a251c008a0cc4ee1.jpg",
+        imgUrl: handleViteImages("Pre-IND3.jpg"),
         subHead: "Pre-IND extended services",
         txt: `We provide a variety of Pre-IND extended services including
                     bank construction for plasmid, cell or strain, aseptic fill
@@ -256,8 +254,7 @@ const tabsData = ref([
     title: "Post-IND service",
     list: [
       {
-        imgUrl:
-          "https://www.obio-tech.com/public/uploads/20220402/865e3b4b09a7e62f1d6657bef945c4a1.jpg",
+        imgUrl: handleViteImages("Post-IND1.jpg"),
         subHead: "Clinical manufacturing service (for Phase I, II, III)",
         txt: `With the single-use and large-scale manufacturing
                     technologies as the core, our cGMP platform can facilitate
@@ -268,15 +265,13 @@ const tabsData = ref([
                     trials.`,
       },
       {
-        imgUrl:
-          "https://www.obio-tech.com/public/uploads/20220402/3848eecae41836458e0924144a389905.jpg",
+        imgUrl: handleViteImages("Post-IND2.jpg"),
         subHead: "Commercial manufacturing",
         txt: `We provide commercial manufacturing services for marketed
                     gene and cell therapy products at our OBiO Intelli-M site.`,
       },
       {
-        imgUrl:
-          "https://www.obio-tech.com/public/uploads/20220402/1391fdf6a83bc8b0c7405368e9f5664a.jpg",
+        imgUrl: handleViteImages("Post-IND3.jpg"),
         subHead: "Post-IND extended services",
         txt: `We provide a wide range of Post-IND extended services
                     covering technology transfer consultation, process

@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 13:55:49
+ * @LastEditTime: 2024-03-21 16:58:17
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -164,8 +164,7 @@ const activeIndex = ref(0);
 
 const systemList = ref([
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/b6f7b8eb41e86ab0d129921fdd38387a.png",
+    bgUrl: handleViteImages("highlights/7.png"),
     title: "Document and Training",
     txtList: [
       `Document management and control: preparation,
@@ -175,14 +174,12 @@ const systemList = ref([
     ],
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/e6f055da402f6b12cdcf35f4c75f2c68.png",
+    bgUrl: handleViteImages("highlights/8.png"),
     title: "Archive Management",
     txtList: [`Documents archiving`, `Management of documents borrowing`],
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/5789adf3885d9919b14a25f932398d35.png",
+    bgUrl: handleViteImages("highlights/9.png"),
     title: "Process Supervision",
     txtList: [
       `On-site process supervision`,
@@ -192,8 +189,7 @@ const systemList = ref([
     ],
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/17c441f83b89c0f65d196632e3e13a98.png",
+    bgUrl: handleViteImages("highlights/10.png"),
     title: "Product Administration",
     txtList: [
       `Drug registration and application supporting`,
@@ -203,8 +199,7 @@ const systemList = ref([
     ],
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/781542298729fdabb6507c7378fb45a3.png",
+    bgUrl: handleViteImages("highlights/11.png"),
     title: "Quality Evaluation",
     txtList: [
       `Establish a supplier management system and develop
@@ -219,8 +214,7 @@ const systemList = ref([
     ],
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/e251ad9551ff52a302ab704e04752ffa.png",
+    bgUrl: handleViteImages("highlights/12.png"),
     title: "Validation Management",
     txtList: [
       `Risk assessment, identification, and
@@ -252,33 +246,27 @@ const pathwayList = ref([
 ]);
 const vectorList = ref([
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220406/74755b3ef1d3adad78c60d9a56335c3b.png",
+    bgUrl: handleViteImages("highlights/13.png"),
     txt: "High-standard and comprehensive quality controls",
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220402/b31aa85b97d72ef8e77c7297b11d1867.png",
+    bgUrl: handleViteImages("highlights/14.png"),
     txt: `State-of-the-art facilities with cGMP compliant quality system`,
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220406/a0bd444531079fc5961a6594858a4218.png",
+    bgUrl: handleViteImages("highlights/15.png"),
     txt: "End-to-end regulatory support with side-by-side navigation",
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/e6bfcf1cb84b0254cea3aefadf2f1e5c.png",
+    bgUrl: handleViteImages("highlights/16.png"),
     txt: `Quality-by-design in mind throughout the full product lifecycle`,
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220406/1c4bf19594201320237900625d0d9631.png",
+    bgUrl: handleViteImages("highlights/17.png"),
     txt: `Successful support for distinguished clients with differentiated needs`,
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/8ef7bb7c3e6ef213931374afe53b1b4c.png",
+    bgUrl: handleViteImages("highlights/18.png"),
     txt: `Dedicated regulatory team with over 10-year experience in gene and cell therapy industry`,
   },
 ]);

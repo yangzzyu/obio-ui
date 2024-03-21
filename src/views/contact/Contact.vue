@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-27 15:36:03
+ * @LastEditTime: 2024-03-21 17:14:13
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -180,7 +180,7 @@
               <div class="img">
                 <div class="img1 animate-img">
                   <img
-                    src="https://www.obio-tech.com/public/uploads/20220326/bede76194585b380479a536e89016d15.jpg"
+                  :src="handleViteImages('facility1.png')"
                     alt="SPIRO Site"
                   />
                 </div>
@@ -200,7 +200,7 @@
               <div class="img">
                 <div class="img1 animate-img">
                   <img
-                    src="https://www.obio-tech.com/public/uploads/20220328/bc70243c9e3b452890584752dc766f43.png"
+                  :src="handleViteImages('facility3.png')"
                     alt="OBiO Intelli-M"
                   />
                 </div>
@@ -220,7 +220,7 @@
               <div class="img">
                 <div class="img1 animate-img">
                   <img
-                    src="https://www.obio-tech.com/public/uploads/20220328/33d875548c6c5f84df64d612a629afe4.png"
+                  :src="handleViteImages('facility2.png')"
                     alt="PINE Site"
                   />
                 </div>
@@ -249,6 +249,8 @@ import Events from "@/components/Events.vue";
 import Focus from "@/components/Focus.vue";
 import { useRouter } from "vue-router";
 import { computed, onBeforeMount, ref, toRefs, watch } from "vue";
+import { handleViteImages } from "@/utils";
+
 type FormItem = {
   [key: string]: string;
 };

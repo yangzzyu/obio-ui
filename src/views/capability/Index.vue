@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 13:31:41
+ * @LastEditTime: 2024-03-21 16:31:27
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -125,7 +125,11 @@
         </h1>
         <el-row class="our-box-content" :gutter="60">
           <el-col :span="8" :xs="24" class="left-content">
-            <img class="img" src="@/assets/icons/Viral_Vector_bg3.png" alt="" />
+            <img
+              class="img"
+              :src="handleViteImages('Viral_Vector_bg3.png')"
+              alt=""
+            />
           </el-col>
           <el-col :span="16" :xs="24" class="font-size20 news-list">
             <div class="content-i" v-for="(i, idx) in ourList" :key="idx">
@@ -184,14 +188,12 @@ import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
   title: "Capability & Commitment",
-  hiddenXsImgUrl:
-     handleViteImages('@/assets/icons/head_bg.jpg'),
+  hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
 
-  visibleXsImgUrl:
-     handleViteImages('@/assets/icons/head_bg.jpg'),
+  visibleXsImgUrl: handleViteImages("head_bg.jpg"),
 
-  // hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg2.png"),
-  // visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg2.png"),
+  // hiddenXsImgUrl: handleViteImages("head_bg2.png"),
+  // visibleXsImgUrl: handleViteImages("head_bg2.png"),
 });
 const dialogVisible = ref(false);
 function handleClose() {
@@ -200,8 +202,8 @@ function handleClose() {
 }
 const cdmoList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/cap1.png"),
-    actImgUrl: handleViteImages("@/assets/icons/cap_act1.png"),
+    imgUrl: handleViteImages("cap1.png"),
+    actImgUrl: handleViteImages("cap_act1.png"),
     text: `Experienced experts with
 over 10 years inGCT,
 ensuring timely
@@ -210,24 +212,24 @@ product lifecycle.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/cap2.png"),
-    actImgUrl: handleViteImages("@/assets/icons/cap_act2.png"),
+    imgUrl: handleViteImages("cap2.png"),
+    actImgUrl: handleViteImages("cap_act2.png"),
     text: `Efficient technology
 transfer with optimized
 process validation
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/cap3.png"),
-    actImgUrl: handleViteImages("@/assets/icons/cap_act3.png"),
+    imgUrl: handleViteImages("cap3.png"),
+    actImgUrl: handleViteImages("cap_act3.png"),
     text: `State-of-the-art facilities
 with cGMP compliant
 quality systems
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/cap4.png"),
-    actImgUrl: handleViteImages("@/assets/icons/cap_act4.png"),
+    imgUrl: handleViteImages("cap4.png"),
+    actImgUrl: handleViteImages("cap_act4.png"),
     text: `130+ process
 development projects,
 230+analytical
@@ -235,16 +237,16 @@ methods developed.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/cap5.png"),
-    actImgUrl: handleViteImages("@/assets/icons/cap_act5.png"),
+    imgUrl: handleViteImages("cap5.png"),
+    actImgUrl: handleViteImages("cap_act5.png"),
     text: `High standard and
 comprehensive quality
 controls.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/cap6.png"),
-    actImgUrl: handleViteImages("@/assets/icons/cap_act6.png"),
+    imgUrl: handleViteImages("cap6.png"),
+    actImgUrl: handleViteImages("cap_act6.png"),
     text: `End-to-End regulatory
 support with guided
 navigation
@@ -253,7 +255,7 @@ navigation
 ]);
 const industrializeList = reactive([
   {
-    imgUrl: handleViteImages("@/assets/icons/industrialize1.png"),
+    imgUrl: handleViteImages("industrialize1.png"),
     title: `Development:Efficient and Customized Process Development with
                   BoardProduct Spectrum`,
     txtList: [
@@ -264,7 +266,7 @@ const industrializeList = reactive([
     ],
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/industrialize2.png"),
+    imgUrl: handleViteImages("industrialize2.png"),
     title: `CcGMP Manufacturing: Flexible Large-Scale GMP Manufacturing
                   Platform:`,
     txtList: [
@@ -275,7 +277,7 @@ const industrializeList = reactive([
     ],
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/industrialize3.png"),
+    imgUrl: handleViteImages("industrialize3.png"),
     title: `Quality & Regulatory: 
 International Compliant
 Quality Control System`,
@@ -288,7 +290,7 @@ and review for your submission:`,
     ],
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/industrialize4.png"),
+    imgUrl: handleViteImages("industrialize4.png"),
     title: `Cold Chain Logistic: 
 Traceable 
 Cold-Chain Logistics with 
@@ -303,27 +305,27 @@ specified temperature ranges. `,
 ]);
 const croList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon1.png"),
+    imgUrl: handleViteImages("croIcon1.png"),
     title: "Plasmid",
     text: `At 0Bi0, our dedicateddevelopment team iscommitted to assistingyou in designing,constructing, andmanufacturing plasmidsfor fuctional genomicsresearch, as well asprovidingexpertise inviral packaging.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon2.png"),
+    imgUrl: handleViteImages("croIcon2.png"),
     title: "Viral Vector",
     text: `We specialize in offeringcomprehensive servicesencompassing thedesign, construction, andpackaging of varioustypes of viral vectors.Additionally, we assist inexecuting a diverserange of biomolecularoperations tailored toyour specific gene ofinterest, ensuringthorough supportthroughout the process.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon3.png"),
+    imgUrl: handleViteImages("croIcon3.png"),
     title: "Experiment Solutions",
     text: `We offer an extensivearray of contractresearch servicestailored for functionalgenomics studies.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon4.png"),
+    imgUrl: handleViteImages("croIcon4.png"),
     title: "Related Products",
     text: `We offer a comprehensive range ofin-stock virus vectors,proteins, gRNA libraries.and relevant reagents,catering to diverse research needs acrossvarious aspects of your project.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon5.png"),
+    imgUrl: handleViteImages("croIcon5.png"),
     title: "Extracellular Vesicle",
     text: `Our services for extracellularvesicle include isolation,identification, and functionalresearch at the laboratory stage.For samples from differentsources, our scientist team hasdeveloped multiple isolationsolutions which have beensuccessfully applied in samplesof cells, body fluids and tissueexosomes such as cerebrospinalfluid, urine, brain tissue and liver.`,
   },
