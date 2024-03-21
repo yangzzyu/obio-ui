@@ -17,16 +17,18 @@
       style="margin: auto"
       class="container"
     >
-      <h1 class="p-title font-size50 txt-bold fontFamily">News and Events</h1>
-      <el-row class="image--callout" :gutter="40">
+      <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-4">
+        News and Events
+      </h1>
+      <el-row class="image--callout mb-6" :gutter="40">
         <el-col :span="10" :xs="24" class="left-content">
           <img class="img" src="@/assets/icons/news.png" alt="" />
         </el-col>
         <el-col :span="14" :xs="24" class="font-size20 news-list">
           <div class="news-i" v-for="(item, index) in eventsList" :key="index">
             <!-- bg-pinkbluelfr -->
-            <h3 class="title-color font-size24 fontFamily">{{ item.time }}</h3>
-            <p class="font-size24 fontFamily textColor">
+            <h3 class="title-color font-size24 fontf4">{{ item.time }}</h3>
+            <p class="font-size24 fontf3 textColor">
               {{ item.title }}
               <!-- Focusing on efficient gene delivery of NK cells, The First Condor
               Life and OBiO Technology reach a strategic cooperation! -->
@@ -34,14 +36,14 @@
             <!-- <div class="btn bg-pinkbluelfr">Read More</div> -->
             <router-link
               :to="'/news-details/events/' + item.id"
-              class="btn-a font-size18 fontf7 fontFamily bg-pinkbluelfr events-btn"
+              class="btn-a font-size18 fontf7 bg-pinkbluelfr events-btn"
               >Read More</router-link
             >
           </div>
           <router-link
             v-if="isShow"
             to="/news"
-            class="btn-a font-size18 fontf7 fontFamily bg-pinkbluelfr events-btn"
+            class="btn-a font-size18 fontf7 bg-pinkbluelfr events-btn"
             >All News</router-link
           >
         </el-col>

@@ -49,21 +49,27 @@
           class="container"
         >
           <el-row :gutter="100">
-            <el-col :xs="24" :span="10"
-              ><div class="animate-imgxx uof img">
+            <el-col :xs="24" :span="6"
+              ><div
+                class="animate-imgxx uof img"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  height: 100%;
+                "
+              >
                 <img :src="item.imgUrl" alt="SPIRO Site" />
               </div>
             </el-col>
-            <el-col :xs="24" :span="14">
-              <h1 class="font-size50 fontf7 iti fontFamily item-tit">
+            <el-col :xs="24" :span="18">
+              <h1 class="font-size50 fontf8 iti item-tit">
                 {{ item.title }}
               </h1>
-              <p class="font-size30 fontf7 fontFamily cro-p textColor">
+              <p class="font-size24 cro-p textColor">
                 {{ item.text }}
               </p>
-              <router-link
-                to="/spiroSite"
-                class="font-size18 fontf7 fontFamily btn-a"
+              <router-link to="/spiroSite" class="font-size18 fontf7 btn-a mt-2"
                 >Read More</router-link
               ></el-col
             >
@@ -327,9 +333,13 @@ import { handleViteImages, goRouter } from "@/utils";
 const FocusData = ref({
   title: "CRO Service",
   hiddenXsImgUrl:
-    "https://www.obio-tech.com/public/uploads/20220402/39c0eb1d2e5cf6c9f1d40cc78ce30544.jpg",
+    "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+
+  // "https://www.obio-tech.com/public/uploads/20220402/39c0eb1d2e5cf6c9f1d40cc78ce30544.jpg",
   visibleXsImgUrl:
-    "https://www.obio-tech.com/public/uploads/20220402/c513fa4925451a1f43f4227509d942c3.jpg",
+    "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+
+  // "https://www.obio-tech.com/public/uploads/20220402/c513fa4925451a1f43f4227509d942c3.jpg",
 });
 const dialogVisible = ref(false);
 function handleClose() {

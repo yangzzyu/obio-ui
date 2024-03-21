@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-27 14:59:46
+ * @LastEditTime: 2024-03-20 17:29:48
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -12,11 +12,12 @@
     class="focus"
     :class="focusObj.title === 'About Us' ? 'hero-style-2' : ''"
   >
-    <div class="hidden-xs-only focus-img">
+    <div class="hidden-xs-only focus-img" v-if="focusObj.title !== 'About Us'">
       <img :src="focusObj.hiddenXsImgUrl" :alt="focusObj.title" />
     </div>
     <div
       class="hidden-sm-only hidden-md-only hidden-lg-only hidden-xl-only focus-img"
+      v-if="focusObj.title !== 'About Us'"
     >
       <img :src="focusObj.visibleXsImgUrl" :alt="focusObj.title" />
     </div>
@@ -32,28 +33,26 @@
           class="container"
         >
           <h1
-            class="font-size70 focus-title fontFamily txt-bold"
+            class="font-size70 focus-title fontf7 txt-bold"
             v-if="focusObj.title !== 'About Us'"
           >
             {{ focusObj.title }}
           </h1>
           <div v-else>
-            <h1 class="font-size36 fontFamily txt-bold">
+            <h1 class="font-size36 fontf8 txt-bold">
               Make Gene Delivery Accessible:
             </h1>
-            <p class="font-size30" style="color: #fff; margin-bottom: 30px">
+            <p class="font-size20 fontf8 mb-3" style="color: #fff">
               side by side navigation for your innovations
             </p>
-            <h1 class="font-size36 fontFamily txt-bold">
+            <h1 class="font-size36 fontf8 txt-bold">
               Industrialize Your Products:
             </h1>
-            <p class="font-size30" style="color: #fff; margin-bottom: 30px">
+            <p class="font-size20 fontf8 mb-3" style="color: #fff">
               End-to-End offering with versatile technical platform
             </p>
-            <h1 class="font-size36 fontFamily txt-bold">
-              For Global customers:
-            </h1>
-            <p class="font-size30" style="color: #fff; margin-bottom: 30px">
+            <h1 class="font-size36 fontf8 txt-bold">For Global customers:</h1>
+            <p class="font-size20 fontf8 mb-3" style="color: #fff">
               We have launched state-of-the-art Intelli-M GMP facility in 2023
             </p>
           </div>
@@ -82,5 +81,6 @@ const props = defineProps({
   display: flex;
   width: 100%;
   height: 100%;
+  transform-origin: center center;
 }
 </style>

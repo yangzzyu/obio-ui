@@ -7,7 +7,8 @@
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
-  <div class="location fontf3" style="background: #f6f6f6">
+  <!--  style="background: #f6f6f6" -->
+  <div class="location fontf3">
     <el-col
       :xs="22"
       :sm="20"
@@ -17,7 +18,8 @@
       style="margin: auto"
       class="ub container"
     >
-      <el-breadcrumb :separator-icon="ArrowRight">
+      <!-- :separator-icon="ArrowRight" -->
+      <el-breadcrumb separator="/">
         <el-breadcrumb-item
           v-for="(i, k) in matchedData"
           :key="k"

@@ -15,10 +15,23 @@
           style="margin: auto"
           class="container"
         >
-          <el-row :gutter="100">
+          <p class="font-size24 iti textColor">
+            {{ item.time }}
+          </p>
+          <h1 class="title fontf4 font-size28 title-color">
+            {{ item.title }}
+          </h1>
+          <div class="font-size18 ut-s2">
+            {{ item.content }}
+          </div>
+          <router-link
+            :to="'/news-details/releases/' + item.id"
+            class="read-more font-size18 fontf7"
+            >Read More</router-link
+          >
+          <!-- <el-row :gutter="100">
             <el-col :xs="24" :span="8"
               ><div class="animate-imgxx uof img">
-                <!-- careers3 -->
                 <img
                   :src="handleViteImages('@/assets/icons/careers3.png')"
                   alt="SPIRO Site"
@@ -26,27 +39,27 @@
               </div>
             </el-col>
             <el-col :xs="24" :span="16">
-              <h1 class="font-size24 iti fontFamily textColor">
+              <p class="font-size24 iti textColor">
                 {{ item.time }}
-              </h1>
-              <div class="title fontf4 font-size28 fontFamily title-color">
+              </p>
+              <h1 class="title fontf4 font-size28 title-color">
                 {{ item.title }}
-              </div>
-              <div class="font-size18 ut-s2 fontFamily">
+              </h1>
+              <div class="font-size18 ut-s2">
                 {{ item.content }}
               </div>
               <router-link
                 :to="'/news-details/releases/' + item.id"
-                class="read-more font-size18 fontf7 fontFamily"
+                class="read-more font-size18 fontf7"
                 >Read More</router-link
               ></el-col
             >
-          </el-row>
+          </el-row> -->
         </el-col>
       </div>
       <router-link
         to="/releases"
-        class="btn-a font-size18 fontf7 fontFamily bg-pinkbluelfr"
+        class="btn-a font-size18 fontf7 bg-pinkbluelfr mb-5"
       >
         All Press Releases
       </router-link>
@@ -62,7 +75,9 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="p-title font-size50 txt-bold fontFamily">Productions</h1>
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+          Productions
+        </h1>
         <el-row :gutter="50" class="cdmo-top">
           <el-col :xs="24" :span="8"
             ><div class="animate-imgxx uof img">
@@ -74,7 +89,7 @@
             </div>
           </el-col>
           <el-col :xs="24" :span="16">
-            <p class="font-size20 fontf7 fontFamily cro-p textColor">
+            <p class="font-size20 cro-p textColor">
               Discover OBiO Tech's Cutting-Edge Intelli-M GMP-Compliant Viral
               Vector Production Line. Unlock Comprehensive and Diversified
               Solutions for Large-Scale Production, Offering Capacities Ranging
@@ -84,10 +99,10 @@
             </p>
           </el-col>
         </el-row>
-        <h1 class="p-title font-size50 txt-bold fontFamily">Inquiry</h1>
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Inquiry</h1>
         <el-row :gutter="50" class="cdmo-top">
           <el-col :xs="24" :span="12">
-            <h3 class="title-color font-size36 txt-bold fontFamily">
+            <h3 class="title-color font-size36 txt-bold fontf7">
               Laboratory Sciences
             </h3>
 
@@ -117,7 +132,7 @@
             </el-checkbox-group>
           </el-col>
           <el-col :xs="24" :span="12">
-            <h3 class="title-color font-size36 txt-bold fontFamily">
+            <h3 class="title-color font-size36 txt-bold fontf7">
               CDMO Solutions
             </h3>
             <el-checkbox-group
@@ -244,7 +259,7 @@
                 /> -->
                 <router-link
                   to="/releases"
-                  class="btn-a font-size18 fontf7 fontFamily bg-pinkbluelfr"
+                  class="btn-a font-size18 fontf7 bg-pinkbluelfr"
                 >
                   Submit</router-link
                 >

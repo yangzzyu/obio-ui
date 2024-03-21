@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-08 16:34:45
+ * @LastEditTime: 2024-03-21 11:07:54
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -19,15 +19,15 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="title-color font-size70 txt-bold section-title fontFamily">
+        <h1 class="title-color font-size70 txt-bold section-title fontf8">
           Life at OBiO
         </h1>
-        <h2 class="title-color our-txt font-size30 section-title fontFamily">
+        <h2 class="title-color our-txt font-size30 section-title fontf7">
           As OBiO Tech swiftly evolves, every OBiOers are immersed in an
           environment fostering "enhanced capabilities, purposeful work, and a
           fulfilling life."
         </h2>
-        <ul class="font-size24 fontFamily textColor">
+        <ul class="font-size24 textColor">
           <li>Enhanced Capabilities</li>
           <li>Competitive compensation and benefits</li>
           <li>
@@ -39,7 +39,7 @@
             pursuits
           </li>
         </ul>
-        <p class="font-size24 fontFamily textColor" style="margin-bottom: 20px">
+        <p class="font-size24 textColor" style="margin-bottom: 20px">
           This encapsulates our vibrant company culture, where every moment is
           an opportunity for growth and fulfillment.
         </p>
@@ -60,7 +60,7 @@
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size50 txt-bold fontFamily">
+          <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
             {{ item.title }}
           </h1>
 
@@ -94,11 +94,107 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="p-title font-size50 txt-bold fontFamily">
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
           All Hands Meetin
         </h1>
-        <img src="@/assets/icons/meetin_bg.png" width="100%" alt="" srcset=""
-      /></el-col>
+        <el-col :xs="24" :span="20" style="margin: auto" class="container">
+          <img
+            src="@/assets/icons/meetin_bg.png"
+            width="100%"
+            alt=""
+            srcset=""
+            class="mb-5" /></el-col
+      ></el-col>
+    </section>
+    <div class="in-about-wrap training-box">
+      <div class="section-3">
+        <el-col
+          :xs="22"
+          :sm="20"
+          :md="20"
+          :lg="20"
+          :xl="22"
+          style="margin: auto"
+          class="container"
+        >
+          <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+            Football matches
+          </h1>
+
+          <div class="fac-con">
+            <el-row class="row" :gutter="10">
+              <el-col
+                :xs="24"
+                :span="12"
+                class=""
+                v-for="(i, index) in footballList"
+                :key="index"
+              >
+                <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="content">
+                    <img :src="i" alt="" srcset="" width="100%" />
+                  </div>
+                </div>
+              </el-col>
+            </el-row></div
+        ></el-col>
+      </div>
+    </div>
+    <section id="Seeout1" class="">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-3">
+          Life at OBiO video
+        </h1>
+        <el-row :gutter="20" class="mb-4">
+          <el-col :span="12" :xs="24">
+            <div class="manufacturing-list bg-pinkbluelfr video-list">
+              <div class="content">
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/HQsTy3PhfNI?si=9tfNQvuwp8NnbYL-"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+                <p class="video-p font-size20 textColor">
+                  Exciting Milestone: OBiO Lingang Facility Launches Operations
+                  in 2023!
+                </p>
+              </div>
+            </div></el-col
+          >
+          <el-col :span="12" :xs="24">
+            <div class="manufacturing-list bg-pinkbluelfr video-list">
+              <div class="content">
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/rmq1Vp3zZFg?si=mikql8NjYHJ56uFj"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+
+                <p class="video-p font-size20 textColor">
+                  Exciting Milestone: OBiO Lingang Facility Launches Operations
+                  in 2023!
+                </p>
+              </div>
+            </div></el-col
+          >
+        </el-row>
+      </el-col>
     </section>
   </div>
 
@@ -144,8 +240,12 @@ import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
   title: "Life in OBIO",
-  hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg3.png"),
-  visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg3.png"),
+  hiddenXsImgUrl:
+    "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+  visibleXsImgUrl:
+    "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+  // hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg3.png"),
+  // visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg3.png"),
 });
 const dialogVisible = ref(false);
 function handleClose() {
@@ -157,6 +257,10 @@ const internshipList = reactive([
   handleViteImages("@/assets/icons/carousel_bg1.jpg"),
   handleViteImages("@/assets/icons/carousel_bg1.jpg"),
   handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+]);
+const footballList = reactive([
+  handleViteImages("@/assets/icons/football1.jpg"),
+  handleViteImages("@/assets/icons/football1.jpg"),
 ]);
 type ViralItem = {
   id: number;

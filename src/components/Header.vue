@@ -245,21 +245,7 @@
               >Contact Us</el-menu-item
             > -->
           </el-menu>
-          <ul class="icon-list">
-            <!-- <li
-              id="menu-item-146"
-              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-146"
-            >
-              <a
-                title="LinkedIn"
-                href="https://www.linkedin.com/company/allogene-therapeutics/"
-                class="menu-link"
-                ><i
-                  class="fab fa-linkedin-in alg-tb-icon"
-                  aria-hidden="true"
-                ></i
-              ></a>
-            </li> -->
+          <!-- <ul class="icon-list">
             <li
               id="menu-item-147"
               class="menu-item menu-item-type-custom menu-item-object-custom menu-item-147"
@@ -274,11 +260,6 @@
                   size="lg"
                   :icon="['fab', 'linkedin']"
                 />
-                <!-- <font-awesome-icon
-                  class="footer-icon"
-                  size="lg"
-                  :icon="['fab', 'weixin']"
-                /> -->
               </a>
             </li>
             <li
@@ -295,9 +276,6 @@
                   size="lg"
                   :icon="['fab', 'weixin']"
                 />
-
-                <!-- <i class="fal fa-envelope alg-tb-ifs" aria-hidden="true"></i
-                > -->
               </a>
             </li>
             <li
@@ -316,7 +294,7 @@
                 <font-awesome-icon size="lg" :icon="['fass', 'f']" />
               </a>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </div>
     </div>

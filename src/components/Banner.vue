@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 11:39:49
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-06 10:37:21
+ * @LastEditTime: 2024-03-20 17:25:40
  * @FilePath: \obio-ui\src\components\Banner.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -19,22 +19,22 @@
         class="container"
       >
         <div class="slide-title">
-          <h2 class="font-size38 fontFamily txt-bold">
+          <h2 class="font-size38 fontf8 txt-bold">
             Enable Gene Therapy for Better Lives
           </h2>
-          <h2 class="font-size36 fontFamily txt-bold">
+          <h2 class="font-size36 fontf8 txt-bold">
             Your Trustful Partner in Research and Manufacturing for Gene and
             Cell Therapy
           </h2>
         </div>
         <div class="slide-subtitle">
-          <p class="font-size20 fontFamily txt-bold">
+          <p class="font-size20 fontf8 txt-bold">
             Providing client-centered and high-quality service as our
             commitment, we strive to become a world leading gene and cell
             therapy CRO/CDMO group.
           </p>
         </div>
-        <p class="mission-content font-size38 txt-bold">Mission:</p>
+        <!-- <p class="mission-content font-size38 txt-bold">Mission:</p> -->
         <div class="btns">
           <router-link
             to="/cdmo"
@@ -112,18 +112,6 @@ function carouselChange() {
 onBeforeMount(() => {});
 </script>
 <style lang="scss" scoped>
-.hero-style-1:before,
-.hero-style-2:before {
-  content: "";
-  width: 100%;
-  height: 110%;
-  position: absolute;
-  left: 0;
-  top: -10%;
-  background: url(@/assets/icons/carousel_bg1.jpg) no-repeat center center /
-    cover;
-  z-index: -2;
-}
 .slide-title {
   font-family: Roboto;
   font-weight: bold;
@@ -149,11 +137,10 @@ onBeforeMount(() => {});
   overflow: hidden;
 }
 .btns {
-  overflow: hidden;
-
-  display: flex;
+  // overflow: hidden;
+  // display: flex;
   position: relative;
-  width: 360px;
+  // width: 360px;
   .btn-i {
     background: linear-gradient(50deg, #014c97 0, #00818b 66%);
     border-radius: 30px;
@@ -178,14 +165,14 @@ onBeforeMount(() => {});
 @media (max-width: 1199px) {
   .hero-style-1,
   .hero-style-2 {
-    height: 750px;
+    height: 550px;
   }
 }
 
 @media (max-width: 991px) {
   .hero-style-1,
   .hero-style-2 {
-    height: 725px;
+    height: 565px;
   }
 }
 

@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-08 14:30:00
+ * @LastEditTime: 2024-03-20 14:16:39
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -19,7 +19,7 @@
         class="container"
       >
         <el-row :gutter="50" class="cdmo-top">
-          <el-col :xs="24" :span="8"
+          <el-col :xs="24" :span="6"
             ><div class="animate-imgxx uof img">
               <img
                 :src="handleViteImages('@/assets/icons/cdmo_top.png')"
@@ -27,8 +27,8 @@
               />
             </div>
           </el-col>
-          <el-col :xs="24" :span="16">
-            <p class="font-size20 fontf7 fontFamily cro-p textColor">
+          <el-col :xs="24" :span="18">
+            <p class="font-size20 fontf7 cro-p textColor">
               We provide comprehensive CDMO services encompassing process
               development, analytical methods, IND-enabling CMC (Chemistry,
               Manufacturing, and Controls), as well as clinical and commercial
@@ -112,11 +112,34 @@
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size50 txt-bold fontFamily">Facilities</h1>
+          <h1 class="p-title font-size50 txt-bold fontf8">Facilities</h1>
 
           <div class="fac-con">
             <el-row class="row" :gutter="10">
               <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
+                <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="content">
+                    <img
+                      src="https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg"
+                      alt="OBIO Intelli-M"
+                    />
+                  </div>
+                </div>
+                <div class="font-size24 fontf7 iti">
+                  Lin-Gang Free-Trade Zone<br />Shanghai, China
+                </div>
+                <div class="font-size38 fontf7 iti">OBIO Intelli-M</div>
+                <p class="font-size18 textColor txt-bold">
+                  Process Development Characterization Clinical and Commercial
+                  Manufacturing
+                  <text class="title-color txt-bold">77,000</text>-square-meter
+                  Facility for Global Supply
+                </p>
+                <router-link to="/intelliM" class="read-more font-size18 fontf7"
+                  >Read More</router-link
+                >
+              </el-col>
+              <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
                 <div class="manufacturing-list bg-pinkbluelfr">
                   <div class="content">
                     <img
@@ -125,29 +148,18 @@
                     />
                   </div>
                 </div>
-                <!-- <router-link to="/spiroSite" class="block tans">
-                    <div class="animate-imgxx uof img">
-                      <img
-                        src="https://www.obio-tech.com/public/uploads/20220330/0b0fe1e2c354c50f919655666ccfd951.jpg"
-                        alt="SPIRO Site"
-                      />
-                    </div>
-                  </router-link> -->
-                <div class="font-size24 fontf7 iti fontFamily">
-                  Lin-Gang Free-Trade ZoneShanghai, China
+                <div class="font-size24 fontf7 iti">
+                  International Medical Park<br />Shanghai, China
                 </div>
-                <div class="font-size38 fontf7 iti fontFamily">
-                  OBlO Intelli-M
-                </div>
-                <p class="font-size18 fontFamily textColor txt-bold">
-                  Process Development Characterization Clinical and Commercial
-                  Manufacturing
-                  <text class="fontFamily title-color txt-bold">77,000</text
-                  >-square-meter Facility for Global Supply
+                <div class="font-size38 fontf7 iti">SPIRO Site</div>
+
+                <p class="font-size18 textColor txt-bold">
+                  Integrated Laboratory Services Processand Analytical Method
+                  DevelopmentResearch and Development Center
                 </p>
                 <router-link
-                  to="/intelliM"
-                  class="read-more font-size18 fontf7 fontFamily"
+                  to="/spiroSite"
+                  class="read-more font-size18 fontf7"
                   >Read More</router-link
                 >
               </el-col>
@@ -160,60 +172,18 @@
                     />
                   </div>
                 </div>
-                <!-- <router-link to="/pineSite" class="block tans">
-                    <div class="animate-imgxx uof img">
-                      <img
-                        src="https://www.obio-tech.com/public/uploads/20231212/55a4fdd1f7a358da8a3de3e938f99114.jpg"
-                        alt="PINE Site"
-                      />
-                    </div>
-                  </router-link> -->
-                <div class="font-size24 fontf7 iti fontFamily">
-                  International Medical ParkShanghai, China
+                <div class="font-size24 fontf7 iti">
+                  International Medical Park<br />Shanghai, China
                 </div>
-                <div class="font-size38 fontf7 iti fontFamily">SPIRO Site</div>
-
-                <p class="font-size18 fontFamily textColor txt-bold">
-                  Integrated Laboratory Services Process and Analytical Method
-                  Development Research and Development Center
-                </p>
-                <router-link
-                  to="/spiroSite"
-                  class="read-more font-size18 fontf7 fontFamily"
-                  >Read More</router-link
-                >
-              </el-col>
-              <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-                <div class="manufacturing-list bg-pinkbluelfr">
-                  <div class="content">
-                    <img
-                      src="https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg"
-                      alt="OBiO Intelli-M"
-                    />
-                  </div>
-                </div>
-                <!-- <router-link to="/intelliM" class="block tans">
-                    <div class="animate-imgxx uof img">
-                      <img
-                        src="https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg"
-                        alt="OBiO Intelli-M"
-                      />
-                    </div>
-                  </router-link> -->
-                <div class="font-size24 fontf7 iti fontFamily">
-                  International Medical ParkShanghai, China
-                </div>
-                <div class="font-size38 fontf7 iti fontFamily">PINE Site</div>
-                <p class="font-size18 fontFamily textColor txt-bold">
+                <div class="font-size38 fontf7 iti">PINE Site</div>
+                <p class="font-size18 textColor txt-bold">
                   Process and Analytical Method Development Pre-clinical and
                   Clinical Manufacturing Three-building,<text
-                    class="fontFamily title-color txt-bold"
+                    class="title-color txt-bold"
                     >10,000</text
                   >-square-meter campus
                 </p>
-                <router-link
-                  to="/pineSite"
-                  class="read-more font-size18 fontf7 fontFamily"
+                <router-link to="/pineSite" class="read-more font-size18 fontf7"
                   >Read More</router-link
                 >
               </el-col>
@@ -232,7 +202,9 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="p-title font-size50 txt-bold fontFamily">CDMO Service</h1>
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+          CDMO Service
+        </h1>
       </el-col>
       <div
         class="cro-list-item row"
@@ -250,12 +222,20 @@
         >
           <el-row :gutter="100">
             <el-col :xs="24" :span="10"
-              ><div class="animate-imgxx uof img">
+              ><div
+                class="animate-imgxx uof img"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  height: 100%;
+                "
+              >
                 <img :src="item.imgUrl" alt="SPIRO Site" />
               </div>
             </el-col>
             <el-col :xs="24" :span="14">
-              <h1 class="font-size50 fontf7 iti fontFamily item-tit">
+              <h1 class="font-size50 fontf7 iti item-tit">
                 {{ item.title }}
               </h1>
               <ul>
@@ -263,18 +243,12 @@
                   style="padding: 5px 0"
                   v-for="(i, idx) in item.textArr"
                   :key="idx"
-                  class="fontFamily font-size24 textColor"
+                  class="font-size24 textColor"
                 >
                   • {{ i }}
                 </li>
               </ul>
-              <!-- <p class="font-size30 fontf7 fontFamily cro-p textColor">
-
-                {{ item.text }}
-              </p> -->
-              <router-link
-                to="/spiroSite"
-                class="font-size18 fontf7 fontFamily btn-a"
+              <router-link to="/spiroSite" class="font-size18 fontf7 btn-a mt-3"
                 >Read More</router-link
               ></el-col
             >
@@ -294,7 +268,9 @@
             style="margin: auto"
             class="container"
           >
-            <h1 class="p-title font-size50 txt-bold fontFamily">Innovation</h1>
+            <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+              Innovation
+            </h1>
 
             <div class="fac-con">
               <el-row class="row" :gutter="10">
@@ -309,15 +285,13 @@
                       />
                     </div>
                   </div>
-                  <h1 class="font-size38 fontf7 iti fontFamily">
-                    AAVneO™ System
-                  </h1>
-                  <p class="font-size18 fontFamily txt textColor txt-bold">
+                  <h1 class="font-size38 fontf7 iti">AAVneO™ System</h1>
+                  <p class="font-size18 txt textColor txt-bold">
                     LNext-Generation Capsid <br />Screening Platform
                   </p>
                   <router-link
                     to="/spiroSite"
-                    class="read-more font-size18 fontf7 fontFamily"
+                    class="read-more font-size18 fontf7 mt-3"
                     >Read More</router-link
                   >
                 </el-col>
@@ -332,18 +306,13 @@
                       />
                     </div>
                   </div>
-                  <!-- <div class="font-size24 fontf7 iti fontFamily">
-                    International Medical ParkShanghai, China
-                  </div> -->
-                  <h1 class="font-size38 fontf7 iti fontFamily">
-                    OVersatileTM Platform
-                  </h1>
-                  <p class="font-size18 fontFamily textColor txt txt-bold">
+                  <h1 class="font-size38 fontf7 iti">OVersatile™ Platform</h1>
+                  <p class="font-size18 textColor txt txt-bold">
                     Versatility for Various Needs
                   </p>
                   <router-link
                     to="/pineSite"
-                    class="read-more font-size18 fontf7 fontFamily"
+                    class="read-more font-size18 fontf7 mt-3"
                     >Read More</router-link
                   >
                 </el-col>
@@ -358,16 +327,16 @@
                       />
                     </div>
                   </div>
-                  <h1 class="font-size38 fontf7 iti fontFamily">
+                  <h1 class="font-size38 fontf7 iti">
                     Proprietary Cell Line Development
                   </h1>
-                  <p class="font-size18 fontFamily textColor txt txt-bold">
+                  <p class="font-size18 textColor txt txt-bold">
                     High-Yielding Cell Line for <br />
                     Suspension Culture
                   </p>
                   <router-link
                     to="/intelliM"
-                    class="read-more font-size18 fontf7 fontFamily"
+                    class="read-more font-size18 fontf7 mt-3"
                     >Read More</router-link
                   >
                 </el-col>
