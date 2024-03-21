@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-19 17:29:29
+ * @LastEditTime: 2024-03-21 17:03:02
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -159,138 +159,8 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="item">
-                <div class="img">
-                  <div class="img1 animate-img">
-                    <img
-                      src="https://www.obio-tech.com/public/uploads/20220402/016a22b87b27dee61874936c5f34e00c.jpg"
-                      alt="IND-CMC services"
-                    />
-                  </div>
-                </div>
-                <div class="txt text-center">
-                  <div
-                    class="fontf7 font-size24 ub ub-ac ub-pc"
-                    style="max-width: 330px; margin: 0 auto"
-                  >
-                    IND-CMC services
-                  </div>
-                  <div class="font-size20 color666 p">
-                    We provide IND-CMC services to support the IND/CTA
-                    application in China, America, Europe, and Australia. After
-                    process and analytical method development at
-                    laboratory-scale, we will carry out process scale-up test in
-                    cGMP production lines, implement the manufacturing, quality
-                    control and product release for a consecutive 3-4 batches,
-                    and provide you with a complete set of CMC dossier and
-                    samples required for IND application.
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="img">
-                  <div class="img1 animate-img">
-                    <img
-                      src="https://www.obio-tech.com/public/uploads/20220402/96a6ab94bb314303a251c008a0cc4ee1.jpg"
-                      alt="Pre-IND extended services"
-                    />
-                  </div>
-                </div>
-                <div class="txt text-center">
-                  <div
-                    class="fontf7 font-size24 ub ub-ac ub-pc"
-                    style="max-width: 330px; margin: 0 auto"
-                  >
-                    Pre-IND extended services
-                  </div>
-                  <div class="font-size20 color666 p">
-                    We provide a variety of Pre-IND extended services including
-                    bank construction for plasmid, cell or strain, aseptic fill
-                    and finish, stability studies, AAV capsid screening, sample
-                    testing, and quality control consultation.
-                  </div>
-                </div>
-              </div> -->
             </div>
           </div>
-
-          <!-- <div class="group" id="cGMPTgroup2" style="display: block">
-            <div class="sti font-size30 fontf7">Post-IND service</div>
-            <div class="list ub ub-pj">
-              <div class="item">
-                <div class="img">
-                  <div class="img1 animate-img">
-                    <img
-                      src="https://www.obio-tech.com/public/uploads/20220402/865e3b4b09a7e62f1d6657bef945c4a1.jpg"
-                      alt="Clinical manufacturing service (for Phase I, II, III)"
-                    />
-                  </div>
-                </div>
-                <div class="txt text-center">
-                  <div
-                    class="fontf7 font-size24 ub ub-ac ub-pc"
-                    style="max-width: 330px; margin: 0 auto"
-                  >
-                    Clinical manufacturing service (for Phase I, II, III)
-                  </div>
-                  <div class="font-size20 color666 p">
-                    With the single-use and large-scale manufacturing
-                    technologies as the core, our cGMP platform can facilitate
-                    the manufacturing and quality control of clinical gene and
-                    cell therapy samples in strict accordance with regulatory
-                    requirements at multiple countries, and meet the gene and
-                    cell therapy sample demands for phase I, II and III clinical
-                    trials.
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="img">
-                  <div class="img1 animate-img">
-                    <img
-                      src="https://www.obio-tech.com/public/uploads/20220402/3848eecae41836458e0924144a389905.jpg"
-                      alt="Commercial manufacturing"
-                    />
-                  </div>
-                </div>
-                <div class="txt text-center">
-                  <div
-                    class="fontf7 font-size24 ub ub-ac ub-pc"
-                    style="max-width: 330px; margin: 0 auto"
-                  >
-                    Commercial manufacturing
-                  </div>
-                  <div class="font-size20 color666 p">
-                    We provide commercial manufacturing services for marketed
-                    gene and cell therapy products at our OBiO Intelli-M site.
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="img">
-                  <div class="img1 animate-img">
-                    <img
-                      src="https://www.obio-tech.com/public/uploads/20220402/1391fdf6a83bc8b0c7405368e9f5664a.jpg"
-                      alt="Post-IND extended services"
-                    />
-                  </div>
-                </div>
-                <div class="txt text-center">
-                  <div
-                    class="fontf7 font-size24 ub ub-ac ub-pc"
-                    style="max-width: 330px; margin: 0 auto"
-                  >
-                    Post-IND extended services
-                  </div>
-                  <div class="font-size20 color666 p">
-                    We provide a wide range of Post-IND extended services
-                    covering technology transfer consultation, process
-                    characterization and aseptic fill and finish.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
         </div>
         <a name="a1"></a>
         <div class="cGMP-title-t2">
@@ -340,6 +210,8 @@
 import { ref } from "vue";
 import { useTransition } from "@vueuse/core";
 import { ArrowRight } from "@element-plus/icons-vue";
+import { handleViteImages } from "@/utils";
+
 const activeIndex = ref("1");
 const tabsData = ref([
   {
@@ -347,8 +219,7 @@ const tabsData = ref([
     title: "Pre-IND service",
     list: [
       {
-        imgUrl:
-          "https://www.obio-tech.com/public/uploads/20220402/0dd1829ea25cc3712d552a685d7bda79.jpg",
+        imgUrl: handleViteImages("Pre-IND1.jpg"),
         subHead: "Non-IND (IIT) services",
         txt: `Manufacturing gene and cell therapy products in pilot
                     testing scale that is compliant with cGMP management system,
@@ -357,8 +228,7 @@ const tabsData = ref([
                     investigators.`,
       },
       {
-        imgUrl:
-          "https://www.obio-tech.com/public/uploads/20220402/016a22b87b27dee61874936c5f34e00c.jpg",
+        imgUrl: handleViteImages("Pre-IND2.jpg"),
         subHead: "IND-CMC services",
         txt: `We provide IND-CMC services to support the IND/CTA
                     application in China, America, Europe, and Australia. After
@@ -370,8 +240,7 @@ const tabsData = ref([
                     samples required for IND application.`,
       },
       {
-        imgUrl:
-          "https://www.obio-tech.com/public/uploads/20220402/96a6ab94bb314303a251c008a0cc4ee1.jpg",
+        imgUrl: handleViteImages("Pre-IND3.jpg"),
         subHead: "Pre-IND extended services",
         txt: `We provide a variety of Pre-IND extended services including
                     bank construction for plasmid, cell or strain, aseptic fill
@@ -385,8 +254,7 @@ const tabsData = ref([
     title: "Post-IND service",
     list: [
       {
-        imgUrl:
-          "https://www.obio-tech.com/public/uploads/20220402/865e3b4b09a7e62f1d6657bef945c4a1.jpg",
+        imgUrl: handleViteImages("Post-IND1.jpg"),
         subHead: "Clinical manufacturing service (for Phase I, II, III)",
         txt: `With the single-use and large-scale manufacturing
                     technologies as the core, our cGMP platform can facilitate
@@ -397,15 +265,13 @@ const tabsData = ref([
                     trials.`,
       },
       {
-        imgUrl:
-          "https://www.obio-tech.com/public/uploads/20220402/3848eecae41836458e0924144a389905.jpg",
+        imgUrl: handleViteImages("Post-IND2.jpg"),
         subHead: "Commercial manufacturing",
         txt: `We provide commercial manufacturing services for marketed
                     gene and cell therapy products at our OBiO Intelli-M site.`,
       },
       {
-        imgUrl:
-          "https://www.obio-tech.com/public/uploads/20220402/1391fdf6a83bc8b0c7405368e9f5664a.jpg",
+        imgUrl: handleViteImages("Post-IND3.jpg"),
         subHead: "Post-IND extended services",
         txt: `We provide a wide range of Post-IND extended services
                     covering technology transfer consultation, process

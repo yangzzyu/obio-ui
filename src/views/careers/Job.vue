@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-08 16:34:45
+ * @LastEditTime: 2024-03-21 16:32:40
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -167,12 +167,10 @@ import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
   title: "Job Opening",
-  hiddenXsImgUrl:
-    "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
-  visibleXsImgUrl:
-    "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
-  // hiddenXsImgUrl: handleViteImages("@/assets/icons/job_bg.png"),
-  // visibleXsImgUrl: handleViteImages("@/assets/icons/job_bg.png"),
+  hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
+  visibleXsImgUrl: handleViteImages("head_bg.jpg"),
+  // hiddenXsImgUrl: handleViteImages("job_bg.png"),
+  // visibleXsImgUrl: handleViteImages("job_bg.png"),
 });
 const dialogVisible = ref(false);
 function handleClose() {
@@ -181,8 +179,8 @@ function handleClose() {
 }
 const cdmoList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/job1.png"),
-    actImgUrl: handleViteImages("@/assets/icons/job_act1.png"),
+    imgUrl: handleViteImages("job1.png"),
+    actImgUrl: handleViteImages("job_act1.png"),
     title: "Core Values",
     text: `Everything we do is
 driven by our values. We
@@ -192,8 +190,8 @@ right thing.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/job2.png"),
-    actImgUrl: handleViteImages("@/assets/icons/job_act2.png"),
+    imgUrl: handleViteImages("job2.png"),
+    actImgUrl: handleViteImages("job_act2.png"),
     title: "Diversity & Belonging",
     text: `Together is how we get
 better. We are committed
@@ -202,8 +200,8 @@ embraces everyone.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/job3.png"),
-    actImgUrl: handleViteImages("@/assets/icons/job_act3.png"),
+    imgUrl: handleViteImages("job3.png"),
+    actImgUrl: handleViteImages("job_act3.png"),
     title: "Community",
     text: `Love your life in
 Indianapolis. We are a
@@ -213,8 +211,8 @@ community.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/job4.png"),
-    actImgUrl: handleViteImages("@/assets/icons/job_act4.png"),
+    imgUrl: handleViteImages("job4.png"),
+    actImgUrl: handleViteImages("job_act4.png"),
     title: "Benefits",
     text: `Our people deserve the
 best. We provide a
@@ -225,7 +223,7 @@ ttruly rewards our team.
 ]);
 const croList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/careers1.png"),
+    imgUrl: handleViteImages("careers1.png"),
     title: "Vision by 2026:",
     text: `Providing client-centered and high-quality 
 service as our commitment, we strive to 
@@ -234,14 +232,14 @@ therapy CXO group.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/careers2.png"),
+    imgUrl: handleViteImages("careers2.png"),
     title: "Value:",
     text: `Customer Focus, Efficient Execution, 
 Excellence, Innovation, Integrity.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/careers3.png"),
+    imgUrl: handleViteImages("careers3.png"),
     title: "Original Aspiration：",
     text: `Developing gene therapies for the welfare of 
 mankind by virtue of its in-house developed 
@@ -266,44 +264,38 @@ const LaboraList = ref([
             conduct Western blot experiment to determine protein expression
             level, qPCR for RNA determination in addition to SEM inspection,
             particle diameter analysis and pathological examination.`,
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/image/20220328/20220328151428_83605.jpg",
+    imgUrl: "",
   },
   {
     id: 2,
     title: "Stable Cell Line",
     txt: `At OBiO, we can help you construct a stable producer cell line with molecular operations such as knock-out, overexpression, or knock-down of your target gene.`,
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/image/20220328/20220328151533_63357.jpg",
+    imgUrl: "",
   },
   {
     id: 3,
     title: "Animal Studies",
     txt: `We provide animal model construction for human disease, animal behavior study, pharmacodynamics, pharmacokinetic, and efficacy studies in experimental animals for a certain drug, gene of interest, or gene therapy product. `,
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/image/20220328/20220328151717_86002.jpg",
+    imgUrl: "",
   },
   {
     id: 4,
     title: "In-stock viral vectors",
     txt: `In-stock viral vector plays as a handy tool in your radioactive labelling, physiological regulation, observation, and verification studies. We provide in stock adeno-associated virus as tools for experiments including optogenetics, chemical genetics, calcium/voltage indicator, neurotransmitter probe, and Cre/Flp recombinase.
 To request a list of the available in-stock viral vector, please contact one of our professional technical support.`,
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/image/20220328/20220328151702_80624.jpg",
+    imgUrl: "",
   },
   {
     id: 5,
     title: "In-stock protein and relevant reagents",
     txt: `We provide recombinant protein expression systems covering bacteria, yeast, mammalian cell and insect cell, meeting your varied bioengineering demands in protein functional research, protease preparation, therapeutics development, and medical diagnosis. We have optimized our manufacturing process starting from the construction of recombinant protein expression vector, and are able to express and purify your target recombinant protein with high quality standard. We can also offer recombinant protein expression services based on the vector you provided.`,
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/image/20220328/20220328152007_37456.jpg",
+    imgUrl: "",
   },
   {
     id: 6,
     title: "gRNA library",
     txt: `We provide CRISPR knock-out (GeCKO V2) gRNA library and transcriptional activation (SAM) gRNA library for human and mouse genome, enabling genome-wide high throughput screening for functional gene. We also provide gRNA library customization services according to your research demand. `,
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/image/20220328/20220328151955_77566.jpg",
+    imgUrl: "",
   },
 ]);
 const releasesList = reactive([
@@ -323,7 +315,7 @@ const releasesList = reactive([
   },
 ]);
 function popLabora(id) {
-  Labora.value = LaboraList.value.find((i) => i.id === id) || {};
+  // Labora.value = LaboraList.value.find((i) => i.id === id) || {};
   dialogVisible.value = true;
 }
 </script>

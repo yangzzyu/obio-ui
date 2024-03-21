@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-27 14:04:43
+ * @LastEditTime: 2024-03-21 16:25:02
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -22,7 +22,7 @@
       </h1>
       <el-row class="image--callout mb-6" :gutter="40">
         <el-col :span="10" :xs="24" class="left-content">
-          <img class="img" src="@/assets/icons/news.png" alt="" />
+          <img class="img" :src="handleViteImages('news.png')" alt="" />
         </el-col>
         <el-col :span="14" :xs="24" class="font-size20 news-list">
           <div class="news-i" v-for="(item, index) in eventsList" :key="index">
@@ -30,10 +30,7 @@
             <h3 class="title-color font-size24 fontf4">{{ item.time }}</h3>
             <p class="font-size24 fontf3 textColor">
               {{ item.title }}
-              <!-- Focusing on efficient gene delivery of NK cells, The First Condor
-              Life and OBiO Technology reach a strategic cooperation! -->
             </p>
-            <!-- <div class="btn bg-pinkbluelfr">Read More</div> -->
             <router-link
               :to="'/news-details/events/' + item.id"
               class="btn-a font-size18 fontf7 bg-pinkbluelfr events-btn"
@@ -96,6 +93,8 @@
 <script lang="ts" setup name="Events">
 import { ref } from "vue";
 import { events } from "@/views/insights/data/Index";
+import { handleViteImages } from "@/utils";
+
 const props = defineProps({
   isShow: {
     type: Boolean,

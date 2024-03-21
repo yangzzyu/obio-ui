@@ -1,5 +1,13 @@
 <!--
  * @Author: yangyu 1431330771@qq.com
+ * @Date: 2024-03-18 22:04:02
+ * @LastEditors: yangyu 1431330771@qq.com
+ * @LastEditTime: 2024-03-21 16:29:33
+ * @FilePath: \obio-ui\src\views\home\Index.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!--
+ * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 09:07:47
  * @LastEditors: yangyu 1431330771@qq.com
  * @LastEditTime: 2024-03-20 14:14:25
@@ -44,7 +52,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
                       <img
-                        src="https://www.obio-tech.com/public/uploads/20231212/8d7b5d1b0b734f04527dde989e2483c3.jpg"
+                        :src="handleViteImages('facilities1.jpg')"
                         alt="OBIO Intelli-M"
                       />
                     </div>
@@ -69,7 +77,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
                       <img
-                        src="https://www.obio-tech.com/public/uploads/20220330/0b0fe1e2c354c50f919655666ccfd951.jpg"
+                        :src="handleViteImages('facilities2.jpg')"
                         alt="SPIRO Site"
                       />
                     </div>
@@ -93,7 +101,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                   <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
                       <img
-                        src="https://www.obio-tech.com/public/uploads/20231212/55a4fdd1f7a358da8a3de3e938f99114.jpg"
+                        :src="handleViteImages('facilities3.jpg')"
                         alt="PINE Site"
                       />
                     </div>
@@ -138,7 +146,7 @@ import TheWelcome from "../components/TheWelcome.vue";
               <div
                 class="image--callout_image"
                 style="
-                  background-image: url(https://www.genezen.com/wp-content/uploads/2021/07/AdobeStock_76101021.jpg);
+                  background-image: url(https://file.qjia.tech/obio-img/cdmo_img.jpg);
                 "
               ></div>
             </el-col>
@@ -158,7 +166,7 @@ import TheWelcome from "../components/TheWelcome.vue";
               <div
                 class="image--callout_image"
                 style="
-                  background-image: url(https://www.genezen.com/wp-content/uploads/2021/07/AdobeStock_76101021.jpg);
+                  background-image: url(https://file.qjia.tech/obio-img/cdmo_img.jpg);
                 "
               ></div>
             </el-col>
@@ -408,57 +416,6 @@ import TheWelcome from "../components/TheWelcome.vue";
         </el-col>
       </section>
       <Events />
-      <!-- <section id="newsout" class="news-container">
-        <el-col
-          :xs="22"
-          :sm="20"
-          :md="20"
-          :lg="20"
-          :xl="22"
-          style="margin: auto"
-          class="container"
-        >
-          <h1 class="p-title font-size50 txt-bold fontFamily">
-            News and Events
-          </h1>
-          <el-row class="image--callout" :gutter="40">
-            <el-col :span="10" :xs="24" class="left-content">
-              <img class="img" src="@/assets/icons/news.png" alt="" />
-            </el-col>
-            <el-col :span="14" :xs="24" class="font-size20 news-list">
-              <div class="news-i">
-                <h3 class="title-color font-size24 fontFamily">
-                  Jan.13th 2024
-                </h3>
-                <p class="font-size24 fontFamily textColor">
-                  Focusing on efficient gene delivery of NK cells, The First
-                  Condor Lifeand OBi0 Technology reach a strategic cooperation!
-                </p>
-                <div class="btn bg-pinkbluelfr">Read More</div>
-              </div>
-              <div class="news-i">
-                <h3 class="title-color font-size24 fontFamily">
-                  Oct. 24th 2023
-                </h3>
-                <p class="font-size24 fontFamily textColor">
-                  0Bi0 Announces Strategic Partnership with Refreshgene to
-                  RealizeCommercialization of Gene Therapy Product
-                </p>
-                <div class="btn bg-pinkbluelfr">Read More</div>
-              </div>
-              <div class="news-i">
-                <h3 class="title-color font-size24 fontFamily">
-                  Oct. 10th-12th 2023
-                </h3>
-                <p class="font-size24 fontFamily textColor">
-                  Cell&Gene meeting on the Mesa
-                </p>
-                <div class="btn bg-pinkbluelfr">Read More</div>
-              </div>
-            </el-col>
-          </el-row>
-        </el-col>
-      </section> -->
       <Career />
       <!-- <section id="careerout" class="career-container">
         <el-col
@@ -654,7 +611,7 @@ import TheWelcome from "../components/TheWelcome.vue";
                       <img
                         class="verifyImg"
                         id="captcha"
-                        src="@/assets/icons/captcha.png"
+                        src="captcha.png"
                         alt="verifyImg"
                         style="width: 150px; cursor: pointer; height: 38px"
                       />
@@ -698,7 +655,7 @@ import TheWelcome from "../components/TheWelcome.vue";
               <div class="right-wrap">
                 <div class="ico-r6">
                   <img
-                    src="@/assets/icons/ico6.png"
+                    src="ico6.png"
                     class="img-responsive"
                     style="max-width: 100%"
                     alt=""
@@ -774,46 +731,10 @@ function handleInsightsType(params) {
 }
 const ruleForm = ref<FormItem>({});
 const rules = ref([]);
-const vectorFooterList = ref([
-  {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/3fe6acf22f4fcd938628771fdeabbef9.png",
-    txt: "10+ years of dedication to gene and cell therapy",
-  },
-  {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/b7b2b3abc455d13f3a93c100cc0ae008.png",
-    txt: `Track record of 100 gene and cell therapy projects`,
-  },
-  {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/28357454cd094b26b016a3fd15727a39.png",
-    txt: `Compliant manufacturing for successful initiation of
-                  multi-center clinical trials`,
-  },
-  {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/e6bfcf1cb84b0254cea3aefadf2f1e5c.png",
-    txt: `Comprehensive quality system with regulatory compliant
-                  facilities`,
-  },
-  {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220402/b31aa85b97d72ef8e77c7297b11d1867.png",
-    txt: `Sufficient capacity and state-of-the-art facilities for global
-                  manufacturing needs`,
-  },
-  {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/71ad488b3a8b061d5bbbafebc1239290.png",
-    txt: `End-to-end professional project management for in-time
-                  supports and on-time delivery`,
-  },
-]);
 const cdmoList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/cdmo_service1.png"),
-    actImgUrl: handleViteImages("@/assets/icons/cdmo_service_act1.png"),
+    imgUrl: handleViteImages("cdmo_service1.png"),
+    actImgUrl: handleViteImages("cdmo_service_act1.png"),
     title: "Viral Vectors",
     list: [
       "AAV",
@@ -823,8 +744,8 @@ const cdmoList = ref([
     ],
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/cdmo_service2.png"),
-    actImgUrl: handleViteImages("@/assets/icons/cdmo_service_act2.png"),
+    imgUrl: handleViteImages("cdmo_service2.png"),
+    actImgUrl: handleViteImages("cdmo_service_act2.png"),
     title: "Oncolytic Virus",
     list: [
       "Oncolytic adenoviruses",
@@ -834,8 +755,8 @@ const cdmoList = ref([
     ],
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/cdmo_service3.png"),
-    actImgUrl: handleViteImages("@/assets/icons/cdmo_service_act3.png"),
+    imgUrl: handleViteImages("cdmo_service3.png"),
+    actImgUrl: handleViteImages("cdmo_service_act3.png"),
     title: "Cell Therapy Products",
     headTit: "Autologous and homologous immunocyte therapies",
     list: [
@@ -850,8 +771,8 @@ const cdmoList = ref([
     ],
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/cdmo_service4.png"),
-    actImgUrl: handleViteImages("@/assets/icons/cdmo_service_act4.png"),
+    imgUrl: handleViteImages("cdmo_service4.png"),
+    actImgUrl: handleViteImages("cdmo_service_act4.png"),
     title: "Plasmid & Nucleotides",
     list: [
       "Plasmid DNA",
@@ -864,7 +785,7 @@ const cdmoList = ref([
 ]);
 const croList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon1.png"),
+    imgUrl: handleViteImages("croIcon1.png"),
     title: "Plasmid",
     text: `At OBiO, our dedicated
 development team is
@@ -878,7 +799,7 @@ providingexpertise in
 viral packaging.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon2.png"),
+    imgUrl: handleViteImages("croIcon2.png"),
     title: "Viral Vector",
     text: `We specialize in offering
 comprehensive services
@@ -896,7 +817,7 @@ thorough support
 throughout the process.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon3.png"),
+    imgUrl: handleViteImages("croIcon3.png"),
     title: "Experiment Solutions",
     text: `We offer an extensive 
 array of contract 
@@ -905,7 +826,7 @@ tailored for functional
 genomics studies.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon4.png"),
+    imgUrl: handleViteImages("croIcon4.png"),
     title: "Related Products",
     text: `We offer a 
 comprehensive range of
@@ -918,7 +839,7 @@ various aspects of your
 project.`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon5.png"),
+    imgUrl: handleViteImages("croIcon5.png"),
     title: "Extracellular Vesicle",
     text: `Our services for extracellular vesicle include isolation, 
 identification, and functional 
@@ -936,25 +857,25 @@ type ViralItem = {
 const ViralList = ref<ViralItem[]>([
   {
     id: 0,
-    imgUrl: handleViteImages("@/assets/icons/cdmo_icon1.png"),
+    imgUrl: handleViteImages("cdmo_icon1.png"),
     title: "Focus",
     path: "/process",
   },
   {
     id: 1,
-    imgUrl: handleViteImages("@/assets/icons/cdmo_icon2.png"),
+    imgUrl: handleViteImages("cdmo_icon2.png"),
     title: "Acceleration",
     path: "/cgmp",
   },
   {
     id: 2,
-    imgUrl: handleViteImages("@/assets/icons/cdmo_icon3.png"),
+    imgUrl: handleViteImages("cdmo_icon3.png"),
     title: "Standardization",
     path: "/quality",
   },
   {
     id: 3,
-    imgUrl: handleViteImages("@/assets/icons/cdmo_icon4.png"),
+    imgUrl: handleViteImages("cdmo_icon4.png"),
     title: "Team",
     path: "/logistics",
   },

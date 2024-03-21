@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-22 15:49:27
+ * @LastEditTime: 2024-03-21 16:42:21
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -37,7 +37,7 @@
               <div class="img1">
                 <div class="img animate-imgx">
                   <img
-                    src="https://www.obio-tech.com/public/uploads/20230404/5889f4253527d7df510da4dfb7e08b0a.png"
+                    :src="handleViteImages('team/1.png')"
                     class="img-responsive"
                     alt="Oudong Pan"
                   />
@@ -55,7 +55,7 @@
               <div class="img1">
                 <div class="img animate-imgx">
                   <img
-                    src="https://www.obio-tech.com/public/uploads/20230404/621fbe58496bc199f9f2ee0b1fbf47f1.png"
+                    :src="handleViteImages('team/2.png')"
                     class="img-responsive"
                     alt="Guodong Jia, Ph.D."
                   />
@@ -75,7 +75,7 @@
               <div class="img1">
                 <div class="img animate-imgx">
                   <img
-                    src="https://www.obio-tech.com/public/uploads/20230404/11ce1a49decbe85b8c71f3fe1b53a2d5.png"
+                    :src="handleViteImages('team/3.png')"
                     class="img-responsive"
                     alt="Qingmei Xia"
                   />
@@ -95,7 +95,7 @@
               <div class="img1">
                 <div class="img animate-imgx">
                   <img
-                    src="https://www.obio-tech.com/public/uploads/20230404/8961a1628f52a77c6fc3f1a47cee01b1.png"
+                    :src="handleViteImages('team/4.png')"
                     class="img-responsive"
                     alt="Luyuan Xu"
                   />
@@ -115,7 +115,7 @@
               <div class="img1">
                 <div class="img animate-imgx">
                   <img
-                    src="https://www.obio-tech.com/public/uploads/20230404/240601c7e26d6046e525874d7ffcb11e.png"
+                    :src="handleViteImages('team/5.png')"
                     class="img-responsive"
                     alt="Fujie Wang"
                   />
@@ -135,7 +135,7 @@
               <div class="img1">
                 <div class="img animate-imgx">
                   <img
-                    src="https://www.obio-tech.com/public/uploads/20230404/a11cd09ced0335bcd3159cf618fd5ac8.png"
+                    :src="handleViteImages('team/6.png')"
                     class="img-responsive"
                     alt="Weiran Shen, Ph.D"
                   />
@@ -157,7 +157,7 @@
               <div class="img1">
                 <div class="img animate-imgx">
                   <img
-                    src="https://www.obio-tech.com/public/uploads/20230404/596e46a853741bac5d1162b9e69778b5.png"
+                    :src="handleViteImages('team/7.png')"
                     class="img-responsive"
                     alt="Qingrui You, Ph.D."
                   />
@@ -179,7 +179,7 @@
               <div class="img1">
                 <div class="img animate-imgx">
                   <img
-                    src="https://www.obio-tech.com/public/uploads/20230404/61be0cb87a4e99aea37965b76c5bf834.png"
+                    :src="handleViteImages('team/8.png')"
                     class="img-responsive"
                     alt="Qinbin Wu"
                   />
@@ -197,7 +197,7 @@
               <div class="img1">
                 <div class="img animate-imgx">
                   <img
-                    src="https://www.obio-tech.com/public/uploads/20230404/4844b36362a5f70b33ab574a343dd223.png"
+                    :src="handleViteImages('team/9.png')"
                     class="img-responsive"
                     alt="Bingqing Wang "
                   />
@@ -217,7 +217,7 @@
               <div class="img1">
                 <div class="img animate-imgx">
                   <img
-                    src="https://www.obio-tech.com/public/uploads/20230404/c4cc159b0d4cc532dd2cf18dd11444b6.png"
+                    :src="handleViteImages('team/10.png')"
                     class="img-responsive"
                     alt="Shan Yin"
                   />
@@ -238,6 +238,7 @@
 </template>
 
 <script lang="ts" setup name="IntelliM">
+import { handleViteImages } from "@/utils";
 // import { ArrowRight } from "@element-plus/icons-vue";
 import { IntelliMItemList } from "./data/IntelliM";
 import ScrollHint from "@/components/ScrollHint.vue";

@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 09:26:06
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-19 16:09:02
+ * @LastEditTime: 2024-03-21 16:34:09
  * @FilePath: \obio-ui\src\data\HomePage.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -20,7 +20,7 @@ import { handleViteImages } from "@/utils";
 export const ViralList = ref<ViralItem[]>([
   {
     id: 0,
-    imgUrl: handleViteImages("@/assets/icons/cdmo_icon1.png"),
+    imgUrl: handleViteImages("cdmo_icon1.png"),
     title: "Viral Vectors",
     content: `With process development and cGMP manufacturing services for
     virus vectors including adeno-associated virus and lentivirus,
@@ -30,7 +30,7 @@ export const ViralList = ref<ViralItem[]>([
   },
   {
     id: 1,
-    imgUrl: handleViteImages("@/assets/icons/cdmo_icon2.png"),
+    imgUrl: handleViteImages("cdmo_icon2.png"),
     title: "Oncolytic Virus",
     content: `We provide process development and cGMP manufacturing services
     for various oncolytic virus products including oncolytic
@@ -42,7 +42,7 @@ export const ViralList = ref<ViralItem[]>([
   },
   {
     id: 2,
-    imgUrl: handleViteImages("@/assets/icons/cdmo_icon3.png"),
+    imgUrl: handleViteImages("cdmo_icon3.png"),
     title: "Cell Therapy Products",
     content: `We provide autologous, such as CAR-T therapy, and allogeneic
     cell therapy products, such as universal T-cell therapy, natural
@@ -51,7 +51,7 @@ export const ViralList = ref<ViralItem[]>([
   },
   {
     id: 3,
-    imgUrl: handleViteImages("@/assets/icons/cdmo_icon4.png"),
+    imgUrl: handleViteImages("cdmo_icon4.png"),
     title: "Plasmid Nucleotides",
     content: `With extensive expertise in the development of customized
     plasmid DNA manufacturing solutions, we provide plasmid services

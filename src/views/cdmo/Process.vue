@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-19 17:29:29
+ * @LastEditTime: 2024-03-21 17:11:30
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -159,7 +159,7 @@
               :lg="12"
               :xl="12"
             >
-              <img src="@/assets/icons/upstream_img.png" alt="" srcset="" />
+              <img src="upstream_img.png" alt="" srcset="" />
             </el-col>
             <el-col
               :span="12"
@@ -188,7 +188,7 @@
               :lg="12"
               :xl="12"
             >
-              <img src="@/assets/icons/upstream_img.png" alt="" srcset="" />
+              <img src="upstream_img.png" alt="" srcset="" />
             </el-col>
           </el-row>
         </div>
@@ -213,7 +213,7 @@
           </p>
           <el-row :gutter="20">
             <el-col :span="12" :xs="22" :sm="22" :md="12" :lg="12" :xl="12">
-              <img src="@/assets/icons/downstream_img.png" alt="" srcset="" />
+              <img src="downstream_img.png" alt="" srcset="" />
             </el-col>
             <el-col
               :span="12"
@@ -328,12 +328,7 @@
               :xl="10"
               class="visible-xs-block uof"
             >
-              <img
-                src="@/assets/icons/validation_img.png"
-                align="right"
-                width="586"
-                alt=""
-              />
+              <img src="validation_img.png" align="right" width="586" alt="" />
             </el-col>
             <el-col :xs="24" :sm="14" :md="14" :lg="14" :xl="14">
               <div style="margin-right: 30px">
@@ -361,7 +356,7 @@
               class="hidden-xs uof"
             >
               <img
-                src="@/assets/icons/validation_img.png"
+                src="validation_img.png"
                 align="right"
                 width="586"
                 alt=""
@@ -378,12 +373,6 @@
               <el-col :sm="12" v-for="(i, k) in vectorList" :key="k">
                 <div class="boxs">
                   <div class="ub ub-ac">
-                    <!-- <div
-                      class="ico"
-                      style="
-                        background-image: url(https://www.obio-tech.com/public/uploads/20220327/3fe6acf22f4fcd938628771fdeabbef9.png);
-                      "
-                    ></div> -->
                     <img class="ico" :src="i.bgUrl" alt="" srcset="" />
                     <div class="txt fontf5 font-size20 color666 ub-f1">
                       {{ i.txt }}
@@ -426,49 +415,49 @@ const activeIndex = ref(0);
 
 const iconList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/process_icon1.png"),
+    imgUrl: handleViteImages("process_icon1.png"),
     txt: `Adherent cell culture: cell factories, microcarriers, fixed bed bioreactor, and roller bottles`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/process_icon2.png"),
+    imgUrl: handleViteImages("process_icon2.png"),
     txt: `Serum-free suspension cell culture technologies with improved yield for adenovirus, adeno-associated virus, and lentivirus products`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/process_icon3.png"),
+    imgUrl: handleViteImages("process_icon3.png"),
     txt: `Transient transfection at large-scale: 200 L suspension culture and 600㎡ fixed bed culture`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/process_icon4.png"),
+    imgUrl: handleViteImages("process_icon4.png"),
     txt: `	
 Cell line development: 293 producer cell line (293A, 293T, and HEK293), Vero, Hela, CHO, A549, and Sf9`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/process_icon5.png"),
+    imgUrl: handleViteImages("process_icon5.png"),
     txt: `High-yield cell line domestication based on HEK293, with a 30% yield improvement than commercial HEK293. Further cell line development is still in process`,
   },
 ]);
 const downstreamList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/downstream_icon1.png"),
+    imgUrl: handleViteImages("downstream_icon1.png"),
     txt: `
     Harvest Process: cell lysis, clarification, and filtration`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/downstream_icon2.png"),
+    imgUrl: handleViteImages("downstream_icon2.png"),
     txt: `Column Chromatography: affinity chromatography, gel filtration chromatography, ion-exchange chromatography, mixed-mode chromatography`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/downstream_icon3.png"),
+    imgUrl: handleViteImages("downstream_icon3.png"),
     txt: `	
 Tangential Flow Filtration: flat sheet membrane cassette, hollow fibers`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/downstream_icon4.png"),
+    imgUrl: handleViteImages("downstream_icon4.png"),
     txt: `
     Linear Scale-up of Purification Process`,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/downstream_icon5.png"),
+    imgUrl: handleViteImages("downstream_icon5.png"),
     txt: `Product Formulation Development`,
   },
 ]);
@@ -524,33 +513,28 @@ const mkidList = ref([
 const vectorList = ref([
   {
     bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/3fe6acf22f4fcd938628771fdeabbef9.png",
+     handleViteImages("highlights/1.png"),
     txt: "10+ years of dedication to gene and cell therapy",
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/b7b2b3abc455d13f3a93c100cc0ae008.png",
+    bgUrl: handleViteImages("highlights/2.png"),
     txt: `130 process development projects 230
                       analytical methods developed`,
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220402/6f32842b6da8770c423cf10083d489dc.png",
+    bgUrl: handleViteImages("highlights/3.png"),
     txt: "Quality-driven team of experts with in-time responding",
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/e6bfcf1cb84b0254cea3aefadf2f1e5c.png",
+    bgUrl: handleViteImages("highlights/4.png"),
     txt: `Efficient technology transfer with optimizing process validation`,
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220402/8db78c69abbee50668e965713f27a211.png",
+    bgUrl: handleViteImages("highlights/5.png"),
     txt: `Process development versatility for various product needs stages`,
   },
   {
-    bgUrl:
-      "https://www.obio-tech.com/public/uploads/20220327/71ad488b3a8b061d5bbbafebc1239290.png",
+    bgUrl: handleViteImages("highlights/6.png"),
     txt: `End-to-end regulatory support with side-by-side navigation`,
   },
 ]);
@@ -564,27 +548,27 @@ const tabsData = ref([
                 transfection, and serum-free cell culture, fulfilling your
                 differentiated upstream process development demands for gene and
                 cell therapy products.`,
-    imgUrl: handleViteImages("@/assets/icons/upstream_img.png"),
+    imgUrl: handleViteImages("upstream_img.png"),
     iconList: [
       {
-        imgUrl: handleViteImages("@/assets/icons/process_icon1.png"),
+        imgUrl: handleViteImages("process_icon1.png"),
         txt: `Adherent cell culture: cell factories, microcarriers, fixed bed bioreactor, and roller bottles`,
       },
       {
-        imgUrl: handleViteImages("@/assets/icons/process_icon2.png"),
+        imgUrl: handleViteImages("process_icon2.png"),
         txt: `Serum-free suspension cell culture technologies with improved yield for adenovirus, adeno-associated virus, and lentivirus products`,
       },
       {
-        imgUrl: handleViteImages("@/assets/icons/process_icon3.png"),
+        imgUrl: handleViteImages("process_icon3.png"),
         txt: `Transient transfection at large-scale: 200 L suspension culture and 600㎡ fixed bed culture`,
       },
       {
-        imgUrl: handleViteImages("@/assets/icons/process_icon4.png"),
+        imgUrl: handleViteImages("process_icon4.png"),
         txt: `	
 Cell line development: 293 producer cell line (293A, 293T, and HEK293), Vero, Hela, CHO, A549, and Sf9`,
       },
       {
-        imgUrl: handleViteImages("@/assets/icons/process_icon5.png"),
+        imgUrl: handleViteImages("process_icon5.png"),
         txt: `High-yield cell line domestication based on HEK293, with a 30% yield improvement than commercial HEK293. Further cell line development is still in process`,
       },
     ],
@@ -602,29 +586,29 @@ Cell line development: 293 producer cell line (293A, 293T, and HEK293), Vero, He
             platform, we offer a high throughput, high yield purification
             process with high quality standard for your gene and cell therapy
             product.`,
-    imgUrl: handleViteImages("@/assets/icons/downstream_img.png"),
+    imgUrl: handleViteImages("downstream_img.png"),
     iconList: [
       {
-        imgUrl: handleViteImages("@/assets/icons/downstream_icon1.png"),
+        imgUrl: handleViteImages("downstream_icon1.png"),
         txt: `
     Harvest Process: cell lysis, clarification, and filtration`,
       },
       {
-        imgUrl: handleViteImages("@/assets/icons/downstream_icon2.png"),
+        imgUrl: handleViteImages("downstream_icon2.png"),
         txt: `Column Chromatography: affinity chromatography, gel filtration chromatography, ion-exchange chromatography, mixed-mode chromatography`,
       },
       {
-        imgUrl: handleViteImages("@/assets/icons/downstream_icon3.png"),
+        imgUrl: handleViteImages("downstream_icon3.png"),
         txt: `	
 Tangential Flow Filtration: flat sheet membrane cassette, hollow fibers`,
       },
       {
-        imgUrl: handleViteImages("@/assets/icons/downstream_icon4.png"),
+        imgUrl: handleViteImages("downstream_icon4.png"),
         txt: `
     Linear Scale-up of Purification Process`,
       },
       {
-        imgUrl: handleViteImages("@/assets/icons/downstream_icon5.png"),
+        imgUrl: handleViteImages("downstream_icon5.png"),
         txt: `Product Formulation Development`,
       },
     ],

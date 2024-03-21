@@ -33,7 +33,7 @@
             <el-col :xs="24" :span="8"
               ><div class="animate-imgxx uof img">
                 <img
-                  :src="handleViteImages('@/assets/icons/careers3.png')"
+                  :src="handleViteImages('careers3.png')"
                   alt="SPIRO Site"
                 />
               </div>
@@ -83,7 +83,7 @@
             ><div class="animate-imgxx uof img">
               <img
                 width="100%"
-                :src="handleViteImages('@/assets/icons/productions.png')"
+                :src="handleViteImages('productions.png')"
                 alt="SPIRO Site"
               />
             </div>
@@ -220,7 +220,7 @@
                     <img
                       class="verifyImg"
                       id="captcha"
-                      src="@/assets/icons/captcha.png"
+                      src="captcha.png"
                       alt="verifyImg"
                       style="width: 150px; cursor: pointer; height: 38px"
                     />

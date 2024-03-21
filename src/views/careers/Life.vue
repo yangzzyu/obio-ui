@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 11:07:54
+ * @LastEditTime: 2024-03-21 16:32:53
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -99,7 +99,7 @@
         </h1>
         <el-col :xs="24" :span="20" style="margin: auto" class="container">
           <img
-            src="@/assets/icons/meetin_bg.png"
+            src="meetin_bg.png"
             width="100%"
             alt=""
             srcset=""
@@ -241,11 +241,11 @@ import { handleViteImages, goRouter } from "@/utils";
 const FocusData = ref({
   title: "Life in OBIO",
   hiddenXsImgUrl:
-    "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
+     handleViteImages('head_bg.jpg'),
   visibleXsImgUrl:
-    "https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg",
-  // hiddenXsImgUrl: handleViteImages("@/assets/icons/head_bg3.png"),
-  // visibleXsImgUrl: handleViteImages("@/assets/icons/head_bg3.png"),
+     handleViteImages('head_bg.jpg'),
+  // hiddenXsImgUrl: handleViteImages("head_bg3.png"),
+  // visibleXsImgUrl: handleViteImages("head_bg3.png"),
 });
 const dialogVisible = ref(false);
 function handleClose() {
@@ -253,14 +253,14 @@ function handleClose() {
   dialogVisible.value = false;
 }
 const internshipList = reactive([
-  handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-  handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-  handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-  handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+  handleViteImages("carousel_bg1.jpg"),
+  handleViteImages("carousel_bg1.jpg"),
+  handleViteImages("carousel_bg1.jpg"),
+  handleViteImages("carousel_bg1.jpg"),
 ]);
 const footballList = reactive([
-  handleViteImages("@/assets/icons/football1.jpg"),
-  handleViteImages("@/assets/icons/football1.jpg"),
+  handleViteImages("football1.jpg"),
+  handleViteImages("football1.jpg"),
 ]);
 type ViralItem = {
   id: number;
@@ -271,32 +271,32 @@ type ViralItem = {
 const ViralList = ref<ViralItem[]>([
   {
     id: 0,
-    imgUrl: handleViteImages("@/assets/icons/cdmo_icon1.png"),
+    imgUrl: handleViteImages("cdmo_icon1.png"),
     title: "Focus",
     path: "/process",
   },
   {
     id: 1,
-    imgUrl: handleViteImages("@/assets/icons/cdmo_icon2.png"),
+    imgUrl: handleViteImages("cdmo_icon2.png"),
     title: "Acceleration",
     path: "/cgmp",
   },
   {
     id: 2,
-    imgUrl: handleViteImages("@/assets/icons/cdmo_icon3.png"),
+    imgUrl: handleViteImages("cdmo_icon3.png"),
     title: "Standardization",
     path: "/quality",
   },
   {
     id: 3,
-    imgUrl: handleViteImages("@/assets/icons/cdmo_icon4.png"),
+    imgUrl: handleViteImages("cdmo_icon4.png"),
     title: "Team",
     path: "/logistics",
   },
 ]);
 const croList = ref([
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon1.png"),
+    imgUrl: handleViteImages("croIcon1.png"),
     title: "Vision by 2026:",
     text: `Providing client-centered and high-quality 
 service as our commitment, we strive to 
@@ -305,14 +305,14 @@ therapy CXO group.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon2.png"),
+    imgUrl: handleViteImages("croIcon2.png"),
     title: "Value:",
     text: `Customer Focus, Efficient Execution, 
 Excellence, Innovation, Integrity.
 `,
   },
   {
-    imgUrl: handleViteImages("@/assets/icons/croIcon3.png"),
+    imgUrl: handleViteImages("croIcon3.png"),
     title: "Original Aspiration：",
     text: `Developing gene therapies for the welfare ofmankind by virtue of its in-house developedall-round technology platform, its R&D and GMPproduction centers (floorage: 15,000 m2), and its77,000 m2 Lingang base (under construction),0Bi0 is dedicated to constantly acceleratinggene therapies researches, drug discovery,.pharmaceutical studies, clinical and commercialdevelopment of gene therapies`,
   },
@@ -375,73 +375,73 @@ const lifeList = reactive([
   {
     title: "Training and Internship",
     imgList: [
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
     ],
   },
   {
     title: "Team Building",
     imgList: [
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
     ],
   },
   {
     title: "Life at OBiO",
     imgList: [
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
     ],
   },
   {
     title: "Mother's Day",
     imgList: [
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
     ],
   },
   {
     title: "Children's Day",
     imgList: [
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
     ],
   },
   {
     title: "Father's Day",
     imgList: [
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
     ],
   },
   {
     title: "Holiday party - Christmas",
     imgList: [
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
     ],
   },
   {
     title: "Charity Events - Walking 50KM",
     imgList: [
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
-      handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
+      handleViteImages("carousel_bg1.jpg"),
     ],
   },
 ]);

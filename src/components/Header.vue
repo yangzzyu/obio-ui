@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-22 21:59:54
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-08 16:16:27
+ * @LastEditTime: 2024-03-21 16:27:33
  * @FilePath: \obio-ui\src\components\Header.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -108,7 +108,7 @@
         <div class="logo">
           <router-link to="/">
             <!-- <img :src="logo_img[0].path" alt="logo" v-if="headerLogoShow" /> -->
-            <img src="@/assets/icons/logo2.png" alt="logo" />
+            <img :src="handleViteImages('logo2.png')" alt="logo" />
           </router-link>
         </div>
 
@@ -428,10 +428,10 @@ const logo_img = ref<ImgItem[]>([]);
 
 logo_img.value = [
   {
-    path: handleViteImages("@/assets/icons/logo1.png"),
+    path: handleViteImages("logo1.png"),
   },
   {
-    path: handleViteImages("@/assets/icons/logo1.png"),
+    path: handleViteImages("logo1.png"),
   },
 ];
 function openUrl() {
@@ -451,7 +451,7 @@ onBeforeMount(() => {});
   }
   width: 100%;
   // max-width: 20em;
-  background: #022350 url(@/assets/icons/up_downbg.jpg) no-repeat center;
+  background: #022350 url(up_downbg.jpg) no-repeat center;
   z-index: 1;
   // transform: translateX(100%);
   transition: all 0.5s ease;
