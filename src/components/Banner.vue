@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 11:39:49
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-06 10:37:21
+ * @LastEditTime: 2024-03-20 17:25:40
  * @FilePath: \obio-ui\src\components\Banner.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -112,18 +112,6 @@ function carouselChange() {
 onBeforeMount(() => {});
 </script>
 <style lang="scss" scoped>
-.hero-style-1:before,
-.hero-style-2:before {
-  content: "";
-  width: 100%;
-  height: 110%;
-  position: absolute;
-  left: 0;
-  top: -10%;
-  background: url(https://www.obio-tech.com/public/uploads/20220326/27934f0f9b5c3e994f69ab811a53faff.jpg)
-    no-repeat center center / cover;
-  z-index: -2;
-}
 .slide-title {
   font-family: Roboto;
   font-weight: bold;
@@ -177,14 +165,14 @@ onBeforeMount(() => {});
 @media (max-width: 1199px) {
   .hero-style-1,
   .hero-style-2 {
-    height: 750px;
+    height: 550px;
   }
 }
 
 @media (max-width: 991px) {
   .hero-style-1,
   .hero-style-2 {
-    height: 725px;
+    height: 565px;
   }
 }
 

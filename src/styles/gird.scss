@@ -963,7 +963,7 @@
   }
   .hero-style-1,
   .hero-style-2 {
-    height: 725px;
+    height: 565px;
   }
   .link-list {
     grid-template-columns: repeat(4, auto) !important; /* 设置8列 */
@@ -1176,7 +1176,7 @@
   }
   .hero-style-1,
   .hero-style-2 {
-    height: 750px;
+    height: 550px;
   }
   .btn1,
   .btn2 {
@@ -1203,6 +1203,10 @@
 }
 
 @media (max-width: 2560px) and (min-width: 1700px) {
+  .hero-style-1,
+  .hero-style-2 {
+    height: 750px;
+  }
   .home-offering-wrap .list .item:nth-child(2n) .txt-con {
     margin-left: 195px;
   }
