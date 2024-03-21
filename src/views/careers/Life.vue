@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-08 16:34:45
+ * @LastEditTime: 2024-03-21 11:07:54
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -106,6 +106,96 @@
             class="mb-5" /></el-col
       ></el-col>
     </section>
+    <div class="in-about-wrap training-box">
+      <div class="section-3">
+        <el-col
+          :xs="22"
+          :sm="20"
+          :md="20"
+          :lg="20"
+          :xl="22"
+          style="margin: auto"
+          class="container"
+        >
+          <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+            Football matches
+          </h1>
+
+          <div class="fac-con">
+            <el-row class="row" :gutter="10">
+              <el-col
+                :xs="24"
+                :span="12"
+                class=""
+                v-for="(i, index) in footballList"
+                :key="index"
+              >
+                <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="content">
+                    <img :src="i" alt="" srcset="" width="100%" />
+                  </div>
+                </div>
+              </el-col>
+            </el-row></div
+        ></el-col>
+      </div>
+    </div>
+    <section id="Seeout1" class="">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-3">
+          Life at OBiO video
+        </h1>
+        <el-row :gutter="20" class="mb-4">
+          <el-col :span="12" :xs="24">
+            <div class="manufacturing-list bg-pinkbluelfr video-list">
+              <div class="content">
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/HQsTy3PhfNI?si=9tfNQvuwp8NnbYL-"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+                <p class="video-p font-size20 textColor">
+                  Exciting Milestone: OBiO Lingang Facility Launches Operations
+                  in 2023!
+                </p>
+              </div>
+            </div></el-col
+          >
+          <el-col :span="12" :xs="24">
+            <div class="manufacturing-list bg-pinkbluelfr video-list">
+              <div class="content">
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/rmq1Vp3zZFg?si=mikql8NjYHJ56uFj"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+
+                <p class="video-p font-size20 textColor">
+                  Exciting Milestone: OBiO Lingang Facility Launches Operations
+                  in 2023!
+                </p>
+              </div>
+            </div></el-col
+          >
+        </el-row>
+      </el-col>
+    </section>
   </div>
 
   <el-dialog
@@ -167,6 +257,10 @@ const internshipList = reactive([
   handleViteImages("@/assets/icons/carousel_bg1.jpg"),
   handleViteImages("@/assets/icons/carousel_bg1.jpg"),
   handleViteImages("@/assets/icons/carousel_bg1.jpg"),
+]);
+const footballList = reactive([
+  handleViteImages("@/assets/icons/football1.jpg"),
+  handleViteImages("@/assets/icons/football1.jpg"),
 ]);
 type ViralItem = {
   id: number;
