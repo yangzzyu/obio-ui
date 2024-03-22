@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 17:11:30
+ * @LastEditTime: 2024-03-22 16:13:56
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -328,7 +328,12 @@
               :xl="10"
               class="visible-xs-block uof"
             >
-              <img src="validation_img.png" align="right" width="586" alt="" />
+              <img
+                :src="handleViteImages('validation_img.png')"
+                align="right"
+                width="586"
+                alt=""
+              />
             </el-col>
             <el-col :xs="24" :sm="14" :md="14" :lg="14" :xl="14">
               <div style="margin-right: 30px">
@@ -356,7 +361,7 @@
               class="hidden-xs uof"
             >
               <img
-                src="validation_img.png"
+                :src="handleViteImages('validation_img.png')"
                 align="right"
                 width="586"
                 alt=""
@@ -512,8 +517,7 @@ const mkidList = ref([
 
 const vectorList = ref([
   {
-    bgUrl:
-     handleViteImages("highlights/1.png"),
+    bgUrl: handleViteImages("highlights/1.png"),
     txt: "10+ years of dedication to gene and cell therapy",
   },
   {

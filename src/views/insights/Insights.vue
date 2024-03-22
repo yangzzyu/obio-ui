@@ -220,7 +220,7 @@
                     <img
                       class="verifyImg"
                       id="captcha"
-                      src="captcha.png"
+                      :src="handleViteImages('captcha.png')"
                       alt="verifyImg"
                       style="width: 150px; cursor: pointer; height: 38px"
                     />
