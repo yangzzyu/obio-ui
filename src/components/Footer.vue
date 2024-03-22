@@ -35,13 +35,13 @@
               <router-link to="/about">About Us</router-link>
             </dt>
             <dt class="font-size14">
-              <router-link to="/sys">History</router-link>
+              <router-link to="/about">History</router-link>
             </dt>
             <dt class="font-size14">
-              <router-link to="/news">Facilities</router-link>
+              <router-link to="/about">Facilities</router-link>
             </dt>
             <dt class="font-size14">
-              <router-link to="/cx">Leadship Team</router-link>
+              <router-link to="/team">Leadship Team</router-link>
             </dt>
             <dd></dd>
           </dl>
@@ -49,16 +49,16 @@
         <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/cdmo"
+              <router-link to="/cap"
                 >Capability &<br />
                 Commitment</router-link
               >
             </dt>
             <dd class="font-size14">
-              <router-link to="/process">Industrialize</router-link>
+              <router-link to="/cap">Industrialize</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/cgmp">Commitment</router-link>
+              <router-link to="/cap">Commitment</router-link>
             </dd>
           </dl>
         </div>
@@ -68,54 +68,54 @@
               <router-link to="/cdmo">CDMO <br />Solutions</router-link>
             </dt>
             <dd class="font-size14">
-              <router-link to="/process">Manufacturing</router-link>
+              <router-link to="/cdmo">Manufacturing</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/cgmp">CDMO</router-link>
+              <router-link to="/cdmo">CDMO</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/logistics">Innovation</router-link>
+              <router-link to="/cdmo">Innovation</router-link>
             </dd>
           </dl>
         </div>
         <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/cdmo">News & <br />Events</router-link>
+              <router-link to="/news">News & <br />Events</router-link>
             </dt>
             <dd class="font-size14">
-              <router-link to="/process">News</router-link>
+              <router-link to="/news">News</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/process">Events</router-link>
+              <router-link to="/events">Events</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/process">Learn More</router-link>
+              <router-link to="/news">Learn More</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/process">Partnership</router-link>
+              <router-link to="/releases">Partnership</router-link>
             </dd>
           </dl>
         </div>
         <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/cdmo"
+              <router-link to="/careers"
                 >Careers &<br />
                 Culture</router-link
               >
             </dt>
             <dd class="font-size14">
-              <router-link to="/process">Our Culture</router-link>
+              <router-link to="/careers">Our Culture</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/cgmp">Mission</router-link>
+              <router-link to="/careers">Mission</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/quality">Life at OBIO</router-link>
+              <router-link to="/life">Life at OBIO</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/logistics">Job Opening</router-link>
+              <router-link to="/job">Job Opening</router-link>
             </dd>
             <dt class="font-size14">
               <!-- <router-link href="/cn/home/ys/cid/861">Privacy Policy</router-link> -->
@@ -125,14 +125,14 @@
         <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/cdmo">CRO <br />Service</router-link>
+              <router-link to="/sys">CRO <br />Service</router-link>
             </dt>
           </dl>
         </div>
         <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/cdmo">Contact</router-link>
+              <router-link to="/news">Contact</router-link>
             </dt>
           </dl>
         </div>

@@ -123,7 +123,7 @@
                         class="verifyImg"
                         alt="verifyImg"
                         id="captcha"
-                        src="@/assets/icons/captcha.png"
+                        :src="handleViteImages('captcha.png')"
                         style="width: 150px; cursor: pointer; height: 38px"
                       />
                     </div>
@@ -180,7 +180,7 @@
               <div class="img">
                 <div class="img1 animate-img">
                   <img
-                  :src="handleViteImages('facility1.png')"
+                    :src="handleViteImages('facility1.png')"
                     alt="SPIRO Site"
                   />
                 </div>
@@ -200,7 +200,7 @@
               <div class="img">
                 <div class="img1 animate-img">
                   <img
-                  :src="handleViteImages('facility3.png')"
+                    :src="handleViteImages('facility3.png')"
                     alt="OBiO Intelli-M"
                   />
                 </div>
@@ -220,7 +220,7 @@
               <div class="img">
                 <div class="img1 animate-img">
                   <img
-                  :src="handleViteImages('facility2.png')"
+                    :src="handleViteImages('facility2.png')"
                     alt="PINE Site"
                   />
                 </div>
