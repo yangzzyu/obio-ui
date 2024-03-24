@@ -20,7 +20,7 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="title-color font-size70 txt-bold p-title fontf8 mb-3 mt-5">
+        <h1 class="title-color font-size50 txt-bold p-title fontf8 mb-3 mt-5">
           Coming Soon
         </h1>
         <div

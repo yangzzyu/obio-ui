@@ -517,7 +517,7 @@ import TheWelcome from "../components/TheWelcome.vue";
         >
           <div class="pub-title ub ub-ver ub-pe">
             <i class="line"></i
-            ><span class="fontf8 font-size70">Contact Us</span>
+            ><span class="fontf8 font-size50">Contact Us</span>
           </div>
           <el-row>
             <el-col :span="12" :xs="24">

@@ -33,7 +33,7 @@
           class="container"
         >
           <h1
-            class="font-size70 focus-title fontf7 txt-bold"
+            class="font-size50 focus-title fontf7 txt-bold"
             v-if="focusObj.title !== 'About Us'"
           >
             {{ focusObj.title }}

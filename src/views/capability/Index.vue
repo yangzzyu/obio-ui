@@ -19,7 +19,7 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="title-color font-size70 txt-bold section-title fontf8">
+        <h1 class="title-color font-size50 txt-bold section-title fontf8">
           Why Us
         </h1>
         <h2 class="title-color our-txt font-size30 section-title fontf7">
