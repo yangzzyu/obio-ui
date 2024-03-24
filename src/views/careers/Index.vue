@@ -19,7 +19,7 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="title-color font-size70 txt-bold section-title fontf8">
+        <h1 class="title-color font-size50 txt-bold section-title fontf8">
           Our Culture
         </h1>
         <h2
@@ -27,13 +27,13 @@
         >
           Mission: Enable gene therapy for better lives
         </h2>
-        <p class="font-size24 textColor" style="margin-bottom: 20px">
+        <p class="font-size18 textColor" style="margin-bottom: 20px">
           At OBiO, we empower gene therapy, driving advancements in gene drug
           development and clinical applications. We achieve this by providing
           top-tier technical services to research institutions and companies in
           the gene therapy field, thus empowering our clients to excel.
         </p>
-        <p class="font-size24 textColor">
+        <p class="font-size18 textColor">
           We continuously collaborate with our clients, fostering the
           development of the gene therapy industry and working together to
           realize the noble aspiration of benefiting humanity and all living
@@ -57,16 +57,17 @@
           class="container"
         >
           <el-row :gutter="100">
-            <el-col :xs="24" :span="8"
+            <el-col :xs="24" :span="4" />
+            <el-col :xs="24" :span="6"
               ><div class="animate-imgxx uof img">
                 <img :src="item.imgUrl" alt="SPIRO Site" />
               </div>
             </el-col>
-            <el-col :xs="24" :span="16">
-              <h1 class="font-size50 fontf7 iti fontf8 item-tit">
+            <el-col :xs="24" :span="12">
+              <h1 class="font-size30 fontf7 iti fontf8 item-tit">
                 {{ item.title }}
               </h1>
-              <p class="font-size24 cro-p textColor" v-html="item.text"></p>
+              <p class="font-size18 cro-p textColor" v-html="item.text"></p>
             </el-col>
           </el-row>
         </el-col>

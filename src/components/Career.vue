@@ -18,17 +18,17 @@
       class="container"
     >
       <h1 class="p-title font-size50 txt-bold fontf8">Career and Culture</h1>
-      <h1 class="p-title font-size50 txt-bold fontf6">Our Culture</h1>
+      <h1 class="p-title font-size30 txt-bold fontf6">Our Culture</h1>
 
       <div class="wysiwyg--content colour-white mb-3">
         <p class="fontf4 textColor">
-          Mission: Enable gene therapy for a better lives<br />
-          Vision: Providing client-centered and high-quality service as our
+          <b>Mission:</b> Enable gene therapy for a better lives<br />
+          <b>Vision:</b> Providing client-centered and high-quality service as our
           commitment, we strive to become a world-leading gene and cell therapy
           CXO group
           <br />
-          Value: Customer First, Efficient Execution, Pursuit of Excellence,
-          Innovation Breakthroughs, Integrity and Pragmatism
+          <b>Value:</b> Customer first, efficient execution, pursuit of excellence,
+          innovation breakthroughs, integrity and pragmatism
         </p>
       </div>
       <el-row class="news--slider row" :gutter="10">

@@ -19,15 +19,15 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="title-color font-size70 txt-bold section-title fontf8">
+        <h1 class="title-color font-size50 txt-bold section-title fontf8">
           Life at OBiO
         </h1>
-        <h2 class="title-color our-txt font-size30 section-title fontf7">
+        <h2 class="title-color our-txt font-size18 section-title">
           As OBiO Tech swiftly evolves, every OBiOers are immersed in an
-          environment fostering "enhanced capabilities, purposeful work, and a
-          fulfilling life."
+          environment fostering <text class="fontf7"> enhanced capabilities, purposeful work, and a
+          fulfilling life.</text>
         </h2>
-        <ul class="font-size24 textColor">
+        <ul class="font-size18 textColor">
           <li>Enhanced Capabilities</li>
           <li>Competitive compensation and benefits</li>
           <li>
@@ -39,7 +39,8 @@
             pursuits
           </li>
         </ul>
-        <p class="font-size24 textColor" style="margin-bottom: 20px">
+        <br />
+        <p class="font-size18 textColor" style="margin-bottom: 20px">
           This encapsulates our vibrant company culture, where every moment is
           an opportunity for growth and fulfillment.
         </p>
@@ -60,7 +61,7 @@
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+          <h1 class="p-title font-size30 txt-bold fontf8 mb-3 mt-5">
             {{ item.title }}
           </h1>
 
@@ -98,7 +99,7 @@
       </div>
     </div>
     <!-- All Hands Meetin -->
-    <section id="meetin" class="meetin-container">
+    <section id="meeting" class="meetin-container">
       <el-col
         :xs="22"
         :sm="20"
@@ -108,8 +109,8 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
-          All Hands Meetin
+        <h1 class="p-title font-size30 txt-bold fontf8 mb-3 mt-5">
+          All Hands Meeting
         </h1>
         <el-col :xs="24" :span="20" style="margin: auto" class="container">
           <img
@@ -131,15 +132,15 @@
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
-            Football matches
+          <h1 class="p-title font-size30 txt-bold fontf8 mb-3 mt-5">
+            Basketball
           </h1>
 
           <div class="fac-con">
             <el-row class="row" :gutter="10">
               <el-col
                 :xs="24"
-                :span="12"
+                :span="8"
                 class=""
                 v-for="(i, index) in footballList"
                 :key="index"
@@ -174,9 +175,6 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-3">
-          Life at OBiO video
-        </h1>
         <el-row :gutter="20" class="mb-4">
           <el-col :span="12" :xs="24">
             <div class="manufacturing-list bg-pinkbluelfr video-list">
@@ -394,7 +392,7 @@ const lifeList = reactive([
     ],
   },
   {
-    title: "Holiday party - Christmas",
+    title: "Holiday Party - Christmas",
     imgList: [
       handleViteImages("life/23.png"),
       handleViteImages("life/24.png"),
@@ -402,7 +400,7 @@ const lifeList = reactive([
     ],
   },
   {
-    title: "Charity Events - Walking 50KM",
+    title: "Charity Events - Walking 50km",
     imgList: [
       handleViteImages("life/26.png"),
       handleViteImages("life/27.png"),

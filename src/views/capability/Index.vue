@@ -87,7 +87,7 @@
                     <img :src="item.imgUrl" alt="" srcset="" />
                   </div>
                 </div>
-                <div class="font-size24 fontf7 iti">
+                <div class="font-size18 fontf7 iti">
                   {{ item.title }}
                 </div>
                 <ul class="txt-ul">
@@ -133,8 +133,8 @@
           </el-col>
           <el-col :span="16" :xs="24" class="font-size20 news-list">
             <div class="content-i" v-for="(i, idx) in ourList" :key="idx">
-              <h3 class="title-color font-size36 fontf8">{{ i.title }}</h3>
-              <p class="font-size24 textColor">
+              <h3 class="title-color font-size30 fontf8">{{ i.title }}</h3>
+              <p class="font-size18 textColor">
                 {{ i.text }}
               </p>
             </div>
@@ -205,7 +205,7 @@ const cdmoList = ref([
     imgUrl: handleViteImages("cap1.png"),
     actImgUrl: handleViteImages("cap_act1.png"),
     text: `Experienced experts with
-over 10 years inGCT,
+over 10 years in GCT,
 ensuring timely
 support across the
 product lifecycle.
@@ -232,7 +232,7 @@ quality systems
     actImgUrl: handleViteImages("cap_act4.png"),
     text: `130+ process
 development projects,
-230+analytical
+230+ analytical
 methods developed.
 `,
   },
@@ -256,7 +256,7 @@ navigation
 const industrializeList = reactive([
   {
     imgUrl: handleViteImages("industrialize1.png"),
-    title: `Development:Efficient and Customized Process Development with
+    title: `Development: Efficient and Customized Process Development with
                   BoardProduct Spectrum`,
     txtList: [
       "Upstream Process",
@@ -307,7 +307,7 @@ const croList = ref([
   {
     imgUrl: handleViteImages("croIcon1.png"),
     title: "Plasmid",
-    text: `At 0Bi0, our dedicateddevelopment team iscommitted to assistingyou in designing,constructing, andmanufacturing plasmidsfor fuctional genomicsresearch, as well asprovidingexpertise inviral packaging.`,
+    text: `At 0Bi0, our dedicateddevelopment team iscommitted to assistingyou in designing,constructing, andmanufacturing plasmidsfor fuctional genomicsresearch, as well asproviding expertise inviral packaging.`,
   },
   {
     imgUrl: handleViteImages("croIcon2.png"),
