@@ -419,7 +419,7 @@
         style="margin: auto"
         class="container section-3"
       >
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Facility</h1>
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Facilities</h1>
         <div class="fac-con">
           <el-row class="row" :gutter="10">
             <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">

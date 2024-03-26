@@ -14,7 +14,7 @@
           <div class="foot-log">
             <img
               :src="handleViteImages('footer_logo.png')"
-              alt="OBiO Technology (Shanghai) Corp., Ltd."
+              alt="OBiO Tech, Inc."
             />
           </div>
 
@@ -142,7 +142,7 @@
           <div class="foot-log">
             <img
               :src="handleViteImages('footer_logo.png')"
-              alt="OBiO Technology (Shanghai) Corp., Ltd."
+              alt="OBiO Tech, Inc."
             />
           </div>
 
@@ -290,9 +290,9 @@
       </div> -->
     <!-- </el-col> -->
     <div class="icp">
-      <!-- © 2023 OBiO Technology (Shanghai) Corp., Ltd. All Rights Reserved -->
+      <!-- © 2023 OBiO Tech, Inc. All Rights Reserved -->
       <!-- 7133 Koll Center Parkway, Suite 200, Pleasanton, CA 94566 -->
-      © 2024 OBiO Technology (Shanghai) Corp., Ltd. All Rights Reserved
+      © 2024 OBiO Tech, Inc. All Rights Reserved
     </div>
   </div>
 </template>

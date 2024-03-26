@@ -267,7 +267,7 @@ const industrializeList = reactive([
   },
   {
     imgUrl: handleViteImages("industrialize2.png"),
-    title: `CcGMP Manufacturing: Flexible Large-Scale GMP Manufacturing
+    title: `cGMP Manufacturing: Flexible Large-Scale GMP Manufacturing
                   Platform:`,
     txtList: [
       "End-to-End Offerin",
