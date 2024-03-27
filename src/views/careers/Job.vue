@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 16:32:40
+ * @LastEditTime: 2024-03-27 16:53:03
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -19,7 +19,7 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="title-color font-size70 txt-bold section-title fontf8">
+        <h1 class="title-color font-size50 txt-bold section-title fontf8">
           Join an amazing energy
         </h1>
 
@@ -88,7 +88,7 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="title-color font-size70 txt-bold p-title fontf8 mb-3 mt-5">
+        <h1 class="title-color font-size50 txt-bold p-title fontf8 mb-3 mt-5">
           Latest release
         </h1>
         <div
@@ -131,7 +131,6 @@
     width="60%"
     :before-close="handleClose"
   >
-    <!-- <span>This is a message</span> -->
     <div class="popLaboraBox-main">
       <div class="font-size50 fontf8 title">
         <span>{{ Labora.title }}</span>
@@ -148,14 +147,6 @@
         </p>
       </div>
     </div>
-    <!-- <template #footer>
-      <span class="dialog-footer">
-        <el-button @click="dialogVisible = false">Cancel</el-button>
-        <el-button type="primary" @click="dialogVisible = false">
-          Confirm
-        </el-button>
-      </span>
-    </template> -->
   </el-dialog>
 </template>
 
@@ -169,8 +160,6 @@ const FocusData = ref({
   title: "Job Opening",
   hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
   visibleXsImgUrl: handleViteImages("head_bg.jpg"),
-  // hiddenXsImgUrl: handleViteImages("job_bg.png"),
-  // visibleXsImgUrl: handleViteImages("job_bg.png"),
 });
 const dialogVisible = ref(false);
 function handleClose() {
@@ -221,83 +210,7 @@ ttruly rewards our team.
 `,
   },
 ]);
-const croList = ref([
-  {
-    imgUrl: handleViteImages("careers1.png"),
-    title: "Vision by 2026:",
-    text: `Providing client-centered and high-quality 
-service as our commitment, we strive to 
-become a world-leading gene and cell 
-therapy CXO group. 
-`,
-  },
-  {
-    imgUrl: handleViteImages("careers2.png"),
-    title: "Value:",
-    text: `Customer Focus, Efficient Execution, 
-Excellence, Innovation, Integrity.
-`,
-  },
-  {
-    imgUrl: handleViteImages("careers3.png"),
-    title: "Original Aspiration：",
-    text: `Developing gene therapies for the welfare of 
-mankind by virtue of its in-house developed 
-all-round technology platform, its R&D and GMP 
-production centers (floorage: 15,000 ㎡), and its <text class="title-color txt-bold">77,000</text>
-㎡  Lingang base (under construction), 
-OBiO is dedicated to constantly accelerating 
-gene therapies researches, drug discovery, 
-pharmaceutical studies, clinical and commercial 
-development of gene therapies
-
-`,
-  },
-]);
 const Labora = ref(<any>{});
-const LaboraList = ref([
-  {
-    id: 1,
-    title: "Cell Biology",
-    txt: `We provide services for cytology experiment to verify cellular
-            functions like proliferation, migration, and apoptosis. We can also
-            conduct Western blot experiment to determine protein expression
-            level, qPCR for RNA determination in addition to SEM inspection,
-            particle diameter analysis and pathological examination.`,
-    imgUrl: "",
-  },
-  {
-    id: 2,
-    title: "Stable Cell Line",
-    txt: `At OBiO, we can help you construct a stable producer cell line with molecular operations such as knock-out, overexpression, or knock-down of your target gene.`,
-    imgUrl: "",
-  },
-  {
-    id: 3,
-    title: "Animal Studies",
-    txt: `We provide animal model construction for human disease, animal behavior study, pharmacodynamics, pharmacokinetic, and efficacy studies in experimental animals for a certain drug, gene of interest, or gene therapy product. `,
-    imgUrl: "",
-  },
-  {
-    id: 4,
-    title: "In-stock viral vectors",
-    txt: `In-stock viral vector plays as a handy tool in your radioactive labelling, physiological regulation, observation, and verification studies. We provide in stock adeno-associated virus as tools for experiments including optogenetics, chemical genetics, calcium/voltage indicator, neurotransmitter probe, and Cre/Flp recombinase.
-To request a list of the available in-stock viral vector, please contact one of our professional technical support.`,
-    imgUrl: "",
-  },
-  {
-    id: 5,
-    title: "In-stock protein and relevant reagents",
-    txt: `We provide recombinant protein expression systems covering bacteria, yeast, mammalian cell and insect cell, meeting your varied bioengineering demands in protein functional research, protease preparation, therapeutics development, and medical diagnosis. We have optimized our manufacturing process starting from the construction of recombinant protein expression vector, and are able to express and purify your target recombinant protein with high quality standard. We can also offer recombinant protein expression services based on the vector you provided.`,
-    imgUrl: "",
-  },
-  {
-    id: 6,
-    title: "gRNA library",
-    txt: `We provide CRISPR knock-out (GeCKO V2) gRNA library and transcriptional activation (SAM) gRNA library for human and mouse genome, enabling genome-wide high throughput screening for functional gene. We also provide gRNA library customization services according to your research demand. `,
-    imgUrl: "",
-  },
-]);
 const releasesList = reactive([
   {
     id: 13,
@@ -314,10 +227,6 @@ const releasesList = reactive([
     content: ``,
   },
 ]);
-function popLabora(id) {
-  // Labora.value = LaboraList.value.find((i) => i.id === id) || {};
-  dialogVisible.value = true;
-}
 </script>
 
 <style lang="scss" scoped>

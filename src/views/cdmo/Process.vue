@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-22 16:13:56
+ * @LastEditTime: 2024-03-27 17:00:26
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -82,7 +82,6 @@
               <div class="fontf7 font-size50 ct">
                 <span>{{ item.title }}</span>
               </div>
-              <!-- <i class="bg"></i> -->
             </div>
             <div class="text font-size20 color666 cGMP-zIndex">
               <p style="margin-bottom: 30px">
@@ -137,104 +136,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="cGMP-title-t2">
-          <div class="fontf7 font-size50 ct"><span>Upstream Process</span></div>
-          <i class="bg"></i>
-        </div>
-        <div class="text font-size20 color666 cGMP-zIndex">
-          <p style="margin-bottom: 30px">
-            Our versatile upstream process platform covers adherent and
-            suspension cell culture technologies, large-scale transient
-            transfection, and serum-free cell culture, fulfilling your
-            differentiated upstream process development demands for gene and
-            cell therapy products.
-          </p>
-          <el-row :gutter="20">
-            <el-col
-              class="visible-xs-block"
-              :span="12"
-              :xs="22"
-              :sm="22"
-              :md="12"
-              :lg="12"
-              :xl="12"
-            >
-              <img src="upstream_img.png" alt="" srcset="" />
-            </el-col>
-            <el-col
-              :span="12"
-              :xs="22"
-              :sm="22"
-              :md="12"
-              :lg="12"
-              :xl="12"
-              class="cGMP-Process"
-            >
-              <div class="icon-list" v-for="(i, k) in iconList" :key="k">
-                <div class="icon-list-l">
-                  <img :src="i.imgUrl" alt="" srcset="" />
-                </div>
-                <p>
-                  {{ i.txt }}
-                </p>
-              </div>
-            </el-col>
-            <el-col
-              class="hidden-xs"
-              :span="12"
-              :xs="22"
-              :sm="22"
-              :md="12"
-              :lg="12"
-              :xl="12"
-            >
-              <img src="upstream_img.png" alt="" srcset="" />
-            </el-col>
-          </el-row>
-        </div>
-        <div class="cGMP-title-t2">
-          <div class="fontf7 font-size50 ct">
-            <span>Downstream Process</span>
-          </div>
-          <i class="bg"></i>
-        </div>
-        <div class="text font-size20 color666 cGMP-zIndex">
-          <p style="margin-bottom: 30px">
-            At OBiO, our downstream process platform includes chromatography and
-            ultrafiltration technologies. We have established a downstream
-            process platform for a convenient large-scale purification and
-            process scale-up with a wide spectrum of technologies including
-            ion-exchange chromatography, hydrophobic interaction chromatography,
-            affinity chromatography, molecular exclusion chromatography and
-            crossflow ultrafiltration. With the integrated downstream process
-            platform, we offer a high throughput, high yield purification
-            process with high quality standard for your gene and cell therapy
-            product.
-          </p>
-          <el-row :gutter="20">
-            <el-col :span="12" :xs="22" :sm="22" :md="12" :lg="12" :xl="12">
-              <img src="downstream_img.png" alt="" srcset="" />
-            </el-col>
-            <el-col
-              :span="12"
-              :xs="22"
-              :sm="22"
-              :md="12"
-              :lg="12"
-              :xl="12"
-              class="cGMP-Process"
-            >
-              <div class="icon-list" v-for="(i, k) in downstreamList" :key="k">
-                <div class="icon-list-l">
-                  <img :src="i.imgUrl" alt="" srcset="" />
-                </div>
-                <p>
-                  {{ i.txt }}
-                </p>
-              </div>
-            </el-col>
-          </el-row>
-        </div> -->
         <div class="cGMP-title-t2">
           <div class="fontf7 font-size50 ct">
             <span>Analytical Development</span>
@@ -395,77 +296,18 @@
 
 <script lang="ts" setup name="Process">
 import { ref } from "vue";
-// import { useTransition } from "@vueuse/core";
-// import { ViralList } from "./data/Index.ts";
 import { handleViteImages } from "@/utils";
 import { ArrowRight } from "@element-plus/icons-vue";
 
 const cellSource = ref(0);
 const processSource = ref(0);
 const analyticalSource = ref(0);
-// const cellSourceValue = useTransition(cellSource, {
-//   duration: 1500,
-// });
-// const processSourceValue = useTransition(processSource, {
-//   duration: 1500,
-// });
-// const analyticalSourceValue = useTransition(analyticalSource, {
-//   duration: 1500,
-// });
 cellSource.value = 170;
 processSource.value = 200;
 analyticalSource.value = 500;
 
 const activeIndex = ref(0);
 
-const iconList = ref([
-  {
-    imgUrl: handleViteImages("process_icon1.png"),
-    txt: `Adherent cell culture: cell factories, microcarriers, fixed bed bioreactor, and roller bottles`,
-  },
-  {
-    imgUrl: handleViteImages("process_icon2.png"),
-    txt: `Serum-free suspension cell culture technologies with improved yield for adenovirus, adeno-associated virus, and lentivirus products`,
-  },
-  {
-    imgUrl: handleViteImages("process_icon3.png"),
-    txt: `Transient transfection at large-scale: 200 L suspension culture and 600㎡ fixed bed culture`,
-  },
-  {
-    imgUrl: handleViteImages("process_icon4.png"),
-    txt: `	
-Cell line development: 293 producer cell line (293A, 293T, and HEK293), Vero, Hela, CHO, A549, and Sf9`,
-  },
-  {
-    imgUrl: handleViteImages("process_icon5.png"),
-    txt: `High-yield cell line domestication based on HEK293, with a 30% yield improvement than commercial HEK293. Further cell line development is still in process`,
-  },
-]);
-const downstreamList = ref([
-  {
-    imgUrl: handleViteImages("downstream_icon1.png"),
-    txt: `
-    Harvest Process: cell lysis, clarification, and filtration`,
-  },
-  {
-    imgUrl: handleViteImages("downstream_icon2.png"),
-    txt: `Column Chromatography: affinity chromatography, gel filtration chromatography, ion-exchange chromatography, mixed-mode chromatography`,
-  },
-  {
-    imgUrl: handleViteImages("downstream_icon3.png"),
-    txt: `	
-Tangential Flow Filtration: flat sheet membrane cassette, hollow fibers`,
-  },
-  {
-    imgUrl: handleViteImages("downstream_icon4.png"),
-    txt: `
-    Linear Scale-up of Purification Process`,
-  },
-  {
-    imgUrl: handleViteImages("downstream_icon5.png"),
-    txt: `Product Formulation Development`,
-  },
-]);
 const mkidList = ref([
   {
     title: "Analysis Experimenting",

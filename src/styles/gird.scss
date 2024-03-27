@@ -39,7 +39,7 @@
   font-size: $size70;
 }
 .color666 {
-  color: #666;
+  color: $textColor;
 }
 @media (max-width: 765px) {
   .hero-style-top {

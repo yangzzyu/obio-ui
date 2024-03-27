@@ -290,7 +290,7 @@ a:focus {
   top: 100%;
   left: 20px;
   max-width: 1000px;
-  color: #666;
+  color: $textColor;
 }
 .pub-title.style2 {
   color: #fff;
@@ -637,7 +637,7 @@ a:focus {
 .form-contact-main .item .iline {
   width: 20px;
   text-align: center;
-  color: #666;
+  color: $textColor;
 }
 .form-contact-main .item .put textarea {
   height: 110px;
@@ -795,7 +795,7 @@ a:focus {
   margin-bottom: 15px;
 }
 .Viral-Vector-wrap .section-1 .list .item .p {
-  color: #666;
+  color: $textColor;
 }
 .Viral-Vector-wrap .section-1 .list .item:nth-child(2n) .box {
   margin-left: 250px;
@@ -1006,7 +1006,7 @@ a:focus {
   margin-bottom: 10px;
 }
 .Viral-Vector-wrap .section-2 .swiper-con .swiper-slide .boxs .p {
-  color: #666;
+  color: $textColor;
 }
 .Viral-Vector-wrap
   .section-2
@@ -1153,7 +1153,7 @@ a:focus {
   border-bottom-left-radius: 20px;
   padding: 40px 20px;
   margin-top: 30px;
-  color: #666;
+  color: $textColor;
 }
 .pub-events-wrap .list .block:hover {
   box-shadow: 0 0 10px 1px #ccc;
@@ -2542,28 +2542,28 @@ header {
 .Laboratory-wrap .Innovations-wrap .list {
   margin-top: 80px;
 }
-.Laboratory-wrap .list .item .txt ul.ul-pop {
+.Laboratory-wrap ul.ul-pop {
   padding-top: 20px;
 }
-.Laboratory-wrap .list .item .txt ul.ul-pop li {
+.Laboratory-wrap ul.ul-pop li {
   margin-bottom: 15px;
 }
-.Laboratory-wrap .list .item .txt ul.ul-pop li .stn {
+.Laboratory-wrap ul.ul-pop li .stn {
   cursor: pointer;
 }
-.Laboratory-wrap .list .item .txt ul.ul-pop li .pub-ico-rights2 {
+.Laboratory-wrap ul.ul-pop li .pub-ico-rights2 {
   width: 38px;
   height: 30px;
   background: url(@/assets/icons/ico_right4.png) no-repeat center/contain;
   margin-right: 8px;
 }
-.Laboratory-wrap .list .item .txt ul.ul-pop li .stn:hover .pub-ico-rights2 {
+.Laboratory-wrap ul.ul-pop li .stn:hover .pub-ico-rights2 {
   background-image: url("@/assets/icons/ico_right4a.png");
 }
-.Laboratory-wrap .list .item .txt ul.ul-pop li .stx {
+.Laboratory-wrap ul.ul-pop li .stx {
   border-bottom: 1px solid #25b096;
 }
-.Laboratory-wrap .list .item .txt ul.ul-pop li .stn:hover .stx {
+.Laboratory-wrap ul.ul-pop li .stn:hover .stx {
   color: #014099;
   border-bottom-color: #014099;
 }

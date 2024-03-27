@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 17:03:02
+ * @LastEditTime: 2024-03-27 16:55:16
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -131,8 +131,6 @@
             :key="index"
             v-show="activeIndex === item.id"
           >
-            <!-- v-show="activeIndex === item.id" -->
-            <!-- style="display: none" -->
             <div class="sti font-size30 fontf7">{{ item.title }}</div>
             <div class="list ub ub-pj">
               <div class="item" v-for="(i, k) in item.list" :key="k">
@@ -146,15 +144,9 @@
                     class="fontf7 font-size24 ub ub-ac ub-pc"
                     style="max-width: 330px; margin: 0 auto"
                   >
-                    <!-- Non-IND (IIT) services -->
                     {{ i.subHead }}
                   </div>
                   <div class="font-size20 color666 p">
-                    <!-- Manufacturing gene and cell therapy products in pilot
-                    testing scale that is compliant with cGMP management system,
-                    delivering quality inspection report and samples to
-                    facilitate non-IND clinical trials (IIT) initiated by
-                    investigators. -->
                     {{ i.txt }}
                   </div>
                 </div>
@@ -195,9 +187,7 @@
                 offset: 1,
               }"
             >
-              <!-- <a href="/cn/home/about#a1"> -->
               Learn more about our state-of-the-art facility
-              <!-- </a> -->
             </router-link></span
           >
         </div>

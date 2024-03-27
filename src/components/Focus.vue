@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-20 17:29:48
+ * @LastEditTime: 2024-03-27 09:57:32
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -33,7 +33,7 @@
           class="container"
         >
           <h1
-            class="font-size70 focus-title fontf7 txt-bold"
+            class="font-size50 focus-title fontf7 txt-bold"
             v-if="focusObj.title !== 'About Us'"
           >
             {{ focusObj.title }}

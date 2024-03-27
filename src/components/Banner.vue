@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 11:39:49
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-20 17:25:40
+ * @LastEditTime: 2024-03-27 17:05:47
  * @FilePath: \obio-ui\src\components\Banner.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -34,7 +34,6 @@
             therapy CRO/CDMO group.
           </p>
         </div>
-        <!-- <p class="mission-content font-size38 txt-bold">Mission:</p> -->
         <div class="btns">
           <router-link
             to="/cdmo"
@@ -55,33 +54,12 @@
       </div>
     </div>
   </section>
-  <!-- <section id="Hero-Slider" class="custom--form">
-    <div class="container" style="margin: auto">
-      <div class="row justify-content-center">
-        <div class="Limit">
-          <div class="img_con" v-for="item in imgList" :key="item.id">
-            <over-lay
-              v-if="isShow"
-              :key="item.id + Math.random()"
-              :itemData="item"
-            ></over-lay>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
 </template>
 <script lang="ts" setup>
 import { onBeforeMount, ref, watch } from "vue";
 import OverLay from "@/components/OverLayText.vue";
-// import { areaCodeData } from "@/api/areaCode";
 import { imgList } from "@/data/HomePage";
 
-// type ImgItem = {
-//   id: number;
-//   imgUrl: string;
-//   title: string;
-// };
 
 const props = defineProps({
   bannerHeight: {
@@ -90,7 +68,6 @@ const props = defineProps({
   },
 });
 const cardShow = ref();
-// const imgList = ref<ImgItem[]>([]);
 const isShow = ref(false);
 function arrowClick(val) {
   if (val === "right") {

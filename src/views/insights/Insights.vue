@@ -25,36 +25,14 @@
             {{ item.content }}
           </div>
           <router-link
-            :to="'/news-details/releases/' + item.id"
+            :to="
+              item.type == 'news'
+                ? '/news-details/releases/' + item.id
+                : '/news-details/events/' + item.id
+            "
             class="read-more font-size18 fontf7"
             >Read More</router-link
           >
-          <!-- <el-row :gutter="100">
-            <el-col :xs="24" :span="8"
-              ><div class="animate-imgxx uof img">
-                <img
-                  :src="handleViteImages('careers3.png')"
-                  alt="SPIRO Site"
-                />
-              </div>
-            </el-col>
-            <el-col :xs="24" :span="16">
-              <p class="font-size24 iti textColor">
-                {{ item.time }}
-              </p>
-              <h1 class="title fontf4 font-size28 title-color">
-                {{ item.title }}
-              </h1>
-              <div class="font-size18 ut-s2">
-                {{ item.content }}
-              </div>
-              <router-link
-                :to="'/news-details/releases/' + item.id"
-                class="read-more font-size18 fontf7"
-                >Read More</router-link
-              ></el-col
-            >
-          </el-row> -->
         </el-col>
       </div>
       <router-link
@@ -251,18 +229,8 @@
                 </div>
               </el-form-item>
               <div class="fontf3 font-size14">
-                <!-- <input
-                  lay-submit=""
-                  lay-filter="dataPost"
-                  type="button"
-                  value="SUBMIT"
-                /> -->
-                <router-link
-                  to="/releases"
-                  class="btn-a font-size18 fontf7 bg-pinkbluelfr"
-                >
-                  Submit</router-link
-                >
+                <!-- to="/releases" -->
+                <a class="btn-a font-size18 fontf7 bg-pinkbluelfr"> Submit</a>
               </div>
             </el-form>
           </el-col>
@@ -361,7 +329,10 @@ const solutionsBreakpoints = ref({
 });
 const form = reactive({});
 const releasesList = ref([]);
-releasesList.value = releases.value.slice(0, 5);
+releasesList.value = [
+  ...releases.value.slice(0, 3),
+  ...events.value.slice(0, 2),
+];
 </script>
 
 <style lang="scss" scoped>

@@ -72,7 +72,7 @@ const router = createRouter({
           component: () => import("@/views/capability/Index.vue"),
         },
         {
-          path: "/sys",
+          path: "/cro",
           name: "lab-sciences",
           component: () => import("@/views/labSciences/Index.vue"),
         },

@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 16:31:27
+ * @LastEditTime: 2024-03-27 16:52:09
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -19,7 +19,7 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="title-color font-size70 txt-bold section-title fontf8">
+        <h1 class="title-color font-size50 txt-bold section-title fontf8">
           Why Us
         </h1>
         <h2 class="title-color our-txt font-size30 section-title fontf7">
@@ -34,10 +34,7 @@
             v-for="(item, index) in cdmoList"
             :key="index"
           >
-            <router-link
-              to="/spiroSite"
-              class="block tans service--box_link bg-pinkbluelfr"
-            >
+            <a class="block tans service--box_link bg-pinkbluelfr">
               <div class="service--box align-items-start">
                 <div class="service--box_icon mb-3 min-width-70">
                   <img
@@ -51,9 +48,9 @@
                     alt="GMP Vector Manufacturing icon"
                   />
                 </div>
-                <p class="textColor font-size14">{{ item.text }}</p>
+                <p class="textColor font-size18">{{ item.text }}</p>
               </div>
-            </router-link>
+            </a>
           </el-col>
         </el-row></el-col
       >
@@ -87,7 +84,7 @@
                     <img :src="item.imgUrl" alt="" srcset="" />
                   </div>
                 </div>
-                <div class="font-size24 fontf7 iti">
+                <div class="font-size30 fontf7 iti">
                   {{ item.title }}
                 </div>
                 <ul class="txt-ul">
@@ -100,7 +97,7 @@
                   </li>
                 </ul>
                 <router-link
-                  to="/spiroSite"
+                  :to="item.path"
                   class="read-more font-size18 fontf7 mt-3"
                   >Read More</router-link
                 >
@@ -133,8 +130,8 @@
           </el-col>
           <el-col :span="16" :xs="24" class="font-size20 news-list">
             <div class="content-i" v-for="(i, idx) in ourList" :key="idx">
-              <h3 class="title-color font-size36 fontf8">{{ i.title }}</h3>
-              <p class="font-size24 textColor">
+              <h3 class="title-color font-size30 fontf8">{{ i.title }}</h3>
+              <p class="font-size18 textColor">
                 {{ i.text }}
               </p>
             </div>
@@ -151,7 +148,6 @@
     width="60%"
     :before-close="handleClose"
   >
-    <!-- <span>This is a message</span> -->
     <div class="popLaboraBox-main">
       <div class="font-size50 fontf8 title">
         <span>{{ Labora.title }}</span>
@@ -168,14 +164,6 @@
         </p>
       </div>
     </div>
-    <!-- <template #footer>
-      <span class="dialog-footer">
-        <el-button @click="dialogVisible = false">Cancel</el-button>
-        <el-button type="primary" @click="dialogVisible = false">
-          Confirm
-        </el-button>
-      </span>
-    </template> -->
   </el-dialog>
 </template>
 
@@ -189,11 +177,7 @@ import { handleViteImages, goRouter } from "@/utils";
 const FocusData = ref({
   title: "Capability & Commitment",
   hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
-
   visibleXsImgUrl: handleViteImages("head_bg.jpg"),
-
-  // hiddenXsImgUrl: handleViteImages("head_bg2.png"),
-  // visibleXsImgUrl: handleViteImages("head_bg2.png"),
 });
 const dialogVisible = ref(false);
 function handleClose() {
@@ -258,6 +242,7 @@ const industrializeList = reactive([
     imgUrl: handleViteImages("industrialize1.png"),
     title: `Development:Efficient and Customized Process Development with
                   BoardProduct Spectrum`,
+    path: "/process",
     txtList: [
       "Upstream Process",
       "Downstream Process",
@@ -269,6 +254,7 @@ const industrializeList = reactive([
     imgUrl: handleViteImages("industrialize2.png"),
     title: `CcGMP Manufacturing: Flexible Large-Scale GMP Manufacturing
                   Platform:`,
+    path: "/cgmp",
     txtList: [
       "End-to-End Offerin",
       "Pre-IND services",
@@ -281,6 +267,7 @@ const industrializeList = reactive([
     title: `Quality & Regulatory: 
 International Compliant
 Quality Control System`,
+    path: "/quality",
     txtList: [
       " De-risk Your Regulatory Pathway",
       `We provide e-CTD ready 
@@ -295,6 +282,7 @@ and review for your submission:`,
 Traceable 
 Cold-Chain Logistics with 
 Controllable Risk`,
+    path: "/logistics",
     txtList: [
       ` Preserve gene and cell 
 therapy products integrity and 
@@ -331,59 +319,6 @@ const croList = ref([
   },
 ]);
 const Labora = ref(<any>{});
-const LaboraList = ref([
-  {
-    id: 1,
-    title: "Cell Biology",
-    txt: `We provide services for cytology experiment to verify cellular
-            functions like proliferation, migration, and apoptosis. We can also
-            conduct Western blot experiment to determine protein expression
-            level, qPCR for RNA determination in addition to SEM inspection,
-            particle diameter analysis and pathological examination.`,
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/image/20220328/20220328151428_83605.jpg",
-  },
-  {
-    id: 2,
-    title: "Stable Cell Line",
-    txt: `At OBiO, we can help you construct a stable producer cell line with molecular operations such as knock-out, overexpression, or knock-down of your target gene.`,
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/image/20220328/20220328151533_63357.jpg",
-  },
-  {
-    id: 3,
-    title: "Animal Studies",
-    txt: `We provide animal model construction for human disease, animal behavior study, pharmacodynamics, pharmacokinetic, and efficacy studies in experimental animals for a certain drug, gene of interest, or gene therapy product. `,
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/image/20220328/20220328151717_86002.jpg",
-  },
-  {
-    id: 4,
-    title: "In-stock viral vectors",
-    txt: `In-stock viral vector plays as a handy tool in your radioactive labelling, physiological regulation, observation, and verification studies. We provide in stock adeno-associated virus as tools for experiments including optogenetics, chemical genetics, calcium/voltage indicator, neurotransmitter probe, and Cre/Flp recombinase.
-To request a list of the available in-stock viral vector, please contact one of our professional technical support.`,
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/image/20220328/20220328151702_80624.jpg",
-  },
-  {
-    id: 5,
-    title: "In-stock protein and relevant reagents",
-    txt: `We provide recombinant protein expression systems covering bacteria, yeast, mammalian cell and insect cell, meeting your varied bioengineering demands in protein functional research, protease preparation, therapeutics development, and medical diagnosis. We have optimized our manufacturing process starting from the construction of recombinant protein expression vector, and are able to express and purify your target recombinant protein with high quality standard. We can also offer recombinant protein expression services based on the vector you provided.`,
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/image/20220328/20220328152007_37456.jpg",
-  },
-  {
-    id: 6,
-    title: "gRNA library",
-    txt: `We provide CRISPR knock-out (GeCKO V2) gRNA library and transcriptional activation (SAM) gRNA library for human and mouse genome, enabling genome-wide high throughput screening for functional gene. We also provide gRNA library customization services according to your research demand. `,
-    imgUrl:
-      "https://www.obio-tech.com/public/uploads/image/20220328/20220328151955_77566.jpg",
-  },
-]);
-function popLabora(id) {
-  Labora.value = LaboraList.value.find((i) => i.id === id) || {};
-  dialogVisible.value = true;
-}
 const ourList = reactive([
   {
     title: "Focus:",
@@ -425,17 +360,6 @@ Responses at First Instance`,
   .service--box_link {
     height: 300px;
   }
-  // &:hover {
-  //   .textColor {
-  //     color: #fff;
-  //   }
-  // }
-  // a:hover,
-  // a:focus {
-  //   .textColor {
-  //     color: #fff;
-  //   }
-  // }
 }
 .us-list-i:hover {
   .textColor {

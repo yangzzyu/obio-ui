@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-23 13:55:04
+ * @LastEditTime: 2024-03-27 17:03:50
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -26,14 +26,12 @@
         <div class="in-news-list1">
           <div class="item" v-for="(item, index) in tableData" :key="index">
             <router-link :to="'/news-details/events/' + item.id" class="block">
-              <!-- <a href="/cn/home/news/id/228" class="block"> -->
               <div class="font-size16">{{ item.time }}</div>
               <div class="title fontf4 font-size24">
                 {{ item.title }}
               </div>
               <div class="font-size18 ut-s2">{{ item.content }}</div>
               <div class="more"><span class="sa"></span></div>
-              <!-- </a> -->
             </router-link>
           </div>
         </div>
@@ -47,7 +45,6 @@
           @size-change="handleSizeChange"
           @current-change="handleCurrentChange"
         />
-        <!-- <div class="in-news-all-btn font-size20 fontf3"><a href="">ALL PRESS RELEASES</a></div> -->
       </el-col>
     </div>
   </div>
