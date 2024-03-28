@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-22 21:59:54
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-28 10:25:44
+ * @LastEditTime: 2024-03-28 11:11:37
  * @FilePath: \obio-ui\src\components\Header.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -281,12 +281,12 @@
           popper-class="sub-popper"
         >
           <template #title>
-            <div @click="router.push('/about')" class="menu-t1">About Us</div>
+            <div @click="goPage('/about')" class="menu-t1">About Us</div>
           </template>
           <el-sub-menu index="/facilities" popper-class="sub-popper ">
             <template #title>
               <div
-                @click="router.push('/facilities')"
+                @click="goPage('/facilities')"
                 v-scroll-to="{
                   element: '.section-3',
                   duration: 300,
@@ -304,7 +304,7 @@
           <el-menu-item index="/about">
             <template #title>
               <div
-                @click="router.push('/about')"
+                @click="goPage('/about')"
                 v-scroll-to="{
                   element: '.section-2',
                   duration: 300,
@@ -325,12 +325,13 @@
           }"
         >
           <template #title>
-            <div @click="router.push('/cap')" class="menu-t1">
+            <div @click="goPage('/cap')" class="menu-t1">
               Capability & Commitment
             </div>
           </template>
           <el-menu-item index="/cap">
             <div
+              @click="drawerMenu = false"
               v-scroll-to="{
                 element: '.industrialize-box',
                 duration: 300,
@@ -343,6 +344,7 @@
           </el-menu-item>
           <el-menu-item index="/cap">
             <div
+              @click="drawerMenu = false"
               v-scroll-to="{
                 element: '.our-box',
                 duration: 300,
@@ -370,7 +372,7 @@
           <el-menu-item index="/cdmo">
             <template #title>
               <div
-                @click="router.push('/cdmo')"
+                @click="drawerMenu = false"
                 v-scroll-to="{
                   element: '.section-3',
                   duration: 300,
@@ -385,7 +387,7 @@
           <el-menu-item index="/cdmo">
             <template #title>
               <div
-                @click="router.push('/cdmo')"
+                @click="drawerMenu = false"
                 v-scroll-to="{
                   element: '#cro',
                   duration: 300,
@@ -400,7 +402,7 @@
           <el-menu-item index="/cdmo">
             <template #title>
               <div
-                @click="router.push('/cdmo')"
+                @click="drawerMenu = false"
                 v-scroll-to="{
                   element: '#innovation',
                   duration: 300,
@@ -458,6 +460,7 @@
           </template>
           <el-menu-item index="/careers">
             <div
+              @click="drawerMenu = false"
               v-scroll-to="{
                 element: '.careers-box',
                 duration: 300,

@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 16:30:46
+ * @LastEditTime: 2024-03-28 11:04:08
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -19,7 +19,7 @@
         class="container"
       >
         <div class="text font-size20">
-          <h3 class="textColor">
+          <p class="textColor">
             <text class="txt-bold fontf8"
               >OBiO Technology is a pioneering gene and cell therapy CRO and
               CDMO,</text
@@ -38,314 +38,11 @@
             AAV, LVV, Ad viral vector, Cell therapy, manufacturing, CAR-T, NK,
             Treg...Oncolytic virus. Technologies Inducible viral vector
             packaging, Ultralow endotoxin process, AAVneO for AAV variants with
-            tissue specific tropism.
-          </h3>
+            tissue specific tropism
+          </p>
         </div>
       </el-col>
     </div>
-    <!-- <section id="steps" class="steps-details bg-mg">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
-        <h1 class="p-title font-size50 txt-bold ">
-          OBiO Technology development milestones
-        </h1>
-        <div class="row">
-          <div
-            class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-md-offset-1 col-lg-offset-1"
-          >
-            <div class="steps-cont">
-              <ul>
-                <li class="l-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="1.0s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 1s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <h2 class="">· OBiO founded</h2>
-                  </div>
-                  <span> 2013 </span>
-                </li>
-                <li class="r-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="1.3s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 1.3s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      · The acquisition of Neuron Biotech Co., Ltd. (which has
-                      become a wholly owned subsidiary of OBiO after the
-                      acquisition)
-                      <text class=" title-color txt-bold"
-                        >laid down a solid foundation</text
-                      >
-                      for OBiO as a leading AAV service provider
-                    </p>
-                    <p class="">
-                      · R&D of a number of gene therapy vectors and CRO service
-                      started
-                    </p>
-                  </div>
-                  <span>2014</span>
-                </li>
-                <li class="l-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="1.6s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 1.6s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      · Shareholding reform and
-                      <text class=" title-color txt-bold"
-                        >Round A equity financing</text
-                      >
-                      completed
-                    </p>
-                    <p class="">
-                      · Engaged in the first industry-academy-research strategic
-                      cooperation with Chinese Academy of Medical Sciences
-                    </p>
-                  </div>
-                  <span>2015 </span>
-                </li>
-                <li class="r-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="1.9s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 1.9s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      · Listed in the
-                      <text class=" title-color txt-bold"
-                        >National Equities Exchange And Quotations(NEEQ) system
-                      </text>
-                    </p>
-                    <p class="">
-                      · OBiO Zhangjiang Integrated R&D Building (Floorage: 5000
-                      ㎡) commissioned
-                    </p>
-                  </div>
-                  <span>2016</span>
-                </li>
-                <li class="l-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="2.1s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 2.1s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      · Viral vector GLP pilot-scale platform constructed and
-                      commissioned
-                    </p>
-                    <p class="">
-                      · Entered into an agreement with GE Medical for a global
-                      strategic cooperation in
-                      <text class=" title-color txt-bold"
-                        >gene therapy research as a step towards business
-                        expansion into gene therapy CDMO sector
-                      </text>
-                    </p>
-                  </div>
-                  <span>2017</span>
-                </li>
-                <li class="r-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="2.4s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 2.4s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      · The first
-                      <text class=" title-color txt-bold"
-                        >OBiO CDMO project for IND submission of gene therapies
-                        (will be) launched
-                      </text>
-                    </p>
-                  </div>
-                  <span>2018</span>
-                </li>
-                <li class="l-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="2.4s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 2.4s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      · OBiO Intelli-M (Shanghai) Gene Technology Co., Ltd., a
-                      subsidiary of OBiO, was founded;
-                    </p>
-                    <p class="">
-                      · Successfully delisted from the National Equities
-                      Exchange And Quotations(NEEQ) system
-                    </p>
-                    <p class="">
-                      ·
-                      <text class=" title-color txt-bold"
-                        >OBiO GMP production platform (Floorage: 5000 m2)
-                        constructed and commissioned
-                      </text>
-                    </p>
-                  </div>
-                  <span>2019</span>
-                </li>
-                <li class="r-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="2.4s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 2.4s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      ·
-                      <text class=" title-color txt-bold"
-                        >Round 4 fund-raising completed
-                      </text>
-                      (Amount raised in RMB: XXX yuan)
-                    </p>
-                    <p class="">
-                      · GMP platform expanded to about 7000 ㎡
-                    </p>
-                    <p class="">
-                      · Construction of Lingang Precision Medicine Industry Base
-                      started
-                    </p>
-                    <p class="">
-                      · Accredited to be cGMP-compliant in an audit by a
-                      third-party Notified Body
-                    </p>
-                    <p class="">
-                      · Received CTA approval letters from drug administrations
-                      in China, the United States, and Australia for
-                      <text class=" title-color txt-bold"
-                        >the first oncolytic virus project of an OBiO client
-                      </text>
-                    </p>
-                  </div>
-                  <span>2020</span>
-                </li>
-                <li class="l-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="2.4s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 2.4s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      ·
-                      <text class=" title-color txt-bold">
-                        Successfully reviewed for the IPO in STAR Market
-                      </text>
-                    </p>
-                    <p class="">
-                      · GMP platform expanded to more than 10000 ㎡
-                    </p>
-                    <p class="">
-                      ·
-                      <text class=" title-color txt-bold">
-                        Multiple phase II clinical studies contracted
-                      </text>
-                    </p>
-                    <p class="">
-                      · AAVneO® vector screening campaign launched, several
-                      innovative vectors preliminarily identified
-                    </p>
-                  </div>
-                  <span>2021</span>
-                </li>
-                <li class="r-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="2.4s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 2.4s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      ·
-                      <text class=" title-color txt-bold"
-                        >Listed as the first Chinese CGT CDMO in STAR Market on
-                        March 22
-                      </text>
-                    </p>
-                    <p class="">
-                      · The company’s US branch, OBiO Tech., founded for
-                      expanding business outside China
-                    </p>
-                  </div>
-                  <span>2022</span>
-                </li>
-                <li class="l-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="2.4s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 2.4s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      ·
-                      <text class=" title-color txt-bold">
-                        Lingang CGT GMP production base (Floorage: 80,000m2)
-                        commissioned on April 21
-                      </text>
-                    </p>
-                    <p class="">
-                      · By 23H1, OBiO had helped its clients to get a total of
-                      25 IND approval letters (8 of which were from FDA)
-                    </p>
-                  </div>
-                  <span>2023 future </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </el-col>
-    </section> -->
     <div class="section-2">
       <el-col
         :xs="14"
@@ -419,7 +116,7 @@
         style="margin: auto"
         class="container section-3"
       >
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Facilities</h1>
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Facility</h1>
         <div class="fac-con">
           <el-row class="row" :gutter="10">
             <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
@@ -431,13 +128,13 @@
                   />
                 </div>
               </div>
-              <div class="font-size18 fontf7 iti">
-                Lin-Gang Free-Trade Zone, Shanghai, China
+              <div class="font-size24 fontf7 iti">
+                Lin-Gang Free-Trade Zone<br />Shanghai, China
               </div>
-              <div class="font-size30 fontf7 iti">OBIO Intelli-M</div>
+              <div class="font-size38 fontf7 iti">OBIO Intelli-M</div>
               <p class="font-size18 textColor txt-bold">
                 Process Development Characterization Clinical and Commercial
-                Manufacturing. 
+                Manufacturing
                 <text class="title-color txt-bold">77,000</text>-square-meter
                 Facility for Global Supply
               </p>
@@ -454,14 +151,14 @@
                   />
                 </div>
               </div>
-              <div class="font-size18 fontf7 iti">
-                International Medical Park, Shanghai, China
+              <div class="font-size24 fontf7 iti">
+                International Medical Park<br />Shanghai, China
               </div>
-              <div class="font-size30 fontf7 iti">SPIRO Site</div>
+              <div class="font-size38 fontf7 iti">SPIRO Site</div>
 
               <p class="font-size18 textColor txt-bold">
-                Integrated Laboratory Services Processand Analytical Method Development. 
-                Research and Development Center
+                Integrated Laboratory Services Processand Analytical Method
+                DevelopmentResearch and Development Center
               </p>
               <router-link to="/spiroSite" class="read-more font-size18 fontf7"
                 >Read More</router-link
@@ -471,18 +168,18 @@
               <div class="manufacturing-list bg-pinkbluelfr">
                 <div class="content">
                   <img
-                    :src="handleViteImages('pine_site.png')"
+                    :src="handleViteImages('facilities3.jpg')"
                     alt="PINE Site"
                   />
                 </div>
               </div>
-              <div class="font-size18 fontf7 iti">
-                International Medical Park, Shanghai, China
+              <div class="font-size24 fontf7 iti">
+                International Medical Park<br />Shanghai, China
               </div>
-              <div class="font-size30 fontf7 iti">PINE Site</div>
+              <div class="font-size38 fontf7 iti">PINE Site</div>
               <p class="font-size18 textColor txt-bold">
-                Process and Analytical Method Development. Pre-clinical and
-                Clinical Manufacturing. Three-building, <text
+                Process and Analytical Method Development Pre-clinical and
+                Clinical Manufacturing Three-building,<text
                   class="title-color txt-bold"
                   >10,000</text
                 >-square-meter campus
@@ -495,7 +192,6 @@
         </div></el-col
       >
     </section>
-    <br />
     <section class="in-about-wrap about-box">
       <el-col
         :xs="22"
@@ -506,6 +202,9 @@
         style="margin: auto"
         class="container section-3"
       >
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+          Factory Images
+        </h1>
         <div class="fac-con">
           <el-row class="row" :gutter="10">
             <el-col :xs="24" :span="6" class="">
@@ -526,9 +225,9 @@
                       class="font-size14 txt-bold is-details"
                       style="color: #fff"
                     >
-                      The only 77,000 square meter scale GMP-compliant facility in the
-                      world. Gene cell therapy commercial production service base.
-                      Large-scale, Large production capacity
+                      The only 77,000m2 scale GMP-compliant facility in the
+                      world Gene cell therapy commercial production service base
+                      Large-scale; Large production capacity
                     </p>
                   </div>
                   <img
@@ -557,15 +256,15 @@
                       class="font-size14 txt-bold is-details"
                       style="color: #fff"
                     >
-                      More than 30 gene cell therapy production lines. 
-                      Large-scale multi-option prokaryocyte production capacity. 
+                      More than 30 gene cell therapy production lines
+                      Large-scale multi-option prokaryocyte production capacity
                       20 cell therapy product manufacturing lines of varied
-                      characteristics. 50-2000L comprehensive and flexible viral
-                      vector manufacturing process. Filling and lyophilizing
+                      characteristics 50-2000L comprehensive and flexible viral
+                      vector manufacturing process Filling and lyophilizing
                       platform that meets the requirements for manufacturing
-                      multiple dosage forms... Meeting the requirements of
-                      clients worldwide. From DNA to IND to NDA Full-process
-                      business service requirements.
+                      multiple dosage forms…… Meeting the requirements of
+                      clients worldwide From DNA to IND to NDA Full-process
+                      business service requirements
                     </p>
                   </div>
                   <img
@@ -593,9 +292,9 @@
                       class="font-size14 txt-bold is-details"
                       style="color: #fff"
                     >
-                      Single-use process vector production line. Single-use
-                      process prokaryocyte culture production line.
-                      Filling+lyophilizing integrated innovative filling system.
+                      Single-use process vector production line Single-use
+                      process prokaryocyte culture production line
+                      Filling+lyophilizing integrated innovative filling system
                       Positive sample cell therapy product manufacturing line
                     </p>
                   </div>
@@ -625,11 +324,11 @@
                       style="color: #fff"
                     >
                       Digitization and intelligentification based mechanical arm
-                      material charging system. Automatic dispensing system
-                      Automatic sample storage system in liquid nitrogen.
-                      Chip-based automatic management of cleanroom suits. Remote
+                      material charging system Automatic dispensing system
+                      Automatic sample storage system in liquid nitrogen
+                      Chip-based automatic management of cleanroom suits Remote
                       electronic signature system Full-cycle visualization-based
-                      project management.
+                      project management
                     </p>
                   </div>
                   <img
@@ -657,20 +356,16 @@
         </h1>
         <el-row class="our-box-content" :gutter="40">
           <el-col :span="8" :xs="24" class="left-content">
-            <img
-              class="img"
-              :src="handleViteImages('life_bg.png')"
-              alt=""
-            />
+            <img class="img" :src="handleViteImages('life_bg.png')" alt="" />
           </el-col>
           <el-col :span="16" :xs="24" class="font-size20 news-list">
             <h3
-              class="title-color font-size18 "
+              class="title-color font-size30 fontf7"
               style="margin-bottom: 30px"
             >
               As OBiO Tech swiftly evolves, every OBiOers are immersed in an
-              environment fostering <text class="txt-bold fontf8">enhanced capabilities, purposeful work, and
-              a fulfilling life.</text>
+              environment fostering "enhanced capabilities, purposeful work, and
+              a fulfilling life."
             </h3>
             <ul class="font-size18 textColor life-ul">
               <li><i></i> Enhanced Capabilities</li>
@@ -766,9 +461,10 @@ Responses at First Instance`,
 </script>
 
 <style>
-.txt-color{
+.txt-color {
   color: #5be2eb;
-}</style>
+}
+</style>
 <style lang="scss" scoped>
 .about-box {
   margin: 0 !important;
@@ -816,9 +512,8 @@ Responses at First Instance`,
       margin: auto;
       display: flex;
       justify-content: center;
-      width: 180px;
+      width: 160px;
     }
   }
 }
-
 </style>

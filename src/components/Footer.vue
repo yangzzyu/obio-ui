@@ -35,10 +35,30 @@
               <router-link to="/about">About Us</router-link>
             </dt>
             <dt class="font-size14">
-              <router-link to="/about">History</router-link>
+              <div
+                @click="goPage('/about')"
+                v-scroll-to="{
+                  element: '.section-2',
+                  duration: 300,
+                  easing: 'ease',
+                  offset: 1,
+                }"
+              >
+                History
+              </div>
             </dt>
             <dt class="font-size14">
-              <router-link to="/about">Facilities</router-link>
+              <div
+                @click="router.push('/facilities')"
+                v-scroll-to="{
+                  element: '.section-3',
+                  duration: 300,
+                  easing: 'ease',
+                  offset: 1,
+                }"
+              >
+                Facilities
+              </div>
             </dt>
             <dt class="font-size14">
               <router-link to="/team">Leadship Team</router-link>
@@ -55,10 +75,30 @@
               >
             </dt>
             <dd class="font-size14">
-              <router-link to="/cap">Industrialize</router-link>
+              <div
+                @click="router.push('/cap')"
+                v-scroll-to="{
+                  element: '.industrialize-box',
+                  duration: 300,
+                  easing: 'ease',
+                  offset: 1,
+                }"
+              >
+                Industrialize
+              </div>
             </dd>
             <dd class="font-size14">
-              <router-link to="/cap">Commitment</router-link>
+              <div
+                @click="router.push('/cap')"
+                v-scroll-to="{
+                  element: '.our-box',
+                  duration: 300,
+                  easing: 'ease',
+                  offset: 1,
+                }"
+              >
+                Commitment
+              </div>
             </dd>
           </dl>
         </div>
@@ -68,13 +108,43 @@
               <router-link to="/cdmo">CDMO <br />Solutions</router-link>
             </dt>
             <dd class="font-size14">
-              <router-link to="/cdmo">Manufacturing</router-link>
+              <div
+                @click="router.push('/cdmo')"
+                v-scroll-to="{
+                  element: '.section-3',
+                  duration: 300,
+                  easing: 'ease',
+                  offset: 1,
+                }"
+              >
+                Manufacturing
+              </div>
             </dd>
             <dd class="font-size14">
-              <router-link to="/cdmo">CDMO</router-link>
+              <div
+                @click="router.push('/cdmo')"
+                v-scroll-to="{
+                  element: '#cro',
+                  duration: 300,
+                  easing: 'ease',
+                  offset: 1,
+                }"
+              >
+                CDMO
+              </div>
             </dd>
             <dd class="font-size14">
-              <router-link to="/cdmo">Innovation</router-link>
+              <div
+                @click="router.push('/cdmo')"
+                v-scroll-to="{
+                  element: '#innovation',
+                  duration: 300,
+                  easing: 'ease',
+                  offset: 1,
+                }"
+              >
+                Innovation
+              </div>
             </dd>
           </dl>
         </div>
@@ -90,10 +160,12 @@
               <router-link to="/events">Events</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/news">Learn More</router-link>
+              <router-link to="/inquiry">Learn More</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/releases">Partnership</router-link>
+              <a href="https://www.obiosh.com/tzz/gg/" target="_blank"
+                >Partnership</a
+              >
             </dd>
           </dl>
         </div>
@@ -109,7 +181,17 @@
               <router-link to="/careers">Our Culture</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/careers">Mission</router-link>
+              <div
+                @click="router.push('/careers')"
+                v-scroll-to="{
+                  element: '.careers-box',
+                  duration: 300,
+                  easing: 'ease',
+                  offset: 1,
+                }"
+              >
+                Mission
+              </div>
             </dd>
             <dd class="font-size14">
               <router-link to="/life">Life at OBIO</router-link>
@@ -125,14 +207,14 @@
         <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/sys">CRO <br />Service</router-link>
+              <router-link to="/cro">CRO <br />Service</router-link>
             </dt>
           </dl>
         </div>
         <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/news">Contact</router-link>
+              <router-link to="/inquiry">Contact</router-link>
             </dt>
           </dl>
         </div>
@@ -171,7 +253,9 @@ import { onMounted, ref } from "vue";
 import { handleViteImages } from "@/utils";
 import "wow.js/css/libs/animate.css";
 import WOW from "wow.js";
+import { useRouter } from "vue-router";
 
+const router = useRouter();
 type ConcatItem = {
   name: string;
   email: string;
@@ -190,6 +274,9 @@ const logo_url = ref<any>();
 logo_url.value = handleViteImages("logoColor.png");
 const contact_way = ref<ConcatItem[]>([]);
 const focus_icon = ref<FocusItem[]>([]);
+function goPage(params) {
+  router.push(params);
+}
 
 onMounted(() => {
   var wow = new WOW({

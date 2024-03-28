@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-27 09:58:01
+ * @LastEditTime: 2024-03-28 11:42:19
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -24,8 +24,10 @@
         </h1>
         <h2 class="title-color our-txt font-size18 section-title">
           As OBiO Tech swiftly evolves, every OBiOers are immersed in an
-          environment fostering <text class="fontf7"> enhanced capabilities, purposeful work, and a
-          fulfilling life.</text>
+          environment fostering
+          <text class="fontf7">
+            enhanced capabilities, purposeful work, and a fulfilling life.</text
+          >
         </h2>
         <ul class="font-size18 textColor">
           <li>Enhanced Capabilities</li>
@@ -117,7 +119,7 @@
             class="mb-5" /></el-col
       ></el-col>
     </section>
-    <div class="in-about-wrap training-box">
+    <div class="in-about-wrap training-box mb-6">
       <div class="section-3">
         <el-col
           :xs="22"
@@ -136,7 +138,7 @@
             <el-row class="row" :gutter="10">
               <el-col
                 :xs="24"
-                :span="8"
+                :span="12"
                 class=""
                 v-for="(i, index) in footballList"
                 :key="index"

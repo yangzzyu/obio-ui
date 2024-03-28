@@ -724,10 +724,11 @@ a:focus {
   margin-bottom: 8px;
   line-height: 24px;
   // opacity: 0.75;
-  font-family: Roboto;
+  // font-family: Roboto;
   font-weight: bold;
+  cursor: pointer;
   a {
-    font-family: Roboto;
+    // font-family: Roboto;
     font-weight: bold;
   }
 }
