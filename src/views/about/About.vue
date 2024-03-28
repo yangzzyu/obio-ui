@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 16:30:46
+ * @LastEditTime: 2024-03-28 11:04:08
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -19,7 +19,7 @@
         class="container"
       >
         <div class="text font-size20">
-          <h3 class="textColor">
+          <p class="textColor">
             <text class="txt-bold fontf8"
               >OBiO Technology is a pioneering gene and cell therapy CRO and
               CDMO,</text
@@ -39,313 +39,10 @@
             Treg...Oncolytic virus. Technologies Inducible viral vector
             packaging, Ultralow endotoxin process, AAVneO for AAV variants with
             tissue specific tropism
-          </h3>
+          </p>
         </div>
       </el-col>
     </div>
-    <!-- <section id="steps" class="steps-details bg-mg">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
-        <h1 class="p-title font-size50 txt-bold ">
-          OBiO Technology development milestones
-        </h1>
-        <div class="row">
-          <div
-            class="col-lg-10 col-md-10 col-sm-12 col-xs-12 col-md-offset-1 col-lg-offset-1"
-          >
-            <div class="steps-cont">
-              <ul>
-                <li class="l-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="1.0s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 1s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <h2 class="">· OBiO founded</h2>
-                  </div>
-                  <span> 2013 </span>
-                </li>
-                <li class="r-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="1.3s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 1.3s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      · The acquisition of Neuron Biotech Co., Ltd. (which has
-                      become a wholly owned subsidiary of OBiO after the
-                      acquisition)
-                      <text class=" title-color txt-bold"
-                        >laid down a solid foundation</text
-                      >
-                      for OBiO as a leading AAV service provider
-                    </p>
-                    <p class="">
-                      · R&D of a number of gene therapy vectors and CRO service
-                      started
-                    </p>
-                  </div>
-                  <span>2014</span>
-                </li>
-                <li class="l-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="1.6s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 1.6s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      · Shareholding reform and
-                      <text class=" title-color txt-bold"
-                        >Round A equity financing</text
-                      >
-                      completed
-                    </p>
-                    <p class="">
-                      · Engaged in the first industry-academy-research strategic
-                      cooperation with Chinese Academy of Medical Sciences
-                    </p>
-                  </div>
-                  <span>2015 </span>
-                </li>
-                <li class="r-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="1.9s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 1.9s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      · Listed in the
-                      <text class=" title-color txt-bold"
-                        >National Equities Exchange And Quotations(NEEQ) system
-                      </text>
-                    </p>
-                    <p class="">
-                      · OBiO Zhangjiang Integrated R&D Building (Floorage: 5000
-                      ㎡) commissioned
-                    </p>
-                  </div>
-                  <span>2016</span>
-                </li>
-                <li class="l-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="2.1s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 2.1s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      · Viral vector GLP pilot-scale platform constructed and
-                      commissioned
-                    </p>
-                    <p class="">
-                      · Entered into an agreement with GE Medical for a global
-                      strategic cooperation in
-                      <text class=" title-color txt-bold"
-                        >gene therapy research as a step towards business
-                        expansion into gene therapy CDMO sector
-                      </text>
-                    </p>
-                  </div>
-                  <span>2017</span>
-                </li>
-                <li class="r-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="2.4s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 2.4s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      · The first
-                      <text class=" title-color txt-bold"
-                        >OBiO CDMO project for IND submission of gene therapies
-                        (will be) launched
-                      </text>
-                    </p>
-                  </div>
-                  <span>2018</span>
-                </li>
-                <li class="l-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="2.4s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 2.4s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      · OBiO Intelli-M (Shanghai) Gene Technology Co., Ltd., a
-                      subsidiary of OBiO, was founded;
-                    </p>
-                    <p class="">
-                      · Successfully delisted from the National Equities
-                      Exchange And Quotations(NEEQ) system
-                    </p>
-                    <p class="">
-                      ·
-                      <text class=" title-color txt-bold"
-                        >OBiO GMP production platform (Floorage: 5000 m2)
-                        constructed and commissioned
-                      </text>
-                    </p>
-                  </div>
-                  <span>2019</span>
-                </li>
-                <li class="r-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="2.4s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 2.4s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      ·
-                      <text class=" title-color txt-bold"
-                        >Round 4 fund-raising completed
-                      </text>
-                      (Amount raised in RMB: XXX yuan)
-                    </p>
-                    <p class="">
-                      · GMP platform expanded to about 7000 ㎡
-                    </p>
-                    <p class="">
-                      · Construction of Lingang Precision Medicine Industry Base
-                      started
-                    </p>
-                    <p class="">
-                      · Accredited to be cGMP-compliant in an audit by a
-                      third-party Notified Body
-                    </p>
-                    <p class="">
-                      · Received CTA approval letters from drug administrations
-                      in China, the United States, and Australia for
-                      <text class=" title-color txt-bold"
-                        >the first oncolytic virus project of an OBiO client
-                      </text>
-                    </p>
-                  </div>
-                  <span>2020</span>
-                </li>
-                <li class="l-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="2.4s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 2.4s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      ·
-                      <text class=" title-color txt-bold">
-                        Successfully reviewed for the IPO in STAR Market
-                      </text>
-                    </p>
-                    <p class="">
-                      · GMP platform expanded to more than 10000 ㎡
-                    </p>
-                    <p class="">
-                      ·
-                      <text class=" title-color txt-bold">
-                        Multiple phase II clinical studies contracted
-                      </text>
-                    </p>
-                    <p class="">
-                      · AAVneO® vector screening campaign launched, several
-                      innovative vectors preliminarily identified
-                    </p>
-                  </div>
-                  <span>2021</span>
-                </li>
-                <li class="r-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="2.4s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 2.4s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      ·
-                      <text class=" title-color txt-bold"
-                        >Listed as the first Chinese CGT CDMO in STAR Market on
-                        March 22
-                      </text>
-                    </p>
-                    <p class="">
-                      · The company’s US branch, OBiO Tech., founded for
-                      expanding business outside China
-                    </p>
-                  </div>
-                  <span>2022</span>
-                </li>
-                <li class="l-con">
-                  <div
-                    class="cont wow fadeIn animated"
-                    data-wow-duration="2.4s"
-                    style="
-                      visibility: visible;
-                      animation-duration: 2.4s;
-                      animation-name: fadeIn;
-                    "
-                  >
-                    <p class="">
-                      ·
-                      <text class=" title-color txt-bold">
-                        Lingang CGT GMP production base (Floorage: 80,000m2)
-                        commissioned on April 21
-                      </text>
-                    </p>
-                    <p class="">
-                      · By 23H1, OBiO had helped its clients to get a total of
-                      25 IND approval letters (8 of which were from FDA)
-                    </p>
-                  </div>
-                  <span>2023 future </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </el-col>
-    </section> -->
     <div class="section-2">
       <el-col
         :xs="14"
@@ -659,11 +356,7 @@
         </h1>
         <el-row class="our-box-content" :gutter="40">
           <el-col :span="8" :xs="24" class="left-content">
-            <img
-              class="img"
-              :src="handleViteImages('life_bg.png')"
-              alt=""
-            />
+            <img class="img" :src="handleViteImages('life_bg.png')" alt="" />
           </el-col>
           <el-col :span="16" :xs="24" class="font-size20 news-list">
             <h3
@@ -768,9 +461,10 @@ Responses at First Instance`,
 </script>
 
 <style>
-.txt-color{
+.txt-color {
   color: #5be2eb;
-}</style>
+}
+</style>
 <style lang="scss" scoped>
 .about-box {
   margin: 0 !important;
@@ -818,9 +512,8 @@ Responses at First Instance`,
       margin: auto;
       display: flex;
       justify-content: center;
-      width: 180px;
+      width: 160px;
     }
   }
 }
-
 </style>

@@ -42,6 +42,9 @@
   color: $textColor;
 }
 @media (max-width: 765px) {
+  .service--box_link{
+    height: 410px !important;
+  }
   .hero-style-top {
     margin-top: -20px !important;
   }
