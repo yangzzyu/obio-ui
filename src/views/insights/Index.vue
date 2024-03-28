@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-27 17:03:57
+ * @LastEditTime: 2024-03-28 10:26:23
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -45,6 +45,14 @@ const pageData = ref([
     name: "Events",
     focusObj: {
       title: "Insights",
+      hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
+      visibleXsImgUrl: handleViteImages("head_bg.jpg"),
+    },
+  },
+  {
+    name: "Inquiry",
+    focusObj: {
+      title: "Inquiry",
       hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
       visibleXsImgUrl: handleViteImages("head_bg.jpg"),
     },

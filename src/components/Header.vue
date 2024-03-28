@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-22 21:59:54
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-27 17:08:24
+ * @LastEditTime: 2024-03-28 10:25:44
  * @FilePath: \obio-ui\src\components\Header.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -132,11 +132,56 @@
               }"
             >
               <template #title>
-                <div @click="router.push('/cdmo')" class="menu-t1">
+                <div @click="router.push('/Manufacturing')" class="menu-t1">
                   CDMO Solutions
                 </div>
               </template>
-              <el-menu-item index="/process">Process Development</el-menu-item>
+              <el-menu-item index="/cdmo">
+                <template #title>
+                  <div
+                    @click="router.push('/cdmo')"
+                    v-scroll-to="{
+                      element: '.section-3',
+                      duration: 300,
+                      easing: 'ease',
+                      offset: 1,
+                    }"
+                  >
+                    Manufacturing
+                  </div>
+                </template></el-menu-item
+              >
+              <el-menu-item index="/cdmo">
+                <template #title>
+                  <div
+                    @click="router.push('/cdmo')"
+                    v-scroll-to="{
+                      element: '#cro',
+                      duration: 300,
+                      easing: 'ease',
+                      offset: 1,
+                    }"
+                  >
+                    CDMO
+                  </div>
+                </template></el-menu-item
+              >
+              <el-menu-item index="/cdmo">
+                <template #title>
+                  <div
+                    @click="router.push('/cdmo')"
+                    v-scroll-to="{
+                      element: '#innovation',
+                      duration: 300,
+                      easing: 'ease',
+                      offset: 1,
+                    }"
+                  >
+                    Innovation
+                  </div>
+                </template></el-menu-item
+              >
+              <!-- <el-menu-item index="/process">Process Development</el-menu-item>
               <el-sub-menu index="/cgmp">
                 <template #title>
                   <div @click="router.push('/cgmp')">CGMP Manufacturing</div>
@@ -153,7 +198,7 @@
               <el-menu-item index="/quality">Quality & Regulatory</el-menu-item>
               <el-menu-item index="/logistics"
                 >Cold Chain Logistics</el-menu-item
-              >
+              > -->
             </el-sub-menu>
             <el-menu-item index="/cro" class="menu-t1"
               >CRO Service</el-menu-item
@@ -170,6 +215,7 @@
               </template>
               <el-menu-item index="/releases">News</el-menu-item>
               <el-menu-item index="/events">Events</el-menu-item>
+              <el-menu-item index="/inquiry">Learn More</el-menu-item>
               <!-- <el-menu-item index="/news">Events</el-menu-item> -->
               <el-menu-item index="news">
                 <a href="https://www.obiosh.com/tzz/gg/" target="_blank"
@@ -321,7 +367,52 @@
               CDMO Solutions
             </div>
           </template>
-          <el-menu-item index="/process">Process Development</el-menu-item>
+          <el-menu-item index="/cdmo">
+            <template #title>
+              <div
+                @click="router.push('/cdmo')"
+                v-scroll-to="{
+                  element: '.section-3',
+                  duration: 300,
+                  easing: 'ease',
+                  offset: 1,
+                }"
+              >
+                Manufacturing
+              </div>
+            </template></el-menu-item
+          >
+          <el-menu-item index="/cdmo">
+            <template #title>
+              <div
+                @click="router.push('/cdmo')"
+                v-scroll-to="{
+                  element: '#cro',
+                  duration: 300,
+                  easing: 'ease',
+                  offset: 1,
+                }"
+              >
+                CDMO
+              </div>
+            </template></el-menu-item
+          >
+          <el-menu-item index="/cdmo">
+            <template #title>
+              <div
+                @click="router.push('/cdmo')"
+                v-scroll-to="{
+                  element: '#innovation',
+                  duration: 300,
+                  easing: 'ease',
+                  offset: 1,
+                }"
+              >
+                Innovation
+              </div>
+            </template></el-menu-item
+          >
+          <!-- <el-menu-item index="/process">Process Development</el-menu-item>
           <el-sub-menu index="/cgmp">
             <template #title>
               <div @click="router.push('/cgmp')">CGMP Manufacturing</div>
@@ -334,7 +425,7 @@
             >
           </el-sub-menu>
           <el-menu-item index="/quality">Quality & Regulatory</el-menu-item>
-          <el-menu-item index="/logistics">Cold Chain Logistics</el-menu-item>
+          <el-menu-item index="/logistics">Cold Chain Logistics</el-menu-item> -->
         </el-sub-menu>
         <el-menu-item index="/cro" class="menu-t1">CRO Service</el-menu-item>
         <el-sub-menu
