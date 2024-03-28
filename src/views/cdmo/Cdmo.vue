@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 16:33:13
+ * @LastEditTime: 2024-03-28 10:18:33
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -21,10 +21,7 @@
         <el-row :gutter="50" class="cdmo-top">
           <el-col :xs="24" :span="6"
             ><div class="animate-imgxx uof img">
-              <img
-                :src="handleViteImages('cdmo_top.png')"
-                alt="SPIRO Site"
-              />
+              <img :src="handleViteImages('cdmo_top.png')" alt="SPIRO Site" />
             </div>
           </el-col>
           <el-col :xs="24" :span="18">
@@ -249,7 +246,7 @@
                   • {{ i }}
                 </li>
               </ul>
-              <router-link to="/spiroSite" class="font-size18 fontf7 btn-a mt-3"
+              <router-link :to="item.path" class="font-size18 fontf7 btn-a mt-3"
                 >Read More</router-link
               ></el-col
             >
@@ -257,7 +254,7 @@
         </el-col>
       </div>
     </section>
-    <section>
+    <section id="innovation">
       <div class="in-about-wrap innovation-box">
         <div class="section-3">
           <el-col
@@ -279,9 +276,7 @@
                   <div class="manufacturing-list">
                     <div class="content">
                       <img
-                        :src="
-                          handleViteImages('innovation1.png')
-                        "
+                        :src="handleViteImages('innovation1.png')"
                         alt="SPIRO Site"
                       />
                     </div>
@@ -290,19 +285,18 @@
                   <p class="font-size18 txt textColor txt-bold">
                     Next-Generation Capsid <br />Screening Platform
                   </p>
-                  <router-link
-                    to="/spiroSite"
+                  <a
+                    style="cursor: pointer"
+                    @click="popLabora(1)"
                     class="read-more font-size18 fontf7 mt-3"
-                    >Read More</router-link
+                    >Read More</a
                   >
                 </el-col>
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
                   <div class="manufacturing-list">
                     <div class="content">
                       <img
-                        :src="
-                          handleViteImages('innovation2.png')
-                        "
+                        :src="handleViteImages('innovation2.png')"
                         alt="PINE Site"
                       />
                     </div>
@@ -311,19 +305,18 @@
                   <p class="font-size18 textColor txt txt-bold">
                     Versatility for Various Needs
                   </p>
-                  <router-link
-                    to="/pineSite"
+                  <a
+                    style="cursor: pointer"
+                    @click="popLabora(2)"
                     class="read-more font-size18 fontf7 mt-3"
-                    >Read More</router-link
+                    >Read More</a
                   >
                 </el-col>
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
                   <div class="manufacturing-list">
                     <div class="content">
                       <img
-                        :src="
-                          handleViteImages('innovation3.png')
-                        "
+                        :src="handleViteImages('innovation3.png')"
                         alt="OBiO Intelli-M"
                       />
                     </div>
@@ -335,10 +328,11 @@
                     High-Yielding Cell Line for <br />
                     Suspension Culture
                   </p>
-                  <router-link
-                    to="/intelliM"
+                  <a
+                    style="cursor: pointer"
+                    @click="popLabora(3)"
                     class="read-more font-size18 fontf7 mt-3"
-                    >Read More</router-link
+                    >Read More</a
                   >
                 </el-col>
               </el-row>
@@ -347,117 +341,27 @@
         </div>
       </div>
     </section>
-    <!-- <div class="Insights-wrap">
-      <div class="section-3">
-        <el-col
-          :xs="22"
-          :sm="20"
-          :md="20"
-          :lg="20"
-          :xl="22"
-          style="margin: auto"
-        >
-          <div class="pub-title pub-title-p ub ub-ver ub-pe">
-            <i class="line"></i>
-            <span class="fontf8 font-size50">Knowledge Center</span>
-            <div class="p font-size18"></div>
-          </div>
-
-          <div class="Knowledge-groups">
-            <div class="groups" id="1">
-              <div class="labs font-size30 fontf7">Laboratory Sciences</div>
-              <div class="in-news-Knowledge-swp">
-                <Swiper
-                  :modules="[Autoplay, Navigation, Scrollbar]"
-                  :observer="true"
-                  :observeParents="true"
-                  :slidesPerView="4"
-                  :spaceBetween="25"
-                  :navigation="sciencesNavigation"
-                  :breakpoints="sciencesBreakpoints"
-                >
-                  <swiper-slide
-                    v-for="(item, index) in SciencesList"
-                    :key="index"
-                  >
-                    <div class="block boxs tans">
-                      <img
-                        :src="item.imgUrl"
-                        class="img-responsive"
-                        :alt="item.tit"
-                      /></div
-                  ></swiper-slide>
-                </Swiper>
-              </div>
-              <div class="in-news-event-btn2 ub ub-ac ub-pc">
-                <div
-                  class="pub-ico-left swiper-button-disabled"
-                  id="inNewsKnowledgeWp1Prev"
-                  tabindex="0"
-                  role="button"
-                  aria-label="Previous slide"
-                  aria-disabled="true"
-                ></div>
-                <div
-                  class="pub-ico-right"
-                  id="inNewsKnowledgeWp1Next"
-                  tabindex="0"
-                  role="button"
-                  aria-label="Next slide"
-                  aria-disabled="false"
-                ></div>
-              </div>
-            </div>
-
-            <div class="groups" id="2">
-              <div class="labs font-size30 fontf7">CDMO Solutions</div>
-              <div class="in-news-Knowledge-swp">
-                <Swiper
-                  :modules="[Autoplay, Navigation, Scrollbar]"
-                  :observer="true"
-                  :observeParents="true"
-                  :slidesPerView="4"
-                  :spaceBetween="25"
-                  :navigation="solutionsNavigation"
-                  :breakpoints="sciencesBreakpoints"
-                >
-                  <swiper-slide
-                    v-for="(item, index) in SolutionsList"
-                    :key="index"
-                  >
-                    <div class="block boxs tans">
-                      <img
-                        :src="item.imgUrl"
-                        class="img-responsive"
-                        :alt="item.tit"
-                      /></div
-                  ></swiper-slide>
-                </Swiper>
-              </div>
-              <div class="in-news-event-btn2 ub ub-ac ub-pc">
-                <div
-                  class="pub-ico-left swiper-button-disabled"
-                  id="inNewsKnowledgeWp2Prev"
-                  tabindex="0"
-                  role="button"
-                  aria-label="Previous slide"
-                  aria-disabled="true"
-                ></div>
-                <div
-                  class="pub-ico-right"
-                  id="inNewsKnowledgeWp2Next"
-                  tabindex="0"
-                  role="button"
-                  aria-label="Next slide"
-                  aria-disabled="false"
-                ></div>
-              </div>
-            </div>
-          </div>
-        </el-col>
-      </div>
-    </div> -->
   </div>
+  <el-dialog
+    v-model="dialogVisible"
+    title=""
+    width="60%"
+    :before-close="handleClose"
+  >
+    <div class="popLaboraBox-main">
+      <div class="font-size50 fontf8 title">
+        <span>{{ Labora.title }}</span>
+      </div>
+      <div class="text color666 font-size18">
+        <p>
+          <span style="line-height: 2"> {{ Labora.txt }}</span>
+        </p>
+        <p>
+          <br />
+        </p>
+      </div>
+    </div>
+  </el-dialog>
 </template>
 
 <script lang="ts" setup name="Cdmo">
@@ -552,6 +456,7 @@ const croList = ref([
   {
     imgUrl: handleViteImages("cdmo1.png"),
     title: "Viral Vectors",
+    path: "/vector",
     textArr: [
       "AAV",
       "Adenoviral vector for delivery of genes",
@@ -563,6 +468,7 @@ const croList = ref([
   {
     imgUrl: handleViteImages("cdmo2.png"),
     title: "Oncolytic Virus",
+    path: "/virus",
     textArr: [
       "Oncolytic adenoviruses",
       "Oncolytic herpes simplex virus",
@@ -574,6 +480,7 @@ const croList = ref([
   {
     imgUrl: handleViteImages("cdmo3.png"),
     title: "Cell Therapy Products",
+    path: "/products",
     textArr: [
       "Autologous and homologous immunocyte therapies",
       "CAR-T Therapy",
@@ -588,6 +495,7 @@ const croList = ref([
   {
     imgUrl: handleViteImages("cdmo4.png"),
     title: "Plasmid Nucleotides",
+    path: "/nucleotides",
     textArr: [
       "Plasmid DNA",
       "Minicircle plasmids",
@@ -615,7 +523,34 @@ cellSource.value = 170;
 processSource.value = 200;
 analyticalSource.value = 500;
 
-const activeIndex = ref(0);
+const dialogVisible = ref(false);
+function handleClose() {
+  Labora.value = {};
+  dialogVisible.value = false;
+}
+const Labora = ref(<any>{});
+const LaboraList = ref([
+  {
+    id: 1,
+    title: "AAVneO™ System：Next-Generation Capsid Screening Platform",
+    txt: `Our AAVneO™ system uses in-vivo direct evolution and high-throughput screening to discover the next-generation adeno-associated viral vectors with enhanced targeting ability, improved payload size, lower immunogenicity, and superior manufacturability.Scientists at OBiO have constructed the 7-mers mutagenesis libraries for AAV serotypes with billion-level library abundance. AAVneO™ will serve as an integrated platform that enables gene therapy developers to screen, select, and co-develop the next-generation vectors for a broad range of diseases and overcome the limitations of conventional AAV-based gene therapies.`,
+  },
+  {
+    id: 2,
+    title: "OVersatileTM Platform: Versatility for Various Needs",
+    txt: `Comprehensive process development capabilities are the critical determinant to fulfill the various development and manufacturing needs. Our OVersatilie™ process development platform aims to offer an integrated solutions for various gene and cell therapy product. The platform covers cell factories, fixed bed bioreactors, dissolvable microcarriers, and roller bottles for adherent cell culture process, the large-scale, serum-free suspension cell culture process, and conventional cell lines including 293-based cells, Vero cells, and HeLa cells. Process development experts at OBiO will assist you to diagnose the manufacturing gaps, optimize the parameters with the versatile platform, and de-risk your industrialization process.`,
+  },
+  {
+    id: 3,
+    title:
+      "Proprietary Cell Line Development: High-Yielding Cell Line for Suspension Culture",
+    txt: `Discovering a stable and high-yield cell line is a consistent goal for a CDMO solution provider. Our experienced research team dedicates to the development of proprietary high-yielding cell clones and optimizing the cell culture process and media formulation. At the current stage, our team has obtained a single-cell derived clone for AAV suspension culture with 30% to 50% improvement in viral titer compared to the conventional HEK293 cells. We will keep progressing on the screening process of a single-cell derived clone with superior performance.`,
+  },
+]);
+function popLabora(id) {
+  Labora.value = LaboraList.value.find((i) => i.id === id) || {};
+  dialogVisible.value = true;
+}
 </script>
 
 <style lang="scss">

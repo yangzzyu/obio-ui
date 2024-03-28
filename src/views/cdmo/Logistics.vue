@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-19 17:29:29
+ * @LastEditTime: 2024-03-27 16:45:12
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -46,11 +46,8 @@
             ><strong
               ><u>
                 <router-link to="/contact">
-                  <!-- <a href="/cn/home/contact" target="_blank"
-                    > -->
                   Any questions about cold-chain transportation, please feel
                   free to contact one of our technical consultants.
-                  <!-- </a> -->
                 </router-link></u
               ></strong
             ></span
@@ -63,21 +60,10 @@
       </div>
     </el-col>
   </div>
-  <!-- </div> -->
 </template>
 
 <script lang="ts" setup name="Process">
 import { ref } from "vue";
-// import { useTransition } from "@vueuse/core";
-import { ViralList } from "./data/Index.ts";
-// import Focus from "@/components/Focus.vue";
-import { handleViteImages } from "@/utils";
-import { ArrowRight } from "@element-plus/icons-vue";
-const FocusData = ref({
-  title: "CDMO Solutions",
-  imgUrl:
-    "https://www.obio-tech.com/public/uploads/20220328/d7b226a5e9332f9804019e59344efe3b.jpg",
-});
 </script>
 
 <style lang="scss" scoped>
@@ -95,7 +81,6 @@ const FocusData = ref({
     position: absolute;
     left: 0;
     top: 10px;
-    // border-radius: 50%;
   }
 }
 </style>

@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 16:58:17
+ * @LastEditTime: 2024-03-27 17:01:49
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -39,7 +39,6 @@
           <div class="fontf7 font-size50 ct">
             <span>Quality Assurance System</span>
           </div>
-          <!-- <i class="bg"></i> -->
         </div>
 
         <div class="text font-size20 color666 cGMP-zIndex">
@@ -76,7 +75,6 @@
           <div class="fontf7 font-size50 ct">
             <span>De-risk Your Regulatory Pathway</span>
           </div>
-          <!-- <i class="bg"></i> -->
         </div>
         <div class="text font-size20 color666">
           <p style="line-height: 1.8">
@@ -114,7 +112,6 @@
         <a name="a3"></a>
         <div class="cGMP-title-t2">
           <div class="fontf7 font-size50 ct"><span>Why OBiO?</span></div>
-          <!-- <i class="bg"></i> -->
         </div>
         <div class="Viral-Vector-wrap cGMP-zIndex">
           <div class="section-3" style="background: transparent">
@@ -139,7 +136,6 @@
 
 <script lang="ts" setup name="Process">
 import { ref } from "vue";
-// import { useTransition } from "@vueuse/core";
 import { ViralList } from "./data/Index.ts";
 import { handleViteImages } from "@/utils";
 import { ArrowRight } from "@element-plus/icons-vue";
@@ -147,15 +143,6 @@ import { ArrowRight } from "@element-plus/icons-vue";
 const cellSource = ref(0);
 const processSource = ref(0);
 const analyticalSource = ref(0);
-// const cellSourceValue = useTransition(cellSource, {
-//   duration: 1500,
-// });
-// const processSourceValue = useTransition(processSource, {
-//   duration: 1500,
-// });
-// const analyticalSourceValue = useTransition(analyticalSource, {
-//   duration: 1500,
-// });
 cellSource.value = 170;
 processSource.value = 200;
 analyticalSource.value = 500;

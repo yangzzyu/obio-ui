@@ -57,9 +57,6 @@ function scrollHandle() {
   width: 100%;
   box-sizing: border-box;
 }
-/* .el-header {
-  height: 90px !important;
-} */
 .aside {
   width: 64px !important;
   height: 100%;
@@ -70,6 +67,5 @@ function scrollHandle() {
 .index-main,
 .el-footer {
   padding: 0px;
-  /* border-left: 2px solid #333; */
 }
 </style>

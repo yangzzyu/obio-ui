@@ -1,49 +1,6 @@
 <template>
   <div class="Insights-wrap">
-    <section id="cro" class="cro-list">
-      <div
-        class="cro-list-item row"
-        v-for="(item, index) in releasesList"
-        :key="index"
-      >
-        <el-col
-          :xs="22"
-          :sm="20"
-          :md="20"
-          :lg="20"
-          :xl="22"
-          style="margin: auto"
-          class="container"
-        >
-          <p class="font-size24 iti textColor">
-            {{ item.time }}
-          </p>
-          <h1 class="title fontf4 font-size28 title-color">
-            {{ item.title }}
-          </h1>
-          <div class="font-size18 ut-s2">
-            {{ item.content }}
-          </div>
-          <router-link
-            :to="
-              item.type == 'news'
-                ? '/news-details/releases/' + item.id
-                : '/news-details/events/' + item.id
-            "
-            class="read-more font-size18 fontf7"
-            >Read More</router-link
-          >
-        </el-col>
-      </div>
-      <router-link
-        to="/releases"
-        class="btn-a font-size18 fontf7 bg-pinkbluelfr mb-5"
-      >
-        All Press Releases
-      </router-link>
-    </section>
-    <Events :isShow="true" />
-    <section id="productions" class="productions-list">
+    <section id="Inquiry" class="productions-list">
       <el-col
         :xs="22"
         :sm="20"
@@ -53,34 +10,10 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
-          Productions
-        </h1>
-        <el-row :gutter="50" class="cdmo-top">
-          <el-col :xs="24" :span="8"
-            ><div class="animate-imgxx uof img">
-              <img
-                width="100%"
-                :src="handleViteImages('productions.png')"
-                alt="SPIRO Site"
-              />
-            </div>
-          </el-col>
-          <el-col :xs="24" :span="16">
-            <p class="font-size20 cro-p textColor">
-              Discover OBiO Tech's Cutting-Edge Intelli-M GMP-Compliant Viral
-              Vector Production Line. Unlock Comprehensive and Diversified
-              Solutions for Large-Scale Production, Offering Capacities Ranging
-              from 20L to 2000L. Elevate Your Production Efficiency Today! #cgt
-              #cellandgenetherapy #genetherapy #celltherapy #cdmo #2024trends
-              #globaldata #asgct
-            </p>
-          </el-col>
-        </el-row>
         <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Inquiry</h1>
         <el-row :gutter="50" class="cdmo-top">
           <el-col :xs="24" :span="12">
-            <h3 class="title-color font-size18 txt-bold fontf7">
+            <h3 class="title-color font-size36 txt-bold fontf7">
               Laboratory Sciences
             </h3>
 
@@ -126,7 +59,7 @@
             </el-checkbox-group>
           </el-col>
           <el-col :xs="24" :span="12">
-            <h3 class="title-color font-size18 txt-bold fontf7">
+            <h3 class="title-color font-size36 txt-bold fontf7">
               CDMO Solutions
             </h3>
             <el-checkbox-group
@@ -258,7 +191,6 @@
                 </div>
               </el-form-item>
               <div class="fontf3 font-size14">
-                <!-- to="/releases" -->
                 <a class="btn-a font-size18 fontf7 bg-pinkbluelfr"> Submit</a>
               </div>
             </el-form>
@@ -272,90 +204,7 @@
 <script lang="ts" setup name="Cdmo">
 import { ref, reactive } from "vue";
 import { releases, events } from "./data/Index";
-import Events from "@/components/Events.vue";
 import { handleViteImages } from "@/utils";
-
-import {
-  Autoplay,
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-} from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/vue";
-// 引入swiper样式（按需导入）
-import "swiper/css";
-import "swiper/css/pagination"; // 轮播图底面的小圆点
-import "swiper/css/navigation"; // 轮播图两边的左右箭头
-import "swiper/css/scrollbar"; // 轮播图的滚动条
-const navigation = ref({
-  nextEl: "#inNewNext",
-  prevEl: "#inNewPrev",
-  hideOnClick: true,
-});
-const breakpoints = ref({
-  320: {
-    //当屏幕宽度大于等于320
-    slidesPerView: 2,
-    spaceBetween: 0,
-  },
-  768: {
-    //当屏幕宽度大于等于768
-    slidesPerView: 2,
-    spaceBetween: 10,
-  },
-  1280: {
-    //当屏幕宽度大于等于1280
-    slidesPerView: 3,
-  },
-  1580: {
-    //当屏幕宽度大于等于1280
-    slidesPerView: 3,
-  },
-});
-
-const sciencesNavigation = ref({
-  nextEl: "#inNewsKnowledgeWp1Next",
-  prevEl: "#inNewsKnowledgeWp1Prev",
-});
-const sciencesBreakpoints = ref({
-  320: {
-    //当屏幕宽度大于等于320
-    slidesPerView: 2,
-    spaceBetween: 10,
-  },
-  768: {
-    //当屏幕宽度大于等于768
-    slidesPerView: 2,
-    spaceBetween: 12,
-  },
-  1280: {
-    //当屏幕宽度大于等于1280
-    slidesPerView: 4,
-    spaceBetween: 25,
-  },
-});
-const solutionsNavigation = ref({
-  nextEl: "#inNewsKnowledgeWp2Next",
-  prevEl: "#inNewsKnowledgeWp2Prev",
-});
-const solutionsBreakpoints = ref({
-  320: {
-    //当屏幕宽度大于等于320
-    slidesPerView: 2,
-    spaceBetween: 10,
-  },
-  768: {
-    //当屏幕宽度大于等于768
-    slidesPerView: 2,
-    spaceBetween: 12,
-  },
-  1280: {
-    //当屏幕宽度大于等于1280
-    slidesPerView: 4,
-    spaceBetween: 25,
-  },
-});
 const form = reactive({
   laboratory: [],
   cdmo: [],
@@ -369,11 +218,6 @@ const changeCdmo = (e) => {
   const arr = [...form.laboratory, ...form.cdmo];
   form.comment = arr.join("\n");
 };
-const releasesList = ref([]);
-releasesList.value = [
-  ...releases.value.slice(0, 3),
-  ...events.value.slice(0, 2),
-];
 </script>
 
 <style lang="scss" scoped>

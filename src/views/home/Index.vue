@@ -2,27 +2,10 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-03-18 22:04:02
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 16:29:33
+ * @LastEditTime: 2024-03-27 16:51:49
  * @FilePath: \obio-ui\src\views\home\Index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
-<!--
- * @Author: yangyu 1431330771@qq.com
- * @Date: 2024-01-17 09:07:47
- * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-20 14:14:25
- * @FilePath: \obio-ui\src\views\HomeView.vue
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
--->
-<!-- <script setup>
-import TheWelcome from "../components/TheWelcome.vue";
-</script>
-
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template> -->
 
 <template>
   <div class="index">
@@ -202,7 +185,6 @@ import TheWelcome from "../components/TheWelcome.vue";
                   </h3>
                   <div style="height: 200px" class="cdmo-cont">
                     <ul class="txt-ul">
-                      <!-- <h4 v-if="item.headTit">{{ item.headTit }}</h4> -->
                       <li
                         v-for="(i, idx) in item.list"
                         :key="idx"
@@ -212,11 +194,8 @@ import TheWelcome from "../components/TheWelcome.vue";
                       </li>
                     </ul>
                   </div>
-                  <!-- <span class="mt-auto flex-shrink-0 btn--underline blog-btn"
-                    >Read More</span
-                  > -->
                   <router-link
-                    to="/cdmo"
+                    :to="item.path"
                     class="mt-auto flex-shrink-0 btn--underline blog-btn font-size18 fontf7"
                     >Read More</router-link
                   >
@@ -273,10 +252,6 @@ import TheWelcome from "../components/TheWelcome.vue";
         </el-col>
       </section>
       <section id="Ourout" class="">
-        <!-- <div class="pub-title-p ub ub-ver ub-pe">
-          <i class="line"></i>
-          <div class="p font-size18"></div>
-        </div> -->
         <el-col
           :span="24"
           style="margin: auto"
@@ -295,7 +270,11 @@ import TheWelcome from "../components/TheWelcome.vue";
                   :key="k"
                   :class="activeIndex === i.id ? 'active' : ''"
                   @mouseenter="activeIndex = i.id"
-                  ><a href="#" class="boxs block">
+                  ><a
+                    class="boxs block"
+                    @click="popLabora(i.id)"
+                    style="cursor: pointer"
+                  >
                     <div class="img1">
                       <div class="icos">
                         <img :src="i.imgUrl" class="icos-a" :alt="i.title" />
@@ -326,18 +305,7 @@ import TheWelcome from "../components/TheWelcome.vue";
             See Our Capabilities
           </h1>
           <el-row :gutter="20" class="mb-4">
-            <!-- https://youtu.be/EqjpDvB0zJY?si=6NRlH_2xp7an93Xr
-            https://youtu.be/otK0yzBYHZ0?si=YtjJ-M8Q8EUxg93m
-            https://youtu.be/CZaS7IvYMJc?si=8go0JVTGqKO03r5l -->
             <el-col :span="8" :xs="24">
-              <!-- <iframe
-                width="100%"
-                height="615"
-                src="https://youtu.be/EqjpDvB0zJY?si=6NRlH_2xp7an93Xr"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe> -->
 
               <div class="manufacturing-list bg-pinkbluelfr video-list">
                 <div class="content">
@@ -369,14 +337,6 @@ import TheWelcome from "../components/TheWelcome.vue";
                     allowfullscreen
                   ></iframe>
 
-                  <!-- <iframe
-                    width="100%"
-                    height="300"
-                    src="https://www.youtube.com/embed/R6UtDlJShKo"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  ></iframe> -->
                   <p class="video-p font-size20 textColor">
                     Exciting Milestone: OBiO Lingang Facility Launches
                     Operations in 2023!
@@ -387,7 +347,6 @@ import TheWelcome from "../components/TheWelcome.vue";
             <el-col :span="8" :xs="24">
               <div class="manufacturing-list bg-pinkbluelfr video-list">
                 <div class="content">
-                  <!-- height="300" -->
                   <iframe
                     width="100%"
                     height="315"
@@ -397,13 +356,6 @@ import TheWelcome from "../components/TheWelcome.vue";
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
                   ></iframe>
-                  <!-- <iframe
-                    width="100%"
-                    src="https://youtu.be/EqjpDvB0zJY?si=-Yg1_knqtXA8v-Xb"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  ></iframe> -->
                   <p class="video-p font-size20 textColor">
                     Elevate Your Production Efficiency Today! OBiO Intelli-M GMP
                     offers Capacities from 20L to 2000L.
@@ -416,288 +368,31 @@ import TheWelcome from "../components/TheWelcome.vue";
       </section>
       <Events />
       <Career />
-      <!-- <section id="careerout" class="career-container">
-        <el-col
-          :xs="22"
-          :sm="20"
-          :md="20"
-          :lg="20"
-          :xl="22"
-          style="margin: auto"
-          class="container"
-        >
-          <h1 class="p-title font-size30 txt-bold fontFamily">
-            Career and CultureOur Culture
-          </h1>
-          <div class="wysiwyg--content colour-white">
-            <p class="fontFamily textColor">
-              Mission: Enable gene therapy for a better lives Value: Customer
-              First, Efficient Execution, Pursuit of Excellence, lnnovation
-              Breakthroughs, integrity and Pragmatism
-            </p>
-          </div>
-          <el-row class="news--slider row" :gutter="10">
-            <el-col :xs="24" :span="12" class="news--slider-i">
-              <router-link
-                to="/spiroSite"
-                class="block tans service--box_link bg-pinkbluelfr career-a"
-              >
-                <el-row
-                  :gutter="20"
-                  class="service--box align-items-start career-i"
-                >
-                  <el-col :span="8" class="career-i"
-                    ><div class="service--box_icon mb-3 min-width-70">
-                      <img
-                        class="icon--white"
-                        src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
-                        alt="GMP Vector Manufacturing icon"
-                      />
-                      <img
-                        class="icon--colour"
-                        src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
-                        alt="GMP Vector Manufacturing icon"
-                      /></div
-                  ></el-col>
-                  <el-col :span="16" class="career-i">
-                    <h1
-                      class="font-bold p-large mb-3 font-size30 txt-bold fontFamily"
-                    >
-                      Life in OBIO
-                    </h1></el-col
-                  >
-                </el-row>
-              </router-link>
-            </el-col>
-            <el-col :xs="24" :span="12" class="news--slider-i">
-              <router-link
-                to="/spiroSite"
-                class="block tans service--box_link bg-pinkbluelfr career-a"
-              >
-                <el-row
-                  :gutter="20"
-                  class="service--box align-items-start career-i"
-                >
-                  <el-col :span="8" class="career-i"
-                    ><div class="service--box_icon mb-3 min-width-70">
-                      <img
-                        class="icon--white"
-                        src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-white-2.svg"
-                        alt="GMP Vector Manufacturing icon"
-                      />
-                      <img
-                        class="icon--colour"
-                        src="https://www.genezen.com/wp-content/uploads/2021/08/gmp-vector-colour-1.svg"
-                        alt="GMP Vector Manufacturing icon"
-                      /></div
-                  ></el-col>
-                  <el-col :span="16" class="career-i">
-                    <h1
-                      class="font-bold p-large mb-3 font-size30 txt-bold fontFamily"
-                    >
-                      Job Opening
-                    </h1></el-col
-                  >
-                </el-row>
-              </router-link>
-            </el-col>
-          </el-row>
-        </el-col>
-      </section> -->
-
-      <!-- <div class="home-contact">
-        <el-col
-          :xs="22"
-          :sm="20"
-          :md="20"
-          :lg="20"
-          :xl="22"
-          style="margin: auto"
-          class="container"
-        >
-          <div class="pub-title ub ub-ver ub-pe">
-            <i class="line"></i
-            ><span class="fontf8 font-size50">Contact Us</span>
-          </div>
-          <el-row>
-            <el-col :span="12" :xs="24">
-              <el-form
-                ref="ruleFormRef"
-                :model="ruleForm"
-                :rules="rules"
-                label-width="180px"
-                class="form-contact-main"
-                :label-position="'top'"
-                status-icon
-              >
-                <el-row :gutter="20">
-                  <el-col :span="12" :xs="24">
-                    <el-form-item label="First Name" required>
-                      <el-input v-model="ruleForm.fname" />
-                    </el-form-item>
-                  </el-col>
-                  <el-col :span="12" :xs="24">
-                    <el-form-item label="Last Name" required>
-                      <el-input
-                        v-model="ruleForm.lname"
-                      /> </el-form-item></el-col
-                ></el-row>
-                <el-form-item label="Company" required>
-                  <el-input v-model="ruleForm.company" />
-                </el-form-item>
-                <el-row :gutter="20">
-                  <el-col :span="12" :xs="24">
-                    <el-form-item label="Email" required>
-                      <el-input v-model="ruleForm.email" /> </el-form-item
-                  ></el-col>
-                  <el-col :span="12" :xs="24">
-                    <el-form-item label="Phone Number" required>
-                      <el-input v-model="ruleForm.dh" /> </el-form-item></el-col
-                ></el-row>
-                <el-form-item label="I'm interested in…" required>
-                  <el-select v-model="ruleForm.xq" placeholder="">
-                    <el-option
-                      label="General Inquiry"
-                      value="General Inquiry"
-                    />
-                    <el-option
-                      label="Laboratory Sciences"
-                      value="Laboratory Sciences"
-                    />
-                    <el-option
-                      label="Process Development"
-                      value="Process Development"
-                    />
-                    <el-option
-                      label="Analytical/Formulation Development"
-                      value="Analytical/Formulation Development"
-                    />
-                    <el-option
-                      label="Non-IND (IIT) Service"
-                      value="Non-IND (IIT) Service"
-                    />
-                    <el-option
-                      label="IND-Enabling CMC (IND-CMC) Service"
-                      value="IND-Enabling CMC (IND-CMC) Service"
-                    />
-                    <el-option
-                      label="Clinical Manufacturing"
-                      value="Clinical Manufacturing"
-                    />
-                    <el-option
-                      label="Commercial Manufacturing"
-                      value="Commercial Manufacturing"
-                    />
-                    <el-option
-                      label="Extended Services (Pre-IND/Post-IND)"
-                      value="Extended Services (Pre-IND/Post-IND)"
-                    />
-                    <el-option
-                      label="Investor Relations"
-                      value="Investor Relations"
-                    />
-                  </el-select>
-                </el-form-item>
-                <el-form-item label="Questions or Comments" prop="content">
-                  <el-input v-model="ruleForm.content" type="textarea" />
-                </el-form-item>
-                <el-form-item label="Security Code" required>
-                  <el-col :span="11">
-                    <el-input v-model="ruleForm.verify" />
-                  </el-col>
-                  <el-col :span="11">
-                    <div class="put ub-f1" style="margin-left: 12px">
-                      <img
-                        class="verifyImg"
-                        id="captcha"
-                        src="captcha.png"
-                        alt="verifyImg"
-                        style="width: 150px; cursor: pointer; height: 38px"
-                      />
-                    </div>
-                  </el-col>
-                </el-form-item>
-                <el-form-item label="I AGREE" required>
-                  <div class="checks_text">
-                    <el-checkbox
-                      v-model="ruleForm.checked"
-                      size="large"
-                      class="checks_inpt"
-                    />
-                    <div class="checks_txt">
-                      By submitting this form I agree that OBiO may process my
-                      data in the manner described in OBiO’s<a
-                        xhref="/cn/home/ys/cid/861"
-                        target="_blank"
-                        style="color: #25b096"
-                        >Privacy Policy</a
-                      >
-                    </div>
-                  </div>
-                </el-form-item>
-                <el-form-item label="">
-                  <div class="lab fontf3 font-size18">
-                    We won’t share your information.
-                  </div>
-                </el-form-item>
-                <div class="sub fontf3 font-size14">
-                  <input
-                    lay-submit=""
-                    lay-filter="dataPost"
-                    type="button"
-                    value="SUBMIT"
-                  />
-                </div>
-              </el-form>
-            </el-col>
-            <el-col :span="12" :xs="24">
-              <div class="right-wrap">
-                <div class="ico-r6">
-                  <img
-                    src="ico6.png"
-                    class="img-responsive"
-                    style="max-width: 100%"
-                    alt=""
-                  />
-                </div>
-                <div class="ico-rline"></div>
-                <ul class="right-mes">
-                  <li>
-                    <div class="labr fontf3">Main</div>
-                    <div class="ms ico1 fontf3 font-size18">
-                      +86 400-151-5198
-                    </div>
-                  </li>
-                  <li>
-                    <div class="labr fontf3">Tel</div>
-                    <div class="ms icn1 fontf3 font-size18">
-                      +1-408-807-5641
-                    </div>
-                  </li>
-                  <li>
-                    <div class="labr fontf3">For General Inquiry</div>
-                    <div class="ms ico2 fontf3 font-size18">
-                      oobio@obiosh.com
-                    </div>
-                  </li>
-                  <li>
-                    <div class="labr fontf3">For Business Inquiry</div>
-                    <div class="ms ico2 fontf3 font-size18">bd@obiosh.com</div>
-                  </li>
-                  <li>
-                    <div class="labr fontf3">Address</div>
-                    <div class="ms icn2 fontf3 font-size18">
-                      446 S Hillview Dr Milpitas, CA 95035 U.S.A
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </el-col>
-          </el-row>
-        </el-col>
-      </div> -->
     </div>
   </div>
+  <el-dialog
+    v-model="dialogVisible"
+    title=""
+    width="80%"
+    :before-close="handleClose"
+  >
+    <div class="popLaboraBox-main">
+      <div class="font-size50 fontf8 title">
+        <span>{{ Labora.title }}</span>
+      </div>
+      <div class="text color666 font-size18">
+        <p>
+          <span style="line-height: 2"> {{ Labora.txt }}</span>
+        </p>
+        <p>
+          <br />
+        </p>
+        <p style="text-align: center">
+          <img v-if="Labora.imgUrl" :src="Labora.imgUrl" :alt="Labora.title" />
+        </p>
+      </div>
+    </div>
+  </el-dialog>
 </template>
 <script lang="ts" setup name="Home">
 import "wow.js/css/libs/animate.css";
@@ -735,6 +430,7 @@ const cdmoList = ref([
     imgUrl: handleViteImages("cdmo_service1.png"),
     actImgUrl: handleViteImages("cdmo_service_act1.png"),
     title: "Viral Vectors",
+    path: "/vector",
     list: [
       "AAV",
       "Adenoviral vector for delivery of genes",
@@ -746,6 +442,7 @@ const cdmoList = ref([
     imgUrl: handleViteImages("cdmo_service2.png"),
     actImgUrl: handleViteImages("cdmo_service_act2.png"),
     title: "Oncolytic Virus",
+    path: "/virus",
     list: [
       "Oncolytic adenoviruses",
       "Oncolytic herpes simplex virus",
@@ -758,6 +455,7 @@ const cdmoList = ref([
     actImgUrl: handleViteImages("cdmo_service_act3.png"),
     title: "Cell Therapy Products",
     headTit: "Autologous and homologous immunocyte therapies",
+    path: "/products",
     list: [
       "Autologous and homologous immunocyte therapies",
       "CAR-T Therapy",
@@ -773,6 +471,7 @@ const cdmoList = ref([
     imgUrl: handleViteImages("cdmo_service4.png"),
     actImgUrl: handleViteImages("cdmo_service_act4.png"),
     title: "Plasmid & Nucleotides",
+    path: "/nucleotides",
     list: [
       "Plasmid DNA",
       "Minicircle plasmids",
@@ -908,6 +607,38 @@ function changeActive(index) {
 function setBannerHeight() {
   BannerHeight.value = window.innerHeight;
 }
+const LaboraList = ref([
+  {
+    id: 0,
+    title: "Dedication to Contract Development and Manufacturing Service",
+    txt: `Strict Internal Data Management Comprehensive Patent System Professional Intellectual Property Protection`,
+  },
+  {
+    id: 1,
+    title: "Commercial Readiness from Technical Expertise",
+    txt: `Advanced Process Development Technologies Large-Scale Manufacturing Capabilities Fully-Closed & Automated Downstream Purification`,
+  },
+  {
+    id: 2,
+    title: "Fully Regulatory Compliance",
+    txt: `GMP-Compliant Facilities and Equipment Robust Quality Management System Comprehensive Quality Control Platform`,
+  },
+  {
+    id: 3,
+    title: "Trustful Expertise",
+    txt: `10+ years of Experience in Gene and Cell Therapy Extensive Experience in IND-Enabling Support Responses at First Instance`,
+  },
+]);
+const dialogVisible = ref(false);
+const Labora = ref(<any>{});
+function popLabora(id) {
+  Labora.value = LaboraList.value.find((i) => i.id === id) || {};
+  dialogVisible.value = true;
+}
+function handleClose() {
+  Labora.value = {};
+  dialogVisible.value = false;
+}
 </script>
 <style lang="scss" scoped>
 .banner-wrap {
@@ -930,23 +661,4 @@ function setBannerHeight() {
   display: flex;
   justify-content: center;
 }
-// .image--callout_image {
-//   // position: absolute;
-//   // top: 0;
-//   // right: 0;
-//   // bottom: 0;
-//   // left: 0;
-//   height: 100%;
-// }
-// .p-lg-3 {
-//   padding: 1.5rem;
-// }
-// .p-md-5 {
-//   padding: 4.5rem;
-// }
-// .order-md-1 {
-// }
-// .bg-pinkbluelfr {
-//   background: linear-gradient(50deg, #014c97 0, #00818b 66%);
-// }
 </style>

@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-22 16:09:01
+ * @LastEditTime: 2024-03-27 09:58:01
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -88,18 +88,14 @@
                       style="object-fit: cover"
                     />
                   </div>
-                  <!-- <div class="content">
-                    <img :src="i" alt="" srcset="" />
-                  </div> -->
                 </div>
               </el-col>
-            </el-row>
-          </div></el-col
-        >
+            </el-row></div
+        ></el-col>
       </div>
     </div>
-    <!-- All Hands Meetin -->
-    <section id="meeting" class="meetin-container">
+    <!-- All Hands Meeting -->
+    <section id="meeting" class="meeting-container">
       <el-col
         :xs="22"
         :sm="20"
@@ -226,7 +222,6 @@
     width="60%"
     :before-close="handleClose"
   >
-    <!-- <span>This is a message</span> -->
     <div class="popLaboraBox-main">
       <div class="font-size50 fontf8 title">
         <span>{{ Labora.title }}</span>
@@ -243,14 +238,6 @@
         </p>
       </div>
     </div>
-    <!-- <template #footer>
-      <span class="dialog-footer">
-        <el-button @click="dialogVisible = false">Cancel</el-button>
-        <el-button type="primary" @click="dialogVisible = false">
-          Confirm
-        </el-button>
-      </span>
-    </template> -->
   </el-dialog>
 </template>
 
@@ -264,20 +251,12 @@ const FocusData = ref({
   title: "Life in OBIO",
   hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
   visibleXsImgUrl: handleViteImages("head_bg.jpg"),
-  // hiddenXsImgUrl: handleViteImages("head_bg3.png"),
-  // visibleXsImgUrl: handleViteImages("head_bg3.png"),
 });
 const dialogVisible = ref(false);
 function handleClose() {
   Labora.value = {};
   dialogVisible.value = false;
 }
-const internshipList = reactive([
-  handleViteImages("life/carousel_bg1.png"),
-  handleViteImages("life/carousel_bg1.png"),
-  handleViteImages("life/carousel_bg1.png"),
-  handleViteImages("life/carousel_bg1.png"),
-]);
 const footballList = reactive([
   handleViteImages("life/football1.png"),
   handleViteImages("life/football2.png"),
@@ -288,55 +267,6 @@ type ViralItem = {
   title: string;
   path: string;
 };
-const ViralList = ref<ViralItem[]>([
-  {
-    id: 0,
-    imgUrl: handleViteImages("cdmo_icon1.png"),
-    title: "Focus",
-    path: "/process",
-  },
-  {
-    id: 1,
-    imgUrl: handleViteImages("cdmo_icon2.png"),
-    title: "Acceleration",
-    path: "/cgmp",
-  },
-  {
-    id: 2,
-    imgUrl: handleViteImages("cdmo_icon3.png"),
-    title: "Standardization",
-    path: "/quality",
-  },
-  {
-    id: 3,
-    imgUrl: handleViteImages("cdmo_icon4.png"),
-    title: "Team",
-    path: "/logistics",
-  },
-]);
-const croList = ref([
-  {
-    imgUrl: handleViteImages("croIcon1.png"),
-    title: "Vision by 2026:",
-    text: `Providing client-centered and high-quality 
-service as our commitment, we strive to 
-become a world-leading gene and cell 
-therapy CXO group. 
-`,
-  },
-  {
-    imgUrl: handleViteImages("croIcon2.png"),
-    title: "Value:",
-    text: `Customer Focus, Efficient Execution, 
-Excellence, Innovation, Integrity.
-`,
-  },
-  {
-    imgUrl: handleViteImages("croIcon3.png"),
-    title: "Original Aspiration：",
-    text: `Developing gene therapies for the welfare ofmankind by virtue of its in-house developedall-round technology platform, its R&D and GMPproduction centers (floorage: 15,000 m2), and its77,000 m2 Lingang base (under construction),0Bi0 is dedicated to constantly acceleratinggene therapies researches, drug discovery,.pharmaceutical studies, clinical and commercialdevelopment of gene therapies`,
-  },
-]);
 const Labora = ref(<any>{});
 const lifeList = reactive([
   {

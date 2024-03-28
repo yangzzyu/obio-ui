@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-27 15:11:10
+ * @LastEditTime: 2024-03-27 16:48:50
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -24,7 +24,7 @@
             <el-col :xs="22" :sm="10" :md="10" :lg="8" :xl="6">
               <div class="img block">
                 <img
-                  src="https://www.obio-tech.com/public/uploads/20220516/d8b8355145a015301357a31e5dd4d335.png"
+                  :src="handleViteImages('innovation1.png')"
                   class="img-responsive"
                   alt="AAVneO™ System：Next-Generation Capsid Screening Platform"
                 />
@@ -61,7 +61,7 @@
             >
               <div class="img block">
                 <img
-                  src="https://www.obio-tech.com/public/uploads/20220516/4ab34faa4be936bbde3c5e3445913f4a.png"
+                  :src="handleViteImages('innovation2.png')"
                   class="img-responsive"
                   alt="OVersatileTM Platform: Versatility for Various Needs"
                 />
@@ -100,7 +100,7 @@
             <el-col :xs="22" :sm="10" :md="10" :lg="8" :xl="6">
               <div class="img block">
                 <img
-                  src="https://www.obio-tech.com/public/uploads/20220516/7764b7189eacd23a0fc6c0bb9d5f8777.png"
+                  :src="handleViteImages('innovation3.png')"
                   class="img-responsive"
                   alt="Proprietary Cell Line Development: High-Yielding Cell Line for
                   Suspension Culture"
@@ -141,14 +141,14 @@ import Events from "@/components/Events.vue";
 import Focus from "@/components/Focus.vue";
 import { useRouter } from "vue-router";
 import { computed, onBeforeMount, ref, toRefs, watch } from "vue";
+import { handleViteImages } from "@/utils";
+
 const router = useRouter();
 const currentRoute = router.currentRoute.value;
 const FocusData = ref({
   title: "Innovations",
-  hiddenXsImgUrl:
-    "https://www.obio-tech.com/public/uploads/20220326/4ab814317bb256727a28d9a4db4ab985.jpg",
-  visibleXsImgUrl:
-    "https://www.obio-tech.com/public/uploads/20220401/738cbfe8dcb34bdd6fbb7f55611297fa.jpg",
+  hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
+  visibleXsImgUrl: handleViteImages("head_bg.jpg"),
 });
 </script>
 

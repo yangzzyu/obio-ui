@@ -2,7 +2,138 @@ import { ref } from "vue";
 
 export const releases = ref([
   {
+    id: 17,
+    type: "news",
+    title: `Breaking News: OBiO Biotechnology and Novabio Therapeutics Join Forces in Revolutionary Treg Cell Therapy Partnership!`,
+    time: "March 25th 2024",
+    subhead:
+      "This partnership addressed critical gaps in the treatment of neurodegenerative diseases, autoimmune diseases, and metabolic disorders.",
+    content: ``,
+    html: `<div class="Insights-detail-text text">
+    <p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;">
+<span style="font-size:12pt;"><br>
+</span>
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;">
+<span style="font-size:12pt;">We are thrilled to announce a groundbreaking collaboration between OBiO Technology (Shanghai) Co., Ltd. ("OBiO Technology", stock code: 688238) and Shanghai Novabio Therapeutics ("Novabio"). On March 22, 2024, both entities formally inked a strategic cooperation agreement that promises to reshape the landscape of Treg cell therapy.</span> 
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;">
+<br>
+</p>
+<p class="MsoNormal" style="text-align:center;font-size:12pt;font-family:Aptos, sans-serif;">
+<img src="/public/uploads/image/20240326/20240326104925_47289.png" alt=""> 
+</p>
+<p class="MsoNormal" style="text-align:center;font-size:12pt;font-family:Aptos, sans-serif;">
+<br>
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;">
+Under this visionary pact, OBiO Technology commits to providing cutting-edge non-registered clinical trial sample preparation and testing services for Novabio's Treg cell therapy pipeline NP001. Moreover, OBiO Technology will extend its expertise to offer IND application CMC services and clinical sample production services for NP001 and NC001 projects. Together, we aspire to deliver tangible benefits to patients, fostering a brighter future for all.
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;">
+<br>
+</p>
+<p class="MsoNormal" style="text-align:center;font-size:12pt;font-family:Aptos, sans-serif;">
+<img src="/public/uploads/image/20240326/20240326104944_22912.png" alt=""> 
+</p>
+<p class="MsoNormal" style="text-align:center;font-size:12pt;font-family:Aptos, sans-serif;">
+<br>
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;">
+Novabio stands at the forefront of Treg cell therapy drug development, addressing critical gaps in the treatment of neurodegenerative diseases, autoimmune diseases, and metabolic disorders. In a mere year and a half since its inception, Novabio has achieved significant milestones, culminating in the successful process development and validation of the NP001 project. With a primary focus on amyotrophic lateral sclerosis (ALS), plans are underway to conduct innovative IIT research in China, aligning with stringent IND application criteria in both China and the United States.
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;">
+&nbsp;
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;">
+Meanwhile, OBiO Technology specializes in offering comprehensive CDMO services tailored to gene and cell therapy drug developers. From pre-clinical research to commercial-scale production, OBiO Technology empowers the entire lifecycle of gene and cell therapy drug development. Boasting state-of-the-art facilities, including 15 vector production lines, 20 cell production lines, and integrated lyophilization and filling capabilities, OBiO Technology epitomizes innovation and excellence in the industry. Our commitment to quality extends to advanced experimental equipment, diverse analysis technologies, and robust detection platforms, ensuring the delivery of high-quality products and services to our valued clientele.
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;">
+&nbsp;
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;">
+Ms.Ya, You, General Manager of Novabio, expressed her elation at the strategic collaboration, citing OBiO Technology's unwavering support in various aspects, including cost management, technological expertise, and scheduling precision. Looking ahead, Novabio envisions an era of expanded collaboration, both domestically and internationally, underpinned by mutual trust, support, and empowerment.
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;">
+&nbsp;
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;">
+Mr. Javier Jia, CEO and General Manager of OBiO Technology, echoed this sentiment, heralding the partnership with Novabio as a pivotal moment in advancing Treg cell therapy to clinical fruition. As a leading CRO/CDMO enterprise, OBiO Technology remains steadfast in its commitment to driving progress in the global gene and cell therapy field, continuously elevating industry standards through efficient and high-quality service offerings.
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;">
+<br>
+</p>
+<p class="MsoNormal" style="text-align:center;font-size:12pt;font-family:Aptos, sans-serif;">
+<img src="/public/uploads/image/20240326/20240326104958_83831.png" alt=""> 
+</p>
+<p class="MsoNormal" style="text-align:center;font-size:12pt;font-family:Aptos, sans-serif;">
+<br>
+</p>
+<h2 style="font-size:12pt;font-family:Aptos, sans-serif;">
+About&nbsp; Novabio Therapeutics
+</h2>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;">
+Founded in 2022, Shanghai Novabio Therapeutics pioneers multimodal Treg cell therapy for treating neurodegenerative diseases, autoimmune disorders, and metabolic conditions. Anchored by a mission to address unmet clinical needs, &nbsp;Novabio espouses core values of patient-centricity, integrity, pragmatism, and persistence, spearheading the industrialization of Treg development.
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;">
+&nbsp;
+</p>
+<h2 style="font-size:12pt;font-family:Aptos, sans-serif;">
+About OBiO Technology
+</h2>
+<p style="font-size:12pt;font-family:&quot;">
+<span style="font-family:Aptos, sans-serif;">Established in 2013, OBiO Technology (stock code: 688238) is a leading biotechnology firm</span><span style="font-family:DengXian;">，</span><span style="font-family:Aptos, sans-serif;">stands at the forefront of gene and cell therapy, serving as a pioneering CRO and CDMO, dedicated to delivering comprehensive solutions. The state-of-the-art 77,000-square-meter Facility for Global Supply exemplifies our commitment to meeting worldwide demand. We excel in vectorology studies, functional genomics, and the development of processes and analytics, facilitating Investigational New Drug (IND) readiness and the full spectrum of clinical and commercial manufacturing. Guided by our mission to "enable gene therapy for better lives," we prioritize providing top-tier services on a global scale. From laboratory to clinic, we tirelessly advance your products, impacting populations across the globe. Our steadfast dedication ensures the delivery of high-quality CDMO services throughout the preclinical, IND, clinical, and commercial stages. Our offerings include expertise in plasmids, mRNA, AAV, LVV, Ad viral vectors, cell therapy, CAR-T, NK, Treg, oncolytic viruses, and cutting-edge technologies such as inducible viral vector packaging, ultralow endotoxin processes, and AAVneO for tissue-specific AAV variants.</span> 
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;">
+&nbsp;
+</p>                </div>`,
+  },
+  {
+    id: 16,
+    type: "news",
+    title: `Embark on a Journey to 'Cure the Future' with Dr. Pan, the visionary founder and chairman of OBiO Biotechnology`,
+    time: "March 17th 2024",
+    subhead: "",
+    content: ``,
+    html: `<div class="Insights-detail-text text">
+    <p>
+Join us as we share our daring and relentless entrepreneurial quest, beginning in 2006, dedicated to innovating in the CGT arena.
+</p>
+<p>
+<br>
+</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2T4Dnv6wQ-U?si=osdqzd4X3kIdzOsG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>                </div>`,
+  },
+  {
+    id: 15,
+    type: "news",
+    title: `We are thrilled to introduce Hung Trinh, who has joined OBiO Tech as our Senior BD Director. Another all-in team player!`,
+    time: "March 2nd 2024",
+    subhead: "",
+    content: ``,
+    html: `<div class="Insights-detail-text text">
+    <p>
+<span style="font-size:14px;">We are thrilled to introduce Hung Trinh, who has joined OBiO Tech as our Senior BD Director. Another all-in team player!</span> 
+</p>
+<p>
+<span style="font-size:14px;"><br>
+</span> 
+</p>
+<p>
+<span style="font-size:14px;"><img src="/public/uploads/image/20240303/20240303064431_62705.jpg" alt=""><br>
+</span> 
+</p>
+<p>
+<span style="font-size:14px;"><br>
+</span> 
+</p>
+<span style="font-size:14px;">Please join us on Linkedin:www.linkedin.com/company/41870372&nbsp;</span><span style="font-size:14px;">to extend a warm welcome to Dr. Trinh as he becomes a valued member of the OBiO Tech family!</span><br>
+<br>
+<span style="font-size:14px;">Dr. Trinh brings with him a wealth of expertise, having been trained as a virologist at the University of Zurich, Switzerland. With a remarkable portfolio of over 30 peer-reviewed articles in virology and vaccine development, he is poised to make significant contributions to our team.</span><br>
+<span style="font-size:14px;">His primary focus lies in developing manufacturing processes aimed at reducing the cost of manufacturing for cell and gene therapy products, ultimately making advanced medicines more accessible to patients.</span><br>                </div>`,
+  },
+  {
     id: 13,
+    type: "news",
     title: `Please join us in welcoming Swati to OBiO Tech`,
     time: "February 16th 2024",
     subhead: "",
@@ -28,6 +159,7 @@ Please join us in welcoming Swati to OBiO Tech.</span>
   },
   {
     id: 14,
+    type: "news",
     title: `Discover the Ultimate One-Step Method to Perfectly Cultivate Prokaryotic Cells ! Revolutionize Your Cell Cultivation Experience!`,
     time: "February 6th 2024",
     subhead: "",
@@ -208,6 +340,7 @@ Please join us in welcoming Swati to OBiO Tech.</span>
   },
   {
     id: 1,
+    type: "news",
     title: `Focusing on efficient gene delivery of NK cells, The First Condor Life and OBiO Technology reach a strategic cooperation!`,
     time: "January 13th 2024",
     subhead: "",
@@ -635,6 +768,7 @@ Please join us in welcoming Swati to OBiO Tech.</span>
   },
   {
     id: 2,
+    type: "news",
     title: `OBiO Announces Strategic Partnership with Refreshgene to Realize
     Commercialization of Gene Therapy Product`,
     time: "24th Oct. 2023",
@@ -778,6 +912,7 @@ information about OBiO Technology, visit&nbsp;</span><a href="/" target="_blank"
   },
   {
     id: 3,
+    type: "news",
     title: `OBiO Announces Strategic Partnership with Tofflon to Advance Cell and Gene Therapy Development`,
     time: "31st Aug. ,2023",
     subhead: "",
@@ -870,6 +1005,7 @@ OBiO Technology, visit <a href="/" target="_blank">www.obio-tech.com</a>.</span>
   },
   {
     id: 4,
+    type: "news",
     title: `FDA Acceptance of Drug Master File Marks New Milestone Achieved for OBiO TECH of GMP Plasmid Products`,
     time: "29th Jun. ,2023",
     subhead: "",
@@ -935,6 +1071,7 @@ China.</span>
   },
   {
     id: 5,
+    type: "news",
     title: `OBiO and CHINAGENE reached a strategic agreement of commercial manufacturing services for gene therapy products`,
     time: "29th Apr. ,2023",
     subhead: "",
@@ -1038,6 +1175,7 @@ show our innovation.</span>
   },
   {
     id: 6,
+    type: "news",
     title: `A new super factory with 29 GMP grade production lines for gene and cell therapy was launched in Shanghai by OBiO technology`,
     time: "24th Apr. ,2023",
     subhead: "",
@@ -1200,6 +1338,7 @@ in gene &amp; cell therapy field.</span>
   },
   {
     id: 7,
+    type: "news",
     title: `Congratulations to immvira’s for its malignant glioma oncolytic product approved`,
     time: "31st Mar. ,2023",
     subhead: "",
@@ -1289,6 +1428,7 @@ tumors and another strong validation of HSV-1 modality.</span>
   },
   {
     id: 8,
+    type: "news",
     title: `FDA Accepts GMP Plasmid DMF of OBiO Technology`,
     time: "16th Jan. ,2023",
     subhead: "",
@@ -1338,6 +1478,7 @@ tumors and another strong validation of HSV-1 modality.</span>
   },
   {
     id: 9,
+    type: "news",
     title: `OBiO Technology to Present Data on OVersatile™ Platform for Process Development of Herpes Simplex Virus and Vaccinia Virus Products at the 25th ASGCT Annual Meeting`,
     time: "9th May ,2022",
     subhead: "",
@@ -1421,6 +1562,7 @@ about OBiO, visit </span><a href="http://www.obio-tech.com"><span style="font-si
   },
   {
     id: 10,
+    type: "news",
     title: `OBiO Technology Goes Public on Shanghai Stock Exchange Today`,
     time: "22nd Mar. ,2022",
     subhead: "",
@@ -1461,6 +1603,7 @@ about OBiO, visit </span><a href="http://www.obio-tech.com"><span style="font-si
   },
   {
     id: 11,
+    type: "news",
     title: `OBiO Announces ASGCT 24th Annual Meeting Attendance`,
     time: "11st May ,2021",
     subhead: "",
@@ -1503,6 +1646,7 @@ about OBiO, visit </span><a href="http://www.obio-tech.com"><span style="font-si
   },
   {
     id: 12,
+    type: "news",
     title: `OBiO and QuaCell Biotechnology reached a strategic cooperation on the joint development of the Wayne293™ host cell platform and high-toxin-producing derivative cell lines`,
     time: "9th Mar. ,2021",
     subhead: "",
@@ -1587,6 +1731,36 @@ about OBiO, visit </span><a href="http://www.obio-tech.com"><span style="font-si
 
 export const events = ref([
   {
+    id: 7,
+    type: "event",
+    title: `Join US @ Sino-American Pharmaceutical Professionals Association (SAPA) Meeting in Boston! Exploring the Future of Cell and Gene Therapy`,
+    time: "March 7th 2024",
+    content: `Waltham, MA United States`,
+    html: `<div class="Insights-detail-text text">
+    <span style="font-size:14px;">Join US @ Sino-American Pharmaceutical Professionals Association (SAPA) Meeting in Boston! Exploring the Future of Cell and Gene Therapy</span><br>
+<br>
+<span style="font-size:14px;"> Date: March 30th, 2024.Saturday 1pm-5pm</span><br>
+<span style="font-size:14px;"> Location: 300 3rd Ave, Waltham ,MA 02451</span><br>
+<br>
+<span style="font-size:14px;"> Details:</span><br>
+<span style="font-size:14px;"> Dive deep into the world of Cell and Gene Therapy (CGT)</span><br>
+<span style="font-size:14px;"> Explore the latest advancements and breakthroughs</span><br>
+<span style="font-size:14px;"> Collaborate with experts in the field</span><br>
+<span style="font-size:14px;"> Strategize for future innovation</span><br>
+<br>
+<span style="font-size:14px;"> Registration link：https://lnkd.in/gvdypBiF</span><br>
+<p>
+<span style="font-size:14px;"> For more information, contact Sabrina at sabrina.he@obiosh.com</span> 
+</p>
+<p>
+<span style="font-size:14px;"><br>
+</span>
+</p>
+<p>
+<img src="/public/uploads/image/20240308/20240308123702_46230.jpg" alt=""> 
+</p>                </div>`,
+  },
+  {
     id: 1,
     title: `Cell & Gene meeting on the Mesa`,
     time: "Oct 10-12 2023",
@@ -1595,6 +1769,7 @@ export const events = ref([
   },
   {
     id: 2,
+    type: "event",
     title: `BioProcess International Conference & Exhibition`,
     time: "Sep 18-21 2023",
     content: `Boston, MA`,
@@ -1605,6 +1780,7 @@ export const events = ref([
   },
   {
     id: 3,
+    type: "event",
     title: `ASGCT 26th Annual Meeting`,
     time: "May 16-20 2023",
     content: `Los Angeles, CA`,
@@ -1626,6 +1802,7 @@ export const events = ref([
 
   {
     id: 4,
+    type: "event",
     time: "15th-16th Apr. ,2022",
     title: "SAPA-GP 2022 Annual Conference (Hybrid)",
     content: "King of Prussia, PA",
@@ -1646,6 +1823,7 @@ export const events = ref([
   },
   {
     id: 5,
+    type: "event",
     time: "16th-19th May ,2022",
     title: "ASGCT 25th Annual Meeting",
     content: "Washington, D.C.",
@@ -1664,6 +1842,7 @@ export const events = ref([
   },
   {
     id: 6,
+    type: "event",
     time: "15th-16th Jul. ,2022",
     title: "China Oncolytic Virus Conference 2022 (Hybrid)",
     content: "Shanghai, China",

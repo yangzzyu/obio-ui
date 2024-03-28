@@ -2,112 +2,17 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-22 21:59:54
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 16:27:33
+ * @LastEditTime: 2024-03-28 10:25:44
  * @FilePath: \obio-ui\src\components\Header.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
-  <!-- <div id="top-bar-wrap" class="clr" v-if="shadowTop">
-    <div id="top-bar" class="clr container has-no-content">
-      <div id="top-bar-inner" class="clr">
-        <div id="top-bar-content" class="clr top-bar-right">
-          <div
-            id="top-bar-nav"
-            class="navigation clr"
-            role="navigation"
-            aria-label="secondary"
-          >
-            <ul
-              id="menu-top-bar-menu"
-              class="top-bar-menu dropdown-menu sf-menu"
-            >
-              <li
-                id="menu-item-2100"
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2100"
-              >
-                <router-link to="/contact" class="menu-link"
-                  >CONTACT US</router-link
-                >
-              </li>
-              <li
-                id="menu-item-146"
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-146"
-              >
-                <a
-                  title="LinkedIn"
-                  href="https://www.linkedin.com/company/allogene-therapeutics/"
-                  class="menu-link"
-                  ><i
-                    class="fab fa-linkedin-in alg-tb-icon"
-                    aria-hidden="true"
-                  ></i
-                ></a>
-              </li>
-              <li
-                id="menu-item-147"
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-147"
-              >
-                <a
-                  title="Twitter"
-                  href="https://twitter.com/AllogeneTx"
-                  class="menu-link"
-                >
-                  <font-awesome-icon
-                    class="footer-icon"
-                    size="lg"
-                    :icon="['fab', 'weixin']"
-                  />
-                </a>
-              </li>
-              <li
-                id="menu-item-148"
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-148"
-              >
-                <a title="Share" href="#" class="menu-link"
-                  ><span class="modal-61a916ebae560">Share</span></a
-                >
-              </li>
-              <li
-                id="menu-item-149"
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-149"
-              >
-                <a
-                  title="Email Us"
-                  href="mailto://info@allogene.com"
-                  class="menu-link"
-                >
-                  <font-awesome-icon
-                    class="footer-icon"
-                    size="lg"
-                    :icon="['fab', 'linkedin']"
-                  />
-                </a>
-              </li>
-              <li
-                id="menu-item-150"
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-150"
-              >
-                <a title="Print" href="#" class="menu-link">
-                  <font-awesome-icon
-                    class="footer-icon"
-                    size="lg"
-                    :icon="['fab', 'youtube']"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
   <!-- :class="{ shadow: headerShadowActive }" -->
   <div class="header">
     <div class="header_container">
       <div class="header_content">
         <div class="logo">
           <router-link to="/">
-            <!-- <img :src="logo_img[0].path" alt="logo" v-if="headerLogoShow" /> -->
             <img :src="handleViteImages('logo2.png')" alt="logo" />
           </router-link>
         </div>
@@ -135,7 +40,6 @@
             :popper-offset="0"
           >
             <!-- popper-class="sub-popper" -->
-            <!-- <el-menu-item index="/home" class="menu-t1">Home</el-menu-item> -->
             <el-sub-menu
               index="/about"
               :class="{
@@ -159,20 +63,66 @@
                       offset: 1,
                     }"
                   >
-                    Our Facilities
+                    Facilities
                   </div>
                 </template>
                 <el-menu-item index="/spiroSite">SPIRO Site</el-menu-item>
                 <el-menu-item index="/pineSite">PINE Site</el-menu-item>
                 <el-menu-item index="/intelliM">OBiO Intelli-M</el-menu-item>
               </el-sub-menu>
-              <el-menu-item index="/team">Leadership Team</el-menu-item>
+              <el-menu-item index="/about">
+                <template #title>
+                  <div
+                    @click="router.push('/about')"
+                    v-scroll-to="{
+                      element: '.section-2',
+                      duration: 300,
+                      easing: 'ease',
+                      offset: 1,
+                    }"
+                  >
+                    History
+                  </div>
+                </template></el-menu-item
+              >
             </el-sub-menu>
-            <el-menu-item index="/cap" class="menu-t1"
-              >Capability & Commitment</el-menu-item
+            <el-sub-menu
+              index="/cap"
+              popper-class="sub-popper"
+              :class="{
+                'is-active': ['/cap'].includes(activeIndex),
+              }"
             >
-            <!-- Laboratory Sciences -->
-            <!-- popper-class="sub-popper" -->
+              <template #title>
+                <div @click="router.push('/cap')" class="menu-t1">
+                  Capability & Commitment
+                </div>
+              </template>
+              <el-menu-item index="/cap">
+                <div
+                  v-scroll-to="{
+                    element: '.industrialize-box',
+                    duration: 300,
+                    easing: 'ease',
+                    offset: 1,
+                  }"
+                >
+                  Industrialize
+                </div>
+              </el-menu-item>
+              <el-menu-item index="/cap">
+                <div
+                  v-scroll-to="{
+                    element: '.our-box',
+                    duration: 300,
+                    easing: 'ease',
+                    offset: 1,
+                  }"
+                >
+                  Commitment
+                </div>
+              </el-menu-item>
+            </el-sub-menu>
             <el-sub-menu
               index="/cdmo"
               class="menu-t1"
@@ -182,11 +132,56 @@
               }"
             >
               <template #title>
-                <div @click="router.push('/cdmo')" class="menu-t1">
+                <div @click="router.push('/Manufacturing')" class="menu-t1">
                   CDMO Solutions
                 </div>
               </template>
-              <el-menu-item index="/process">Process Development</el-menu-item>
+              <el-menu-item index="/cdmo">
+                <template #title>
+                  <div
+                    @click="router.push('/cdmo')"
+                    v-scroll-to="{
+                      element: '.section-3',
+                      duration: 300,
+                      easing: 'ease',
+                      offset: 1,
+                    }"
+                  >
+                    Manufacturing
+                  </div>
+                </template></el-menu-item
+              >
+              <el-menu-item index="/cdmo">
+                <template #title>
+                  <div
+                    @click="router.push('/cdmo')"
+                    v-scroll-to="{
+                      element: '#cro',
+                      duration: 300,
+                      easing: 'ease',
+                      offset: 1,
+                    }"
+                  >
+                    CDMO
+                  </div>
+                </template></el-menu-item
+              >
+              <el-menu-item index="/cdmo">
+                <template #title>
+                  <div
+                    @click="router.push('/cdmo')"
+                    v-scroll-to="{
+                      element: '#innovation',
+                      duration: 300,
+                      easing: 'ease',
+                      offset: 1,
+                    }"
+                  >
+                    Innovation
+                  </div>
+                </template></el-menu-item
+              >
+              <!-- <el-menu-item index="/process">Process Development</el-menu-item>
               <el-sub-menu index="/cgmp">
                 <template #title>
                   <div @click="router.push('/cgmp')">CGMP Manufacturing</div>
@@ -203,12 +198,11 @@
               <el-menu-item index="/quality">Quality & Regulatory</el-menu-item>
               <el-menu-item index="/logistics"
                 >Cold Chain Logistics</el-menu-item
-              >
+              > -->
             </el-sub-menu>
-            <el-menu-item index="/sys" class="menu-t1"
+            <el-menu-item index="/cro" class="menu-t1"
               >CRO Service</el-menu-item
             >
-            <!-- <el-menu-item index="/cx" class="menu-t1">Innovations</el-menu-item> -->
             <el-sub-menu
               index="/news"
               popper-class="sub-popper"
@@ -219,82 +213,44 @@
               <template #title>
                 <div @click="router.push('/news')" class="menu-t1">News</div>
               </template>
-              <el-menu-item index="/releases">Press Releases</el-menu-item>
+              <el-menu-item index="/releases">News</el-menu-item>
               <el-menu-item index="/events">Events</el-menu-item>
-              <!-- <el-menu-item index="/news">
+              <el-menu-item index="/inquiry">Learn More</el-menu-item>
+              <!-- <el-menu-item index="/news">Events</el-menu-item> -->
+              <el-menu-item index="news">
+                <a href="https://www.obiosh.com/tzz/gg/" target="_blank"
+                  >Partnership</a
+                >
+              </el-menu-item>
+            </el-sub-menu>
+            <el-sub-menu
+              index="/careers"
+              popper-class="sub-popper"
+              :class="{
+                'is-active': ['/careers'].includes(activeIndex),
+              }"
+            >
+              <template #title>
+                <div @click="router.push('/careers')" class="menu-t1">
+                  Careers
+                </div>
+              </template>
+              <el-menu-item index="/careers">
                 <div
                   v-scroll-to="{
-                    element: '.section-3',
+                    element: '.careers-box',
                     duration: 300,
                     easing: 'ease',
                     offset: 1,
                   }"
                 >
-                  Knowledge Center
+                  Mission
                 </div>
-              </el-menu-item> -->
+              </el-menu-item>
+              <el-menu-item index="/life"> Life at OBIO </el-menu-item>
+              <el-menu-item index="/job"> Job Opening </el-menu-item>
             </el-sub-menu>
-            <!-- Careers -->
-            <el-menu-item index="/careers" class="menu-t1"
-              >Careers</el-menu-item
-            >
-            <!-- <el-menu-item @click="openUrl" class="menu-t1"
-              >Investor Relations</el-menu-item
-            > -->
-            <!-- <el-menu-item index="/contact" class="menu-t1"
-              >Contact Us</el-menu-item
-            > -->
           </el-menu>
-          <!-- <ul class="icon-list">
-            <li
-              id="menu-item-147"
-              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-147"
-            >
-              <a
-                title="Twitter"
-                href="https://twitter.com/AllogeneTx"
-                class="menu-link"
-              >
-                <font-awesome-icon
-                  class="footer-icon"
-                  size="lg"
-                  :icon="['fab', 'linkedin']"
-                />
-              </a>
-            </li>
-            <li
-              id="menu-item-149"
-              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-149"
-            >
-              <a
-                title="Email Us"
-                href="mailto://info@allogene.com"
-                class="menu-link"
-              >
-                <font-awesome-icon
-                  class="footer-icon"
-                  size="lg"
-                  :icon="['fab', 'weixin']"
-                />
-              </a>
-            </li>
-            <li
-              id="menu-item-150"
-              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-150"
-            >
-              <a title="Print" href="#" class="menu-link">
-                <font-awesome-icon size="lg" :icon="['fas', 'circle-play']" />
-              </a>
-            </li>
-            <li
-              id="menu-item-151"
-              class="menu-item menu-item-type-custom menu-item-object-custom menu-item-150"
-            >
-              <a title="Print" href="#" class="menu-link">
-                <font-awesome-icon size="lg" :icon="['fass', 'f']" />
-              </a>
-            </li>
-          </ul> -->
         </div>
       </div>
     </div>
@@ -317,8 +273,13 @@
         :popper-offset="0"
         @select="drawerMenu = false"
       >
-        <!-- <el-menu-item index="/" class="menu-t1">Home</el-menu-item> -->
-        <el-sub-menu index="/about" popper-class="sub-popper">
+        <el-sub-menu
+          index="/about"
+          :class="{
+            'is-active': ['/about', '/facilities'].includes(activeIndex),
+          }"
+          popper-class="sub-popper"
+        >
           <template #title>
             <div @click="router.push('/about')" class="menu-t1">About Us</div>
           </template>
@@ -333,26 +294,126 @@
                   offset: 1,
                 }"
               >
-                Our Facilities
+                Facilities
               </div>
             </template>
             <el-menu-item index="/spiroSite">SPIRO Site</el-menu-item>
             <el-menu-item index="/pineSite">PINE Site</el-menu-item>
             <el-menu-item index="/intelliM">OBiO Intelli-M</el-menu-item>
           </el-sub-menu>
-          <el-menu-item index="/team">Leadership Team</el-menu-item>
+          <el-menu-item index="/about">
+            <template #title>
+              <div
+                @click="router.push('/about')"
+                v-scroll-to="{
+                  element: '.section-2',
+                  duration: 300,
+                  easing: 'ease',
+                  offset: 1,
+                }"
+              >
+                History
+              </div>
+            </template></el-menu-item
+          >
         </el-sub-menu>
-        <el-menu-item index="/sys" class="menu-t1"
-          >Laboratory Sciences</el-menu-item
+        <el-sub-menu
+          index="/cap"
+          popper-class="sub-popper"
+          :class="{
+            'is-active': ['/cap'].includes(activeIndex),
+          }"
         >
-        <el-sub-menu index="/cdmo" popper-class="sub-popper">
+          <template #title>
+            <div @click="router.push('/cap')" class="menu-t1">
+              Capability & Commitment
+            </div>
+          </template>
+          <el-menu-item index="/cap">
+            <div
+              v-scroll-to="{
+                element: '.industrialize-box',
+                duration: 300,
+                easing: 'ease',
+                offset: 1,
+              }"
+            >
+              Industrialize
+            </div>
+          </el-menu-item>
+          <el-menu-item index="/cap">
+            <div
+              v-scroll-to="{
+                element: '.our-box',
+                duration: 300,
+                easing: 'ease',
+                offset: 1,
+              }"
+            >
+              Commitment
+            </div>
+          </el-menu-item>
+        </el-sub-menu>
+        <el-sub-menu
+          index="/cdmo"
+          class="menu-t1"
+          popper-class="sub-popper"
+          :class="{
+            'is-active': ['/cdmo', '/cgmp'].includes(activeIndex),
+          }"
+        >
           <template #title>
             <div @click="router.push('/cdmo')" class="menu-t1">
               CDMO Solutions
             </div>
           </template>
-          <el-menu-item index="/process">Process Development</el-menu-item>
-          <el-sub-menu index="/cgmp" popper-class="sub-popper ">
+          <el-menu-item index="/cdmo">
+            <template #title>
+              <div
+                @click="router.push('/cdmo')"
+                v-scroll-to="{
+                  element: '.section-3',
+                  duration: 300,
+                  easing: 'ease',
+                  offset: 1,
+                }"
+              >
+                Manufacturing
+              </div>
+            </template></el-menu-item
+          >
+          <el-menu-item index="/cdmo">
+            <template #title>
+              <div
+                @click="router.push('/cdmo')"
+                v-scroll-to="{
+                  element: '#cro',
+                  duration: 300,
+                  easing: 'ease',
+                  offset: 1,
+                }"
+              >
+                CDMO
+              </div>
+            </template></el-menu-item
+          >
+          <el-menu-item index="/cdmo">
+            <template #title>
+              <div
+                @click="router.push('/cdmo')"
+                v-scroll-to="{
+                  element: '#innovation',
+                  duration: 300,
+                  easing: 'ease',
+                  offset: 1,
+                }"
+              >
+                Innovation
+              </div>
+            </template></el-menu-item
+          >
+          <!-- <el-menu-item index="/process">Process Development</el-menu-item>
+          <el-sub-menu index="/cgmp">
             <template #title>
               <div @click="router.push('/cgmp')">CGMP Manufacturing</div>
             </template>
@@ -364,31 +425,52 @@
             >
           </el-sub-menu>
           <el-menu-item index="/quality">Quality & Regulatory</el-menu-item>
-          <el-menu-item index="/logistics">Cold Chain Logistics</el-menu-item>
+          <el-menu-item index="/logistics">Cold Chain Logistics</el-menu-item> -->
         </el-sub-menu>
-        <el-menu-item index="/cx" class="menu-t1">Innovations</el-menu-item>
-        <el-sub-menu index="/news" popper-class="sub-popper">
+        <el-menu-item index="/cro" class="menu-t1">CRO Service</el-menu-item>
+        <el-sub-menu
+          index="/news"
+          popper-class="sub-popper"
+          :class="{
+            'is-active': ['/news'].includes(activeIndex),
+          }"
+        >
           <template #title>
-            <div @click="router.push('/news')" class="menu-t1">Insights</div>
+            <div @click="router.push('/news')" class="menu-t1">News</div>
           </template>
-          <el-menu-item index="/releases">Press Releases</el-menu-item>
+          <el-menu-item index="/releases">News</el-menu-item>
           <el-menu-item index="/events">Events</el-menu-item>
-          <!-- <el-menu-item index="/news">
+          <el-menu-item index="news">
+            <a href="https://www.obiosh.com/tzz/gg/" target="_blank"
+              >Partnership</a
+            >
+          </el-menu-item>
+        </el-sub-menu>
+        <el-sub-menu
+          index="/careers"
+          popper-class="sub-popper"
+          :class="{
+            'is-active': ['/careers'].includes(activeIndex),
+          }"
+        >
+          <template #title>
+            <div @click="router.push('/careers')" class="menu-t1">Careers</div>
+          </template>
+          <el-menu-item index="/careers">
             <div
               v-scroll-to="{
-                element: '.section-3',
+                element: '.careers-box',
                 duration: 300,
                 easing: 'ease',
                 offset: 1,
               }"
             >
-              Knowledge Center
+              Mission
             </div>
-          </el-menu-item> -->
+          </el-menu-item>
+          <el-menu-item index="/life"> Life at OBIO </el-menu-item>
+          <el-menu-item index="/job"> Job Opening </el-menu-item>
         </el-sub-menu>
-        <el-menu-item @click="openUrl" class="menu-t1"
-          >Investor Relations</el-menu-item
-        >
         <!-- <el-menu-item index="/contact" class="menu-t1">Contact Us</el-menu-item> -->
       </el-menu>
     </el-drawer>
@@ -412,7 +494,6 @@ const props = defineProps({
 });
 const router = useRouter();
 console.log(router, "router");
-// import type { MainStates } from '@/store'
 
 const activeIndex = computed(() => router.currentRoute.value.path);
 type NavItem = {
@@ -450,21 +531,17 @@ onBeforeMount(() => {});
     padding: 0;
   }
   width: 100%;
-  // max-width: 20em;
   background: #022350 url(up_downbg.jpg) no-repeat center;
   z-index: 1;
-  // transform: translateX(100%);
   transition: all 0.5s ease;
   .el-menu {
     border-right: none;
   }
 }
 .sub-popper {
-  // border-top: 3px solid #0093dd;
   .el-sub-menu__title,
   .el-menu-item {
     font-size: 20px;
-    // color: #000 !important;
     &:not(.is-disabled):focus,
     &:not(.is-disabled):hover {
       background: #0e686f;
@@ -473,20 +550,13 @@ onBeforeMount(() => {});
   }
 }
 .menu-t1 {
-  // font-size: 1.1vw;
   font-size: 20px;
   font-weight: bold;
   &:not(.is-disabled):focus,
   &:not(.is-disabled):hover {
     background: transparent !important;
-    // color: #fff;
   }
 }
-// .menu-drawer {
-//   .menu-t1 {
-//     font-size: 18px;
-//   }
-// }
 </style>
 <style lang="scss" scoped>
 $nav_active_color: #3370ff;
@@ -558,9 +628,7 @@ h2 {
   padding: 0;
   margin: 0 0 0 20px;
   position: relative;
-  // width: 60%;
   .el-menu {
-    // width: 100%;
   }
   .el-menu--horizontal.el-menu {
     border: none;
@@ -574,7 +642,6 @@ h2 {
     display: block;
     height: 12px;
     border-right: 1px solid #bbbfc4;
-    //border-right: 1px solid #fff;
     position: absolute;
     bottom: 24px;
     right: 48px;
@@ -602,10 +669,8 @@ h2 {
   color: #fff;
   border-color: #1f757b;
   position: relative;
-  // background-color: #fff;
   background-color: #1f757b;
   font-size: 12px;
-  // border-bottom: 1px solid #f1f1f1;
   z-index: 101;
   #top-bar {
     padding: 8px 0;
@@ -619,7 +684,6 @@ h2 {
     font-family: HCo Gotham Rounded Medium SSm;
     font-size: 14px;
     letter-spacing: 0.6px;
-    // text-transform: uppercase;
   }
   .top-bar-right {
     display: flex;
@@ -644,13 +708,6 @@ h2 {
   display: flex;
   .menu-item {
     margin-right: 10px;
-    // background: linear-gradient(
-    //   to right,
-    //   rgba(1, 76, 151, 1) 0%,
-    //   rgba(0, 129, 139, 1) 100%
-    // );
-    // -webkit-background-clip: text; /*将设置的背景颜色限制在文字中*/
-    // -webkit-text-fill-color: transparent; /*给文字设置成透明*/
     a:hover {
       color: #000;
     }
