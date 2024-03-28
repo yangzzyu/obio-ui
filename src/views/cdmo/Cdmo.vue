@@ -25,7 +25,7 @@
             </div>
           </el-col>
           <el-col :xs="24" :span="18">
-            <p class="font-size20 fontf7 cro-p textColor">
+            <p class="font-size18 fontf7 cro-p textColor">
               We provide comprehensive CDMO services encompassing process
               development, analytical methods, IND-enabling CMC (Chemistry,
               Manufacturing, and Controls), as well as clinical and commercial
@@ -122,13 +122,13 @@
                     />
                   </div>
                 </div>
-                <div class="font-size24 fontf7 iti">
-                  Lin-Gang Free-Trade Zone<br />Shanghai, China
+                <div class="font-size18 fontf7 iti">
+                  Lin-Gang Free-Trade Zone, Shanghai, China
                 </div>
-                <div class="font-size38 fontf7 iti">OBIO Intelli-M</div>
+                <div class="font-size30 fontf7 iti">OBIO Intelli-M</div>
                 <p class="font-size18 textColor txt-bold">
                   Process Development Characterization Clinical and Commercial
-                  Manufacturing
+                  Manufacturing. 
                   <text class="title-color txt-bold">77,000</text>-square-meter
                   Facility for Global Supply
                 </p>
@@ -145,14 +145,14 @@
                     />
                   </div>
                 </div>
-                <div class="font-size24 fontf7 iti">
-                  International Medical Park<br />Shanghai, China
+                <div class="font-size18 fontf7 iti">
+                  International Medical Park, Shanghai, China
                 </div>
-                <div class="font-size38 fontf7 iti">SPIRO Site</div>
+                <div class="font-size30 fontf7 iti">SPIRO Site</div>
 
                 <p class="font-size18 textColor txt-bold">
                   Integrated Laboratory Services Processand Analytical Method
-                  DevelopmentResearch and Development Center
+                  Development. Research and Development Center
                 </p>
                 <router-link
                   to="/spiroSite"
@@ -164,18 +164,18 @@
                 <div class="manufacturing-list bg-pinkbluelfr">
                   <div class="content">
                     <img
-                      :src="handleViteImages('facilities3.jpg')"
+                      :src="handleViteImages('pine_site.png')"
                       alt="PINE Site"
                     />
                   </div>
                 </div>
-                <div class="font-size24 fontf7 iti">
-                  International Medical Park<br />Shanghai, China
+                <div class="font-size18 fontf7 iti">
+                  International Medical Park, Shanghai, China
                 </div>
-                <div class="font-size38 fontf7 iti">PINE Site</div>
+                <div class="font-size30 fontf7 iti">PINE Site</div>
                 <p class="font-size18 textColor txt-bold">
-                  Process and Analytical Method Development Pre-clinical and
-                  Clinical Manufacturing Three-building,<text
+                  Process and Analytical Method Development. Pre-clinical and
+                  Clinical Manufacturing. Three-building, <text
                     class="title-color txt-bold"
                     >10,000</text
                   >-square-meter campus
@@ -218,7 +218,8 @@
           class="container"
         >
           <el-row :gutter="100">
-            <el-col :xs="24" :span="10"
+            <el-col :xs="24" :span="6" />
+            <el-col :xs="24" :span="6"
               ><div
                 class="animate-imgxx uof img"
                 style="
@@ -231,8 +232,8 @@
                 <img :src="item.imgUrl" alt="SPIRO Site" />
               </div>
             </el-col>
-            <el-col :xs="24" :span="14">
-              <h1 class="font-size50 fontf7 iti item-tit">
+            <el-col :xs="24" :span="10">
+              <h1 class="font-size18 fontf7 iti item-tit">
                 {{ item.title }}
               </h1>
               <ul>
@@ -240,7 +241,7 @@
                   style="padding: 5px 0"
                   v-for="(i, idx) in item.textArr"
                   :key="idx"
-                  class="font-size24 textColor"
+                  class="font-size18 textColor"
                 >
                   • {{ i }}
                 </li>
@@ -280,9 +281,9 @@
                       />
                     </div>
                   </div>
-                  <h1 class="font-size38 fontf7 iti">AAVneO™ System</h1>
+                  <h1 class="font-size18 fontf7 iti">AAVneO™ System</h1>
                   <p class="font-size18 txt textColor txt-bold">
-                    LNext-Generation Capsid <br />Screening Platform
+                    Next-Generation Capsid <br />Screening Platform
                   </p>
                   <a
                     style="cursor: pointer"
@@ -300,7 +301,7 @@
                       />
                     </div>
                   </div>
-                  <h1 class="font-size38 fontf7 iti">OVersatile™ Platform</h1>
+                  <h1 class="font-size18 fontf7 iti">OVersatile™ Platform</h1>
                   <p class="font-size18 textColor txt txt-bold">
                     Versatility for Various Needs
                   </p>
@@ -320,7 +321,7 @@
                       />
                     </div>
                   </div>
-                  <h1 class="font-size38 fontf7 iti">
+                  <h1 class="font-size18 fontf7 iti">
                     Proprietary Cell Line Development
                   </h1>
                   <p class="font-size18 textColor txt txt-bold">
@@ -488,7 +489,7 @@ const croList = ref([
       "DC Therapy",
       "ΓδT Therapy",
       "Treg Therapy",
-      "Stem cell therapy",
+      "Stem Cell Therapy",
     ],
   },
   {

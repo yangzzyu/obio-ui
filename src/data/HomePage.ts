@@ -162,19 +162,19 @@ export const insightsData = ref<insightsDataItem[]>([
   },
 
   {
-    time: "10th-12th Oct. ,2023",
-    title: `Cell&amp;Gene meeting on the Mesa`,
+    time: "Oct 10-12 2023",
+    title: `Cell & Gene meeting on the Mesa`,
     pText: `Carlsbad, CA, United States`,
     type: 2,
   },
   {
-    time: "18th-21st Sep. ,2023",
+    time: "Sep 18-21 2023",
     title: ` BioProcess International Conference &amp; Exhibition`,
     pText: `Boston, MA`,
     type: 2,
   },
   {
-    time: "16th-20th May ,2023",
+    time: "May 16-20 2023",
     title: `ASGCT 26th Annual Meeting`,
     pText: `Los Angeles, CA`,
     type: 2,

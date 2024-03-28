@@ -14,14 +14,14 @@
           <div class="foot-log">
             <img
               :src="handleViteImages('footer_logo.png')"
-              alt="OBiO Technology (Shanghai) Corp., Ltd."
+              alt="OBiO Tech, Inc."
             />
           </div>
 
           <dl class="dl-foot-nav">
-            <dt class="font-size14">Phone:4084228642</dt>
-            <dt class="font-size14">General: 0Bi0.US@OBiOSH.COM</dt>
-            <dt class="font-size14">Business:BD@OBiOSH.COM</dt>
+            <dt class="font-size14">Phone:(408)422-8642</dt>
+            <dt class="font-size14">General: obio.us@obiosh.com</dt>
+            <dt class="font-size14">Business:bd@obiosh.com</dt>
             <dt class="font-size14">
               Address: 7133 Koll Center Parkway,Suite 200, Pleasanton, CA 94566
             </dt>
@@ -160,7 +160,9 @@
       </div>
     </el-col>
     <div class="icp">
-      © 2024 OBiO Technology (Shanghai) Corp., Ltd. All Rights Reserved
+      <!-- © 2023 OBiO Tech, Inc. All Rights Reserved -->
+      <!-- 7133 Koll Center Parkway, Suite 200, Pleasanton, CA 94566 -->
+      © 2024 OBiO Tech, Inc. All Rights Reserved
     </div>
   </div>
 </template>

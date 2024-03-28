@@ -38,7 +38,7 @@
             AAV, LVV, Ad viral vector, Cell therapy, manufacturing, CAR-T, NK,
             Treg...Oncolytic virus. Technologies Inducible viral vector
             packaging, Ultralow endotoxin process, AAVneO for AAV variants with
-            tissue specific tropism
+            tissue specific tropism.
           </h3>
         </div>
       </el-col>
@@ -419,7 +419,7 @@
         style="margin: auto"
         class="container section-3"
       >
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Facility</h1>
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Facilities</h1>
         <div class="fac-con">
           <el-row class="row" :gutter="10">
             <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
@@ -431,13 +431,13 @@
                   />
                 </div>
               </div>
-              <div class="font-size24 fontf7 iti">
-                Lin-Gang Free-Trade Zone<br />Shanghai, China
+              <div class="font-size18 fontf7 iti">
+                Lin-Gang Free-Trade Zone, Shanghai, China
               </div>
-              <div class="font-size38 fontf7 iti">OBIO Intelli-M</div>
+              <div class="font-size30 fontf7 iti">OBIO Intelli-M</div>
               <p class="font-size18 textColor txt-bold">
                 Process Development Characterization Clinical and Commercial
-                Manufacturing
+                Manufacturing. 
                 <text class="title-color txt-bold">77,000</text>-square-meter
                 Facility for Global Supply
               </p>
@@ -454,14 +454,14 @@
                   />
                 </div>
               </div>
-              <div class="font-size24 fontf7 iti">
-                International Medical Park<br />Shanghai, China
+              <div class="font-size18 fontf7 iti">
+                International Medical Park, Shanghai, China
               </div>
-              <div class="font-size38 fontf7 iti">SPIRO Site</div>
+              <div class="font-size30 fontf7 iti">SPIRO Site</div>
 
               <p class="font-size18 textColor txt-bold">
-                Integrated Laboratory Services Processand Analytical Method
-                DevelopmentResearch and Development Center
+                Integrated Laboratory Services Processand Analytical Method Development. 
+                Research and Development Center
               </p>
               <router-link to="/spiroSite" class="read-more font-size18 fontf7"
                 >Read More</router-link
@@ -471,18 +471,18 @@
               <div class="manufacturing-list bg-pinkbluelfr">
                 <div class="content">
                   <img
-                    :src="handleViteImages('facilities3.jpg')"
+                    :src="handleViteImages('pine_site.png')"
                     alt="PINE Site"
                   />
                 </div>
               </div>
-              <div class="font-size24 fontf7 iti">
-                International Medical Park<br />Shanghai, China
+              <div class="font-size18 fontf7 iti">
+                International Medical Park, Shanghai, China
               </div>
-              <div class="font-size38 fontf7 iti">PINE Site</div>
+              <div class="font-size30 fontf7 iti">PINE Site</div>
               <p class="font-size18 textColor txt-bold">
-                Process and Analytical Method Development Pre-clinical and
-                Clinical Manufacturing Three-building,<text
+                Process and Analytical Method Development. Pre-clinical and
+                Clinical Manufacturing. Three-building, <text
                   class="title-color txt-bold"
                   >10,000</text
                 >-square-meter campus
@@ -495,6 +495,7 @@
         </div></el-col
       >
     </section>
+    <br />
     <section class="in-about-wrap about-box">
       <el-col
         :xs="22"
@@ -505,9 +506,6 @@
         style="margin: auto"
         class="container section-3"
       >
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
-          Factory Images
-        </h1>
         <div class="fac-con">
           <el-row class="row" :gutter="10">
             <el-col :xs="24" :span="6" class="">
@@ -528,9 +526,9 @@
                       class="font-size14 txt-bold is-details"
                       style="color: #fff"
                     >
-                      The only 77,000m2 scale GMP-compliant facility in the
-                      world Gene cell therapy commercial production service base
-                      Large-scale; Large production capacity
+                      The only 77,000 square meter scale GMP-compliant facility in the
+                      world. Gene cell therapy commercial production service base.
+                      Large-scale, Large production capacity
                     </p>
                   </div>
                   <img
@@ -559,15 +557,15 @@
                       class="font-size14 txt-bold is-details"
                       style="color: #fff"
                     >
-                      More than 30 gene cell therapy production lines
-                      Large-scale multi-option prokaryocyte production capacity
+                      More than 30 gene cell therapy production lines. 
+                      Large-scale multi-option prokaryocyte production capacity. 
                       20 cell therapy product manufacturing lines of varied
-                      characteristics 50-2000L comprehensive and flexible viral
-                      vector manufacturing process Filling and lyophilizing
+                      characteristics. 50-2000L comprehensive and flexible viral
+                      vector manufacturing process. Filling and lyophilizing
                       platform that meets the requirements for manufacturing
-                      multiple dosage forms…… Meeting the requirements of
-                      clients worldwide From DNA to IND to NDA Full-process
-                      business service requirements
+                      multiple dosage forms... Meeting the requirements of
+                      clients worldwide. From DNA to IND to NDA Full-process
+                      business service requirements.
                     </p>
                   </div>
                   <img
@@ -595,9 +593,9 @@
                       class="font-size14 txt-bold is-details"
                       style="color: #fff"
                     >
-                      Single-use process vector production line Single-use
-                      process prokaryocyte culture production line
-                      Filling+lyophilizing integrated innovative filling system
+                      Single-use process vector production line. Single-use
+                      process prokaryocyte culture production line.
+                      Filling+lyophilizing integrated innovative filling system.
                       Positive sample cell therapy product manufacturing line
                     </p>
                   </div>
@@ -627,11 +625,11 @@
                       style="color: #fff"
                     >
                       Digitization and intelligentification based mechanical arm
-                      material charging system Automatic dispensing system
-                      Automatic sample storage system in liquid nitrogen
-                      Chip-based automatic management of cleanroom suits Remote
+                      material charging system. Automatic dispensing system
+                      Automatic sample storage system in liquid nitrogen.
+                      Chip-based automatic management of cleanroom suits. Remote
                       electronic signature system Full-cycle visualization-based
-                      project management
+                      project management.
                     </p>
                   </div>
                   <img
@@ -667,12 +665,12 @@
           </el-col>
           <el-col :span="16" :xs="24" class="font-size20 news-list">
             <h3
-              class="title-color font-size30 fontf7"
+              class="title-color font-size18 "
               style="margin-bottom: 30px"
             >
               As OBiO Tech swiftly evolves, every OBiOers are immersed in an
-              environment fostering "enhanced capabilities, purposeful work, and
-              a fulfilling life."
+              environment fostering <text class="txt-bold fontf8">enhanced capabilities, purposeful work, and
+              a fulfilling life.</text>
             </h3>
             <ul class="font-size18 textColor life-ul">
               <li><i></i> Enhanced Capabilities</li>

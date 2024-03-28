@@ -200,7 +200,7 @@
               <div class="img">
                 <div class="img1 animate-img">
                   <img
-                    :src="handleViteImages('facility3.png')"
+                    :src="handleViteImages('pine_site.png')"
                     alt="OBiO Intelli-M"
                   />
                 </div>

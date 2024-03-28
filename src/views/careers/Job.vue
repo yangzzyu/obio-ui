@@ -9,75 +9,6 @@
 <template>
   <div class="lab-sciences">
     <Focus :focusObj="FocusData" />
-    <section class="culture-box hero-style-top">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
-        <h1 class="title-color font-size50 txt-bold section-title fontf8">
-          Join an amazing energy
-        </h1>
-
-        <p class="font-size24 textColor" style="margin-bottom: 20px">
-          As our company and industry grow and change, we commit to keeping OBIO
-          culture part of that growth conversation. By weaving our values into
-          that culture and regularly pointing back to our mission and vision, an
-          excitement is born and will grow.
-        </p>
-        <p class="font-size24 textColor mb-5">
-          That happens with a leadership team steadfastly practicing what we
-          preach, yet culture does not stop there. We expect every employee to
-          join the effort of making OBIO amazing, embracing our values in the
-          day to day task list and speaking up when something’s not right. With
-          that collective resolve, we stand in anticipation of the growth we
-          will experience together.
-        </p>
-        <el-row
-          class="news--slider row us-list"
-          :gutter="10"
-          style="margin-top: 20px"
-        >
-          <el-col
-            :xs="24"
-            :span="6"
-            class="news--slider-i us-list-i"
-            v-for="(item, index) in cdmoList"
-            :key="index"
-          >
-            <router-link
-              to="/spiroSite"
-              class="block tans service--box_link bg-pinkbluelfr"
-            >
-              <div class="service--box align-items-start">
-                <div class="service--box_icon mb-3 min-width-70">
-                  <img
-                    class="icon--white"
-                    :src="item.actImgUrl"
-                    alt="GMP Vector Manufacturing icon"
-                  />
-                  <img
-                    class="icon--colour"
-                    :src="item.imgUrl"
-                    alt="GMP Vector Manufacturing icon"
-                  />
-                </div>
-                <h1 class="font-bold p-large mb-3 font-size24 fontf7">
-                  {{ item.title }}
-                </h1>
-                <p class="textColor font-size14 txt-bold">
-                  {{ item.text }}
-                </p>
-              </div>
-            </router-link>
-          </el-col>
-        </el-row>
-      </el-col>
-    </section>
     <section id="" class="cap-section hero-style-top cro-list mb-5">
       <el-col
         :xs="22"
@@ -89,7 +20,7 @@
         class="container"
       >
         <h1 class="title-color font-size50 txt-bold p-title fontf8 mb-3 mt-5">
-          Latest release
+          Coming Soon
         </h1>
         <div
           class="cro-list-item row"
@@ -214,18 +145,11 @@ const Labora = ref(<any>{});
 const releasesList = reactive([
   {
     id: 13,
-    title: `Please join us in welcoming Swati to OBiO Tech`,
+    title: `Coming Soon`,
     time: "February 16th 2024",
     subhead: "",
     content: ``,
-  },
-  {
-    id: 14,
-    title: `Please join us in welcoming Swati to OBiO Tech`,
-    time: "February 16th 2024",
-    subhead: "",
-    content: ``,
-  },
+  }
 ]);
 </script>
 
