@@ -25,7 +25,7 @@
           class="container"
         >
           <el-row :gutter="100">
-            <el-col :xs="24" :span="6"
+            <el-col :xs="24" :span="4"
               ><div
                 class="animate-imgxx uof img"
                 style="
@@ -38,11 +38,11 @@
                 <img :src="item.imgUrl" alt="SPIRO Site" />
               </div>
             </el-col>
-            <el-col :xs="24" :span="18">
-              <h1 class="font-size50 fontf8 iti item-tit">
+            <el-col :xs="24" :span="14">
+              <h1 class="font-size30 fontf8 iti item-tit">
                 {{ item.title }}
               </h1>
-              <p class="font-size24 cro-p textColor">
+              <p class="font-size18 cro-p textColor">
                 {{ item.text }}
               </p>
               <a
@@ -119,7 +119,7 @@ const croList = ref([
 committed to assisting you in designing,
 constructing, and manufacturing plasmids
 for fuctional genomics research, as well as 
-providingexpertise in viral packaging.`,
+providing expertise in viral packaging.`,
   },
   {
     popLaboraId: 8,

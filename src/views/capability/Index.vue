@@ -84,7 +84,7 @@
                     <img :src="item.imgUrl" alt="" srcset="" />
                   </div>
                 </div>
-                <div class="font-size30 fontf7 iti">
+                <div class="font-size18 fontf7 iti">
                   {{ item.title }}
                 </div>
                 <ul class="txt-ul">
@@ -189,7 +189,7 @@ const cdmoList = ref([
     imgUrl: handleViteImages("cap1.png"),
     actImgUrl: handleViteImages("cap_act1.png"),
     text: `Experienced experts with
-over 10 years inGCT,
+over 10 years in GCT,
 ensuring timely
 support across the
 product lifecycle.
@@ -216,7 +216,7 @@ quality systems
     actImgUrl: handleViteImages("cap_act4.png"),
     text: `130+ process
 development projects,
-230+analytical
+230+ analytical
 methods developed.
 `,
   },
@@ -240,7 +240,7 @@ navigation
 const industrializeList = reactive([
   {
     imgUrl: handleViteImages("industrialize1.png"),
-    title: `Development:Efficient and Customized Process Development with
+    title: `Development: Efficient and Customized Process Development with
                   BoardProduct Spectrum`,
     path: "/process",
     txtList: [
@@ -252,7 +252,7 @@ const industrializeList = reactive([
   },
   {
     imgUrl: handleViteImages("industrialize2.png"),
-    title: `CcGMP Manufacturing: Flexible Large-Scale GMP Manufacturing
+    title: `cGMP Manufacturing: Flexible Large-Scale GMP Manufacturing
                   Platform:`,
     path: "/cgmp",
     txtList: [
@@ -295,7 +295,7 @@ const croList = ref([
   {
     imgUrl: handleViteImages("croIcon1.png"),
     title: "Plasmid",
-    text: `At 0Bi0, our dedicateddevelopment team iscommitted to assistingyou in designing,constructing, andmanufacturing plasmidsfor fuctional genomicsresearch, as well asprovidingexpertise inviral packaging.`,
+    text: `At 0Bi0, our dedicateddevelopment team iscommitted to assistingyou in designing,constructing, andmanufacturing plasmidsfor fuctional genomicsresearch, as well asproviding expertise inviral packaging.`,
   },
   {
     imgUrl: handleViteImages("croIcon2.png"),

@@ -1762,9 +1762,8 @@ export const events = ref([
   },
   {
     id: 1,
-    type: "event",
-    title: `Cell&Gene meeting on the Mesa`,
-    time: "10th-12th Oct. ,2023",
+    title: `Cell & Gene meeting on the Mesa`,
+    time: "Oct 10-12 2023",
     content: `Carlsbad, CA, United States`,
     html: `<div class="Insights-detail-text text"><div class="font-size20 color666">Carlsbad, CA, United States</div></div>`,
   },
@@ -1772,7 +1771,7 @@ export const events = ref([
     id: 2,
     type: "event",
     title: `BioProcess International Conference & Exhibition`,
-    time: "18th-21st Sep. ,2023",
+    time: "Sep 18-21 2023",
     content: `Boston, MA`,
     html: `<div class="Insights-detail-text text"><p>Related Links:</p>
 	<p>
@@ -1783,7 +1782,7 @@ export const events = ref([
     id: 3,
     type: "event",
     title: `ASGCT 26th Annual Meeting`,
-    time: "16th-20th May ,2023",
+    time: "May 16-20 2023",
     content: `Los Angeles, CA`,
     html: `<div class="Insights-detail-text text">
     <p>

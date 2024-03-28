@@ -40,13 +40,13 @@
                       />
                     </div>
                   </div>
-                  <div class="font-size24 fontf7 iti">
-                    Lin-Gang Free-Trade Zone<br />Shanghai, China
+                  <div class="font-size18 fontf7 iti">
+                    Lin-Gang Free-Trade Zone, Shanghai, China
                   </div>
-                  <div class="font-size38 fontf7 iti">OBIO Intelli-M</div>
+                  <div class="font-size30 fontf7 iti">OBIO Intelli-M</div>
                   <p class="font-size18 textColor txt-bold">
                     Process Development Characterization Clinical and Commercial
-                    Manufacturing
+                    Manufacturing. 
                     <text class="title-color txt-bold">77,000</text
                     >-square-meter Facility for Global Supply
                   </p>
@@ -65,14 +65,14 @@
                       />
                     </div>
                   </div>
-                  <div class="font-size24 fontf7 iti">
-                    International Medical Park<br />Shanghai, China
+                  <div class="font-size18 fontf7 iti">
+                    International Medical Park, Shanghai, China
                   </div>
-                  <div class="font-size38 fontf7 iti">SPIRO Site</div>
+                  <div class="font-size30 fontf7 iti">SPIRO Site</div>
 
                   <p class="font-size18 textColor txt-bold">
                     Integrated Laboratory Services Processand Analytical Method
-                    DevelopmentResearch and Development Center
+                    Development. Research and Development Center
                   </p>
                   <router-link
                     to="/spiroSite"
@@ -84,18 +84,18 @@
                   <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
                       <img
-                        :src="handleViteImages('facilities3.jpg')"
+                        :src="handleViteImages('pine_site.png')"
                         alt="PINE Site"
                       />
                     </div>
                   </div>
-                  <div class="font-size24 fontf7 iti">
-                    International Medical Park<br />Shanghai, China
+                  <div class="font-size18 fontf7 iti">
+                    International Medical Park, Shanghai, China
                   </div>
-                  <div class="font-size38 fontf7 iti">PINE Site</div>
+                  <div class="font-size30 fontf7 iti">PINE Site</div>
                   <p class="font-size18 textColor txt-bold">
-                    Process and Analytical Method Development Pre-clinical and
-                    Clinical Manufacturing Three-building,<text
+                    Process and Analytical Method Development. Pre-clinical and
+                    Clinical Manufacturing. Three-building, <text
                       class="title-color txt-bold"
                       >10,000</text
                     >-square-meter campus
@@ -121,7 +121,7 @@
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+          <h1 class="p-title font-size30 txt-bold fontf8 mb-3 mt-5">
             CDMO Service
           </h1>
           <el-row class="image--callout">
@@ -215,7 +215,7 @@
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size50 txt-bold fontf8 mb-0 mt-5">
+          <h1 class="p-title font-size30 txt-bold fontf8 mb-0 mt-5">
             CRO Service
           </h1>
           <div class="wysiwyg--content colour-white mb-3">
@@ -280,7 +280,7 @@
                         <img :src="i.imgUrl" class="icos-a" :alt="i.title" />
                       </div>
                     </div>
-                    <div class="font-size50 t fontf8 p-title txt-bold">
+                    <div class="font-size30 t fontf8 p-title txt-bold">
                       {{ i.title }}
                     </div>
                   </a>
@@ -319,12 +319,11 @@
                     allowfullscreen
                   ></iframe>
                   <p class="video-p font-size20 textColor">
-                    Experience Innovation: Explore OBiO Tech's Intelli-M
-                    GMP-Compliant Plasmid Production Line Today!
+                    Experience Innovation: Explore OBiO Tech's Intelli-M GMP-Compliant Plasmid Production Line Today!
                   </p>
                 </div>
-              </div></el-col
-            >
+              </div>
+            </el-col>
             <el-col :span="8" :xs="24">
               <div class="manufacturing-list bg-pinkbluelfr video-list">
                 <div class="content">
@@ -359,7 +358,7 @@
                   ></iframe>
                   <p class="video-p font-size20 textColor">
                     Elevate Your Production Efficiency Today! OBiO Intelli-M GMP
-                    offers Capacities from 20L to 2000L
+                    offers Capacities from 20L to 2000L.
                   </p>
                 </div>
               </div>
@@ -459,13 +458,13 @@ const cdmoList = ref([
     path: "/products",
     list: [
       "Autologous and homologous immunocyte therapies",
-      "CAR-TTherapy",
+      "CAR-T Therapy",
       "NK Cell Therapy",
       "TCR-T Therapy",
       "DC Therapy",
       "ГóT Therapy",
       "Treg Therapy",
-      "Stem cell therapy",
+      "Stem Cell Therapy",
     ],
   },
   {
@@ -494,7 +493,7 @@ constructing, and
 manufacturing plasmids
 for fuctional genomics
 research, as well as 
-providingexpertise in
+providing expertise in
 viral packaging.`,
   },
   {
