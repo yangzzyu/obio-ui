@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-28 11:04:08
+ * @LastEditTime: 2024-03-28 13:40:31
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -428,36 +428,6 @@ const navigation = ref({
   prevEl: "#historyPrev",
 });
 onMounted(() => {});
-const ourList = reactive([
-  {
-    title: "Focus:",
-    text: `Dedication to Contract Development and Manufacturi 
-Strict Internal Data Management
-Comprehensive Patent System
-Professional Intellectual Property Protection`,
-  },
-  {
-    title: "Acceleration:",
-    text: `Commercial Readiness from Technical Expertise
-Advanced Process Development Technologies
-Large-Scale Manufacturing Capabilities
-Fully-Closed & Automated Downstream Purification`,
-  },
-  {
-    title: "Standardization:",
-    text: `Fully Regulatory Compliance
-GMP-Compliant Facilities and Equipment
-Robust Quality Management System
-Comprehensive Quality Control Platform`,
-  },
-  {
-    title: "Team:",
-    text: `Trustful Expertise
-10+ years of Experience in Gene and Cell Therapy
-Extensive Experience in IND-Enabling Support
-Responses at First Instance`,
-  },
-]);
 </script>
 
 <style>
