@@ -90,7 +90,7 @@ a:focus {
   text-decoration: none;
 }
 .color1 {
-  color: #014099;
+  color: $fontColor;
 }
 .wow {
   /* opacity: 0; */
@@ -275,7 +275,7 @@ a:focus {
   padding-left: 20px;
   height: 160px;
   position: relative;
-  color: #014099;
+  color: $fontColor;
 }
 .pub-title .line {
   position: absolute;
@@ -334,7 +334,7 @@ a:focus {
   display: inline-block;
   width: 40px;
   height: 3px;
-  background: #014099;
+  background: $fontColor;
 }
 .home-offering-wrap .list .item .box:hover .bg {
   background-image: url(@/assets/icons/ico2a.png);
@@ -606,8 +606,8 @@ a:focus {
   cursor: pointer;
 }
 .home-insights-wrap .more .m-span:hover {
-  background: #014099;
-  border-color: #014099;
+  background: $fontColor;
+  border-color: $fontColor;
 }
 .home-contact {
   background: #fafafa url(@/assets/icons/bg6.png) right bottom no-repeat;
@@ -1067,7 +1067,7 @@ a:focus {
   max-width: 460px;
 }
 .pub-contact-form {
-  background-image: linear-gradient(135deg, #014099, #009d85);
+  background-image: linear-gradient(135deg, $fontColor, #009d85);
   color: #fff;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -1309,7 +1309,7 @@ a:focus {
 }
 .in-about-wrap .section-2 {
   padding-bottom: 60px;
-  background-image: linear-gradient(135deg, #014099, #009d85);
+  background-image: linear-gradient(135deg, $fontColor, #009d85);
   color: #fff;
   overflow: hidden;
 }
@@ -1907,7 +1907,7 @@ header {
   z-index: 33;
 }
 .Innovations-wrap .list .item .txt .title {
-  color: #014099;
+  color: $fontColor;
   margin-bottom: 20px;
 }
 .Innovations-wrap .list .item .txt .p {
@@ -1964,7 +1964,7 @@ header {
   border-bottom-left-radius: 20px;
 }
 .in-news-all-btn a:hover {
-  background-color: #014099;
+  background-color: $fontColor;
 }
 .Insights-wrap .section-2 {
   background: url(@/assets/icons/news_bg.jpg) no-repeat center top/cover;
@@ -1996,7 +1996,7 @@ header {
 }
 .Insights-wrap .section-3 .groups .labs {
   margin-bottom: 20px;
-  color: #014099;
+  color: $fontColor;
 }
 .Insights-wrap .section-3 .groups .boxs {
   cursor: pointer;
@@ -2026,7 +2026,7 @@ header {
   padding: 30px 40px 0;
 }
 .popform-main .stitle {
-  color: #014099;
+  color: $fontColor;
   overflow: hidden;
 }
 .popform-main .stitle span {
@@ -2154,7 +2154,7 @@ header {
 /*.CDMO-Solutions-wrap .section-2 .list .active .img1 .icos{opacity: 0;}
 .CDMO-Solutions-wrap .section-2 .list .active .img1 .img-a{opacity: 1;}*/
 .CDMO-Solutions-wrap .section-2 .list .active .boxs {
-  color: #014099;
+  color: $fontColor;
 }
 .CDMO-Solutions-wrap .section-2 .list .img1 .icos .icos-a {
   position: absolute;
@@ -2277,7 +2277,7 @@ header {
 .CDMO-Solutions-wrap .section-4 .content .list .item {
   margin-bottom: 10px;
 }
-/*background-image: linear-gradient(135deg,#014099,#009d85);
+/*background-image: linear-gradient(135deg,$fontColor,#009d85);
     color: #fff; border-radius: 50%;width: 70px;*/
 .CDMO-Solutions-wrap .section-4 .content .list .item .t .f {
   display: inline-block;
@@ -2290,7 +2290,7 @@ header {
 .CDMO-Solutions-wrap .section-4 .content .list .item .t .tr {
   display: inline-block;
   font-size: 24px;
-  color: #014099;
+  color: $fontColor;
 }
 .CDMO-Solutions-wrap .section-4 .content .list .item .p {
   margin-top: 5px;
@@ -2314,7 +2314,7 @@ header {
 }
 .cGMP-title-t1 .ct span {
   display: inline-block;
-  color: #014099;
+  color: $fontColor;
   position: relative;
   padding: 0 20px;
   margin-left: -20px;
@@ -2384,7 +2384,7 @@ header {
   left: 0;
   width: 99%;
   height: 4px;
-  background: #014099;
+  background: $fontColor;
   margin-top: -2px;
   content: "";
   z-index: -1;
@@ -2396,7 +2396,7 @@ header {
   width: 0;
   height: 0;
   border-top: 16px solid transparent;
-  border-left: 22px solid #014099;
+  border-left: 22px solid $fontColor;
   border-bottom: 16px solid transparent;
   margin-top: -16px;
   content: "";
@@ -2404,7 +2404,7 @@ header {
 }
 .cGMP-main-tab .item {
   height: 70px;
-  background: #014099;
+  background: $fontColor;
   text-align: center;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -2415,7 +2415,7 @@ header {
 .cGMP-main-tab .line {
   width: 46px;
   height: 46px;
-  background: #014099;
+  background: $fontColor;
   border-radius: 50%;
   border: 5px solid #f6f6f6;
   margin: 0 80px;
@@ -2472,7 +2472,7 @@ header {
 }
 .cGMP-title-t2 .ct span {
   display: inline-block;
-  color: #014099;
+  color: $fontColor;
   position: relative;
 }
 .cGMP-title-t2 .ct span:after {
@@ -2512,8 +2512,8 @@ header {
 }
 .cGMP-title-t3 span {
   display: inline-block;
-  border-bottom: 1px solid #014099;
-  color: #014099;
+  border-bottom: 1px solid $fontColor;
+  color: $fontColor;
 }
 .cGMP-swiper {
   max-width: 21150px;
@@ -2565,8 +2565,8 @@ header {
   border-bottom: 1px solid #25b096;
 }
 .Laboratory-wrap ul.ul-pop li .stn:hover .stx {
-  color: #014099;
-  border-bottom-color: #014099;
+  color: $fontColor;
+  border-bottom-color: $fontColor;
 }
 
 .popLaboraBox {
@@ -2581,7 +2581,7 @@ header {
 }
 .popLaboraBox-main .title span {
   display: inline-block;
-  color: #014099;
+  // color: $fontColor;
   position: relative;
 }
 .popLaboraBox-main .title span:before {
@@ -2832,7 +2832,7 @@ ul.ul-square li {
 }
 /* 滚动条上的滚动滑块. */
 .about-history-swp .swiper-slide .txt::-webkit-scrollbar-thumb {
-  background-color: #014099;
+  background-color: $fontColor;
   border-radius: 10px;
 }
 /*  滚动条轨道. */

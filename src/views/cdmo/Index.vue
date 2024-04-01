@@ -9,7 +9,7 @@
 <template>
   <div class="cdmo">
     <Focus :focusObj="FocusData" />
-    <Breadcrumb v-if="routerName !== 'cdmo'" :matchedData="matchedData" />
+    <!-- <Breadcrumb v-if="routerName !== 'cdmo'" :matchedData="matchedData" /> -->
     <router-view></router-view>
     <Events />
   </div>

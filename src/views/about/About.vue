@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-01 14:37:58
+ * @LastEditTime: 2024-04-01 15:40:24
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -202,9 +202,9 @@
         style="margin: auto"
         class="container section-3"
       >
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+        <!-- <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
           Factory Images
-        </h1>
+        </h1> -->
         <div class="fac-con">
           <el-row class="row" :gutter="10">
             <el-col :xs="24" :span="6" class="">
@@ -438,9 +438,9 @@ onMounted(() => {});
 <style lang="scss" scoped>
 .about-box {
   margin: 0 !important;
-  .manufacturing-list {
-    cursor: pointer;
-  }
+  // .manufacturing-list {
+  //   cursor: pointer;
+  // }
 }
 .factory-text {
   position: absolute;

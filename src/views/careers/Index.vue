@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-01 14:37:09
+ * @LastEditTime: 2024-04-01 15:37:43
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -23,7 +23,7 @@
           Our Culture
         </h1>
         <h2
-        id="mission-box"
+          id="mission-box"
           class="title-color our-txt font-size30 section-title fontf7 txt-bold"
         >
           Mission: Enable gene therapy for better lives
@@ -160,7 +160,7 @@
     :before-close="handleClose"
   >
     <div class="popLaboraBox-main">
-      <div class="font-size50 fontf8 title">
+      <div class="font-size30 fontf8 title title-color">
         <span>{{ Labora.title }}</span>
       </div>
       <div class="text color666 font-size18">
@@ -223,7 +223,6 @@ OBiO is dedicated to constantly accelerating
 gene therapies researches, drug discovery, 
 pharmaceutical studies, clinical and commercial 
 development of gene therapies
-
 `,
   },
 ]);

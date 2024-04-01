@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-01-27 15:30:34
+ * @LastEditTime: 2024-04-01 16:11:44
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -52,8 +52,8 @@
             </el-col>
           </el-row>
           <span style="line-height: 2">
-            <span style="color: #003399">
-              <router-link to="/contact"
+            <span class="title-color">
+              <router-link to="/insight/inquiry"
                 ><strong
                   ><u>Please contact us for customization needs.</u></strong
                 ></router-link
@@ -66,7 +66,7 @@
             <br />
           </span>
         </div>
-        <div class="pub-pal20" style="color: #014099">
+        <div class="pub-pal20 title-color">
           <!-- <span class="fontf8 font-size50">Contact Information</span> -->
           <h1 class="fontf8 font-size50">Contact Information</h1>
         </div>

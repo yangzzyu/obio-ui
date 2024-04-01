@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-27 17:01:49
+ * @LastEditTime: 2024-04-01 16:02:07
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -94,7 +94,7 @@
             products.
           </p>
           <p><br /></p>
-          <div class="font-size24 fontf5" style="color: #014099">
+          <div class="font-size24 fontf5 title-color" >
             We will provide e-CTD ready CMC related documents writing and review
             for your submission:
           </div>
