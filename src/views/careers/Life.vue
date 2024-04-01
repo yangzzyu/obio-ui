@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-28 11:42:19
+ * @LastEditTime: 2024-04-01 17:17:25
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -73,21 +73,24 @@
                 :xs="24"
                 :span="24 / item.imgList.length"
                 class=""
-                v-for="(i, index) in item.imgList"
-                :key="index"
+                v-for="(i, k) in item.imgList"
+                :key="k"
               >
                 <div class="manufacturing-list bg-pinkbluelfr">
-                  <div
-                    class="content"
-                    style="width: 100%; height: 300px; overflow: hidden"
-                  >
-                    <img
+                  <div class="content" style="width: 100%; overflow: hidden">
+                    <el-image
+                      style="width: 100%; height: 100%"
                       :src="i"
-                      alt=""
-                      srcset=""
-                      width="100%"
-                      height="100%"
-                      style="object-fit: cover"
+                      :zoom-rate="1.2"
+                      :max-scale="7"
+                      :min-scale="0.2"
+                      :initial-index="k"
+                      :crossorigin="null"
+                      :preview-src-list="item.imgList"
+                      fit="cover"
+                      :z-index="99999"
+                      :preview-teleported="true"
+                      :hide-on-click-modal="true"
                     />
                   </div>
                 </div>
@@ -148,13 +151,19 @@
                     class="content"
                     style="width: 100%; height: 300px; overflow: hidden"
                   >
-                    <img
+                    <el-image
+                      style="width: 100%; height: 100%"
                       :src="i"
-                      alt=""
-                      srcset=""
-                      width="100%"
-                      height="100%"
-                      style="object-fit: cover"
+                      :zoom-rate="1.2"
+                      :max-scale="7"
+                      :min-scale="0.2"
+                      :initial-index="index"
+                      :crossorigin="null"
+                      :preview-src-list="footballList"
+                      fit="cover"
+                      :z-index="99999"
+                      :preview-teleported="true"
+                      :hide-on-click-modal="true"
                     />
                   </div>
                 </div>
@@ -186,7 +195,7 @@
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
                 ></iframe>
-                <p class="video-p font-size20 textColor">
+                <p class="video-p font-size18 textColor">
                   Exciting Milestone: OBiO Lingang Facility Launches Operations
                   in 2023!
                 </p>
@@ -206,7 +215,7 @@
                   allowfullscreen
                 ></iframe>
 
-                <p class="video-p font-size20 textColor">
+                <p class="video-p font-size18 textColor">
                   Exciting Milestone: OBiO Lingang Facility Launches Operations
                   in 2023!
                 </p>

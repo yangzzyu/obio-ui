@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-03-18 22:04:02
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-01 15:45:58
+ * @LastEditTime: 2024-04-01 16:21:44
  * @FilePath: \obio-ui\src\views\home\Index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -214,7 +214,7 @@
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size30 txt-bold fontf8 mb-0 mt-5">
+          <h1 class="p-title font-size50 txt-bold fontf8 mb-0 mt-5">
             CRO Service
           </h1>
           <div class="wysiwyg--content colour-white mb-3">
@@ -319,7 +319,7 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
                   ></iframe>
-                  <p class="video-p font-size20 textColor">
+                  <p class="video-p font-size18 textColor">
                     Experience Innovation: Explore OBiO Tech's Intelli-M
                     GMP-Compliant Plasmid Production Line Today!
                   </p>
@@ -339,7 +339,7 @@
                     allowfullscreen
                   ></iframe>
 
-                  <p class="video-p font-size20 textColor">
+                  <p class="video-p font-size18 textColor">
                     Exciting Milestone: OBiO Lingang Facility Launches
                     Operations in 2023!
                   </p>
@@ -358,7 +358,7 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
                   ></iframe>
-                  <p class="video-p font-size20 textColor">
+                  <p class="video-p font-size18 textColor">
                     Elevate Your Production Efficiency Today! OBiO Intelli-M GMP
                     offers Capacities from 20L to 2000L.
                   </p>
