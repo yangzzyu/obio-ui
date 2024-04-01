@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-22 21:59:54
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-01 14:39:28
+ * @LastEditTime: 2024-04-01 15:26:26
  * @FilePath: \obio-ui\src\components\Header.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -58,9 +58,15 @@
                     Facilities
                   </div>
                 </template>
-                <el-menu-item index="/about/facilities/spiro">SPIRO Site</el-menu-item>
-                <el-menu-item index="/about/facilities/pine">PINE Site</el-menu-item>
-                <el-menu-item index="/about/facilities/intellim">OBiO Intelli-M</el-menu-item>
+                <el-menu-item index="/about/facilities/spiro"
+                  >SPIRO Site</el-menu-item
+                >
+                <el-menu-item index="/about/facilities/pine"
+                  >PINE Site</el-menu-item
+                >
+                <el-menu-item index="/about/facilities/intellim"
+                  >OBiO Intelli-M</el-menu-item
+                >
               </el-sub-menu>
               <el-menu-item index="/about/history">History </el-menu-item>
             </el-sub-menu>
@@ -101,24 +107,6 @@
               </el-menu-item>
               <el-menu-item index="/cdmo/cdmo"> CDMO </el-menu-item>
               <el-menu-item index="/cdmo/innovation"> Innovation </el-menu-item>
-              <!-- <el-menu-item index="/process">Process Development</el-menu-item>
-              <el-sub-menu index="/cgmp">
-                <template #title>
-                  <div @click="router.push('/cgmp')">CGMP Manufacturing</div>
-                </template>
-                <el-menu-item index="/cdmo/cgmp/viral_vectors">Viral Vector</el-menu-item>
-                <el-menu-item index="/cdmo/cgmp/oncolytic_virus">Oncolytic Virus</el-menu-item>
-                <el-menu-item index="/cdmo/cgmp/cell_therapy_products"
-                  >Cell Therapy Products</el-menu-item
-                >
-                <el-menu-item index="/cdmo/cgmp/prasmid_nucleotides"
-                  >Plasmid & Nucleotides</el-menu-item
-                >
-              </el-sub-menu>
-              <el-menu-item index="/quality">Quality & Regulatory</el-menu-item>
-              <el-menu-item index="/logistics"
-                >Cold Chain Logistics</el-menu-item
-              > -->
             </el-sub-menu>
             <el-menu-item index="/cro" class="menu-t1"
               >CRO Service</el-menu-item
@@ -154,18 +142,6 @@
                   Careers
                 </div>
               </template>
-              <!-- <el-menu-item index="/careers">
-                <div
-                  v-scroll-to="{
-                    element: '.careers-box',
-                    duration: 300,
-                    easing: 'ease',
-                    offset: 1,
-                  }"
-                >
-                  Mission
-                </div>
-              </el-menu-item> -->
               <el-menu-item index="/careers/mission"> Mission</el-menu-item>
               <el-menu-item index="/careers/life"> Life at OBIO </el-menu-item>
               <el-menu-item index="/careers/job"> Job Opening </el-menu-item>
@@ -203,77 +179,39 @@
           <template #title>
             <div @click="goPage('/about')" class="menu-t1">About Us</div>
           </template>
-          <el-sub-menu index="/facilities" popper-class="sub-popper ">
+          <el-sub-menu index="/about/facilities">
             <template #title>
-              <div
-                @click="goPage('/facilities')"
-                v-scroll-to="{
-                  element: '.section-3',
-                  duration: 300,
-                  easing: 'ease',
-                  offset: 1,
-                }"
-              >
-                Facilities
-              </div>
+              <div @click="router.push('/about/facilities')">Facilities</div>
             </template>
-            <el-menu-item index="/about/facilities/spiro">SPIRO Site</el-menu-item>
-            <el-menu-item index="/about/facilities/pine">PINE Site</el-menu-item>
-            <el-menu-item index="/about/facilities/intellim">OBiO Intelli-M</el-menu-item>
+            <el-menu-item index="/about/facilities/spiro"
+              >SPIRO Site</el-menu-item
+            >
+            <el-menu-item index="/about/facilities/pine"
+              >PINE Site</el-menu-item
+            >
+            <el-menu-item index="/about/facilities/intellim"
+              >OBiO Intelli-M</el-menu-item
+            >
           </el-sub-menu>
-          <el-menu-item index="/about">
-            <template #title>
-              <div
-                @click="goPage('/about')"
-                v-scroll-to="{
-                  element: '.section-2',
-                  duration: 300,
-                  easing: 'ease',
-                  offset: 1,
-                }"
-              >
-                History
-              </div>
-            </template></el-menu-item
-          >
+          <el-menu-item index="/about/history">History </el-menu-item>
         </el-sub-menu>
         <el-sub-menu
-          index="/cap"
+          index="/capability"
           popper-class="sub-popper"
           :class="{
-            'is-active': ['/cap'].includes(activeIndex),
+            'is-active': ['/capability'].includes(activeIndex),
           }"
         >
           <template #title>
-            <div @click="goPage('/cap')" class="menu-t1">
+            <div @click="router.push('/capability')" class="menu-t1">
               Capability & Commitment
             </div>
           </template>
-          <el-menu-item index="/cap">
-            <div
-              @click="drawerMenu = false"
-              v-scroll-to="{
-                element: '.industrialize-box',
-                duration: 300,
-                easing: 'ease',
-                offset: 1,
-              }"
-            >
-              Industrialize
-            </div>
+          <el-menu-item index="/capability/industrialize">
+            Industrialize
           </el-menu-item>
-          <el-menu-item index="/cap">
-            <div
-              @click="drawerMenu = false"
-              v-scroll-to="{
-                element: '.our-box',
-                duration: 300,
-                easing: 'ease',
-                offset: 1,
-              }"
-            >
-              Commitment
-            </div>
+          <el-menu-item index="/capability/commitment">
+            Commitment
           </el-menu-item>
         </el-sub-menu>
         <el-sub-menu
@@ -289,80 +227,27 @@
               CDMO Solutions
             </div>
           </template>
-          <el-menu-item index="/cdmo">
-            <template #title>
-              <div
-                @click="drawerMenu = false"
-                v-scroll-to="{
-                  element: '.section-3',
-                  duration: 300,
-                  easing: 'ease',
-                  offset: 1,
-                }"
-              >
-                Manufacturing
-              </div>
-            </template></el-menu-item
-          >
-          <el-menu-item index="/cdmo">
-            <template #title>
-              <div
-                @click="drawerMenu = false"
-                v-scroll-to="{
-                  element: '#cro',
-                  duration: 300,
-                  easing: 'ease',
-                  offset: 1,
-                }"
-              >
-                CDMO
-              </div>
-            </template></el-menu-item
-          >
-          <el-menu-item index="/cdmo">
-            <template #title>
-              <div
-                @click="drawerMenu = false"
-                v-scroll-to="{
-                  element: '#innovation',
-                  duration: 300,
-                  easing: 'ease',
-                  offset: 1,
-                }"
-              >
-                Innovation
-              </div>
-            </template></el-menu-item
-          >
-          <!-- <el-menu-item index="/process">Process Development</el-menu-item>
-          <el-sub-menu index="/cgmp">
-            <template #title>
-              <div @click="router.push('/cgmp')">CGMP Manufacturing</div>
-            </template>
-            <el-menu-item index="/cdmo/cgmp/viral_vectors">Viral Vector</el-menu-item>
-            <el-menu-item index="/cdmo/cgmp/oncolytic_virus">Oncolytic Virus</el-menu-item>
-            <el-menu-item index="/cdmo/cgmp/cell_therapy_products">Cell Therapy Products</el-menu-item>
-            <el-menu-item index="/cdmo/cgmp/prasmid_nucleotides"
-              >Plasmid & Nucleotides</el-menu-item
-            >
-          </el-sub-menu>
-          <el-menu-item index="/quality">Quality & Regulatory</el-menu-item>
-          <el-menu-item index="/logistics">Cold Chain Logistics</el-menu-item> -->
+          <el-menu-item index="/cdmo/manufacturing">
+            Manufacturing
+          </el-menu-item>
+          <el-menu-item index="/cdmo/cdmo"> CDMO </el-menu-item>
+          <el-menu-item index="/cdmo/innovation"> Innovation </el-menu-item>
         </el-sub-menu>
         <el-menu-item index="/cro" class="menu-t1">CRO Service</el-menu-item>
         <el-sub-menu
-          index="/news"
+          index="/insight"
           popper-class="sub-popper"
           :class="{
-            'is-active': ['/news'].includes(activeIndex),
+            'is-active': ['/insight'].includes(activeIndex),
           }"
         >
           <template #title>
-            <div @click="router.push('/news')" class="menu-t1">News</div>
+            <div @click="router.push('/insight')" class="menu-t1">News</div>
           </template>
-          <el-menu-item index="/releases">News</el-menu-item>
-          <el-menu-item index="/events">Events</el-menu-item>
-          <el-menu-item index="news">
+          <el-menu-item index="/insight/news">News</el-menu-item>
+          <el-menu-item index="/insight/events">Events</el-menu-item>
+          <el-menu-item index="/insight/inquiry">Learn More</el-menu-item>
+          <el-menu-item index="/insight/partnership">
             <a href="https://www.obiosh.com/tzz/gg/" target="_blank"
               >Partnership</a
             >
@@ -378,19 +263,7 @@
           <template #title>
             <div @click="router.push('/careers')" class="menu-t1">Careers</div>
           </template>
-          <el-menu-item index="/careers">
-            <div
-              @click="drawerMenu = false"
-              v-scroll-to="{
-                element: '.careers-box',
-                duration: 300,
-                easing: 'ease',
-                offset: 1,
-              }"
-            >
-              Mission
-            </div>
-          </el-menu-item>
+          <el-menu-item index="/careers/mission"> Mission</el-menu-item>
           <el-menu-item index="/careers/life"> Life at OBIO </el-menu-item>
           <el-menu-item index="/careers/job"> Job Opening </el-menu-item>
         </el-sub-menu>
