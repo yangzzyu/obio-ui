@@ -197,7 +197,7 @@
               <router-link to="/life">Life at OBIO</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/job">Job Opening</router-link>
+              <router-link to="/careers/job">Job Opening</router-link>
             </dd>
             <dt class="font-size14">
               <!-- <router-link href="/cn/home/ys/cid/861">Privacy Policy</router-link> -->

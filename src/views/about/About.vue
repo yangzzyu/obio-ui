@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-28 13:40:31
+ * @LastEditTime: 2024-04-01 14:37:58
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -43,7 +43,7 @@
         </div>
       </el-col>
     </div>
-    <div class="section-2">
+    <div class="section-2" id="history-box">
       <el-col
         :xs="14"
         :sm="20"
@@ -106,7 +106,7 @@
         </div>
       </el-col>
     </div>
-    <section class="in-about-wrap about-box">
+    <section class="in-about-wrap about-box" id="facilities-box">
       <el-col
         :xs="22"
         :sm="20"
@@ -116,7 +116,7 @@
         style="margin: auto"
         class="container section-3"
       >
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Facility</h1>
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5" >Facility</h1>
         <div class="fac-con">
           <el-row class="row" :gutter="10">
             <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
@@ -138,7 +138,7 @@
                 <text class="title-color txt-bold">77,000</text>-square-meter
                 Facility for Global Supply
               </p>
-              <router-link to="/intelliM" class="read-more font-size18 fontf7"
+              <router-link to="/about/facilities/intellim" class="read-more font-size18 fontf7"
                 >Read More</router-link
               >
             </el-col>
@@ -160,7 +160,7 @@
                 Integrated Laboratory Services Processand Analytical Method
                 DevelopmentResearch and Development Center
               </p>
-              <router-link to="/spiroSite" class="read-more font-size18 fontf7"
+              <router-link to="/about/facilities/spiro" class="read-more font-size18 fontf7"
                 >Read More</router-link
               >
             </el-col>
@@ -184,7 +184,7 @@
                   >10,000</text
                 >-square-meter campus
               </p>
-              <router-link to="/pineSite" class="read-more font-size18 fontf7"
+              <router-link to="/about/facilities/pine" class="read-more font-size18 fontf7"
                 >Read More</router-link
               >
             </el-col>
@@ -392,7 +392,7 @@
             >
           </li>
           <li>
-            <router-link to="/life" class="btn-a font-size18 fontf7"
+            <router-link to="/careers/life" class="btn-a font-size18 fontf7"
               >Read More</router-link
             >
           </li>

@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 16:24:34
+ * @LastEditTime: 2024-04-01 14:37:33
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -34,7 +34,7 @@
       <el-row class="news--slider row" :gutter="10">
         <el-col :xs="24" :span="12" class="news--slider-i">
           <router-link
-            to="/life"
+            to="/careers/life"
             class="block tans service--box_link bg-pinkbluelfr career-a"
           >
             <el-row
@@ -64,7 +64,7 @@
         </el-col>
         <el-col :xs="24" :span="12" class="news--slider-i">
           <router-link
-            to="/job"
+            to="/careers/job"
             class="block tans service--box_link bg-pinkbluelfr career-a"
           >
             <el-row

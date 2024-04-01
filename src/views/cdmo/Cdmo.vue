@@ -2,13 +2,13 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-28 10:18:33
+ * @LastEditTime: 2024-04-01 15:12:22
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
   <div class="CDMO-Solutions-wrap">
-    <div class="section-1">
+    <div class="section-1 mb-3">
       <el-col
         :xs="22"
         :sm="20"
@@ -98,7 +98,8 @@
         </div>
       </el-col>
     </div>
-    <div class="in-about-wrap facilities-box">
+
+    <div class="in-about-wrap facilities-box mt-5" id="manufacturing-box">
       <div class="section-3">
         <el-col
           :xs="22"
@@ -128,11 +129,13 @@
                 <div class="font-size30 fontf7 iti">OBIO Intelli-M</div>
                 <p class="font-size18 textColor txt-bold">
                   Process Development Characterization Clinical and Commercial
-                  Manufacturing. 
+                  Manufacturing.
                   <text class="title-color txt-bold">77,000</text>-square-meter
                   Facility for Global Supply
                 </p>
-                <router-link to="/intelliM" class="read-more font-size18 fontf7"
+                <router-link
+                  to="/about/facilities/intellim"
+                  class="read-more font-size18 fontf7"
                   >Read More</router-link
                 >
               </el-col>
@@ -155,7 +158,7 @@
                   Development. Research and Development Center
                 </p>
                 <router-link
-                  to="/spiroSite"
+                  to="/about/facilities/spiro"
                   class="read-more font-size18 fontf7"
                   >Read More</router-link
                 >
@@ -175,12 +178,13 @@
                 <div class="font-size30 fontf7 iti">PINE Site</div>
                 <p class="font-size18 textColor txt-bold">
                   Process and Analytical Method Development. Pre-clinical and
-                  Clinical Manufacturing. Three-building, <text
-                    class="title-color txt-bold"
-                    >10,000</text
-                  >-square-meter campus
+                  Clinical Manufacturing. Three-building,
+                  <text class="title-color txt-bold">10,000</text>-square-meter
+                  campus
                 </p>
-                <router-link to="/pineSite" class="read-more font-size18 fontf7"
+                <router-link
+                  to="/about/facilities/pine"
+                  class="read-more font-size18 fontf7"
                   >Read More</router-link
                 >
               </el-col>
@@ -189,7 +193,7 @@
         >
       </div>
     </div>
-    <section id="cro" class="cro-list">
+    <section id="cdmo-service-box" class="cro-list">
       <el-col
         :xs="22"
         :sm="20"
@@ -456,7 +460,7 @@ const croList = ref([
   {
     imgUrl: handleViteImages("cdmo1.png"),
     title: "Viral Vectors",
-    path: "/vector",
+    path: "/cdmo/cgmp/viral_vectors",
     textArr: [
       "AAV",
       "Adenoviral vector for delivery of genes",
@@ -468,7 +472,7 @@ const croList = ref([
   {
     imgUrl: handleViteImages("cdmo2.png"),
     title: "Oncolytic Virus",
-    path: "/virus",
+    path: "/cdmo/cgmp/oncolytic_virus",
     textArr: [
       "Oncolytic adenoviruses",
       "Oncolytic herpes simplex virus",
@@ -480,7 +484,7 @@ const croList = ref([
   {
     imgUrl: handleViteImages("cdmo3.png"),
     title: "Cell Therapy Products",
-    path: "/products",
+    path: "/cdmo/cgmp/cell_therapy_products",
     textArr: [
       "Autologous and homologous immunocyte therapies",
       "CAR-T Therapy",
@@ -495,7 +499,7 @@ const croList = ref([
   {
     imgUrl: handleViteImages("cdmo4.png"),
     title: "Plasmid Nucleotides",
-    path: "/nucleotides",
+    path: "/cdmo/cgmp/prasmid_nucleotides",
     textArr: [
       "Plasmid DNA",
       "Minicircle plasmids",
@@ -533,18 +537,18 @@ const LaboraList = ref([
   {
     id: 1,
     title: "AAVneO™ System：Next-Generation Capsid Screening Platform",
-    txt: `Our AAVneO™ system uses in-vivo direct evolution and high-throughput screening to discover the next-generation adeno-associated viral vectors with enhanced targeting ability, improved payload size, lower immunogenicity, and superior manufacturability.Scientists at OBiO have constructed the 7-mers mutagenesis libraries for AAV serotypes with billion-level library abundance. AAVneO™ will serve as an integrated platform that enables gene therapy developers to screen, select, and co-develop the next-generation vectors for a broad range of diseases and overcome the limitations of conventional AAV-based gene therapies.`,
+    txt: `Our AAVneO system uses in-vivo direct evolution andhigh-throughput screening to discover the next-generationadeno-associated viral vectors with enhanced targetingability, improved payload size, lower immunogenicity, andsuperior manufacturability. AAVneo will serve as anintegrated platform that enables gene therapy developersto screen, select, and co-develop the next-generationvectors for a broad range of diseases and overcome thelimitations of conventional AAV-based gene therapies.`,
   },
   {
     id: 2,
-    title: "OVersatileTM Platform: Versatility for Various Needs",
-    txt: `Comprehensive process development capabilities are the critical determinant to fulfill the various development and manufacturing needs. Our OVersatilie™ process development platform aims to offer an integrated solutions for various gene and cell therapy product. The platform covers cell factories, fixed bed bioreactors, dissolvable microcarriers, and roller bottles for adherent cell culture process, the large-scale, serum-free suspension cell culture process, and conventional cell lines including 293-based cells, Vero cells, and HeLa cells. Process development experts at OBiO will assist you to diagnose the manufacturing gaps, optimize the parameters with the versatile platform, and de-risk your industrialization process.`,
+    title: "OVersatile Platform：Versatile Process for Various Needs",
+    txt: `Our OVersatilie process development platform aims tooffer an integrated solutions for various gene and celltherapy products, fulfilling different development andmanufacturing needs. The platform covers cell factories,fixed bed bioreactors, dissolvable microcarriers, and rollerbottles for adherent cell culture process, the large-scale,serum-free suspension cell culture process, andconventional cell lines including 293-based cells, Verocells, and Hela cells.`,
   },
   {
     id: 3,
     title:
       "Proprietary Cell Line Development: High-Yielding Cell Line for Suspension Culture",
-    txt: `Discovering a stable and high-yield cell line is a consistent goal for a CDMO solution provider. Our experienced research team dedicates to the development of proprietary high-yielding cell clones and optimizing the cell culture process and media formulation. At the current stage, our team has obtained a single-cell derived clone for AAV suspension culture with 30% to 50% improvement in viral titer compared to the conventional HEK293 cells. We will keep progressing on the screening process of a single-cell derived clone with superior performance.`,
+    txt: `Our experienced research team dedicates to the developmentof proprietary high-yielding cell clones and optimizing thecell culture process and media formulation. At the currentstage, our team has obtained a single-cell derived clone forAAV suspension culture with 30% to 50% improvement in viraltiter compared to the conventional HEK293 cells. We will keepprogressing on the screening process of a single-cell derivedclone with superior performance.`,
   },
 ]);
 function popLabora(id) {
@@ -597,7 +601,7 @@ function popLabora(id) {
   }
 }
 .facilities-box {
-  margin-top: 30px;
+  // margin-top: 30px;
 }
 .innovation-box {
   margin: 0;
