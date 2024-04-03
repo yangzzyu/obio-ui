@@ -155,7 +155,7 @@
       direction="rtl"
       size="70%"
       :show-close="false"
-      z-index="999999"
+      :z-index="999999"
       :append-to-body="true"
       class="menu-drawer hidden-md-only hidden-lg-only hidden-xl-only"
     >
@@ -424,8 +424,8 @@ h2 {
   padding: 0;
   margin: 0 0 0 20px;
   position: relative;
-  .el-menu {
-  }
+  // .el-menu {
+  // }
   .el-menu--horizontal.el-menu {
     border: none;
   }

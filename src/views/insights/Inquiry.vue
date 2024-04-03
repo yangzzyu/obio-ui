@@ -240,16 +240,16 @@ const changeCdmo = (e) => {
     justify-content: center;
   }
 }
-.el-checkbox__label {
-}
-.check-txt ::v-deep .el-checkbox__label {
+// .el-checkbox__label {
+// }
+.check-txt :deep(.el-checkbox__label) {
   color: #747475;
   // font-size: 18px;
 }
-.form-contact-main ::v-deep .el-form-item__label{
+.form-contact-main :deep(.el-form-item__label) {
   color: #747475;
 }
-.check-txt ::v-deep .el-checkbox__input.is-checked .el-checkbox__inner {
+.check-txt :deep(.el-checkbox__input.is-checked .el-checkbox__inner) {
   background-color: #1f757b;
   border-color: #1f757b;
 }
