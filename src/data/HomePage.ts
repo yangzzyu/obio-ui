@@ -70,7 +70,7 @@ export const homeFacilitiesData = ref<FacilitiesDataItem[]>([
     pTxt: "International Medical Park Shanghai, China",
     imgUrl: handleViteImages("facilities_img1.jpg"),
     bgUrl: "./assets/icons/facilities_bg1.png",
-    path: "/spiroSite",
+    path: "/about/facilities/spiro",
   },
   {
     title: "OBiO Intelli-M",
@@ -82,7 +82,7 @@ export const homeFacilitiesData = ref<FacilitiesDataItem[]>([
     pTxt: "Lin-Gang Free-Trade Zone Shanghai, China",
     imgUrl: handleViteImages("facilities_img2.jpg"),
     bgUrl: "./assets/icons/facilities_bg2.png",
-    path: "/intelliM",
+    path: "/about/facilities/intellim",
   },
   {
     title: "PINE Site",
@@ -94,7 +94,7 @@ export const homeFacilitiesData = ref<FacilitiesDataItem[]>([
     pTxt: "International Medical Park Shanghai, China",
     imgUrl: handleViteImages("facilities_img3.jpg"),
     bgUrl: "./assets/icons/facilities_bg3.png",
-    path: "/pineSite",
+    path: "/about/facilities/pine",
   },
 ]);
 

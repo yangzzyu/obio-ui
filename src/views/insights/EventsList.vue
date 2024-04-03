@@ -26,8 +26,8 @@
         <div class="in-news-list1">
           <div class="item" v-for="(item, index) in tableData" :key="index">
             <router-link :to="'/news-details/events/' + item.id" class="block">
-              <div class="font-size16">{{ item.time }}</div>
-              <div class="title fontf4 font-size24">
+              <div class="font-size18">{{ item.time }}</div>
+              <div class="title fontf4 font-size30 title-color">
                 {{ item.title }}
               </div>
               <div class="font-size18 ut-s2">{{ item.content }}</div>

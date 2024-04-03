@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-03-18 22:04:02
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-27 16:51:49
+ * @LastEditTime: 2024-04-01 16:21:44
  * @FilePath: \obio-ui\src\views\home\Index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -46,12 +46,12 @@
                   <div class="font-size30 fontf7 iti">OBIO Intelli-M</div>
                   <p class="font-size18 textColor txt-bold">
                     Process Development Characterization Clinical and Commercial
-                    Manufacturing. 
+                    Manufacturing.
                     <text class="title-color txt-bold">77,000</text
                     >-square-meter Facility for Global Supply
                   </p>
                   <router-link
-                    to="/intelliM"
+                    to="/about/facilities/intellim"
                     class="read-more font-size18 fontf7"
                     >Read More</router-link
                   >
@@ -75,7 +75,7 @@
                     Development. Research and Development Center
                   </p>
                   <router-link
-                    to="/spiroSite"
+                    to="/about/facilities/spiro"
                     class="read-more font-size18 fontf7"
                     >Read More</router-link
                   >
@@ -95,13 +95,12 @@
                   <div class="font-size30 fontf7 iti">PINE Site</div>
                   <p class="font-size18 textColor txt-bold">
                     Process and Analytical Method Development. Pre-clinical and
-                    Clinical Manufacturing. Three-building, <text
-                      class="title-color txt-bold"
-                      >10,000</text
+                    Clinical Manufacturing. Three-building,
+                    <text class="title-color txt-bold">10,000</text
                     >-square-meter campus
                   </p>
                   <router-link
-                    to="/pineSite"
+                    to="/about/facilities/pine"
                     class="read-more font-size18 fontf7"
                     >Read More</router-link
                   >
@@ -164,7 +163,7 @@
               :key="index"
             >
               <router-link
-                to="/spiroSite"
+                to="/about/facilities/spiro"
                 class="block tans service--box_link bg-pinkbluelfr"
               >
                 <div class="service--box align-items-start">
@@ -215,7 +214,7 @@
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size30 txt-bold fontf8 mb-0 mt-5">
+          <h1 class="p-title font-size50 txt-bold fontf8 mb-0 mt-5">
             CRO Service
           </h1>
           <div class="wysiwyg--content colour-white mb-3">
@@ -233,19 +232,22 @@
               v-for="(item, index) in croList"
               :key="index"
             >
-              <router-link to="/sys" class="block tans">
+              <a class="block tans">
                 <div class="animate-imgxx uof img">
                   <img :src="item.imgUrl" alt="SPIRO Site" />
                 </div>
-              </router-link>
+              </a>
               <h4 class="font-size24 fontf7 iti">
                 {{ item.title }}
               </h4>
               <p class="font-size18 cro-p">
                 {{ item.text }}
               </p>
-              <router-link to="/sys" class="read-more font-size18 fontf7"
-                >Read More</router-link
+              <a
+                @click="croPopLabora(item.popLaboraId)"
+                class="read-more font-size18 fontf7"
+                style="cursor: pointer"
+                >Read More</a
               >
             </el-col>
           </el-row>
@@ -306,7 +308,6 @@
           </h1>
           <el-row :gutter="20" class="mb-4">
             <el-col :span="8" :xs="24">
-
               <div class="manufacturing-list bg-pinkbluelfr video-list">
                 <div class="content">
                   <iframe
@@ -318,8 +319,9 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
                   ></iframe>
-                  <p class="video-p font-size20 textColor">
-                    Experience Innovation: Explore OBiO Tech's Intelli-M GMP-Compliant Plasmid Production Line Today!
+                  <p class="video-p font-size18 textColor">
+                    Experience Innovation: Explore OBiO Tech's Intelli-M
+                    GMP-Compliant Plasmid Production Line Today!
                   </p>
                 </div>
               </div>
@@ -337,7 +339,7 @@
                     allowfullscreen
                   ></iframe>
 
-                  <p class="video-p font-size20 textColor">
+                  <p class="video-p font-size18 textColor">
                     Exciting Milestone: OBiO Lingang Facility Launches
                     Operations in 2023!
                   </p>
@@ -356,7 +358,7 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen
                   ></iframe>
-                  <p class="video-p font-size20 textColor">
+                  <p class="video-p font-size18 textColor">
                     Elevate Your Production Efficiency Today! OBiO Intelli-M GMP
                     offers Capacities from 20L to 2000L.
                   </p>
@@ -377,7 +379,7 @@
     :before-close="handleClose"
   >
     <div class="popLaboraBox-main">
-      <div class="font-size50 fontf8 title">
+      <div class="font-size30 fontf8 title title-color">
         <span>{{ Labora.title }}</span>
       </div>
       <div class="text color666 font-size18">
@@ -401,7 +403,7 @@ import Banner from "@/components/Banner.vue";
 import ObioFooter from "@/components/ObioFooter.vue";
 import { homeFacilitiesData, insightsData } from "@/data/HomePage";
 import { handleViteImages, goRouter } from "@/utils";
-import { onMounted, onUnmounted, ref } from "vue";
+import { onMounted, onUnmounted, ref, reactive } from "vue";
 import { useRouter } from "vue-router";
 import { releases, events } from "@/views/insights/data/Index";
 import Events from "@/components/Events.vue";
@@ -430,7 +432,7 @@ const cdmoList = ref([
     imgUrl: handleViteImages("cdmo_service1.png"),
     actImgUrl: handleViteImages("cdmo_service_act1.png"),
     title: "Viral Vectors",
-    path: "/vector",
+    path: "/cdmo/cgmp/viral_vectors",
     list: [
       "AAV",
       "Adenoviral vector for delivery of genes",
@@ -442,7 +444,7 @@ const cdmoList = ref([
     imgUrl: handleViteImages("cdmo_service2.png"),
     actImgUrl: handleViteImages("cdmo_service_act2.png"),
     title: "Oncolytic Virus",
-    path: "/virus",
+    path: "/cdmo/cgmp/oncolytic_virus",
     list: [
       "Oncolytic adenoviruses",
       "Oncolytic herpes simplex virus",
@@ -455,7 +457,7 @@ const cdmoList = ref([
     actImgUrl: handleViteImages("cdmo_service_act3.png"),
     title: "Cell Therapy Products",
     headTit: "Autologous and homologous immunocyte therapies",
-    path: "/products",
+    path: "/cdmo/cgmp/cell_therapy_products",
     list: [
       "Autologous and homologous immunocyte therapies",
       "CAR-T Therapy",
@@ -471,7 +473,7 @@ const cdmoList = ref([
     imgUrl: handleViteImages("cdmo_service4.png"),
     actImgUrl: handleViteImages("cdmo_service_act4.png"),
     title: "Plasmid & Nucleotides",
-    path: "/nucleotides",
+    path: "/cdmo/cgmp/prasmid_nucleotides",
     list: [
       "Plasmid DNA",
       "Minicircle plasmids",
@@ -483,6 +485,7 @@ const cdmoList = ref([
 ]);
 const croList = ref([
   {
+    popLaboraId: 1,
     imgUrl: handleViteImages("croIcon1.png"),
     title: "Plasmid",
     text: `At OBiO, our dedicated
@@ -497,6 +500,7 @@ providing expertise in
 viral packaging.`,
   },
   {
+    popLaboraId: 2,
     imgUrl: handleViteImages("croIcon2.png"),
     title: "Viral Vector",
     text: `We specialize in offering
@@ -515,6 +519,7 @@ thorough support
 throughout the process.`,
   },
   {
+    popLaboraId: 3,
     imgUrl: handleViteImages("croIcon3.png"),
     title: "Experiment Solutions",
     text: `We offer an extensive 
@@ -524,6 +529,7 @@ tailored for functional
 genomics studies.`,
   },
   {
+    popLaboraId: 4,
     imgUrl: handleViteImages("croIcon4.png"),
     title: "Related Products",
     text: `We offer a 
@@ -537,6 +543,7 @@ various aspects of your
 project.`,
   },
   {
+    popLaboraId: 5,
     imgUrl: handleViteImages("croIcon5.png"),
     title: "Extracellular Vesicle",
     text: `Our services for extracellular vesicle include isolation, 
@@ -546,36 +553,62 @@ successfully applied in samples of cells, body fluids and tissue exosomes such a
 `,
   },
 ]);
+const croLaboraList = reactive([
+  {
+    id: 1,
+    title: "Plasmid",
+    txt: `Artificial constructed plasmid DNA is one of the most commonly used vector tools for gene therapy research. At OBiO, our reliable development team will help you design, construct and manufacture plasmid for functional genomics research and viral packaging. We provide you with efficient vector construction services in a shorten delivery cycle, optimize your molecule cloning operation with reduced time and cost, and advance the progress of your research project. All customized plasmid products are regulated with strict internal quality controls to ensure that our product fulfills your design requirements.`,
+  },
+  {
+    id: 2,
+    title: "Viral Vector",
+    txt: `Viral vectors are widely used as gene transduction tools in biomedical research and gene therapy product development. At OBiO, we provide the design, construction and packaging services for adeno-associated virus, adenovirus, lentivirus, and retrovirus. We will help you complete a variety of biomolecular operations for your gene of interest, including overexpression, interference, knock-out, cell marking and physiological regulation, fully meeting your diversified demands in your study.`,
+  },
+  {
+    id: 3,
+    title: "Experiment Solutions",
+    txt: `“Bridging resources for life science” as our commitment, we provide a wide spectrum of contract research services for functional genomics studies including stable producer cell line construction at laboratory phase, cell biology experiments, animal model construction, and parameter testing, as well as other specialty services for exosome, CRISPR/Cas9 library and non-coding RNA.`,
+  },
+  {
+    id: 4,
+    title: "Related Products",
+    txt: `In addition to our contract research service, we provide in-stock virus vectors, proteins, gRNA library, and relevant reagent, meeting your research demand from different aspects.`,
+  },
+  {
+    id: 5,
+    title: "Extracellular Vesicle",
+    txt: `Our services for extracellular vesicle include isolation, identification, and functional research at the laboratory stage. For samples from different sources, our scientist team has developed multiple isolation solutions which have been successfully applied in samples of cells, body fluids and tissue exosomes such as cerebrospinal fluid, urine, brain tissue and liver.`,
+  },
+]);
+function croPopLabora(id) {
+  Labora.value = croLaboraList.find((i) => i.id === id) || {};
+  dialogVisible.value = true;
+}
 type ViralItem = {
   id: number;
   imgUrl: string;
   title: string;
-  path: string;
 };
 const ViralList = ref<ViralItem[]>([
   {
     id: 0,
     imgUrl: handleViteImages("cdmo_icon1.png"),
     title: "Focus",
-    path: "/process",
   },
   {
     id: 1,
     imgUrl: handleViteImages("cdmo_icon2.png"),
     title: "Acceleration",
-    path: "/cgmp",
   },
   {
     id: 2,
     imgUrl: handleViteImages("cdmo_icon3.png"),
     title: "Standardization",
-    path: "/quality",
   },
   {
     id: 3,
     imgUrl: handleViteImages("cdmo_icon4.png"),
     title: "Team",
-    path: "/logistics",
   },
 ]);
 

@@ -1,4 +1,5 @@
 import { ref } from "vue";
+import { handleViteImages } from "@/utils";
 
 export const releases = ref([
   {
@@ -21,7 +22,7 @@ export const releases = ref([
 <br>
 </p>
 <p class="MsoNormal" style="text-align:center;font-size:12pt;font-family:Aptos, sans-serif;">
-<img src="/public/uploads/image/20240326/20240326104925_47289.png" alt=""> 
+<img src="${handleViteImages("uploads/image/20240326/20240326104925_47289.png")}" alt=""> 
 </p>
 <p class="MsoNormal" style="text-align:center;font-size:12pt;font-family:Aptos, sans-serif;">
 <br>
@@ -33,7 +34,7 @@ Under this visionary pact, OBiO Technology commits to providing cutting-edge non
 <br>
 </p>
 <p class="MsoNormal" style="text-align:center;font-size:12pt;font-family:Aptos, sans-serif;">
-<img src="/public/uploads/image/20240326/20240326104944_22912.png" alt=""> 
+<img src="${handleViteImages("uploads/image/20240326/20240326104944_22912.png")}" alt=""> 
 </p>
 <p class="MsoNormal" style="text-align:center;font-size:12pt;font-family:Aptos, sans-serif;">
 <br>
@@ -63,7 +64,7 @@ Mr. Javier Jia, CEO and General Manager of OBiO Technology, echoed this sentimen
 <br>
 </p>
 <p class="MsoNormal" style="text-align:center;font-size:12pt;font-family:Aptos, sans-serif;">
-<img src="/public/uploads/image/20240326/20240326104958_83831.png" alt=""> 
+<img src="${handleViteImages("uploads/image/20240326/20240326104958_83831.png")}" alt=""> 
 </p>
 <p class="MsoNormal" style="text-align:center;font-size:12pt;font-family:Aptos, sans-serif;">
 <br>
@@ -119,7 +120,7 @@ Join us as we share our daring and relentless entrepreneurial quest, beginning i
 </span> 
 </p>
 <p>
-<span style="font-size:14px;"><img src="/public/uploads/image/20240303/20240303064431_62705.jpg" alt=""><br>
+<span style="font-size:14px;"><img src="${handleViteImages("uploads/image/20240303/20240303064431_62705.jpg")}" alt=""><br>
 </span> 
 </p>
 <p>
@@ -151,7 +152,7 @@ Please join us in welcoming Swati to OBiO Tech.</span>
   </span> 
 </p>
 <p style="text-align:center;">
-	<img src="https://www.obio-tech.com/public/uploads/image/20240216/20240216214227_52749.jpeg" alt=""> 
+	<img src="${handleViteImages("uploads/image/20240216/20240216214227_52749.jpeg")}" alt=""> 
 </p>
 <p>
 	<br>
@@ -166,7 +167,7 @@ Please join us in welcoming Swati to OBiO Tech.</span>
     content: ``,
     html: `<div class="Insights-detail-text text">
                    <p style="text-align:center;">
-	<img src="https://www.obio-tech.com/public/uploads/image/20240207/20240207072156_63851.png" alt=""> 
+	<img src="${handleViteImages("uploads/image/20240207/20240207072156_63851.png")}" alt=""> 
 </p>
 <p style="text-align:center;">
 	<span style="font-size:12pt;font-family:Aptos, sans-serif;"><br>
@@ -209,7 +210,7 @@ Please join us in welcoming Swati to OBiO Tech.</span>
 	<br>
 </p>
 <p style="text-align:center;">
-	<img src="https://www.obio-tech.com/public/uploads/image/20240207/20240207072314_59922.png" alt=""> 
+	<img src="${handleViteImages("uploads/image/20240207/20240207072314_59922.png")}" alt=""> 
 </p>
 <p style="text-align:center;">
 	<br>
@@ -251,7 +252,7 @@ Please join us in welcoming Swati to OBiO Tech.</span>
 	<br>
 </p>
 <p style="text-align:center;">
-	<img src="https://www.obio-tech.com/public/uploads/image/20240207/20240207072406_35714.png" alt=""> 
+	<img src="${handleViteImages("uploads/image/20240207/20240207072406_35714.png")}" alt=""> 
 </p>
 <p>
 	<br>
@@ -273,7 +274,7 @@ Please join us in welcoming Swati to OBiO Tech.</span>
          </span> 
 </p>
 <div style="text-align:center;">
-	<img src="https://www.obio-tech.com/public/uploads/image/20240207/20240207072447_17161.png" alt=""> 
+	<img src="${handleViteImages("uploads/image/20240207/20240207072447_17161.png")}" alt=""> 
 </div>
 <p>
 	<br>
@@ -332,7 +333,7 @@ Please join us in welcoming Swati to OBiO Tech.</span>
 	<br>
 </p>
 <div style="text-align:center;">
-	<img src="https://www.obio-tech.com/public/uploads/image/20240207/20240207072529_99814.png" alt=""> 
+	<img src="${handleViteImages("uploads/image/20240207/20240207072529_99814.png")}" alt=""> 
 </div>
 <p>
 	<br>
@@ -422,7 +423,7 @@ Please join us in welcoming Swati to OBiO Tech.</span>
       "
     >
       <img
-        src="https://www.obio-tech.com/public/uploads/image/20240114/20240114104316_42738.png"
+        src="${handleViteImages("uploads/image/20240114/20240114104316_42738.png")}"
         alt=""
       />
     </p>
@@ -511,7 +512,7 @@ Please join us in welcoming Swati to OBiO Tech.</span>
     </p>
     <p style="text-align: center">
       <img
-        src="https://www.obio-tech.com/public/uploads/image/20240114/20240114104336_15375.png"
+        src="${handleViteImages("uploads/image/20240114/20240114104336_15375.png")}"
         alt=""
       />
     </p>
@@ -644,7 +645,7 @@ Please join us in welcoming Swati to OBiO Tech.</span>
     </p>
     <div style="text-align: center">
       <img
-        src="https://www.obio-tech.com/public/uploads/image/20240114/20240114104414_98575.png"
+       src="${handleViteImages("uploads/image/20240114/20240114104414_98575.png")}"
         alt=""
       />
     </div>
@@ -750,7 +751,7 @@ Please join us in welcoming Swati to OBiO Tech.</span>
       "
     >
       <img
-        src="https://www.obio-tech.com/public/uploads/image/20240114/20240114104435_61351.png"
+        src="${handleViteImages("uploads/image/20240114/20240114104435_61351.png")}"
         alt=""
       />
     </p>
@@ -790,7 +791,7 @@ world.</span>
 	<br>
 </p>
 <p class="MsoNormal" style="text-align:center;margin-left:0cm;">
-	<span style="font-size:16px;"></span><img src="https://www.obio-tech.com/public/uploads/image/20231025/20231025110251_39104.jpg" alt=""> 
+	<span style="font-size:16px;"></span><img src="${handleViteImages("uploads/image/20231025/20231025110251_39104.jpg")}" alt=""> 
 </p>
 <p class="MsoNormal" style="text-align:justify;margin-left:0cm;">
 	<br>
@@ -1040,7 +1041,7 @@ process of drug project submission and approval.</span>
 	<br>
 </p>
 <p style="text-align:justify;">
-	<img src="https://www.obio-tech.com/public/uploads/image/20230629/20230629093402_63739.jpg" alt=""> 
+	<img src="${handleViteImages("uploads/image/20230629/20230629093402_63739.jpg")}" alt=""> 
 </p>
 <p style="text-align:justify;">
 	<br>
@@ -1088,7 +1089,7 @@ China.</span>
 	<span style="font-size:16px;"></span> 
 </p>
 <p class="MsoNormal" style="text-align:center;">
-	<img src="https://www.obio-tech.com/public/uploads/image/20230503/20230503234927_10504.jpg" alt=""> 
+	<img src="${handleViteImages("uploads/image/20230503/20230503234927_10504.jpg")}" alt=""> 
 </p>
 <p class="MsoNormal" style="text-align:justify;">
 	<br>
@@ -1214,7 +1215,7 @@ to commercial manufacturing, to accelerate gene and cell therapy.</span>
 	<br>
 </p>
 <p class="MsoNormal" style="text-align:center;margin-left:10pt;">
-	<img src="https://www.obio-tech.com/public/uploads/image/20230427/20230427094849_44959.jpg" alt=""> 
+	<img src="${handleViteImages("uploads/image/20230427/20230427094849_44959.jpg")}" alt=""> 
 </p>
 <p class="MsoNormal" style="text-align:justify;margin-left:10pt;">
 	<br>
@@ -1356,7 +1357,7 @@ its partners for their important progress.</span>
 	<br>
 </p>
 <p style="text-align:center;">
-	<img src="https://www.obio-tech.com/public/uploads/image/20230331/20230331142205_79082.jpg" alt=""> 
+	<img src="${handleViteImages("uploads/image/20230331/20230331142205_79082.jpg")}" alt=""> 
 </p>
 <p style="text-align:justify;">
 	<br>
@@ -1499,7 +1500,7 @@ presented at the American Society of Gene &amp; Cell Therapy (ASGCT)
 	<br>
 </p>
 <p style="text-align:center;">
-	<span style="font-size:16px;"></span><img src="https://www.obio-tech.com/public/uploads/image/20220513/20220513114200_82491.png" alt="" title="" width="598" height="173" align=""><span style="font-size:16px;">&nbsp;</span>
+	<span style="font-size:16px;"></span><img src="${handleViteImages("uploads/image/20220513/20220513114200_82491.png")}" alt="" title="" width="598" height="173" align=""><span style="font-size:16px;">&nbsp;</span>
 </p>
 <p>
 	<br>
@@ -1571,7 +1572,7 @@ about OBiO, visit </span><a href="http://www.obio-tech.com"><span style="font-si
                    <span style="line-height:1.5;">&nbsp;&nbsp;&nbsp;&nbsp;On March 22, 2022, OBiO Technology (Shanghai) Corp., Ltd. ("OBiO" or "the Company"), has completed its initial public offering ("IPO") process and started trading on the Shanghai Stock Exchange's Sci-Tech innovation board (SSE, code: 688238).</span><br>
  <br>
 <div style="text-align:center;">
-	<span style="line-height:1.5;"></span><img src="https://www.obio-tech.com/public/uploads/image/20220330/20220330171446_95206.png" alt=""> 
+	<span style="line-height:1.5;"></span><img src="${handleViteImages("uploads/image/20220330/20220330171446_95206.png")}" alt=""> 
 </div>
 <br>
 <p>
@@ -1616,7 +1617,7 @@ about OBiO, visit </span><a href="http://www.obio-tech.com"><span style="font-si
 	<br>
 </div>
 <p style="text-align:center;">
-	<img src="https://www.obio-tech.com/public/uploads/image/20220330/20220330171717_65357.png" alt=""> 
+	<img src="${handleViteImages("uploads/image/20220330/20220330171717_65357.png")}" alt=""> 
 </p>
 <p style="text-align:justify;">
 	<br>
@@ -1665,7 +1666,7 @@ about OBiO, visit </span><a href="http://www.obio-tech.com"><span style="font-si
 </div>
 </span> 
 <div style="text-align:center;">
-	<span style="font-size:16px;"></span><img src="https://www.obio-tech.com/public/uploads/image/20220330/20220330171958_53632.png" alt=""> 
+	<span style="font-size:16px;"></span><img src="${handleViteImages("uploads/image/20220330/20220330171958_53632.png")}" alt=""> 
 </div>
 <div style="text-align:justify;">
 	<span style="font-size:16px;"></span><br>
@@ -1757,7 +1758,7 @@ export const events = ref([
 </span>
 </p>
 <p>
-<img src="/public/uploads/image/20240308/20240308123702_46230.jpg" alt=""> 
+<img src="${handleViteImages("uploads/image/20240308/20240308123702_46230.jpg")}" alt=""> 
 </p>                </div>`,
   },
   {

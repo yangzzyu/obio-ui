@@ -29,8 +29,8 @@
               :to="'/news-details/releases/' + item.id"
               class="block"
             >
-              <div class="font-size16">{{ item.time }}</div>
-              <div class="title fontf4 font-size24">
+              <div class="font-size18">{{ item.time }}</div>
+              <div class="title fontf4 font-size30 title-color">
                 {{ item.title }}
               </div>
               <div class="font-size18 ut-s2">

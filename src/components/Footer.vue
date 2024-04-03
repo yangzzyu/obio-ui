@@ -35,70 +35,34 @@
               <router-link to="/about">About Us</router-link>
             </dt>
             <dt class="font-size14">
-              <div
-                @click="goPage('/about')"
-                v-scroll-to="{
-                  element: '.section-2',
-                  duration: 300,
-                  easing: 'ease',
-                  offset: 1,
-                }"
-              >
-                History
-              </div>
+              <router-link to="/about/history">History</router-link>
             </dt>
             <dt class="font-size14">
-              <div
-                @click="router.push('/facilities')"
-                v-scroll-to="{
-                  element: '.section-3',
-                  duration: 300,
-                  easing: 'ease',
-                  offset: 1,
-                }"
-              >
-                Facilities
-              </div>
+              <router-link to="/about/facilities">Facilities</router-link>
             </dt>
-            <dt class="font-size14">
+            <!-- <dt class="font-size14">
               <router-link to="/team">Leadship Team</router-link>
-            </dt>
+            </dt> -->
             <dd></dd>
           </dl>
         </div>
         <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/cap"
+              <router-link to="/capability"
                 >Capability &<br />
                 Commitment</router-link
               >
             </dt>
             <dd class="font-size14">
-              <div
-                @click="router.push('/cap')"
-                v-scroll-to="{
-                  element: '.industrialize-box',
-                  duration: 300,
-                  easing: 'ease',
-                  offset: 1,
-                }"
-              >
+              <router-link to="/capability/industrialize">
                 Industrialize
-              </div>
+              </router-link>
             </dd>
             <dd class="font-size14">
-              <div
-                @click="router.push('/cap')"
-                v-scroll-to="{
-                  element: '.our-box',
-                  duration: 300,
-                  easing: 'ease',
-                  offset: 1,
-                }"
-              >
+              <router-link to="/capability/commitment">
                 Commitment
-              </div>
+              </router-link>
             </dd>
           </dl>
         </div>
@@ -108,59 +72,31 @@
               <router-link to="/cdmo">CDMO <br />Solutions</router-link>
             </dt>
             <dd class="font-size14">
-              <div
-                @click="router.push('/cdmo')"
-                v-scroll-to="{
-                  element: '.section-3',
-                  duration: 300,
-                  easing: 'ease',
-                  offset: 1,
-                }"
-              >
+              <router-link to="/cdmo/manufacturing">
                 Manufacturing
-              </div>
+              </router-link>
             </dd>
             <dd class="font-size14">
-              <div
-                @click="router.push('/cdmo')"
-                v-scroll-to="{
-                  element: '#cro',
-                  duration: 300,
-                  easing: 'ease',
-                  offset: 1,
-                }"
-              >
-                CDMO
-              </div>
+              <router-link to="/cdmo/cdmo"> CDMO </router-link>
             </dd>
             <dd class="font-size14">
-              <div
-                @click="router.push('/cdmo')"
-                v-scroll-to="{
-                  element: '#innovation',
-                  duration: 300,
-                  easing: 'ease',
-                  offset: 1,
-                }"
-              >
-                Innovation
-              </div>
+              <router-link to="/cdmo/innovation"> Innovation </router-link>
             </dd>
           </dl>
         </div>
         <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/news">News & <br />Events</router-link>
+              <router-link to="/insight">News & <br />Events</router-link>
             </dt>
             <dd class="font-size14">
-              <router-link to="/news">News</router-link>
+              <router-link to="/insight/news">News</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/events">Events</router-link>
+              <router-link to="/insight/events">Events</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/inquiry">Learn More</router-link>
+              <router-link to="/insight/inquiry">Learn More</router-link>
             </dd>
             <dd class="font-size14">
               <a href="https://www.obiosh.com/tzz/gg/" target="_blank"
@@ -181,23 +117,13 @@
               <router-link to="/careers">Our Culture</router-link>
             </dd>
             <dd class="font-size14">
-              <div
-                @click="router.push('/careers')"
-                v-scroll-to="{
-                  element: '.careers-box',
-                  duration: 300,
-                  easing: 'ease',
-                  offset: 1,
-                }"
-              >
-                Mission
-              </div>
+              <router-link to="/careers/mission">Mission</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/life">Life at OBIO</router-link>
+              <router-link to="/careers/life">Life at OBIO</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/job">Job Opening</router-link>
+              <router-link to="/careers/job">Job Opening</router-link>
             </dd>
             <dt class="font-size14">
               <!-- <router-link href="/cn/home/ys/cid/861">Privacy Policy</router-link> -->
@@ -214,7 +140,7 @@
         <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/inquiry">Contact</router-link>
+              <router-link to="/insight/inquiry">Contact</router-link>
             </dt>
           </dl>
         </div>

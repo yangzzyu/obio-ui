@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-27 17:00:26
+ * @LastEditTime: 2024-04-01 15:55:57
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -18,7 +18,7 @@
         style="margin: auto"
         class="container"
       >
-        <div class="text font-size20 color666 cGMP-zIndex">
+        <div class="text font-size18 color666 cGMP-zIndex">
           <p>
             <span style="line-height: 2"
               >A thorough understanding of commercially viable manufacturing
@@ -79,11 +79,11 @@
             v-show="activeProcessIndex === item.id"
           >
             <div class="cGMP-title-t2">
-              <div class="fontf7 font-size50 ct">
+              <div class="fontf7 font-size50 ct title-color">
                 <span>{{ item.title }}</span>
               </div>
             </div>
-            <div class="text font-size20 color666 cGMP-zIndex">
+            <div class="text font-size18 color666 cGMP-zIndex">
               <p style="margin-bottom: 30px">
                 {{ item.pTxt }}
               </p>
@@ -137,12 +137,12 @@
           </div>
         </div>
         <div class="cGMP-title-t2">
-          <div class="fontf7 font-size50 ct">
+          <div class="fontf7 font-size50 ct title-color">
             <span>Analytical Development</span>
           </div>
           <i class="bg"></i>
         </div>
-        <div class="text font-size20 color666 cGMP-zIndex">
+        <div class="text font-size18 color666 cGMP-zIndex">
           <p>
             <span style="line-height: 2"
               >OBiO has established a comprehensive quality management system
@@ -219,7 +219,7 @@
           </div>
           <i class="bg"></i>
         </div>
-        <div class="text font-size20 color666 cGMP-zIndex">
+        <div class="text font-size18 color666 cGMP-zIndex">
           <el-row :gutter="20">
             <el-col
               :xs="22"
@@ -280,7 +280,7 @@
                 <div class="boxs">
                   <div class="ub ub-ac">
                     <img class="ico" :src="i.bgUrl" alt="" srcset="" />
-                    <div class="txt fontf5 font-size20 color666 ub-f1">
+                    <div class="txt fontf5 font-size18 color666 ub-f1">
                       {{ i.txt }}
                     </div>
                   </div>

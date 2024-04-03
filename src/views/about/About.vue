@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-28 11:04:08
+ * @LastEditTime: 2024-04-01 16:22:55
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -18,7 +18,7 @@
         style="margin: auto"
         class="container"
       >
-        <div class="text font-size20">
+        <div class="text font-size18">
           <p class="textColor">
             <text class="txt-bold fontf8"
               >OBiO Technology is a pioneering gene and cell therapy CRO and
@@ -43,7 +43,7 @@
         </div>
       </el-col>
     </div>
-    <div class="section-2">
+    <div class="section-2" id="history-box">
       <el-col
         :xs="14"
         :sm="20"
@@ -90,7 +90,7 @@
             >
               <div class="boxs">
                 <div class="cons">
-                  <div class="year">{{ item.year }} <i></i></div>
+                  <div class="year font-size30">{{ item.year }} <i></i></div>
                   <div class="txt font-size18">
                     <ul>
                       <li v-for="(i, k) in item.txt" :key="k">
@@ -106,7 +106,7 @@
         </div>
       </el-col>
     </div>
-    <section class="in-about-wrap about-box">
+    <section class="in-about-wrap about-box" id="facilities-box">
       <el-col
         :xs="22"
         :sm="20"
@@ -128,17 +128,19 @@
                   />
                 </div>
               </div>
-              <div class="font-size24 fontf7 iti">
+              <div class="font-size18 fontf7 iti">
                 Lin-Gang Free-Trade Zone<br />Shanghai, China
               </div>
-              <div class="font-size38 fontf7 iti">OBIO Intelli-M</div>
+              <div class="font-size30 fontf7 iti">OBIO Intelli-M</div>
               <p class="font-size18 textColor txt-bold">
                 Process Development Characterization Clinical and Commercial
                 Manufacturing
                 <text class="title-color txt-bold">77,000</text>-square-meter
                 Facility for Global Supply
               </p>
-              <router-link to="/intelliM" class="read-more font-size18 fontf7"
+              <router-link
+                to="/about/facilities/intellim"
+                class="read-more font-size18 fontf7"
                 >Read More</router-link
               >
             </el-col>
@@ -151,16 +153,18 @@
                   />
                 </div>
               </div>
-              <div class="font-size24 fontf7 iti">
+              <div class="font-size18 fontf7 iti">
                 International Medical Park<br />Shanghai, China
               </div>
-              <div class="font-size38 fontf7 iti">SPIRO Site</div>
+              <div class="font-size30 fontf7 iti">SPIRO Site</div>
 
               <p class="font-size18 textColor txt-bold">
                 Integrated Laboratory Services Processand Analytical Method
                 DevelopmentResearch and Development Center
               </p>
-              <router-link to="/spiroSite" class="read-more font-size18 fontf7"
+              <router-link
+                to="/about/facilities/spiro"
+                class="read-more font-size18 fontf7"
                 >Read More</router-link
               >
             </el-col>
@@ -173,10 +177,10 @@
                   />
                 </div>
               </div>
-              <div class="font-size24 fontf7 iti">
+              <div class="font-size18 fontf7 iti">
                 International Medical Park<br />Shanghai, China
               </div>
-              <div class="font-size38 fontf7 iti">PINE Site</div>
+              <div class="font-size30 fontf7 iti">PINE Site</div>
               <p class="font-size18 textColor txt-bold">
                 Process and Analytical Method Development Pre-clinical and
                 Clinical Manufacturing Three-building,<text
@@ -184,7 +188,9 @@
                   >10,000</text
                 >-square-meter campus
               </p>
-              <router-link to="/pineSite" class="read-more font-size18 fontf7"
+              <router-link
+                to="/about/facilities/pine"
+                class="read-more font-size18 fontf7"
                 >Read More</router-link
               >
             </el-col>
@@ -202,9 +208,9 @@
         style="margin: auto"
         class="container section-3"
       >
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+        <!-- <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
           Factory Images
-        </h1>
+        </h1> -->
         <div class="fac-con">
           <el-row class="row" :gutter="10">
             <el-col :xs="24" :span="6" class="">
@@ -222,7 +228,7 @@
                       base
                     </p>
                     <p
-                      class="font-size14 txt-bold is-details"
+                      class="font-size18 txt-bold is-details"
                       style="color: #fff"
                     >
                       The only 77,000m2 scale GMP-compliant facility in the
@@ -253,7 +259,7 @@
                       base
                     </p>
                     <p
-                      class="font-size14 txt-bold is-details"
+                      class="font-size18 txt-bold is-details"
                       style="color: #fff"
                     >
                       More than 30 gene cell therapy production lines
@@ -289,7 +295,7 @@
                       base
                     </p>
                     <p
-                      class="font-size14 txt-bold is-details"
+                      class="font-size18 txt-bold is-details"
                       style="color: #fff"
                     >
                       Single-use process vector production line Single-use
@@ -320,7 +326,7 @@
                       base
                     </p>
                     <p
-                      class="font-size14 txt-bold is-details"
+                      class="font-size18 txt-bold is-details"
                       style="color: #fff"
                     >
                       Digitization and intelligentification based mechanical arm
@@ -392,7 +398,7 @@
             >
           </li>
           <li>
-            <router-link to="/life" class="btn-a font-size18 fontf7"
+            <router-link to="/careers/life" class="btn-a font-size18 fontf7"
               >Read More</router-link
             >
           </li>
@@ -428,36 +434,6 @@ const navigation = ref({
   prevEl: "#historyPrev",
 });
 onMounted(() => {});
-const ourList = reactive([
-  {
-    title: "Focus:",
-    text: `Dedication to Contract Development and Manufacturi 
-Strict Internal Data Management
-Comprehensive Patent System
-Professional Intellectual Property Protection`,
-  },
-  {
-    title: "Acceleration:",
-    text: `Commercial Readiness from Technical Expertise
-Advanced Process Development Technologies
-Large-Scale Manufacturing Capabilities
-Fully-Closed & Automated Downstream Purification`,
-  },
-  {
-    title: "Standardization:",
-    text: `Fully Regulatory Compliance
-GMP-Compliant Facilities and Equipment
-Robust Quality Management System
-Comprehensive Quality Control Platform`,
-  },
-  {
-    title: "Team:",
-    text: `Trustful Expertise
-10+ years of Experience in Gene and Cell Therapy
-Extensive Experience in IND-Enabling Support
-Responses at First Instance`,
-  },
-]);
 </script>
 
 <style>
@@ -468,9 +444,9 @@ Responses at First Instance`,
 <style lang="scss" scoped>
 .about-box {
   margin: 0 !important;
-  .manufacturing-list {
-    cursor: pointer;
-  }
+  // .manufacturing-list {
+  //   cursor: pointer;
+  // }
 }
 .factory-text {
   position: absolute;

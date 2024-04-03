@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-17 11:39:49
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-27 17:05:47
+ * @LastEditTime: 2024-04-03 09:48:59
  * @FilePath: \obio-ui\src\components\Banner.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -42,7 +42,7 @@
             >Our Solutions</router-link
           >
           <router-link
-            to="/cap"
+            to="/capability"
             class="btn2 btn-i txt-bold"
             data-animation="animated bounceInUp"
             >Our Commitment</router-link

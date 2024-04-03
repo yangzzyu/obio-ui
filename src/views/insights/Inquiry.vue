@@ -13,13 +13,14 @@
         <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Inquiry</h1>
         <el-row :gutter="50" class="cdmo-top">
           <el-col :xs="24" :span="12">
-            <h3 class="title-color font-size36 txt-bold fontf7">
+            <h3 class="title-color font-size18 txt-bold fontf7">
               Laboratory Sciences
             </h3>
 
             <el-checkbox-group
               v-model="form.laboratory"
               @change="changeLaboratory"
+              class="check-txt fontf2 font-size18"
               style="
                 display: flex;
                 flex-flow: column nowrap;
@@ -59,12 +60,13 @@
             </el-checkbox-group>
           </el-col>
           <el-col :xs="24" :span="12">
-            <h3 class="title-color font-size36 txt-bold fontf7">
+            <h3 class="title-color font-size18 txt-bold fontf7">
               CDMO Solutions
             </h3>
             <el-checkbox-group
               v-model="form.cdmo"
               @change="changeCdmo"
+              class="check-txt fontf2 font-size18"
               style="
                 display: flex;
                 flex-flow: column nowrap;
@@ -122,31 +124,31 @@
               ref="formRef"
               :model="form"
               label-width="200px"
-              class="form-contact-main"
+              class="form-contact-main fontf2"
               :label-position="'top'"
               status-icon
             >
               <el-row :gutter="20">
                 <el-col :span="4" :xs="24">
                   <el-form-item label="First Name" required>
-                    <el-input v-model="form.fname" />
+                    <el-input v-model="form.fname1" />
                   </el-form-item>
                 </el-col>
                 <el-col :span="5" :xs="24">
                   <el-form-item label="Last Name" required>
-                    <el-input v-model="form.lname" /> </el-form-item
+                    <el-input v-model="form.lname2" /> </el-form-item
                 ></el-col>
                 <el-col :span="5" :xs="24">
                   <el-form-item label="Company" required>
-                    <el-input v-model="form.lname" /> </el-form-item
+                    <el-input v-model="form.lname3" /> </el-form-item
                 ></el-col>
                 <el-col :span="5" :xs="24">
                   <el-form-item label="Email" required>
-                    <el-input v-model="form.lname" /> </el-form-item
+                    <el-input v-model="form.lname4" /> </el-form-item
                 ></el-col>
                 <el-col :span="5" :xs="24">
                   <el-form-item label="Phone Number" required>
-                    <el-input v-model="form.lname" /> </el-form-item></el-col
+                    <el-input v-model="form.lname5" /> </el-form-item></el-col
               ></el-row>
               <el-form-item label="Comments" prop="content">
                 <el-input v-model="form.comment" type="textarea" :rows="10" />
@@ -237,5 +239,18 @@ const changeCdmo = (e) => {
     // width: fit-content;
     justify-content: center;
   }
+}
+.el-checkbox__label {
+}
+.check-txt ::v-deep .el-checkbox__label {
+  color: #747475;
+  // font-size: 18px;
+}
+.form-contact-main ::v-deep .el-form-item__label{
+  color: #747475;
+}
+.check-txt ::v-deep .el-checkbox__input.is-checked .el-checkbox__inner {
+  background-color: #1f757b;
+  border-color: #1f757b;
 }
 </style>

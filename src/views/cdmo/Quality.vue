@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-27 17:01:49
+ * @LastEditTime: 2024-04-01 16:02:07
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -18,7 +18,7 @@
         style="margin: auto"
         class="container"
       >
-        <div class="text font-size20 color666">
+        <div class="text font-size18 color666">
           <p>
             <span style="line-height: 2"
               >Quality is the fundament for product success and a crucial step
@@ -41,7 +41,7 @@
           </div>
         </div>
 
-        <div class="text font-size20 color666 cGMP-zIndex">
+        <div class="text font-size18 color666 cGMP-zIndex">
           <div class="Quality-Regulatory-ul">
             <div class="ibg ibg1"></div>
             <div class="ibg ibg2"></div>
@@ -54,7 +54,7 @@
                   ></span>
                 </div>
                 <div class="tx">
-                  <div class="title font-size24 fontf5">
+                  <div class="title font-size24 fontf5 title-color">
                     {{ i.title }}
                   </div>
                   <div class="shaw">
@@ -76,7 +76,7 @@
             <span>De-risk Your Regulatory Pathway</span>
           </div>
         </div>
-        <div class="text font-size20 color666">
+        <div class="text font-size18 color666">
           <p style="line-height: 1.8">
             Regulatory requirements vary with the development process of your
             product.
@@ -94,12 +94,12 @@
             products.
           </p>
           <p><br /></p>
-          <div class="font-size24 fontf5" style="color: #014099">
+          <div class="font-size24 fontf5 title-color">
             We will provide e-CTD ready CMC related documents writing and review
             for your submission:
           </div>
           <p><br /></p>
-          <el-row class="ul-square font-size20 fontf3">
+          <el-row class="ul-square font-size18 fontf3">
             <el-col
               class="ul-square-col"
               :sm="12"
@@ -120,7 +120,7 @@
                 <div class="boxs">
                   <div class="ub ub-ac">
                     <img class="ico" :src="i.bgUrl" alt="" srcset="" />
-                    <div class="txt fontf5 font-size20 color666 ub-f1">
+                    <div class="txt fontf5 font-size18 color666 ub-f1">
                       {{ i.txt }}
                     </div>
                   </div>

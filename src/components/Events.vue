@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-27 17:06:10
+ * @LastEditTime: 2024-04-01 16:20:59
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -26,8 +26,8 @@
         </el-col>
         <el-col :span="14" :xs="24" class="font-size20 news-list">
           <div class="news-i" v-for="(item, index) in eventsList" :key="index">
-            <h3 class="title-color font-size24 fontf4">{{ item.time }}</h3>
-            <p class="font-size24 fontf3 textColor">
+            <h3 class="title-color font-size30 fontf4">{{ item.time }}</h3>
+            <p class="font-size18 fontf3 textColor">
               {{ item.title }}
             </p>
             <router-link

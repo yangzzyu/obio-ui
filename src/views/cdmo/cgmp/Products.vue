@@ -27,7 +27,7 @@
           <div class="p font-size18"></div>
         </div>
         <div
-          class="font-size20 pub-pal20 pub-mart30 color666"
+          class="font-size18 pub-pal20 pub-mart30 color666"
           style="line-height: 1.8"
         >
           At OBiO, we offer development and manufacturing services for
@@ -52,10 +52,10 @@
                   ><i class="line"></i>
                 </div>
                 <div class="txt">
-                  <div class="title font-size24 fontf7">
+                  <div class="title font-size30 fontf7">
                     {{ i.title }}
                   </div>
-                  <div class="p font-size20">
+                  <div class="p font-size18">
                     {{ i.txt }}
                   </div>
                 </div>
@@ -129,10 +129,10 @@
                 <div class="index font-size50 fontf7">{{ index + 1 }}</div>
                 <div class="boxs">
                   <div class="content">
-                    <div class="title font-size24 fontf7 font-color-ts">
+                    <div class="title font-size30 fontf7 font-color-ts">
                       {{ item.title }}
                     </div>
-                    <div class="p font-size20">
+                    <div class="p font-size18">
                       {{ item.txt }}
                     </div>
                   </div>

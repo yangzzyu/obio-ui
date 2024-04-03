@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-28 11:07:01
+ * @LastEditTime: 2024-04-01 15:47:50
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -55,7 +55,7 @@
         </el-row></el-col
       >
     </section>
-    <div class="in-about-wrap industrialize-box">
+    <section class="in-about-wrap industrialize-box" id="industrialize-dom">
       <div class="section-3">
         <el-col
           :xs="22"
@@ -106,8 +106,8 @@
           </div></el-col
         >
       </div>
-    </div>
-    <section class="our-box mb-5">
+    </section>
+    <section class="our-box mb-5" id="commitment-box">
       <el-col
         :xs="22"
         :sm="20"
@@ -149,7 +149,7 @@
     :before-close="handleClose"
   >
     <div class="popLaboraBox-main">
-      <div class="font-size50 fontf8 title">
+      <div class="font-size30 fontf8 title title-color">
         <span>{{ Labora.title }}</span>
       </div>
       <div class="text color666 font-size18">
@@ -242,7 +242,7 @@ const industrializeList = reactive([
     imgUrl: handleViteImages("industrialize1.png"),
     title: `Development: Efficient and Customized Process Development with
                   BoardProduct Spectrum`,
-    path: "/process",
+    path: "/cdmo/process_development",
     txtList: [
       "Upstream Process",
       "Downstream Process",
@@ -254,7 +254,7 @@ const industrializeList = reactive([
     imgUrl: handleViteImages("industrialize2.png"),
     title: `cGMP Manufacturing: Flexible Large-Scale GMP Manufacturing
                   Platform:`,
-    path: "/cgmp",
+    path: "/cdmo/cgmp",
     txtList: [
       "End-to-End Offerin",
       "Pre-IND services",
@@ -267,7 +267,7 @@ const industrializeList = reactive([
     title: `Quality & Regulatory: 
 International Compliant
 Quality Control System`,
-    path: "/quality",
+    path: "/cdmo/quality_regulatory",
     txtList: [
       " De-risk Your Regulatory Pathway",
       `We provide e-CTD ready 
@@ -282,7 +282,7 @@ and review for your submission:`,
 Traceable 
 Cold-Chain Logistics with 
 Controllable Risk`,
-    path: "/logistics",
+    path: "/cdmo/cold_chain",
     txtList: [
       ` Preserve gene and cell 
 therapy products integrity and 
@@ -371,9 +371,9 @@ Responses at First Instance`,
 }
 @media (max-width: 765px) {
   .us-list {
-  .service--box_link {
-    height: 200px !important;
+    .service--box_link {
+      height: 200px !important;
+    }
   }
-}
 }
 </style>

@@ -63,7 +63,7 @@
     :before-close="handleClose"
   >
     <div class="popLaboraBox-main">
-      <div class="font-size50 fontf8 title">
+      <div class="font-size30 fontf8 title title-color">
         <span>{{ Labora.title }}</span>
       </div>
       <div class="text color666 font-size18">

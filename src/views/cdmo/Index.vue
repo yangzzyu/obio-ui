@@ -2,14 +2,14 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-21 16:33:36
+ * @LastEditTime: 2024-04-01 14:58:57
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
   <div class="cdmo">
     <Focus :focusObj="FocusData" />
-    <Breadcrumb v-if="routerName !== 'cdmo'" :matchedData="matchedData" />
+    <!-- <Breadcrumb v-if="routerName !== 'cdmo'" :matchedData="matchedData" /> -->
     <router-view></router-view>
     <Events />
   </div>
@@ -38,7 +38,7 @@ const pageData = ref([
     },
   },
   {
-    path: "/process",
+    path: "/cdmo/process_development",
     focusObj: {
       title: "Process Development",
       hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
@@ -47,7 +47,7 @@ const pageData = ref([
     },
   },
   {
-    path: "/cgmp",
+    path: "/cdmo/cgmp",
     focusObj: {
       title: "cGMP Manufacturing",
       hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
@@ -56,7 +56,7 @@ const pageData = ref([
     },
   },
   {
-    path: "/vector",
+    path: "/cdmo/cgmp/viral_vectors",
     focusObj: {
       title: "Viral Vector",
       hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
@@ -65,7 +65,7 @@ const pageData = ref([
     },
   },
   {
-    path: "/virus",
+    path: "/cdmo/cgmp/oncolytic_virus",
     focusObj: {
       title: "Oncolytic Virus",
       hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
@@ -74,7 +74,7 @@ const pageData = ref([
     },
   },
   {
-    path: "/products",
+    path: "/cdmo/cgmp/cell_therapy_products",
     focusObj: {
       title: "Cell Therapy Products",
       hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
@@ -83,7 +83,7 @@ const pageData = ref([
     },
   },
   {
-    path: "/nucleotides",
+    path: "/cdmo/cgmp/prasmid_nucleotides",
     focusObj: {
       title: "Plasmid & Nucleotides",
       hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
@@ -92,7 +92,7 @@ const pageData = ref([
     },
   },
   {
-    path: "/quality",
+    path: "/cdmo/quality_regulatory",
     focusObj: {
       title: "Quality & Regulatory",
       hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
@@ -101,7 +101,7 @@ const pageData = ref([
     },
   },
   {
-    path: "/logistics",
+    path: "/cdmo/cold_chain",
     focusObj: {
       title: "Cold Chain Logistics",
       hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
