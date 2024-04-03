@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-01 17:17:25
+ * @LastEditTime: 2024-04-03 09:38:44
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -77,7 +77,7 @@
                 :key="k"
               >
                 <div class="manufacturing-list bg-pinkbluelfr">
-                  <div class="content" style="width: 100%; overflow: hidden">
+                  <div class="content" style="width: 100%;max-height: 200px; overflow: hidden">
                     <el-image
                       style="width: 100%; height: 100%"
                       :src="i"
@@ -269,8 +269,8 @@ function handleClose() {
   dialogVisible.value = false;
 }
 const footballList = reactive([
-  handleViteImages("life/football1.png"),
-  handleViteImages("life/football2.png"),
+  handleViteImages("life/football1.jpg"),
+  handleViteImages("life/football2.jpg"),
 ]);
 type ViralItem = {
   id: number;

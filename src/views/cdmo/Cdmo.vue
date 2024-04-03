@@ -56,7 +56,7 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size28">
+                  <div class="pn fontf7 font-size24">
                     Gene and Cell Therapy Programs
                   </div>
                 </div>
@@ -72,7 +72,7 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size28">
+                  <div class="pn fontf7 font-size24">
                     Process Development Projects
                   </div>
                 </div>
@@ -88,7 +88,7 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size28">
+                  <div class="pn fontf7 font-size24">
                     Analytical Method Development Projects
                   </div>
                 </div>
@@ -99,7 +99,7 @@
       </el-col>
     </div>
 
-    <div class="in-about-wrap facilities-box mt-5" id="manufacturing-box">
+    <div class="in-about-wrap facilities-box" id="manufacturing-box">
       <div class="section-3">
         <el-col
           :xs="22"
@@ -110,7 +110,9 @@
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size50 txt-bold fontf8">Facilities</h1>
+          <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+            Facilities
+          </h1>
 
           <div class="fac-con">
             <el-row class="row" :gutter="10">
@@ -237,7 +239,7 @@
               </div>
             </el-col>
             <el-col :xs="24" :span="10">
-              <h1 class="font-size18 fontf7 iti item-tit">
+              <h1 class="font-size30 fontf7 iti item-tit">
                 {{ item.title }}
               </h1>
               <ul>
@@ -537,18 +539,18 @@ const LaboraList = ref([
   {
     id: 1,
     title: "AAVneO™ System：Next-Generation Capsid Screening Platform",
-    txt: `Our AAVneO system uses in-vivo direct evolution andhigh-throughput screening to discover the next-generationadeno-associated viral vectors with enhanced targetingability, improved payload size, lower immunogenicity, andsuperior manufacturability. AAVneo will serve as anintegrated platform that enables gene therapy developersto screen, select, and co-develop the next-generationvectors for a broad range of diseases and overcome thelimitations of conventional AAV-based gene therapies.`,
+    txt: `Our AAVneO system uses in-vivo direct evolution and high-throughput screening to discover the next-generation adeno-associated viral vectors with enhanced targeting ability, improved payload size, lower immunogenicity, and superior manufacturability. AAVneo will serve as an integrated platform that enables gene therapy developersto screen, select, and co-develop the next-generation vectors for a broad range of diseases and overcome the limitations of conventional AAV-based gene therapies.`,
   },
   {
     id: 2,
     title: "OVersatile Platform：Versatile Process for Various Needs",
-    txt: `Our OVersatilie process development platform aims tooffer an integrated solutions for various gene and celltherapy products, fulfilling different development andmanufacturing needs. The platform covers cell factories,fixed bed bioreactors, dissolvable microcarriers, and rollerbottles for adherent cell culture process, the large-scale,serum-free suspension cell culture process, andconventional cell lines including 293-based cells, Verocells, and Hela cells.`,
+    txt: `Our OVersatilie process development platform aims to offer an integrated solutions for various gene and cell therapy products, fulfilling different development and manufacturing needs. The platform covers cell factories,fixed bed bioreactors, dissolvable microcarriers, and roller bottles for adherent cell culture process, the large-scale,serum-free suspension cell culture process, and conventional cell lines including 293-based cells, Vero cells, and Hela cells.`,
   },
   {
     id: 3,
     title:
       "Proprietary Cell Line Development: High-Yielding Cell Line for Suspension Culture",
-    txt: `Our experienced research team dedicates to the developmentof proprietary high-yielding cell clones and optimizing thecell culture process and media formulation. At the currentstage, our team has obtained a single-cell derived clone forAAV suspension culture with 30% to 50% improvement in viraltiter compared to the conventional HEK293 cells. We will keepprogressing on the screening process of a single-cell derivedclone with superior performance.`,
+    txt: `Our experienced research team dedicates to the development of proprietary high-yielding cell clones and optimizing the cell culture process and media formulation. At the current stage, our team has obtained a single-cell derived clone for AAV suspension culture with 30% to 50% improvement in viral titer compared to the conventional HEK293 cells. We will keep progressing on the screening process of a single-cell derived clone with superior performance.`,
   },
 ]);
 function popLabora(id) {

@@ -18,7 +18,7 @@
         style="margin: auto"
         class="container"
       >
-        <div class="text font-size20 color666 cGMP-zIndex">
+        <div class="text font-size18 color666 cGMP-zIndex">
           <p>
             <span style="line-height: 2"
               >After your established process development, the next milestone in
@@ -54,11 +54,11 @@
           <i class="bg"></i>
         </div>
         <div class="hidden-xs cGMP-zIndex text">
-          <div class="pm-1 font-size20 color666 cGMP-zIndex">
+          <div class="pm-1 font-size18 color666 cGMP-zIndex">
             With a successful IND declaration as the millstone, we provide our
             Pre-IND services and Post-IND services as our CDMO solutions.
           </div>
-          <div class="cGMP-main-list ub ub-ac cGMP-zIndex font-size20 fontf3">
+          <div class="cGMP-main-list ub ub-ac cGMP-zIndex font-size18 fontf3">
             <div class="group ub-f1">
               <div class="item ub ub-ac">
                 <span class="ub-f1">Process Development</span>
@@ -131,7 +131,9 @@
             :key="index"
             v-show="activeIndex === item.id"
           >
-            <div class="sti font-size30 fontf7">{{ item.title }}</div>
+            <div class="sti font-size30 fontf7 title-color">
+              {{ item.title }}
+            </div>
             <div class="list ub ub-pj">
               <div class="item" v-for="(i, k) in item.list" :key="k">
                 <div class="img">
@@ -141,12 +143,12 @@
                 </div>
                 <div class="txt text-center">
                   <div
-                    class="fontf7 font-size24 ub ub-ac ub-pc"
+                    class="fontf7 font-size24 ub ub-ac ub-pc title-color"
                     style="max-width: 330px; margin: 0 auto"
                   >
                     {{ i.subHead }}
                   </div>
-                  <div class="font-size20 color666 p">
+                  <div class="font-size18 color666 p">
                     {{ i.txt }}
                   </div>
                 </div>
@@ -161,7 +163,7 @@
           </div>
           <i class="bg"></i>
         </div>
-        <div class="pm-2 font-size20 color666 cGMP-zIndex">
+        <div class="pm-2 font-size18 color666 cGMP-zIndex">
           <p>
             <span style="line-height: 2"
               >The current operating manufacturing footprint at OBiO covers of a

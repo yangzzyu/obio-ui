@@ -15,10 +15,10 @@
           style="margin: auto"
           class="container"
         >
-          <p class="font-size24 iti textColor">
+          <p class="font-size18 iti textColor">
             {{ item.time }}
           </p>
-          <h1 class="title fontf4 font-size28 title-color">
+          <h1 class="title fontf4 font-size30 title-color">
             {{ item.title }}
           </h1>
           <div class="font-size18 ut-s2">
@@ -36,7 +36,7 @@
         </el-col>
       </div>
       <router-link
-        to="/releases"
+        to="/insight/news"
         class="btn-a font-size18 fontf7 bg-pinkbluelfr mb-5"
       >
         All Press Releases
@@ -67,7 +67,7 @@
             </div>
           </el-col>
           <el-col :xs="24" :span="16">
-            <p class="font-size20 cro-p textColor">
+            <p class="font-size18 cro-p textColor">
               Discover OBiO Tech's Cutting-Edge Intelli-M GMP-Compliant Viral
               Vector Production Line. Unlock Comprehensive and Diversified
               Solutions for Large-Scale Production, Offering Capacities Ranging
@@ -87,6 +87,7 @@
             <el-checkbox-group
               v-model="form.laboratory"
               @change="changeLaboratory"
+              class="check-txt fontf2 font-size18"
               style="
                 display: flex;
                 flex-flow: column nowrap;
@@ -132,6 +133,7 @@
             <el-checkbox-group
               v-model="form.cdmo"
               @change="changeCdmo"
+              class="check-txt fontf2 font-size18"
               style="
                 display: flex;
                 flex-flow: column nowrap;
@@ -196,24 +198,24 @@
               <el-row :gutter="20">
                 <el-col :span="4" :xs="24">
                   <el-form-item label="First Name" required>
-                    <el-input v-model="form.fname" />
+                    <el-input v-model="form.fname1" />
                   </el-form-item>
                 </el-col>
                 <el-col :span="5" :xs="24">
                   <el-form-item label="Last Name" required>
-                    <el-input v-model="form.lname" /> </el-form-item
+                    <el-input v-model="form.lname2" /> </el-form-item
                 ></el-col>
                 <el-col :span="5" :xs="24">
                   <el-form-item label="Company" required>
-                    <el-input v-model="form.lname" /> </el-form-item
+                    <el-input v-model="form.lname3" /> </el-form-item
                 ></el-col>
                 <el-col :span="5" :xs="24">
                   <el-form-item label="Email" required>
-                    <el-input v-model="form.lname" /> </el-form-item
+                    <el-input v-model="form.lname4" /> </el-form-item
                 ></el-col>
                 <el-col :span="5" :xs="24">
                   <el-form-item label="Phone Number" required>
-                    <el-input v-model="form.lname" /> </el-form-item></el-col
+                    <el-input v-model="form.lname5" /> </el-form-item></el-col
               ></el-row>
               <el-form-item label="Comments" prop="content">
                 <el-input v-model="form.comment" type="textarea" :rows="10" />
@@ -288,74 +290,6 @@ import "swiper/css";
 import "swiper/css/pagination"; // 轮播图底面的小圆点
 import "swiper/css/navigation"; // 轮播图两边的左右箭头
 import "swiper/css/scrollbar"; // 轮播图的滚动条
-const navigation = ref({
-  nextEl: "#inNewNext",
-  prevEl: "#inNewPrev",
-  hideOnClick: true,
-});
-const breakpoints = ref({
-  320: {
-    //当屏幕宽度大于等于320
-    slidesPerView: 2,
-    spaceBetween: 0,
-  },
-  768: {
-    //当屏幕宽度大于等于768
-    slidesPerView: 2,
-    spaceBetween: 10,
-  },
-  1280: {
-    //当屏幕宽度大于等于1280
-    slidesPerView: 3,
-  },
-  1580: {
-    //当屏幕宽度大于等于1280
-    slidesPerView: 3,
-  },
-});
-
-const sciencesNavigation = ref({
-  nextEl: "#inNewsKnowledgeWp1Next",
-  prevEl: "#inNewsKnowledgeWp1Prev",
-});
-const sciencesBreakpoints = ref({
-  320: {
-    //当屏幕宽度大于等于320
-    slidesPerView: 2,
-    spaceBetween: 10,
-  },
-  768: {
-    //当屏幕宽度大于等于768
-    slidesPerView: 2,
-    spaceBetween: 12,
-  },
-  1280: {
-    //当屏幕宽度大于等于1280
-    slidesPerView: 4,
-    spaceBetween: 25,
-  },
-});
-const solutionsNavigation = ref({
-  nextEl: "#inNewsKnowledgeWp2Next",
-  prevEl: "#inNewsKnowledgeWp2Prev",
-});
-const solutionsBreakpoints = ref({
-  320: {
-    //当屏幕宽度大于等于320
-    slidesPerView: 2,
-    spaceBetween: 10,
-  },
-  768: {
-    //当屏幕宽度大于等于768
-    slidesPerView: 2,
-    spaceBetween: 12,
-  },
-  1280: {
-    //当屏幕宽度大于等于1280
-    slidesPerView: 4,
-    spaceBetween: 25,
-  },
-});
 const form = reactive({
   laboratory: [],
   cdmo: [],
@@ -393,5 +327,16 @@ releasesList.value = [
     // width: fit-content;
     justify-content: center;
   }
+}
+.check-txt ::v-deep .el-checkbox__label {
+  color: #747475;
+  // font-size: 18px;
+}
+.check-txt ::v-deep .el-checkbox__input.is-checked .el-checkbox__inner {
+  background-color: #1f757b;
+  border-color: #1f757b;
+}
+.form-contact-main ::v-deep .el-form-item__label {
+  color: #747475;
 }
 </style>

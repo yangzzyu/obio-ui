@@ -19,7 +19,7 @@
           <div class="boxs">
             <div class="ub ub-ac">
               <img class="ico" :src="i.bgUrl" alt="" srcset="" />
-              <div class="txt fontf5 font-size20 color666 ub-f1">
+              <div class="txt fontf5 font-size18 color666 ub-f1">
                 {{ i.txt }}
               </div>
             </div>

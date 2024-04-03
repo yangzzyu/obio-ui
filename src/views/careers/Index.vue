@@ -9,7 +9,7 @@
 <template>
   <div class="lab-sciences">
     <Focus :focusObj="FocusData" />
-    <section class="culture-box hero-style-top careers-box">
+    <section class="culture-box hero-style-top careers-box" id="mission-box">
       <el-col
         :xs="22"
         :sm="20"
@@ -23,7 +23,6 @@
           Our Culture
         </h1>
         <h2
-          id="mission-box"
           class="title-color our-txt font-size30 section-title fontf7 txt-bold"
         >
           Mission: Enable gene therapy for better lives

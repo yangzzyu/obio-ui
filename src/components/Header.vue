@@ -112,10 +112,10 @@
               >CRO Service</el-menu-item
             >
             <el-sub-menu
-              index="/news"
+              index="/insight"
               popper-class="sub-popper"
               :class="{
-                'is-active': ['/news'].includes(activeIndex),
+                'is-active': ['/insight'].includes(activeIndex),
               }"
             >
               <template #title>

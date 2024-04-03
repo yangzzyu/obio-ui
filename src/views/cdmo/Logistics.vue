@@ -17,7 +17,7 @@
       style="margin: auto"
       class="container"
     >
-      <div class="text font-size20">
+      <div class="text font-size18">
         <p>
           <span style="line-height: 2"
             >The top priority of gene and cell therapy products during

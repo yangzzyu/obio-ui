@@ -116,7 +116,7 @@
         style="margin: auto"
         class="container section-3"
       >
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5" >Facility</h1>
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Facility</h1>
         <div class="fac-con">
           <el-row class="row" :gutter="10">
             <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
@@ -128,17 +128,19 @@
                   />
                 </div>
               </div>
-              <div class="font-size24 fontf7 iti">
+              <div class="font-size18 fontf7 iti">
                 Lin-Gang Free-Trade Zone<br />Shanghai, China
               </div>
-              <div class="font-size38 fontf7 iti">OBIO Intelli-M</div>
+              <div class="font-size30 fontf7 iti">OBIO Intelli-M</div>
               <p class="font-size18 textColor txt-bold">
                 Process Development Characterization Clinical and Commercial
                 Manufacturing
                 <text class="title-color txt-bold">77,000</text>-square-meter
                 Facility for Global Supply
               </p>
-              <router-link to="/about/facilities/intellim" class="read-more font-size18 fontf7"
+              <router-link
+                to="/about/facilities/intellim"
+                class="read-more font-size18 fontf7"
                 >Read More</router-link
               >
             </el-col>
@@ -151,16 +153,18 @@
                   />
                 </div>
               </div>
-              <div class="font-size24 fontf7 iti">
+              <div class="font-size18 fontf7 iti">
                 International Medical Park<br />Shanghai, China
               </div>
-              <div class="font-size38 fontf7 iti">SPIRO Site</div>
+              <div class="font-size30 fontf7 iti">SPIRO Site</div>
 
               <p class="font-size18 textColor txt-bold">
                 Integrated Laboratory Services Processand Analytical Method
                 DevelopmentResearch and Development Center
               </p>
-              <router-link to="/about/facilities/spiro" class="read-more font-size18 fontf7"
+              <router-link
+                to="/about/facilities/spiro"
+                class="read-more font-size18 fontf7"
                 >Read More</router-link
               >
             </el-col>
@@ -173,10 +177,10 @@
                   />
                 </div>
               </div>
-              <div class="font-size24 fontf7 iti">
+              <div class="font-size18 fontf7 iti">
                 International Medical Park<br />Shanghai, China
               </div>
-              <div class="font-size38 fontf7 iti">PINE Site</div>
+              <div class="font-size30 fontf7 iti">PINE Site</div>
               <p class="font-size18 textColor txt-bold">
                 Process and Analytical Method Development Pre-clinical and
                 Clinical Manufacturing Three-building,<text
@@ -184,7 +188,9 @@
                   >10,000</text
                 >-square-meter campus
               </p>
-              <router-link to="/about/facilities/pine" class="read-more font-size18 fontf7"
+              <router-link
+                to="/about/facilities/pine"
+                class="read-more font-size18 fontf7"
                 >Read More</router-link
               >
             </el-col>
@@ -222,7 +228,7 @@
                       base
                     </p>
                     <p
-                      class="font-size14 txt-bold is-details"
+                      class="font-size18 txt-bold is-details"
                       style="color: #fff"
                     >
                       The only 77,000m2 scale GMP-compliant facility in the
@@ -253,7 +259,7 @@
                       base
                     </p>
                     <p
-                      class="font-size14 txt-bold is-details"
+                      class="font-size18 txt-bold is-details"
                       style="color: #fff"
                     >
                       More than 30 gene cell therapy production lines
@@ -289,7 +295,7 @@
                       base
                     </p>
                     <p
-                      class="font-size14 txt-bold is-details"
+                      class="font-size18 txt-bold is-details"
                       style="color: #fff"
                     >
                       Single-use process vector production line Single-use
@@ -320,7 +326,7 @@
                       base
                     </p>
                     <p
-                      class="font-size14 txt-bold is-details"
+                      class="font-size18 txt-bold is-details"
                       style="color: #fff"
                     >
                       Digitization and intelligentification based mechanical arm

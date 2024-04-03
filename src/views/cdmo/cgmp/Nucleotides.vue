@@ -26,7 +26,7 @@
           <div class="p font-size18"></div>
         </div>
         <div
-          class="font-size20 pub-pal20 pub-mart30 color666"
+          class="font-size18 pub-pal20 pub-mart30 color666"
           style="line-height: 1.8"
         >
           With extensive expertise in the development of customized plasmid DNA
@@ -52,10 +52,10 @@
                   ><i class="line"></i>
                 </div>
                 <div class="txt">
-                  <div class="title font-size24 fontf7">
+                  <div class="title font-size30 fontf7">
                     {{ i.title }}
                   </div>
-                  <div class="p font-size20">
+                  <div class="p font-size18">
                     {{ i.txt }}
                   </div>
                 </div>

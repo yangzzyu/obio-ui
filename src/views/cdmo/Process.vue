@@ -18,7 +18,7 @@
         style="margin: auto"
         class="container"
       >
-        <div class="text font-size20 color666 cGMP-zIndex">
+        <div class="text font-size18 color666 cGMP-zIndex">
           <p>
             <span style="line-height: 2"
               >A thorough understanding of commercially viable manufacturing
@@ -83,7 +83,7 @@
                 <span>{{ item.title }}</span>
               </div>
             </div>
-            <div class="text font-size20 color666 cGMP-zIndex">
+            <div class="text font-size18 color666 cGMP-zIndex">
               <p style="margin-bottom: 30px">
                 {{ item.pTxt }}
               </p>
@@ -142,7 +142,7 @@
           </div>
           <i class="bg"></i>
         </div>
-        <div class="text font-size20 color666 cGMP-zIndex">
+        <div class="text font-size18 color666 cGMP-zIndex">
           <p>
             <span style="line-height: 2"
               >OBiO has established a comprehensive quality management system
@@ -219,7 +219,7 @@
           </div>
           <i class="bg"></i>
         </div>
-        <div class="text font-size20 color666 cGMP-zIndex">
+        <div class="text font-size18 color666 cGMP-zIndex">
           <el-row :gutter="20">
             <el-col
               :xs="22"
@@ -280,7 +280,7 @@
                 <div class="boxs">
                   <div class="ub ub-ac">
                     <img class="ico" :src="i.bgUrl" alt="" srcset="" />
-                    <div class="txt fontf5 font-size20 color666 ub-f1">
+                    <div class="txt fontf5 font-size18 color666 ub-f1">
                       {{ i.txt }}
                     </div>
                   </div>
