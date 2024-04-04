@@ -3,6 +3,142 @@ import { handleViteImages } from "@/utils";
 
 export const releases = ref([
   {
+    id: 19,
+    type: "news",
+    title: `Dynamic Partnership Between MetaBio and magicRNA to Revolutionize Nucleic Acid Drug Utilization`,
+    time: "April 3rd 2024",
+    subhead: "",
+    content: ``,
+    html: `<div class="Insights-detail-text text">
+    <p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;text-align:justify;">
+Recently, OBiO Technology (Shanghai) Co., Ltd. (hereinafter referred to as " OBiO," stock code: 688238) and Shenzhen magicRNA Technology Co., Ltd. (hereinafter referred to as " magicRNA ") announced the signing of a strategic cooperation agreement. Both sides will carry out comprehensive cooperation in the field of LNP delivery systems, jointly promoting the clinical application of mRNA and other nucleic acid products in the fields of vaccines and cancer therapy. They aim to provide comprehensive and high-quality services to customers, enabling the industry and benefiting patients.
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;text-align:justify;">
+&nbsp;
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;text-align:justify;">
+Win-win Cooperation: OBiO &amp; magicRNA
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;text-align:justify;">
+magicRNA focuses on nucleic acid drug delivery and therapeutic mRNA innovative drug research and development. It possesses the largest ionizable amino lipid library with completely independent intellectual property rights in China. It has applied for more than 10 invention patents, including several PCT and European and American invention patents, of which 4 patents have been authorized. Based on combinatorial chemistry, magicRNA has developed a new ionizable amino lipid with 1,2-diester as the core framework, enabling rapid liver clearance. Engineered cell-targeted delivery platforms enable precise cell targeting to safely and efficiently deliver mRNA.
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;text-align:justify;">
+In the future, OBiO will continue to build on its own process and technological advantages, as well as various new LNP-related patented technologies proprietary by Irwin Biological, to provide customers with mRNA and other nucleic acids, from early research and development to clinical trial applications, and from clinical GMP manufacturing to commercial GMP manufacturing.
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;text-align:justify;">
+<img src="${handleViteImages("uploads/image/20240404/20240404103641_22819.png")}" alt="">
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;text-align:justify;">
+&nbsp;
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;text-align:justify;">
+Dr.Gaofeng,Zha, founder of magicRNA Techonology,, said: “OBiO is a leading CRO and CDMO enterprise in the field of CGT in China. We are very pleased to have reached a strategic cooperation with OBiO, and also thank OBiO for its recognition of Rainbow Biology. We believe that Rainbow Biology's LNP technology can bring more possibilities and better services to OBiO and its customers. We look forward to collaborating with OBiO to advance the nucleic acid industry and further address unmet clinical needs.”
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;text-align:justify;">
+Dr.Guodong,Jia, CEO of OBiO Techonology, said: “We are very pleased to cooperate with magicRNA in the field of LNP delivery. Both parties will play their respective advantages to provide strong support for customer product development and jointly promote the application and development of mRNA and other nucleic acid drugs. As a leading company in the industry, OBiO has been committed to promoting the innovation and development of gene and cell therapy, and continuously empowering the entire industry through technological innovation and resource integration. We believe that the collaboration between the two parties will promote the development of nucleic acid drugs in clinical practice.”
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;text-align:justify;">
+<b>About magicRNA Technology</b>
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;text-align:justify;">
+Founded in December 2021, magicRNA is a research and development company focused on nucleic acid drug delivery and therapeutic mRNA innovation. Its corporate mission is "Deepening nucleic acid drug delivery, RNA therapy for the benefit of sufferers." HN2201, magicRNA 's first cancer therapy drug, has completed pre-clinical development and obtained ethical clinical trial approval. It is about to enter the clinical trial stage. ILB3132, which is screened from magicRNA lipid library, has completed the development of CMC, is about to complete the registration of Sino-US excipients, and has been authorized for use in several foreign countries, with a cooperation amount of hundreds of millions of yuan. At the same time, in response to industry pain points, Rainbow Bio has successfully developed an engineered cell-targeted delivery platform (Engineered Cell Targeted LNPs, EnC-LNPs). The platform enables engineered and precise cell-targeted delivery and has comparable physicochemical properties and stability to traditional LNPs. They have achieved nearly 100% efficient and selective delivery of immune cells in vitro and in vivo and have completed a patented layout, promising to deliver targeted cells to any purpose in the future.
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;text-align:justify;">
+<img src="${handleViteImages("uploads/image/20240404/20240404103707_16411.png")}" alt="">
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;text-align:justify;">
+<b>About OBiO Technology</b>
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;text-align:justify;">
+The state-of-the-art 77,000-square-meter Facility for Global Supply exemplifies our commitment to meeting worldwide demand. We provide comprehensive CDMO services encompassing process development, analytical methods, IND-enabling CMC (Chemistry, Manufacturing, and Controls), as well as clinical and commercial manufacturing for viral vector, oncolytic virus, and cell therapy products. Our expertise extends to offering holistic solutions tailored to support the industrialization and commercialization of various products at the Pre-IND stage and beyond.
+</p>
+<p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;text-align:justify;">
+<img src="${handleViteImages("uploads/image/20240404/20240404103726_79526.png")}" alt="">
+</p>                </div>`,
+  },
+  {
+    id: 18,
+    type: "news",
+    title: `The 2024 Cell and Gene Therapy Workshop, "Horizons Unveiled: Exploring the Future of Cell and Gene Therapy," concluded successfully this past Saturday`,
+    time: "April 3rd 2024",
+    subhead: "",
+    content: ``,
+    html: `<div class="Insights-detail-text text">
+    OBiO Tech want to extend our heartfelt thanks to all the speakers for delivering insightful presentations and sharing the latest topics and solutions. With over 100 attendees, we appreciate the passion and professionalism demonstrated through your engaging questions. We hope you all found the workshop enriching and enjoyable.<br>
+<p>
+<br>
+</p>
+<p>
+<img src="${handleViteImages("uploads/image/20240404/20240404103020_79778.jpg")}" alt=""> 
+</p>
+<p>
+<br>
+</p>
+<p>
+<img src="${handleViteImages("uploads/image/20240404/20240404103032_21644.jpg")}" alt=""> 
+</p>
+<p>
+<br>
+</p>
+<p>
+It was an honor and pleasure for OBiO Tech to be part of such a well-executed and impactful event. As a sponsor, we were thoroughly impressed by the professionalism and efficiency displayed by the Sino-American Pharmaceutical Professionals Association–New England/Boston (SAPA-NE) team throughout the entire process, especially Dr. Peng Sun, Bo YanBo Yan, Tracy ZhangTracy Zhang . We also want to extend our gratitude to Biocytogen for their unconditionally support, especially Madeline LeeMadeline Lee Yin HuangYin Huang Collaborating with such a talented and dedicated group of individuals was truly delightful.
+</p>
+<p>
+<br>
+</p>
+<p>
+Furthermore, we commend the event's impact as not only a fantastic platform for networking and knowledge-sharing but also for successfully achieving its objectives and making a positive difference in our industry and community.
+</p>
+<p>
+<br>
+</p>
+<p>
+<img src="${handleViteImages("uploads/image/20240404/20240404103125_21481.jpg")}" alt=""> 
+</p>
+<p>
+<br>
+</p>
+<p>
+<img src="${handleViteImages("uploads/image/20240404/20240404103137_52796.jpg")}" alt=""> 
+</p>
+<br>
+We encourage you to share this event for future opportunities. We have two more workshops scheduled later this year, and we look forward to your continued participation.<br>
+<br>
+<p>
+Thank you once again for your support and contribution to the success of the workshop.
+</p>
+<p>
+<br>
+</p>
+<p>
+<img src="${handleViteImages("uploads/image/20240404/20240404103240_76460.jpg")}" alt=""> 
+</p>
+<p>
+<br>
+</p>
+<p>
+<img src="${handleViteImages("uploads/image/20240404/20240404103253_40004.jpg")}" alt=""> 
+</p>
+<br>
+The 2024 Cell and Gene Therapy Workshop, "Horizons Unveiled: Exploring the Future of Cell and Gene Therapy," concluded successfully this past Saturday.&nbsp;<br>
+<br>
+<p>
+OBiO Tech want to extend our heartfelt thanks to all the speakers for delivering insightful presentations and sharing the latest topics and solutions.&nbsp;
+</p>
+<p>
+<br>
+</p>
+<p>
+<img src="${handleViteImages("uploads/image/20240404/20240404103339_61826.jpg")}" alt="">
+</p>
+<p>
+<br>
+</p>
+<p>
+<img src="${handleViteImages("uploads/image/20240404/20240404103355_98973.jpg")}" alt="">
+</p>                </div>`,
+  },
+  {
     id: 17,
     type: "news",
     title: `Breaking News: OBiO Biotechnology and Novabio Therapeutics Join Forces in Revolutionary Treg Cell Therapy Partnership!`,
