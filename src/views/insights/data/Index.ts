@@ -5,7 +5,7 @@ export const releases = ref([
   {
     id: 19,
     type: "news",
-    title: `Dynamic Partnership Between MetaBio and magicRNA to Revolutionize Nucleic Acid Drug Utilization`,
+    title: `Dynamic Partnership Between OBiO Technology and magicRNA to Revolutionize Nucleic Acid Drug Utilization`,
     time: "April 3rd 2024",
     subhead: "",
     content: ``,
