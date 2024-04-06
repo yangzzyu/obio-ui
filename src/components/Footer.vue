@@ -145,20 +145,13 @@
         </div>
       </div>
       <div class="foot-link ub">
-        <a href="https://www.youtube.com/@obiotechnology">
-          <font-awesome-icon
-            class="footer-icon"
-            size="lg"
-            :icon="['fab', 'weixin']"
-          />
-        </a>
         <a href="https://www.linkedin.com/company/41870372">
           <font-awesome-icon
             class="footer-icon"
             size="lg"
             :icon="['fab', 'linkedin']"
         /></a>
-        <a href="https://www.facebook.com/profile.php?id=61555811491695">
+        <a href="https://www.youtube.com/@obiotechnology">
           <font-awesome-icon size="lg" :icon="['fas', 'circle-play']"
         /></a>
         <a href="https://www.facebook.com/profile.php?id=61555811491695">

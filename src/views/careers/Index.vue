@@ -22,22 +22,11 @@
         <h1 class="title-color font-size50 txt-bold section-title fontf8">
           Our Culture
         </h1>
-        <h2
-          class="title-color our-txt font-size30 section-title fontf7 txt-bold"
-        >
-          Mission: Enable gene therapy for better lives
-        </h2>
-        <p class="font-size18 textColor" style="margin-bottom: 20px">
-          At OBiO, we empower gene therapy, driving advancements in gene drug
-          development and clinical applications. We achieve this by providing
-          top-tier technical services to research institutions and companies in
-          the gene therapy field, thus empowering our clients to excel.
-        </p>
-        <p class="font-size18 textColor">
-          We continuously collaborate with our clients, fostering the
-          development of the gene therapy industry and working together to
-          realize the noble aspiration of benefiting humanity and all living
-          beings through gene therapy.
+        <br />
+        <p class="font-size30 textColor" style="margin-bottom: 20px">
+          As OBiO Tech swiftly evolves, every OBiOers are immersed in an
+          environment fostering "enhanced capabilities, purposeful work, and
+          a fulfilling life."
         </p>
       </el-col>
     </section>
@@ -194,6 +183,18 @@ function handleClose() {
   dialogVisible.value = false;
 }
 const croList = ref([
+  {
+    imgUrl: handleViteImages("cdmo2.png"),
+    title: "Mission: Enable gene therapy for better lives",
+    text: `At OBiO, we empower gene therapy, driving advancements in gene drug
+      development and clinical applications. We achieve this by providing
+      top-tier technical services to research institutions and companies in
+      the gene therapy field, thus empowering our clients to excel.
+      We continuously collaborate with our clients, fostering the
+      development of the gene therapy industry and working together to
+      realize the noble aspiration of benefiting humanity and all living
+      beings through gene therapy.`,
+  },
   {
     imgUrl: handleViteImages("careers1.png"),
     title: "Vision by 2026:",
