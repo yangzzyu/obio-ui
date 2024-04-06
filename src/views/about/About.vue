@@ -116,7 +116,7 @@
         style="margin: auto"
         class="container section-3"
       >
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Facility</h1>
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Facilities</h1>
         <div class="fac-con">
           <el-row class="row" :gutter="10">
             <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
@@ -129,7 +129,7 @@
                 </div>
               </div>
               <div class="font-size18 fontf7 iti">
-                Lin-Gang Free-Trade Zone<br />Shanghai, China
+                Lin-Gang Free-Trade Zone
               </div>
               <div class="font-size30 fontf7 iti">OBIO Intelli-M</div>
               <p class="font-size18 textColor txt-bold">
@@ -154,7 +154,7 @@
                 </div>
               </div>
               <div class="font-size18 fontf7 iti">
-                International Medical Park<br />Shanghai, China
+                International Medical Park
               </div>
               <div class="font-size30 fontf7 iti">SPIRO Site</div>
 
@@ -178,7 +178,7 @@
                 </div>
               </div>
               <div class="font-size18 fontf7 iti">
-                International Medical Park<br />Shanghai, China
+                International Medical Park
               </div>
               <div class="font-size30 fontf7 iti">PINE Site</div>
               <p class="font-size18 textColor txt-bold">
@@ -218,7 +218,7 @@
                 <div class="content">
                   <div class="factory-text">
                     <h1 class="font-size30 txt-bold fontf8">
-                      LARGE <span class="text-sapn">大</span>
+                      LARGE
                     </h1>
                     <p
                       class="font-size18 txt-bold fontf7"
@@ -249,7 +249,7 @@
                 <div class="content">
                   <div class="factory-text">
                     <h1 class="font-size30 txt-bold fontf8">
-                      COMPREHENSIVE <span class="text-sapn">全</span>
+                      COMPREHENSIVE
                     </h1>
                     <p
                       class="font-size18 txt-bold fontf7"
@@ -285,7 +285,7 @@
                 <div class="content">
                   <div class="factory-text">
                     <h1 class="font-size30 txt-bold fontf8">
-                      INNOVATIVE <span class="text-sapn">新</span>
+                      INNOVATIVE
                     </h1>
                     <p
                       class="font-size18 txt-bold fontf7"
@@ -316,7 +316,7 @@
                 <div class="content">
                   <div class="factory-text">
                     <h1 class="font-size30 txt-bold fontf8">
-                      INTELLIGENT <span class="text-sapn">智</span>
+                      INTELLIGENT
                     </h1>
                     <p
                       class="font-size18 txt-bold fontf7"
@@ -394,7 +394,7 @@
         <ul class="btn-ul">
           <li>
             <router-link to="/team" class="btn-a font-size18 fontf7"
-              >join our team</router-link
+              >Join Our Team</router-link
             >
           </li>
           <li>

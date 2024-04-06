@@ -19,11 +19,10 @@
           </div>
 
           <dl class="dl-foot-nav">
-            <dt class="font-size14">Phone:(408)422-8642</dt>
-            <dt class="font-size14">General: obio.us@obiosh.com</dt>
-            <dt class="font-size14">Business:bd@obiosh.com</dt>
+            <dt class="font-size14">Phone:408-422-9864</dt>
+            <dt class="font-size14">Email: obio.us@obiosh.com</dt>
             <dt class="font-size14">
-              Address: 7133 Koll Center Parkway,Suite 200, Pleasanton, CA 94566
+              Address: 7133 Koll Center Parkway, Suite 200, Pleasanton, CA 94566
             </dt>
             <dt class="font-size14"></dt>
             <dd></dd>
@@ -34,12 +33,12 @@
             <dt class="font-size20 first-tit">
               <router-link to="/about">About Us</router-link>
             </dt>
-            <dt class="font-size14">
+            <dd class="font-size14">
               <router-link to="/about/history">History</router-link>
-            </dt>
-            <dt class="font-size14">
+            </dd>
+            <dd class="font-size14">
               <router-link to="/about/facilities">Facilities</router-link>
-            </dt>
+            </dd>
             <!-- <dt class="font-size14">
               <router-link to="/team">Leadship Team</router-link>
             </dt> -->
@@ -55,8 +54,8 @@
               >
             </dt>
             <dd class="font-size14">
-              <router-link to="/capability/industrialize">
-                Industrialize
+              <router-link to="/capability/industrialized">
+                Industrialized
               </router-link>
             </dd>
             <dd class="font-size14">
@@ -170,7 +169,7 @@
     <div class="icp">
       <!-- © 2023 OBiO Tech, Inc. All Rights Reserved -->
       <!-- 7133 Koll Center Parkway, Suite 200, Pleasanton, CA 94566 -->
-      © 2024 OBiO Tech, Inc. All Rights Reserved
+      © {{ new Date().getFullYear() }} OBiO Tech, Inc. All Rights Reserved
     </div>
   </div>
 </template>

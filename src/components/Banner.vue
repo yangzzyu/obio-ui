@@ -19,31 +19,32 @@
         class="container"
       >
         <div class="slide-title">
-          <h2 class="font-size38 fontf8 txt-bold">
+          <h2 class="font-size50 fontf8 txt-bold">
             Enable Gene Therapy for Better Lives
-          </h2>
-          <h2 class="font-size36 fontf8 txt-bold">
-            Your Trustful Partner in Research and Manufacturing for Gene and
-            Cell Therapy
           </h2>
         </div>
         <div class="slide-subtitle">
+          <p class="font-size20 fontf8 txt-bold">
+            Your Trustful Partner in Research and Manufacturing for Gene and
+            Cell Therapy
+          </p>
           <p class="font-size20 fontf8 txt-bold">
             Providing client-centered and high-quality service as our
             commitment, we strive to become a world leading gene and cell
             therapy CRO/CDMO group.
           </p>
         </div>
+        <br />
         <div class="btns">
           <router-link
             to="/cdmo"
-            class="btn1 btn-i txt-bold"
+            class="btn1 btn-i txt-bold font-size18 fontf7"
             data-animation="animated bounceInUp"
             >Our Solutions</router-link
           >
           <router-link
             to="/capability"
-            class="btn2 btn-i txt-bold"
+            class="btn2 btn-i txt-bold font-size18 fontf7"
             data-animation="animated bounceInUp"
             >Our Commitment</router-link
           >

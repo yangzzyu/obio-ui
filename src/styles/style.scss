@@ -1473,6 +1473,10 @@ a:focus {
     }
   }
 }
+.innovation-content {
+  width: 50%;
+  margin: auto;
+}
 .cro-list {
   .cro-list-item {
     // margin-bottom: 40px;
@@ -1532,7 +1536,7 @@ a:focus {
 }
 .p-title {
   color: $fontColor;
-  text-align: center;
+  text-align: left;
   font-weight: 500;
 }
 .fontFamily {
@@ -1692,7 +1696,7 @@ header {
   margin: auto;
   padding: 10px 0;
   p {
-    text-align: center;
+    text-align: left;
     font-size: 1.2rem;
   }
 }

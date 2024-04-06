@@ -44,7 +44,7 @@ const pageData = ref([
   {
     name: "Events",
     focusObj: {
-      title: "Insights",
+      title: "Events",
       hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
       visibleXsImgUrl: handleViteImages("head_bg.jpg"),
     },

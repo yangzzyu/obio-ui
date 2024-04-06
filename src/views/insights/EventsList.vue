@@ -27,11 +27,10 @@
           <div class="item" v-for="(item, index) in tableData" :key="index">
             <router-link :to="'/news-details/events/' + item.id" class="block">
               <div class="font-size18">{{ item.time }}</div>
-              <div class="title fontf4 font-size30 title-color">
+              <div class="title fontf4 font-size24 title-color">
                 {{ item.title }}
               </div>
               <div class="font-size18 ut-s2">{{ item.content }}</div>
-              <div class="more"><span class="sa"></span></div>
             </router-link>
           </div>
         </div>
@@ -58,7 +57,7 @@ const tableData = ref<any>();
 const pageinfo = ref({
   total: 0,
   currPage: 1,
-  pageSize: 5,
+  pageSize: 10,
 });
 
 const getProp = () => {

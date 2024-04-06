@@ -20,7 +20,7 @@
       >
         <div class="pub-title pub-title-p ub ub-ver ub-pe">
           <i class="line"></i>
-          <span class="fontf8 font-size50"> Press Releases</span>
+          <span class="fontf8 font-size50">Press Releases</span>
           <div class="p font-size18"></div>
         </div>
         <div class="in-news-list1">
@@ -30,13 +30,12 @@
               class="block"
             >
               <div class="font-size18">{{ item.time }}</div>
-              <div class="title fontf4 font-size30 title-color">
+              <div class="title fontf4 font-size24 title-color">
                 {{ item.title }}
               </div>
               <div class="font-size18 ut-s2">
                 {{ item.content }}
               </div>
-              <div class="more"><span class="sa"></span></div>
             </router-link>
           </div>
         </div>
@@ -64,7 +63,7 @@ const tableData = ref<any>();
 const pageinfo = ref({
   total: 0,
   currPage: 1,
-  pageSize: 5,
+  pageSize: 10,
 });
 
 const getProp = () => {

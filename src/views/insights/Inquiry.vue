@@ -150,8 +150,11 @@
                   <el-form-item label="Phone Number" required>
                     <el-input v-model="form.lname5" /> </el-form-item></el-col
               ></el-row>
+              <el-form-item label="Inquired Items" prop="content">
+                <el-input v-model="form.inquired_item" type="textarea" :rows="5" readonly />
+              </el-form-item>
               <el-form-item label="Comments" prop="content">
-                <el-input v-model="form.comment" type="textarea" :rows="10" />
+                <el-input v-model="form.comment" type="textarea" :rows="5" />
               </el-form-item>
               <el-form-item label="Security Code" required>
                 <el-col :span="11">
@@ -169,31 +172,8 @@
                   </div>
                 </el-col>
               </el-form-item>
-              <el-form-item label="I AGREE" required>
-                <div class="checks_text">
-                  <el-checkbox
-                    v-model="form.checked"
-                    size="large"
-                    class="checks_inpt"
-                  />
-                  <div class="checks_txt">
-                    By submitting this form I agree that OBiO may process my
-                    data in the manner described in OBiO’s<a
-                      xhref="/cn/home/ys/cid/861"
-                      target="_blank"
-                      style="color: #25b096"
-                      >Privacy Policy</a
-                    >
-                  </div>
-                </div>
-              </el-form-item>
-              <el-form-item label="">
-                <div class="lab fontf3 font-size18">
-                  We won’t share your information.
-                </div>
-              </el-form-item>
               <div class="fontf3 font-size14">
-                <a class="btn-a font-size18 fontf7 bg-pinkbluelfr"> Submit</a>
+                <a class="btn-a font-size18 fontf7 bg-pinkbluelfr">Submit</a>
               </div>
             </el-form>
           </el-col>
@@ -214,11 +194,11 @@ const form = reactive({
 });
 const changeLaboratory = (e) => {
   const arr = [...form.laboratory, ...form.cdmo];
-  form.comment = arr.join("\n");
+  form.inquired_item = arr.join("\n");
 };
 const changeCdmo = (e) => {
   const arr = [...form.laboratory, ...form.cdmo];
-  form.comment = arr.join("\n");
+  form.inquired_item = arr.join("\n");
 };
 </script>
 

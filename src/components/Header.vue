@@ -82,8 +82,8 @@
                   Capability & Commitment
                 </div>
               </template>
-              <el-menu-item index="/capability/industrialize">
-                Industrialize
+              <el-menu-item index="/capability/industrialized">
+                Industrialized
               </el-menu-item>
               <el-menu-item index="/capability/commitment">
                 Commitment
@@ -207,8 +207,8 @@
               Capability & Commitment
             </div>
           </template>
-          <el-menu-item index="/capability/industrialize">
-            Industrialize
+          <el-menu-item index="/capability/industrialized">
+            Industrialized
           </el-menu-item>
           <el-menu-item index="/capability/commitment">
             Commitment
