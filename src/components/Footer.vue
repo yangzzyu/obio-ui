@@ -31,7 +31,7 @@
         <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/about">About Us</router-link>
+              <router-link to="/about">About Us<br/>&nbsp;</router-link>
             </dt>
             <dd class="font-size14">
               <router-link to="/about/history">History</router-link>

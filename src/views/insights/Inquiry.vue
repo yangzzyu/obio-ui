@@ -126,29 +126,42 @@
               label-width="200px"
               class="form-contact-main fontf2"
               :label-position="'top'"
+              @submit.prevent="sendEmail"
               status-icon
             >
               <el-row :gutter="20">
-                <el-col :span="4" :xs="24">
+                <el-col :span="6" :xs="24">
                   <el-form-item label="First Name" required>
-                    <el-input v-model="form.fname1" />
+                    <el-input v-model="form.first_name" />
                   </el-form-item>
                 </el-col>
+                <el-col :span="6" :xs="24" />
                 <el-col :span="5" :xs="24">
                   <el-form-item label="Last Name" required>
-                    <el-input v-model="form.lname2" /> </el-form-item
+                    <el-input v-model="form.last_name" /> </el-form-item
                 ></el-col>
-                <el-col :span="5" :xs="24">
+                <el-col :span="6" :xs="24" />
+              </el-row>
+              <el-row :gutter="20">
+                <el-col :span="6" :xs="24">
                   <el-form-item label="Company" required>
-                    <el-input v-model="form.lname3" /> </el-form-item
+                    <el-input v-model="form.company" /> </el-form-item
                 ></el-col>
-                <el-col :span="5" :xs="24">
+                <el-col :span="6" :xs="24" />
+                <el-col :span="6" :xs="24">
+                  <el-form-item label="Title">
+                    <el-input v-model="form.title" /> </el-form-item
+                ></el-col>
+              </el-row>
+              <el-row :gutter="20">
+                <el-col :span="6" :xs="24">
                   <el-form-item label="Email" required>
-                    <el-input v-model="form.lname4" /> </el-form-item
+                    <el-input v-model="form.email" /> </el-form-item
                 ></el-col>
-                <el-col :span="5" :xs="24">
+                <el-col :span="6" :xs="24" />
+                <el-col :span="6" :xs="24">
                   <el-form-item label="Phone Number" required>
-                    <el-input v-model="form.lname5" /> </el-form-item></el-col
+                    <el-input v-model="form.phone" /> </el-form-item></el-col
               ></el-row>
               <el-form-item label="Inquired Items" prop="content">
                 <el-input v-model="form.inquired_item" type="textarea" :rows="5" readonly />
@@ -156,25 +169,9 @@
               <el-form-item label="Comments" prop="content">
                 <el-input v-model="form.comment" type="textarea" :rows="5" />
               </el-form-item>
-              <el-form-item label="Security Code" required>
-                <el-col :span="11">
-                  <el-input v-model="form.verify" />
-                </el-col>
-                <el-col :span="11">
-                  <div class="put ub-f1" style="margin-left: 12px">
-                    <img
-                      class="verifyImg"
-                      id="captcha"
-                      :src="handleViteImages('captcha.png')"
-                      alt="verifyImg"
-                      style="width: 150px; cursor: pointer; height: 38px"
-                    />
-                  </div>
-                </el-col>
+              <el-form-item>
+                <button class="btn-a font-size18 fontf7" type="submit" @click="sendEmail">Submit</button>
               </el-form-item>
-              <div class="fontf3 font-size14">
-                <a class="btn-a font-size18 fontf7 bg-pinkbluelfr">Submit</a>
-              </div>
             </el-form>
           </el-col>
         </el-row>
@@ -187,6 +184,7 @@
 import { ref, reactive } from "vue";
 import { releases, events } from "./data/Index";
 import { handleViteImages } from "@/utils";
+
 const form = reactive({
   laboratory: [],
   cdmo: [],
@@ -199,6 +197,30 @@ const changeLaboratory = (e) => {
 const changeCdmo = (e) => {
   const arr = [...form.laboratory, ...form.cdmo];
   form.inquired_item = arr.join("\n");
+};
+
+import emailjs from '@emailjs/browser';
+const data = {
+  to_name: "qxqxqxa",
+  from_name: "obio-tech.com",
+  user: form.first_name + ' ' + form.lastname,
+  email: form.email,
+  company: form.company,
+  phone: form.phone,
+  title: form.title,
+  inquired_item: form.inquired_item,
+  comment: form.comment
+}
+const sendEmail = () => {
+  console.log(form.comment);
+      emailjs.send('service_ume7cyy', 'template_6mmf2na', form, 'h7iu63GvkU7foPBMq')
+    .then(response => {
+      alert('Inquiry submitted successfully!');
+    })
+    .catch(error => {
+      console.error('Error sending email:', error);
+      alert('An error occurred while submitting the inquiry. Please email us at obio.us@obiosh.com.');
+    });
 };
 </script>
 
