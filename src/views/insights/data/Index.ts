@@ -1130,7 +1130,7 @@ Technology</span></strong>
 <p style="text-align:justify;">
 	<span style="font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;OBiO Technology
 (Shanghai) Corp., Ltd. (OBiO, 688238.SH) is a gene and cell therapy-focused CRO
-and CDMO founded in 2013. In China for global customers, we offer holistic
+and CDMO founded in 2013. For global customers, we offer holistic
 research, development, and manufacturing solutions for vectorology studies,
 functional genomics, process and analytical development, IND-enabling CMC,
 clinical and commercial manufacturing. With "enable gene therapy for
@@ -1203,7 +1203,7 @@ China.</span>
 	<strong><span style="font-size:16px;">About OBiO Technology</span></strong> 
 </p>
 <p style="text-align:justify;">
-	<span style="font-size:16px;">&nbsp; &nbsp; OBiO Technology (Shanghai) Corp., Ltd. (OBiO, 688238.SH) is a gene and cell therapy-focused CRO and CDMO founded in 2013. In China for global customers, we offer holistic research, development, and manufacturing solutions for vectorology studies, functional genomics, process and analytical development, IND-enabling CMC, clinical and commercial manufacturing. With "enable gene therapy for better lives" as our mission, we are committed to providing high-quality service to global customers, advancing your product from bench to clinic, and bringing benefit to populations around the world. For more information about OBiO Technology, visit www.obio-tech.com.</span> 
+	<span style="font-size:16px;">&nbsp; &nbsp; OBiO Technology (Shanghai) Corp., Ltd. (OBiO, 688238.SH) is a gene and cell therapy-focused CRO and CDMO founded in 2013. For global customers, we offer holistic research, development, and manufacturing solutions for vectorology studies, functional genomics, process and analytical development, IND-enabling CMC, clinical and commercial manufacturing. With "enable gene therapy for better lives" as our mission, we are committed to providing high-quality service to global customers, advancing your product from bench to clinic, and bringing benefit to populations around the world. For more information about OBiO Technology, visit www.obio-tech.com.</span> 
 </p>                </div>`,
   },
   {
@@ -1560,7 +1560,7 @@ tumors and another strong validation of HSV-1 modality.</span>
 	<strong><span style="font-size:16px;">About OBiO Technology</span></strong> 
 </p>
 <p class="MsoNormal" align="left" style="text-align:justify;">
-	<span style="font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;OBiO Technology (Shanghai) Corp., Ltd. (OBiO, 688238.SH) is a gene and cell therapy-focused CRO and CDMO founded in 2013. In China for global customers, we offer holistic research, development, and manufacturing solutions for vectorology studies, functional genomics, process and analytical development, IND-enabling CMC, clinical and commercial manufacturing. With "enable gene therapy for better lives" as our mission, we are committed to providing high-quality service to global customers, advancing your product from bench to clinic, and bringing benefit to populations around the world. For more information about OBiO Technology, visit www.obio-tech.com.</span>
+	<span style="font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;OBiO Technology (Shanghai) Corp., Ltd. (OBiO, 688238.SH) is a gene and cell therapy-focused CRO and CDMO founded in 2013. For global customers, we offer holistic research, development, and manufacturing solutions for vectorology studies, functional genomics, process and analytical development, IND-enabling CMC, clinical and commercial manufacturing. With "enable gene therapy for better lives" as our mission, we are committed to providing high-quality service to global customers, advancing your product from bench to clinic, and bringing benefit to populations around the world. For more information about OBiO Technology, visit www.obio-tech.com.</span>
 </p>                </div>`,
   },
   {
@@ -1609,7 +1609,7 @@ tumors and another strong validation of HSV-1 modality.</span>
 	<strong><span style="font-size:16px;line-height:1.5;">About OBiO Technology</span></strong> 
 </p>
 <p style="text-align:justify;">
-	<span style="font-size:16px;line-height:1.5;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:16px;line-height:1.5;">OBiO Technology (Shanghai) Corp., Ltd. (OBiO, 688238.SH) is a gene and cell therapy-focused CRO and CDMO founded in 2013. In China for global customers, we offer holistic research, development, and manufacturing solutions for vectorology studies, functional genomics, process and analytical development, IND-enabling CMC, clinical and commercial manufacturing. With "enable gene therapy for better lives" as our mission, we are committed to providing high-quality service to global customers, advancing your product from bench to clinic, and bringing benefit to populations around the world. For more information about OBiO Technology, visit www.obio-tech.com.</span> 
+	<span style="font-size:16px;line-height:1.5;">&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="font-size:16px;line-height:1.5;">OBiO Technology (Shanghai) Corp., Ltd. (OBiO, 688238.SH) is a gene and cell therapy-focused CRO and CDMO founded in 2013. For global customers, we offer holistic research, development, and manufacturing solutions for vectorology studies, functional genomics, process and analytical development, IND-enabling CMC, clinical and commercial manufacturing. With "enable gene therapy for better lives" as our mission, we are committed to providing high-quality service to global customers, advancing your product from bench to clinic, and bringing benefit to populations around the world. For more information about OBiO Technology, visit www.obio-tech.com.</span> 
 </p>
  <span style="font-size:14px;line-height:2;"></span>                </div>`,
   },
@@ -1730,7 +1730,7 @@ about OBiO, visit </span><a href="http://www.obio-tech.com"><span style="font-si
 </p>
  <br>
  <span style="line-height:1.5;"><strong>About OBiO</strong></span><br>
-<span style="line-height:1.5;">&nbsp;&nbsp;&nbsp;&nbsp;OBiO Technology (Shanghai) Corp., Ltd. (OBiO) is a gene and cell therapy-focused biotechnology company founded in 2013. In China for global customers, we offer holistic research, development, and manufacturing solutions for vectorology studies, functional genomics, process and analytical development, IND-enabling CMC, clinical and commercial manufacturing. "Enable gene therapy for better life" as our mission, we are committed to providing high-quality service to global customers, advancing your product from bench to clinic, and bringing benefit to populations around the world. For more information about OBiO, visit www.obiosh.com.</span><br>
+<span style="line-height:1.5;">&nbsp;&nbsp;&nbsp;&nbsp;OBiO Technology (Shanghai) Corp., Ltd. (OBiO) is a gene and cell therapy-focused biotechnology company founded in 2013. For global customers, we offer holistic research, development, and manufacturing solutions for vectorology studies, functional genomics, process and analytical development, IND-enabling CMC, clinical and commercial manufacturing. "Enable gene therapy for better life" as our mission, we are committed to providing high-quality service to global customers, advancing your product from bench to clinic, and bringing benefit to populations around the world. For more information about OBiO, visit www.obiosh.com.</span><br>
  <br>
  <span style="line-height:1.5;">Contacts:</span><br>
 <span style="line-height:1.5;">Jiaxin Wang (Esther)</span><br>

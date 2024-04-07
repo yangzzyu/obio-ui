@@ -184,7 +184,7 @@ function handleClose() {
 }
 const croList = ref([
   {
-    imgUrl: handleViteImages("cdmo2.png"),
+    imgUrl: handleViteImages("productions.png"),
     title: "Mission: Enable gene therapy for better lives",
     text: `At OBiO, we empower gene therapy, driving advancements in gene drug
       development and clinical applications. We achieve this by providing

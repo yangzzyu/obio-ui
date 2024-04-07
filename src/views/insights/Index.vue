@@ -36,7 +36,7 @@ const pageData = ref([
   {
     name: "Press Releases",
     focusObj: {
-      title: "Insights",
+      title: "News",
       hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
       visibleXsImgUrl: handleViteImages("head_bg.jpg"),
     },
@@ -52,7 +52,7 @@ const pageData = ref([
   {
     name: "Inquiry",
     focusObj: {
-      title: "Inquiry",
+      title: "Learn More",
       hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
       visibleXsImgUrl: handleViteImages("head_bg.jpg"),
     },
@@ -60,7 +60,7 @@ const pageData = ref([
   {
     name: "News Details",
     focusObj: {
-      title: "Insights",
+      title: "News",
       hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
       visibleXsImgUrl: handleViteImages("head_bg.jpg"),
     },

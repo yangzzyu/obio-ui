@@ -20,7 +20,7 @@
       >
         <div class="pub-title pub-title-p ub ub-ver ub-pe">
           <i class="line"></i>
-          <h1 class="fontf8 font-size50">In China for Global Customers</h1>
+          <h1 class="fontf8 font-size50">For Global Customers</h1>
         </div>
         <div class="font-size18 pub-pal20" style="padding-top: 30px">
           <p style="line-height: 2">

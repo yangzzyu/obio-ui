@@ -1,5 +1,5 @@
 <template>
-  <div class="Insights-wrap">
+  <div class="in-contact-form">
     <section id="Inquiry" class="productions-list">
       <el-col
         :xs="22"
@@ -10,13 +10,12 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Inquiry</h1>
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3">Inquiry</h1>
         <el-row :gutter="50" class="cdmo-top">
           <el-col :xs="24" :span="12">
             <h3 class="title-color font-size18 txt-bold fontf7">
               Laboratory Sciences
             </h3>
-
             <el-checkbox-group
               v-model="form.laboratory"
               @change="changeLaboratory"
@@ -130,36 +129,32 @@
               status-icon
             >
               <el-row :gutter="20">
-                <el-col :span="6" :xs="24">
+                <el-col :span="12" :xs="24">
                   <el-form-item label="First Name" required>
                     <el-input v-model="form.first_name" />
                   </el-form-item>
                 </el-col>
-                <el-col :span="6" :xs="24" />
-                <el-col :span="5" :xs="24">
+                <el-col :span="12" :xs="24">
                   <el-form-item label="Last Name" required>
                     <el-input v-model="form.last_name" /> </el-form-item
                 ></el-col>
-                <el-col :span="6" :xs="24" />
               </el-row>
               <el-row :gutter="20">
-                <el-col :span="6" :xs="24">
+                <el-col :span="12" :xs="24">
                   <el-form-item label="Company" required>
                     <el-input v-model="form.company" /> </el-form-item
                 ></el-col>
-                <el-col :span="6" :xs="24" />
-                <el-col :span="6" :xs="24">
+                <el-col :span="12" :xs="24">
                   <el-form-item label="Title">
                     <el-input v-model="form.title" /> </el-form-item
                 ></el-col>
               </el-row>
               <el-row :gutter="20">
-                <el-col :span="6" :xs="24">
+                <el-col :span="12" :xs="24">
                   <el-form-item label="Email" required>
                     <el-input v-model="form.email" /> </el-form-item
                 ></el-col>
-                <el-col :span="6" :xs="24" />
-                <el-col :span="6" :xs="24">
+                <el-col :span="12" :xs="24">
                   <el-form-item label="Phone Number" required>
                     <el-input v-model="form.phone" /> </el-form-item></el-col
               ></el-row>
@@ -170,7 +165,7 @@
                 <el-input v-model="form.comment" type="textarea" :rows="5" />
               </el-form-item>
               <el-form-item>
-                <button class="btn-a font-size18 fontf7" type="submit" @click="sendEmail">Submit</button>
+                <button class="btn-a font-size18 fontf7" type="submit">Submit</button>
               </el-form-item>
             </el-form>
           </el-col>
@@ -184,6 +179,7 @@
 import { ref, reactive } from "vue";
 import { releases, events } from "./data/Index";
 import { handleViteImages } from "@/utils";
+import emailjs from '@emailjs/browser';
 
 const form = reactive({
   laboratory: [],
@@ -199,21 +195,19 @@ const changeCdmo = (e) => {
   form.inquired_item = arr.join("\n");
 };
 
-import emailjs from '@emailjs/browser';
-const data = {
-  to_name: "qxqxqxa",
+const sendEmail = () => {
+  const data = {
   from_name: "obio-tech.com",
-  user: form.first_name + ' ' + form.lastname,
+  user: form.first_name ? form.first_name + ' ' + form.lastname : "",
   email: form.email,
   company: form.company,
   phone: form.phone,
-  title: form.title,
-  inquired_item: form.inquired_item,
-  comment: form.comment
+  title: form.title || "",
+  interest: form.inquired_item || "",
+  comment: form.comment,
+  from_email: "noreply@obio-tech.com"
 }
-const sendEmail = () => {
-  console.log(form.comment);
-      emailjs.send('service_ume7cyy', 'template_6mmf2na', form, 'h7iu63GvkU7foPBMq')
+  emailjs.send('service_zf02rs5', 'template_6mmf2na', data, 'h7iu63GvkU7foPBMq')
     .then(response => {
       alert('Inquiry submitted successfully!');
     })

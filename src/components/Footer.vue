@@ -139,7 +139,7 @@
         <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/insight/inquiry">Contact</router-link>
+              <router-link to="/contact">Contact</router-link>
             </dt>
           </dl>
         </div>
