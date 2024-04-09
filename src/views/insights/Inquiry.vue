@@ -120,28 +120,29 @@
         <el-row>
           <el-col :span="24" :xs="24">
             <el-form
-              ref="formRef"
+              ref="ruleFormRef"
               :model="form"
               label-width="200px"
-              class="form-contact-main fontf2"
+              class="form-contact-main fontf2 font-size18"
               :label-position="'top'"
-              @submit.prevent="sendEmail"
+              :rules="rules"
               status-icon
             >
+              <!-- @submit.prevent="sendEmail" -->
               <el-row :gutter="20">
                 <el-col :span="12" :xs="24">
-                  <el-form-item label="First Name" required>
+                  <el-form-item label="First Name" required prop="first_name">
                     <el-input v-model="form.first_name" />
                   </el-form-item>
                 </el-col>
                 <el-col :span="12" :xs="24">
-                  <el-form-item label="Last Name" required>
+                  <el-form-item label="Last Name" required prop="last_name">
                     <el-input v-model="form.last_name" /> </el-form-item
                 ></el-col>
               </el-row>
               <el-row :gutter="20">
                 <el-col :span="12" :xs="24">
-                  <el-form-item label="Company" required>
+                  <el-form-item label="Company" required prop="company">
                     <el-input v-model="form.company" /> </el-form-item
                 ></el-col>
                 <el-col :span="12" :xs="24">
@@ -151,21 +152,33 @@
               </el-row>
               <el-row :gutter="20">
                 <el-col :span="12" :xs="24">
-                  <el-form-item label="Email" required>
+                  <el-form-item label="Email" required prop="email">
                     <el-input v-model="form.email" /> </el-form-item
                 ></el-col>
                 <el-col :span="12" :xs="24">
-                  <el-form-item label="Phone Number" required>
+                  <el-form-item label="Phone Number" required prop="phone">
                     <el-input v-model="form.phone" /> </el-form-item></el-col
               ></el-row>
-              <el-form-item label="Inquired Items" prop="content">
-                <el-input v-model="form.inquired_item" type="textarea" :rows="5" readonly />
+              <el-form-item label="Inquired Items">
+                <el-input
+                  v-model="form.inquired_item"
+                  type="textarea"
+                  :rows="5"
+                  readonly
+                />
               </el-form-item>
-              <el-form-item label="Comments" prop="content">
+              <el-form-item label="Comments">
                 <el-input v-model="form.comment" type="textarea" :rows="5" />
               </el-form-item>
               <el-form-item>
-                <button class="btn-a font-size18 fontf7" type="submit">Submit</button>
+                <el-button
+                  :loading="loading"
+                  round
+                  class="btn-a font-size18 fontf7"
+                  @click.prevent="sendEmail(ruleFormRef)"
+                >
+                  Submit
+                </el-button>
               </el-form-item>
             </el-form>
           </el-col>
@@ -179,12 +192,108 @@
 import { ref, reactive } from "vue";
 import { releases, events } from "./data/Index";
 import { handleViteImages } from "@/utils";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
+import type { FormInstance, FormRules } from "element-plus";
 
+let loading = ref(false);
+const ruleFormRef = ref<FormInstance>();
 const form = reactive({
   laboratory: [],
   cdmo: [],
+  first_name: "",
+  last_name: "",
+  company: "",
+  title: "",
+  email: "",
+  phone: "",
+  inquired_item: "",
   comment: "",
+  // checked: false,
+});
+interface RuleForm {
+  laboratory: string[];
+  cdmo: string[];
+  first_name: string;
+  last_name: string;
+  title: string;
+  company: string;
+  email: string;
+  phone: boolean;
+  inquired_item: string;
+  comment: string;
+  // verify: string;
+  // checked: boolean;
+}
+const validatePhone = (rule, value, callback) => {
+  if (!value) {
+    callback();
+  } else {
+    let regPone = null;
+    let mobile = /^1(3|4|5|6|7|8|9)\d{9}$/;
+    let tel = /^(0\d{2,3}-){0,1}\d{7,8}$/; //座机
+    if (value.charAt(0) == 0) {
+      regPone = tel;
+    } else {
+      regPone = mobile;
+    }
+    if (!regPone.test(value)) {
+      callback(new Error("Please input correct phone number address！"));
+    }
+    callback();
+  }
+};
+const rules = reactive<FormRules<RuleForm>>({
+  first_name: [
+    {
+      required: true,
+      message: "Please input First Name",
+      trigger: "blur",
+    },
+  ],
+  last_name: [
+    {
+      required: true,
+      message: "Please input Last Name",
+      trigger: "blur",
+    },
+  ],
+  company: [
+    {
+      required: true,
+      message: "Please input Company",
+      trigger: "blur",
+    },
+  ],
+  email: [
+    { required: true, message: "Please input Email", trigger: "blur" },
+    {
+      type: "email",
+      message: "Please input correct email address",
+      trigger: ["blur", "change"],
+    },
+  ],
+  phone: [
+    {
+      required: true,
+      message: "Please input Phone Number",
+      trigger: "blur",
+    },
+    { validator: validatePhone, trigger: "blur" },
+  ],
+  // inquired_item: [
+  //   {
+  //     required: true,
+  //     message: "Please input  Inquired Items",
+  //     trigger: "blur",
+  //   },
+  // ],
+  // comment: [
+  //   {
+  //     required: true,
+  //     message: "Please input  Comments",
+  //     trigger: "blur",
+  //   },
+  // ],
 });
 const changeLaboratory = (e) => {
   const arr = [...form.laboratory, ...form.cdmo];
@@ -195,26 +304,45 @@ const changeCdmo = (e) => {
   form.inquired_item = arr.join("\n");
 };
 
-const sendEmail = () => {
+/**
+ * 提交表单
+ * @param formEl
+ */
+const sendEmail = async (formEl: FormInstance | undefined) => {
+  if (!formEl) return;
+  loading.value = true;
   const data = {
-  from_name: "obio-tech.com",
-  user: form.first_name ? form.first_name + ' ' + form.lastname : "",
-  email: form.email,
-  company: form.company,
-  phone: form.phone,
-  title: form.title || "",
-  interest: form.inquired_item || "",
-  comment: form.comment,
-  from_email: "noreply@obio-tech.com"
-}
-  emailjs.send('service_zf02rs5', 'template_6mmf2na', data, 'h7iu63GvkU7foPBMq')
-    .then(response => {
-      alert('Inquiry submitted successfully!');
-    })
-    .catch(error => {
-      console.error('Error sending email:', error);
-      alert('An error occurred while submitting the inquiry. Please email us at obio.us@obiosh.com.');
-    });
+    from_name: "obio-tech.com",
+    user: form.first_name ? form.first_name + " " + form.last_name : "",
+    email: form.email,
+    company: form.company,
+    phone: form.phone,
+    title: form.title || "",
+    interest: form.inquired_item || "",
+    comment: form.comment,
+    from_email: "noreply@obio-tech.com",
+  };
+
+  await formEl.validate((valid, fields) => {
+    if (valid) {
+      emailjs
+        .send("service_zf02rs5", "template_6mmf2na", data, "h7iu63GvkU7foPBMq")
+        .then((response) => {
+          loading.value = false;
+          alert("Inquiry submitted successfully!");
+        })
+        .catch((error) => {
+          loading.value = false;
+          console.error("Error sending email:", error);
+          alert(
+            "An error occurred while submitting the inquiry. Please email us at obio.us@obiosh.com."
+          );
+        });
+    } else {
+      loading.value = false;
+      console.log("error submit!", fields);
+    }
+  });
 };
 </script>
 
@@ -240,13 +368,20 @@ const sendEmail = () => {
 // }
 .check-txt :deep(.el-checkbox__label) {
   color: #747475;
+  font-family: "puhuiti-2-45";
+  font-size: inherit !important;
   // font-size: 18px;
 }
 .form-contact-main :deep(.el-form-item__label) {
   color: #747475;
+  font-family: "puhuiti-2-45";
+  font-size: inherit !important;
 }
 .check-txt :deep(.el-checkbox__input.is-checked .el-checkbox__inner) {
   background-color: #1f757b;
   border-color: #1f757b;
+}
+.btn-a {
+  color: #fff;
 }
 </style>

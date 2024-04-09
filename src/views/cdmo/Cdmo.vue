@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-01 15:48:25
+ * @LastEditTime: 2024-04-08 15:11:53
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -208,8 +208,39 @@
         <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
           CDMO Service
         </h1>
+        <el-row class="cro--service row" :gutter="20">
+            <el-col
+              :xs="24"
+              :span="6"
+              class="cro--service-i"
+              v-for="(item, index) in croList"
+              :key="index"
+            >
+              <a class="block tans">
+                <div class="animate-imgxx uof img">
+                  <img :src="item.imgUrl" alt="SPIRO Site" />
+                </div>
+              </a>
+              <h4 class="font-size24 fontf7 iti">
+                {{ item.title }}
+              </h4>
+              <ul>
+                <li
+                  style="padding: 5px 0"
+                  v-for="(i, idx) in item.textArr"
+                  :key="idx"
+                  class="font-size18 textColor"
+                >
+                  • {{ i }}
+                </li>
+              </ul>
+              <router-link :to="item.path" class="font-size18 fontf7 btn-a mt-3"
+                >Read More</router-link
+              >
+            </el-col>
+          </el-row>
       </el-col>
-      <div
+      <!-- <div
         class="cro-list-item row"
         v-for="(item, index) in croList"
         :key="index"
@@ -258,7 +289,7 @@
             >
           </el-row>
         </el-col>
-      </div>
+      </div> -->
     </section>
     <section id="innovation">
       <div class="in-about-wrap innovation-box">

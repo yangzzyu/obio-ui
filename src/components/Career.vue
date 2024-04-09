@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-01 14:37:33
+ * @LastEditTime: 2024-04-09 14:39:16
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -23,12 +23,12 @@
       <div class="wysiwyg--content colour-white mb-3">
         <p class="fontf4 textColor">
           <b>Mission:</b> Enable gene therapy for a better lives<br />
-          <b>Vision:</b> Providing client-centered and high-quality service as our
-          commitment, we strive to become a world-leading gene and cell therapy
-          CXO group
+          <b>Vision:</b> Providing client-centered and high-quality service as
+          our commitment, we strive to become a world-leading gene and cell
+          therapy CXO group
           <br />
-          <b>Value:</b> Customer first, efficient execution, pursuit of excellence,
-          innovation breakthroughs, integrity and pragmatism
+          <b>Value:</b> Customer first, efficient execution, pursuit of
+          excellence, innovation breakthroughs, integrity and pragmatism
         </p>
       </div>
       <el-row class="news--slider row" :gutter="10">
@@ -37,7 +37,10 @@
             to="/careers/life"
             class="block tans service--box_link bg-pinkbluelfr career-a"
           >
-            <el-row
+            <h1 class="font-bold mb-3 font-size30 txt-bold fontf7">
+              Life at OBIO
+            </h1>
+            <!-- <el-row
               :gutter="20"
               class="service--box align-items-start career-i"
             >
@@ -59,7 +62,7 @@
                   Life at OBIO
                 </h1></el-col
               >
-            </el-row>
+            </el-row> -->
           </router-link>
         </el-col>
         <el-col :xs="24" :span="12" class="news--slider-i">
@@ -67,7 +70,10 @@
             to="/careers/job"
             class="block tans service--box_link bg-pinkbluelfr career-a"
           >
-            <el-row
+            <h1 class="font-bold mb-3 font-size30 txt-bold fontf7">
+              Job Opening
+            </h1>
+            <!-- <el-row
               :gutter="20"
               class="service--box align-items-start career-i"
             >
@@ -89,7 +95,7 @@
                   Job Opening
                 </h1></el-col
               >
-            </el-row>
+            </el-row> -->
           </router-link>
         </el-col>
       </el-row>
@@ -102,4 +108,17 @@ import { ref } from "vue";
 import { handleViteImages } from "@/utils";
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.career-a {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.news--slider-i:nth-child(1) .career-a {
+  background: url(@/assets/icons/career_bg1.png) no-repeat center/cover;
+}
+.news--slider-i:nth-child(2) .career-a {
+  background: url(@/assets/icons/career_bg2.png) no-repeat center/cover;
+}
+</style>

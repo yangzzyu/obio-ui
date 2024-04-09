@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-01 16:22:55
+ * @LastEditTime: 2024-04-08 16:40:45
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -74,6 +74,7 @@
             aria-disabled="true"
           ></div>
           <Swiper
+            ref="swiperNew"
             :modules="[Autoplay, Navigation, Scrollbar]"
             :initialSlide="100"
             slides-per-view="auto"
@@ -82,6 +83,10 @@
             :navigation="navigation"
             slideVisibleClass="my-slide-visible"
             class="swiper-container"
+            :autoplay="{ delay: 1000, disableOnInteraction: true }"
+            @mouseenter="enter"
+            @mouseleave="leave"
+            @swiper="onSwiper"
           >
             <swiper-slide
               v-for="(item, index) in historyList"
@@ -425,7 +430,7 @@ import {
   Scrollbar,
   A11y,
 } from "swiper/modules";
-import { onMounted, onUnmounted, ref, reactive } from "vue";
+import { onMounted, onUnmounted, ref, reactive, toRaw } from "vue";
 import { handleViteImages } from "@/utils";
 
 const router = useRouter();
@@ -433,6 +438,22 @@ const navigation = ref({
   nextEl: "#historyNext",
   prevEl: "#historyPrev",
 });
+
+let swiperNew: any;
+
+//鼠标移入
+const enter = () => {
+  swiperNew.autoplay.stop();
+};
+//鼠标移出
+const leave = () => {
+  swiperNew.autoplay.start();
+};
+const onSwiper = (swiper: any) => {
+  // console.log(swiper);
+
+  swiperNew = toRaw(swiper); //拿到swiper对象再转换为非响应式
+};
 onMounted(() => {});
 </script>
 

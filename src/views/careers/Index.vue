@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-01 15:37:43
+ * @LastEditTime: 2024-04-09 14:38:45
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -25,8 +25,8 @@
         <br />
         <p class="font-size30 textColor" style="margin-bottom: 20px">
           As OBiO Tech swiftly evolves, every OBiOers are immersed in an
-          environment fostering "enhanced capabilities, purposeful work, and
-          a fulfilling life."
+          environment fostering "enhanced capabilities, purposeful work, and a
+          fulfilling life."
         </p>
       </el-col>
     </section>
@@ -63,7 +63,7 @@
       </div>
     </section>
     <!-- <Events /> -->
-    <section>
+    <section class="mt-4">
       <el-col
         :xs="22"
         :sm="20"
@@ -72,37 +72,39 @@
         :xl="22"
         style="margin: auto"
         class="container"
-        ><el-row class="news--slider row" :gutter="10">
+      >
+        <el-row class="news--slider row" :gutter="10">
           <el-col :xs="24" :span="12" class="news--slider-i">
             <router-link
               to="/careers/life"
               class="block tans service--box_link bg-pinkbluelfr career-a"
             >
-              <el-row
-                :gutter="20"
-                class="service--box align-items-start career-i"
+              <h1 class="font-bold mb-3 font-size30 txt-bold fontf7">
+                Life at OBIO
+              </h1>
+              <!-- <el-row
+              :gutter="20"
+              class="service--box align-items-start career-i"
+            >
+              <el-col :span="8" class="career-i"
+                ><div class="service--box_icon mb-3 min-width-70">
+                  <img
+                    class="icon--white"
+                    :src="handleViteImages('career_act1.png')"
+                    alt="GMP Vector Manufacturing icon"
+                  />
+                  <img
+                    class="icon--colour"
+                    :src="handleViteImages('career1.png')"
+                    alt="GMP Vector Manufacturing icon"
+                  /></div
+              ></el-col>
+              <el-col :span="16" class="career-i">
+                <h1 class="font-bold p-large mb-3 font-size30 txt-bold fontf7">
+                  Life at OBIO
+                </h1></el-col
               >
-                <el-col :span="8" class="career-i"
-                  ><div class="service--box_icon mb-3 min-width-70">
-                    <img
-                      class="icon--white"
-                      :src="handleViteImages('career_act1.png')"
-                      alt="GMP Vector Manufacturing icon"
-                    />
-                    <img
-                      class="icon--colour"
-                      :src="handleViteImages('career1.png')"
-                      alt="GMP Vector Manufacturing icon"
-                    /></div
-                ></el-col>
-                <el-col :span="16" class="career-i">
-                  <h1
-                    class="font-bold p-large mb-3 font-size30 txt-bold fontf7"
-                  >
-                    Life in OBIO
-                  </h1></el-col
-                >
-              </el-row>
+            </el-row> -->
             </router-link>
           </el-col>
           <el-col :xs="24" :span="12" class="news--slider-i">
@@ -110,31 +112,32 @@
               to="/careers/job"
               class="block tans service--box_link bg-pinkbluelfr career-a"
             >
-              <el-row
-                :gutter="20"
-                class="service--box align-items-start career-i"
+              <h1 class="font-bold mb-3 font-size30 txt-bold fontf7">
+                Job Opening
+              </h1>
+              <!-- <el-row
+              :gutter="20"
+              class="service--box align-items-start career-i"
+            >
+              <el-col :span="8" class="career-i"
+                ><div class="service--box_icon mb-3 min-width-70">
+                  <img
+                    class="icon--white"
+                    :src="handleViteImages('career_act2.png')"
+                    alt="GMP Vector Manufacturing icon"
+                  />
+                  <img
+                    class="icon--colour"
+                    :src="handleViteImages('career2.png')"
+                    alt="GMP Vector Manufacturing icon"
+                  /></div
+              ></el-col>
+              <el-col :span="16" class="career-i">
+                <h1 class="font-bold p-large mb-3 font-size30 txt-bold fontf7">
+                  Job Opening
+                </h1></el-col
               >
-                <el-col :span="8" class="career-i"
-                  ><div class="service--box_icon mb-3 min-width-70">
-                    <img
-                      class="icon--white"
-                      :src="handleViteImages('career_act2.png')"
-                      alt="GMP Vector Manufacturing icon"
-                    />
-                    <img
-                      class="icon--colour"
-                      :src="handleViteImages('career2.png')"
-                      alt="GMP Vector Manufacturing icon"
-                    /></div
-                ></el-col>
-                <el-col :span="16" class="career-i">
-                  <h1
-                    class="font-bold p-large mb-3 font-size30 txt-bold fontf7"
-                  >
-                    Job Opening
-                  </h1></el-col
-                >
-              </el-row>
+            </el-row> -->
             </router-link>
           </el-col>
         </el-row></el-col
@@ -236,5 +239,17 @@ const Labora = ref(<any>{});
 .culture-box {
   margin-top: -100px;
   position: relative;
+}
+.career-a {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.news--slider-i:nth-child(1) .career-a {
+  background: url(@/assets/icons/career_bg1.png) no-repeat center/cover;
+}
+.news--slider-i:nth-child(2) .career-a {
+  background: url(@/assets/icons/career_bg2.png) no-repeat center/cover;
 }
 </style>

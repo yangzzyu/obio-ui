@@ -142,7 +142,7 @@
                   Careers
                 </div>
               </template>
-              <el-menu-item index="/careers/mission"> Mission</el-menu-item>
+              <el-menu-item index="/about/mission"> Mission</el-menu-item>
               <el-menu-item index="/careers/life"> Life at OBIO </el-menu-item>
               <el-menu-item index="/careers/job"> Job Opening </el-menu-item>
             </el-sub-menu>
@@ -263,7 +263,7 @@
           <template #title>
             <div @click="router.push('/careers')" class="menu-t1">Careers</div>
           </template>
-          <el-menu-item index="/careers/mission"> Mission</el-menu-item>
+          <el-menu-item index="/about/mission"> Mission</el-menu-item>
           <el-menu-item index="/careers/life"> Life at OBIO </el-menu-item>
           <el-menu-item index="/careers/job"> Job Opening </el-menu-item>
         </el-sub-menu>
