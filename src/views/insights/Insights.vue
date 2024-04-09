@@ -164,7 +164,7 @@
         <el-row>
           <el-col :span="24" :xs="24">
             <el-form
-              ref="formRef"
+              ref="ruleFormRef"
               :model="form"
               label-width="200px"
               class="form-contact-main fontf2"
@@ -174,30 +174,34 @@
             >
               <el-row :gutter="20">
                 <el-col :span="4" :xs="24">
-                  <el-form-item label="First Name" required>
-                    <el-input v-model="form.fname" />
+                  <el-form-item label="First Name" required prop="first_name">
+                    <el-input v-model="form.first_name" />
                   </el-form-item>
                 </el-col>
                 <el-col :span="5" :xs="24">
-                  <el-form-item label="Last Name" required>
-                    <el-input v-model="form.lname" /> </el-form-item
+                  <el-form-item label="Last Name" required prop="last_name">
+                    <el-input v-model="form.last_name" /> </el-form-item
                 ></el-col>
                 <el-col :span="5" :xs="24">
-                  <el-form-item label="Company" required>
+                  <el-form-item label="Company" required prop="company">
                     <el-input v-model="form.company" /> </el-form-item
                 ></el-col>
                 <el-col :span="5" :xs="24">
-                  <el-form-item label="Email" required>
+                  <el-form-item label="Email" required prop="email">
                     <el-input v-model="form.email" /> </el-form-item
                 ></el-col>
                 <el-col :span="5" :xs="24">
-                  <el-form-item label="Phone Number" required>
+                  <el-form-item label="Phone Number" required prop="phone">
                     <el-input v-model="form.phone" /> </el-form-item></el-col
               ></el-row>
-              <el-form-item label="Comments" prop="content">
-                <el-input v-model="form.comment" type="textarea" :rows="10" />
+              <el-form-item label="Comments">
+                <el-input
+                  v-model="form.inquired_item"
+                  type="textarea"
+                  :rows="10"
+                />
               </el-form-item>
-              <el-form-item label="Security Code" required>
+              <el-form-item label="Security Code" required prop="verify">
                 <el-col :span="11">
                   <el-input v-model="form.verify" />
                 </el-col>
@@ -222,7 +226,8 @@
                   />
                   <div class="checks_txt">
                     By submitting this form I agree that OBiO may process my
-                    data in the manner described in OBiO’s<a
+                    data in the manner described in OBiO’s
+                    <a
                       xhref="/cn/home/ys/cid/861"
                       target="_blank"
                       style="color: #25b096"
@@ -237,7 +242,14 @@
                 </div>
               </el-form-item>
               <div class="fontf3 font-size14">
-                <a class="btn-a font-size18 fontf7 bg-pinkbluelfr"> Submit</a>
+                <el-button
+                  :loading="loading"
+                  round
+                  class="btn-a font-size18 fontf7"
+                  @click.prevent="sendEmail(ruleFormRef)"
+                >
+                  Submit
+                </el-button>
               </div>
             </el-form>
           </el-col>
@@ -252,41 +264,30 @@ import { ref, reactive } from "vue";
 import { releases, events } from "./data/Index";
 import Events from "@/components/Events.vue";
 import { handleViteImages } from "@/utils";
-
-import {
-  Autoplay,
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-} from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/vue";
-// 引入swiper样式（按需导入）
-import "swiper/css";
-import "swiper/css/pagination"; // 轮播图底面的小圆点
-import "swiper/css/navigation"; // 轮播图两边的左右箭头
-import "swiper/css/scrollbar"; // 轮播图的滚动条
+import emailjs from "@emailjs/browser";
 import type { FormInstance, FormRules } from "element-plus";
 
+let loading = ref(false);
 const form = reactive({
   laboratory: [],
   cdmo: [],
-  comment: "",
-  fname: "",
-  lname: "",
+  first_name: "",
+  last_name: "",
   company: "",
+  title: "",
   email: "",
   phone: "",
+  inquired_item: "",
   verify: "",
   checked: false,
 });
 const changeLaboratory = (e) => {
   const arr = [...form.laboratory, ...form.cdmo];
-  form.comment = arr.join("\n");
+  form.inquired_item = arr.join("\n");
 };
 const changeCdmo = (e) => {
   const arr = [...form.laboratory, ...form.cdmo];
-  form.comment = arr.join("\n");
+  form.inquired_item = arr.join("\n");
 };
 const releasesList = ref([]);
 releasesList.value = [
@@ -327,26 +328,26 @@ const rules = reactive<FormRules<RuleForm>>({
   fname: [
     {
       required: true,
-      message: "Please input Activity First Name",
+      message: "Please input First Name",
       trigger: "blur",
     },
   ],
   lname: [
     {
       required: true,
-      message: "Please input Activity Last Name",
+      message: "Please input Last Name",
       trigger: "blur",
     },
   ],
   company: [
     {
       required: true,
-      message: "Please input Activity Company",
+      message: "Please input Company",
       trigger: "blur",
     },
   ],
   email: [
-    { required: true, message: "Please input Activity Email", trigger: "blur" },
+    { required: true, message: "Please input Email", trigger: "blur" },
     {
       type: "email",
       message: "Please input correct email address",
@@ -356,7 +357,7 @@ const rules = reactive<FormRules<RuleForm>>({
   phone: [
     {
       required: true,
-      message: "Please input Activity Phone Number",
+      message: "Please input Phone Number",
       trigger: "blur",
     },
     { validator: validatePhone, trigger: "blur" },
@@ -364,18 +365,58 @@ const rules = reactive<FormRules<RuleForm>>({
   comment: [
     {
       required: true,
-      message: "Please input Activity Comments",
+      message: "Please input Comments",
       trigger: "blur",
     },
   ],
   verify: [
     {
       required: true,
-      message: "Please input Activity Security Code",
+      message: "Please input Security Code",
       trigger: "blur",
     },
   ],
 });
+const ruleFormRef = ref<FormInstance>();
+/**
+ * 提交表单
+ * @param formEl
+ */
+const sendEmail = async (formEl: FormInstance | undefined) => {
+  if (!formEl) return;
+  loading.value = true;
+  const data = {
+    from_name: "obio-tech.com",
+    user: form.first_name ? form.first_name + " " + form.last_name : "",
+    email: form.email,
+    company: form.company,
+    phone: form.phone,
+    title: form.title || "",
+    interest: form.inquired_item || "",
+    from_email: "noreply@obio-tech.com",
+  };
+
+  await formEl.validate((valid, fields) => {
+    if (valid) {
+      emailjs
+        .send("service_zf02rs5", "template_6mmf2na", data, "h7iu63GvkU7foPBMq")
+        .then((response) => {
+          loading.value = false;
+          alert("Inquiry submitted successfully!");
+        })
+        .catch((error) => {
+          loading.value = false;
+          console.error("Error sending email:", error);
+          alert(
+            "An error occurred while submitting the inquiry. Please email us at obio.us@obiosh.com."
+          );
+        });
+    } else {
+      loading.value = false;
+      console.log("error submit!", fields);
+    }
+  });
+};
 </script>
 
 <style lang="scss" scoped>
@@ -398,6 +439,8 @@ const rules = reactive<FormRules<RuleForm>>({
 }
 .check-txt :deep(.el-checkbox__label) {
   color: #747475;
+  font-family: "puhuiti-2-45";
+  font-size: inherit !important;
   // font-size: 18px;
 }
 .check-txt :deep(.el-checkbox__input.is-checked .el-checkbox__inner) {
@@ -406,5 +449,10 @@ const rules = reactive<FormRules<RuleForm>>({
 }
 .form-contact-main :deep(.el-form-item__label) {
   color: #747475;
+  font-family: "puhuiti-2-45";
+  font-size: inherit !important;
+}
+.btn-a {
+  color: #fff;
 }
 </style>

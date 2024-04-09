@@ -116,7 +116,7 @@
               <router-link to="/careers">Our Culture</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/careers/mission">Mission</router-link>
+              <router-link to="/about/mission">Mission</router-link>
             </dd>
             <dd class="font-size14">
               <router-link to="/careers/life">Life at OBIO</router-link>
