@@ -56,7 +56,7 @@
               ></el-col>
               <el-col :span="16" class="career-i">
                 <h1 class="font-bold p-large mb-3 font-size30 txt-bold fontf7">
-                  Life in OBIO
+                  Life at OBIO
                 </h1></el-col
               >
             </el-row>

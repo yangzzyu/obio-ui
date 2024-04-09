@@ -126,7 +126,7 @@
                   </div>
                 </div>
                 <div class="font-size18 fontf7 iti">
-                  Lin-Gang Free-Trade Zone, Shanghai, China
+                  Lin-Gang Free-Trade Zone
                 </div>
                 <div class="font-size30 fontf7 iti">OBIO Intelli-M</div>
                 <p class="font-size18 textColor txt-bold">
@@ -151,7 +151,7 @@
                   </div>
                 </div>
                 <div class="font-size18 fontf7 iti">
-                  International Medical Park, Shanghai, China
+                  International Medical Park
                 </div>
                 <div class="font-size30 fontf7 iti">SPIRO Site</div>
 
@@ -175,7 +175,7 @@
                   </div>
                 </div>
                 <div class="font-size18 fontf7 iti">
-                  International Medical Park, Shanghai, China
+                  International Medical Park
                 </div>
                 <div class="font-size30 fontf7 iti">PINE Site</div>
                 <p class="font-size18 textColor txt-bold">
@@ -311,7 +311,7 @@
               <el-row class="row" :gutter="10">
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
                   <div class="manufacturing-list">
-                    <div class="content">
+                    <div class="content innovation-content">
                       <img
                         :src="handleViteImages('innovation1.png')"
                         alt="SPIRO Site"
@@ -331,7 +331,7 @@
                 </el-col>
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
                   <div class="manufacturing-list">
-                    <div class="content">
+                    <div class="content innovation-content">
                       <img
                         :src="handleViteImages('innovation2.png')"
                         alt="PINE Site"
@@ -351,7 +351,7 @@
                 </el-col>
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
                   <div class="manufacturing-list">
-                    <div class="content">
+                    <div class="content innovation-content">
                       <img
                         :src="handleViteImages('innovation3.png')"
                         alt="OBiO Intelli-M"

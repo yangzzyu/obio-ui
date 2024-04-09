@@ -1,5 +1,5 @@
 <template>
-  <div class="Insights-wrap">
+  <div class="in-contact-form">
     <section id="Inquiry" class="productions-list">
       <el-col
         :xs="22"
@@ -10,13 +10,12 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Inquiry</h1>
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3">Inquiry</h1>
         <el-row :gutter="50" class="cdmo-top">
           <el-col :xs="24" :span="12">
             <h3 class="title-color font-size18 txt-bold fontf7">
               Laboratory Sciences
             </h3>
-
             <el-checkbox-group
               v-model="form.laboratory"
               @change="changeLaboratory"
@@ -126,76 +125,48 @@
               label-width="200px"
               class="form-contact-main fontf2"
               :label-position="'top'"
-              :rules="rules"
+              @submit.prevent="sendEmail"
               status-icon
             >
               <el-row :gutter="20">
-                <el-col :span="4" :xs="24">
+                <el-col :span="12" :xs="24">
                   <el-form-item label="First Name" required>
-                    <el-input v-model="form.fname" />
+                    <el-input v-model="form.first_name" />
                   </el-form-item>
                 </el-col>
-                <el-col :span="5" :xs="24">
+                <el-col :span="12" :xs="24">
                   <el-form-item label="Last Name" required>
-                    <el-input v-model="form.lname" /> </el-form-item
+                    <el-input v-model="form.last_name" /> </el-form-item
                 ></el-col>
-                <el-col :span="5" :xs="24">
+              </el-row>
+              <el-row :gutter="20">
+                <el-col :span="12" :xs="24">
                   <el-form-item label="Company" required>
                     <el-input v-model="form.company" /> </el-form-item
                 ></el-col>
-                <el-col :span="5" :xs="24">
+                <el-col :span="12" :xs="24">
+                  <el-form-item label="Title">
+                    <el-input v-model="form.title" /> </el-form-item
+                ></el-col>
+              </el-row>
+              <el-row :gutter="20">
+                <el-col :span="12" :xs="24">
                   <el-form-item label="Email" required>
                     <el-input v-model="form.email" /> </el-form-item
                 ></el-col>
-                <el-col :span="5" :xs="24">
+                <el-col :span="12" :xs="24">
                   <el-form-item label="Phone Number" required>
                     <el-input v-model="form.phone" /> </el-form-item></el-col
               ></el-row>
+              <el-form-item label="Inquired Items" prop="content">
+                <el-input v-model="form.inquired_item" type="textarea" :rows="5" readonly />
+              </el-form-item>
               <el-form-item label="Comments" prop="content">
-                <el-input v-model="form.comment" type="textarea" :rows="10" />
+                <el-input v-model="form.comment" type="textarea" :rows="5" />
               </el-form-item>
-              <el-form-item label="Security Code" required>
-                <el-col :span="11">
-                  <el-input v-model="form.verify" />
-                </el-col>
-                <el-col :span="11">
-                  <div class="put ub-f1" style="margin-left: 12px">
-                    <img
-                      class="verifyImg"
-                      id="captcha"
-                      :src="handleViteImages('captcha.png')"
-                      alt="verifyImg"
-                      style="width: 150px; cursor: pointer; height: 38px"
-                    />
-                  </div>
-                </el-col>
+              <el-form-item>
+                <button class="btn-a font-size18 fontf7" type="submit">Submit</button>
               </el-form-item>
-              <el-form-item label="I AGREE" required>
-                <div class="checks_text">
-                  <el-checkbox
-                    v-model="form.checked"
-                    size="large"
-                    class="checks_inpt"
-                  />
-                  <div class="checks_txt">
-                    By submitting this form I agree that OBiO may process my
-                    data in the manner described in OBiO’s<a
-                      xhref="/cn/home/ys/cid/861"
-                      target="_blank"
-                      style="color: #25b096"
-                      >Privacy Policy</a
-                    >
-                  </div>
-                </div>
-              </el-form-item>
-              <el-form-item label="">
-                <div class="lab fontf3 font-size18">
-                  We won’t share your information.
-                </div>
-              </el-form-item>
-              <div class="fontf3 font-size14">
-                <a class="btn-a font-size18 fontf7 bg-pinkbluelfr"> Submit</a>
-              </div>
             </el-form>
           </el-col>
         </el-row>
@@ -208,7 +179,8 @@
 import { ref, reactive } from "vue";
 import { releases, events } from "./data/Index";
 import { handleViteImages } from "@/utils";
-import type { FormInstance, FormRules } from "element-plus";
+import emailjs from '@emailjs/browser';
+
 const form = reactive({
   laboratory: [],
   cdmo: [],
@@ -223,96 +195,34 @@ const form = reactive({
 });
 const changeLaboratory = (e) => {
   const arr = [...form.laboratory, ...form.cdmo];
-  form.comment = arr.join("\n");
+  form.inquired_item = arr.join("\n");
 };
 const changeCdmo = (e) => {
   const arr = [...form.laboratory, ...form.cdmo];
-  form.comment = arr.join("\n");
+  form.inquired_item = arr.join("\n");
 };
-// 正则表达式用于验证手机号码或座机号码
-const validatePhone = (rule, value, callback) => {
-  if (!value) {
-    callback();
-  } else {
-    let regPone = null;
-    let mobile = /^1(3|4|5|6|7|8|9)\d{9}$/;
-    let tel = /^(0\d{2,3}-){0,1}\d{7,8}$/; //座机
-    if (value.charAt(0) == 0) {
-      regPone = tel;
-    } else {
-      regPone = mobile;
-    }
-    if (!regPone.test(value)) {
-      callback(new Error("Please input correct phone number address！"));
-    }
-    callback();
-  }
-};
-interface RuleForm {
-  laboratory: string[];
-  cdmo: string[];
-  comment: string;
-  fname: string;
-  lname: string;
-  company: string;
-  email: string;
-  phone: boolean;
-  verify: string;
-  checked: boolean;
+
+const sendEmail = () => {
+  const data = {
+  from_name: "obio-tech.com",
+  user: form.first_name ? form.first_name + ' ' + form.lastname : "",
+  email: form.email,
+  company: form.company,
+  phone: form.phone,
+  title: form.title || "",
+  interest: form.inquired_item || "",
+  comment: form.comment,
+  from_email: "noreply@obio-tech.com"
 }
-const rules = reactive<FormRules<RuleForm>>({
-  fname: [
-    {
-      required: true,
-      message: "Please input Activity First Name",
-      trigger: "blur",
-    },
-  ],
-  lname: [
-    {
-      required: true,
-      message: "Please input Activity Last Name",
-      trigger: "blur",
-    },
-  ],
-  company: [
-    {
-      required: true,
-      message: "Please input Activity Company",
-      trigger: "blur",
-    },
-  ],
-  email: [
-    { required: true, message: "Please input Activity Email", trigger: "blur" },
-    {
-      type: "email",
-      message: "Please input correct email address",
-      trigger: ["blur", "change"],
-    },
-  ],
-  phone: [
-    {
-      required: true,
-      message: "Please input Activity Phone Number",
-      trigger: "blur",
-    },
-    { validator: validatePhone, trigger: "blur" },
-  ],
-  comment: [
-    {
-      required: true,
-      message: "Please input Activity Comments",
-      trigger: "blur",
-    },
-  ],
-  verify: [
-    {
-      required: true,
-      message: "Please input Activity Security Code",
-      trigger: "blur",
-    },
-  ],
-});
+  emailjs.send('service_zf02rs5', 'template_6mmf2na', data, 'h7iu63GvkU7foPBMq')
+    .then(response => {
+      alert('Inquiry submitted successfully!');
+    })
+    .catch(error => {
+      console.error('Error sending email:', error);
+      alert('An error occurred while submitting the inquiry. Please email us at obio.us@obiosh.com.');
+    });
+};
 </script>
 
 <style lang="scss" scoped>
@@ -333,16 +243,16 @@ const rules = reactive<FormRules<RuleForm>>({
     justify-content: center;
   }
 }
-.el-checkbox__label {
-}
-.check-txt ::v-deep .el-checkbox__label {
+// .el-checkbox__label {
+// }
+.check-txt :deep(.el-checkbox__label) {
   color: #747475;
   // font-size: 18px;
 }
-.form-contact-main ::v-deep .el-form-item__label {
+.form-contact-main :deep(.el-form-item__label) {
   color: #747475;
 }
-.check-txt ::v-deep .el-checkbox__input.is-checked .el-checkbox__inner {
+.check-txt :deep(.el-checkbox__input.is-checked .el-checkbox__inner) {
   background-color: #1f757b;
   border-color: #1f757b;
 }

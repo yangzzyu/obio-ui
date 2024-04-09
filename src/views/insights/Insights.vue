@@ -53,30 +53,6 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
-          Productions
-        </h1>
-        <el-row :gutter="50" class="cdmo-top">
-          <el-col :xs="24" :span="8"
-            ><div class="animate-imgxx uof img">
-              <img
-                width="100%"
-                :src="handleViteImages('productions.png')"
-                alt="SPIRO Site"
-              />
-            </div>
-          </el-col>
-          <el-col :xs="24" :span="16">
-            <p class="font-size18 cro-p textColor">
-              Discover OBiO Tech's Cutting-Edge Intelli-M GMP-Compliant Viral
-              Vector Production Line. Unlock Comprehensive and Diversified
-              Solutions for Large-Scale Production, Offering Capacities Ranging
-              from 20L to 2000L. Elevate Your Production Efficiency Today! #cgt
-              #cellandgenetherapy #genetherapy #celltherapy #cdmo #2024trends
-              #globaldata #asgct
-            </p>
-          </el-col>
-        </el-row>
         <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Inquiry</h1>
         <el-row :gutter="50" class="cdmo-top">
           <el-col :xs="24" :span="12">
@@ -420,15 +396,15 @@ const rules = reactive<FormRules<RuleForm>>({
     justify-content: center;
   }
 }
-.check-txt ::v-deep .el-checkbox__label {
+.check-txt :deep(.el-checkbox__label) {
   color: #747475;
   // font-size: 18px;
 }
-.check-txt ::v-deep .el-checkbox__input.is-checked .el-checkbox__inner {
+.check-txt :deep(.el-checkbox__input.is-checked .el-checkbox__inner) {
   background-color: #1f757b;
   border-color: #1f757b;
 }
-.form-contact-main ::v-deep .el-form-item__label {
+.form-contact-main :deep(.el-form-item__label) {
   color: #747475;
 }
 </style>

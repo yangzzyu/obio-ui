@@ -887,7 +887,9 @@ li {
 .uhide {
   display: none !important;
 }
-
+.animate-imgxx {
+  text-align: center;
+}
 .uof {
   overflow: hidden;
 }

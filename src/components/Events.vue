@@ -26,10 +26,10 @@
         </el-col>
         <el-col :span="14" :xs="24" class="font-size20 news-list">
           <div class="news-i" v-for="(item, index) in eventsList" :key="index">
-            <h3 class="title-color font-size30 fontf4">{{ item.time }}</h3>
-            <p class="font-size18 fontf3 textColor">
+            <h3 class="font-size24 fontf4 textColor">
               {{ item.title }}
-            </p>
+            </h3>
+            <p class="title-color font-size18 fontf3">{{ item.time }}</p>
             <router-link
               :to="
                 item.type == 'news'
@@ -42,7 +42,7 @@
           </div>
           <router-link
             v-if="isShow"
-            to="/news"
+            to="/insight/news"
             class="btn-a font-size18 fontf7 bg-pinkbluelfr events-btn"
             >All News</router-link
           >

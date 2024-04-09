@@ -12,6 +12,7 @@
     <!-- <Breadcrumb v-if="routerName !== 'About Us'" :matchedData="matchedData" /> -->
     <router-view></router-view>
     <Events />
+    <Career />
   </div>
 </template>
 
@@ -20,6 +21,8 @@ import { useRouter } from "vue-router";
 import { computed, onBeforeMount, ref, toRefs, watch } from "vue";
 import Events from "@/components/Events.vue";
 import Focus from "@/components/Focus.vue";
+import Career from "@/components/Career.vue";
+
 import Breadcrumb from "@/components/Breadcrumb.vue";
 import { handleViteImages } from "@/utils";
 

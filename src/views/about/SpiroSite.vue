@@ -59,21 +59,10 @@
           </span>
         </div>
         <div class="pub-pal20 title-color">
-          <!-- <span class="fontf8 font-size50">Contact Information</span> -->
-          <h1 class="fontf8 font-size50">Contact Information</h1>
+          <h1 class="fontf8 font-size50">Contact Us</h1>
         </div>
 
-        <div class="text font-size18" style="margin-top: 30px" s="">
-          <p>
-            <span style="line-height: 2"
-              >Building No.19, Lane 908, Ziping Rd,&nbsp;</span
-            ><br />
-            <span style="line-height: 2">Pudong New District,</span><br />
-            <span style="line-height: 2">Shanghai, China</span><br />
-            <br />
-            <span style="line-height: 2">Main: +86 400-151-5198<br /> </span>
-          </p>
-        </div>
+        <ContactForm />
       </el-col>
     </div>
   </div>
@@ -83,6 +72,7 @@
 // import { ArrowRight } from "@element-plus/icons-vue";
 import { InnovationsList } from "./data/SpiroSite";
 import ScrollHint from "@/components/ScrollHint.vue";
+import ContactForm from "@/components/ContactForm.vue";
 </script>
 
 <style></style>

@@ -121,14 +121,15 @@
           Our Commitment: FAST
         </h1>
         <el-row class="our-box-content" :gutter="60">
-          <el-col :span="8" :xs="24" class="left-content">
+          <el-col :span="2" :xs="24" />
+          <el-col :span="6" :xs="24" class="left-content">
             <img
               class="img"
               :src="handleViteImages('Viral_Vector_bg3.png')"
               alt=""
             />
           </el-col>
-          <el-col :span="16" :xs="24" class="font-size20 news-list">
+          <el-col :span="14" :xs="24" class="font-size20 news-list">
             <div class="content-i" v-for="(i, idx) in ourList" :key="idx">
               <h3 class="title-color font-size30 fontf8">{{ i.title }}</h3>
               <p class="font-size18 textColor">
@@ -136,6 +137,7 @@
               </p>
             </div>
           </el-col>
+          <el-col :span="2" :xs="24" />
         </el-row></el-col
       >
     </section>
