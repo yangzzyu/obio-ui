@@ -41,7 +41,7 @@
                     </div>
                   </div>
                   <div class="font-size18 fontf7 iti">
-                    Lin-Gang Free-Trade Zone, Shanghai, China
+                    Lin-Gang Free-Trade Zone
                   </div>
                   <div class="font-size30 fontf7 iti">OBIO Intelli-M</div>
                   <p class="font-size18 textColor txt-bold">
@@ -66,7 +66,7 @@
                     </div>
                   </div>
                   <div class="font-size18 fontf7 iti">
-                    International Medical Park, Shanghai, China
+                    International Medical Park
                   </div>
                   <div class="font-size30 fontf7 iti">SPIRO Site</div>
 
@@ -90,7 +90,7 @@
                     </div>
                   </div>
                   <div class="font-size18 fontf7 iti">
-                    International Medical Park, Shanghai, China
+                    International Medical Park
                   </div>
                   <div class="font-size30 fontf7 iti">PINE Site</div>
                   <p class="font-size18 textColor txt-bold">

@@ -259,7 +259,7 @@ import Events from "@/components/Events.vue";
 import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
-  title: "Life in OBIO",
+  title: "Life at OBIO",
   hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
   visibleXsImgUrl: handleViteImages("head_bg.jpg"),
 });

@@ -57,7 +57,7 @@ const matchedData = ref([
   },
   {
     path: "/news",
-    name: "news",
+    name: "News",
   },
   {
     path: currentRoute.path,
@@ -65,7 +65,7 @@ const matchedData = ref([
   },
 ]);
 const FocusData = ref({
-  title: "news",
+  title: "News",
   hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
   visibleXsImgUrl: handleViteImages("head_bg.jpg"),
 });
