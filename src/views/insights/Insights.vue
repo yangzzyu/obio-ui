@@ -191,31 +191,32 @@
               ref="formRef"
               :model="form"
               label-width="200px"
-              class="form-contact-main"
+              class="form-contact-main fontf2"
               :label-position="'top'"
+              :rules="rules"
               status-icon
             >
               <el-row :gutter="20">
                 <el-col :span="4" :xs="24">
                   <el-form-item label="First Name" required>
-                    <el-input v-model="form.fname1" />
+                    <el-input v-model="form.fname" />
                   </el-form-item>
                 </el-col>
                 <el-col :span="5" :xs="24">
                   <el-form-item label="Last Name" required>
-                    <el-input v-model="form.lname2" /> </el-form-item
+                    <el-input v-model="form.lname" /> </el-form-item
                 ></el-col>
                 <el-col :span="5" :xs="24">
                   <el-form-item label="Company" required>
-                    <el-input v-model="form.lname3" /> </el-form-item
+                    <el-input v-model="form.company" /> </el-form-item
                 ></el-col>
                 <el-col :span="5" :xs="24">
                   <el-form-item label="Email" required>
-                    <el-input v-model="form.lname4" /> </el-form-item
+                    <el-input v-model="form.email" /> </el-form-item
                 ></el-col>
                 <el-col :span="5" :xs="24">
                   <el-form-item label="Phone Number" required>
-                    <el-input v-model="form.lname5" /> </el-form-item></el-col
+                    <el-input v-model="form.phone" /> </el-form-item></el-col
               ></el-row>
               <el-form-item label="Comments" prop="content">
                 <el-input v-model="form.comment" type="textarea" :rows="10" />
@@ -260,7 +261,6 @@
                 </div>
               </el-form-item>
               <div class="fontf3 font-size14">
-                <!-- to="/releases" -->
                 <a class="btn-a font-size18 fontf7 bg-pinkbluelfr"> Submit</a>
               </div>
             </el-form>
@@ -290,10 +290,19 @@ import "swiper/css";
 import "swiper/css/pagination"; // 轮播图底面的小圆点
 import "swiper/css/navigation"; // 轮播图两边的左右箭头
 import "swiper/css/scrollbar"; // 轮播图的滚动条
+import type { FormInstance, FormRules } from "element-plus";
+
 const form = reactive({
   laboratory: [],
   cdmo: [],
   comment: "",
+  fname: "",
+  lname: "",
+  company: "",
+  email: "",
+  phone: "",
+  verify: "",
+  checked: false,
 });
 const changeLaboratory = (e) => {
   const arr = [...form.laboratory, ...form.cdmo];
@@ -308,6 +317,89 @@ releasesList.value = [
   ...releases.value.slice(0, 3),
   ...events.value.slice(0, 2),
 ];
+const validatePhone = (rule, value, callback) => {
+  if (!value) {
+    callback();
+  } else {
+    let regPone = null;
+    let mobile = /^1(3|4|5|6|7|8|9)\d{9}$/;
+    let tel = /^(0\d{2,3}-){0,1}\d{7,8}$/; //座机
+    if (value.charAt(0) == 0) {
+      regPone = tel;
+    } else {
+      regPone = mobile;
+    }
+    if (!regPone.test(value)) {
+      callback(new Error("Please input correct phone number address！"));
+    }
+    callback();
+  }
+};
+interface RuleForm {
+  laboratory: string[];
+  cdmo: string[];
+  comment: string;
+  fname: string;
+  lname: string;
+  company: string;
+  email: string;
+  phone: boolean;
+  verify: string;
+  checked: boolean;
+}
+const rules = reactive<FormRules<RuleForm>>({
+  fname: [
+    {
+      required: true,
+      message: "Please input Activity First Name",
+      trigger: "blur",
+    },
+  ],
+  lname: [
+    {
+      required: true,
+      message: "Please input Activity Last Name",
+      trigger: "blur",
+    },
+  ],
+  company: [
+    {
+      required: true,
+      message: "Please input Activity Company",
+      trigger: "blur",
+    },
+  ],
+  email: [
+    { required: true, message: "Please input Activity Email", trigger: "blur" },
+    {
+      type: "email",
+      message: "Please input correct email address",
+      trigger: ["blur", "change"],
+    },
+  ],
+  phone: [
+    {
+      required: true,
+      message: "Please input Activity Phone Number",
+      trigger: "blur",
+    },
+    { validator: validatePhone, trigger: "blur" },
+  ],
+  comment: [
+    {
+      required: true,
+      message: "Please input Activity Comments",
+      trigger: "blur",
+    },
+  ],
+  verify: [
+    {
+      required: true,
+      message: "Please input Activity Security Code",
+      trigger: "blur",
+    },
+  ],
+});
 </script>
 
 <style lang="scss" scoped>
