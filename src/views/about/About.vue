@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-08 16:40:45
+ * @LastEditTime: 2024-04-10 14:58:00
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -57,7 +57,7 @@
           <i class="line"></i><span class="fontf8 font-size50">History</span>
         </div>
         <div class="about-history-swp">
-          <div
+          <!-- <div
             class="historyNext"
             id="historyNext"
             tabindex="0"
@@ -72,10 +72,12 @@
             role="button"
             aria-label="Previous slide"
             aria-disabled="true"
-          ></div>
+          ></div> -->
           <Swiper
             ref="swiperNew"
             :modules="[Autoplay, Navigation, Scrollbar]"
+            :loop="true"
+            :speed="3000"
             :initialSlide="100"
             slides-per-view="auto"
             :simulateTouch="false"
@@ -83,7 +85,11 @@
             :navigation="navigation"
             slideVisibleClass="my-slide-visible"
             class="swiper-container"
-            :autoplay="{ delay: 1000, disableOnInteraction: true }"
+            :autoplay="{
+              delay: 0,
+              stopOnLastSlide: false,
+              disableOnInteraction: false,
+            }"
             @mouseenter="enter"
             @mouseleave="leave"
             @swiper="onSwiper"
@@ -105,8 +111,8 @@
                     </ul>
                   </div>
                 </div>
-              </div></swiper-slide
-            >
+              </div>
+            </swiper-slide>
           </Swiper>
         </div>
       </el-col>
@@ -121,7 +127,9 @@
         style="margin: auto"
         class="container section-3"
       >
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Facilities</h1>
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+          Facilities
+        </h1>
         <div class="fac-con">
           <el-row class="row" :gutter="10">
             <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
@@ -133,9 +141,7 @@
                   />
                 </div>
               </div>
-              <div class="font-size18 fontf7 iti">
-                Lin-Gang Free-Trade Zone
-              </div>
+              <div class="font-size18 fontf7 iti">Lin-Gang Free-Trade Zone</div>
               <div class="font-size30 fontf7 iti">OBIO Intelli-M</div>
               <p class="font-size18 textColor txt-bold">
                 Process Development Characterization Clinical and Commercial
@@ -222,9 +228,7 @@
               <div class="manufacturing-list">
                 <div class="content">
                   <div class="factory-text">
-                    <h1 class="font-size30 txt-bold fontf8">
-                      LARGE
-                    </h1>
+                    <h1 class="font-size30 txt-bold fontf8">LARGE</h1>
                     <p
                       class="font-size18 txt-bold fontf7"
                       style="color: #fff; margin-bottom: 20px"
@@ -253,9 +257,7 @@
               <div class="manufacturing-list">
                 <div class="content">
                   <div class="factory-text">
-                    <h1 class="font-size30 txt-bold fontf8">
-                      COMPREHENSIVE
-                    </h1>
+                    <h1 class="font-size30 txt-bold fontf8">COMPREHENSIVE</h1>
                     <p
                       class="font-size18 txt-bold fontf7"
                       style="color: #fff; margin-bottom: 20px"
@@ -289,9 +291,7 @@
               <div class="manufacturing-list">
                 <div class="content">
                   <div class="factory-text">
-                    <h1 class="font-size30 txt-bold fontf8">
-                      INNOVATIVE
-                    </h1>
+                    <h1 class="font-size30 txt-bold fontf8">INNOVATIVE</h1>
                     <p
                       class="font-size18 txt-bold fontf7"
                       style="color: #fff; margin-bottom: 20px"
@@ -320,9 +320,7 @@
               <div class="manufacturing-list">
                 <div class="content">
                   <div class="factory-text">
-                    <h1 class="font-size30 txt-bold fontf8">
-                      INTELLIGENT
-                    </h1>
+                    <h1 class="font-size30 txt-bold fontf8">INTELLIGENT</h1>
                     <p
                       class="font-size18 txt-bold fontf7"
                       style="color: #fff; margin-bottom: 20px"
@@ -451,7 +449,6 @@ const leave = () => {
 };
 const onSwiper = (swiper: any) => {
   // console.log(swiper);
-
   swiperNew = toRaw(swiper); //拿到swiper对象再转换为非响应式
 };
 onMounted(() => {});
@@ -512,5 +509,17 @@ onMounted(() => {});
       width: 160px;
     }
   }
+}
+</style>
+<style>
+.swiper-wrapper {
+  /* 这里是改变其动画效果为匀速形式，不加此样式的话会造成滚动卡顿，看起来效果不平滑 */
+  /* 样式做了各种浏览器的兼容 */
+  transition-timing-function: linear !important;
+  -webkit-transition-timing-function: linear !important;
+  -moz-transition-timing-function: linear !important;
+  -ms-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
 }
 </style>

@@ -154,4 +154,5 @@ export const historyList = ref<HistoryItem[]>([
                             provider in biopharmaceutical industry`,
     ],
   },
+  { id: 12, year: "", txt: [] },
 ]);
