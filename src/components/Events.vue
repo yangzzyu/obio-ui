@@ -21,23 +21,20 @@
         News and Events
       </h1>
       <el-row class="image--callout mb-6" :gutter="40">
-        <el-col :span="10" :xs="24" class="left-content">
-          <img class="img" :src="handleViteImages('news.png')" alt="" />
-        </el-col>
-        <el-col :span="14" :xs="24" class="font-size20 news-list">
+        <el-col :span="24" :xs="24" class="font-size20 news-list">
           <div class="news-i" v-for="(item, index) in eventsList" :key="index">
-            <h3 class="font-size24 fontf4 textColor">
-              {{ item.title }}
-            </h3>
-            <p class="title-color font-size18 fontf3">{{ item.time }}</p>
             <router-link
               :to="
                 item.type == 'news'
                   ? '/news-details/releases/' + item.id
                   : '/news-details/events/' + item.id
               "
-              class="btn-a font-size18 fontf7 bg-pinkbluelfr events-btn"
-              >Read More</router-link
+              >
+              <h3 class="font-size18 fontf4 textColor">
+                {{ item.title }}
+              </h3>
+              <p class="title-color font-size18 fontf3">{{ item.time }}</p>
+            </router-link
             >
           </div>
           <router-link
@@ -60,7 +57,7 @@ import { handleViteImages } from "@/utils";
 const props = defineProps({
   isShow: {
     type: Boolean,
-    default: false,
+    default: true,
   },
 });
 const eventsList = ref([]);

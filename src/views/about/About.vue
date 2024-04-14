@@ -18,21 +18,33 @@
         style="margin: auto"
         class="container"
       >
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3">
+          Who We Are
+        </h1>
         <div class="text font-size18">
           <p class="textColor">
             <text class="txt-bold fontf8"
               >OBiO Technology is a pioneering gene and cell therapy CRO and
               CDMO,</text
             >
-            established to provide comprehensive solutions. Our expertise spans
+            established to provide comprehensive solutions. 
+          </p>
+          <br/>
+          <p class="textColor">Our expertise spans
             vectorology studies, functional genomics, process and analytical
             development, as well as IND-enabling CMC and clinical and commercial
             manufacturing.
+          </p>
+          <br/>
+          <p class="textColor">
             <text class="txt-bold fontf8"
               >With our mission to "enable gene therapy for better lives," </text
             >we are dedicated to delivering top-tier services globally. From
             bench to clinic, we are committed to advancing your product and
-            benefiting populations worldwide. Our unwavering dedication ensures
+            benefiting populations worldwide. 
+          </p>
+          <br/>
+          <p class="textColor">Our unwavering dedication ensures
             high-quality CDMO services for consumers worldwide across
             preclinical, IND, clinical, and commercial stages. Plasmids, mRNA,
             AAV, LVV, Ad viral vector, Cell therapy, manufacturing, CAR-T, NK,
@@ -137,12 +149,12 @@
                 <div class="content">
                   <img
                     :src="handleViteImages('facilities1.jpg')"
-                    alt="OBIO Intelli-M"
+                    alt="OBiO Intelli-M"
                   />
                 </div>
               </div>
               <div class="font-size18 fontf7 iti">Lin-Gang Free-Trade Zone</div>
-              <div class="font-size30 fontf7 iti">OBIO Intelli-M</div>
+              <div class="font-size30 fontf7 iti">OBiO Intelli-M</div>
               <p class="font-size18 textColor txt-bold">
                 Process Development Characterization Clinical and Commercial
                 Manufacturing

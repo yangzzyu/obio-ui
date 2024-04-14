@@ -38,31 +38,9 @@
             class="block tans service--box_link bg-pinkbluelfr career-a"
           >
             <h1 class="font-bold mb-3 font-size30 txt-bold fontf7">
-              Life at OBIO
+              Life at OBiO
             </h1>
-            <!-- <el-row
-              :gutter="20"
-              class="service--box align-items-start career-i"
-            >
-              <el-col :span="8" class="career-i"
-                ><div class="service--box_icon mb-3 min-width-70">
-                  <img
-                    class="icon--white"
-                    :src="handleViteImages('career_act1.png')"
-                    alt="GMP Vector Manufacturing icon"
-                  />
-                  <img
-                    class="icon--colour"
-                    :src="handleViteImages('career1.png')"
-                    alt="GMP Vector Manufacturing icon"
-                  /></div
-              ></el-col>
-              <el-col :span="16" class="career-i">
-                <h1 class="font-bold p-large mb-3 font-size30 txt-bold fontf7">
-                  Life at OBIO
-                </h1></el-col
-              >
-            </el-row> -->
+
           </router-link>
         </el-col>
         <el-col :xs="24" :span="12" class="news--slider-i">
@@ -73,29 +51,6 @@
             <h1 class="font-bold mb-3 font-size30 txt-bold fontf7">
               Job Opening
             </h1>
-            <!-- <el-row
-              :gutter="20"
-              class="service--box align-items-start career-i"
-            >
-              <el-col :span="8" class="career-i"
-                ><div class="service--box_icon mb-3 min-width-70">
-                  <img
-                    class="icon--white"
-                    :src="handleViteImages('career_act2.png')"
-                    alt="GMP Vector Manufacturing icon"
-                  />
-                  <img
-                    class="icon--colour"
-                    :src="handleViteImages('career2.png')"
-                    alt="GMP Vector Manufacturing icon"
-                  /></div
-              ></el-col>
-              <el-col :span="16" class="career-i">
-                <h1 class="font-bold p-large mb-3 font-size30 txt-bold fontf7">
-                  Job Opening
-                </h1></el-col
-              >
-            </el-row> -->
           </router-link>
         </el-col>
       </el-row>

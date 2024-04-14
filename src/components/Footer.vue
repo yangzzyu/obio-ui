@@ -120,7 +120,7 @@
             </dd>
 
             <dd class="font-size14">
-              <router-link to="/careers/life">Life at OBIO</router-link>
+              <router-link to="/careers/life">Life at OBiO</router-link>
             </dd>
             <dd class="font-size14">
               <router-link to="/careers/job">Job Opening</router-link>
@@ -149,14 +149,14 @@
         <a href="https://www.linkedin.com/company/41870372">
           <font-awesome-icon
             class="footer-icon"
-            size="lg"
+            size="2xl"
             :icon="['fab', 'linkedin']"
         /></a>
         <a href="https://www.youtube.com/@obiotechnology">
-          <font-awesome-icon size="lg" :icon="['fas', 'circle-play']"
+          <font-awesome-icon size="2xl" :icon="['fab', 'youtube']"
         /></a>
         <a href="https://www.facebook.com/profile.php?id=61555811491695">
-          <font-awesome-icon size="lg" :icon="['fass', 'f']" />
+          <font-awesome-icon size="2xl" :icon="['fab', 'facebook']" />
         </a>
       </div>
     </el-col>

@@ -36,14 +36,14 @@
                     <div class="content">
                       <img
                         :src="handleViteImages('facilities1.jpg')"
-                        alt="OBIO Intelli-M"
+                        alt="OBiO Intelli-M"
                       />
                     </div>
                   </div>
                   <div class="font-size18 fontf7 iti">
                     Lin-Gang Free-Trade Zone
                   </div>
-                  <div class="font-size30 fontf7 iti">OBIO Intelli-M</div>
+                  <div class="font-size30 fontf7 iti">OBiO Intelli-M</div>
                   <p class="font-size18 textColor txt-bold">
                     Process Development Characterization Clinical and Commercial
                     Manufacturing.
@@ -214,7 +214,7 @@
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size50 txt-bold fontf8 mb-0 mt-5">
+          <h1 class="p-title font-size30 txt-bold fontf8 mb-0 mt-5">
             CRO Service
           </h1>
           <div class="wysiwyg--content colour-white mb-3">

@@ -259,7 +259,7 @@ import Events from "@/components/Events.vue";
 import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
-  title: "Life at OBIO",
+  title: "Life at OBiO",
   hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
   visibleXsImgUrl: handleViteImages("head_bg.jpg"),
 });
@@ -299,7 +299,7 @@ const lifeList = reactive([
     ],
   },
   {
-    title: "Life at OBiO",
+    title: "Activity",
     imgList: [
       handleViteImages("life/9.png"),
       handleViteImages("life/10.png"),

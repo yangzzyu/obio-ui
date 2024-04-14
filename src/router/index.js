@@ -238,7 +238,7 @@ const router = createRouter({
         },
         {
           path: "/careers/life",
-          name: "Life at OBIO",
+          name: "Life at OBiO",
           component: () => import("@/views/careers/Life.vue"),
         },
         {
@@ -248,7 +248,7 @@ const router = createRouter({
         },
         // {
         //   path: "/life",
-        //   name: "Life in OBIO",
+        //   name: "Life in OBiO",
         //   component: () => import("@/views/careers/Life.vue"),
         // },
         // {
