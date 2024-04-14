@@ -253,45 +253,6 @@
           </el-row>
         </el-col>
       </section>
-      <section id="Ourout" class="">
-        <el-col
-          :span="24"
-          style="margin: auto"
-          class="container CDMO-Solutions-wrap CDMO-Solutions-wrap-line"
-        >
-          <h1 class="p-title font-size50 txt-bold fontf8 mb-0 mt-5">
-            Our Commitment
-          </h1>
-          <div class="section-2">
-            <div class="list">
-              <el-row class="row">
-                <el-col
-                  :span="6"
-                  class="item"
-                  v-for="(i, k) in ViralList"
-                  :key="k"
-                  :class="activeIndex === i.id ? 'active' : ''"
-                  @mouseenter="activeIndex = i.id"
-                  ><a
-                    class="boxs block"
-                    @click="popLabora(i.id)"
-                    style="cursor: pointer"
-                  >
-                    <div class="img1">
-                      <div class="icos">
-                        <img :src="i.imgUrl" class="icos-a" :alt="i.title" />
-                      </div>
-                    </div>
-                    <div class="font-size30 t fontf8 p-title txt-bold">
-                      {{ i.title }}
-                    </div>
-                  </a>
-                </el-col>
-              </el-row>
-            </div>
-          </div>
-        </el-col>
-      </section>
 
       <section id="Seeout" class="">
         <el-col

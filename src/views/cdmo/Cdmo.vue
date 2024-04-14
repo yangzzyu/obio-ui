@@ -98,7 +98,71 @@
         </div>
       </el-col>
     </div>
-
+    <section id="cdmo-service-box" class="cro-list">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+          CDMO Service
+        </h1>
+      </el-col>
+      <div
+        class="cro-list-item row"
+        v-for="(item, index) in croList"
+        :key="index"
+      >
+        <el-col
+          :xs="22"
+          :sm="20"
+          :md="20"
+          :lg="20"
+          :xl="22"
+          style="margin: auto"
+          class="container"
+        >
+          <el-row :gutter="100">
+            <el-col :xs="24" :span="6" />
+            <el-col :xs="24" :span="6"
+              ><div
+                class="animate-imgxx uof img"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  height: 100%;
+                "
+              >
+                <img :src="item.imgUrl" alt="SPIRO Site" />
+              </div>
+            </el-col>
+            <el-col :xs="24" :span="10">
+              <h1 class="font-size30 fontf7 iti item-tit">
+                {{ item.title }}
+              </h1>
+              <ul>
+                <li
+                  style="padding: 5px 0"
+                  v-for="(i, idx) in item.textArr"
+                  :key="idx"
+                  class="font-size18 textColor"
+                >
+                  • {{ i }}
+                </li>
+              </ul>
+              <router-link :to="item.path" class="font-size18 fontf7 btn-a mt-3"
+                >Read More</router-link
+              ></el-col
+            >
+          </el-row>
+        </el-col>
+      </div>
+    </section>
     <div class="in-about-wrap facilities-box" id="manufacturing-box">
       <div class="section-3">
         <el-col

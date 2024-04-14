@@ -52,6 +52,7 @@
                   About Us
                 </div>
               </template>
+              <el-menu-item index="/about/history">History </el-menu-item>
               <el-sub-menu index="/about/facilities">
                 <template #title>
                   <div @click="router.push('/about/facilities')">
@@ -104,7 +105,7 @@
                 </div>
               </template>
               <el-menu-item index="/cdmo/manufacturing">
-                Manufacturing
+                Facilities
               </el-menu-item>
               <el-menu-item index="/cdmo/cdmo"> CDMO </el-menu-item>
               <el-menu-item index="/cdmo/innovation"> Innovation </el-menu-item>
@@ -229,10 +230,10 @@
               CDMO Solutions
             </div>
           </template>
-          <el-menu-item index="/cdmo/manufacturing">
-            Manufacturing
-          </el-menu-item>
           <el-menu-item index="/cdmo/cdmo"> CDMO </el-menu-item>
+          <el-menu-item index="/cdmo/manufacturing">
+            Facilities
+          </el-menu-item>
           <el-menu-item index="/cdmo/innovation"> Innovation </el-menu-item>
         </el-sub-menu>
         <el-menu-item index="/cro" class="menu-t1">CRO Service</el-menu-item>
