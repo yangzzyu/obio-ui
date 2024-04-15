@@ -36,14 +36,14 @@
                     <div class="content">
                       <img
                         :src="handleViteImages('facilities1.jpg')"
-                        alt="OBIO Intelli-M"
+                        alt="OBiO Intelli-M"
                       />
                     </div>
                   </div>
                   <div class="font-size18 fontf7 iti">
                     Lin-Gang Free-Trade Zone
                   </div>
-                  <div class="font-size30 fontf7 iti">OBIO Intelli-M</div>
+                  <div class="font-size30 fontf7 iti">OBiO Intelli-M</div>
                   <p class="font-size18 textColor txt-bold">
                     Process Development Characterization Clinical and Commercial
                     Manufacturing.
@@ -214,7 +214,7 @@
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size50 txt-bold fontf8 mb-0 mt-5">
+          <h1 class="p-title font-size30 txt-bold fontf8 mb-0 mt-5">
             CRO Service
           </h1>
           <div class="wysiwyg--content colour-white mb-3">
@@ -251,45 +251,6 @@
               >
             </el-col>
           </el-row>
-        </el-col>
-      </section>
-      <section id="Ourout" class="">
-        <el-col
-          :span="24"
-          style="margin: auto"
-          class="container CDMO-Solutions-wrap CDMO-Solutions-wrap-line"
-        >
-          <h1 class="p-title font-size50 txt-bold fontf8 mb-0 mt-5">
-            Our Commitment
-          </h1>
-          <div class="section-2">
-            <div class="list">
-              <el-row class="row">
-                <el-col
-                  :span="6"
-                  class="item"
-                  v-for="(i, k) in ViralList"
-                  :key="k"
-                  :class="activeIndex === i.id ? 'active' : ''"
-                  @mouseenter="activeIndex = i.id"
-                  ><a
-                    class="boxs block"
-                    @click="popLabora(i.id)"
-                    style="cursor: pointer"
-                  >
-                    <div class="img1">
-                      <div class="icos">
-                        <img :src="i.imgUrl" class="icos-a" :alt="i.title" />
-                      </div>
-                    </div>
-                    <div class="font-size30 t fontf8 p-title txt-bold">
-                      {{ i.title }}
-                    </div>
-                  </a>
-                </el-col>
-              </el-row>
-            </div>
-          </div>
         </el-col>
       </section>
 

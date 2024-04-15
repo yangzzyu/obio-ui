@@ -80,7 +80,7 @@
               class="block tans service--box_link bg-pinkbluelfr career-a"
             >
               <h1 class="font-bold mb-3 font-size30 txt-bold fontf7">
-                Life at OBIO
+                Life at OBiO
               </h1>
               <!-- <el-row
               :gutter="20"
@@ -101,7 +101,7 @@
               ></el-col>
               <el-col :span="16" class="career-i">
                 <h1 class="font-bold p-large mb-3 font-size30 txt-bold fontf7">
-                  Life at OBIO
+                  Life at OBiO
                 </h1></el-col
               >
             </el-row> -->

@@ -32,12 +32,16 @@
               manufacturing for viral vector, oncolytic virus, and cell therapy
               products. Our expertise extends to offering holistic solutions
               tailored to support the industrialization and commercialization of
-              various products at the Pre-IND stage and beyond. Through years of
+              various products at the Pre-IND stage and beyond. 
+            </p>
+            <p class="font-size18 fontf7 cro-p textColor">Through years of
               dedicated effort, OBiO has built an integrated process development
               system, supported by a flexible cGMP manufacturing platform,
               comprehensive quality system and efficient project management. Our
               experienced team of experts will navigate the industrialization
-              process with you side-by-side. With our technical expertise in
+              process with you side-by-side. 
+            </p>
+            <p class="font-size18 fontf7 cro-p textColor">With our technical expertise in
               viral vector, oncolytic virus and cell therapy, we will help you
               to accelerate your product life-cycle from pre-clinical to
               commercially ready.
@@ -98,7 +102,52 @@
         </div>
       </el-col>
     </div>
-
+    <section id="cdmo-service-box" class="cro-list">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+          CDMO Service
+        </h1>
+        <el-row class="cro--service row" :gutter="20">
+            <el-col
+              :xs="24"
+              :span="6"
+              class="cro--service-i"
+              v-for="(item, index) in croList"
+              :key="index"
+            >
+              <a class="block tans">
+                <div class="animate-imgxx uof img">
+                  <img :src="item.imgUrl" alt="SPIRO Site" />
+                </div>
+              </a>
+              <h4 class="font-size24 fontf7 iti">
+                {{ item.title }}
+              </h4>
+              <ul>
+                <li
+                  style="padding: 5px 0"
+                  v-for="(i, idx) in item.textArr"
+                  :key="idx"
+                  class="font-size18 textColor"
+                >
+                  • {{ i }}
+                </li>
+              </ul>
+              <router-link :to="item.path" class="font-size18 fontf7 btn-a mt-3"
+                >Read More</router-link
+              >
+            </el-col>
+          </el-row>
+      </el-col>
+    </section>
     <div class="in-about-wrap facilities-box" id="manufacturing-box">
       <div class="section-3">
         <el-col
@@ -121,14 +170,14 @@
                   <div class="content">
                     <img
                       :src="handleViteImages('facilities1.jpg')"
-                      alt="OBIO Intelli-M"
+                      alt="OBiO Intelli-M"
                     />
                   </div>
                 </div>
                 <div class="font-size18 fontf7 iti">
                   Lin-Gang Free-Trade Zone
                 </div>
-                <div class="font-size30 fontf7 iti">OBIO Intelli-M</div>
+                <div class="font-size30 fontf7 iti">OBiO Intelli-M</div>
                 <p class="font-size18 textColor txt-bold">
                   Process Development Characterization Clinical and Commercial
                   Manufacturing.
@@ -195,102 +244,6 @@
         >
       </div>
     </div>
-    <section id="cdmo-service-box" class="cro-list">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
-          CDMO Service
-        </h1>
-        <el-row class="cro--service row" :gutter="20">
-            <el-col
-              :xs="24"
-              :span="6"
-              class="cro--service-i"
-              v-for="(item, index) in croList"
-              :key="index"
-            >
-              <a class="block tans">
-                <div class="animate-imgxx uof img">
-                  <img :src="item.imgUrl" alt="SPIRO Site" />
-                </div>
-              </a>
-              <h4 class="font-size24 fontf7 iti">
-                {{ item.title }}
-              </h4>
-              <ul>
-                <li
-                  style="padding: 5px 0"
-                  v-for="(i, idx) in item.textArr"
-                  :key="idx"
-                  class="font-size18 textColor"
-                >
-                  • {{ i }}
-                </li>
-              </ul>
-              <router-link :to="item.path" class="font-size18 fontf7 btn-a mt-3"
-                >Read More</router-link
-              >
-            </el-col>
-          </el-row>
-      </el-col>
-      <!-- <div
-        class="cro-list-item row"
-        v-for="(item, index) in croList"
-        :key="index"
-      >
-        <el-col
-          :xs="22"
-          :sm="20"
-          :md="20"
-          :lg="20"
-          :xl="22"
-          style="margin: auto"
-          class="container"
-        >
-          <el-row :gutter="100">
-            <el-col :xs="24" :span="6" />
-            <el-col :xs="24" :span="6"
-              ><div
-                class="animate-imgxx uof img"
-                style="
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  height: 100%;
-                "
-              >
-                <img :src="item.imgUrl" alt="SPIRO Site" />
-              </div>
-            </el-col>
-            <el-col :xs="24" :span="10">
-              <h1 class="font-size30 fontf7 iti item-tit">
-                {{ item.title }}
-              </h1>
-              <ul>
-                <li
-                  style="padding: 5px 0"
-                  v-for="(i, idx) in item.textArr"
-                  :key="idx"
-                  class="font-size18 textColor"
-                >
-                  • {{ i }}
-                </li>
-              </ul>
-              <router-link :to="item.path" class="font-size18 fontf7 btn-a mt-3"
-                >Read More</router-link
-              ></el-col
-            >
-          </el-row>
-        </el-col>
-      </div> -->
-    </section>
     <section id="innovation">
       <div class="in-about-wrap innovation-box">
         <div class="section-3">

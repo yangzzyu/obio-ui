@@ -82,7 +82,7 @@ const router = createRouter({
           children: [
             {
               path: "/capability/industrialized",
-              name: "Industrialize Your Product",
+              name: "Industrialize Your Products",
               component: () => import("@/views/capability/Index.vue"),
               meta: { position: "industrialize-dom" },
             },
@@ -238,7 +238,7 @@ const router = createRouter({
         },
         {
           path: "/careers/life",
-          name: "Life at OBIO",
+          name: "Life at OBiO",
           component: () => import("@/views/careers/Life.vue"),
         },
         {
@@ -248,7 +248,7 @@ const router = createRouter({
         },
         // {
         //   path: "/life",
-        //   name: "Life in OBIO",
+        //   name: "Life in OBiO",
         //   component: () => import("@/views/careers/Life.vue"),
         // },
         // {

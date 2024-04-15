@@ -52,6 +52,7 @@
                   About Us
                 </div>
               </template>
+              <el-menu-item index="/about/history">History </el-menu-item>
               <el-sub-menu index="/about/facilities">
                 <template #title>
                   <div @click="router.push('/about/facilities')">
@@ -68,8 +69,6 @@
                   >OBiO Intelli-M</el-menu-item
                 >
               </el-sub-menu>
-              <el-menu-item index="/about/history">History </el-menu-item>
-              <el-menu-item index="/about/mission"> Mission</el-menu-item>
             </el-sub-menu>
             <el-sub-menu
               index="/capability"
@@ -86,9 +85,6 @@
               <el-menu-item index="/capability/industrialized">
                 Industrialized
               </el-menu-item>
-              <el-menu-item index="/capability/commitment">
-                Commitment
-              </el-menu-item>
             </el-sub-menu>
             <el-sub-menu
               index="/cdmo"
@@ -103,10 +99,10 @@
                   CDMO Solutions
                 </div>
               </template>
+              <el-menu-item index="/cdmo/cdmo"> CDMO Service</el-menu-item>
               <el-menu-item index="/cdmo/manufacturing">
-                Manufacturing
+                Facilities
               </el-menu-item>
-              <el-menu-item index="/cdmo/cdmo"> CDMO </el-menu-item>
               <el-menu-item index="/cdmo/innovation"> Innovation </el-menu-item>
             </el-sub-menu>
             <el-menu-item index="/cro" class="menu-t1"
@@ -144,7 +140,7 @@
                 </div>
               </template>
              
-              <el-menu-item index="/careers/life"> Life at OBIO </el-menu-item>
+              <el-menu-item index="/careers/life"> Life at OBiO </el-menu-item>
               <el-menu-item index="/careers/job"> Job Opening </el-menu-item>
             </el-sub-menu>
           </el-menu>
@@ -229,10 +225,10 @@
               CDMO Solutions
             </div>
           </template>
-          <el-menu-item index="/cdmo/manufacturing">
-            Manufacturing
-          </el-menu-item>
           <el-menu-item index="/cdmo/cdmo"> CDMO </el-menu-item>
+          <el-menu-item index="/cdmo/manufacturing">
+            Facilities
+          </el-menu-item>
           <el-menu-item index="/cdmo/innovation"> Innovation </el-menu-item>
         </el-sub-menu>
         <el-menu-item index="/cro" class="menu-t1">CRO Service</el-menu-item>
@@ -266,7 +262,7 @@
             <div @click="router.push('/careers')" class="menu-t1">Careers</div>
           </template>
           
-          <el-menu-item index="/careers/life"> Life at OBIO </el-menu-item>
+          <el-menu-item index="/careers/life"> Life at OBiO </el-menu-item>
           <el-menu-item index="/careers/job"> Job Opening </el-menu-item>
         </el-sub-menu>
         <!-- <el-menu-item index="/contact" class="menu-t1">Contact Us</el-menu-item> -->

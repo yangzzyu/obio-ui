@@ -141,7 +141,7 @@ OBiO Tech want to extend our heartfelt thanks to all the speakers for delivering
   {
     id: 17,
     type: "news",
-    title: `Breaking News: OBiO Biotechnology and Novabio Therapeutics Join Forces in Revolutionary Treg Cell Therapy Partnership!`,
+    title: `Breaking News: OBiO Technology and Novabio Therapeutics Join Forces in Revolutionary Treg Cell Therapy Partnership!`,
     time: "March 25th 2024",
     subhead:
       "This partnership addressed critical gaps in the treatment of neurodegenerative diseases, autoimmune diseases, and metabolic disorders.",

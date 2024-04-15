@@ -18,21 +18,33 @@
         style="margin: auto"
         class="container"
       >
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3">
+          Who We Are
+        </h1>
         <div class="text font-size18">
           <p class="textColor">
             <text class="txt-bold fontf8"
               >OBiO Technology is a pioneering gene and cell therapy CRO and
               CDMO,</text
             >
-            established to provide comprehensive solutions. Our expertise spans
+            established to provide comprehensive solutions. 
+          </p>
+          <br/>
+          <p class="textColor">Our expertise spans
             vectorology studies, functional genomics, process and analytical
             development, as well as IND-enabling CMC and clinical and commercial
             manufacturing.
+          </p>
+          <br/>
+          <p class="textColor">
             <text class="txt-bold fontf8"
               >With our mission to "enable gene therapy for better lives," </text
             >we are dedicated to delivering top-tier services globally. From
             bench to clinic, we are committed to advancing your product and
-            benefiting populations worldwide. Our unwavering dedication ensures
+            benefiting populations worldwide. 
+          </p>
+          <br/>
+          <p class="textColor">Our unwavering dedication ensures
             high-quality CDMO services for consumers worldwide across
             preclinical, IND, clinical, and commercial stages. Plasmids, mRNA,
             AAV, LVV, Ad viral vector, Cell therapy, manufacturing, CAR-T, NK,
@@ -137,12 +149,12 @@
                 <div class="content">
                   <img
                     :src="handleViteImages('facilities1.jpg')"
-                    alt="OBIO Intelli-M"
+                    alt="OBiO Intelli-M"
                   />
                 </div>
               </div>
               <div class="font-size18 fontf7 iti">Lin-Gang Free-Trade Zone</div>
-              <div class="font-size30 fontf7 iti">OBIO Intelli-M</div>
+              <div class="font-size30 fontf7 iti">OBiO Intelli-M</div>
               <p class="font-size18 textColor txt-bold">
                 Process Development Characterization Clinical and Commercial
                 Manufacturing
@@ -350,6 +362,40 @@
           </el-row></div
       ></el-col>
     </section>
+    <section class="our-box mb-5" id="commitment-box">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+          Our Commitment: FAST
+        </h1>
+        <el-row class="our-box-content" :gutter="60">
+          <el-col :span="2" :xs="24" />
+          <el-col :span="6" :xs="24" class="left-content">
+            <img
+              class="img"
+              :src="handleViteImages('Viral_Vector_bg3.png')"
+              alt=""
+            />
+          </el-col>
+          <el-col :span="14" :xs="24" class="font-size20 news-list">
+            <div class="content-i" v-for="(i, idx) in ourList" :key="idx">
+              <h3 class="title-color font-size30 fontf8">{{ i.title }}</h3>
+              <p class="font-size18 textColor">
+                {{ i.text }}
+              </p>
+            </div>
+          </el-col>
+          <el-col :span="2" :xs="24" />
+        </el-row></el-col
+      >
+    </section>
     <section class="our-box">
       <el-col
         :xs="22"
@@ -451,6 +497,36 @@ const onSwiper = (swiper: any) => {
   // console.log(swiper);
   swiperNew = toRaw(swiper); //拿到swiper对象再转换为非响应式
 };
+const ourList = reactive([
+  {
+    title: "Focus:",
+    text: `Dedication to Contract Development and Manufacturi 
+Strict Internal Data Management
+Comprehensive Patent System
+Professional Intellectual Property Protection`,
+  },
+  {
+    title: "Acceleration:",
+    text: `Commercial Readiness from Technical Expertise
+Advanced Process Development Technologies
+Large-Scale Manufacturing Capabilities
+Fully-Closed & Automated Downstream Purification`,
+  },
+  {
+    title: "Standardization:",
+    text: `Fully Regulatory Compliance
+GMP-Compliant Facilities and Equipment
+Robust Quality Management System
+Comprehensive Quality Control Platform`,
+  },
+  {
+    title: "Team:",
+    text: `Trustful Expertise
+10+ years of Experience in Gene and Cell Therapy
+Extensive Experience in IND-Enabling Support
+Responses at First Instance`,
+  },
+]);
 onMounted(() => {});
 </script>
 

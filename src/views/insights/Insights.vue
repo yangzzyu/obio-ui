@@ -117,10 +117,10 @@
               "
             >
               <el-checkbox
-                value="GENE AND CELL THERAPY CDMO SOLUTIONS AT OBIO"
-                label="GENE AND CELL THERAPY CDMO SOLUTIONS AT OBIO"
+                value="GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO"
+                label="GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO"
               >
-                GENE AND CELL THERAPY CDMO SOLUTIONS AT OBIO
+                GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO
               </el-checkbox>
               <el-checkbox
                 value="CELL THERAPY CDMO SOLUTIONS"
