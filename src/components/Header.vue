@@ -69,8 +69,6 @@
                   >OBiO Intelli-M</el-menu-item
                 >
               </el-sub-menu>
-              <el-menu-item index="/about/history">History </el-menu-item>
-              <el-menu-item index="/about/mission"> Mission</el-menu-item>
             </el-sub-menu>
             <el-sub-menu
               index="/capability"
@@ -87,9 +85,6 @@
               <el-menu-item index="/capability/industrialized">
                 Industrialized
               </el-menu-item>
-              <el-menu-item index="/capability/commitment">
-                Commitment
-              </el-menu-item>
             </el-sub-menu>
             <el-sub-menu
               index="/cdmo"
@@ -104,10 +99,10 @@
                   CDMO Solutions
                 </div>
               </template>
+              <el-menu-item index="/cdmo/cdmo"> CDMO Service</el-menu-item>
               <el-menu-item index="/cdmo/manufacturing">
                 Facilities
               </el-menu-item>
-              <el-menu-item index="/cdmo/cdmo"> CDMO </el-menu-item>
               <el-menu-item index="/cdmo/innovation"> Innovation </el-menu-item>
             </el-sub-menu>
             <el-menu-item index="/cro" class="menu-t1"
