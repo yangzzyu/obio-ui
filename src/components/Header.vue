@@ -8,7 +8,7 @@
 -->
 <template>
   <!-- :class="{ shadow: headerShadowActive }" -->
-  <div class="header">
+  <div role="banner" class="header">
     <div class="header_container">
       <div class="header_content">
         <div class="logo">

@@ -30,9 +30,9 @@
                   : '/news-details/events/' + item.id
               "
               >
-              <h3 class="font-size18 fontf4 textColor">
+              <div class="font-size18 fontf4 textColor">
                 {{ item.title }}
-              </h3>
+              </div>
               <p class="title-color font-size18 fontf3">{{ item.time }}</p>
             </router-link
             >

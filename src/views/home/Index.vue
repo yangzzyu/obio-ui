@@ -179,9 +179,9 @@
                       alt="GMP Vector Manufacturing icon"
                     />
                   </div>
-                  <h3 class="font-bold p-large mb-3 font-size24 fontf8">
+                  <div class="font-bold p-large mb-3 font-size24 fontf8">
                     {{ item.title }}
-                  </h3>
+                  </div>
                   <div style="height: 200px" class="cdmo-cont">
                     <ul class="txt-ul">
                       <li
@@ -237,9 +237,9 @@
                   <img :src="item.imgUrl" alt="SPIRO Site" />
                 </div>
               </a>
-              <h4 class="font-size24 fontf7 iti">
+              <div class="font-size24 fontf7 iti">
                 {{ item.title }}
-              </h4>
+              </div>
               <p class="font-size18 cro-p">
                 {{ item.text }}
               </p>

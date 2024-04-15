@@ -15,7 +15,7 @@
       ></AwHeader
     ></el-header>
     <el-main class="index-main"><router-view></router-view></el-main>
-    <el-footer><AwFooter></AwFooter></el-footer>
+    <el-footer role="contentinfo"><AwFooter></AwFooter></el-footer>
   </el-container>
 </template>
 <script lang="ts" setup>
