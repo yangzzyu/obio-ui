@@ -12,12 +12,12 @@
     class="focus"
     :class="focusObj.title === 'About Us' ? 'hero-style-2' : ''"
   >
-    <div class="hidden-xs-only focus-img" v-if="focusObj.title !== 'About Us'">
+    <div class="hidden-xs-only focus-img" v-if="focusObj.title && focusObj.title !== 'About Us'">
       <img :src="focusObj.hiddenXsImgUrl" :alt="focusObj.title" />
     </div>
     <div
       class="hidden-sm-only hidden-md-only hidden-lg-only hidden-xl-only focus-img"
-      v-if="focusObj.title !== 'About Us'"
+      v-if="focusObj.title && focusObj.title !== 'About Us'"
     >
       <img :src="focusObj.visibleXsImgUrl" :alt="focusObj.title" />
     </div>
@@ -34,7 +34,7 @@
         >
           <h1
             class="font-size50 focus-title fontf7 txt-bold"
-            v-if="focusObj.title !== 'About Us'"
+            v-if="focusObj.title && focusObj.title !== 'About Us'"
           >
             {{ focusObj.title }}
           </h1>

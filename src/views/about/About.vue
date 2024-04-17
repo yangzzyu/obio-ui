@@ -386,7 +386,7 @@
           </el-col>
           <el-col :span="14" :xs="24" class="font-size20 news-list">
             <div class="content-i" v-for="(i, idx) in ourList" :key="idx">
-              <h3 class="title-color font-size30 fontf8">{{ i.title }}</h3>
+              <h2 class="title-color font-size30 fontf8">{{ i.title }}</h2>
               <p class="font-size18 textColor">
                 {{ i.text }}
               </p>
@@ -414,14 +414,14 @@
             <img class="img" :src="handleViteImages('life_bg.png')" alt="" />
           </el-col>
           <el-col :span="16" :xs="24" class="font-size20 news-list">
-            <h3
+            <h2
               class="title-color font-size30 fontf7"
               style="margin-bottom: 30px"
             >
               As OBiO Tech swiftly evolves, every OBiOers are immersed in an
               environment fostering "enhanced capabilities, purposeful work, and
               a fulfilling life."
-            </h3>
+            </h2>
             <ul class="font-size18 textColor life-ul">
               <li><i></i> Enhanced Capabilities</li>
               <li><i></i> Competitive compensation and benefits</li>

@@ -81,6 +81,7 @@
                     <el-image
                       style="width: 100%; height: 100%"
                       :src="i"
+                      :alt="`${item.title} Picture ${k + 1}`"
                       :zoom-rate="1.2"
                       :max-scale="7"
                       :min-scale="0.2"
@@ -117,7 +118,7 @@
           <img
             :src="handleViteImages('life/meetin_bg.png')"
             width="100%"
-            alt=""
+            alt="All Hands Meeting Picture"
             srcset=""
             class="mb-5" /></el-col
       ></el-col>
@@ -154,6 +155,7 @@
                     <el-image
                       style="width: 100%; height: 100%"
                       :src="i"
+                      :alt="`Basketball Picture ${index + 1}`"
                       :zoom-rate="1.2"
                       :max-scale="7"
                       :min-scale="0.2"
