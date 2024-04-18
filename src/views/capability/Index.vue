@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-01 15:47:50
+ * @LastEditTime: 2024-04-18 17:26:19
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -19,7 +19,9 @@
         style="margin: auto"
         class="container"
       >
-        <h1 class="title-color font-size50 txt-bold section-title fontf8">
+        <h1
+          class="title-color font-size50 txt-bold section-title fontf8 mb-3 mt-5"
+        >
           Why Us
         </h1>
         <h2 class="title-color our-txt font-size30 section-title fontf7">
@@ -52,8 +54,8 @@
               </div>
             </a>
           </el-col>
-        </el-row></el-col
-      >
+        </el-row>
+      </el-col>
     </section>
     <section class="in-about-wrap industrialize-box" id="industrialize-dom">
       <div class="section-3">
@@ -75,10 +77,38 @@
               <el-col
                 :xs="24"
                 :span="6"
-                class=""
+                class="news--slider-i us-list-i"
                 v-for="(item, index) in industrializeList"
                 :key="index"
               >
+                <a class="tans service--box_link bg-pinkbluelfr">
+                  <div class="service--box align-items-start">
+                    <div class="manufacturing-list">
+                      <div class="content">
+                        <img :src="item.imgUrl" alt="" srcset="" />
+                      </div>
+                    </div>
+                    <div class="font-size18 fontf7 iti">
+                      {{ item.title }}
+                    </div>
+                    <ul class="txt-ul">
+                      <li
+                        class="font-size18 txt-bold textColor"
+                        v-for="(i, idx) in item.txtList"
+                        :key="idx"
+                      >
+                        {{ i }}
+                      </li>
+                    </ul>
+                    <router-link
+                      :to="item.path"
+                      class="read-more font-size18 fontf7 mt-3 service--box-a"
+                      >Read More</router-link
+                    >
+                  </div>
+                </a>
+              </el-col>
+              <!-- <el-col :xs="24" :span="6" class="" v-for="(item, index) in industrializeList" :key="index">
                 <div class="manufacturing-list">
                   <div class="content">
                     <img :src="item.imgUrl" alt="" srcset="" />
@@ -88,23 +118,62 @@
                   {{ item.title }}
                 </div>
                 <ul class="txt-ul">
-                  <li
-                    class="font-size18 txt-bold textColor"
-                    v-for="(i, idx) in item.txtList"
-                    :key="idx"
-                  >
+                  <li class="font-size18 txt-bold textColor" v-for="(i, idx) in item.txtList" :key="idx">
                     {{ i }}
                   </li>
                 </ul>
-                <router-link
-                  :to="item.path"
-                  class="read-more font-size18 fontf7 mt-3"
-                  >Read More</router-link
-                >
-              </el-col>
+                <router-link :to="item.path" class="read-more font-size18 fontf7 mt-3">Read More</router-link>
+              </el-col> -->
             </el-row>
-          </div></el-col
+          </div>
+        </el-col>
+      </div>
+    </section>
+    <section class="in-about-wrap equipments-box" id="equipments-dom">
+      <div class="section-3">
+        <el-col
+          :xs="22"
+          :sm="20"
+          :md="20"
+          :lg="20"
+          :xl="22"
+          style="margin: auto"
+          class="container"
         >
+          <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+            GMP Devices
+          </h1>
+          <el-row
+            :gutter="40"
+            v-for="(item, index) in GMPDevicesList"
+            :key="index"
+            class="equipments-box-row"
+          >
+            <el-col
+              :span="8"
+              :xs="24"
+              :class="index % 2 === 0 ? '' : 'visible-xs-block'"
+              class="text-conent"
+            >
+              <el-image style="width: 100%" :src="item.imgUrl" fit="contain" />
+              <!-- max-height: 300px -->
+            </el-col>
+            <el-col :span="16" :xs="24" class="font-size18 fontf3 text-conent">
+              <div>
+                <p class="font-size30 fontf7 iti item-tit">{{ item.title }}</p>
+                <p class="font-size18 fontf3 textColor" v-html="item.text"></p>
+              </div>
+            </el-col>
+            <el-col
+              :span="8"
+              :xs="24"
+              class="hidden-xs text-conent"
+              v-if="index % 2 !== 0"
+            >
+              <el-image style="width: 100%" :src="item.imgUrl" fit="contain" />
+            </el-col>
+          </el-row>
+        </el-col>
       </div>
     </section>
     <Events />
@@ -259,31 +328,73 @@ specified temperature ranges. `,
     ],
   },
 ]);
-const croList = ref([
+const GMPDevicesList = ref([
   {
-    imgUrl: handleViteImages("croIcon1.png"),
-    title: "Plasmid",
-    text: `At 0Bi0, our dedicateddevelopment team iscommitted to assistingyou in designing,constructing, andmanufacturing plasmidsfor fuctional genomicsresearch, as well asproviding expertise inviral packaging.`,
+    imgUrl: handleViteImages("gmp_img1.jpg"),
+    title: "Stainless Steel 100 L Fermentation Tank",
+    text: ` High automation, closed end-to-end process culture design.<br />
+                The stainless steel fermentation system is extensively employed for the amplification and cultivation of
+                microorganisms.Itentails automatic control of pH, dissolved oxygen, stirring, fed-batch, temperature,
+                air,
+                and oxygen to ensure an ideal growth environment for microorganisms and facilitate the expression of the
+                target product. The tank body and tubing are fully enclosed, maintaining an aseptic state throughout the
+                culturing process, making it suitable for use in a grade D environment.`,
   },
   {
-    imgUrl: handleViteImages("croIcon2.png"),
-    title: "Viral Vector",
-    text: `We specialize in offeringcomprehensive servicesencompassing thedesign, construction, andpackaging of varioustypes of viral vectors.Additionally, we assist inexecuting a diverserange of biomolecularoperations tailored toyour specific gene ofinterest, ensuringthorough supportthroughout the process.`,
+    imgUrl: handleViteImages("gmp_img2.jpg"),
+    title: "Triple-tank stainless steel fermentation system",
+    text: `Accommodate multiple culture volumes, offer versatility and scalability for various production requirements.`,
   },
   {
-    imgUrl: handleViteImages("croIcon3.png"),
-    title: "Experiment Solutions",
-    text: `We offer an extensivearray of contractresearch servicestailored for functionalgenomics studies.`,
+    imgUrl: handleViteImages("gmp_img3.jpg"),
+    title: "Single-use Continuous Flow Centrifuge",
+    text: ` Mitigate cross-contamination risks between different batches.<br/>
+Enhanced recovery of the target product, with a maximum processing capacity of 240 L/h.<br/>
+Unique closed design and gentle treatment effectively minimize cell lysis, prevent bubbling, and facilitate subsequent product processing.<br/>
+Allows for flexible inter-product and inter-batch switching, reducing validation time and costs, and shortening inter-batch intervals.<br/>
+Substantially reduces cell separation costs while ensuring the activity and high yield of biological products.<br/>
+5.Mitigates production risks, suitable for use at various scales and across multiple batches.`,
   },
   {
-    imgUrl: handleViteImages("croIcon4.png"),
-    title: "Related Products",
-    text: `We offer a comprehensive range ofin-stock virus vectors,proteins, gRNA libraries.and relevant reagents,catering to diverse research needs acrossvarious aspects of your project.`,
+    imgUrl: handleViteImages("gmp_img4.jpg"),
+    title: "Stainless steel ultrafiltration system",
+    text: `ideal for pilot-scale operations and industrial production processes.<br/>
+Efficient particle, colloid, bacteria, pyrogen, and high-molecular-weight organic substance removal from aqueous solutions.<br/>
+Easy assembly and operation: Simply connect the tangential-flow ultrafiltration device, pump, pressure gauge, and tubing fittings, then add the sample to the tank to begin operation.<br/>
+Fast and efficient: Compared to dialysis, this system offers simpler assembly and faster processing speed. Additionally, it achieves higher concentration levels in a shorter period compared to centrifugal concentrating devices or stirring ultrafiltration devices.<br/>
+Scalability: The construction materials and fluid path of theUFcassette allow laboratory-scale conditions to be applied to production-scale processes.`,
   },
   {
-    imgUrl: handleViteImages("croIcon5.png"),
-    title: "Extracellular Vesicle",
-    text: `Our services for extracellularvesicle include isolation,identification, and functionalresearch at the laboratory stage.For samples from differentsources, our scientist team hasdeveloped multiple isolationsolutions which have beensuccessfully applied in samplesof cells, body fluids and tissueexosomes such as cerebrospinalfluid, urine, brain tissue and liver.`,
+    imgUrl: handleViteImages("gmp_img5.jpg"),
+    title: "AKTA Ready ",
+    text: `A single-use chromatography system equipped with 2 sets of flow paths, including the Low Flow Kit and High Flow Kit. The single-use system mitigates the risk of  cross-contamination.`,
+  },
+  {
+    imgUrl: handleViteImages("gmp_img6.jpg"),
+    title: "KR2i",
+    text: `A benchtop Tangential Flow Ultrafiltration (TFUF). Combined with adisposable flow path, it can concentrate and diafiltrate vectors in a biosafety cabinet to meet the project requirements in downstream purification`,
+  },
+  {
+    imgUrl: handleViteImages("gmp_img7.jpg"),
+    title: "Fully sealed cell preparation in a Class C+A environment",
+    text: `Cellular products must be produced in an aseptic environment to ensure the sterility assurance level required for safe transfusion back to patients.<br/>
+The isolator and incubator management system utilize the RTP (Rapid Transfer Port) device for aseptic docking, facilitating rapid and straightforward operation, enabling the seamless exchange of internal resources within a sealed, aseptic environment, meeting the requirements for spatial and temporal isolation in the production of cellular products.
+    `,
+  },
+  {
+    imgUrl: handleViteImages("gmp_img8.jpg"),
+    title: "Magnetic separation",
+    text: ``,
+  },
+  {
+    imgUrl: handleViteImages("gmp_img9.png"),
+    title: "Efficient gas-phase liquid nitrogen tank",
+    text: `
+    The Biosafe smart intelligent control system integrates liquid level control and container monitoring functions, displaying container safety monitoring information throughout the entire process from warehouse entry to exit.
+The 8.8 inch color touch screen features vibrant colors and powerful functions.<br/>
+The system maintains a low liquid nitrogen evaporation rate of 0.9% per day. It can be sustained for several days even after the liquid nitrogen level drops below the platform.<br/>
+It has the capacity to accommodate 43,120 vials of 2 mL cryovials and 720 bags of 500 mL cryopreservation bags.<br/>
+Equipped with a 3-tier authorization control mechanism, the recorded information meets the GMP FDA CRF 21 part 11 certification requirements.. `,
   },
 ]);
 const Labora = ref(<any>{});
@@ -294,18 +405,31 @@ const Labora = ref(<any>{});
   margin-top: -100px;
   position: relative;
 }
+
 .us-list {
   .service--box_link {
     height: 300px;
   }
 }
+
 .us-list-i:hover {
-  .textColor {
-    color: #fff;
-  }
+  // .textColor {
+  //   color: #fff;
+  // }
 }
+
 .industrialize-box {
   margin: 0;
+}
+
+.industrialize-box {
+  .service--box_link {
+    height: 720px;
+  }
+  .service--box_link:hover .service--box {
+    background-color: #fff;
+    color: #747475;
+  }
 }
 @media (max-width: 765px) {
   .us-list {
@@ -313,5 +437,27 @@ const Labora = ref(<any>{});
       height: 200px !important;
     }
   }
+  .industrialize-box {
+    .service--box_link {
+      height: 600px !important;
+    }
+  }
 }
+
+.equipments-box {
+  margin: 0;
+  .text-conent {
+    display: flex;
+    align-items: center;
+  }
+  .item-tit {
+    color: #1f757b;
+  }
+}
+
+.equipments-box-row {
+  margin-bottom: 20px;
+}
+
+// text-conent
 </style>

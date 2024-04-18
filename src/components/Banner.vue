@@ -128,8 +128,14 @@ onBeforeMount(() => {});
     z-index: 99;
     color: #fff;
     &:nth-child(2) {
+      margin-left: 150px;
+      right: 0;
+    }
+    @media (max-width: 767px) {
+      &:nth-child(2) {
       margin-left: 30px;
       right: 0;
+    }
     }
   }
   .btn-i:hover {

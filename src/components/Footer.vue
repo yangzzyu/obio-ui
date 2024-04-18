@@ -40,8 +40,17 @@
               <router-link to="/about/facilities">Facilities</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/about/mission">Mission</router-link>
+              <router-link to="/about/who">Who We Are</router-link>
             </dd>
+            <dd class="font-size14">
+              <router-link to="/about/commitment">Our Commitment</router-link>
+            </dd>
+            <dd class="font-size14">
+              <router-link to="/about/life">Life at OBiO</router-link>
+            </dd>
+            <!-- <dd class="font-size14">
+              <router-link to="/about/mission">Mission</router-link>
+            </dd> -->
             <!-- <dt class="font-size14">
               <router-link to="/team">Leadship Team</router-link>
             </dt> -->
@@ -57,15 +66,25 @@
               >
             </dt>
             <dd class="font-size14">
+              <router-link to="/capability/whyus">
+                Why Us
+              </router-link>
+            </dd>
+            <dd class="font-size14">
               <router-link to="/capability/industrialized">
                 Industrialized
               </router-link>
             </dd>
             <dd class="font-size14">
+              <router-link to="/capability/equipments">
+                Equipments
+              </router-link>
+            </dd>
+            <!-- <dd class="font-size14">
               <router-link to="/capability/commitment">
                 Commitment
               </router-link>
-            </dd>
+            </dd> -->
           </dl>
         </div>
         <div class="link-list-i">
@@ -116,7 +135,7 @@
               >
             </dt>
             <dd class="font-size14">
-              <router-link to="/careers">Our Culture</router-link>
+              <router-link to="/careers/culture">Our Culture</router-link>
             </dd>
 
             <dd class="font-size14">

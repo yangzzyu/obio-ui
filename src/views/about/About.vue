@@ -2,48 +2,37 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-10 14:58:00
+ * @LastEditTime: 2024-04-17 09:18:27
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
   <div class="in-about-wrap about-box">
-    <div class="section-1">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3">
+    <div class="section-1" id="who-box">
+      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
           Who We Are
         </h1>
         <div class="text font-size18">
           <p class="textColor">
-            <text class="txt-bold fontf8"
-              >OBiO Technology is a pioneering gene and cell therapy CRO and
-              CDMO,</text
-            >
-            established to provide comprehensive solutions. 
+            <text class="txt-bold fontf8">OBiO Technology is a pioneering gene and cell therapy CRO and
+              CDMO,</text>
+            established to provide comprehensive solutions.
           </p>
-          <br/>
+          <br />
           <p class="textColor">Our expertise spans
             vectorology studies, functional genomics, process and analytical
             development, as well as IND-enabling CMC and clinical and commercial
             manufacturing.
           </p>
-          <br/>
+          <br />
           <p class="textColor">
-            <text class="txt-bold fontf8"
-              >With our mission to "enable gene therapy for better lives," </text
-            >we are dedicated to delivering top-tier services globally. From
+            <text class="txt-bold fontf8">With our mission to "enable gene therapy for better lives," </text>we are
+            dedicated to delivering top-tier services globally. From
             bench to clinic, we are committed to advancing your product and
-            benefiting populations worldwide. 
+            benefiting populations worldwide.
           </p>
-          <br/>
+          <br />
           <p class="textColor">Our unwavering dedication ensures
             high-quality CDMO services for consumers worldwide across
             preclinical, IND, clinical, and commercial stages. Plasmids, mRNA,
@@ -56,15 +45,7 @@
       </el-col>
     </div>
     <div class="section-2" id="history-box">
-      <el-col
-        :xs="14"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
+      <el-col :xs="14" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
         <div class="pub-title style2 ub ub-ver ub-pe">
           <i class="line"></i><span class="fontf8 font-size50">History</span>
         </div>
@@ -85,32 +66,14 @@
             aria-label="Previous slide"
             aria-disabled="true"
           ></div> -->
-          <Swiper
-            ref="swiperNew"
-            :modules="[Autoplay, Navigation, Scrollbar]"
-            :loop="true"
-            :speed="3000"
-            :initialSlide="100"
-            slides-per-view="auto"
-            :simulateTouch="false"
-            :watchSlidesVisibility="true"
-            :navigation="navigation"
-            slideVisibleClass="my-slide-visible"
-            class="swiper-container"
-            :autoplay="{
-              delay: 0,
-              stopOnLastSlide: false,
-              disableOnInteraction: false,
-            }"
-            @mouseenter="enter"
-            @mouseleave="leave"
-            @swiper="onSwiper"
-          >
-            <swiper-slide
-              v-for="(item, index) in historyList"
-              :key="index"
-              :class="index % 2 === 0 ? 'even' : 'odd'"
-            >
+          <Swiper ref="swiperNew" :modules="[Autoplay, Navigation, Scrollbar]" :loop="true" :speed="3000"
+            :initialSlide="100" slides-per-view="auto" :simulateTouch="false" :watchSlidesVisibility="true"
+            :navigation="navigation" slideVisibleClass="my-slide-visible" class="swiper-container" :autoplay="{
+        delay: 0,
+        stopOnLastSlide: false,
+        disableOnInteraction: false,
+      }" @mouseenter="enter" @mouseleave="leave" @swiper="onSwiper">
+            <swiper-slide v-for="(item, index) in historyList" :key="index" :class="index % 2 === 0 ? 'even' : 'odd'">
               <div class="boxs">
                 <div class="cons">
                   <div class="year font-size30">{{ item.year }} <i></i></div>
@@ -130,15 +93,7 @@
       </el-col>
     </div>
     <section class="in-about-wrap about-box" id="facilities-box">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container section-3"
-      >
+      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container section-3">
         <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
           Facilities
         </h1>
@@ -147,10 +102,7 @@
             <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
               <div class="manufacturing-list bg-pinkbluelfr">
                 <div class="content">
-                  <img
-                    :src="handleViteImages('facilities1.jpg')"
-                    alt="OBiO Intelli-M"
-                  />
+                  <img :src="handleViteImages('facilities1.jpg')" alt="OBiO Intelli-M" />
                 </div>
               </div>
               <div class="font-size18 fontf7 iti">Lin-Gang Free-Trade Zone</div>
@@ -161,19 +113,12 @@
                 <text class="title-color txt-bold">77,000</text>-square-meter
                 Facility for Global Supply
               </p>
-              <router-link
-                to="/about/facilities/intellim"
-                class="read-more font-size18 fontf7"
-                >Read More</router-link
-              >
+              <router-link to="/about/facilities/intellim" class="read-more font-size18 fontf7">Read More</router-link>
             </el-col>
             <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
               <div class="manufacturing-list bg-pinkbluelfr">
                 <div class="content">
-                  <img
-                    :src="handleViteImages('facilities2.jpg')"
-                    alt="SPIRO Site"
-                  />
+                  <img :src="handleViteImages('facilities2.jpg')" alt="SPIRO Site" />
                 </div>
               </div>
               <div class="font-size18 fontf7 iti">
@@ -185,19 +130,13 @@
                 Integrated Laboratory Services Processand Analytical Method
                 DevelopmentResearch and Development Center
               </p>
-              <router-link
-                to="/about/facilities/spiro"
-                class="read-more font-size18 fontf7"
-                >Read More</router-link
-              >
+              <router-link to="/about/facilities/spiro" class="read-more font-size18 fontf7" LARGE>Read
+                More</router-link>
             </el-col>
             <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
               <div class="manufacturing-list bg-pinkbluelfr">
                 <div class="content">
-                  <img
-                    :src="handleViteImages('facilities3.jpg')"
-                    alt="PINE Site"
-                  />
+                  <img :src="handleViteImages('facilities3.jpg')" alt="PINE Site" />
                 </div>
               </div>
               <div class="font-size18 fontf7 iti">
@@ -206,31 +145,17 @@
               <div class="font-size30 fontf7 iti">PINE Site</div>
               <p class="font-size18 textColor txt-bold">
                 Process and Analytical Method Development Pre-clinical and
-                Clinical Manufacturing Three-building,<text
-                  class="title-color txt-bold"
-                  >10,000</text
-                >-square-meter campus
+                Clinical Manufacturing Three-building,<text class="title-color txt-bold">10,000</text>-square-meter
+                campus
               </p>
-              <router-link
-                to="/about/facilities/pine"
-                class="read-more font-size18 fontf7"
-                >Read More</router-link
-              >
+              <router-link to="/about/facilities/pine" class="read-more font-size18 fontf7">Read More</router-link>
             </el-col>
           </el-row>
-        </div></el-col
-      >
+        </div>
+      </el-col>
     </section>
-    <section class="in-about-wrap about-box">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container section-3"
-      >
+    <section class="in-about-wrap about-box" style="margin: 0;">
+      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container section-3">
         <!-- <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
           Factory Images
         </h1> -->
@@ -241,26 +166,24 @@
                 <div class="content">
                   <div class="factory-text">
                     <h1 class="font-size30 txt-bold fontf8">LARGE</h1>
-                    <p
-                      class="font-size18 txt-bold fontf7"
-                      style="color: #fff; margin-bottom: 20px"
-                    >
+                    <p class="font-size18 txt-bold fontf7" style="color: #fff; margin-bottom: 10px">
                       OBiO Technology’s intelligent medical industrialization
                       base
                     </p>
-                    <p
+                    <ul class="font-size16 txt-bold is-details details-ul" style="color: #fff">
+                      <li>The only 77,000 ㎡ scale GMP-compliant facility in the world</li>
+                      <li>Gene cell therapy commercial production service base</li>
+                    </ul>
+                    <!-- <p
                       class="font-size18 txt-bold is-details"
                       style="color: #fff"
                     >
                       The only 77,000m2 scale GMP-compliant facility in the
                       world Gene cell therapy commercial production service base
                       Large-scale; Large production capacity
-                    </p>
+                    </p> -->
                   </div>
-                  <img
-                    :src="handleViteImages('facility1.png')"
-                    alt="SPIRO Site"
-                  />
+                  <img :src="handleViteImages('facility1.png')" alt="SPIRO Site" />
                   <div class="overlay"></div>
                 </div>
               </div>
@@ -270,32 +193,22 @@
                 <div class="content">
                   <div class="factory-text">
                     <h1 class="font-size30 txt-bold fontf8">COMPREHENSIVE</h1>
-                    <p
-                      class="font-size18 txt-bold fontf7"
-                      style="color: #fff; margin-bottom: 20px"
-                    >
+                    <p class="font-size18 txt-bold fontf7" style="color: #fff; margin-bottom: 10px">
                       OBiO Technology’s intelligent medical industrialization
                       base
                     </p>
-                    <p
-                      class="font-size18 txt-bold is-details"
-                      style="color: #fff"
-                    >
-                      More than 30 gene cell therapy production lines
-                      Large-scale multi-option prokaryocyte production capacity
-                      20 cell therapy product manufacturing lines of varied
-                      characteristics 50-2000L comprehensive and flexible viral
-                      vector manufacturing process Filling and lyophilizing
-                      platform that meets the requirements for manufacturing
-                      multiple dosage forms…… Meeting the requirements of
-                      clients worldwide From DNA to IND to NDA Full-process
-                      business service requirements
-                    </p>
+                    <ul class="font-size16 txt-bold is-details details-ul" style="color: #fff">
+                      <li>Large-scale; Large production capacity</li>
+                      <li>More than 30 gene cell therapy production lines</li>
+                      <li>Large-scale multi-option prokaryocyteproduction capacity</li>
+                      <li>20 cell therapy product manufacturing lines of varied characteristics</li>
+                      <li>50-2000L comprehensive and flexible viral vector manufacturing process</li>
+                      <li>Filling and lyophilizing platform that meets the requirements for manufacturing multiple dosage forms</li>
+                      <li>Meeting the requirements of clients worldwide</li>
+                      <li>From DNA to INDto NDA</li>
+                    </ul>
                   </div>
-                  <img
-                    :src="handleViteImages('facility2.png')"
-                    alt="PINE Site"
-                  />
+                  <img :src="handleViteImages('facility2.png')" alt="PINE Site" />
                 </div>
               </div>
             </el-col>
@@ -304,27 +217,24 @@
                 <div class="content">
                   <div class="factory-text">
                     <h1 class="font-size30 txt-bold fontf8">INNOVATIVE</h1>
-                    <p
-                      class="font-size18 txt-bold fontf7"
-                      style="color: #fff; margin-bottom: 20px"
-                    >
+                    <p class="font-size18 txt-bold fontf7" style="color: #fff; margin-bottom: 10px">
                       OBiO Technology’s intelligent medical industrialization
                       base
                     </p>
-                    <p
-                      class="font-size18 txt-bold is-details"
-                      style="color: #fff"
-                    >
+                    <ul class="font-size16 txt-bold is-details details-ul" style="color: #fff">
+                      <li>Single-use process vector production line</li>
+                      <li>Single-use process prokaryocyteculture production line</li>
+                      <li>Filling+lyophilizingintegrated innovative filling system</li>
+                      <li>Positive sample cell therapy product manufacturing line</li>
+                    </ul>
+                    <!-- <p class="font-size18 txt-bold is-details" style="color: #fff">
                       Single-use process vector production line Single-use
                       process prokaryocyte culture production line
                       Filling+lyophilizing integrated innovative filling system
                       Positive sample cell therapy product manufacturing line
-                    </p>
+                    </p> -->
                   </div>
-                  <img
-                    :src="handleViteImages('facility3.png')"
-                    alt="OBiO Intelli-M"
-                  />
+                  <img :src="handleViteImages('facility3.png')" alt="OBiO Intelli-M" />
                 </div>
               </div>
             </el-col>
@@ -333,56 +243,37 @@
                 <div class="content">
                   <div class="factory-text">
                     <h1 class="font-size30 txt-bold fontf8">INTELLIGENT</h1>
-                    <p
-                      class="font-size18 txt-bold fontf7"
-                      style="color: #fff; margin-bottom: 20px"
-                    >
+                    <p class="font-size18 txt-bold fontf7" style="color: #fff; margin-bottom: 10px">
                       OBiO Technology’s intelligent medical industrialization
                       base
                     </p>
-                    <p
-                      class="font-size18 txt-bold is-details"
-                      style="color: #fff"
-                    >
-                      Digitization and intelligentification based mechanical arm
-                      material charging system Automatic dispensing system
-                      Automatic sample storage system in liquid nitrogen
-                      Chip-based automatic management of cleanroom suits Remote
-                      electronic signature system Full-cycle visualization-based
-                      project management
-                    </p>
+                    <ul class="font-size16 txt-bold is-details details-ul" style="color: #fff">
+                      <li>Digitization and intelligentificationbased mechanical arm material charging system</li>
+                      <li>Automatic dispensing system</li>
+                      <li>Automatic sample storage system in liquid nitrogen</li>
+                      <li>Chip-based automatic management of cleanroom suits</li>
+                      <li>Remote electronic signature system</li>
+                      <li>Full-cycle visualization-based project management</li>
+                      <li>Full-process business service requirements</li>
+                    </ul>
                   </div>
-                  <img
-                    :src="handleViteImages('facility4.png')"
-                    alt="OBiO Intelli-M"
-                  />
+                  <img :src="handleViteImages('facility4.png')" alt="OBiO Intelli-M" />
                 </div>
               </div>
             </el-col>
-          </el-row></div
-      ></el-col>
+          </el-row>
+        </div>
+      </el-col>
     </section>
     <section class="our-box mb-5" id="commitment-box">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
+      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
         <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
           Our Commitment: FAST
         </h1>
         <el-row class="our-box-content" :gutter="60">
           <el-col :span="2" :xs="24" />
           <el-col :span="6" :xs="24" class="left-content">
-            <img
-              class="img"
-              :src="handleViteImages('Viral_Vector_bg3.png')"
-              alt=""
-            />
+            <img class="img" :src="handleViteImages('Viral_Vector_bg3.png')" alt="" />
           </el-col>
           <el-col :span="14" :xs="24" class="font-size20 news-list">
             <div class="content-i" v-for="(i, idx) in ourList" :key="idx">
@@ -393,19 +284,12 @@
             </div>
           </el-col>
           <el-col :span="2" :xs="24" />
-        </el-row></el-col
-      >
+        </el-row>
+      </el-col>
     </section>
-    <section class="our-box">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
+    
+    <section class="our-box" id="life-obio-box">
+      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
         <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
           Life at OBiO
         </h1>
@@ -414,10 +298,7 @@
             <img class="img" :src="handleViteImages('life_bg.png')" alt="" />
           </el-col>
           <el-col :span="16" :xs="24" class="font-size20 news-list">
-            <h3
-              class="title-color font-size30 fontf7"
-              style="margin-bottom: 30px"
-            >
+            <h3 class="title-color font-size30 fontf7" style="margin-bottom: 30px">
               As OBiO Tech swiftly evolves, every OBiOers are immersed in an
               environment fostering "enhanced capabilities, purposeful work, and
               a fulfilling life."
@@ -442,17 +323,13 @@
         </el-row>
         <ul class="btn-ul">
           <li>
-            <router-link to="/team" class="btn-a font-size18 fontf7"
-              >Join Our Team</router-link
-            >
+            <router-link to="/team" class="read-more font-size18 fontf7">Join Our Team</router-link>
           </li>
           <li>
-            <router-link to="/careers/life" class="btn-a font-size18 fontf7"
-              >Read More</router-link
-            >
+            <router-link to="/careers/life" class="read-more font-size18 fontf7">Read More</router-link>
           </li>
-        </ul></el-col
-      >
+        </ul>
+      </el-col>
     </section>
   </div>
 </template>
@@ -527,7 +404,7 @@ Extensive Experience in IND-Enabling Support
 Responses at First Instance`,
   },
 ]);
-onMounted(() => {});
+onMounted(() => { });
 </script>
 
 <style>
@@ -537,20 +414,23 @@ onMounted(() => {});
 </style>
 <style lang="scss" scoped>
 .about-box {
-  margin: 0 !important;
+  // margin: 0 !important;
   // .manufacturing-list {
   //   cursor: pointer;
   // }
 }
+
 .factory-text {
   position: absolute;
   padding: 10px;
   height: 100%;
+
   h1 {
     background: linear-gradient(0deg, #26fddc 0%, #3d8bd3 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
   .text-sapn {
     font-family: Source Han Sans CN;
     font-weight: 400;
@@ -564,20 +444,29 @@ onMounted(() => {});
     padding: 10px 0;
     position: relative;
   }
+
   i {
     display: inline-block;
-    width: 10px; /* 圆点的直径 */
-    height: 10px; /* 圆点的直径 */
-    background-color: #1f757b; /* 圆点的颜色 */
-    border-radius: 50%; /* 圆形的关键点 */
-    margin-right: 10px; /* 与列表文本之间的距离 */
+    width: 10px;
+    /* 圆点的直径 */
+    height: 10px;
+    /* 圆点的直径 */
+    background-color: #1f757b;
+    /* 圆点的颜色 */
+    border-radius: 50%;
+    /* 圆形的关键点 */
+    margin-right: 10px;
+    /* 与列表文本之间的距离 */
   }
 }
+
 .btn-ul {
   display: flex;
   margin: 20px 0;
+
   li {
     flex: 1;
+
     a {
       margin: auto;
       display: flex;
@@ -585,6 +474,12 @@ onMounted(() => {});
       width: 160px;
     }
   }
+}
+.details-ul {
+  padding:0 10px 0 22px;
+}
+.details-ul li{
+  list-style-type: disc !important;
 }
 </style>
 <style>

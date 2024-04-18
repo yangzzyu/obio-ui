@@ -224,8 +224,38 @@
               cell biology and animal study services for biomedical researchers
             </p>
           </div>
-          <el-row class="cro--service row" :gutter="20">
+          <el-row class="cro--service row" :gutter="10">
             <el-col
+              :xs="24"
+              :span="5"
+              class="news--slider-i us-list-i"
+              v-for="(item, index) in croList"
+              :key="index"
+            >
+              <a class="block tans service--box_link bg-pinkbluelfr">
+                <div class="service--box align-items-start">
+                  <div
+                    class="service--box_icon mb-2 min-width-70"
+                    style="margin: auto"
+                  >
+                    <!-- <img class="icon--white" :src="item.actImgUrl" alt="GMP Vector Manufacturing icon" /> -->
+                    <!-- class="icon--colour" -->
+                    <img
+                      :src="item.imgUrl"
+                      alt="GMP Vector Manufacturing icon"
+                    />
+                  </div>
+                  <p class="textColor font-size18">{{ item.text }}</p>
+                  <a
+                    @click="croPopLabora(item.popLaboraId)"
+                    class="read-more font-size18 fontf7 service--box-a"
+                    style="cursor: pointer"
+                    >Read More</a
+                  >
+                </div>
+              </a>
+            </el-col>
+            <!-- <el-col
               :xs="24"
               :span="5"
               class="cro--service-i"
@@ -249,7 +279,7 @@
                 style="cursor: pointer"
                 >Read More</a
               >
-            </el-col>
+            </el-col> -->
           </el-row>
         </el-col>
       </section>
@@ -654,5 +684,23 @@ function handleClose() {
 .home-facilities-mob .list .item {
   display: flex;
   justify-content: center;
+}
+#CROout {
+  .service--box_link {
+    height: 550px;
+  }
+  .service--box_link .service--box {
+    padding: 0.5rem;
+  }
+  .service--box_link:hover .service--box {
+    background-color: #fff;
+  }
+}
+@media (max-width: 765px) {
+  #CROout {
+    .service--box_link {
+      height: 300px !important;
+    }
+  }
 }
 </style>

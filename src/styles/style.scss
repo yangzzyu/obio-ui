@@ -1572,6 +1572,7 @@ a:focus {
   text-decoration: underline !important;
   display: flex;
   justify-content: center;
+  font-weight: 700 !important;
 }
 .in-about-wrap .section-3 .fac-con .iti {
   margin-top: 15px;
@@ -1619,6 +1620,10 @@ a:focus {
 .service--box_link:hover .service--box {
   background-color: transparent;
   color: #fff;
+  p,
+  .read-more {
+    // color: #fff !important;
+  }
   .p-large,
   .blog-btn {
     color: #fff;
@@ -1631,6 +1636,12 @@ a:focus {
   position: relative;
   margin-bottom: 10px;
   height: 98%;
+  .service--box-a {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
 }
 .service--box_link .service--box .service--box_icon {
   position: relative;
