@@ -56,9 +56,9 @@
         <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Inquiry</h1>
         <el-row :gutter="50" class="cdmo-top">
           <el-col :xs="24" :span="12">
-            <h3 class="title-color font-size18 txt-bold fontf7">
+            <h2 class="title-color font-size18 txt-bold fontf7">
               Laboratory Sciences
-            </h3>
+            </h2>
 
             <el-checkbox-group
               v-model="form.laboratory"
@@ -103,9 +103,9 @@
             </el-checkbox-group>
           </el-col>
           <el-col :xs="24" :span="12">
-            <h3 class="title-color font-size18 txt-bold fontf7">
+            <h2 class="title-color font-size18 txt-bold fontf7">
               CDMO Solutions
-            </h3>
+            </h2>
             <el-checkbox-group
               v-model="form.cdmo"
               @change="changeCdmo"
@@ -230,7 +230,7 @@
                     <a
                       xhref="/cn/home/ys/cid/861"
                       target="_blank"
-                      style="color: #25b096"
+                      style="color: #15705f"
                       >Privacy Policy</a
                     >
                   </div>

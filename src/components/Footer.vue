@@ -154,6 +154,7 @@
             <dt class="font-size20 first-tit">
               <router-link to="/cro">CRO <br />Service</router-link>
             </dt>
+            <dd></dd>
           </dl>
         </div>
         <div class="link-list-i">
@@ -161,20 +162,21 @@
             <dt class="font-size20 first-tit">
               <router-link to="/contact">Contact</router-link>
             </dt>
+            <dd></dd>
           </dl>
         </div>
       </div>
       <div class="foot-link ub">
-        <a href="https://www.linkedin.com/company/41870372">
+        <a href="https://www.linkedin.com/company/41870372" aria-label="Company LinkedIn">
           <font-awesome-icon
             class="footer-icon"
             size="2xl"
             :icon="['fab', 'linkedin']"
         /></a>
-        <a href="https://www.youtube.com/@obiotechnology">
+        <a href="https://www.youtube.com/@obiotechnology" aria-label="Company YouTube">
           <font-awesome-icon size="2xl" :icon="['fab', 'youtube']"
         /></a>
-        <a href="https://www.facebook.com/profile.php?id=61555811491695">
+        <a href="https://www.facebook.com/profile.php?id=61555811491695" aria-label="Company Facebook">
           <font-awesome-icon size="2xl" :icon="['fab', 'facebook']" />
         </a>
       </div>

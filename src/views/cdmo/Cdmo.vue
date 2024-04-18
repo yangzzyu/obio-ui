@@ -155,9 +155,9 @@
                   <img :src="item.imgUrl" alt="SPIRO Site" />
                 </div>
               </a>
-              <h4 class="font-size24 fontf7 iti">
+              <h2 class="font-size24 fontf7 iti">
                 {{ item.title }}
-              </h4>
+              </h2>
               <ul>
                 <li
                   style="padding: 5px 0"

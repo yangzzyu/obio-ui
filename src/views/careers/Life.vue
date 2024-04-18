@@ -52,9 +52,21 @@
                 v-for="(i, k) in item.imgList" :key="k">
                 <div class="manufacturing-list bg-pinkbluelfr">
                   <div class="content" style="width: 100%;max-height: 200px; overflow: hidden">
-                    <el-image style="width: 100%; height: 100%" :src="i" :zoom-rate="1.2" :max-scale="7"
-                      :min-scale="0.2" :initial-index="k" :crossorigin="null" :preview-src-list="item.imgList"
-                      fit="cover" :z-index="99999" :preview-teleported="true" :hide-on-click-modal="true" />
+                    <el-image
+                      style="width: 100%; height: 100%"
+                      :src="i"
+                      :alt="`${item.title} Picture ${k + 1}`"
+                      :zoom-rate="1.2"
+                      :max-scale="7"
+                      :min-scale="0.2"
+                      :initial-index="k"
+                      :crossorigin="null"
+                      :preview-src-list="item.imgList"
+                      fit="cover"
+                      :z-index="99999"
+                      :preview-teleported="true"
+                      :hide-on-click-modal="true"
+                    />
                   </div>
                 </div>
               </el-col>
@@ -70,8 +82,13 @@
           All Hands Meeting
         </h1>
         <el-col :xs="24" :span="20" style="margin: auto" class="container">
-          <img :src="handleViteImages('life/meetin_bg.png')" width="100%" alt="" srcset="" class="mb-5" /></el-col>
-      </el-col>
+          <img
+            :src="handleViteImages('life/meetin_bg.png')"
+            width="100%"
+            alt="All Hands Meeting Picture"
+            srcset=""
+            class="mb-5" /></el-col
+      ></el-col>
     </section>
     <div class="in-about-wrap training-box mb-6">
       <div class="section-3">
@@ -84,10 +101,25 @@
             <el-row class="row" :gutter="10">
               <el-col :xs="24" :span="12" class="" v-for="(i, index) in footballList" :key="index">
                 <div class="manufacturing-list bg-pinkbluelfr">
-                  <div class="content" style="width: 100%; height: 300px; overflow: hidden">
-                    <el-image style="width: 100%; height: 100%" :src="i" :zoom-rate="1.2" :max-scale="7"
-                      :min-scale="0.2" :initial-index="index" :crossorigin="null" :preview-src-list="footballList"
-                      fit="cover" :z-index="99999" :preview-teleported="true" :hide-on-click-modal="true" />
+                  <div
+                    class="content"
+                    style="width: 100%; height: 300px; overflow: hidden"
+                  >
+                    <el-image
+                      style="width: 100%; height: 100%"
+                      :src="i"
+                      :alt="`Basketball Picture ${index + 1}`"
+                      :zoom-rate="1.2"
+                      :max-scale="7"
+                      :min-scale="0.2"
+                      :initial-index="index"
+                      :crossorigin="null"
+                      :preview-src-list="footballList"
+                      fit="cover"
+                      :z-index="99999"
+                      :preview-teleported="true"
+                      :hide-on-click-modal="true"
+                    />
                   </div>
                 </div>
               </el-col>
