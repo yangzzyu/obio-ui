@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-08 15:11:53
+ * @LastEditTime: 2024-04-15 15:54:26
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -32,19 +32,19 @@
               manufacturing for viral vector, oncolytic virus, and cell therapy
               products. Our expertise extends to offering holistic solutions
               tailored to support the industrialization and commercialization of
-              various products at the Pre-IND stage and beyond. 
+              various products at the Pre-IND stage and beyond.
             </p>
-            <p class="font-size18 fontf7 cro-p textColor">Through years of
-              dedicated effort, OBiO has built an integrated process development
-              system, supported by a flexible cGMP manufacturing platform,
-              comprehensive quality system and efficient project management. Our
-              experienced team of experts will navigate the industrialization
-              process with you side-by-side. 
+            <p class="font-size18 fontf7 cro-p textColor">
+              Through years of dedicated effort, OBiO has built an integrated
+              process development system, supported by a flexible cGMP
+              manufacturing platform, comprehensive quality system and efficient
+              project management. Our experienced team of experts will navigate
+              the industrialization process with you side-by-side.
             </p>
-            <p class="font-size18 fontf7 cro-p textColor">With our technical expertise in
-              viral vector, oncolytic virus and cell therapy, we will help you
-              to accelerate your product life-cycle from pre-clinical to
-              commercially ready.
+            <p class="font-size18 fontf7 cro-p textColor">
+              With our technical expertise in viral vector, oncolytic virus and
+              cell therapy, we will help you to accelerate your product
+              life-cycle from pre-clinical to commercially ready.
             </p>
           </el-col>
         </el-row>
@@ -116,14 +116,41 @@
           CDMO Service
         </h1>
         <el-row class="cro--service row" :gutter="20">
-            <el-col
-              :xs="24"
-              :span="6"
-              class="cro--service-i"
-              v-for="(item, index) in croList"
-              :key="index"
-            >
-              <a class="block tans">
+          <el-col
+            :xs="24"
+            :span="6"
+            class="cro--service-i"
+            v-for="(item, index) in croList"
+            :key="index"
+          >
+            <a class="tans service--box_link bg-pinkbluelfr">
+              <div class="service--box align-items-start">
+                <div class="manufacturing-list">
+                  <div class="content">
+                    <img :src="item.imgUrl" alt="" srcset="" />
+                  </div>
+                </div>
+                <h4 class="font-size24 fontf7 iti">
+                  {{ item.title }}
+                </h4>
+                <ul>
+                  <li
+                    style="padding: 5px 0"
+                    v-for="(i, idx) in item.textArr"
+                    :key="idx"
+                    class="font-size18 textColor"
+                  >
+                    • {{ i }}
+                  </li>
+                </ul>
+                <router-link
+                  :to="item.path"
+                  class="font-size18 fontf7 read-more mt-3 service--box-a"
+                  >Read More</router-link
+                >
+              </div>
+            </a>
+            <!-- <a class="block tans">
                 <div class="animate-imgxx uof img">
                   <img :src="item.imgUrl" alt="SPIRO Site" />
                 </div>
@@ -141,11 +168,11 @@
                   • {{ i }}
                 </li>
               </ul>
-              <router-link :to="item.path" class="font-size18 fontf7 btn-a mt-3"
+              <router-link :to="item.path" class="font-size18 fontf7 read-more mt-3"
                 >Read More</router-link
-              >
-            </el-col>
-          </el-row>
+              > -->
+          </el-col>
+        </el-row>
       </el-col>
     </section>
     <div class="in-about-wrap facilities-box" id="manufacturing-box">
@@ -263,67 +290,81 @@
             <div class="fac-con">
               <el-row class="row" :gutter="10">
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
-                  <div class="manufacturing-list">
-                    <div class="content innovation-content">
-                      <img
-                        :src="handleViteImages('innovation1.png')"
-                        alt="SPIRO Site"
-                      />
+                  <a class="tans service--box_link bg-pinkbluelfr">
+                    <div class="service--box align-items-start">
+                      <div class="manufacturing-list">
+                        <div class="content innovation-content">
+                          <img
+                            :src="handleViteImages('innovation1.png')"
+                            alt="SPIRO Site"
+                          />
+                        </div>
+                      </div>
+                      <h1 class="font-size18 fontf7 iti">AAVneO™ System</h1>
+                      <p class="font-size18 txt textColor txt-bold">
+                        Next-Generation Capsid <br />Screening Platform
+                      </p>
+                      <a
+                        style="cursor: pointer"
+                        @click="popLabora(1)"
+                        class="read-more font-size18 fontf7 mt-3 service--box-a"
+                        >Read More</a
+                      >
                     </div>
-                  </div>
-                  <h1 class="font-size18 fontf7 iti">AAVneO™ System</h1>
-                  <p class="font-size18 txt textColor txt-bold">
-                    Next-Generation Capsid <br />Screening Platform
-                  </p>
-                  <a
-                    style="cursor: pointer"
-                    @click="popLabora(1)"
-                    class="read-more font-size18 fontf7 mt-3"
-                    >Read More</a
-                  >
+                  </a>
                 </el-col>
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-                  <div class="manufacturing-list">
-                    <div class="content innovation-content">
-                      <img
-                        :src="handleViteImages('innovation2.png')"
-                        alt="PINE Site"
-                      />
+                  <a class="tans service--box_link bg-pinkbluelfr">
+                    <div class="service--box align-items-start">
+                      <div class="manufacturing-list">
+                        <div class="content innovation-content">
+                          <img
+                            :src="handleViteImages('innovation2.png')"
+                            alt="PINE Site"
+                          />
+                        </div>
+                      </div>
+                      <h1 class="font-size18 fontf7 iti">
+                        OVersatile™ Platform
+                      </h1>
+                      <p class="font-size18 textColor txt txt-bold">
+                        Versatility for Various Needs
+                      </p>
+                      <a
+                        style="cursor: pointer"
+                        @click="popLabora(2)"
+                        class="read-more font-size18 fontf7 mt-3 service--box-a"
+                        >Read More</a
+                      >
                     </div>
-                  </div>
-                  <h1 class="font-size18 fontf7 iti">OVersatile™ Platform</h1>
-                  <p class="font-size18 textColor txt txt-bold">
-                    Versatility for Various Needs
-                  </p>
-                  <a
-                    style="cursor: pointer"
-                    @click="popLabora(2)"
-                    class="read-more font-size18 fontf7 mt-3"
-                    >Read More</a
-                  >
+                  </a>
                 </el-col>
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-                  <div class="manufacturing-list">
-                    <div class="content innovation-content">
-                      <img
-                        :src="handleViteImages('innovation3.png')"
-                        alt="OBiO Intelli-M"
-                      />
+                  <a class="tans service--box_link bg-pinkbluelfr">
+                    <div class="service--box align-items-start">
+                      <div class="manufacturing-list">
+                        <div class="content innovation-content">
+                          <img
+                            :src="handleViteImages('innovation3.png')"
+                            alt="OBiO Intelli-M"
+                          />
+                        </div>
+                      </div>
+                      <h1 class="font-size18 fontf7 iti">
+                        Proprietary Cell Line Development
+                      </h1>
+                      <p class="font-size18 textColor txt txt-bold">
+                        High-Yielding Cell Line for <br />
+                        Suspension Culture
+                      </p>
+                      <a
+                        style="cursor: pointer"
+                        @click="popLabora(3)"
+                        class="read-more font-size18 fontf7 mt-3 service--box-a"
+                        >Read More</a
+                      >
                     </div>
-                  </div>
-                  <h1 class="font-size18 fontf7 iti">
-                    Proprietary Cell Line Development
-                  </h1>
-                  <p class="font-size18 textColor txt txt-bold">
-                    High-Yielding Cell Line for <br />
-                    Suspension Culture
-                  </p>
-                  <a
-                    style="cursor: pointer"
-                    @click="popLabora(3)"
-                    class="read-more font-size18 fontf7 mt-3"
-                    >Read More</a
-                  >
+                  </a>
                 </el-col>
               </el-row>
             </div></el-col
@@ -593,6 +634,38 @@ function popLabora(id) {
   margin: 0;
   .txt {
     text-align: center;
+  }
+}
+#cdmo-service-box,
+#innovation {
+  .service--box_link:hover .service--box {
+    background-color: #fff;
+    color: #747475;
+  }
+  .manufacturing-list .content {
+    text-align: center;
+  }
+}
+#cdmo-service-box {
+  .service--box_link {
+    height: 600px;
+  }
+}
+#innovation {
+  .service--box_link {
+    height: 400px;
+  }
+}
+@media (max-width: 765px) {
+  #cdmo-service-box {
+    .service--box_link {
+      height: 450px !important;
+    }
+  }
+  #innovation {
+    .service--box_link {
+      height: 320px !important;
+    }
   }
 }
 </style>

@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-03-27 16:46:16
+ * @LastEditTime: 2024-04-15 15:55:24
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -46,7 +46,7 @@
                 {{ item.text }}
               </p>
               <a
-                class="font-size18 fontf7 btn-a mt-2"
+                class="font-size18 fontf7 read-more mt-2"
                 style="cursor: pointer"
                 @click="popLabora(item.popLaboraId)"
                 >Read More</a

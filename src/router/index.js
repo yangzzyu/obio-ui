@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-09 14:00:09
+ * @LastEditTime: 2024-04-16 16:54:40
  * @FilePath: \obio-ui\src\router\index.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -29,7 +29,6 @@ const router = createRouter({
           name: "home",
           component: () => import("@/views/home/Index.vue"),
         },
-
         {
           path: "/aboutRouter",
           redirect: "/about",
@@ -68,6 +67,24 @@ const router = createRouter({
               name: "OBiO Intelli-M",
               component: () => import("@/views/about/IntelliM.vue"),
             },
+            {
+              path: "/about/who",
+              name: "Who We Are",
+              component: () => import("@/views/about/About.vue"),
+              meta: { position: "who-box" },
+            },
+            {
+              path: "/about/commitment",
+              name: "Our Commitment",
+              component: () => import("@/views/about/About.vue"),
+              meta: { position: "commitment-box" },
+            },
+            {
+              path: "/about/life",
+              name: "Life at OBIO",
+              component: () => import("@/views/about/About.vue"),
+              meta: { position: "life-obio-box" },
+            },
             // {
             //   path: "/team",
             //   name: "Leadership Team",
@@ -75,6 +92,7 @@ const router = createRouter({
             // },
           ],
         },
+
         {
           path: "/capability",
           name: "Capability & Commitment",
@@ -91,6 +109,18 @@ const router = createRouter({
               name: "Our Commitment: FAST",
               component: () => import("@/views/capability/Index.vue"),
               meta: { position: "commitment-box" },
+            },
+            {
+              path: "/capability/whyus",
+              name: "Why Us",
+              component: () => import("@/views/capability/Index.vue"),
+              meta: { position: "cap" },
+            },
+            {
+              path: "/capability/equipments",
+              name: "Equipments",
+              component: () => import("@/views/capability/Index.vue"),
+              meta: { position: "equipments-dom" },
             },
           ],
         },
@@ -231,6 +261,12 @@ const router = createRouter({
             {
               path: "/about/mission",
               name: "Mission",
+              component: () => import("@/views/careers/Index.vue"),
+              meta: { position: "mission-box" },
+            },
+            {
+              path: "/careers/culture",
+              name: "Our Culture",
               component: () => import("@/views/careers/Index.vue"),
               meta: { position: "mission-box" },
             },

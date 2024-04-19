@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-09 14:38:45
+ * @LastEditTime: 2024-04-16 16:56:59
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -10,16 +10,8 @@
   <div class="lab-sciences">
     <Focus :focusObj="FocusData" />
     <section class="culture-box hero-style-top careers-box" id="mission-box">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
-        <h1 class="title-color font-size50 txt-bold section-title fontf8">
+      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
+        <h1 class="title-color font-size50 txt-bold section-title fontf8 mt-5">
           Our Culture
         </h1>
         <br />
@@ -30,22 +22,44 @@
         </p>
       </el-col>
     </section>
+    <section class="culture-life-box  hero-style-top" id="mission-life-box">
+      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
+        <h1 class="title-color font-size50 txt-bold section-title fontf8">
+          Life at OBiO
+        </h1>
+      </el-col>
+    </section>
+    <div class="in-about-wrap training-box" v-for="(item, index) in lifeList" :key="index">
+      <div class="section-3">
+        <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
+          <h1 class="p-title font-size30 txt-bold fontf8 mb-3 mt-3">
+            {{ item.title }}
+          </h1>
+
+          <div class="fac-con">
+            <el-row class="row" :gutter="10">
+              <el-col :xs="24" :span="24 / item.imgList.length" class="" v-for="(i, k) in item.imgList" :key="k">
+                <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="content" style="width: 100%;max-height: 200px; overflow: hidden">
+                    <el-image style="width: 100%; height: 100%" :src="i" :zoom-rate="1.2" :max-scale="7"
+                      :min-scale="0.2" :initial-index="k" :crossorigin="null" :preview-src-list="item.imgList"
+                      fit="cover" :z-index="99999" :preview-teleported="true" :hide-on-click-modal="true" />
+                  </div>
+                </div>
+              </el-col>
+            </el-row>
+          </div>
+        </el-col>
+      </div>
+    </div>
     <section id="cro" class="cro-list">
-      <div
-        class="cro-list-item row"
-        v-for="(item, index) in croList"
-        :key="index"
-      >
-        <el-col
-          :xs="22"
-          :sm="20"
-          :md="20"
-          :lg="20"
-          :xl="22"
-          style="margin: auto"
-          class="container"
-        >
-          <el-row :gutter="100">
+      <div class="cro-list-item row" v-for="(item, index) in croList" :key="index">
+        <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
+          <h1 class="font-size30 fontf7 iti fontf8 item-tit">
+            {{ item.title }}
+          </h1>
+          <p class="font-size18 cro-p textColor" v-html="item.text"></p>
+          <!-- <el-row :gutter="100">
             <el-col :xs="24" :span="4" />
             <el-col :xs="24" :span="6"
               ><div class="animate-imgxx uof img">
@@ -58,27 +72,16 @@
               </h1>
               <p class="font-size18 cro-p textColor" v-html="item.text"></p>
             </el-col>
-          </el-row>
+          </el-row> -->
         </el-col>
       </div>
     </section>
     <!-- <Events /> -->
     <section class="mt-4">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
+      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
         <el-row class="news--slider row" :gutter="10">
           <el-col :xs="24" :span="12" class="news--slider-i">
-            <router-link
-              to="/careers/life"
-              class="block tans service--box_link bg-pinkbluelfr career-a"
-            >
+            <router-link to="/careers/life" class="block tans service--box_link bg-pinkbluelfr career-a">
               <h1 class="font-bold mb-3 font-size30 txt-bold fontf7">
                 Life at OBiO
               </h1>
@@ -108,10 +111,7 @@
             </router-link>
           </el-col>
           <el-col :xs="24" :span="12" class="news--slider-i">
-            <router-link
-              to="/careers/job"
-              class="block tans service--box_link bg-pinkbluelfr career-a"
-            >
+            <router-link to="/careers/job" class="block tans service--box_link bg-pinkbluelfr career-a">
               <h1 class="font-bold mb-3 font-size30 txt-bold fontf7">
                 Job Opening
               </h1>
@@ -140,16 +140,10 @@
             </el-row> -->
             </router-link>
           </el-col>
-        </el-row></el-col
-      >
+        </el-row></el-col>
     </section>
   </div>
-  <el-dialog
-    v-model="dialogVisible"
-    title=""
-    width="60%"
-    :before-close="handleClose"
-  >
+  <el-dialog v-model="dialogVisible" title="" width="60%" :before-close="handleClose">
     <div class="popLaboraBox-main">
       <div class="font-size30 fontf8 title title-color">
         <span>{{ Labora.title }}</span>
@@ -170,7 +164,7 @@
 </template>
 
 <script lang="ts" setup name="LabSciences">
-import { ref } from "vue";
+import { ref, reactive } from "vue";
 import Focus from "@/components/Focus.vue";
 import Events from "@/components/Events.vue";
 import { handleViteImages, goRouter } from "@/utils";
@@ -185,6 +179,35 @@ function handleClose() {
   Labora.value = {};
   dialogVisible.value = false;
 }
+const lifeList = reactive([
+  {
+    title: "Training and Internship",
+    imgList: [
+      handleViteImages("life/1.png"),
+      handleViteImages("life/2.png"),
+      handleViteImages("life/3.png"),
+      handleViteImages("life/4.png"),
+    ],
+  },
+  {
+    title: "Team Building",
+    imgList: [
+      handleViteImages("life/5.png"),
+      handleViteImages("life/6.png"),
+      handleViteImages("life/7.png"),
+      handleViteImages("life/8.png"),
+    ],
+  },
+  {
+    title: "Activity",
+    imgList: [
+      handleViteImages("life/9.png"),
+      handleViteImages("life/10.png"),
+      handleViteImages("life/11.png"),
+      handleViteImages("life/12.png"),
+    ],
+  },
+]);
 const croList = ref([
   {
     imgUrl: handleViteImages("productions.png"),
@@ -236,20 +259,28 @@ const Labora = ref(<any>{});
 .lab-sciences {
   overflow: hidden;
 }
+
 .culture-box {
   margin-top: -100px;
   position: relative;
 }
+
 .career-a {
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .news--slider-i:nth-child(1) .career-a {
   background: url(@/assets/icons/career_bg1.png) no-repeat center/cover;
 }
+
 .news--slider-i:nth-child(2) .career-a {
   background: url(@/assets/icons/career_bg2.png) no-repeat center/cover;
+}
+
+.training-box {
+  margin: 0;
 }
 </style>

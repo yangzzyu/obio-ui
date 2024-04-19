@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-01 15:31:38
+ * @LastEditTime: 2024-04-16 10:29:53
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -42,6 +42,14 @@ const pageData = ref([
     },
   },
   {
+    path: "/about/history",
+    focusObj: {
+      title: "About Us",
+      hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
+      visibleXsImgUrl: handleViteImages("head_bg.jpg"),
+    },
+  },
+  {
     path: "/about/facilities",
     focusObj: {
       title: "About Us",
@@ -69,6 +77,30 @@ const pageData = ref([
     path: "/about/facilities/intellim",
     focusObj: {
       title: "OBiO Intelli-M",
+      hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
+      visibleXsImgUrl: handleViteImages("head_bg.jpg"),
+    },
+  },
+  {
+    path: "/about/who",
+    focusObj: {
+      title: "About Us",
+      hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
+      visibleXsImgUrl: handleViteImages("head_bg.jpg"),
+    },
+  },
+  {
+    path: "/about/commitment",
+    focusObj: {
+      title: "About Us",
+      hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
+      visibleXsImgUrl: handleViteImages("head_bg.jpg"),
+    },
+  },
+  {
+    path: "/about/life",
+    focusObj: {
+      title: "About Us",
       hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
       visibleXsImgUrl: handleViteImages("head_bg.jpg"),
     },
