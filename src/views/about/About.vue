@@ -92,7 +92,7 @@
         </div>
       </el-col>
     </div>
-    <section class="in-about-wrap about-box" id="facilities-box">
+    <section class="in-about-wrap about-box mt-5" id="facilities-box">
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container section-3">
         <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
           Facilities
