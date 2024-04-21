@@ -175,7 +175,7 @@
         </el-row>
       </el-col>
     </section>
-    <div class="in-about-wrap facilities-box" id="manufacturing-box">
+    <div class="in-about-wrap facilities-box mt-5" id="manufacturing-box">
       <div class="section-3">
         <el-col
           :xs="22"
