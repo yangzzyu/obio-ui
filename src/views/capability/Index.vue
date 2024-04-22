@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-18 17:26:19
+ * @LastEditTime: 2024-04-22 10:55:18
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -10,18 +10,8 @@
   <div class="cap-sciences">
     <Focus :focusObj="FocusData" />
     <section id="cap" class="cap-section hero-style-top">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
-        <h1
-          class="title-color font-size50 txt-bold section-title fontf8 mb-3 mt-5"
-        >
+      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
+        <h1 class="title-color font-size50 txt-bold section-title fontf8 mb-3 mt-5">
           Why Us
         </h1>
         <h2 class="title-color our-txt font-size30 section-title fontf7">
@@ -29,26 +19,12 @@
           process of CGT drugs
         </h2>
         <el-row class="news--slider row us-list" :gutter="10">
-          <el-col
-            :xs="24"
-            :span="4"
-            class="news--slider-i us-list-i"
-            v-for="(item, index) in cdmoList"
-            :key="index"
-          >
+          <el-col :xs="24" :span="4" class="news--slider-i us-list-i" v-for="(item, index) in cdmoList" :key="index">
             <a class="block tans service--box_link bg-pinkbluelfr">
               <div class="service--box align-items-start">
                 <div class="service--box_icon mb-3 min-width-70">
-                  <img
-                    class="icon--white"
-                    :src="item.actImgUrl"
-                    alt="GMP Vector Manufacturing icon"
-                  />
-                  <img
-                    class="icon--colour"
-                    :src="item.imgUrl"
-                    alt="GMP Vector Manufacturing icon"
-                  />
+                  <img class="icon--white" :src="item.actImgUrl" alt="GMP Vector Manufacturing icon" />
+                  <img class="icon--colour" :src="item.imgUrl" alt="GMP Vector Manufacturing icon" />
                 </div>
                 <p class="textColor font-size18">{{ item.text }}</p>
               </div>
@@ -59,28 +35,15 @@
     </section>
     <section class="in-about-wrap industrialize-box" id="industrialize-dom">
       <div class="section-3">
-        <el-col
-          :xs="22"
-          :sm="20"
-          :md="20"
-          :lg="20"
-          :xl="22"
-          style="margin: auto"
-          class="container"
-        >
+        <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
           <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
             Industrialize Your Products
           </h1>
 
           <div class="fac-con">
             <el-row class="row" :gutter="10">
-              <el-col
-                :xs="24"
-                :span="6"
-                class="news--slider-i us-list-i"
-                v-for="(item, index) in industrializeList"
-                :key="index"
-              >
+              <el-col :xs="24" :span="6" class="news--slider-i us-list-i" v-for="(item, index) in industrializeList"
+                :key="index">
                 <a class="tans service--box_link bg-pinkbluelfr">
                   <div class="service--box align-items-start">
                     <div class="manufacturing-list">
@@ -92,19 +55,12 @@
                       {{ item.title }}
                     </div>
                     <ul class="txt-ul">
-                      <li
-                        class="font-size18 txt-bold textColor"
-                        v-for="(i, idx) in item.txtList"
-                        :key="idx"
-                      >
+                      <li class="font-size18 txt-bold textColor" v-for="(i, idx) in item.txtList" :key="idx">
                         {{ i }}
                       </li>
                     </ul>
-                    <router-link
-                      :to="item.path"
-                      class="read-more font-size18 fontf7 mt-3 service--box-a"
-                      >Read More</router-link
-                    >
+                    <router-link :to="item.path" class="read-more font-size18 fontf7 mt-3 service--box-a">Read
+                      More</router-link>
                   </div>
                 </a>
               </el-col>
@@ -129,62 +85,57 @@
         </el-col>
       </div>
     </section>
-    <section class="in-about-wrap equipments-box" id="equipments-dom">
-      <div class="section-3">
-        <el-col
-          :xs="22"
-          :sm="20"
-          :md="20"
-          :lg="20"
-          :xl="22"
-          style="margin: auto"
-          class="container"
-        >
-          <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
-            GMP Devices
-          </h1>
-          <el-row
-            :gutter="40"
-            v-for="(item, index) in GMPDevicesList"
-            :key="index"
-            class="equipments-box-row"
-          >
-            <el-col
-              :span="8"
-              :xs="24"
-              :class="index % 2 === 0 ? '' : 'visible-xs-block'"
-              class="text-conent"
-            >
-              <el-image style="width: 100%" :src="item.imgUrl" fit="contain" />
-              <!-- max-height: 300px -->
+    <section class="in-about-wrap equipments-box cro-list mb-2" id="equipments-dom">
+      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+          GMP Devices
+        </h1>
+      </el-col>
+      <div class="cro-list-item row" v-for="(item, index) in GMPDevicesList" :key="index">
+        <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
+          <el-row :gutter="40" class="equipments-box-row">
+            <el-col :span="6" :xs="24" :class="index % 2 === 0 ? '' : 'visible-xs-block'" class="text-conent">
+              <el-image style="width: 100%" v-for="(i,k) in item.imgUrl" :key="k" :src="i" fit="contain" />
             </el-col>
-            <el-col :span="16" :xs="24" class="font-size18 fontf3 text-conent">
+            <el-col :span="18" :xs="24" class="font-size18 fontf3 text-conent">
               <div>
                 <p class="font-size30 fontf7 iti item-tit">{{ item.title }}</p>
                 <p class="font-size18 fontf3 textColor" v-html="item.text"></p>
               </div>
             </el-col>
-            <el-col
-              :span="8"
-              :xs="24"
-              class="hidden-xs text-conent"
-              v-if="index % 2 !== 0"
-            >
-              <el-image style="width: 100%" :src="item.imgUrl" fit="contain" />
+            <el-col :span="6" :xs="24" class="hidden-xs text-conent" v-if="index % 2 !== 0">
+              <el-image style="width: 100%" v-for="(i,k) in item.imgUrl" :key="k" :src="i" fit="contain" />
+              <!-- <el-image style="width: 100%" :src="item.imgUrl" fit="contain" /> -->
             </el-col>
           </el-row>
         </el-col>
       </div>
+      <!-- <div class="section-3"> 
+        <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
+          <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+            GMP Devices
+          </h1>
+          <el-row :gutter="40" v-for="(item, index) in GMPDevicesList" :key="index" class="equipments-box-row cro-list-item">
+            <el-col :span="4" :xs="24" :class="index % 2 === 0 ? '' : 'visible-xs-block'" class="text-conent">
+              <el-image style="width: 100%" :src="item.imgUrl" fit="contain" />
+            </el-col>
+            <el-col :span="20" :xs="24" class="font-size18 fontf3 text-conent">
+              <div>
+                <p class="font-size30 fontf7 iti item-tit">{{ item.title }}</p>
+                <p class="font-size18 fontf3 textColor" v-html="item.text"></p>
+              </div>
+            </el-col>
+            <el-col :span="4" :xs="24" class="hidden-xs text-conent" v-if="index % 2 !== 0">
+              <el-image style="width: 100%" :src="item.imgUrl" fit="contain" />
+            </el-col>
+          </el-row>
+        </el-col>
+      </div> -->
     </section>
     <Events />
     <Career />
   </div>
-  <el-dialog
-    v-model="dialogVisible"
-    title=""
-    width="60%"
-    :before-close="handleClose"
-  >
+  <el-dialog v-model="dialogVisible" title="" width="60%" :before-close="handleClose">
     <div class="popLaboraBox-main">
       <div class="font-size30 fontf8 title title-color">
         <span>{{ Labora.title }}</span>
@@ -330,7 +281,7 @@ specified temperature ranges. `,
 ]);
 const GMPDevicesList = ref([
   {
-    imgUrl: handleViteImages("gmp_img1.jpg"),
+    imgUrl:[ handleViteImages("gmp_img1.png")],
     title: "Stainless Steel 100 L Fermentation Tank",
     text: ` High automation, closed end-to-end process culture design.<br /><br />
                 The stainless steel fermentation system is extensively employed for the amplification and cultivation of
@@ -341,12 +292,12 @@ const GMPDevicesList = ref([
                 culturing process, making it suitable for use in a grade D environment.`,
   },
   {
-    imgUrl: handleViteImages("gmp_img2.jpg"),
+    imgUrl: [handleViteImages("gmp_img2.png")],
     title: "Triple-tank stainless steel fermentation system",
     text: `Accommodate multiple culture volumes, offer versatility and scalability for various production requirements.`,
   },
   {
-    imgUrl: handleViteImages("gmp_img3.jpg"),
+    imgUrl: [handleViteImages("gmp_img3.png")],
     title: "Single-use Continuous Flow Centrifuge",
     text: ` Mitigate cross-contamination risks between different batches.<br/><br />
 Enhanced recovery of the target product, with a maximum processing capacity of 240 L/h.<br/><br />
@@ -356,7 +307,7 @@ Substantially reduces cell separation costs while ensuring the activity and high
 Mitigates production risks, suitable for use at various scales and across multiple batches.`,
   },
   {
-    imgUrl: handleViteImages("gmp_img4.jpg"),
+    imgUrl: [handleViteImages("gmp_img4.png")],
     title: "Stainless steel ultrafiltration system",
     text: `ideal for pilot-scale operations and industrial production processes.<br/><br />
 Efficient particle, colloid, bacteria, pyrogen, and high-molecular-weight organic substance removal from aqueous solutions.<br/><br />
@@ -365,29 +316,29 @@ Fast and efficient: Compared to dialysis, this system offers simpler assembly an
 Scalability: The construction materials and fluid path of theUFcassette allow laboratory-scale conditions to be applied to production-scale processes.`,
   },
   {
-    imgUrl: handleViteImages("gmp_img5.jpg"),
+    imgUrl: [handleViteImages("gmp_img5_1.png"),handleViteImages("gmp_img5.png")],
     title: "AKTA Ready ",
     text: `A single-use chromatography system equipped with 2 sets of flow paths, including the Low Flow Kit and High Flow Kit. The single-use system mitigates the risk of  cross-contamination.`,
   },
   {
-    imgUrl: handleViteImages("gmp_img6.jpg"),
+    imgUrl: [handleViteImages("gmp_img6.png")],
     title: "KR2i",
     text: `A benchtop Tangential Flow Ultrafiltration (TFUF). Combined with adisposable flow path, it can concentrate and diafiltrate vectors in a biosafety cabinet to meet the project requirements in downstream purification`,
   },
   {
-    imgUrl: handleViteImages("gmp_img7.jpg"),
+    imgUrl: [handleViteImages("gmp_img7.png")],
     title: "Fully sealed cell preparation in a Class C+A environment",
     text: `Cellular products must be produced in an aseptic environment to ensure the sterility assurance level required for safe transfusion back to patients.<br/><br />
 The isolator and incubator management system utilize the RTP (Rapid Transfer Port) device for aseptic docking, facilitating rapid and straightforward operation, enabling the seamless exchange of internal resources within a sealed, aseptic environment, meeting the requirements for spatial and temporal isolation in the production of cellular products.
     `,
   },
   {
-    imgUrl: handleViteImages("gmp_img8.jpg"),
+    imgUrl: [handleViteImages("gmp_img8.png"),handleViteImages("gmp_img8_1.png")],
     title: "Magnetic separation",
     text: ``,
   },
   {
-    imgUrl: handleViteImages("gmp_img9.png"),
+    imgUrl: [handleViteImages("gmp_img9.png")],
     title: "Efficient gas-phase liquid nitrogen tank",
     text: `
     The Biosafe smart intelligent control system integrates liquid level control and container monitoring functions, displaying container safety monitoring information throughout the entire process from warehouse entry to exit.
@@ -426,17 +377,20 @@ const Labora = ref(<any>{});
   .service--box_link {
     height: 720px;
   }
+
   .service--box_link:hover .service--box {
     background-color: #fff;
     color: #747475;
   }
 }
+
 @media (max-width: 765px) {
   .us-list {
     .service--box_link {
       height: 200px !important;
     }
   }
+
   .industrialize-box {
     .service--box_link {
       height: 600px !important;
@@ -446,10 +400,12 @@ const Labora = ref(<any>{});
 
 .equipments-box {
   margin: 0;
+
   .text-conent {
     display: flex;
     align-items: center;
   }
+
   .item-tit {
     color: #1f757b;
   }
@@ -459,5 +415,4 @@ const Labora = ref(<any>{});
   margin-bottom: 20px;
 }
 
-// text-conent
-</style>
+// text-conent</style>
