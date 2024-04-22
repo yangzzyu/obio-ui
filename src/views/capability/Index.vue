@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-22 10:27:18
+ * @LastEditTime: 2024-04-22 10:55:18
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -85,7 +85,7 @@
         </el-col>
       </div>
     </section>
-    <section class="in-about-wrap equipments-box cro-list" id="equipments-dom">
+    <section class="in-about-wrap equipments-box cro-list mb-2" id="equipments-dom">
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
         <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
           GMP Devices
@@ -94,16 +94,16 @@
       <div class="cro-list-item row" v-for="(item, index) in GMPDevicesList" :key="index">
         <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
           <el-row :gutter="40" class="equipments-box-row">
-            <el-col :span="4" :xs="24" :class="index % 2 === 0 ? '' : 'visible-xs-block'" class="text-conent">
+            <el-col :span="6" :xs="24" :class="index % 2 === 0 ? '' : 'visible-xs-block'" class="text-conent">
               <el-image style="width: 100%" v-for="(i,k) in item.imgUrl" :key="k" :src="i" fit="contain" />
             </el-col>
-            <el-col :span="20" :xs="24" class="font-size18 fontf3 text-conent">
+            <el-col :span="18" :xs="24" class="font-size18 fontf3 text-conent">
               <div>
                 <p class="font-size30 fontf7 iti item-tit">{{ item.title }}</p>
                 <p class="font-size18 fontf3 textColor" v-html="item.text"></p>
               </div>
             </el-col>
-            <el-col :span="4" :xs="24" class="hidden-xs text-conent" v-if="index % 2 !== 0">
+            <el-col :span="6" :xs="24" class="hidden-xs text-conent" v-if="index % 2 !== 0">
               <el-image style="width: 100%" v-for="(i,k) in item.imgUrl" :key="k" :src="i" fit="contain" />
               <!-- <el-image style="width: 100%" :src="item.imgUrl" fit="contain" /> -->
             </el-col>
