@@ -332,7 +332,7 @@ const GMPDevicesList = ref([
   {
     imgUrl: handleViteImages("gmp_img1.jpg"),
     title: "Stainless Steel 100 L Fermentation Tank",
-    text: ` High automation, closed end-to-end process culture design.<br />
+    text: ` High automation, closed end-to-end process culture design.<br /><br />
                 The stainless steel fermentation system is extensively employed for the amplification and cultivation of
                 microorganisms.Itentails automatic control of pH, dissolved oxygen, stirring, fed-batch, temperature,
                 air,
@@ -348,20 +348,20 @@ const GMPDevicesList = ref([
   {
     imgUrl: handleViteImages("gmp_img3.jpg"),
     title: "Single-use Continuous Flow Centrifuge",
-    text: ` Mitigate cross-contamination risks between different batches.<br/>
-Enhanced recovery of the target product, with a maximum processing capacity of 240 L/h.<br/>
-Unique closed design and gentle treatment effectively minimize cell lysis, prevent bubbling, and facilitate subsequent product processing.<br/>
-Allows for flexible inter-product and inter-batch switching, reducing validation time and costs, and shortening inter-batch intervals.<br/>
-Substantially reduces cell separation costs while ensuring the activity and high yield of biological products.<br/>
-5.Mitigates production risks, suitable for use at various scales and across multiple batches.`,
+    text: ` Mitigate cross-contamination risks between different batches.<br/><br />
+Enhanced recovery of the target product, with a maximum processing capacity of 240 L/h.<br/><br />
+Unique closed design and gentle treatment effectively minimize cell lysis, prevent bubbling, and facilitate subsequent product processing.<br/><br />
+Allows for flexible inter-product and inter-batch switching, reducing validation time and costs, and shortening inter-batch intervals.<br/><br />
+Substantially reduces cell separation costs while ensuring the activity and high yield of biological products.<br/><br />
+Mitigates production risks, suitable for use at various scales and across multiple batches.`,
   },
   {
     imgUrl: handleViteImages("gmp_img4.jpg"),
     title: "Stainless steel ultrafiltration system",
-    text: `ideal for pilot-scale operations and industrial production processes.<br/>
-Efficient particle, colloid, bacteria, pyrogen, and high-molecular-weight organic substance removal from aqueous solutions.<br/>
-Easy assembly and operation: Simply connect the tangential-flow ultrafiltration device, pump, pressure gauge, and tubing fittings, then add the sample to the tank to begin operation.<br/>
-Fast and efficient: Compared to dialysis, this system offers simpler assembly and faster processing speed. Additionally, it achieves higher concentration levels in a shorter period compared to centrifugal concentrating devices or stirring ultrafiltration devices.<br/>
+    text: `ideal for pilot-scale operations and industrial production processes.<br/><br />
+Efficient particle, colloid, bacteria, pyrogen, and high-molecular-weight organic substance removal from aqueous solutions.<br/><br />
+Easy assembly and operation: Simply connect the tangential-flow ultrafiltration device, pump, pressure gauge, and tubing fittings, then add the sample to the tank to begin operation.<br/><br />
+Fast and efficient: Compared to dialysis, this system offers simpler assembly and faster processing speed. Additionally, it achieves higher concentration levels in a shorter period compared to centrifugal concentrating devices or stirring ultrafiltration devices.<br/><br />
 Scalability: The construction materials and fluid path of theUFcassette allow laboratory-scale conditions to be applied to production-scale processes.`,
   },
   {
@@ -377,7 +377,7 @@ Scalability: The construction materials and fluid path of theUFcassette allow la
   {
     imgUrl: handleViteImages("gmp_img7.jpg"),
     title: "Fully sealed cell preparation in a Class C+A environment",
-    text: `Cellular products must be produced in an aseptic environment to ensure the sterility assurance level required for safe transfusion back to patients.<br/>
+    text: `Cellular products must be produced in an aseptic environment to ensure the sterility assurance level required for safe transfusion back to patients.<br/><br />
 The isolator and incubator management system utilize the RTP (Rapid Transfer Port) device for aseptic docking, facilitating rapid and straightforward operation, enabling the seamless exchange of internal resources within a sealed, aseptic environment, meeting the requirements for spatial and temporal isolation in the production of cellular products.
     `,
   },
@@ -391,9 +391,9 @@ The isolator and incubator management system utilize the RTP (Rapid Transfer Por
     title: "Efficient gas-phase liquid nitrogen tank",
     text: `
     The Biosafe smart intelligent control system integrates liquid level control and container monitoring functions, displaying container safety monitoring information throughout the entire process from warehouse entry to exit.
-The 8.8 inch color touch screen features vibrant colors and powerful functions.<br/>
-The system maintains a low liquid nitrogen evaporation rate of 0.9% per day. It can be sustained for several days even after the liquid nitrogen level drops below the platform.<br/>
-It has the capacity to accommodate 43,120 vials of 2 mL cryovials and 720 bags of 500 mL cryopreservation bags.<br/>
+The 8.8 inch color touch screen features vibrant colors and powerful functions.<br/><br />
+The system maintains a low liquid nitrogen evaporation rate of 0.9% per day. It can be sustained for several days even after the liquid nitrogen level drops below the platform.<br/><br />
+It has the capacity to accommodate 43,120 vials of 2 mL cryovials and 720 bags of 500 mL cryopreservation bags.<br/><br />
 Equipped with a 3-tier authorization control mechanism, the recorded information meets the GMP FDA CRF 21 part 11 certification requirements.. `,
   },
 ]);
