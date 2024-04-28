@@ -19,12 +19,12 @@
         class="container"
       >
         <el-row :gutter="50" class="cdmo-top">
-          <el-col :xs="24" :span="6"
+          <el-col :xs="24" :span="10"
             ><div class="animate-imgxx uof img">
-              <img :src="handleViteImages('cdmo_top.png')" alt="SPIRO Site" />
+              <img :src="handleViteImages('life/WechatIMG522.jpg')" alt="SPIRO Site" />
             </div>
           </el-col>
-          <el-col :xs="24" :span="18">
+          <el-col :xs="24" :span="14">
             <p class="font-size18 fontf7 cro-p textColor">
               We provide comprehensive CDMO services encompassing process
               development, analytical methods, IND-enabling CMC (Chemistry,

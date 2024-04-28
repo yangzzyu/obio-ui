@@ -20,18 +20,25 @@
           <text class="fontf7">
             enhanced capabilities, purposeful work, and a fulfilling life.</text>
         </h2>
-        <ul class="font-size18 textColor">
-          <li>Enhanced Capabilities</li>
-          <li>Competitive compensation and benefits</li>
-          <li>
-            Opportunities for training, rotation, and continuous education
-          </li>
-          <li>Empowerment, accountability, and value creation</li>
-          <li>
-            Work-Life Balance: A harmonious blend of professional and personal
-            pursuits
-          </li>
-        </ul>
+        <el-row class="news--slider row" :gutter="10">
+          <el-col :xs="24" :span="12" class="news--slider-i">
+            <img :src="handleViteImages('life/WechatIMG520.jpg')" alt="Life at OBiO" />
+          </el-col>
+          <el-col :xs="24" :span="12" class="news--slider-i">
+            <ul class="font-size18 textColor">
+              <li>Enhanced Capabilities</li>
+              <li>Competitive compensation and benefits</li>
+              <li>
+                Opportunities for training, rotation, and continuous education
+              </li>
+              <li>Empowerment, accountability, and value creation</li>
+              <li>
+                Work-Life Balance: A harmonious blend of professional and personal
+                pursuits
+              </li>
+            </ul>
+          </el-col>
+        </el-row>
         <br />
         <p class="font-size18 textColor" style="margin-bottom: 20px">
           This encapsulates our vibrant company culture, where every moment is
