@@ -22,7 +22,9 @@
         </h2>
         <el-row class="news--slider row" :gutter="10">
           <el-col :xs="24" :span="12" class="news--slider-i">
-            <img :src="handleViteImages('life/WechatIMG520.jpg')" alt="Life at OBiO" />
+            <div class="animate-imgxx uof img">
+              <img :src="handleViteImages('life/WechatIMG520.jpg')" alt="Life at OBiO" />
+            </div>
           </el-col>
           <el-col :xs="24" :span="12" class="news--slider-i">
             <ul class="font-size18 textColor">
