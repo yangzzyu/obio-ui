@@ -406,7 +406,7 @@ const tabsData = ref([
       },
       {
         imgUrl: handleViteImages("process_icon3.png"),
-        txt: `Transient transfection at large-scale: 200 L suspension culture and 600㎡ fixed bed culture`,
+        txt: `Transient transfection at large-scale: 200 L suspension culture and 600 ㎡ (6,458 ft²) fixed bed culture`,
       },
       {
         imgUrl: handleViteImages("process_icon4.png"),

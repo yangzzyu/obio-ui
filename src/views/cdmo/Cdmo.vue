@@ -53,7 +53,7 @@
             <el-col :span="8" :xs="24" class="tx-c">
               <div class="nums-list bg-pinkbluelfr">
                 <div class="content">
-                  <el-statistic :value="cellSourceValue" class="number-c">
+                  <el-statistic :value="cumulativeCgtValue" class="number-c">
                     <template #suffix>
                       <div class="nums fontf9">
                         <span class="fh">+</span>
@@ -61,7 +61,7 @@
                     </template>
                   </el-statistic>
                   <div class="pn fontf7 font-size24">
-                    Gene and Cell Therapy Programs
+                    Cumulative CGT CDMO Projects
                   </div>
                 </div>
               </div>
@@ -94,6 +94,100 @@
                   </el-statistic>
                   <div class="pn fontf7 font-size24">
                     Analytical Method Development Projects
+                  </div>
+                </div>
+              </div>
+            </el-col>
+          </el-row>
+          <el-row class="row color666" :gutter="100">
+            <el-col :span="8" :xs="24" class="tx-c">
+              <div class="nums-list bg-pinkbluelfr">
+                <div class="content">
+                  <div class="pn fontf7 font-size24">
+                    Assist Clients to Obtain
+                  </div>
+                  <el-statistic :value="indApprovalsValue" class="number-c">
+                    <template #suffix>
+                      <div class="nums fontf9">
+                        <span class="fh">+</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size24">
+                    IND Approvals
+                  </div>
+                  <div class="pn fontf7 font-size24">
+                    <br />Including
+                  </div>
+                  <el-statistic :value="fdaApprovalsValue" class="number-c">
+                    <template #suffix>
+                      <div class="nums fontf9">
+                        <span class="fh">+</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size24">
+                    FDA Approvals
+                  </div>
+                </div>
+              </div>
+            </el-col>
+            <el-col :span="8" :xs="24" class="tx-c">
+              <div class="nums-list bg-pinkbluelfr">
+                <div class="content">
+                  <div class="pn fontf7 font-size24">
+                    Up to
+                  </div>
+                  <el-statistic :value="suspendedValue" class="number-c">
+                    <template #suffix>
+                      <div class="nums fontf10">
+                        <span class="fh">L</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size24">
+                    Suspended Cell Culture Production System
+                  </div>
+                  <el-statistic :value="squareFeetValue" class="number-c">
+                    <template #suffix>
+                      <div class="nums fontf10">
+                        <span class="fh">K</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size24">
+                    square feet of CRO & CDMO service operational area
+                  </div>
+                </div>
+              </div>
+            </el-col>
+            <el-col :span="8" :xs="24" class="tx-c">
+              <div class="nums-list bg-pinkbluelfr">
+                <div class="content">
+                  <el-statistic class="number-c" :value="globalServiceValue">
+                    <template #suffix>
+                      <div class="nums fontf9">
+                        <span class="fh">+</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size24">
+                    Global Service Clients
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div class="nums-list bg-pinkbluelfr">
+                <div class="content">
+                  <el-statistic :value="cellSourceValue" class="number-c">
+                    <template #suffix>
+                      <div class="nums fontf9">
+                        <span class="fh">+</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size24">
+                    Gene and Cell Therapy Programs
                   </div>
                 </div>
               </div>
@@ -245,7 +339,7 @@
                 <div class="manufacturing-list bg-pinkbluelfr">
                   <div class="content">
                     <img
-                      :src="handleViteImages('pine_site.png')"
+                      :src="handleViteImages('pine_site.jpg')"
                       alt="PINE Site"
                     />
                   </div>
@@ -539,9 +633,33 @@ const croList = ref([
   },
 ]);
 const cellSource = ref(0);
+const cumulativeCgt = ref(0);
+const indApprovals = ref(0);
+const fdaApprovals = ref(0);
+const suspended = ref(0);
+const squareFeet = ref(0);
+const globalService = ref(0);
 const processSource = ref(0);
 const analyticalSource = ref(0);
 const cellSourceValue = useTransition(cellSource, {
+  duration: 1500,
+});
+const cumulativeCgtValue = useTransition(cumulativeCgt, {
+  duration: 1500,
+});
+const indApprovalsValue = useTransition(indApprovals, {
+  duration: 1500,
+});
+const fdaApprovalsValue = useTransition(fdaApprovals, {
+  duration: 1500,
+});
+const suspendedValue = useTransition(suspended, {
+  duration: 1500,
+});
+const squareFeetValue = useTransition(squareFeet, {
+  duration: 1500,
+});
+const globalServiceValue = useTransition(globalService, {
   duration: 1500,
 });
 const processSourceValue = useTransition(processSource, {
@@ -551,6 +669,12 @@ const analyticalSourceValue = useTransition(analyticalSource, {
   duration: 1500,
 });
 cellSource.value = 170;
+cumulativeCgt.value = 280;
+indApprovals.value = 38;
+fdaApprovals.value = 11;
+suspended.value = 200;
+squareFeet.value = 990;
+globalService.value = 110;
 processSource.value = 200;
 analyticalSource.value = 500;
 

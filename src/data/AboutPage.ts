@@ -96,7 +96,7 @@ export const historyList = ref<HistoryItem[]>([
       >Round 4 fund-raising completed
     </text>
     (Amount raised in RMB: XXX yuan)`,
-      `GMP platform expanded to about 7000 ㎡`,
+      `GMP platform expanded to about 7000 ㎡ (75,347 ft²)`,
       `Construction of Lingang Precision Medicine Industry Base started`,
       `Accredited to be cGMP-compliant in an audit by a
       third-party Notified Body`,
@@ -114,7 +114,7 @@ export const historyList = ref<HistoryItem[]>([
       `<text class=" txt-color txt-bold">
       Successfully reviewed for the IPO in STAR Market
     </text>`,
-      `GMP platform expanded to more than 10000 ㎡`,
+      `GMP platform expanded to more than 10000 ㎡ (107,639 ft²)`,
       `<text class=" txt-color txt-bold">
       Multiple phase II clinical studies contracted
     </text>`,

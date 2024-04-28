@@ -171,7 +171,7 @@
                       base
                     </p>
                     <ul class="font-size16 txt-bold is-details details-ul" style="color: #fff">
-                      <li>The only 77,000 ㎡ scale GMP-compliant facility in the world</li>
+                      <li>The only 77,000 ㎡ (828,821 ft²) scale GMP-compliant facility in the world</li>
                       <li>Gene cell therapy commercial production service base</li>
                     </ul>
                     <!-- <p

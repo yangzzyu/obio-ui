@@ -84,7 +84,7 @@
                   <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
                       <img
-                        :src="handleViteImages('pine_site.png')"
+                        :src="handleViteImages('pine_site.jpg')"
                         alt="PINE Site"
                       />
                     </div>

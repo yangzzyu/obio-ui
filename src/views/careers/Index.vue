@@ -22,36 +22,14 @@
         </p>
       </el-col>
     </section>
-    <section class="culture-life-box  hero-style-top" id="mission-life-box">
+    <section class="hero-style-top">
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
         <h1 class="title-color font-size50 txt-bold section-title fontf8">
           Life at OBiO
         </h1>
       </el-col>
     </section>
-    <div class="in-about-wrap training-box" v-for="(item, index) in lifeList" :key="index">
-      <div class="section-3">
-        <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
-          <h1 class="p-title font-size30 txt-bold fontf8 mb-3 mt-3">
-            {{ item.title }}
-          </h1>
-
-          <div class="fac-con">
-            <el-row class="row" :gutter="10">
-              <el-col :xs="24" :span="24 / item.imgList.length" class="" v-for="(i, k) in item.imgList" :key="k">
-                <div class="manufacturing-list bg-pinkbluelfr">
-                  <div class="content" style="width: 100%;max-height: 200px; overflow: hidden">
-                    <el-image style="width: 100%; height: 100%" :src="i" :zoom-rate="1.2" :max-scale="7"
-                      :min-scale="0.2" :initial-index="k" :crossorigin="null" :preview-src-list="item.imgList"
-                      fit="cover" :z-index="99999" :preview-teleported="true" :hide-on-click-modal="true" />
-                  </div>
-                </div>
-              </el-col>
-            </el-row>
-          </div>
-        </el-col>
-      </div>
-    </div>
+    <LifeContent />
     <section id="cro" class="cro-list">
       <div class="cro-list-item row" v-for="(item, index) in croList" :key="index">
         <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
@@ -167,6 +145,7 @@
 import { ref, reactive } from "vue";
 import Focus from "@/components/Focus.vue";
 import Events from "@/components/Events.vue";
+import LifeContent from "@/views/careers/LifeContent.vue";
 import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
@@ -243,8 +222,8 @@ Excellence, Innovation, Integrity.
     text: `Developing gene therapies for the welfare of 
 mankind by virtue of its in-house developed 
 all-round technology platform, its R&D and GMP 
-production centers (floorage: 15,000 ㎡), and its <text class="title-color txt-bold">77,000</text>
-㎡  Lingang base (under construction), 
+production centers (floorage: 15,000 ㎡ (161,458 ft²)), and its <text class="title-color txt-bold">77,000</text>
+㎡ (<text class="title-color txt-bold">828,821</text> ft²) Lingang base (under construction), 
 OBiO is dedicated to constantly accelerating 
 gene therapies researches, drug discovery, 
 pharmaceutical studies, clinical and commercial 
