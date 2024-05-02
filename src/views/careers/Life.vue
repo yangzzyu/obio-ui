@@ -23,7 +23,7 @@
         <el-row class="news--slider row" :gutter="10">
           <el-col :xs="24" :span="12" class="news--slider-i">
             <div class="animate-imgxx uof img">
-              <img :src="handleViteImages('life/WechatIMG520.jpg')" alt="Life at OBiO" />
+              <img :src="handleViteImages('life/WechatIMG520.jpg')" alt="Life at OBiO" style="width:100%;" />
             </div>
           </el-col>
           <el-col :xs="24" :span="12" class="news--slider-i">
@@ -39,13 +39,13 @@
                 pursuits
               </li>
             </ul>
+            <br />
+            <p class="font-size18 textColor" style="margin-bottom: 20px">
+              This encapsulates our vibrant company culture, where every moment is
+              an opportunity for growth and fulfillment.
+            </p>
           </el-col>
         </el-row>
-        <br />
-        <p class="font-size18 textColor" style="margin-bottom: 20px">
-          This encapsulates our vibrant company culture, where every moment is
-          an opportunity for growth and fulfillment.
-        </p>
       </el-col>
     </section>
     <LifeContent />
