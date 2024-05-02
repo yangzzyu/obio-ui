@@ -1551,6 +1551,9 @@ a:focus {
 .textColor {
   color: $textColor;
 }
+.textColor-hover {
+  color: $textColor;
+}
 .our-txt {
   // width: 200px;
   // font-weight: 800;
@@ -1640,6 +1643,9 @@ a:focus {
     position: absolute;
     bottom: 1rem;
     left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  .service--box-b {
     transform: translate(-50%, 0%);
   }
 }

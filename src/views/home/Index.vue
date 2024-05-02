@@ -48,7 +48,7 @@
                     Process Development Characterization Clinical and Commercial
                     Manufacturing.
                     <text class="title-color txt-bold">77,000</text
-                    >-square-meter Facility for Global Supply
+                    >-square-meter (828,821 ft²) Facility for Global Supply
                   </p>
                   <router-link
                     to="/about/facilities/intellim"
@@ -97,7 +97,7 @@
                     Process and Analytical Method Development. Pre-clinical and
                     Clinical Manufacturing. Three-building,
                     <text class="title-color txt-bold">10,000</text
-                    >-square-meter campus
+                    >-square-meter (107,639 ft²) campus
                   </p>
                   <router-link
                     to="/about/facilities/pine"

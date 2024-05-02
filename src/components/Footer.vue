@@ -26,12 +26,20 @@
             </dt>
             <dt class="font-size14"></dt>
             <dd></dd>
+            <div class="link-list-i">
+              <dl class="dl-foot-nav">
+                <dt class="font-size20 first-tit">
+                  <router-link to="/contact">CONTACT</router-link>
+                </dt>
+                <dd></dd>
+              </dl>
+            </div>
           </dl>
         </div>
         <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/about">About Us<br />&nbsp;</router-link>
+              <router-link to="/about">About Us</router-link>
             </dt>
             <dd class="font-size14">
               <router-link to="/about/history">History</router-link>
@@ -61,8 +69,7 @@
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
               <router-link to="/capability"
-                >Capability &<br />
-                Commitment</router-link
+                >Capabilit</router-link
               >
             </dt>
             <dd class="font-size14">
@@ -90,15 +97,15 @@
         <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/cdmo">CDMO <br />Solutions</router-link>
+              <router-link to="/cdmo">CDMO</router-link>
             </dt>
             <dd class="font-size14">
-              <router-link to="/cdmo/manufacturing">
-                Manufacturing
-              </router-link>
+              <router-link to="/cdmo/cdmo">CDMO Service</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/cdmo/cdmo"> CDMO </router-link>
+              <router-link to="/cdmo/manufacturing">
+                Facilities
+              </router-link>
             </dd>
             <dd class="font-size14">
               <router-link to="/cdmo/innovation"> Innovation </router-link>
@@ -108,7 +115,15 @@
         <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/insight">News & <br />Events</router-link>
+              <router-link to="/cro">CRO</router-link>
+            </dt>
+            <dd></dd>
+          </dl>
+        </div>
+        <div class="link-list-i">
+          <dl class="dl-foot-nav">
+            <dt class="font-size20 first-tit">
+              <router-link to="/insight">News</router-link>
             </dt>
             <dd class="font-size14">
               <router-link to="/insight/news">News</router-link>
@@ -117,7 +132,7 @@
               <router-link to="/insight/events">Events</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/insight/inquiry">Learn More</router-link>
+              <router-link to="/insight/inquiry">Inquiry</router-link>
             </dd>
             <dd class="font-size14">
               <a href="https://www.obiosh.com/tzz/gg/" target="_blank"
@@ -130,8 +145,7 @@
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
               <router-link to="/careers"
-                >Careers &<br />
-                Culture</router-link
+                >Careers</router-link
               >
             </dt>
             <dd class="font-size14">
@@ -147,22 +161,6 @@
             <dt class="font-size14">
               <!-- <router-link href="/cn/home/ys/cid/861">Privacy Policy</router-link> -->
             </dt>
-          </dl>
-        </div>
-        <div class="link-list-i">
-          <dl class="dl-foot-nav">
-            <dt class="font-size20 first-tit">
-              <router-link to="/cro">CRO <br />Service</router-link>
-            </dt>
-            <dd></dd>
-          </dl>
-        </div>
-        <div class="link-list-i">
-          <dl class="dl-foot-nav">
-            <dt class="font-size20 first-tit">
-              <router-link to="/contact">Contact</router-link>
-            </dt>
-            <dd></dd>
           </dl>
         </div>
       </div>

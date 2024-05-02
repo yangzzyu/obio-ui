@@ -269,6 +269,40 @@
               /> </el-col
           ></el-row>
         </div>
+        <div class="pub-title pub-title-p ub ub-ver ub-pe">
+          <i class="line"></i>
+          <h1 class="fontf7 font-size50">For Global Customers</h1>
+        </div>
+        <div class="font-size18 pub-pal20" style="padding-top: 30px">
+          <p style="line-height: 2">
+            In sync with the growing global demand, we have initiated the
+            construction of OBiO Intelli-M GMP manufacturing site with a
+            footprint of 77,000 square meter (828,821 ft²) at Lin-Gang Free Trade Zone in
+            Shanghai. Complemented by digitalized management system and enhanced
+            manufacturing & testing facilities, OBiO Intelli-M will be able to
+            capture diverse manufacturing needs and offer high-quality contract
+            development and manufacturing services to customers worldwide.
+            <br />
+            <br />
+            Stage 1 construction with 11 GMP production lines will be
+            accomplished by 2023. The full site with 33 GMP production lines
+            will be operating by 2025.
+            <br />
+            <br />
+            At OBiO Intelli-M, we will provide our customers worldwide with
+            following services:
+          </p>
+          <el-row>
+            <el-col
+              :span="12"
+              :xs="22"
+              v-for="(item, index) in IntelliMItemList"
+              :key="index"
+            >
+              ● {{ item.txt }}
+            </el-col>
+          </el-row>
+        </div>
         <div class="cGMP-title-t2">
           <div class="fontf7 font-size50 ct"><span>Why OBiO?</span></div>
           <i class="bg"></i>
@@ -298,6 +332,7 @@
 import { ref } from "vue";
 import { handleViteImages } from "@/utils";
 import { ArrowRight } from "@element-plus/icons-vue";
+import { IntelliMItemList } from "./data/IntelliM";
 
 const cellSource = ref(0);
 const processSource = ref(0);

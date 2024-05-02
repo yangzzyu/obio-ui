@@ -87,7 +87,7 @@
               </template>
               <el-menu-item index="/insight/news">News</el-menu-item>
               <el-menu-item index="/insight/events">Events</el-menu-item>
-              <el-menu-item index="/insight/inquiry">Learn More</el-menu-item>
+              <el-menu-item index="/insight/inquiry">Inquiry</el-menu-item>
               <el-menu-item index="/insight/partnership">
                 <a href="https://www.obiosh.com/tzz/gg/" target="_blank">Partnership</a>
               </el-menu-item>
@@ -172,7 +172,7 @@
           </template>
           <el-menu-item index="/insight/news">News</el-menu-item>
           <el-menu-item index="/insight/events">Events</el-menu-item>
-          <el-menu-item index="/insight/inquiry">Learn More</el-menu-item>
+          <el-menu-item index="/insight/inquiry">Inquiry</el-menu-item>
           <el-menu-item index="/insight/partnership">
             <a href="https://www.obiosh.com/tzz/gg/" target="_blank">Partnership</a>
           </el-menu-item>

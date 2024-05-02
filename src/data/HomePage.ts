@@ -77,7 +77,7 @@ export const homeFacilitiesData = ref<FacilitiesDataItem[]>([
     pmText: [
       "Process Development  Characterization",
       "Clinical and Commercial Manufacturing",
-      "77,000-square-meter Facility for Global Supply",
+      "77,000-square-meter (828,821 ft²) Facility for Global Supply",
     ],
     pTxt: "Lin-Gang Free-Trade Zone",
     imgUrl: handleViteImages("facilities_img2.jpg"),
@@ -89,7 +89,7 @@ export const homeFacilitiesData = ref<FacilitiesDataItem[]>([
     pmText: [
       "Process and Analytical Method Development",
       "Pre-clinical and Clinical Manufacturing",
-      "Three-building, 10,000-square-meter campus",
+      "Three-building, 10,000-square-meter (107,639 ft²) campus",
     ],
     pTxt: "International Medical Park",
     imgUrl: handleViteImages("facilities_img3.jpg"),

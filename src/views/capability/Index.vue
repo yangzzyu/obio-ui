@@ -26,14 +26,14 @@
                   <img class="icon--white" :src="item.actImgUrl" alt="GMP Vector Manufacturing icon" />
                   <img class="icon--colour" :src="item.imgUrl" alt="GMP Vector Manufacturing icon" />
                 </div>
-                <p class="textColor font-size18">{{ item.text }}</p>
+                <p class="textColor-hover font-size18">{{ item.text }}</p>
               </div>
             </a>
           </el-col>
         </el-row>
       </el-col>
     </section>
-    <section class="in-about-wrap industrialize-box" id="industrialize-dom">
+    <section class="in-about-wrap industrialize-box mb-3" id="industrialize-dom">
       <div class="section-3">
         <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
           <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
@@ -42,11 +42,11 @@
 
           <div class="fac-con">
             <el-row class="row" :gutter="10">
-              <el-col :xs="24" :span="6" class="news--slider-i us-list-i" v-for="(item, index) in industrializeList"
+              <el-col :xs="24" :span="8" class="news--slider-i us-list-i" v-for="(item, index) in industrializeList"
                 :key="index">
                 <a class="tans service--box_link bg-pinkbluelfr">
                   <div class="service--box align-items-start">
-                    <div class="manufacturing-list">
+                    <div class="manufacturing-list mt-3">
                       <div class="content">
                         <img :src="item.imgUrl" alt="" srcset="" />
                       </div>
@@ -64,26 +64,36 @@
                   </div>
                 </a>
               </el-col>
-              <!-- <el-col :xs="24" :span="6" class="" v-for="(item, index) in industrializeList" :key="index">
-                <div class="manufacturing-list">
-                  <div class="content">
-                    <img :src="item.imgUrl" alt="" srcset="" />
-                  </div>
-                </div>
-                <div class="font-size18 fontf7 iti">
-                  {{ item.title }}
-                </div>
-                <ul class="txt-ul">
-                  <li class="font-size18 txt-bold textColor" v-for="(i, idx) in item.txtList" :key="idx">
-                    {{ i }}
-                  </li>
-                </ul>
-                <router-link :to="item.path" class="read-more font-size18 fontf7 mt-3">Read More</router-link>
-              </el-col> -->
             </el-row>
           </div>
         </el-col>
       </div>
+    </section>
+    <section class="in-about-wrap quality-box cro-list mt-2" id="quality-dom">
+      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
+        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+          Quality & Regulatory: 
+        </h1>
+         <h2 class="title-color our-txt font-size30 section-title fontf7">
+          International Compliant Quality Control System
+        </h2>
+      </el-col>
+      <el-row class="row" :gutter="10">
+        <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
+          <div class="wysiwyg--content colour-white mb-3">
+            <p class="fontf4 textColor">
+              De-risk Your Regulatory Pathway
+              <li>Competitive compensation and benefits</li>
+              <li>
+                We provide e-CTD ready CMC related documents writing and review for your submission
+              </li>
+              <li>Analytical Development</li>
+            </p>
+          </div>
+          <router-link to="/" class="read-more font-size18 fontf7" style="justify-content: flex-start;">Read
+            More</router-link>
+        </el-col>
+      </el-row>
     </section>
     <section class="in-about-wrap equipments-box cro-list mb-2" id="equipments-dom">
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
@@ -94,16 +104,16 @@
       <div class="cro-list-item row" v-for="(item, index) in GMPDevicesList" :key="index">
         <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
           <el-row :gutter="40" class="equipments-box-row">
-            <el-col :span="6" :xs="24" :class="index % 2 === 0 ? '' : 'visible-xs-block'" class="text-conent">
+            <el-col :span="item.imgSpan" :xs="24" :class="index % 2 === 0 ? '' : 'visible-xs-block'" class="text-conent">
               <el-image style="width: 100%" v-for="(i,k) in item.imgUrl" :key="k" :src="i" fit="contain" />
             </el-col>
-            <el-col :span="18" :xs="24" class="font-size18 fontf3 text-conent">
+            <el-col :span="item.textSpan" :xs="24" class="font-size18 fontf3 text-conent">
               <div>
                 <p class="font-size30 fontf7 iti item-tit">{{ item.title }}</p>
                 <p class="font-size18 fontf3 textColor" v-html="item.text"></p>
               </div>
             </el-col>
-            <el-col :span="6" :xs="24" class="hidden-xs text-conent" v-if="index % 2 !== 0">
+            <el-col :span="item.imgSpan" :xs="24" class="hidden-xs text-conent" v-if="index % 2 !== 0">
               <el-image style="width: 100%" v-for="(i,k) in item.imgUrl" :key="k" :src="i" fit="contain" />
               <!-- <el-image style="width: 100%" :src="item.imgUrl" fit="contain" /> -->
             </el-col>
@@ -227,7 +237,7 @@ navigation
 ]);
 const industrializeList = reactive([
   {
-    imgUrl: handleViteImages("industrialize1.png"),
+    imgUrl: handleViteImages("facilities1.jpg"),
     title: `Development: Efficient and Customized Process Development with
                   BoardProduct Spectrum`,
     path: "/cdmo/process_development",
@@ -239,7 +249,7 @@ const industrializeList = reactive([
     ],
   },
   {
-    imgUrl: handleViteImages("industrialize2.png"),
+    imgUrl: handleViteImages("facilities2.jpg"),
     title: `cGMP Manufacturing: Flexible Large-Scale GMP Manufacturing
                   Platform:`,
     path: "/cdmo/cgmp",
@@ -251,21 +261,7 @@ const industrializeList = reactive([
     ],
   },
   {
-    imgUrl: handleViteImages("industrialize3.png"),
-    title: `Quality & Regulatory: 
-International Compliant
-Quality Control System`,
-    path: "/cdmo/quality_regulatory",
-    txtList: [
-      " De-risk Your Regulatory Pathway",
-      `We provide e-CTD ready 
-CMC related documents writing 
-and review for your submission:`,
-      "Analytical Developmen",
-    ],
-  },
-  {
-    imgUrl: handleViteImages("industrialize4.png"),
+    imgUrl: handleViteImages("pine_site.jpg"),
     title: `Cold Chain Logistic: 
 Traceable 
 Cold-Chain Logistics with 
@@ -282,6 +278,8 @@ specified temperature ranges. `,
 const GMPDevicesList = ref([
   {
     imgUrl:[ handleViteImages("gmp_img1.png")],
+    imgSpan: 12,
+    textSpan: 12,
     title: "Stainless Steel 100 L Fermentation Tank",
     text: ` High automation, closed end-to-end process culture design.<br /><br />
                 The stainless steel fermentation system is extensively employed for the amplification and cultivation of
@@ -293,11 +291,15 @@ const GMPDevicesList = ref([
   },
   {
     imgUrl: [handleViteImages("gmp_img2.png")],
+    imgSpan: 12,
+    textSpan: 12,
     title: "Triple-tank stainless steel fermentation system",
     text: `Accommodate multiple culture volumes, offer versatility and scalability for various production requirements.`,
   },
   {
     imgUrl: [handleViteImages("gmp_img3.png")],
+    imgSpan: 6,
+    textSpan: 18,
     title: "Single-use Continuous Flow Centrifuge",
     text: ` Mitigate cross-contamination risks between different batches.<br/><br />
 Enhanced recovery of the target product, with a maximum processing capacity of 240 L/h.<br/><br />
@@ -308,6 +310,8 @@ Mitigates production risks, suitable for use at various scales and across multip
   },
   {
     imgUrl: [handleViteImages("gmp_img4.png")],
+    imgSpan: 12,
+    textSpan: 12,
     title: "Stainless steel ultrafiltration system",
     text: `ideal for pilot-scale operations and industrial production processes.<br/><br />
 Efficient particle, colloid, bacteria, pyrogen, and high-molecular-weight organic substance removal from aqueous solutions.<br/><br />
@@ -317,16 +321,22 @@ Scalability: The construction materials and fluid path of theUFcassette allow la
   },
   {
     imgUrl: [handleViteImages("gmp_img5_1.png"),handleViteImages("gmp_img5.png")],
+    imgSpan: 12,
+    textSpan: 12,
     title: "AKTA Ready ",
     text: `A single-use chromatography system equipped with 2 sets of flow paths, including the Low Flow Kit and High Flow Kit. The single-use system mitigates the risk of  cross-contamination.`,
   },
   {
     imgUrl: [handleViteImages("gmp_img6.png")],
+    imgSpan: 12,
+    textSpan: 12,
     title: "KR2i",
     text: `A benchtop Tangential Flow Ultrafiltration (TFUF). Combined with adisposable flow path, it can concentrate and diafiltrate vectors in a biosafety cabinet to meet the project requirements in downstream purification`,
   },
   {
     imgUrl: [handleViteImages("gmp_img7.png")],
+    imgSpan: 12,
+    textSpan: 12,
     title: "Fully sealed cell preparation in a Class C+A environment",
     text: `Cellular products must be produced in an aseptic environment to ensure the sterility assurance level required for safe transfusion back to patients.<br/><br />
 The isolator and incubator management system utilize the RTP (Rapid Transfer Port) device for aseptic docking, facilitating rapid and straightforward operation, enabling the seamless exchange of internal resources within a sealed, aseptic environment, meeting the requirements for spatial and temporal isolation in the production of cellular products.
@@ -334,11 +344,15 @@ The isolator and incubator management system utilize the RTP (Rapid Transfer Por
   },
   {
     imgUrl: [handleViteImages("gmp_img8.png"),handleViteImages("gmp_img8_1.png")],
+    imgSpan: 12,
+    textSpan: 12,
     title: "Magnetic separation",
     text: ``,
   },
   {
     imgUrl: [handleViteImages("gmp_img9.png")],
+    imgSpan: 12,
+    textSpan: 12,
     title: "Efficient gas-phase liquid nitrogen tank",
     text: `
     The Biosafe smart intelligent control system integrates liquid level control and container monitoring functions, displaying container safety monitoring information throughout the entire process from warehouse entry to exit.
@@ -359,14 +373,14 @@ const Labora = ref(<any>{});
 
 .us-list {
   .service--box_link {
-    height: 300px;
+    height: 330px;
   }
 }
 
 .us-list-i:hover {
-  // .textColor {
-  //   color: #fff;
-  // }
+  .textColor-hover {
+    color: #fff;
+  }
 }
 
 .industrialize-box {
@@ -375,7 +389,7 @@ const Labora = ref(<any>{});
 
 .industrialize-box {
   .service--box_link {
-    height: 720px;
+    height: 680px;
   }
 
   .service--box_link:hover .service--box {

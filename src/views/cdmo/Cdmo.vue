@@ -117,7 +117,7 @@
                     IND Approvals
                   </div>
                   <div class="pn fontf7 font-size24">
-                    <br />Including
+                    Including
                   </div>
                   <el-statistic :value="fdaApprovalsValue" class="number-c">
                     <template #suffix>
@@ -151,12 +151,12 @@
                   <el-statistic :value="squareFeetValue" class="number-c">
                     <template #suffix>
                       <div class="nums fontf10">
-                        <span class="fh">K</span>
+                        <span class="fh">K ft²</span>
                       </div>
                     </template>
                   </el-statistic>
                   <div class="pn fontf7 font-size24">
-                    square feet of CRO & CDMO service operational area
+                    of CRO & CDMO service operational area
                   </div>
                 </div>
               </div>
@@ -302,7 +302,7 @@
                 <p class="font-size18 textColor txt-bold">
                   Process Development Characterization Clinical and Commercial
                   Manufacturing.
-                  <text class="title-color txt-bold">77,000</text>-square-meter
+                  <text class="title-color txt-bold">77,000</text>-square-meter (828,821 ft²)
                   Facility for Global Supply
                 </p>
                 <router-link
@@ -352,7 +352,7 @@
                   Process and Analytical Method Development. Pre-clinical and
                   Clinical Manufacturing. Three-building,
                   <text class="title-color txt-bold">10,000</text>-square-meter
-                  campus
+                  (107,639 ft²) campus
                 </p>
                 <router-link
                   to="/about/facilities/pine"
