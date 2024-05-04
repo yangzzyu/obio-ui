@@ -1468,9 +1468,9 @@ a:focus {
     margin-bottom: 10px;
     transition: all 0.5s;
     position: relative;
-    &:hover {
-      transform: translateY(-7px);
-    }
+    // &:hover {
+    //   transform: translateY(-7px);
+    // }
   }
 }
 .innovation-content {
@@ -1643,9 +1643,6 @@ a:focus {
     position: absolute;
     bottom: 1rem;
     left: 50%;
-    transform: translate(-50%, 0%);
-  }
-  .service--box-b {
     transform: translate(-50%, 0%);
   }
 }

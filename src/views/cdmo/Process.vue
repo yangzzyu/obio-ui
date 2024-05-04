@@ -50,90 +50,67 @@
             <br />
           </p>
         </div>
-        <div class="cGMP-main-tab cGMP-zIndex">
-          <div class="tcon ub ub-ac font-size24 fontf5">
-            <div
-              class="item ub ub-ac"
-              tabidb="cGMPTgroup1"
-              :class="activeProcessIndex == '1' ? 'active' : ''"
-              @mouseenter="activeProcessIndex = '1'"
-            >
-              <span class="ub-f1">Upstream Process</span>
-            </div>
-            <div class="line"></div>
-            <div
-              class="item ub ub-ac"
-              tabidb="cGMPTgroup2"
-              :class="activeProcessIndex == '2' ? 'active' : ''"
-              @mouseenter="activeProcessIndex = '2'"
-            >
-              <span class="ub-f1">Downstream Process</span>
+        <div
+          class="group"
+          v-for="(item, index) in tabsData"
+          :key="index"
+          v-show="true"
+        >
+          <div class="cGMP-title-t2">
+            <div class="fontf7 font-size50 ct title-color">
+              <span>{{ item.title }}</span>
             </div>
           </div>
-        </div>
-        <div class="cGMP-main-tab-group cGMP-zIndex">
-          <div
-            class="group"
-            v-for="(item, index) in tabsData"
-            :key="index"
-            v-show="activeProcessIndex === item.id"
-          >
-            <div class="cGMP-title-t2">
-              <div class="fontf7 font-size50 ct title-color">
-                <span>{{ item.title }}</span>
-              </div>
-            </div>
-            <div class="text font-size18 color666 cGMP-zIndex">
-              <p style="margin-bottom: 30px">
-                {{ item.pTxt }}
-              </p>
-              <el-row :gutter="20">
-                <el-col
-                  class="visible-xs-block"
-                  :span="12"
-                  :xs="22"
-                  :sm="22"
-                  :md="12"
-                  :lg="12"
-                  :xl="12"
+          <div class="text font-size18 color666 cGMP-zIndex">
+            <p style="margin-bottom: 30px">
+              {{ item.pTxt }}
+            </p>
+            <el-row :gutter="20">
+              <el-col
+                class="visible-xs-block"
+                :span="12"
+                :xs="22"
+                :sm="22"
+                :md="12"
+                :lg="12"
+                :xl="12"
+              >
+                <img :src="item.imgUrl" alt="" srcset="" />
+              </el-col>
+              <el-col
+                :span="12"
+                :xs="22"
+                :sm="22"
+                :md="12"
+                :lg="12"
+                :xl="12"
+                class="cGMP-Process"
+              >
+                <div
+                  class="icon-list"
+                  v-for="(i, k) in item.iconList"
+                  :key="k"
                 >
-                  <img :src="item.imgUrl" alt="" srcset="" />
-                </el-col>
-                <el-col
-                  :span="12"
-                  :xs="22"
-                  :sm="22"
-                  :md="12"
-                  :lg="12"
-                  :xl="12"
-                  class="cGMP-Process"
-                >
-                  <div
-                    class="icon-list"
-                    v-for="(i, k) in item.iconList"
-                    :key="k"
-                  >
-                    <div class="icon-list-l">
-                      <img :src="i.imgUrl" alt="" srcset="" />
-                    </div>
-                    <p>
-                      {{ i.txt }}
-                    </p>
+                  <div class="icon-list-l">
+                    <img :src="i.imgUrl" alt="" srcset="" />
                   </div>
-                </el-col>
-                <el-col
-                  class="hidden-xs"
-                  :span="12"
-                  :xs="22"
-                  :sm="22"
-                  :md="12"
-                  :lg="12"
-                  :xl="12"
-                >
-                  <img :src="item.imgUrl" alt="" srcset="" />
-                </el-col>
-              </el-row>
-            </div>
+                  <p>
+                    {{ i.txt }}
+                  </p>
+                </div>
+              </el-col>
+              <el-col
+                class="hidden-xs"
+                :span="12"
+                :xs="22"
+                :sm="22"
+                :md="12"
+                :lg="12"
+                :xl="12"
+              >
+                <img :src="item.imgUrl" alt="" srcset="" />
+              </el-col>
+            </el-row>
           </div>
         </div>
         <div class="cGMP-title-t2">
@@ -277,7 +254,7 @@
           <p style="line-height: 2">
             In sync with the growing global demand, we have initiated the
             construction of OBiO Intelli-M GMP manufacturing site with a
-            footprint of 77,000 square meter (828,821 ft²) at Lin-Gang Free Trade Zone in
+            footprint of 77,000 ㎡ (828,821 ft²) at Lin-Gang Free Trade Zone in
             Shanghai. Complemented by digitalized management system and enhanced
             manufacturing & testing facilities, OBiO Intelli-M will be able to
             capture diverse manufacturing needs and offer high-quality contract

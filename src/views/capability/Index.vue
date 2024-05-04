@@ -72,7 +72,7 @@
     <section class="in-about-wrap quality-box cro-list mt-2" id="quality-dom">
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
         <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
-          Quality & Regulatory: 
+          Quality & Regulatory
         </h1>
          <h2 class="title-color our-txt font-size30 section-title fontf7">
           International Compliant Quality Control System
@@ -90,7 +90,7 @@
               <li>Analytical Development</li>
             </p>
           </div>
-          <router-link to="/" class="read-more font-size18 fontf7" style="justify-content: flex-start;">Read
+          <router-link to="/cdmo/quality_regulatory" class="read-more font-size18 fontf7" style="justify-content: flex-start;">Read
             More</router-link>
         </el-col>
       </el-row>
@@ -173,7 +173,7 @@ import Career from "@/components/Career.vue";
 import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
-  title: "Capability & Commitment",
+  title: "Capability",
   hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
   visibleXsImgUrl: handleViteImages("head_bg.jpg"),
 });
@@ -238,7 +238,7 @@ navigation
 const industrializeList = reactive([
   {
     imgUrl: handleViteImages("facilities1.jpg"),
-    title: `Development: Efficient and Customized Process Development with
+    title: `Process Development: Efficient and Customized Process Development with
                   BoardProduct Spectrum`,
     path: "/cdmo/process_development",
     txtList: [
@@ -261,7 +261,7 @@ const industrializeList = reactive([
     ],
   },
   {
-    imgUrl: handleViteImages("pine_site.jpg"),
+    imgUrl: handleViteImages("facilities3.jpg"),
     title: `Cold Chain Logistic: 
 Traceable 
 Cold-Chain Logistics with 

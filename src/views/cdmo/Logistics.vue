@@ -49,7 +49,7 @@
         <div class="font-size18 pub-pal20" style="padding-top: 30px">
           <p style="line-height: 2">
             PINE Site currently functions as our cGMP manufacturing platform. It
-            is a three-building, 10,000 square meter (107,639 ft²) campus situated at Banxia
+            is a three-building, 10,000 ㎡ (107,639 ft²) campus situated at Banxia
             Road. in Shanghai International Medical Zone. The name PINE is
             inspired by the technical name (Pinellia Ternate) for Banxia, a herb
             in Traditional Chinese Medicine. At PINE Site, we have established a

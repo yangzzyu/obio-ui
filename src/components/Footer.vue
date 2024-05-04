@@ -21,9 +21,6 @@
           <dl class="dl-foot-nav">
             <dt class="font-size14">Phone:408-422-9864</dt>
             <dt class="font-size14">Email: obio.us@obiosh.com</dt>
-            <dt class="font-size14">
-              Address: 7133 Koll Center Parkway, Suite 200, Pleasanton, CA 94566
-            </dt>
             <dt class="font-size14"></dt>
             <dd></dd>
             <div class="link-list-i">
@@ -69,7 +66,7 @@
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
               <router-link to="/capability"
-                >Capabilit</router-link
+                >Capability</router-link
               >
             </dt>
             <dd class="font-size14">
@@ -79,12 +76,17 @@
             </dd>
             <dd class="font-size14">
               <router-link to="/capability/industrialized">
-                Industrialized
+                Industrialize Your Products
+              </router-link>
+            </dd>
+            <dd class="font-size14">
+              <router-link to="/capability/quality">
+                Quality & Regulatory
               </router-link>
             </dd>
             <dd class="font-size14">
               <router-link to="/capability/equipments">
-                Equipments
+                GMP Devices
               </router-link>
             </dd>
             <!-- <dd class="font-size14">

@@ -45,8 +45,7 @@ export const historyList = ref<HistoryItem[]>([
       <text class=" txt-color txt-bold"
         >National Equities Exchange And Quotations(NEEQ) system
       </text>`,
-      `OBiO Zhangjiang Integrated R&D Building (Floorage: 5000
-        ㎡) commissioned`,
+      `OBiO Zhangjiang Integrated R&D Building (Floorage: 5000 ㎡) commissioned`,
     ],
   },
   {

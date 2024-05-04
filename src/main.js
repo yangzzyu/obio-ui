@@ -35,7 +35,6 @@ import VueScrollTo from "vue-scrollto";
 //   components,
 //   directives,
 // });
-console.log(router,'ldldldldld');
 const app = createApp(App);
 app.directive("scroll-to", VueScrollTo);
 app.use(createPinia());

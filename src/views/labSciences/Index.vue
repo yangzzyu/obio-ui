@@ -115,7 +115,7 @@ const croList = ref([
     popLaboraId: 7,
     imgUrl: handleViteImages("cro1.png"),
     title: "Plasmid",
-    text: `At OBiO, our dedicated development team is
+    text: `At OBiO Technology, our dedicated development team is
 committed to assisting you in designing,
 constructing, and manufacturing plasmids
 for fuctional genomics research, as well as 
