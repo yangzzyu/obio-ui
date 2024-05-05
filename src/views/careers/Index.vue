@@ -23,26 +23,12 @@
       </el-col>
     </section>
     <section id="cro" class="cro-list">
-      <div class="cro-list-item row" v-for="(item, index) in croList" :key="index">
+      <div class="cro-list-item row" v-for="(item, index) in croList" :key="index" style="padding-top:20px; padding-bottom:20px;">
         <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
           <h1 class="font-size30 fontf7 iti fontf8 item-tit">
             {{ item.title }}
           </h1>
           <p class="font-size18 cro-p textColor" v-html="item.text"></p>
-          <!-- <el-row :gutter="100">
-            <el-col :xs="24" :span="4" />
-            <el-col :xs="24" :span="6"
-              ><div class="animate-imgxx uof img">
-                <img :src="item.imgUrl" alt="SPIRO Site" />
-              </div>
-            </el-col>
-            <el-col :xs="24" :span="12">
-              <h1 class="font-size30 fontf7 iti fontf8 item-tit">
-                {{ item.title }}
-              </h1>
-              <p class="font-size18 cro-p textColor" v-html="item.text"></p>
-            </el-col>
-          </el-row> -->
         </el-col>
       </div>
     </section>
@@ -204,10 +190,8 @@ therapy CXO group.
   },
   {
     imgUrl: handleViteImages("careers2.png"),
-    title: "Value:",
-    text: `Customer Focus, Efficient Execution, 
-Excellence, Innovation, Integrity.
-`,
+    title: "Value: Customer Focus, Efficient Execution, Excellence, Innovation, Integrity.",
+    text: ``,
   },
   {
     imgUrl: handleViteImages("careers3.png"),

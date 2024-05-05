@@ -26,11 +26,39 @@
         <div class="in-news-list1">
           <div class="item" v-for="(item, index) in tableData" :key="index">
             <router-link :to="'/news-details/events/' + item.id" class="block">
-              <div class="font-size18">{{ item.time }}</div>
-              <div class="title fontf4 font-size24 title-color">
-                {{ item.title }}
+              <div v-if="item.img">
+                <el-row :gutter="100">
+                  <el-col :xs="24" :span="12"
+                    ><div
+                      class="animate-imgxx uof img"
+                      style="
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                      "
+                    >
+                      <img :src="item.img" alt="Event" style="width:100%;"/>
+                    </div>
+                  </el-col>
+                  <el-col :xs="24" :span="12">
+                    <div class="font-size18">{{ item.time }}</div>
+                    <div class="title fontf4 font-size24 title-color">
+                      {{ item.title }}
+                    </div>
+                    <div class="font-size18 ut-s2">
+                      {{ item.content }}
+                    </div>
+                  </el-col>
+                </el-row>
               </div>
-              <div class="font-size18 ut-s2">{{ item.content }}</div>
+              <div v-else>
+                <div class="font-size18">{{ item.time }}</div>
+                <div class="title fontf4 font-size24 title-color">
+                  {{ item.title }}
+                </div>
+                <div class="font-size18 ut-s2">{{ item.content }}</div>
+              </div>
             </router-link>
           </div>
         </div>

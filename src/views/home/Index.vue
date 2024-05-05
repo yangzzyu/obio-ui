@@ -34,9 +34,6 @@
                 Our comprehensive suite of services encompasses plasmids, mRNA, AAV vectors, oncolytic viruses, immuno cell therapies, stem cells, and more, enabling us to cater to diverse client needs. Bolstered by state-of-the-art cGMP facilities, the largest of their kind in the Asian Pacific region, we offer unparalleled proficiency and capacity, poised to drive success for clients worldwide.
               </p>
             </div>
-            <h1 class="title-color font-size50 txt-bold section-title fontf8">
-              Our Solutions
-            </h1>
             <h2 class="title-color our-txt font-size30 section-title fontf7">
               Manufacturing Facilities
             </h2>
