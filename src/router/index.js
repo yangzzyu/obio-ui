@@ -163,6 +163,11 @@ const router = createRouter({
               component: () => import("@/views/inno/AAV.vue"),
             },
             {
+              path: "/cdmo/innovation/oversatile",
+              name: "OVersatile",
+              component: () => import("@/views/inno/OVersatile.vue"),
+            },
+            {
               path: "/cdmo/process_development",
               name: "Process Development",
               component: () => import("@/views/cdmo/Process.vue"),

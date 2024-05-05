@@ -113,6 +113,32 @@
             </el-row>
           </div>
         </div>
+        <div class="factory-img mt-5">
+          <div class="fac-con">
+            <el-row class="row" :gutter="10">
+              <el-col :xs="24" :span="intellimImg.spanList[k]" class="factory-img-col" v-for="(i, k) in intellimImg.imgList" :key="k">
+                <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="content" style="width:100%; max-height:280px; overflow:hidden">
+                    <el-image
+                      style="width: 100%; height: 100%; z-index:99;"
+                      :src="i"
+                      alt="Intelli-M"
+                      :zoom-rate="1.2"
+                      :max-scale="7"
+                      :min-scale="0.2"
+                      :initial-index="k"
+                      :crossorigin="null"
+                      :preview-src-list="intellimImg.imgList"
+                      fit="cover"
+                      :preview-teleported="true"
+                      :hide-on-click-modal="true"
+                    />
+                  </div>
+                </div>
+              </el-col>
+            </el-row>
+          </div>
+        </div>
         <div class="cGMP-title-t2">
           <div class="fontf7 font-size50 ct title-color">
             <span>Analytical Development</span>
@@ -184,6 +210,32 @@
                         <span class="color666">{{ j }}</span>
                       </li>
                     </ul>
+                  </div>
+                </div>
+              </el-col>
+            </el-row>
+          </div>
+        </div>
+        <div class="factory-img mt-5">
+          <div class="fac-con">
+            <el-row class="row" :gutter="10">
+              <el-col :xs="24" :span="intellimImg.spanList[k]" class="factory-img-col" v-for="(i, k) in intellimPeopleImg.imgList" :key="k">
+                <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="content" style="width:100%; max-height:280px; overflow:hidden">
+                    <el-image
+                      style="width: 100%; height: 100%; z-index:99;"
+                      :src="i"
+                      alt="Intelli-M"
+                      :zoom-rate="1.2"
+                      :max-scale="7"
+                      :min-scale="0.2"
+                      :initial-index="k"
+                      :crossorigin="null"
+                      :preview-src-list="intellimPeopleImg.imgList"
+                      fit="cover"
+                      :preview-teleported="true"
+                      :hide-on-click-modal="true"
+                    />
                   </div>
                 </div>
               </el-col>
@@ -306,7 +358,7 @@
 </template>
 
 <script lang="ts" setup name="Process">
-import { ref } from "vue";
+import { reactive, ref } from "vue";
 import { handleViteImages } from "@/utils";
 import { ArrowRight } from "@element-plus/icons-vue";
 import { IntelliMItemList } from "./data/IntelliM";
@@ -397,6 +449,22 @@ const vectorList = ref([
   },
 ]);
 const activeProcessIndex = ref("1");
+const intellimImg = reactive({
+  spanList: [8,8,8],
+  imgList: [
+    handleViteImages("factory/intelli-M/1.jpg"),
+    handleViteImages("factory/intelli-M/2.jpg"),
+    handleViteImages("factory/intelli-M/3.jpg")
+  ]
+});
+const intellimPeopleImg = reactive({
+  spanList: [7,10,7],
+  imgList: [
+    handleViteImages("factory/intelli-M/4.jpg"),
+    handleViteImages("factory/intelli-M/5.jpg"),
+    handleViteImages("factory/intelli-M/6.jpg")
+  ]
+});
 const tabsData = ref([
   {
     id: "1",

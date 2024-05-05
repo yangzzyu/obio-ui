@@ -421,12 +421,7 @@
                       <p class="font-size18 textColor txt txt-bold">
                         Versatility for Various Needs
                       </p>
-                      <a
-                        style="cursor: pointer"
-                        @click="popLabora(2)"
-                        class="read-more font-size18 fontf7 mt-3 service--box-a"
-                        >Read More</a
-                      >
+                      <router-link to="/cdmo/innovation/oversatile" class="read-more font-size18 fontf7">Read More</router-link>
                     </div>
                   </a>
                 </el-col>

@@ -103,6 +103,32 @@
             <span><br /> </span>
           </p>
         </div>
+        <div class="factory-img mt-5">
+          <div class="fac-con">
+            <el-row class="row" :gutter="10">
+              <el-col :xs="24" :span="spiroImg.spanList[k]" class="factory-img-col" v-for="(i, k) in spiroImg.imgList" :key="k">
+                <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="content" style="width:100%; max-height:280px; overflow:hidden">
+                    <el-image
+                      style="width: 100%; height: 100%; z-index:99;"
+                      :src="i"
+                      alt="Intelli-M"
+                      :zoom-rate="1.2"
+                      :max-scale="7"
+                      :min-scale="0.2"
+                      :initial-index="k"
+                      :crossorigin="null"
+                      :preview-src-list="spiroImg.imgList"
+                      fit="cover"
+                      :preview-teleported="true"
+                      :hide-on-click-modal="true"
+                    />
+                  </div>
+                </div>
+              </el-col>
+            </el-row>
+          </div>
+        </div>
         <div class="cGMP-main-tab cGMP-zIndex">
           <div class="tcon ub ub-ac font-size24 fontf5">
             <div
@@ -184,6 +210,32 @@
             </el-col>
           </el-row>
         </div>
+        <div class="factory-img mt-5">
+          <div class="fac-con">
+            <el-row class="row" :gutter="10">
+              <el-col :xs="24" :span="spiroPeopleImg.spanList[k]" class="factory-img-col" v-for="(i, k) in spiroPeopleImg.imgList" :key="k">
+                <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="content" style="width:100%; max-height:280px; overflow:hidden">
+                    <el-image
+                      style="width: 100%; height: 100%; z-index:99;"
+                      :src="i"
+                      alt="Intelli-M"
+                      :zoom-rate="1.2"
+                      :max-scale="7"
+                      :min-scale="0.2"
+                      :initial-index="k"
+                      :crossorigin="null"
+                      :preview-src-list="spiroPeopleImg.imgList"
+                      fit="cover"
+                      :preview-teleported="true"
+                      :hide-on-click-modal="true"
+                    />
+                  </div>
+                </div>
+              </el-col>
+            </el-row>
+          </div>
+        </div>
         <div class="cGMP-title-t2">
           <div class="fontf7 font-size50 ct">
             <span>Capacity for Global</span>
@@ -226,13 +278,29 @@
 </template>
 
 <script lang="ts" setup name="Cdmo">
-import { ref } from "vue";
+import { reactive, ref } from "vue";
 import { useTransition } from "@vueuse/core";
 import { ArrowRight } from "@element-plus/icons-vue";
 import { handleViteImages } from "@/utils";
 import { InnovationsList } from "../data/SpiroSite";
 
 const activeIndex = ref("1");
+const spiroImg = reactive({
+  spanList: [8,8,8],
+  imgList: [
+    handleViteImages("factory/spiro/1.jpg"),
+    handleViteImages("factory/spiro/2.jpg"),
+    handleViteImages("factory/spiro/3.jpg")
+  ]
+});
+const spiroPeopleImg = reactive({
+  spanList: [7,10,7],
+  imgList: [
+    handleViteImages("factory/spiro/4.jpg"),
+    handleViteImages("factory/spiro/5.jpg"),
+    handleViteImages("factory/spiro/6.jpg")
+  ]
+});
 const tabsData = ref([
   {
     id: "1",

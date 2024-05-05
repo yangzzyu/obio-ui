@@ -15,18 +15,17 @@
       :lg="20"
       :xl="22"
       style="margin: auto"
-      class="container"
-    >
+      class="container">
       <div class="text font-size18">
-        <p>
-          <span style="line-height: 2"
+        <span style="line-height: 2"
             >The top priority of gene and cell therapy products during
             transportation is to maintain the integrity of the products, as well
             as ensuring them arrive their destination on time and within
-            temperature specification.</span
-          ><br />
-          <br />
-          <span style="line-height: 2"
+            temperature specification.>
+        </span>
+        <br />
+        <br />
+        <span style="line-height: 2"
             >As one of the Innovation Demonstration Units certified by the
             customs of Shanghai Technology Innovation Center, we have
             successfully supported our clients with their international
@@ -39,10 +38,36 @@
             assist you to provide documentation required for declaration at
             China Customs, accelerate declaration process, ensuring our gene and
             cell therapy products delivered to the destination you designated as
-            soon as possible.&nbsp;</span
-          ><br />
-          <br />
-          <div class="pub-title pub-title-p ub ub-ver ub-pe">
+            soon as possible.&nbsp;
+        </span><br />
+        <br />
+        <div class="factory-img mt-5">
+          <div class="fac-con">
+            <el-row class="row" :gutter="10">
+              <el-col :xs="24" :span="pineImg.spanList[k]" class="factory-img-col" v-for="(i, k) in pineImg.imgList" :key="k">
+                <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="content" style="width:100%; max-height:280px; overflow:hidden">
+                    <el-image
+                      style="width: 100%; height: 100%; z-index:99;"
+                      :src="i"
+                      alt="Intelli-M"
+                      :zoom-rate="1.2"
+                      :max-scale="7"
+                      :min-scale="0.2"
+                      :initial-index="k"
+                      :crossorigin="null"
+                      :preview-src-list="pineImg.imgList"
+                      fit="cover"
+                      :preview-teleported="true"
+                      :hide-on-click-modal="true"
+                    />
+                  </div>
+                </div>
+              </el-col>
+            </el-row>
+          </div>
+        </div>
+        <div class="pub-title pub-title-p ub ub-ver ub-pe">
           <i class="line"></i>
           <h1 class="fontf7 font-size50">Breaking Technological Bottleneck</h1>
         </div>
@@ -72,18 +97,58 @@
             </el-col>
           </el-row>
         </div>
-        </p>
-        <p>
-          <br />
-        </p>
+        <div class="factory-img mt-5">
+          <div class="fac-con">
+            <el-row class="row" :gutter="10">
+              <el-col :xs="24" :span="pinePeopleImg.spanList[k]" class="factory-img-col" v-for="(i, k) in pinePeopleImg.imgList" :key="k">
+                <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="content" style="width:100%; max-height:240px; overflow:hidden">
+                    <el-image
+                      style="width: 100%; height: 100%; z-index:99;"
+                      :src="i"
+                      alt="Intelli-M"
+                      :zoom-rate="1.2"
+                      :max-scale="7"
+                      :min-scale="0.2"
+                      :initial-index="k"
+                      :crossorigin="null"
+                      :preview-src-list="pinePeopleImg.imgList"
+                      fit="cover"
+                      :preview-teleported="true"
+                      :hide-on-click-modal="true"
+                    />
+                  </div>
+                </div>
+              </el-col>
+            </el-row>
+          </div>
+        </div>
       </div>
     </el-col>
   </div>
 </template>
 
 <script lang="ts" setup name="Process">
-import { ref } from "vue";
+import { ref, reactive } from "vue";
 import { PineList } from "./data/PineSite";
+import { handleViteImages } from "@/utils";
+
+const pineImg = reactive({
+  spanList: [9,9,6],
+  imgList: [
+    handleViteImages("factory/pine/1.jpg"),
+    handleViteImages("factory/pine/2.jpg"),
+    handleViteImages("factory/pine/3.png")
+  ]
+});
+const pinePeopleImg = reactive({
+  spanList: [7,7,10],
+  imgList: [
+    handleViteImages("factory/pine/4.jpg"),
+    handleViteImages("factory/pine/5.jpg"),
+    handleViteImages("factory/pine/6.jpg")
+  ]
+});
 
 </script>
 
