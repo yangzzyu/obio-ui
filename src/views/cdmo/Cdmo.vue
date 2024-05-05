@@ -400,7 +400,7 @@
                       <p class="font-size18 txt textColor txt-bold">
                         Next-Generation Capsid <br />Screening Platform
                       </p>
-                      <router-link to="/cdmo/innovation/aav" class="read-more font-size18 fontf7">Read More</router-link>
+                      <router-link to="/cdmo/innovation/aav" class="read-more font-size18 fontf7 service--box-a">Read More</router-link>
                     </div>
                   </a>
                 </el-col>
@@ -421,7 +421,7 @@
                       <p class="font-size18 textColor txt txt-bold">
                         Versatility for Various Needs
                       </p>
-                      <router-link to="/cdmo/innovation/oversatile" class="read-more font-size18 fontf7">Read More</router-link>
+                      <router-link to="/cdmo/innovation/oversatile" class="read-more font-size18 fontf7 service--box-a">Read More</router-link>
                     </div>
                   </a>
                 </el-col>
