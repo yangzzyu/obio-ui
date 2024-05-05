@@ -25,9 +25,12 @@
     <section id="cro" class="cro-list">
       <div class="cro-list-item row" v-for="(item, index) in croList" :key="index" style="padding-top:20px; padding-bottom:20px;">
         <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
-          <h1 class="font-size30 fontf7 iti fontf8 item-tit">
-            {{ item.title }}
-          </h1>
+          <p>
+            <span class="font-size30 fontf7 iti fontf8 item-tit">
+              {{ item.title }}
+            </span>
+            <span class="font-size18 cro-p textColor" v-html="item.subtitle"></span>
+          </p>
           <p class="font-size18 cro-p textColor" v-html="item.text"></p>
         </el-col>
       </div>
@@ -181,8 +184,8 @@ const croList = ref([
   },
   {
     imgUrl: handleViteImages("careers1.png"),
-    title: "Vision by 2026:",
-    text: `Providing client-centered and high-quality 
+    title: "Vision by 2026: ",
+    subtitle: `Providing client-centered and high-quality 
 service as our commitment, we strive to 
 become a world-leading gene and cell 
 therapy CXO group. 
@@ -190,8 +193,8 @@ therapy CXO group.
   },
   {
     imgUrl: handleViteImages("careers2.png"),
-    title: "Value: Customer Focus, Efficient Execution, Excellence, Innovation, Integrity.",
-    text: ``,
+    title: "Value: ",
+    subtitle: "Customer Focus, Efficient Execution, Excellence, Innovation, Integrity.",
   },
   {
     imgUrl: handleViteImages("careers3.png"),
