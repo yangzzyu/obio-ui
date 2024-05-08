@@ -28,7 +28,6 @@ import { handleViteImages } from "@/utils";
 
 const router = useRouter();
 const currentRoute = router.currentRoute.value;
-console.log(currentRoute, "currentRoute");
 const routerName = ref("");
 const matchedData = ref([]);
 const FocusData = ref({});

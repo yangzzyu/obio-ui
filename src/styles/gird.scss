@@ -658,6 +658,7 @@
   .cGMP-wrap .cGMP-main {
     padding-top: 30px;
   }
+  .factory-img,
   .cGMP-title-t1,
   .cGMP-title-t2,
   .cGMP-title-t3,
@@ -934,6 +935,9 @@
     right: 68%;
     -webkit-transform: rotateZ(180deg);
     transform: rotateZ(180deg);
+  }
+  .content-img {
+    width: 90%;
   }
   .pub-pal20 {
     padding-left: 20px;

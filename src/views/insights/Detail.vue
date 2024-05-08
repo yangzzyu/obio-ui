@@ -48,7 +48,6 @@ import { handleViteImages, goRouter } from "@/utils";
 import { log } from "node:console";
 const router = useRouter();
 const currentRoute = router.currentRoute.value;
-console.log(currentRoute, "currentRoute");
 const routerName = ref("");
 const matchedData = ref([
   {

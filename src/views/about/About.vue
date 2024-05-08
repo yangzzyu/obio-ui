@@ -110,7 +110,7 @@
               <p class="font-size18 textColor txt-bold">
                 Process Development Characterization Clinical and Commercial
                 Manufacturing
-                <text class="title-color txt-bold">77,000</text>-square-meter
+                <text class="title-color txt-bold">77,000</text> ㎡ (828,821 ft²)
                 Facility for Global Supply
               </p>
               <router-link to="/about/facilities/intellim" class="read-more font-size18 fontf7">Read More</router-link>
@@ -145,8 +145,7 @@
               <div class="font-size30 fontf7 iti">PINE Site</div>
               <p class="font-size18 textColor txt-bold">
                 Process and Analytical Method Development Pre-clinical and
-                Clinical Manufacturing Three-building,<text class="title-color txt-bold">10,000</text>-square-meter
-                campus
+                Clinical Manufacturing Three-building,<text class="title-color txt-bold">10,000</text> ㎡ (107,639 ft²) campus
               </p>
               <router-link to="/about/facilities/pine" class="read-more font-size18 fontf7">Read More</router-link>
             </el-col>
@@ -154,7 +153,7 @@
         </div>
       </el-col>
     </section>
-    <section class="in-about-wrap about-box" style="margin: 0;">
+    <section class="in-about-wrap about-box mt-5" style="margin: 0;">
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container section-3">
         <!-- <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
           Factory Images
@@ -171,17 +170,9 @@
                       base
                     </p>
                     <ul class="font-size16 txt-bold is-details details-ul" style="color: #fff">
-                      <li>The only 77,000 ㎡ scale GMP-compliant facility in the world</li>
+                      <li>The only 77,000 ㎡ (828,821 ft²) scale GMP-compliant facility in the world</li>
                       <li>Gene cell therapy commercial production service base</li>
                     </ul>
-                    <!-- <p
-                      class="font-size18 txt-bold is-details"
-                      style="color: #fff"
-                    >
-                      The only 77,000m2 scale GMP-compliant facility in the
-                      world Gene cell therapy commercial production service base
-                      Large-scale; Large production capacity
-                    </p> -->
                   </div>
                   <img :src="handleViteImages('facility1.png')" alt="SPIRO Site" />
                   <div class="overlay"></div>
@@ -294,13 +285,13 @@
           Life at OBiO
         </h1>
         <el-row class="our-box-content" :gutter="40">
-          <el-col :span="8" :xs="24" class="left-content">
-            <img class="img" :src="handleViteImages('life_bg.png')" alt="" />
+          <el-col :span="12" :xs="24" class="left-content">
+            <img class="img" :src="handleViteImages('life/WechatIMG520.jpg')" alt="" />
           </el-col>
-          <el-col :span="16" :xs="24" class="font-size20 news-list">
+          <el-col :span="12" :xs="24" class="font-size20 news-list">
             <h2
-              class="title-color font-size30 fontf7"
-              style="margin-bottom: 30px"
+              class="title-color font-size18 fontf7"
+              style="margin-bottom: 10px"
             >
               As OBiO Tech swiftly evolves, every OBiOers are immersed in an
               environment fostering "enhanced capabilities, purposeful work, and
@@ -326,7 +317,7 @@
         </el-row>
         <ul class="btn-ul">
           <li>
-            <router-link to="/team" class="read-more font-size18 fontf7">Join Our Team</router-link>
+            <router-link to="/careers/job" class="read-more font-size18 fontf7">Join Our Team</router-link>
           </li>
           <li>
             <router-link to="/careers/life" class="read-more font-size18 fontf7">Read More</router-link>

@@ -19,12 +19,12 @@
         class="container"
       >
         <el-row :gutter="50" class="cdmo-top">
-          <el-col :xs="24" :span="6"
+          <el-col :xs="24" :span="10"
             ><div class="animate-imgxx uof img">
-              <img :src="handleViteImages('cdmo_top.png')" alt="SPIRO Site" />
+              <img :src="handleViteImages('life/WechatIMG522.jpg')" alt="SPIRO Site" />
             </div>
           </el-col>
-          <el-col :xs="24" :span="18">
+          <el-col :xs="24" :span="14">
             <p class="font-size18 fontf7 cro-p textColor">
               We provide comprehensive CDMO services encompassing process
               development, analytical methods, IND-enabling CMC (Chemistry,
@@ -35,7 +35,7 @@
               various products at the Pre-IND stage and beyond.
             </p>
             <p class="font-size18 fontf7 cro-p textColor">
-              Through years of dedicated effort, OBiO has built an integrated
+              Through years of dedicated effort, OBiO Technology has built an integrated
               process development system, supported by a flexible cGMP
               manufacturing platform, comprehensive quality system and efficient
               project management. Our experienced team of experts will navigate
@@ -53,7 +53,7 @@
             <el-col :span="8" :xs="24" class="tx-c">
               <div class="nums-list bg-pinkbluelfr">
                 <div class="content">
-                  <el-statistic :value="cellSourceValue" class="number-c">
+                  <el-statistic :value="cumulativeCgtValue" class="number-c">
                     <template #suffix>
                       <div class="nums fontf9">
                         <span class="fh">+</span>
@@ -61,7 +61,7 @@
                     </template>
                   </el-statistic>
                   <div class="pn fontf7 font-size24">
-                    Gene and Cell Therapy Programs
+                    Cumulative CGT CDMO Projects
                   </div>
                 </div>
               </div>
@@ -94,6 +94,102 @@
                   </el-statistic>
                   <div class="pn fontf7 font-size24">
                     Analytical Method Development Projects
+                  </div>
+                </div>
+              </div>
+            </el-col>
+          </el-row>
+          <el-row class="row color666" :gutter="100">
+            <el-col :span="8" :xs="24" class="tx-c">
+              <div class="nums-list bg-pinkbluelfr">
+                <div class="content">
+                  <div class="pn fontf7 font-size24">
+                    Assist Clients to Obtain
+                  </div>
+                  <el-statistic :value="indApprovalsValue" class="number-c">
+                    <template #suffix>
+                      <div class="nums fontf9">
+                        <span class="fh">+</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size24">
+                    IND Approvals
+                  </div>
+                  <div class="pn fontf7 font-size24">
+                    Including
+                  </div>
+                  <el-statistic :value="fdaApprovalsValue" class="number-c">
+                    <template #suffix>
+                      <div class="nums fontf9">
+                        <span class="fh">+</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size24">
+                    FDA Approvals
+                  </div>
+                </div>
+              </div>
+            </el-col>
+            <el-col :span="8" :xs="24" class="tx-c">
+              <div class="nums-list bg-pinkbluelfr">
+                <div class="content">
+                  <el-statistic :value="suspendedValue" class="number-c">
+                    <template #suffix>
+                      <div class="nums fontf10">
+                        <span class="fh">L</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size24">
+                    Suspended Cell Culture Production System
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div class="nums-list bg-pinkbluelfr">
+                <div class="content">
+                  <el-statistic :value="squareFeetValue" class="number-c">
+                    <template #suffix>
+                      <div class="nums fontf10">
+                        <span class="fh">K ft²</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size24">
+                    of CRO & CDMO service operational area
+                  </div>
+                </div>
+              </div>
+            </el-col>
+            <el-col :span="8" :xs="24" class="tx-c">
+              <div class="nums-list bg-pinkbluelfr">
+                <div class="content">
+                  <el-statistic class="number-c" :value="globalServiceValue">
+                    <template #suffix>
+                      <div class="nums fontf9">
+                        <span class="fh">+</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size24">
+                    Global Service Clients
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div class="nums-list bg-pinkbluelfr">
+                <div class="content">
+                  <el-statistic :value="cellSourceValue" class="number-c">
+                    <template #suffix>
+                      <div class="nums fontf9">
+                        <span class="fh">+</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size24">
+                    Gene and Cell Therapy Programs
                   </div>
                 </div>
               </div>
@@ -208,7 +304,7 @@
                 <p class="font-size18 textColor txt-bold">
                   Process Development Characterization Clinical and Commercial
                   Manufacturing.
-                  <text class="title-color txt-bold">77,000</text>-square-meter
+                  <text class="title-color txt-bold">77,000</text>㎡ (828,821 ft²)
                   Facility for Global Supply
                 </p>
                 <router-link
@@ -245,7 +341,7 @@
                 <div class="manufacturing-list bg-pinkbluelfr">
                   <div class="content">
                     <img
-                      :src="handleViteImages('pine_site.png')"
+                      :src="handleViteImages('facilities3.jpg')"
                       alt="PINE Site"
                     />
                   </div>
@@ -257,8 +353,8 @@
                 <p class="font-size18 textColor txt-bold">
                   Process and Analytical Method Development. Pre-clinical and
                   Clinical Manufacturing. Three-building,
-                  <text class="title-color txt-bold">10,000</text>-square-meter
-                  campus
+                  <text class="title-color txt-bold">10,000</text> ㎡
+                  (107,639 ft²) campus
                 </p>
                 <router-link
                   to="/about/facilities/pine"
@@ -304,12 +400,7 @@
                       <p class="font-size18 txt textColor txt-bold">
                         Next-Generation Capsid <br />Screening Platform
                       </p>
-                      <a
-                        style="cursor: pointer"
-                        @click="popLabora(1)"
-                        class="read-more font-size18 fontf7 mt-3 service--box-a"
-                        >Read More</a
-                      >
+                      <router-link to="/cdmo/innovation/aav" class="read-more font-size18 fontf7 service--box-a">Read More</router-link>
                     </div>
                   </a>
                 </el-col>
@@ -330,12 +421,7 @@
                       <p class="font-size18 textColor txt txt-bold">
                         Versatility for Various Needs
                       </p>
-                      <a
-                        style="cursor: pointer"
-                        @click="popLabora(2)"
-                        class="read-more font-size18 fontf7 mt-3 service--box-a"
-                        >Read More</a
-                      >
+                      <router-link to="/cdmo/innovation/oversatile" class="read-more font-size18 fontf7 service--box-a">Read More</router-link>
                     </div>
                   </a>
                 </el-col>
@@ -539,9 +625,33 @@ const croList = ref([
   },
 ]);
 const cellSource = ref(0);
+const cumulativeCgt = ref(0);
+const indApprovals = ref(0);
+const fdaApprovals = ref(0);
+const suspended = ref(0);
+const squareFeet = ref(0);
+const globalService = ref(0);
 const processSource = ref(0);
 const analyticalSource = ref(0);
 const cellSourceValue = useTransition(cellSource, {
+  duration: 1500,
+});
+const cumulativeCgtValue = useTransition(cumulativeCgt, {
+  duration: 1500,
+});
+const indApprovalsValue = useTransition(indApprovals, {
+  duration: 1500,
+});
+const fdaApprovalsValue = useTransition(fdaApprovals, {
+  duration: 1500,
+});
+const suspendedValue = useTransition(suspended, {
+  duration: 1500,
+});
+const squareFeetValue = useTransition(squareFeet, {
+  duration: 1500,
+});
+const globalServiceValue = useTransition(globalService, {
   duration: 1500,
 });
 const processSourceValue = useTransition(processSource, {
@@ -551,6 +661,12 @@ const analyticalSourceValue = useTransition(analyticalSource, {
   duration: 1500,
 });
 cellSource.value = 170;
+cumulativeCgt.value = 280;
+indApprovals.value = 38;
+fdaApprovals.value = 11;
+suspended.value = 200;
+squareFeet.value = 990;
+globalService.value = 110;
 processSource.value = 200;
 analyticalSource.value = 500;
 

@@ -50,90 +50,93 @@
             <br />
           </p>
         </div>
-        <div class="cGMP-main-tab cGMP-zIndex">
-          <div class="tcon ub ub-ac font-size24 fontf5">
-            <div
-              class="item ub ub-ac"
-              tabidb="cGMPTgroup1"
-              :class="activeProcessIndex == '1' ? 'active' : ''"
-              @mouseenter="activeProcessIndex = '1'"
-            >
-              <span class="ub-f1">Upstream Process</span>
-            </div>
-            <div class="line"></div>
-            <div
-              class="item ub ub-ac"
-              tabidb="cGMPTgroup2"
-              :class="activeProcessIndex == '2' ? 'active' : ''"
-              @mouseenter="activeProcessIndex = '2'"
-            >
-              <span class="ub-f1">Downstream Process</span>
+        <div
+          class="group"
+          v-for="(item, index) in tabsData"
+          :key="index"
+          v-show="true"
+        >
+          <div class="cGMP-title-t2">
+            <div class="fontf7 font-size50 ct title-color">
+              <span>{{ item.title }}</span>
             </div>
           </div>
-        </div>
-        <div class="cGMP-main-tab-group cGMP-zIndex">
-          <div
-            class="group"
-            v-for="(item, index) in tabsData"
-            :key="index"
-            v-show="activeProcessIndex === item.id"
-          >
-            <div class="cGMP-title-t2">
-              <div class="fontf7 font-size50 ct title-color">
-                <span>{{ item.title }}</span>
-              </div>
-            </div>
-            <div class="text font-size18 color666 cGMP-zIndex">
-              <p style="margin-bottom: 30px">
-                {{ item.pTxt }}
-              </p>
-              <el-row :gutter="20">
-                <el-col
-                  class="visible-xs-block"
-                  :span="12"
-                  :xs="22"
-                  :sm="22"
-                  :md="12"
-                  :lg="12"
-                  :xl="12"
+          <div class="text font-size18 color666 cGMP-zIndex">
+            <p style="margin-bottom: 30px">
+              {{ item.pTxt }}
+            </p>
+            <el-row :gutter="20">
+              <el-col
+                class="visible-xs-block"
+                :span="12"
+                :xs="22"
+                :sm="22"
+                :md="12"
+                :lg="12"
+                :xl="12"
+              >
+                <img :src="item.imgUrl" alt="" srcset="" />
+              </el-col>
+              <el-col
+                :span="12"
+                :xs="22"
+                :sm="22"
+                :md="12"
+                :lg="12"
+                :xl="12"
+                class="cGMP-Process"
+              >
+                <div
+                  class="icon-list"
+                  v-for="(i, k) in item.iconList"
+                  :key="k"
                 >
-                  <img :src="item.imgUrl" alt="" srcset="" />
-                </el-col>
-                <el-col
-                  :span="12"
-                  :xs="22"
-                  :sm="22"
-                  :md="12"
-                  :lg="12"
-                  :xl="12"
-                  class="cGMP-Process"
-                >
-                  <div
-                    class="icon-list"
-                    v-for="(i, k) in item.iconList"
-                    :key="k"
-                  >
-                    <div class="icon-list-l">
-                      <img :src="i.imgUrl" alt="" srcset="" />
-                    </div>
-                    <p>
-                      {{ i.txt }}
-                    </p>
+                  <div class="icon-list-l">
+                    <img :src="i.imgUrl" alt="" srcset="" />
                   </div>
-                </el-col>
-                <el-col
-                  class="hidden-xs"
-                  :span="12"
-                  :xs="22"
-                  :sm="22"
-                  :md="12"
-                  :lg="12"
-                  :xl="12"
-                >
-                  <img :src="item.imgUrl" alt="" srcset="" />
-                </el-col>
-              </el-row>
-            </div>
+                  <p>
+                    {{ i.txt }}
+                  </p>
+                </div>
+              </el-col>
+              <el-col
+                class="hidden-xs"
+                :span="12"
+                :xs="22"
+                :sm="22"
+                :md="12"
+                :lg="12"
+                :xl="12"
+              >
+                <img :src="item.imgUrl" alt="" srcset="" />
+              </el-col>
+            </el-row>
+          </div>
+        </div>
+        <div class="factory-img mt-5">
+          <div class="fac-con">
+            <el-row class="row" :gutter="10">
+              <el-col :xs="24" :span="intellimImg.spanList[k]" class="factory-img-col" v-for="(i, k) in intellimImg.imgList" :key="k">
+                <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="content" style="width:100%; max-height:280px; overflow:hidden">
+                    <el-image
+                      style="width: 100%; height: 100%; z-index:99;"
+                      :src="i"
+                      alt="Intelli-M"
+                      :zoom-rate="1.2"
+                      :max-scale="7"
+                      :min-scale="0.2"
+                      :initial-index="k"
+                      :crossorigin="null"
+                      :preview-src-list="intellimImg.imgList"
+                      fit="cover"
+                      :preview-teleported="true"
+                      :hide-on-click-modal="true"
+                    />
+                  </div>
+                </div>
+              </el-col>
+            </el-row>
           </div>
         </div>
         <div class="cGMP-title-t2">
@@ -213,6 +216,32 @@
             </el-row>
           </div>
         </div>
+        <div class="factory-img mt-5">
+          <div class="fac-con">
+            <el-row class="row" :gutter="10">
+              <el-col :xs="24" :span="intellimImg.spanList[k]" class="factory-img-col" v-for="(i, k) in intellimPeopleImg.imgList" :key="k">
+                <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="content" style="width:100%; max-height:280px; overflow:hidden">
+                    <el-image
+                      style="width: 100%; height: 100%; z-index:99;"
+                      :src="i"
+                      alt="Intelli-M"
+                      :zoom-rate="1.2"
+                      :max-scale="7"
+                      :min-scale="0.2"
+                      :initial-index="k"
+                      :crossorigin="null"
+                      :preview-src-list="intellimPeopleImg.imgList"
+                      fit="cover"
+                      :preview-teleported="true"
+                      :hide-on-click-modal="true"
+                    />
+                  </div>
+                </div>
+              </el-col>
+            </el-row>
+          </div>
+        </div>
         <div class="cGMP-title-t1">
           <div class="fontf7 font-size50 ct">
             <span>Process Validation</span>
@@ -269,6 +298,40 @@
               /> </el-col
           ></el-row>
         </div>
+        <div class="pub-title pub-title-p ub ub-ver ub-pe">
+          <i class="line"></i>
+          <h1 class="fontf7 font-size50">For Global Customers</h1>
+        </div>
+        <div class="font-size18 pub-pal20" style="padding-top: 30px">
+          <p style="line-height: 2">
+            In sync with the growing global demand, we have initiated the
+            construction of OBiO Intelli-M GMP manufacturing site with a
+            footprint of 77,000 ㎡ (828,821 ft²) at Lin-Gang Free Trade Zone in
+            Shanghai. Complemented by digitalized management system and enhanced
+            manufacturing & testing facilities, OBiO Intelli-M will be able to
+            capture diverse manufacturing needs and offer high-quality contract
+            development and manufacturing services to customers worldwide.
+            <br />
+            <br />
+            Stage 1 construction with 11 GMP production lines will be
+            accomplished by 2023. The full site with 33 GMP production lines
+            will be operating by 2025.
+            <br />
+            <br />
+            At OBiO Intelli-M, we will provide our customers worldwide with
+            following services:
+          </p>
+          <el-row>
+            <el-col
+              :span="12"
+              :xs="22"
+              v-for="(item, index) in IntelliMItemList"
+              :key="index"
+            >
+              ● {{ item.txt }}
+            </el-col>
+          </el-row>
+        </div>
         <div class="cGMP-title-t2">
           <div class="fontf7 font-size50 ct"><span>Why OBiO?</span></div>
           <i class="bg"></i>
@@ -295,9 +358,10 @@
 </template>
 
 <script lang="ts" setup name="Process">
-import { ref } from "vue";
+import { reactive, ref } from "vue";
 import { handleViteImages } from "@/utils";
 import { ArrowRight } from "@element-plus/icons-vue";
+import { IntelliMItemList } from "./data/IntelliM";
 
 const cellSource = ref(0);
 const processSource = ref(0);
@@ -385,6 +449,22 @@ const vectorList = ref([
   },
 ]);
 const activeProcessIndex = ref("1");
+const intellimImg = reactive({
+  spanList: [8,8,8],
+  imgList: [
+    handleViteImages("factory/intelli-M/1.jpg"),
+    handleViteImages("factory/intelli-M/2.jpg"),
+    handleViteImages("factory/intelli-M/3.jpg")
+  ]
+});
+const intellimPeopleImg = reactive({
+  spanList: [7,10,7],
+  imgList: [
+    handleViteImages("factory/intelli-M/4.jpg"),
+    handleViteImages("factory/intelli-M/5.jpg"),
+    handleViteImages("factory/intelli-M/6.jpg")
+  ]
+});
 const tabsData = ref([
   {
     id: "1",
@@ -406,7 +486,7 @@ const tabsData = ref([
       },
       {
         imgUrl: handleViteImages("process_icon3.png"),
-        txt: `Transient transfection at large-scale: 200 L suspension culture and 600㎡ fixed bed culture`,
+        txt: `Transient transfection at large-scale: 200 L suspension culture and 600 ㎡ (6,458 ft²) fixed bed culture`,
       },
       {
         imgUrl: handleViteImages("process_icon4.png"),

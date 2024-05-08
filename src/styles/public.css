@@ -1202,6 +1202,11 @@ li {
   position: relative;
   padding-left: 15px;
 }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 /*.header__navigation .sub-menu .menu-item:after{
     width: 10px;
     height: 16px;
