@@ -12,7 +12,7 @@
   font-size: $size14;
 }
 .font-size18 {
-  font-size: $size18;
+  font-size: $size18 !important;
 }
 .font-size20 {
   font-size: $size20;
@@ -103,7 +103,7 @@
     margin-top: 2px;
   }
   .font-size18 {
-    font-size: 14px;
+    font-size: 14px !important;
   }
   .font-size20 {
     font-size: 14px;
@@ -1014,7 +1014,7 @@
 
 @media (max-width: 1700px) and (min-width: 768px) {
   .font-size18 {
-    font-size: $size16;
+    font-size: $size16 !important;
   }
   .font-size20 {
     font-size: $size18;
