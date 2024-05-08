@@ -19,7 +19,7 @@
             <el-checkbox-group
               v-model="form.laboratory"
               @change="changeLaboratory"
-              class="check-txt fontf2 font-size18"
+              class="check-txt fontf4 font-size18"
               style="
                 display: flex;
                 flex-flow: column nowrap;
@@ -65,7 +65,7 @@
             <el-checkbox-group
               v-model="form.cdmo"
               @change="changeCdmo"
-              class="check-txt fontf2 font-size18"
+              class="check-txt fontf4 font-size18"
               style="
                 display: flex;
                 flex-flow: column nowrap;
@@ -123,7 +123,7 @@
               ref="ruleFormRef"
               :model="form"
               label-width="200px"
-              class="form-contact-main fontf2 font-size18"
+              class="form-contact-main fontf4 font-size18"
               :label-position="'top'"
               :rules="rules"
               status-icon
@@ -357,17 +357,20 @@ const sendEmail = async (formEl: FormInstance | undefined) => {
     justify-content: center;
   }
 }
+.el-checkbox{
+  font-size: inherit !important;
+}
 // .el-checkbox__label {
 // }
 .check-txt :deep(.el-checkbox__label) {
   color: #747475;
-  font-family: "puhuiti-2-45";
+  // font-family: "puhuiti-2-45";
   font-size: inherit !important;
   // font-size: 18px;
 }
 .form-contact-main :deep(.el-form-item__label) {
   color: #747475;
-  font-family: "puhuiti-2-45";
+  // font-family: "puhuiti-2-45";
   font-size: inherit !important;
 }
 .check-txt :deep(.el-checkbox__input.is-checked .el-checkbox__inner) {
