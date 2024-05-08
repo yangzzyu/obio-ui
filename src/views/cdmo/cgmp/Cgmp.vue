@@ -103,6 +103,32 @@
             <span><br /> </span>
           </p>
         </div>
+        <div class="factory-img mt-5">
+          <div class="fac-con">
+            <el-row class="row" :gutter="10">
+              <el-col :xs="24" :span="spiroImg.spanList[k]" class="factory-img-col" v-for="(i, k) in spiroImg.imgList" :key="k">
+                <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="content" style="width:100%; max-height:280px; overflow:hidden">
+                    <el-image
+                      style="width: 100%; height: 100%; z-index:99;"
+                      :src="i"
+                      alt="Intelli-M"
+                      :zoom-rate="1.2"
+                      :max-scale="7"
+                      :min-scale="0.2"
+                      :initial-index="k"
+                      :crossorigin="null"
+                      :preview-src-list="spiroImg.imgList"
+                      fit="cover"
+                      :preview-teleported="true"
+                      :hide-on-click-modal="true"
+                    />
+                  </div>
+                </div>
+              </el-col>
+            </el-row>
+          </div>
+        </div>
         <div class="cGMP-main-tab cGMP-zIndex">
           <div class="tcon ub ub-ac font-size24 fontf5">
             <div
@@ -157,19 +183,72 @@
           </div>
         </div>
         <a name="a1"></a>
+        <div class="pub-title pub-title-p ub ub-ver ub-pe">
+          <i class="line"></i>
+          <h1 class="fontf7 font-size50">Quality from Constant Innovations</h1>
+        </div>
+        <div class="font-size18 pub-pal20" style="padding-top: 30px">
+          <p style="line-height: 2">
+            SPIRO Site, operating as the Research &amp; Development Center, is
+            located at Ziping Road in Shanghai International Medical Zone. The
+            name SPIRO originates from the name of Ziping Road (Spirodela
+            polyrhiza), a herb in Traditional Chinese Medicine.&nbsp;At SPIRO
+            Site, we enhance our service capabilities through constant
+            innovations in basic science, and provide customers with contract
+            research services, process development, analytical development and
+            extend services of gene and cell therapy products, including:
+          </p>
+          <br />
+          <el-row>
+            <el-col
+              :span="12"
+              :xs="22"
+              v-for="(item, index) in InnovationsList"
+              :key="index"
+            >
+              ● {{ item.txt }}
+            </el-col>
+          </el-row>
+        </div>
+        <div class="factory-img mt-5">
+          <div class="fac-con">
+            <el-row class="row" :gutter="10">
+              <el-col :xs="24" :span="spiroPeopleImg.spanList[k]" class="factory-img-col" v-for="(i, k) in spiroPeopleImg.imgList" :key="k">
+                <div class="manufacturing-list bg-pinkbluelfr">
+                  <div class="content" style="width:100%; max-height:280px; overflow:hidden">
+                    <el-image
+                      style="width: 100%; height: 100%; z-index:99;"
+                      :src="i"
+                      alt="Intelli-M"
+                      :zoom-rate="1.2"
+                      :max-scale="7"
+                      :min-scale="0.2"
+                      :initial-index="k"
+                      :crossorigin="null"
+                      :preview-src-list="spiroPeopleImg.imgList"
+                      fit="cover"
+                      :preview-teleported="true"
+                      :hide-on-click-modal="true"
+                    />
+                  </div>
+                </div>
+              </el-col>
+            </el-row>
+          </div>
+        </div>
         <div class="cGMP-title-t2">
           <div class="fontf7 font-size50 ct">
             <span>Capacity for Global</span>
           </div>
           <i class="bg"></i>
         </div>
-        <div class="pm-2 font-size18 color666 cGMP-zIndex">
+        <div class="pm-2 font-size18 color666 cGMP-zIndex mb-5">
           <p>
             <span style="line-height: 2"
               >The current operating manufacturing footprint at OBiO covers of a
               pilot testing platform of +1,000 sqm, and a three-building cGMP
-              manufacturing platform with +10,000 sqm in total. Furthermore, we
-              have constructed OBiO Intelli-M site with 77,000 sqm cGMP
+              manufacturing platform with +10,000 sqm (107,639 ft²) in total. Furthermore, we
+              have constructed OBiO Intelli-M site with 77,000 sqm (828,821 ft²) cGMP
               footprint, 33 cGMP production lines, and up to 2,000 L bioreactor
               capacity at Shanghai Lin-Gang Free Trade Zone to satisfy the
               global demand of gene and cell therapy products.</span
@@ -178,10 +257,10 @@
         </div>
         <a name="a2"></a>
 
-        <div class="cGMP-title-t3 cGMP-zIndex font-size24 fontf5">
+        <!-- <div class="cGMP-title-t3 cGMP-zIndex font-size24 fontf5">
           <span>
             <router-link
-              to="/facilities"
+              to="/about/facilities"
               v-scroll-to="{
                 element: '.section-3',
                 duration: 300,
@@ -192,19 +271,36 @@
               Learn more about our state-of-the-art facility
             </router-link></span
           >
-        </div>
+        </div> -->
       </el-col>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup name="Cdmo">
-import { ref } from "vue";
+import { reactive, ref } from "vue";
 import { useTransition } from "@vueuse/core";
 import { ArrowRight } from "@element-plus/icons-vue";
 import { handleViteImages } from "@/utils";
+import { InnovationsList } from "../data/SpiroSite";
 
 const activeIndex = ref("1");
+const spiroImg = reactive({
+  spanList: [8,8,8],
+  imgList: [
+    handleViteImages("factory/spiro/1.jpg"),
+    handleViteImages("factory/spiro/2.jpg"),
+    handleViteImages("factory/spiro/3.jpg")
+  ]
+});
+const spiroPeopleImg = reactive({
+  spanList: [7,10,7],
+  imgList: [
+    handleViteImages("factory/spiro/4.jpg"),
+    handleViteImages("factory/spiro/5.jpg"),
+    handleViteImages("factory/spiro/6.jpg")
+  ]
+});
 const tabsData = ref([
   {
     id: "1",

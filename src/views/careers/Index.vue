@@ -11,7 +11,7 @@
     <Focus :focusObj="FocusData" />
     <section class="culture-box hero-style-top careers-box" id="mission-box">
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
-        <h1 class="title-color font-size50 txt-bold section-title fontf8 mt-5">
+        <h1 class="title-color font-size50 txt-bold section-title fontf8">
           Our Culture
         </h1>
         <br />
@@ -22,60 +22,20 @@
         </p>
       </el-col>
     </section>
-    <section class="culture-life-box  hero-style-top" id="mission-life-box">
-      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
-        <h1 class="title-color font-size50 txt-bold section-title fontf8">
-          Life at OBiO
-        </h1>
-      </el-col>
-    </section>
-    <div class="in-about-wrap training-box" v-for="(item, index) in lifeList" :key="index">
-      <div class="section-3">
-        <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
-          <h1 class="p-title font-size30 txt-bold fontf8 mb-3 mt-3">
-            {{ item.title }}
-          </h1>
-
-          <div class="fac-con">
-            <el-row class="row" :gutter="10">
-              <el-col :xs="24" :span="24 / item.imgList.length" class="" v-for="(i, k) in item.imgList" :key="k">
-                <div class="manufacturing-list bg-pinkbluelfr">
-                  <div class="content" style="width: 100%;max-height: 200px; overflow: hidden">
-                    <el-image style="width: 100%; height: 100%" :src="i" :zoom-rate="1.2" :max-scale="7"
-                      :min-scale="0.2" :initial-index="k" :crossorigin="null" :preview-src-list="item.imgList"
-                      fit="cover" :z-index="99999" :preview-teleported="true" :hide-on-click-modal="true" />
-                  </div>
-                </div>
-              </el-col>
-            </el-row>
-          </div>
-        </el-col>
-      </div>
-    </div>
     <section id="cro" class="cro-list">
-      <div class="cro-list-item row" v-for="(item, index) in croList" :key="index">
+      <div class="cro-list-item row" v-for="(item, index) in croList" :key="index" style="padding-top:20px; padding-bottom:20px;">
         <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
-          <h1 class="font-size30 fontf7 iti fontf8 item-tit">
-            {{ item.title }}
-          </h1>
+          <p>
+            <span class="font-size30 fontf7 iti fontf8 item-tit">
+              {{ item.title }}
+            </span>
+            <span class="font-size18 cro-p textColor" v-html="item.subtitle"></span>
+          </p>
           <p class="font-size18 cro-p textColor" v-html="item.text"></p>
-          <!-- <el-row :gutter="100">
-            <el-col :xs="24" :span="4" />
-            <el-col :xs="24" :span="6"
-              ><div class="animate-imgxx uof img">
-                <img :src="item.imgUrl" alt="SPIRO Site" />
-              </div>
-            </el-col>
-            <el-col :xs="24" :span="12">
-              <h1 class="font-size30 fontf7 iti fontf8 item-tit">
-                {{ item.title }}
-              </h1>
-              <p class="font-size18 cro-p textColor" v-html="item.text"></p>
-            </el-col>
-          </el-row> -->
         </el-col>
       </div>
     </section>
+    <LifeContent />
     <!-- <Events /> -->
     <section class="mt-4">
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
@@ -167,6 +127,7 @@
 import { ref, reactive } from "vue";
 import Focus from "@/components/Focus.vue";
 import Events from "@/components/Events.vue";
+import LifeContent from "@/views/careers/LifeContent.vue";
 import { handleViteImages, goRouter } from "@/utils";
 
 const FocusData = ref({
@@ -223,8 +184,8 @@ const croList = ref([
   },
   {
     imgUrl: handleViteImages("careers1.png"),
-    title: "Vision by 2026:",
-    text: `Providing client-centered and high-quality 
+    title: "Vision by 2026: ",
+    subtitle: `Providing client-centered and high-quality 
 service as our commitment, we strive to 
 become a world-leading gene and cell 
 therapy CXO group. 
@@ -232,10 +193,8 @@ therapy CXO group.
   },
   {
     imgUrl: handleViteImages("careers2.png"),
-    title: "Value:",
-    text: `Customer Focus, Efficient Execution, 
-Excellence, Innovation, Integrity.
-`,
+    title: "Value: ",
+    subtitle: "Customer Focus, Efficient Execution, Excellence, Innovation, Integrity.",
   },
   {
     imgUrl: handleViteImages("careers3.png"),
@@ -243,8 +202,7 @@ Excellence, Innovation, Integrity.
     text: `Developing gene therapies for the welfare of 
 mankind by virtue of its in-house developed 
 all-round technology platform, its R&D and GMP 
-production centers (floorage: 15,000 ㎡), and its <text class="title-color txt-bold">77,000</text>
-㎡  Lingang base (under construction), 
+production centers (floorage: 15,000 ㎡ (161,458 ft²)), and its <text class="title-color txt-bold">77,000</text> ㎡ (<text class="title-color txt-bold">828,821</text> ft²) Lingang base (under construction), 
 OBiO is dedicated to constantly accelerating 
 gene therapies researches, drug discovery, 
 pharmaceutical studies, clinical and commercial 

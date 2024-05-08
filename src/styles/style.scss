@@ -556,7 +556,7 @@ a:focus {
   position: absolute;
   left: 0;
   top: -10%;
-  background: url(https://file.qjia.tech/obio-img/head_bg.jpg) no-repeat center
+  background: url(https://obio-tech.com/obio-img/head_bg.jpg) no-repeat center
     center / cover;
   z-index: -2;
 }
@@ -1468,9 +1468,9 @@ a:focus {
     margin-bottom: 10px;
     transition: all 0.5s;
     position: relative;
-    &:hover {
-      transform: translateY(-7px);
-    }
+    // &:hover {
+    //   transform: translateY(-7px);
+    // }
   }
 }
 .innovation-content {
@@ -1549,6 +1549,9 @@ a:focus {
   font-weight: bold;
 }
 .textColor {
+  color: $textColor;
+}
+.textColor-hover {
   color: $textColor;
 }
 .our-txt {

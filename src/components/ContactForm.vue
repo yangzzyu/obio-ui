@@ -125,14 +125,7 @@ const validatePhone = (rule, value, callback) => {
   if (!value) {
     callback();
   } else {
-    let regPone = null;
-    let mobile = /^1(3|4|5|6|7|8|9)\d{9}$/;
-    let tel = /^(0\d{2,3}-){0,1}\d{7,8}$/; //座机
-    if (value.charAt(0) == 0) {
-      regPone = tel;
-    } else {
-      regPone = mobile;
-    }
+    let regPone = /^\d{10}$/g;
     if (!regPone.test(value)) {
       callback(new Error("Please input correct phone number address！"));
     }
@@ -202,7 +195,7 @@ const sendEmail = async (formEl: FormInstance | undefined) => {
   await formEl.validate((valid, fields) => {
     if (valid) {
       emailjs
-        .send("service_ume7cyy", "template_6mmf2na", data, "h7iu63GvkU7foPBMq")
+        .send("service_zf02rs5", "template_6mmf2na", data, "h7iu63GvkU7foPBMq")
         .then((response) => {
           loading.value = false;
           alert("Form submitted successfully!");

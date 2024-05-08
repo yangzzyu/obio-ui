@@ -8,81 +8,14 @@
 -->
 <template>
   <div class="pine-site">
-    <div class="Intelli-M-wrap">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
-        <div class="pub-title pub-title-p ub ub-ver ub-pe">
-          <i class="line"></i>
-          <h1 class="fontf8 font-size50">Breaking Technological Bottleneck</h1>
-        </div>
-        <div class="font-size18 pub-pal20" style="padding-top: 30px">
-          <p style="line-height: 2">
-            PINE Site currently functions as our cGMP manufacturing platform. It
-            is a three-building, 10,000 square meter campus situated at Banxia
-            Road. in Shanghai International Medical Zone. The name PINE is
-            inspired by the technical name (Pinellia Ternate) for Banxia, a herb
-            in Traditional Chinese Medicine. At PINE Site, we have established a
-            large-scale, flexible cGMP manufacturing process and a comprehensive
-            quality system for gene and cell therapy products, which enables us
-            to provide customers with contract development and manufacturing
-            services in conformity with FDA and NMPA standards.
-            <br />
-            <br />
-            Our services at PINE Site include:
-          </p>
-          <el-row>
-            <el-col
-              :span="12"
-              :xs="22"
-              v-for="(item, index) in PineList"
-              :key="index"
-            >
-              ● {{ item.txt }}
-            </el-col>
-          </el-row>
-          <span style="line-height: 2">
-            <span class="title-color">
-              <router-link to="/insight/inquiry"
-                ><strong
-                  ><u>Please contact us for customization needs.</u></strong
-                > </router-link
-              >Our experts will be responsive to your requirements at first
-              instance.</span
-            ><br /> </span
-          ><span style="line-height: 2"
-            ><br />
-            <br />
-          </span>
-        </div>
-        <div class="pub-pal20 title-color">
-          <h1 class="fontf8 font-size50">Contact Information</h1>
-        </div>
-        <div class="text font-size18" style="margin-top: 30px" s="">
-          <span style="line-height: 2"
-            >Building No.8, Lane 100, Banxia Rd,&nbsp;</span
-          ><br />
-          <span style="line-height: 2">Pudong New District,</span><br />
-          <span style="line-height: 2">Shanghai, China</span><br />
-          <br />
-          <span style="line-height: 2">Main：+86 400-151-5198</span><br />
-          <span style="line-height: 2"></span>
-        </div>
-      </el-col>
-    </div>
+    <Logistics />
   </div>
 </template>
 
 <script lang="ts" setup name="PineSite">
 import { ArrowRight } from "@element-plus/icons-vue";
-import { PineList } from "./data/PineSite";
 import ScrollHint from "@/components/ScrollHint.vue";
+import Logistics from "@/views/cdmo/Logistics.vue";
 </script>
 
 <style></style>

@@ -95,7 +95,7 @@ const router = createRouter({
 
         {
           path: "/capability",
-          name: "Capability & Commitment",
+          name: "Capability",
           component: () => import("@/views/capability/Index.vue"),
           children: [
             {
@@ -105,16 +105,16 @@ const router = createRouter({
               meta: { position: "industrialize-dom" },
             },
             {
-              path: "/capability/commitment",
-              name: "Our Commitment: FAST",
-              component: () => import("@/views/capability/Index.vue"),
-              meta: { position: "commitment-box" },
-            },
-            {
               path: "/capability/whyus",
               name: "Why Us",
               component: () => import("@/views/capability/Index.vue"),
               meta: { position: "cap" },
+            },
+            {
+              path: "/capability/quality",
+              name: "Quality and Regulatory",
+              component: () => import("@/views/capability/Index.vue"),
+              meta: { position: "quality-dom" },
             },
             {
               path: "/capability/equipments",
@@ -156,6 +156,16 @@ const router = createRouter({
               name: "Innovation",
               component: () => import("@/views/cdmo/Cdmo.vue"),
               meta: { position: "innovation" },
+            },
+            {
+              path: "/cdmo/innovation/aav",
+              name: "AAV",
+              component: () => import("@/views/inno/AAV.vue"),
+            },
+            {
+              path: "/cdmo/innovation/oversatile",
+              name: "OVersatile",
+              component: () => import("@/views/inno/OVersatile.vue"),
             },
             {
               path: "/cdmo/process_development",

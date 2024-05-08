@@ -12,7 +12,7 @@
     <div class="banner-wrap">
       <Banner :banner-height="BannerHeight"></Banner>
       <!-- <div class="home-about-wrap"> -->
-      <div class="in-about-wrap">
+      <div class="in-about-wrap mt-1">
         <div class="section-3">
           <el-col
             :xs="22"
@@ -23,12 +23,28 @@
             style="margin: auto"
             class="container"
           >
-            <h1 class="title-color font-size50 txt-bold section-title fontf8">
-              Our Solutions
-            </h1>
+            <div class="content">
+              <p class="font-size18 fontf7 cro-p textColor">
+                OBiO Technology leads the way in gene and cell therapy as a pioneering Contract Research Organization (CRO) and Contract Development and Manufacturing Organization (CDMO), dedicated to providing comprehensive solutions. Guided by our mission to "enable gene therapy for better lives," we prioritize delivering top-tier services worldwide. From laboratory to clinic, we continuously advance your products, positively impacting populations worldwide. 
+              </p>
+              <p class="font-size18 fontf7 cro-p textColor">
+                OBiO Tech leverages a decade of industry expertise, dedicated exclusively to advancing gene and cell therapies. Through unwavering commitment and the trust of our clientele, we've facilitated the progression of over 150 gene and cell therapy initiatives, with 25 programs achieving approval for clinical trials in both the US and China by April 2023.
+              </p>
+              <p class="font-size18 fontf7 cro-p textColor">
+                Our comprehensive suite of services encompasses plasmids, mRNA, AAV vectors, oncolytic viruses, immuno cell therapies, stem cells, and more, enabling us to cater to diverse client needs. Bolstered by state-of-the-art cGMP facilities, the largest of their kind in the Asian Pacific region, we offer unparalleled proficiency and capacity, poised to drive success for clients worldwide.
+              </p>
+            </div>
             <h2 class="title-color our-txt font-size30 section-title fontf7">
-              Manufacturing
+              Manufacturing Facilities
             </h2>
+            <div class="content">
+              <p class="font-size18 fontf7 cro-p textColor">
+                As a trusted Contract Development and Manufacturing Organization (CDMO), we understand that flexible capacities and regulatory-compliant facilities are essential for delivering top-tier services to gene and cell therapy developers. To cater to our global clientele, we've strategically established an integrated research platform spanning over 5,000 ㎡ (53,819 ft²) and a GMP footprint exceeding 10,000 ㎡ (107,639 ft²) at the Shanghai International Medical Park. Additionally, our GMP manufacturing site, sprawling across 77,000 ㎡ (828,821 ft²) , is located at the Lin-Gang Free-Trade Zone.
+              </p>
+              <p class="font-size18 fontf7 cro-p textColor">
+                With our strategic footprint across these three locations, we are poised to provide high-quality contract research and manufacturing services to meet the diverse needs of our clients worldwide.
+              </p>
+            </div>
             <div class="fac-con">
               <el-row class="row" :gutter="10">
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
@@ -48,7 +64,7 @@
                     Process Development Characterization Clinical and Commercial
                     Manufacturing.
                     <text class="title-color txt-bold">77,000</text
-                    >-square-meter Facility for Global Supply
+                    > ㎡ (828,821 ft²) Facility for Global Supply
                   </p>
                   <router-link
                     to="/about/facilities/intellim"
@@ -84,7 +100,7 @@
                   <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
                       <img
-                        :src="handleViteImages('pine_site.png')"
+                        :src="handleViteImages('facilities3.jpg')"
                         alt="PINE Site"
                       />
                     </div>
@@ -97,7 +113,7 @@
                     Process and Analytical Method Development. Pre-clinical and
                     Clinical Manufacturing. Three-building,
                     <text class="title-color txt-bold">10,000</text
-                    >-square-meter campus
+                    > ㎡ (107,639 ft²) campus
                   </p>
                   <router-link
                     to="/about/facilities/pine"
@@ -128,7 +144,7 @@
               <div
                 class="image--callout_image"
                 style="
-                  background-image: url(https://file.qjia.tech/obio-img/cdmo_img.jpg);
+                  background-image: url(https://obio-tech.com/obio-img/life/WechatIMG522.jpg);
                 "
               ></div>
             </el-col>
@@ -148,7 +164,7 @@
               <div
                 class="image--callout_image"
                 style="
-                  background-image: url(https://file.qjia.tech/obio-img/cdmo_img.jpg);
+                  background-image: url(https://obio-tech.com/obio-img/life/WechatIMG522.jpg);
                 "
               ></div>
             </el-col>

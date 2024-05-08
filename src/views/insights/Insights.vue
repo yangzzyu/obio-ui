@@ -15,24 +15,63 @@
           style="margin: auto"
           class="container"
         >
-          <p class="font-size18 iti textColor">
-            {{ item.time }}
-          </p>
-          <h1 class="title fontf4 font-size30 title-color">
-            {{ item.title }}
-          </h1>
-          <div class="font-size18 ut-s2">
-            {{ item.content }}
+          <div v-if="item.img">
+            <el-row :gutter="100">
+              <el-col :xs="24" :span="12"
+                ><div
+                  class="animate-imgxx uof img"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                  "
+                >
+                  <img :src="item.img" alt="SPIRO Site" style="width:100%;"/>
+                </div>
+              </el-col>
+              <el-col :xs="24" :span="12">
+                <p class="font-size18 iti textColor">
+                  {{ item.time }}
+                </p>
+                <h1 class="title fontf4 font-size30 title-color">
+                  {{ item.title }}
+                </h1>
+                <div class="font-size18 ut-s2">
+                  {{ item.content }}
+                </div>
+                <router-link
+                  :to="
+                    item.type == 'news'
+                      ? '/news-details/releases/' + item.id
+                      : '/news-details/events/' + item.id
+                  "
+                  class="read-more font-size18 fontf7"
+                  >Read More</router-link
+                >
+              </el-col>
+            </el-row>
           </div>
-          <router-link
-            :to="
-              item.type == 'news'
-                ? '/news-details/releases/' + item.id
-                : '/news-details/events/' + item.id
-            "
-            class="read-more font-size18 fontf7"
-            >Read More</router-link
-          >
+          <div v-else>
+            <p class="font-size18 iti textColor">
+              {{ item.time }}
+            </p>
+            <h1 class="title fontf4 font-size30 title-color">
+              {{ item.title }}
+            </h1>
+            <div class="font-size18 ut-s2">
+              {{ item.content }}
+            </div>
+            <router-link
+              :to="
+                item.type == 'news'
+                  ? '/news-details/releases/' + item.id
+                  : '/news-details/events/' + item.id
+              "
+              class="read-more font-size18 fontf7"
+              >Read More</router-link
+            >
+          </div>
         </el-col>
       </div>
       <router-link
@@ -298,14 +337,7 @@ const validatePhone = (rule, value, callback) => {
   if (!value) {
     callback();
   } else {
-    let regPone = null;
-    let mobile = /^1(3|4|5|6|7|8|9)\d{9}$/;
-    let tel = /^(0\d{2,3}-){0,1}\d{7,8}$/; //座机
-    if (value.charAt(0) == 0) {
-      regPone = tel;
-    } else {
-      regPone = mobile;
-    }
+    let regPone = /^\d{10}$/g;
     if (!regPone.test(value)) {
       callback(new Error("Please input correct phone number address！"));
     }

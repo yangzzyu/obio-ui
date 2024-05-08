@@ -8,71 +8,15 @@
 -->
 <template>
   <div class="spiro-site">
-    <div class="Intelli-M-wrap">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
-        <div class="pub-title pub-title-p ub ub-ver ub-pe">
-          <i class="line"></i>
-          <h1 class="fontf8 font-size50">Quality from Constant Innovations</h1>
-        </div>
-        <div class="font-size18 pub-pal20" style="padding-top: 30px">
-          <p style="line-height: 2">
-            SPIRO Site, operating as the Research &amp; Development Center, is
-            located at Ziping Road in Shanghai International Medical Zone. The
-            name SPIRO originates from the name of Ziping Road (Spirodela
-            polyrhiza), a herb in Traditional Chinese Medicine.&nbsp;At SPIRO
-            Site, we enhance our service capabilities through constant
-            innovations in basic science, and provide customers with contract
-            research services, process development, analytical development and
-            extend services of gene and cell therapy products, including:
-          </p>
-          <br />
-          <el-row>
-            <el-col
-              :span="12"
-              :xs="22"
-              v-for="(item, index) in InnovationsList"
-              :key="index"
-            >
-              ● {{ item.txt }}
-            </el-col>
-          </el-row>
-          <span style="line-height: 2">
-            <span class="title-color">
-              <router-link to="/insight/inquiry">
-                <strong
-                  ><u>Please contact us for customization needs.</u></strong
-                > </router-link
-              >Our experts will be responsive to your requirements at first
-              instance.</span
-            ><br /> </span
-          ><span style="line-height: 2"
-            ><br />
-            <br />
-          </span>
-        </div>
-        <div class="pub-pal20 title-color">
-          <h1 class="fontf8 font-size50">Contact Us</h1>
-        </div>
-
-        <ContactForm />
-      </el-col>
-    </div>
+    <Cgmp />
   </div>
 </template>
 
 <script lang="ts" setup name="SpiroSite">
 // import { ArrowRight } from "@element-plus/icons-vue";
-import { InnovationsList } from "./data/SpiroSite";
 import ScrollHint from "@/components/ScrollHint.vue";
 import ContactForm from "@/components/ContactForm.vue";
+import Cgmp from "@/views/cdmo/cgmp/Cgmp.vue";
 </script>
 
 <style></style>

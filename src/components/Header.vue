@@ -55,14 +55,17 @@
             }">
               <template #title>
                 <div @click="router.push('/capability')" class="menu-t1">
-                  Capability & Commitment
+                  Capability
                 </div>
               </template>
               <el-menu-item index="/capability/whyus">Why Us </el-menu-item>
               <el-menu-item index="/capability/industrialized">
-                Industrialized
+                Industrialize Your Products
               </el-menu-item>
-              <el-menu-item index="/capability/equipments">Equipments </el-menu-item>
+              <el-menu-item index="/capability/quality">
+                Quality & Regulatory
+              </el-menu-item>
+              <el-menu-item index="/capability/equipments">GMP Devices</el-menu-item>
             </el-sub-menu>
             <el-sub-menu index="/cdmo" class="menu-t1" popper-class="sub-popper" :class="{
               'is-active': ['/cdmo', '/cgmp'].includes(activeIndex),
@@ -87,7 +90,7 @@
               </template>
               <el-menu-item index="/insight/news">News</el-menu-item>
               <el-menu-item index="/insight/events">Events</el-menu-item>
-              <el-menu-item index="/insight/inquiry">Learn More</el-menu-item>
+              <el-menu-item index="/insight/inquiry">Inquiry</el-menu-item>
               <el-menu-item index="/insight/partnership">
                 <a href="https://www.obiosh.com/tzz/gg/" target="_blank">Partnership</a>
               </el-menu-item>
@@ -137,17 +140,17 @@
             }">
           <template #title>
             <div @click="router.push('/capability')" class="menu-t1">
-              Capability & Commitment
+              Capability
             </div>
           </template>
           <el-menu-item index="/capability/whyus">Why Us </el-menu-item>
           <el-menu-item index="/capability/industrialized">
-            Industrialized
+            Industrialize Your Products
           </el-menu-item>
-          <el-menu-item index="/capability/equipments">Equipments </el-menu-item>
-          <!-- <el-menu-item index="/capability/commitment">
-            Commitment
-          </el-menu-item> -->
+          <el-menu-item index="/capability/quality">
+            Quality & Regulatory
+          </el-menu-item>
+          <el-menu-item index="/capability/equipments">GMP Devices</el-menu-item>
         </el-sub-menu>
         <el-sub-menu index="/cdmo" class="menu-t1" popper-class="sub-popper" :class="{
               'is-active': ['/cdmo', '/cgmp'].includes(activeIndex),
@@ -172,7 +175,7 @@
           </template>
           <el-menu-item index="/insight/news">News</el-menu-item>
           <el-menu-item index="/insight/events">Events</el-menu-item>
-          <el-menu-item index="/insight/inquiry">Learn More</el-menu-item>
+          <el-menu-item index="/insight/inquiry">Inquiry</el-menu-item>
           <el-menu-item index="/insight/partnership">
             <a href="https://www.obiosh.com/tzz/gg/" target="_blank">Partnership</a>
           </el-menu-item>
@@ -210,7 +213,7 @@ const props = defineProps({
   },
 });
 const router = useRouter();
-console.log(router, "router");
+// console.log(router, "router");
 
 const activeIndex = computed(() => router.currentRoute.value.path);
 type NavItem = {
