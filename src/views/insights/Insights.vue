@@ -146,7 +146,7 @@
               <el-form-item label="Comments">
                 <el-input v-model="form.inquired_item" type="textarea" :rows="10" />
               </el-form-item>
-              <el-form-item label="Security Code" required prop="verify">
+              <!-- <el-form-item label="Security Code" required prop="verify">
                 <el-col :span="11">
                   <el-input v-model="form.verify" />
                 </el-col>
@@ -171,7 +171,7 @@
                 <div class="lab fontf3 font-size18">
                   We won’t share your information.
                 </div>
-              </el-form-item>
+              </el-form-item> -->
               <div class="fontf3 font-size14">
                 <el-button :loading="loading" round class="btn-a font-size18 fontf7"
                   @click.prevent="sendEmail(ruleFormRef)">
