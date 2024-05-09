@@ -2,22 +2,15 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-09 15:07:10
+ * @LastEditTime: 2024-05-09 09:29:06
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
   <div class="in-contact-form">
     <el-col :span="24" :xs="24">
-      <el-form
-        ref="ruleFormRef"
-        :model="ruleForm"
-        :rules="rules"
-        label-width="180px"
-        class="form-contact-main fontf2 font-size18"
-        :label-position="'top'"
-        status-icon
-      >
+      <el-form ref="ruleFormRef" :model="ruleForm" :rules="rules" label-width="180px"
+        class="form-contact-main fontf4 font-size18" :label-position="'top'" status-icon>
         <!-- @submit.prevent="sendEmail(ruleFormRef)" -->
         <el-row :gutter="20">
           <el-col :span="12" :xs="24">
@@ -27,65 +20,36 @@
           </el-col>
           <el-col :span="12" :xs="24">
             <el-form-item label="Last Name" required prop="last_name">
-              <el-input v-model="ruleForm.last_name" /> </el-form-item></el-col
-        ></el-row>
+              <el-input v-model="ruleForm.last_name" /> </el-form-item></el-col></el-row>
         <!-- <el-form-item label="Company" required>
           <el-input v-model="ruleForm.company" />
         </el-form-item> -->
         <el-row :gutter="20">
           <el-col :span="12" :xs="24">
             <el-form-item label="Company" required prop="company">
-              <el-input v-model="ruleForm.company" /> </el-form-item
-          ></el-col>
+              <el-input v-model="ruleForm.company" /> </el-form-item></el-col>
           <el-col :span="12" :xs="24">
             <el-form-item label="Title">
-              <el-input v-model="ruleForm.title" /> </el-form-item
-          ></el-col>
+              <el-input v-model="ruleForm.title" /> </el-form-item></el-col>
         </el-row>
         <el-row :gutter="20">
           <el-col :span="12" :xs="24">
             <el-form-item label="Email" required prop="email">
-              <el-input v-model="ruleForm.email" /> </el-form-item
-          ></el-col>
+              <el-input v-model="ruleForm.email" /> </el-form-item></el-col>
           <el-col :span="12" :xs="24">
             <el-form-item label="Phone Number" required prop="phone">
-              <el-input v-model="ruleForm.phone" /> </el-form-item></el-col
-        ></el-row>
+              <el-input v-model="ruleForm.phone" /> </el-form-item></el-col></el-row>
         <el-form-item label="I'm interested in…" required prop="interest">
           <el-select v-model="ruleForm.interest" placeholder="">
             <el-option label="General Inquiry" value="General Inquiry" />
-            <el-option
-              label="Laboratory Sciences"
-              value="Laboratory Sciences"
-            />
-            <el-option
-              label="Process Development"
-              value="Process Development"
-            />
-            <el-option
-              label="Analytical/Formulation Development"
-              value="Analytical/Formulation Development"
-            />
-            <el-option
-              label="Non-IND (IIT) Service"
-              value="Non-IND (IIT) Service"
-            />
-            <el-option
-              label="IND-Enabling CMC (IND-CMC) Service"
-              value="IND-Enabling CMC (IND-CMC) Service"
-            />
-            <el-option
-              label="Clinical Manufacturing"
-              value="Clinical Manufacturing"
-            />
-            <el-option
-              label="Commercial Manufacturing"
-              value="Commercial Manufacturing"
-            />
-            <el-option
-              label="Extended Services (Pre-IND/Post-IND)"
-              value="Extended Services (Pre-IND/Post-IND)"
-            />
+            <el-option label="Laboratory Sciences" value="Laboratory Sciences" />
+            <el-option label="Process Development" value="Process Development" />
+            <el-option label="Analytical/Formulation Development" value="Analytical/Formulation Development" />
+            <el-option label="Non-IND (IIT) Service" value="Non-IND (IIT) Service" />
+            <el-option label="IND-Enabling CMC (IND-CMC) Service" value="IND-Enabling CMC (IND-CMC) Service" />
+            <el-option label="Clinical Manufacturing" value="Clinical Manufacturing" />
+            <el-option label="Commercial Manufacturing" value="Commercial Manufacturing" />
+            <el-option label="Extended Services (Pre-IND/Post-IND)" value="Extended Services (Pre-IND/Post-IND)" />
             <el-option label="Investor Relations" value="Investor Relations" />
           </el-select>
         </el-form-item>
@@ -94,14 +58,14 @@
         </el-form-item>
         <!-- type="submit" -->
         <!-- :disabled="loading" -->
-        <el-button
-          :loading="loading"
-          round
-          class="btn-a font-size18 fontf7"
-          @click.prevent="sendEmail(ruleFormRef)"
-        >
+        <div class="fontf3 font-size14" style="text-align: center;">
+          <el-button :loading="loading" round class="btn-a font-size18 fontf7" @click.prevent="sendEmail(ruleFormRef)">
+            Submit
+          </el-button>
+        </div>
+        <!-- <el-button :loading="loading" round class="btn-a font-size18 fontf7" @click.prevent="sendEmail(ruleFormRef)">
           Submit
-        </el-button>
+        </el-button> -->
       </el-form>
     </el-col>
   </div>
@@ -218,9 +182,10 @@ const sendEmail = async (formEl: FormInstance | undefined) => {
 <style lang="scss" scoped>
 .form-contact-main :deep(.el-form-item__label) {
   color: #747475;
-  font-family: "puhuiti-2-45";
+  // font-family: "puhuiti-2-45";
   font-size: inherit !important;
 }
+
 .btn-a {
   color: #fff;
 }
