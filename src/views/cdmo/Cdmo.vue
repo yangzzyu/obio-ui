@@ -226,9 +226,9 @@
                     <img :src="item.imgUrl" alt="" srcset="" />
                   </div>
                 </div>
-                <h4 class="font-size24 fontf7 iti">
+                <h2 class="font-size24 fontf7 iti">
                   {{ item.title }}
-                </h4>
+                </h2>
                 <ul>
                   <li
                     style="padding: 5px 0"
@@ -460,8 +460,8 @@
     </section>
   </div>
   <el-dialog
+    id="cdmo-dialog"
     v-model="dialogVisible"
-    title=""
     width="60%"
     :before-close="handleClose"
   >
@@ -697,6 +697,10 @@ const LaboraList = ref([
 function popLabora(id) {
   Labora.value = LaboraList.value.find((i) => i.id === id) || {};
   dialogVisible.value = true;
+  setTimeout(() => {
+    document.querySelector('#cdmo-dialog').parentElement.setAttribute('aria-label', Labora.value.title);
+    document.querySelector('#cdmo-dialog .el-dialog__title').remove();
+  }, 0);
 }
 </script>
 

@@ -23,14 +23,14 @@
             <dt class="font-size14">Email: obio.us@obiosh.com</dt>
             <dt class="font-size14"></dt>
             <dd></dd>
-            <div class="link-list-i">
+            <dd class="link-list-i">
               <dl class="dl-foot-nav">
                 <dt class="font-size20 first-tit">
                   <router-link to="/contact">CONTACT</router-link>
                 </dt>
                 <dd></dd>
               </dl>
-            </div>
+            </dd>
           </dl>
         </div>
         <div class="link-list-i">
