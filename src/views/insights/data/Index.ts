@@ -1921,6 +1921,35 @@ about OBiO, visit </span><a href="http://www.obio-tech.com"><span style="font-si
 
 export const events = ref([
   {
+    id: 9,
+    type: "event",
+    title: `2024 Global Rare Diseases Research Symposium & The Second China Rare Disease Research and Translational Medicine Annual Conference is coming soon`,
+    time: "May 20th 2024",
+    img: handleViteImages("uploads/image/20240520/6281716217459_.pic.jpg"),
+    subhead: "",
+    content: ``,
+    html: `<div class="Insights-detail-text text">
+    <img src="${handleViteImages("uploads/image/20240520/6281716217459_.pic.jpg")}" alt="" class="center"/>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:.0001pt;'><br></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:.0001pt;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>The conference is co-hosted by #Hope for Rare Foundation, International Rare Diseases Research Consortium (IRDiRC)), and&nbsp;</span><span style='font-size:19px;font-family:"Microsoft YaHei",sans-serif;color:black;background:white;'>复旦大学</span><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>&nbsp;Fudan University.&nbsp;</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>&nbsp;</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>Time: May 23rd to 25th, details shown on the pictures</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>Location: Primus Hotel Shanghai SanJiaGang</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;6666 E Huaxia Rd #3</span><span style='font-size:19px;font-family:"Microsoft YaHei",sans-serif;color:black;background:white;'>，</span><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>Pudong New district, Shanghai, China.</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>&nbsp;</span></p>
+    <img src="${handleViteImages("uploads/image/20240520/6291716217459_.pic.jpg")}" alt="" class="center"/>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>The conference will last for 2.5 days with 21 parallel sessions and several satellite meetings. It will bring together over 100 speakers from global universities, hospitals, academic institutions, and pharmaceutical companies. Topics will cover basic research on rare diseases, gene and cell therapies, Investigator Initiated Trials (IIT), clinical studies, drug development, and international research collaborations. The conference will present the latest developments and original findings in rare diseases research, highlighting China&rsquo;s contributions in the context of a global perspective</span></p>
+    <img src="${handleViteImages("uploads/image/20240520/6301716217539_.pic.jpg")}" alt="" class="center"/>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>&nbsp;</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>Contact Information:</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>Rufang Huang +86 860-046-3832 kevin.huang@hope4rare.org.cn</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>Business Cooperation: Wenjun Zhang +86 133-7253-0505 wenjun.zhang@hope4rare.org.cn&nbsp;</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>Speaker Recommendations/Academic Collaboration</span><span style='font-size:19px;font-family:"Microsoft YaHei",sans-serif;color:black;background:white;'>：</span><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>Boya Yu +86 188-9854-8654 boya.yu@hope4rare.org.cn&nbsp;</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>Official Website: <a href="https://lnkd.in/gTRSfPfb" target="_blank" style="text-decoration: underline;">https://lnkd.in/gTRSfPfb</a></span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>&nbsp;</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>#cgt #cellandgenetherapy #genetherapy #celltherapy #cdmo #2024trends #globaldata #asgct #viralvector #biotech #equipment #development #manufacturing</span></p></div>`
+  },
+  {
     id: 8,
     type: "event",
     title: `Meet OBiO Technology at ASGCT 2024! May 7th to 11th`,
