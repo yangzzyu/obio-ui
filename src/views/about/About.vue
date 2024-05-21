@@ -27,7 +27,7 @@
           </p>
           <br />
           <p class="textColor">
-            <text class="txt-bold fontf8">With our mission to "enable gene therapy for better lives," </text>we are
+            <text class="txt-bold fontf8">With our mission to "Enable Gene Therapy for Better Lives," </text>we are
             dedicated to delivering top-tier services globally. From
             bench to clinic, we are committed to advancing your product and
             benefiting populations worldwide.
@@ -259,7 +259,7 @@
     <section class="our-box mb-5" id="commitment-box">
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
         <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
-          Our Commitment: FAST
+          Our Commitment: F-A-S-T
         </h1>
         <el-row class="our-box-content" :gutter="60">
           <el-col :span="2" :xs="24" />
