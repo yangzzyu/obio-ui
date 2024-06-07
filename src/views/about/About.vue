@@ -15,31 +15,48 @@
         </h1>
         <div class="text font-size18">
           <p class="textColor">
-            <text class="txt-bold fontf8">OBiO Technology is a pioneering gene and cell therapy CRO and
-              CDMO,</text>
-            established to provide comprehensive solutions.
-          </p>
-          <br />
-          <p class="textColor">Our expertise spans
-            vectorology studies, functional genomics, process and analytical
-            development, as well as IND-enabling CMC and clinical and commercial
-            manufacturing.
+            Established in 2013, <text class="txt-bold fontf8">OBiO Technology</text> is a pioneering 
+            Contract Research Organization (CRO) and Contract Development and Manufacturing Organization (CDMO) 
+            in gene and cell therapy.
           </p>
           <br />
           <p class="textColor">
-            <text class="txt-bold fontf8">With our mission to "Enable Gene Therapy for Better Lives," </text>we are
-            dedicated to delivering top-tier services globally. From
-            bench to clinic, we are committed to advancing your product and
-            benefiting populations worldwide.
+            
+            <!-- Our expertise spans
+            vectorology studies, functional genomics, process and analytical
+            development, as well as IND-enabling CMC and clinical and commercial
+            manufacturing. -->
+
+            OBiO has developed a flexible cGMP manufacturing platform, a comprehensive quality system, and an efficient project managing network.
+            Our <text class="txt-bold fontf8">state-of-the-art 77,000m2 (830,000 ft2) facility</text> for Global Supply ensures high-quality CDMO services across preclinical, IND, clinical, and commercial stages to meet global demand.
           </p>
           <br />
-          <p class="textColor">Our unwavering dedication ensures
+          <p class="textColor">
+            Guided by our mission, <text class="txt-bold fontf8">Enable Gene Therapy for Better Lives</text>,
+            we are dedicated to delivering top-tier services globally. From bench to clinic, we are committed to 
+            advancing your products and benefiting populations worldwide.
+          </p>
+          <br />
+          <p class="textColor">
+            We <text class="txt-bold fontf8">specialize in</text> vectorology studies, functional genomics, process and analytics development, and IND-enabling CMC,
+            ensuring Investigational New Drug (IND) readiness and supporting all clinical and commercial manufacturing phases.
+          </p>
+          <br />
+          <p class="textColor">
+            
+            Our unwavering dedication ensures high-quality <text class="txt-bold fontf8">CDMO services </text>
+            for consumers worldwide across preclinical, IND, clinical, and commercial stages, 
+            including  plasmids, mRNA, AAV, LVV, Ad viral vectors, cell therapy (CAR-T, NK, Treg, iPSCs), 
+            exosomes, and cutting-edge technologies like inducible viral vector packaging, ultralow endotoxin processes, 
+            and AAVneO for tissue-specific AAV variants.
+            
+            <!-- Our unwavering dedication ensures
             high-quality CDMO services for consumers worldwide across
             preclinical, IND, clinical, and commercial stages. Plasmids, mRNA,
             AAV, LVV, Ad viral vector, Cell therapy, manufacturing, CAR-T, NK,
             Treg...Oncolytic virus. Technologies Inducible viral vector
             packaging, Ultralow endotoxin process, AAVneO for AAV variants with
-            tissue specific tropism
+            tissue specific tropism -->
           </p>
         </div>
       </el-col>
