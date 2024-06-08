@@ -592,6 +592,7 @@ const croList = ref([
       "Lentiviral vectors",
       "Retroviral vectors",
       "Virus like particles (VLPs)",
+      "AAV Packaging",
     ],
   },
   {
