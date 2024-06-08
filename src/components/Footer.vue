@@ -1,4 +1,10 @@
 <template>
+<div class="float-btn">
+  <a href="/insight/inquiry" style="color:#12d7d5;" >
+    <font-awesome-icon :icon="['fas', 'fa-comment-dots']" style="font-size: 50px; z-index: 999999;"/>
+    <div style="font-size:20px; font-weight:bold;">REQUEST NOW</div>
+  </a>    
+</div>
   <div class="foot-wrap">
     <el-col
       :xs="24"
@@ -239,7 +245,15 @@ h2 {
   font-weight: 400;
   font-variant: normal;
 }
-
+.float-btn {
+  position: fixed;
+  text-align: center;
+  z-index: 999999;
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
+  bottom:50px;
+  right: 50px;
+}
 .footer-icon {
   color: #12d7d5;
 }
