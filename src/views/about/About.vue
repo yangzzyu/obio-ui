@@ -15,48 +15,43 @@
         </h1>
         <div class="text font-size18">
           <p class="textColor">
-            Established in 2013, <text class="txt-bold fontf8">OBiO Technology</text> is a pioneering 
-            Contract Research Organization (CRO) and Contract Development and Manufacturing Organization (CDMO) 
-            in gene and cell therapy.
+            Established in 2013, 
+            <text class="txt-bold fontf8">
+              OBiO Technology is a pioneering Contract Research Organization (CRO) and Contract Development and Manufacturing Organization (CDMO) in gene and cell therapy, 
+            </text>
+            offering comprehensive solutions.
           </p>
           <br />
           <p class="textColor">
-            
-            <!-- Our expertise spans
-            vectorology studies, functional genomics, process and analytical
-            development, as well as IND-enabling CMC and clinical and commercial
-            manufacturing. -->
-
-            OBiO has developed a flexible cGMP manufacturing platform, a comprehensive quality system, and an efficient project managing network.
-            Our <text class="txt-bold fontf8">state-of-the-art 77,000m2 (830,000 ft2) facility</text> for Global Supply ensures high-quality CDMO services across preclinical, IND, clinical, and commercial stages to meet global demand.
+            With years of dedicated effort, OBiO has developed  flexible cGMP manufacturing platform, comprehensive quality system, and efficient project management. Our 
+            <text class="txt-bold fontf8">
+              state-of-the-art 77,000㎡ (830,000 ft²) facility 
+            </text>
+            for Global Supply ensures high-quality CDMO services across preclinical, IND, clinical, and commercial stages to meet global demand.
           </p>
           <br />
           <p class="textColor">
-            Guided by our mission, <text class="txt-bold fontf8">Enable Gene Therapy for Better Lives</text>,
-            we are dedicated to delivering top-tier services globally. From bench to clinic, we are committed to 
-            advancing your products and benefiting populations worldwide.
+            Guided by our mission 
+            <text class="txt-bold fontf8">
+              "Enable Gene Therapy for Better Lives," 
+            </text>
+            we are dedicated to delivering top-tier services globally. From bench to clinic, we are committed to advancing your product and benefiting populations worldwide.
           </p>
           <br />
           <p class="textColor">
-            We <text class="txt-bold fontf8">specialize in</text> vectorology studies, functional genomics, process and analytics development, and IND-enabling CMC,
-            ensuring Investigational New Drug (IND) readiness and supporting all clinical and commercial manufacturing phases.
+            We 
+            <text class="txt-bold fontf8">
+              specialize in 
+            </text>
+            vectorology studies, functional genomics, and process and analytics development,  IND-enabling CMC, ensuring Investigational New Drug (IND) readiness and supporting all clinical and commercial manufacturing phases.
           </p>
           <br />
           <p class="textColor">
-            
-            Our unwavering dedication ensures high-quality <text class="txt-bold fontf8">CDMO services </text>
-            for consumers worldwide across preclinical, IND, clinical, and commercial stages, 
-            including  plasmids, mRNA, AAV, LVV, Ad viral vectors, cell therapy (CAR-T, NK, Treg, iPSCs), 
-            exosomes, and cutting-edge technologies like inducible viral vector packaging, ultralow endotoxin processes, 
-            and AAVneO for tissue-specific AAV variants.
-            
-            <!-- Our unwavering dedication ensures
-            high-quality CDMO services for consumers worldwide across
-            preclinical, IND, clinical, and commercial stages. Plasmids, mRNA,
-            AAV, LVV, Ad viral vector, Cell therapy, manufacturing, CAR-T, NK,
-            Treg...Oncolytic virus. Technologies Inducible viral vector
-            packaging, Ultralow endotoxin process, AAVneO for AAV variants with
-            tissue specific tropism -->
+            Our unwavering dedication ensures high-quality 
+            <text class="txt-bold fontf8">
+              CDMO services 
+            </text>
+            for consumers worldwide across preclinical, IND, clinical, and commercial stages, including  plasmids, mRNA, AAV, LVV, Ad viral vectors, cell therapy (CAR-T, NK, Treg, iPSCs), exosomes, and cutting-edge technologies like inducible viral vector packaging, ultralow endotoxin processes, and AAVneO for tissue-specific AAV variants.
           </p>
         </div>
       </el-col>
@@ -278,68 +273,10 @@
         <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
           Our Commitment: F-A-S-T
         </h1>
-        <el-row class="our-box-content" :gutter="60">
-          <el-col :span="2" :xs="24" />
-          <el-col :span="6" :xs="24" class="left-content">
-            <img class="img" :src="handleViteImages('Viral_Vector_bg3.png')" alt="" />
-          </el-col>
-          <el-col :span="14" :xs="24" class="font-size20 news-list">
-            <div class="content-i" v-for="(i, idx) in ourList" :key="idx">
-              <h2 class="title-color font-size30 fontf8">{{ i.title }}</h2>
-              <p class="font-size18 textColor">
-                {{ i.text }}
-              </p>
-            </div>
-          </el-col>
-          <el-col :span="2" :xs="24" />
-        </el-row>
-      </el-col>
-    </section>
-    
-    <section class="our-box" id="life-obio-box">
-      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
-          Life at OBiO
-        </h1>
-        <el-row class="our-box-content" :gutter="40">
-          <el-col :span="12" :xs="24" class="left-content">
-            <img class="img" :src="handleViteImages('life/WechatIMG520.jpg')" alt="" />
-          </el-col>
-          <el-col :span="12" :xs="24" class="font-size20 news-list">
-            <h2
-              class="title-color font-size18 fontf7"
-              style="margin-bottom: 10px"
-            >
-              As OBiO Tech swiftly evolves, every OBiOers are immersed in an
-              environment fostering "enhanced capabilities, purposeful work, and
-              a fulfilling life."
-            </h2>
-            <ul class="font-size18 textColor life-ul">
-              <li><i></i> Enhanced Capabilities</li>
-              <li><i></i> Competitive compensation and benefits</li>
-              <li>
-                <i></i> Opportunities for training, rotation, and continuous
-                education
-              </li>
-              <li><i></i>Empowerment, accountability, and value creation</li>
-              <li>
-                <i></i>
-
-                Work-Life Balance: A harmonious blend of professional and
-                personal pursuits This encapsulates our vibrant company culture,
-                where every moment is an opportunity for growth and fulfillment.
-              </li>
-            </ul>
-          </el-col>
-        </el-row>
-        <ul class="btn-ul">
-          <li>
-            <router-link to="/careers/job" class="read-more font-size18 fontf7">Join Our Team</router-link>
-          </li>
-          <li>
-            <router-link to="/careers/life" class="read-more font-size18 fontf7">Read More</router-link>
-          </li>
-        </ul>
+        <div style="text-align:center;">
+          <br />
+          <img :src="handleViteImages('uploads/image/20240601/FAST-Commitment.png')" alt="FAST Commitment" style="width:100%; max-width:1024px"/>
+        </div>
       </el-col>
     </section>
   </div>

@@ -40,7 +40,10 @@
             <span>Quality Assurance System</span>
           </div>
         </div>
-
+        <div style="text-align:center;">
+          <br />
+          <img :src="handleViteImages('uploads/image/20240601/6-Quarlity-Analysis.png')" alt="Quality Control" style="width:100%"/>
+        </div>
         <div class="text font-size18 color666 cGMP-zIndex">
           <div class="Quality-Regulatory-ul">
             <div class="ibg ibg1"></div>
@@ -69,7 +72,6 @@
             </div>
           </div>
         </div>
-
         <a name="a2"></a>
         <div class="cGMP-title-t1">
           <div class="fontf7 font-size50 ct">

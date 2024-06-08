@@ -66,9 +66,29 @@
                     <text class="title-color txt-bold">77,000</text
                     > ㎡ (828,821 ft²) Facility for Global Supply
                   </p>
+                  <ul class="txt-ul mt-2">
+                    <li class="font-size18 textColor txt-bold">
+                      GMP Manufacturing Campus
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      33 Production Lines
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Phase I-III Manufacturing
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Commercial Manufacturing
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Analytical Development
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Tech-Transfer
+                    </li>
+                  </ul>
                   <router-link
                     to="/about/facilities/intellim"
-                    class="read-more font-size18 fontf7"
+                    class="read-more font-size18 fontf7" style="position:absolute; bottom:0px;"
                     >Read More</router-link
                   >
                 </el-col>
@@ -88,11 +108,28 @@
 
                   <p class="font-size18 textColor txt-bold">
                     Integrated Laboratory Services Processand Analytical Method
-                    Development. Research and Development Center
+                    Development. Research and Development Center, 5,000 ㎡ (54,000 ft²)
                   </p>
+                  <ul class="txt-ul mt-2">
+                    <li class="font-size18 textColor txt-bold">
+                      Vector Engineering
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Animal Studies
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Cellular Biology
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Bioassay & Testing
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Novel Capsid Screening
+                    </li>
+                  </ul>
                   <router-link
                     to="/about/facilities/spiro"
-                    class="read-more font-size18 fontf7"
+                    class="read-more font-size18 fontf7" style="position:absolute; bottom:0px;"
                     >Read More</router-link
                   >
                 </el-col>
@@ -115,9 +152,35 @@
                     <text class="title-color txt-bold">10,000</text
                     > ㎡ (107,639 ft²) campus
                   </p>
+                  <ul class="txt-ul mt-2">
+                    <li class="font-size18 textColor txt-bold">
+                      GMP Manufacturing Building
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      8 Production Lines
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      IND-Enabling CMC
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Phase I & II Manufacturing
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Bank Construction
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Aseptic Fill & Finish
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Non-Clinical Investigation
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Tech-Transfer
+                    </li>
+                  </ul>
                   <router-link
                     to="/about/facilities/pine"
-                    class="read-more font-size18 fontf7"
+                    class="read-more font-size18 fontf7" style="position:absolute; bottom:0px;"
                     >Read More</router-link
                   >
                 </el-col>

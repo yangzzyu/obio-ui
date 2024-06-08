@@ -46,9 +46,10 @@
             ><br />
             <span style="line-height: 2"></span>
           </p>
-          <p>
+          <div style="text-align:center;">
             <br />
-          </p>
+            <img :src="handleViteImages('uploads/image/20240601/intellim.png')" alt="OBiO Intelli-M" />
+          </div>
         </div>
         <div
           class="group"

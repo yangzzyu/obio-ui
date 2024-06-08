@@ -70,16 +70,14 @@
       </div>
     </section>
     <section class="in-about-wrap quality-box cro-list mt-2" id="quality-dom">
-      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
-          Quality & Regulatory
-        </h1>
-         <h2 class="title-color our-txt font-size30 section-title fontf7">
-          International Compliant Quality Control System
-        </h2>
-      </el-col>
-      <el-row class="row" :gutter="10">
-        <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
+      <el-row :gutter="10" style="margin: auto" class="container">
+        <el-col :xs="24" :span="12" >
+          <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+            Quality & Regulatory
+          </h1>
+          <h2 class="title-color our-txt font-size30 section-title fontf7">
+            International Compliant Quality Control System
+          </h2>
           <div class="wysiwyg--content colour-white mb-3">
             <p class="fontf4 textColor">
               De-risk Your Regulatory Pathway
@@ -92,6 +90,12 @@
           </div>
           <router-link to="/cdmo/quality_regulatory" class="read-more font-size18 fontf7" style="justify-content: flex-start;">Read
             More</router-link>
+        </el-col>
+        <el-col :xs="24" :span="12" >
+          <div style="text-align:center;" class="mt-6">
+            <br />
+            <img :src="handleViteImages('uploads/image/20240601/6-Quarlity-control.png')" alt="Quality Control" style="width:80%"/>
+          </div>
         </el-col>
       </el-row>
     </section>
