@@ -35,6 +35,14 @@
           development and cGMP manufacturing services for nucleotide products
           including mini-circle plasmid and mRNA.
         </div>
+        <br />
+        <div class="content" style="text-align:center;">
+          <img :src="handleViteImages('uploads/image/20240601/4-1-Plasmid-flyer.png')" alt="Plasmid" style="max-width:768px;"/>
+        </div>
+        <br />
+        <div class="content" style="text-align:center;">
+          <img :src="handleViteImages('uploads/image/20240601/4-2-Plasmid-flyer-2.png')" alt="Plasmid" style="max-width:1024px;"/>
+        </div>
         <div class="list">
           <div class="bg"></div>
           <el-row class="row">

@@ -174,10 +174,10 @@
             :icon="['fab', 'linkedin']"
         /></a>
         <a href="https://www.youtube.com/@obiotechnology" aria-label="Company YouTube">
-          <font-awesome-icon size="2xl" :icon="['fab', 'youtube']"
+          <font-awesome-icon class="footer-icon" size="2xl" :icon="['fab', 'youtube']"
         /></a>
         <a href="https://www.facebook.com/profile.php?id=61555811491695" aria-label="Company Facebook">
-          <font-awesome-icon size="2xl" :icon="['fab', 'facebook']" />
+          <font-awesome-icon class="footer-icon" size="2xl" :icon="['fab', 'facebook']" />
         </a>
       </div>
     </el-col>
@@ -238,6 +238,10 @@ h2 {
   font-size: 100%;
   font-weight: 400;
   font-variant: normal;
+}
+
+.footer-icon {
+  color: #12d7d5;
 }
 
 .footer_container {

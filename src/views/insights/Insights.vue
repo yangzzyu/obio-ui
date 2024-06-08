@@ -5,7 +5,7 @@
         <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
           <div v-if="item.img">
             <el-row :gutter="100">
-              <el-col :xs="24" :span="12">
+              <el-col :xs="24" :span="6" style="padding: 0px;">
                 <div class="animate-imgxx uof img" style="
                     display: flex;
                     align-items: center;
@@ -15,11 +15,11 @@
                   <img :src="item.img" alt="SPIRO Site" style="width:100%;" />
                 </div>
               </el-col>
-              <el-col :xs="24" :span="12">
+              <el-col :xs="24" :span="18">
                 <p class="font-size18 iti textColor">
                   {{ item.time }}
                 </p>
-                <h1 class="title fontf4 font-size30 title-color">
+                <h1 class="title fontf4 font-size18 title-color">
                   {{ item.title }}
                 </h1>
                 <div class="font-size18 ut-s2">
@@ -36,7 +36,7 @@
             <p class="font-size18 iti textColor">
               {{ item.time }}
             </p>
-            <h1 class="title fontf4 font-size30 title-color">
+            <h1 class="title fontf4 font-size18 title-color">
               {{ item.title }}
             </h1>
             <div class="font-size18 ut-s2">

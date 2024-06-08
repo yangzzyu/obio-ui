@@ -38,13 +38,13 @@
         <div class="btns">
           <router-link
             to="/cdmo"
-            class="btn1 btn-i txt-bold font-size18 fontf7"
+            class="btn1 btn-i txt-bold font-size24 fontf7"
             data-animation="animated bounceInUp"
             >Our Solutions</router-link
           >
           <router-link
             to="/capability"
-            class="btn2 btn-i txt-bold font-size18 fontf7"
+            class="btn2 btn-i txt-bold font-size24 fontf7"
             data-animation="animated bounceInUp"
             >Our Commitment</router-link
           >

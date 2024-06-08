@@ -9,7 +9,7 @@ export const releases = ref([
     time: "April 27th 2024",
     img: handleViteImages("uploads/image/20240427/Picture1.png"),
     subhead: "",
-    content: ``,
+    content: "We are looking forward to ASGCT in Baltimore and excited to see you there! You’re invited to stop by OBiO Tech booth #1644. We will present 9 posters. Among these presentations are three self-developed patented achievements, four notable advancements in process optimization, and two cutting-edge technology introductions.",
     html: `<div class="Insights-detail-text text">
     <img src="${handleViteImages("uploads/image/20240427/Picture1.png")}" alt="" class="center"/>
     <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;text-align:center;'><br></p>
@@ -60,7 +60,7 @@ export const releases = ref([
     time: "April 3rd 2024",
     img: handleViteImages("uploads/image/20240404/20240404103641_22819.png"),
     subhead: "",
-    content: ``,
+    content: `Recently, OBiO Technology (Shanghai) Co., Ltd. (hereinafter referred to as " OBiO," stock code: 688238) and Shenzhen magicRNA Technology Co., Ltd. (hereinafter referred to as " magicRNA ") announced the signing of a strategic cooperation agreement. Both sides will carry out comprehensive cooperation in the field of LNP delivery systems, jointly promoting the clinical application of mRNA and other nucleic acid products in the fields of vaccines and cancer therapy. They aim to provide comprehensive and high-quality services to customers, enabling the industry and benefiting patients.`,
     html: `<div class="Insights-detail-text text">
     <p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;text-align:justify;">
 Recently, OBiO Technology (Shanghai) Co., Ltd. (hereinafter referred to as " OBiO," stock code: 688238) and Shenzhen magicRNA Technology Co., Ltd. (hereinafter referred to as " magicRNA ") announced the signing of a strategic cooperation agreement. Both sides will carry out comprehensive cooperation in the field of LNP delivery systems, jointly promoting the clinical application of mRNA and other nucleic acid products in the fields of vaccines and cancer therapy. They aim to provide comprehensive and high-quality services to customers, enabling the industry and benefiting patients.
@@ -114,7 +114,7 @@ The state-of-the-art 77,000 ㎡ (828,821 ft²) Facility for Global Supply exempl
     title: `The 2024 Cell and Gene Therapy Workshop, "Horizons Unveiled: Exploring the Future of Cell and Gene Therapy," concluded successfully this past Saturday`,
     time: "April 3rd 2024",
     subhead: "",
-    content: ``,
+    content: `OBiO Tech want to extend our heartfelt thanks to all the speakers for delivering insightful presentations and sharing the latest topics and solutions. With over 100 attendees, we appreciate the passion and professionalism demonstrated through your engaging questions. We hope you all found the workshop enriching and enjoyable.`,
     html: `<div class="Insights-detail-text text">
     OBiO Tech want to extend our heartfelt thanks to all the speakers for delivering insightful presentations and sharing the latest topics and solutions. With over 100 attendees, we appreciate the passion and professionalism demonstrated through your engaging questions. We hope you all found the workshop enriching and enjoyable.<br>
 <p>
@@ -198,7 +198,7 @@ OBiO Tech want to extend our heartfelt thanks to all the speakers for delivering
     img: handleViteImages("uploads/image/20240326/20240326104925_47289.png"),
     subhead:
       "This partnership addressed critical gaps in the treatment of neurodegenerative diseases, autoimmune diseases, and metabolic disorders.",
-    content: ``,
+    content: `We are thrilled to announce a groundbreaking collaboration between OBiO Technology (Shanghai) Co., Ltd. ("OBiO Technology", stock code: 688238) and Shanghai Novabio Therapeutics ("Novabio"). On March 22, 2024, both entities formally inked a strategic cooperation agreement that promises to reshape the landscape of Treg cell therapy.`,
     html: `<div class="Insights-detail-text text">
     <p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;">
 <span style="font-size:12pt;"><br>
@@ -283,7 +283,7 @@ About OBiO Technology
     title: `Embark on a Journey to 'Cure the Future' with Dr. Pan, the visionary founder and chairman of OBiO Biotechnology`,
     time: "March 17th 2024",
     subhead: "",
-    content: ``,
+    content: `Join us as we share our daring and relentless entrepreneurial quest, beginning in 2006, dedicated to innovating in the CGT arena.`,
     html: `<div class="Insights-detail-text text">
     <p>
 Join us as we share our daring and relentless entrepreneurial quest, beginning in 2006, dedicated to innovating in the CGT arena.
@@ -299,7 +299,7 @@ Join us as we share our daring and relentless entrepreneurial quest, beginning i
     title: `We are thrilled to introduce Hung Trinh, who has joined OBiO Tech as our Senior BD Director. Another all-in team player!`,
     time: "March 2nd 2024",
     subhead: "",
-    content: ``,
+    content: `Dr. Trinh brings with him a wealth of expertise, having been trained as a virologist at the University of Zurich, Switzerland. With a remarkable portfolio of over 30 peer-reviewed articles in virology and vaccine development, he is poised to make significant contributions to our team.`,
     html: `<div class="Insights-detail-text text">
     <p>
 <span style="font-size:14px;">We are thrilled to introduce Hung Trinh, who has joined OBiO Tech as our Senior BD Director. Another all-in team player!</span> 
@@ -327,7 +327,7 @@ Join us as we share our daring and relentless entrepreneurial quest, beginning i
     title: `Please join us in welcoming Swati to OBiO Tech`,
     time: "February 16th 2024",
     subhead: "",
-    content: ``,
+    content: `We are excited to announce Swati Dhage joined OBiO Tech as HR Manager   Swati has garnered broad HR expertise across a range of industries over the course of 12 years, including IT, pharmaceutical manufacturing, healthcare, and life sciences. Her experience extends to leading HR system establishment in startup ventures, encompassing the inception phase through ongoing management to foster company growth.   Please join us in welcoming Swati to OBiO Tech.`,
     html: `<div class="Insights-detail-text text">
                    <p style="text-align:justify;">
 	<span style="color:rgba(0, 0, 0, 0.9);font-family:&quot;font-size:14px;">We are excited to announce Swati Dhage joined OBiO Tech as HR Manager

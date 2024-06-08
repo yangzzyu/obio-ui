@@ -35,6 +35,10 @@
           therapy, universal T-cell therapy, natural killer (NK) cell therapy,
           and hematopoietic stem cell therapy.
         </div>
+        <br />
+        <div class="content" style="text-align:center;">
+          <img :src="handleViteImages('uploads/image/20240601/3-Cell-therapy.png')" alt="Cell Therapy" style="max-width:1024px;"/>
+        </div>
         <div class="list">
           <div class="bg"></div>
           <el-row class="row">
