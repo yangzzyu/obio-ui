@@ -61,6 +61,14 @@
                   {{ item.title }}
                 </div>
                 <div class="font-size18 ut-s2">{{ item.content }}</div>
+                <!--
+                <div class="font-size18 ut-s2">
+                  Time: {{ item.eventTime }}
+                </div>
+                <div class="font-size18 ut-s2">
+                  Location: {{ item.location }}
+                </div>
+                -->
               </div>
             </router-link>
           </div>

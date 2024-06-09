@@ -1923,13 +1923,13 @@ export const events = ref([
   {
     id: 9,
     type: "event",
-    title: `2024 Global Rare Diseases Research Symposium & The Second China Rare Disease Research and Translational Medicine Annual Conference is coming soon`,
+    title: '2024 Global Rare Diseases Research Symposium & The Second China Rare Disease Research and Translational Medicine Annual Conference is coming soon',
     time: "May 20th 2024",
     img: handleViteImages("uploads/image/20240520/6281716217459_.pic.jpg"),
     subhead: "",
-    content: ``,
-    eventTime: `May 23rd to 25th, details shown on the pictures`,
-    location: `Primus Hotel Shanghai SanJiaGang, 6666 E Huaxia Rd #3，Pudong New district, Shanghai, China.`,
+    content: '',
+    eventTime: 'May 23-25, 2024',
+    location: 'Primus Hotel Shanghai SanJiaGang, 6666 E Huaxia Rd #3, Pudong New district, Shanghai, China.',
     html: `<div class="Insights-detail-text text">
     <img src="${handleViteImages("uploads/image/20240520/6281716217459_.pic.jpg")}" alt="" class="center"/>
     <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:.0001pt;'><br></p>
@@ -1958,7 +1958,9 @@ export const events = ref([
     time: "April 27th 2024",
     img: handleViteImages("uploads/image/20240427/Picture1.png"),
     subhead: "",
-    content: ``,
+    content: '',
+    eventTime: 'May 7-11, 2024',
+    location: 'Baltimore, Maryland, USA',
     html: `<div class="Insights-detail-text text">
     <img src="${handleViteImages("uploads/image/20240427/Picture1.png")}" alt="" class="center"/>
     <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;text-align:center;'><br></p>
@@ -2008,6 +2010,8 @@ export const events = ref([
     title: `Join US @ Sino-American Pharmaceutical Professionals Association (SAPA) Meeting in Boston! Exploring the Future of Cell and Gene Therapy`,
     time: "March 7th 2024",
     content: `Waltham, MA United States`,
+    eventTime: 'March 30, 2024',
+    location: '300 3rd Ave, Waltham, MA 02451',
     html: `<div class="Insights-detail-text text">
     <span style="font-size:14px;">Join US @ Sino-American Pharmaceutical Professionals Association (SAPA) Meeting in Boston! Exploring the Future of Cell and Gene Therapy</span><br>
 <br>
