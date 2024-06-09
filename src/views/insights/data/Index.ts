@@ -60,7 +60,7 @@ export const releases = ref([
     time: "April 3rd 2024",
     img: handleViteImages("uploads/image/20240404/20240404103641_22819.png"),
     subhead: "",
-    content: `Recently, OBiO Technology (Shanghai) Co., Ltd. (hereinafter referred to as " OBiO," stock code: 688238) and Shenzhen magicRNA Technology Co., Ltd. (hereinafter referred to as " magicRNA ") announced the signing of a strategic cooperation agreement. Both sides will carry out comprehensive cooperation in the field of LNP delivery systems, jointly promoting the clinical application of mRNA and other nucleic acid products in the fields of vaccines and cancer therapy. They aim to provide comprehensive and high-quality services to customers, enabling the industry and benefiting patients.`,
+    content: `Recently, OBiO Technology (Shanghai) Co., Ltd. (hereinafter referred to as " OBiO," stock code: 688238) and Shenzhen magicRNA Technology Co., Ltd. (hereinafter referred to as " magicRNA ") announced the signing of a strategic cooperation agreement. Both sides will carry out comprehensive cooperation in the field of LNP delivery systems...`,
     html: `<div class="Insights-detail-text text">
     <p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;text-align:justify;">
 Recently, OBiO Technology (Shanghai) Co., Ltd. (hereinafter referred to as " OBiO," stock code: 688238) and Shenzhen magicRNA Technology Co., Ltd. (hereinafter referred to as " magicRNA ") announced the signing of a strategic cooperation agreement. Both sides will carry out comprehensive cooperation in the field of LNP delivery systems, jointly promoting the clinical application of mRNA and other nucleic acid products in the fields of vaccines and cancer therapy. They aim to provide comprehensive and high-quality services to customers, enabling the industry and benefiting patients.
@@ -299,7 +299,7 @@ Join us as we share our daring and relentless entrepreneurial quest, beginning i
     title: `We are thrilled to introduce Hung Trinh, who has joined OBiO Tech as our Senior BD Director. Another all-in team player!`,
     time: "March 2nd 2024",
     subhead: "",
-    content: `Dr. Trinh brings with him a wealth of expertise, having been trained as a virologist at the University of Zurich, Switzerland. With a remarkable portfolio of over 30 peer-reviewed articles in virology and vaccine development, he is poised to make significant contributions to our team.`,
+    content: `Dr. Trinh brings with him a wealth of expertise, having been trained as a virologist at the University of Zurich, Switzerland. With a remarkable portfolio of over 30 peer-reviewed articles in virology and vaccine development...`,
     html: `<div class="Insights-detail-text text">
     <p>
 <span style="font-size:14px;">We are thrilled to introduce Hung Trinh, who has joined OBiO Tech as our Senior BD Director. Another all-in team player!</span> 
@@ -327,7 +327,7 @@ Join us as we share our daring and relentless entrepreneurial quest, beginning i
     title: `Please join us in welcoming Swati to OBiO Tech`,
     time: "February 16th 2024",
     subhead: "",
-    content: `We are excited to announce Swati Dhage joined OBiO Tech as HR Manager   Swati has garnered broad HR expertise across a range of industries over the course of 12 years, including IT, pharmaceutical manufacturing, healthcare, and life sciences. Her experience extends to leading HR system establishment in startup ventures, encompassing the inception phase through ongoing management to foster company growth.   Please join us in welcoming Swati to OBiO Tech.`,
+    content: `We are excited to announce Swati Dhage joined OBiO Tech as HR Manager   Swati has garnered broad HR expertise across a range of industries over the course of 12 years, including IT, pharmaceutical manufacturing, healthcare, and life sciences.`,
     html: `<div class="Insights-detail-text text">
                    <p style="text-align:justify;">
 	<span style="color:rgba(0, 0, 0, 0.9);font-family:&quot;font-size:14px;">We are excited to announce Swati Dhage joined OBiO Tech as HR Manager
@@ -1928,6 +1928,8 @@ export const events = ref([
     img: handleViteImages("uploads/image/20240520/6281716217459_.pic.jpg"),
     subhead: "",
     content: ``,
+    eventTime: `May 23rd to 25th, details shown on the pictures`,
+    location: `Primus Hotel Shanghai SanJiaGang, 6666 E Huaxia Rd #3，Pudong New district, Shanghai, China.`,
     html: `<div class="Insights-detail-text text">
     <img src="${handleViteImages("uploads/image/20240520/6281716217459_.pic.jpg")}" alt="" class="center"/>
     <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:.0001pt;'><br></p>

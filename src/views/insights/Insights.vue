@@ -22,7 +22,7 @@
                 <h1 class="title fontf4 font-size18 title-color">
                   {{ item.title }}
                 </h1>
-                <div class="font-size18 ut-s2">
+                <div class="font-size18 ut-s4">
                   {{ item.content }}
                 </div>
                 <router-link :to="item.type == 'news'

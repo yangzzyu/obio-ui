@@ -47,7 +47,10 @@
                       {{ item.title }}
                     </div>
                     <div class="font-size18 ut-s2">
-                      {{ item.content }}
+                      Time: {{ item.eventTime }}
+                    </div>
+                    <div class="font-size18 ut-s2">
+                      Location: {{ item.location }}
                     </div>
                   </el-col>
                 </el-row>
