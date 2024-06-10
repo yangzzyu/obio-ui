@@ -25,18 +25,21 @@
           </div>
 
           <dl class="dl-foot-nav">
-            <dt class="font-size14">Phone:408-422-9864</dt>
-            <dt class="font-size14">Email: obio.us@obiosh.com</dt>
-            <dt class="font-size14"></dt>
-            <dd></dd>
+
             <dd class="link-list-i">
               <dl class="dl-foot-nav">
                 <dt class="font-size20 first-tit">
-                  <router-link to="/contact">CONTACT</router-link>
+                  <router-link to="/contact">Contact</router-link>
                 </dt>
-                <dd></dd>
               </dl>
             </dd>
+
+            <dt class="font-size14">
+              Phone: 408-422-9864
+              <br>
+              Email: obio.us@obiosh.com
+            </dt>
+            
           </dl>
         </div>
         <div class="link-list-i">
@@ -144,7 +147,7 @@
             </dd>
             <dd class="font-size14">
               <a href="https://www.obiosh.com/tzz/gg/" target="_blank"
-                >Partnership</a
+                >Partnerships</a
               >
             </dd>
           </dl>
@@ -164,7 +167,7 @@
               <router-link to="/careers/life">Life at OBiO</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/careers/job">Job Opening</router-link>
+              <router-link to="/careers/job">Job Openings</router-link>
             </dd>
             <dt class="font-size14">
               <!-- <router-link href="/cn/home/ys/cid/861">Privacy Policy</router-link> -->
@@ -255,7 +258,7 @@ h2 {
   right: 50px;
 }
 .footer-icon {
-  color: #12d7d5;
+  color: #fff; //#12d7d5
 }
 
 .footer_container {

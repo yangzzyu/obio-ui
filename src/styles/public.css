@@ -31,7 +31,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: puhuiti-2-75;
   src:
@@ -161,8 +160,10 @@ li {
   font-family: "puhuiti-2-115";
 }
 .fontf10 {
-  font-family: arial;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  font-weight: bold;
 }
+
 /* banner_slidesjs*/
 .transitionall {
   -webkit-transition: all 0.3s ease;
