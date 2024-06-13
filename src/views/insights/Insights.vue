@@ -22,8 +22,18 @@
                 <h1 class="title fontf4 font-size18 title-color">
                   {{ item.title }}
                 </h1>
-                <div class="font-size18 ut-s4">
-                  {{ item.content }}
+                <div v-if="item.content">
+                  <div class="font-size18 ut-s4">
+                    {{ item.content }}
+                  </div>
+                </div>
+                <div v-else>
+                  <div class="font-size18 ut-s2">
+                    <b>Time:</b> {{ item.eventTime }}
+                  </div>
+                  <div class="font-size18 ut-s2">
+                    <b>Location:</b> {{ item.location }}
+                  </div>
                 </div>
                 <router-link :to="item.type == 'news'
         ? '/news-details/releases/' + item.id
