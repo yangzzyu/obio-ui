@@ -3,6 +3,160 @@ import { handleViteImages } from "@/utils";
 
 export const releases = ref([
   {
+    id: 21,
+    type: "news",
+    title: `Three Benefits Of Partnering With A CDMO For Cell And Gene Therapy Manufacturing`,
+    time: "June 15th 2024",
+    img: handleViteImages("uploads/image/20240615/Picture2.png"),
+    subhead: "",
+    content: "As cell and gene therapies (CGTs) continue to take the biopharmaceutical industry by storm, drug companies must ensure that their therapeutics are manufactured on reliable timelines while keeping quality and patient safety top of mind. Whether a sponsor is launching their first clinical trial or is already an established pharma powerhouse with multiple commercial drugs, opting to partner with a contract development and manufacturing organization (CDMO) can help drug developers...",
+    html: `<div class="Insights-detail-text text">
+            <p class="font-size18 fontf3 textColor mb-3">
+                Source:
+                <a href="https://www.cellandgene.com/ecommcenter/obiotech">
+                    OBiO Tech
+                </a>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+              <img src="${handleViteImages("uploads/image/20240615/Picture1.png")}" alt="" class="center"/>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                As cell and gene therapies (CGTs) continue to take the biopharmaceutical
+                industry by storm, drug companies must ensure that their therapeutics are
+                manufactured on reliable timelines while keeping quality and patient safety
+                top of mind. Whether a sponsor is launching their first clinical trial or is
+                already an established pharma powerhouse with multiple commercial drugs,
+                opting to partner with a contract development and manufacturing organization
+                (CDMO) can help drug developers better leverage cost efficiency,
+                flexibility, and project management throughout production. If your drug
+                development team is wondering whether a CDMO partnership makes sense with
+                your budget and goals, consider the beneficial impact a manufacturer can
+                have on the development of your cell or gene therapy.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                <strong>Develop Better Cost Control</strong>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                Every CDMO has distinct offerings, expertise, and personalized professional
+                services; working with a team whose experience aligns with your goals can
+                help guarantee greater cost management. Overall, cost control encompasses
+                labor, materials, factory operations, and quality management. Working with a
+                CDMO affords sponsors access to a ready-made professional team and a
+                high-quality management system, both of which help reduce the time and labor
+                costs associated with drug development. An established CDMO will have the
+                experience to manage a robust and diversified supply chain that provides
+                consistent prices thanks to long-term cooperation with material suppliers. A
+                strong supply chain will also help shorten the procurement cycle of
+                materials or provide back-up options if needed.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                Existing, high-quality facilities also help your team save manufacturing
+                costs. OBiO Technology, a CDMO specializing in CGTs, offers our clients
+                access to high-quality, established facilities, helping to reduce factory
+                construction costs and allowing for speedy timelines.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                <strong></strong>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                <strong>Ensure High Project Flexibility</strong>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+              <img src="${handleViteImages("uploads/image/20240615/Picture2.png")}" alt="" class="center"/>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                As the CGT industry continues to grow and evolve, drug companies need
+                partners that offer flexibility and adaptability to meet shifting product
+                demand. A knowledgeable CDMO will be equipped to accommodate flexible needs
+                in a variety of ways.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                While running multiple projects with diverse needs, a CDMO should use
+                strategic material allocation to reduce the probability of expiration. They
+                will also offer expansive factory facilities that enable flexible scheduling
+                based on research and patient needs. At OBiO, our team provides end-to-end
+                CDMO capabilities to guide a product from pre-IND to commercialization. Our
+                current good manufacturing practice (cGMP) facilities are equipped with
+                suites, airflows, material storage, documentation processes, quality
+                systems, and knowledgeable engineers. OBiO’s cGMP platform and single-use
+                technologies can accommodate flexible co-line manufacturing of different
+                products, enabling sponsors to easily adjust to shifting demands.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                <strong>Gain Access to Experienced Project Management and Execution</strong>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                Throughout your project partnership, a CDMO should provide an experienced
+                project manager to help your team better understand the process, define your
+                goals, and share them with relevant personnel. During the length of your
+                partnership, it is critical to create an environment of collaboration and
+                transparent communication which will help to foster trust and achieve
+                mutually beneficial project goals.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                Many abnormal situations that arise during CGT manufacturing require the
+                experienced judgment of on-site personnel. An expert CDMO execution team
+                will be equipped to discover abnormal situations and provide timely and
+                effective remedial control measures. This helps increase the production
+                success rate.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+              <img src="${handleViteImages("uploads/image/20240615/Picture3.png")}" alt="" class="center"/>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                At OBiO, our platform has a positive sample production workshop. This
+                includes a dedicated production area and an independent air conditioning
+                purification system, both of which satisfy regulatory requirements and meet
+                the production needs of donor materials containing infectious pathogens.
+                According to current process requirements, OBiO’s cell therapy platform is
+                capable of providing three different solutions.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                In cell therapy, products are human-sourced live cells. Sterility cannot be
+                ensured through final sterilization filtration; it can only be achieved
+                through aseptic operations, process control, or closed systems with high
+                requirements for sterility. OBiO’s cell therapy platform provides production
+                facilities with a full-site isolator and hive culture chamber, ensuring that
+                all production operations of cell therapy products are carried out in a
+                sterile environment. The hive culture chamber uses rapid transfer port (RTP)
+                docking interfaces, allowing quick docking with the full-site isolator. This
+                process fulfills internal resource supply in a closed aseptic environment,
+                meets the conditions for independent simultaneous cultivation of multiple
+                batches, greatly increases production capacity, and effectively reduces the
+                risk of cross-contamination.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                <strong>The Bottom Line</strong>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                If you’re looking to manufacture your cell or gene therapy safely, quickly,
+                and cost-effectively for clinical or commercial development, consider an
+                end-to-end CDMO with the CGT expertise to produce the highest quality
+                version of your therapeutic. A knowledgeable manufacturer will help you to
+                achieve First Time Right manufacturing, reliable timelines, and flexibility
+                to meet your evolving needs.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                Do not hesitate to send an inquiry or question here:
+                https://lnkd.in/g8BzXQfQ
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                Phone: +1 408-422-9864 (U.S.)
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                Email: <a href="mailto:obio.us@obiosh.com">obio.us@obiosh.com</a>
+            </p>
+            <div>
+            <p class="font-size18 fontf3 textColor mb-3" style="display:inline-block;">
+              <img src="${handleViteImages("uploads/image/20240615/Picture4.png")}" alt="" class="center"/>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3" style="display:inline-block;">
+              <img src="${handleViteImages("uploads/image/20240615/Picture5.png")}" alt="" class="center"/>
+            </p>
+            </div>
+            </div>`
+  },
+  {
     id: 20,
     type: "news",
     title: `Meet OBiO Technology at ASGCT 2024! May 7th to 11th`,

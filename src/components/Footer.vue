@@ -29,7 +29,7 @@
             <dd class="link-list-i">
               <dl class="dl-foot-nav">
                 <dt class="font-size20 first-tit">
-                  <router-link to="/contact">Contact</router-link>
+                  <router-link to="/contact">CONTACT</router-link>
                 </dt>
               </dl>
             </dd>
@@ -260,7 +260,7 @@ h2 {
   right: 50px;
 }
 .footer-icon {
-  color: #fff; //#12d7d5
+  color: #12d7d5
 }
 
 .footer_container {
