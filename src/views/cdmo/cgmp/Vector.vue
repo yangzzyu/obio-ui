@@ -34,34 +34,101 @@
           flexibly adjust to adherent or suspension-based platform to meet your
           manufacturing demands.
         </div>
-        <div class="list">
-          <div class="bg"></div>
-          <el-row class="row">
-            <el-col :span="12" class="item"></el-col>
-            <el-col
-              v-for="(i, k) in stageList"
-              :key="k"
-              class="item"
-              :span="12"
-              :xs="22"
-            >
-              <div class="box">
-                <div class="num">
-                  <span class="tx fontf7 font-size50">{{ k + 1 }}</span
-                  ><i class="line"></i>
+        <br />
+        <div class="fac-con">
+            <el-row class="row" :gutter="10">
+              <el-col :xs="24" :span="5" class="">
+                <div class="content" style="width: 100%; overflow: hidden">
+                  <el-image
+                    style="width: 100%; margin: 10px;"
+                    :src="handleViteImages('uploads/image/20240601/1-1-AAV-Flyers.png')"
+                    alt="viral vectors"
+                    :preview-src-list="viralVectorList1"
+                    fit="cover"
+                    :z-index="99999"
+                    :preview-teleported="true"
+                    :hide-on-click-modal="true"
+                  />
                 </div>
-                <div class="txt">
-                  <div class="title font-size30 fontf7">
-                    {{ i.title }}
-                  </div>
-                  <div class="p font-size18">
-                    {{ i.txt }}
-                  </div>
+                <div class="content" style="width: 100%; overflow: hidden">
+                  <el-image
+                    style="width: 100%; margin: 10px;"
+                    :src="handleViteImages('uploads/image/20240601/1-2-AAV.png')"
+                    alt="viral vectors"
+                    :preview-src-list="viralVectorList2"
+                    fit="cover"
+                    :z-index="99999"
+                    :preview-teleported="true"
+                    :hide-on-click-modal="true"
+                  />
                 </div>
-              </div>
-            </el-col>
-          </el-row>
-        </div>
+                <div class="content" style="width: 100%; overflow: hidden">
+                  <el-image
+                    style="width: 100%; margin: 10px;"
+                    :src="handleViteImages('uploads/image/20240601/1-3-LV-flyer-1.png')"
+                    alt="viral vectors"
+                    :preview-src-list="viralVectorList3"
+                    fit="cover"
+                    :z-index="99999"
+                    :preview-teleported="true"
+                    :hide-on-click-modal="true"
+                  />
+                </div>
+              </el-col>
+              <el-col :xs="24" :span="12" class="">
+                <div class="content" style="width: 100%; overflow: hidden">
+                  <el-image
+                    style="width: 100%; height: 100%"
+                    :src="handleViteImages('uploads/image/20240601/viral_vectors.png')"
+                    alt="viral vectors"
+                    :preview-src-list="viralVectorList"
+                    fit="cover"
+                    :z-index="99999"
+                    :preview-teleported="true"
+                    :hide-on-click-modal="true"
+                  />
+                </div>
+              </el-col>
+              <el-col :xs="24" :span="5" class="">
+                <div class="content" style="width: 100%; overflow: hidden">
+                  <el-image
+                    style="width: 100%; margin: 18px;"
+                    :src="handleViteImages('uploads/image/20240601/1-4-LV-flyer-2.png')"
+                    alt="viral vectors"
+                    :preview-src-list="viralVectorList1"
+                    fit="cover"
+                    :z-index="99999"
+                    :preview-teleported="true"
+                    :hide-on-click-modal="true"
+                  />
+                </div>
+                <div class="content" style="width: 100%; overflow: hidden">
+                  <el-image
+                    style="width: 100%; margin: 20px;"
+                    :src="handleViteImages('uploads/image/20240601/1-5-iPSC flyer .png')"
+                    alt="viral vectors"
+                    :preview-src-list="viralVectorList2"
+                    fit="cover"
+                    :z-index="99999"
+                    :preview-teleported="true"
+                    :hide-on-click-modal="true"
+                  />
+                </div>
+                <div class="content" style="width: 100%; overflow: hidden">
+                  <el-image
+                    style="width: 100%; margin: 18px;"
+                    :src="handleViteImages('uploads/image/20240601/1-6-Exsome.png')"
+                    alt="viral vectors"
+                    :preview-src-list="viralVectorList3"
+                    fit="cover"
+                    :z-index="99999"
+                    :preview-teleported="true"
+                    :hide-on-click-modal="true"
+                  />
+                </div>
+              </el-col>
+            </el-row>
+          </div>
       </el-col>
     </div>
     <div class="section-2">
@@ -147,7 +214,7 @@
 </template>
 
 <script lang="ts" setup name="Cdmo">
-import { ref } from "vue";
+import { reactive, ref } from "vue";
 import { useTransition } from "@vueuse/core";
 import { ArrowRight } from "@element-plus/icons-vue";
 import ObioFooter from "@/components/ObioFooter.vue";
@@ -166,6 +233,19 @@ import "swiper/css";
 import "swiper/css/pagination"; // 轮播图底面的小圆点
 import "swiper/css/navigation"; // 轮播图两边的左右箭头
 import "swiper/css/scrollbar"; // 轮播图的滚动条
+const viralVectorList = reactive([
+  handleViteImages("uploads/image/20240601/viral_vectors.png"),
+]);
+const viralVectorList1 = reactive([
+  handleViteImages("uploads/image/20240601/1-1-AAV-Flyers.png"),
+]);
+const viralVectorList2 = reactive([
+  handleViteImages("uploads/image/20240601/1-2-AAV.png"),
+]);
+const viralVectorList3 = reactive([
+  handleViteImages("uploads/image/20240601/1-3-LV-flyer-1.png"),
+]);
+
 const navigation = ref({
   nextEl: "#ViralVectorNext",
   prevEl: "#ViralVectorPrev",
@@ -193,40 +273,6 @@ function onSlideChange(e) {
     isShow.value = true;
   }
 }
-const stageList = ref([
-  {
-    title: "Cell Bank Construction",
-    txt: `Construction of primary, master, and working cell banks for adherent or suspension cell culture`,
-  },
-  {
-    title: "Process and Analytical Method Development",
-    txt: `Upstream process development, downstream process development, analytical method development, and formulation development`,
-  },
-  {
-    title: "GMP Run - Upstream Process",
-    txt: `Adherent or suspension cell culture with the developed method for specific type of viral vector`,
-  },
-  // {
-  //   title: "GMP Run - Downstream Process",
-  //   txt: `Adherent or suspension cell culture with the developed method for specific type of viral vector`,
-  // },
-  {
-    title: "GMP Run - Downstream Process",
-    txt: `Automated and fully enclosed purification process, patented sterilization technology`,
-  },
-  {
-    title: "Aseptic Fill and Finish",
-    txt: `Aseptic isolator under automatic Class-A environment`,
-  },
-  {
-    title: "Quality Control and Release",
-    txt: `Quality control system in compliance with regulatory requirements`,
-  },
-  {
-    title: "Deliverables",
-    txt: `Package including viral vector product, seed bank, Certificate of Analysis, batch production record, batch inspection record, and relevant Chemistry Manufacturing and Control (CMC) dossier`,
-  },
-]);
 const SwiperList = ref([
   {
     title: "Bank Transfer",

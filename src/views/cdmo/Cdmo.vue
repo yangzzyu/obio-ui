@@ -50,57 +50,7 @@
         </el-row>
         <div class="number-main text-center cGMP-zIndex active" id="numgo">
           <el-row class="row color666" :gutter="100">
-            <el-col :span="8" :xs="24" class="tx-c">
-              <div class="nums-list bg-pinkbluelfr">
-                <div class="content">
-                  <el-statistic :value="cumulativeCgtValue" class="number-c">
-                    <template #suffix>
-                      <div class="nums fontf9">
-                        <span class="fh">+</span>
-                      </div>
-                    </template>
-                  </el-statistic>
-                  <div class="pn fontf7 font-size24">
-                    Cumulative CGT CDMO Projects
-                  </div>
-                </div>
-              </div>
-            </el-col>
-            <el-col :span="8" :xs="24" class="tx-c">
-              <div class="nums-list bg-pinkbluelfr">
-                <div class="content">
-                  <el-statistic :value="processSourceValue" class="number-c">
-                    <template #suffix>
-                      <div class="nums fontf9">
-                        <span class="fh">+</span>
-                      </div>
-                    </template>
-                  </el-statistic>
-                  <div class="pn fontf7 font-size24">
-                    Process Development Projects
-                  </div>
-                </div>
-              </div>
-            </el-col>
-            <el-col :span="8" :xs="24" class="tx-c">
-              <div class="nums-list bg-pinkbluelfr">
-                <div class="content">
-                  <el-statistic class="number-c" :value="analyticalSourceValue">
-                    <template #suffix>
-                      <div class="nums fontf9">
-                        <span class="fh">+</span>
-                      </div>
-                    </template>
-                  </el-statistic>
-                  <div class="pn fontf7 font-size24">
-                    Analytical Method Development Projects
-                  </div>
-                </div>
-              </div>
-            </el-col>
-          </el-row>
-          <el-row class="row color666" :gutter="100">
-            <el-col :span="8" :xs="24" class="tx-c">
+            <el-col :span="4" :xs="24" class="tx-c">
               <div class="nums-list bg-pinkbluelfr">
                 <div class="content">
                   <div class="pn fontf7 font-size24">
@@ -132,18 +82,18 @@
                 </div>
               </div>
             </el-col>
-            <el-col :span="8" :xs="24" class="tx-c">
+            <el-col :span="5" :xs="24" class="tx-c">
               <div class="nums-list bg-pinkbluelfr">
                 <div class="content">
-                  <el-statistic :value="suspendedValue" class="number-c">
+                  <el-statistic :value="cellSourceValue" class="number-c">
                     <template #suffix>
-                      <div class="nums fontf10">
-                        <span class="fh">L</span>
+                      <div class="nums fontf9">
+                        <span class="fh">+</span>
                       </div>
                     </template>
                   </el-statistic>
                   <div class="pn fontf7 font-size24">
-                    Suspended Cell Culture Production System
+                    Gene and Cell Therapy Programs
                   </div>
                 </div>
               </div>
@@ -163,7 +113,7 @@
                 </div>
               </div>
             </el-col>
-            <el-col :span="8" :xs="24" class="tx-c">
+            <el-col :span="5" :xs="24" class="tx-c">
               <div class="nums-list bg-pinkbluelfr">
                 <div class="content">
                   <el-statistic class="number-c" :value="globalServiceValue">
@@ -181,7 +131,23 @@
               <br />
               <div class="nums-list bg-pinkbluelfr">
                 <div class="content">
-                  <el-statistic :value="cellSourceValue" class="number-c">
+                  <el-statistic :value="suspendedValue" class="number-c">
+                    <template #suffix>
+                      <div class="nums fontf10">
+                        <span class="fh">L</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size24">
+                    Suspended Cell Culture Production System
+                  </div>
+                </div>
+              </div>
+            </el-col>
+            <el-col :span="5" :xs="24" class="tx-c">
+              <div class="nums-list bg-pinkbluelfr">
+                <div class="content">
+                  <el-statistic :value="cumulativeCgtValue" class="number-c">
                     <template #suffix>
                       <div class="nums fontf9">
                         <span class="fh">+</span>
@@ -189,7 +155,53 @@
                     </template>
                   </el-statistic>
                   <div class="pn fontf7 font-size24">
-                    Gene and Cell Therapy Programs
+                    Cumulative CGT CDMO Projects
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div class="nums-list bg-pinkbluelfr">
+                <div class="content">
+                  <el-statistic :value="processSourceValue" class="number-c">
+                    <template #suffix>
+                      <div class="nums fontf9">
+                        <span class="fh">+</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size24">
+                    Process Development Projects
+                  </div>
+                </div>
+              </div>
+            </el-col>
+            <el-col :span="5" :xs="24" class="tx-c">
+              <div class="nums-list bg-pinkbluelfr">
+                <div class="content">
+                  <el-statistic class="number-c" :value="analyticalSourceValue">
+                    <template #suffix>
+                      <div class="nums fontf9">
+                        <span class="fh">+</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size24">
+                    Analytical Method Development Projects
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div class="nums-list bg-pinkbluelfr">
+                <div class="content">
+                  <el-statistic class="number-c" :value="batchValue">
+                    <template #suffix>
+                      <div class="nums fontf9">
+                        <span class="fh">+</span>
+                      </div>
+                    </template>
+                  </el-statistic>
+                  <div class="pn fontf7 font-size24">
+                    Batches
                   </div>
                 </div>
               </div>
@@ -226,9 +238,9 @@
                     <img :src="item.imgUrl" alt="" srcset="" />
                   </div>
                 </div>
-                <h4 class="font-size24 fontf7 iti">
+                <h2 class="font-size24 fontf7 iti">
                   {{ item.title }}
-                </h4>
+                </h2>
                 <ul>
                   <li
                     style="padding: 5px 0"
@@ -460,8 +472,8 @@
     </section>
   </div>
   <el-dialog
+    id="cdmo-dialog"
     v-model="dialogVisible"
-    title=""
     width="60%"
     :before-close="handleClose"
   >
@@ -580,6 +592,7 @@ const croList = ref([
       "Lentiviral vectors",
       "Retroviral vectors",
       "Virus like particles (VLPs)",
+      "AAV Packaging",
     ],
   },
   {
@@ -633,6 +646,7 @@ const squareFeet = ref(0);
 const globalService = ref(0);
 const processSource = ref(0);
 const analyticalSource = ref(0);
+const batchSource = ref(0);
 const cellSourceValue = useTransition(cellSource, {
   duration: 1500,
 });
@@ -660,8 +674,11 @@ const processSourceValue = useTransition(processSource, {
 const analyticalSourceValue = useTransition(analyticalSource, {
   duration: 1500,
 });
+const batchValue = useTransition(batchSource, {
+  duration: 1500,
+})
 cellSource.value = 170;
-cumulativeCgt.value = 280;
+cumulativeCgt.value = 300;
 indApprovals.value = 38;
 fdaApprovals.value = 11;
 suspended.value = 200;
@@ -669,6 +686,7 @@ squareFeet.value = 990;
 globalService.value = 110;
 processSource.value = 200;
 analyticalSource.value = 500;
+batchSource.value = 400;
 
 const dialogVisible = ref(false);
 function handleClose() {
@@ -697,14 +715,19 @@ const LaboraList = ref([
 function popLabora(id) {
   Labora.value = LaboraList.value.find((i) => i.id === id) || {};
   dialogVisible.value = true;
+  setTimeout(() => {
+    document.querySelector('#cdmo-dialog').parentElement.setAttribute('aria-label', Labora.value.title);
+    document.querySelector('#cdmo-dialog .el-dialog__title').remove();
+  }, 0);
 }
 </script>
 
 <style lang="scss">
 .number-main .number-c {
   .el-statistic__number {
-    font-size: 90px;
+    font-size: 40px;
     color: #039d8f;
+    font-weight: bold;
     line-height: 0.75;
   }
 }
@@ -724,7 +747,13 @@ function popLabora(id) {
 .number-main {
   .tx-c {
     margin-bottom: 20px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
+}
+.number-main .fh {
+  font-size: 30px;
+  font-weight: bold;
 }
 .nums-list {
   border-radius: 30px;

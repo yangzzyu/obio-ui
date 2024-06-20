@@ -11,54 +11,10 @@
         class="container"
       >
         <h1 class="p-title font-size50 txt-bold fontf8 mb-3">Inquiry</h1>
+        <!--
         <el-row :gutter="50" class="cdmo-top">
-          <el-col :xs="24" :span="12">
-            <h2 class="title-color font-size18 txt-bold fontf7">
-              Laboratory Sciences
-            </h2>
-            <el-checkbox-group
-              v-model="form.laboratory"
-              @change="changeLaboratory"
-              class="check-txt fontf4 font-size18"
-              style="
-                display: flex;
-                flex-flow: column nowrap;
-                align-items: flex-start;
-              "
-            >
-              <el-checkbox
-                value="AAV PACKAGING SERVICES"
-                label="AAV PACKAGING SERVICES"
-              >
-                AAV PACKAGING SERVICES
-              </el-checkbox>
-              <el-checkbox
-                value="LENTIVIRUS PACKAGING SERVICES"
-                label="LENTIVIRUS PACKAGING SERVICES"
-              >
-                LENTIVIRUS PACKAGING SERVICES
-              </el-checkbox>
-              <el-checkbox
-                value="AAV-Lung X AAV-Lung M3"
-                label="AAV-Lung X AAV-Lung M3"
-              >
-                AAV-Lung X AAV-Lung M3
-              </el-checkbox>
-              <el-checkbox
-                value="AAVneO + AAVMeta Platform"
-                label="AAVneO + AAVMeta Platform"
-              >
-                AAVneO + AAVMeta Platform
-              </el-checkbox>
-              <el-checkbox
-                value="Off-the-Shelf AAV PRODUCTS"
-                label="Off-the-Shelf AAV PRODUCTS"
-              >
-                Off-the-Shelf AAV PRODUCTS
-              </el-checkbox>
-            </el-checkbox-group>
-          </el-col>
-          <el-col :xs="24" :span="12">
+          <el-col :xs="24" :span="24"> 
+            -->
             <h2 class="title-color font-size18 txt-bold fontf7">
               CDMO Solutions
             </h2>
@@ -114,9 +70,87 @@
               >
                 ONCOLYTIC VIRUS CDMO SOLUTIONS
               </el-checkbox>
+              <el-checkbox
+                value="mRNA CDMO SOLUTIONS"
+                label="mRNA CDMO SOLUTIONS"
+              >
+                mRNA CDMO SOLUTIONS
+              </el-checkbox>
+              <el-checkbox
+                value="EXOSOME CDMO SOLUTIONS"
+                label="EXOSOME CDMO SOLUTIONS"
+              >
+                EXOSOME CDMO SOLUTIONS
+              </el-checkbox>
+
+              <el-checkbox
+                value="CAR-T CDMO SOLUTIONS"
+                label="CAR-T CDMO SOLUTIONS"
+              >
+                CAR-T CDMO SOLUTIONS
+              </el-checkbox>
+
+              <el-checkbox
+                value="NK CELL CDMO SOLUTIONS"
+                label="NK CELL CDMO SOLUTIONS"
+              >
+                NK CELL CDMO SOLUTIONS
+              </el-checkbox>
+
             </el-checkbox-group>
+          <!-- 
           </el-col>
-        </el-row>
+
+          <el-col :xs="24" :span="24">
+            -->
+            <br>
+            <h2 class="title-color font-size18 txt-bold fontf7">
+              Laboratory Sciences
+            </h2>
+            <el-checkbox-group
+              v-model="form.laboratory"
+              @change="changeLaboratory"
+              class="check-txt fontf4 font-size18"
+              style="
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: flex-start;
+              "
+            >
+              <el-checkbox
+                value="AAV PACKAGING SERVICES"
+                label="AAV PACKAGING SERVICES"
+              >
+                AAV PACKAGING SERVICES
+              </el-checkbox>
+              <el-checkbox
+                value="LENTIVIRUS PACKAGING SERVICES"
+                label="LENTIVIRUS PACKAGING SERVICES"
+              >
+                LENTIVIRUS PACKAGING SERVICES
+              </el-checkbox>
+              <el-checkbox
+                value="AAV-Lung X AAV-Lung M3"
+                label="AAV-Lung X AAV-Lung M3"
+              >
+                AAV-Lung X AAV-Lung M3
+              </el-checkbox>
+              <el-checkbox
+                value="AAVneO + AAVMeta Platform"
+                label="AAVneO + AAVMeta Platform"
+              >
+                AAVneO + AAVMeta PLATFORM
+              </el-checkbox>
+              <el-checkbox
+                value="Off-the-Shelf AAV PRODUCTS"
+                label="Off-the-Shelf AAV PRODUCTS"
+              >
+                Off-the-Shelf AAV PRODUCTS
+              </el-checkbox>
+            </el-checkbox-group>
+          <!--
+          </el-col>
+        </el-row> -->
         <el-row>
           <el-col :span="24" :xs="24">
             <el-form

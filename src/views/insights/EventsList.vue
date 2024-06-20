@@ -28,7 +28,7 @@
             <router-link :to="'/news-details/events/' + item.id" class="block">
               <div v-if="item.img">
                 <el-row :gutter="100">
-                  <el-col :xs="24" :span="12"
+                  <el-col :xs="24" :span="6" style="padding: 0px;"
                     ><div
                       class="animate-imgxx uof img"
                       style="
@@ -41,13 +41,16 @@
                       <img :src="item.img" alt="Event" style="width:100%;"/>
                     </div>
                   </el-col>
-                  <el-col :xs="24" :span="12">
+                  <el-col :xs="24" :span="18">
                     <div class="font-size18">{{ item.time }}</div>
                     <div class="title fontf4 font-size24 title-color">
                       {{ item.title }}
                     </div>
                     <div class="font-size18 ut-s2">
-                      {{ item.content }}
+                      <b>Time:</b> {{ item.eventTime }}
+                    </div>
+                    <div class="font-size18 ut-s2">
+                      <b>Location:</b> {{ item.location }}
                     </div>
                   </el-col>
                 </el-row>

@@ -1,4 +1,10 @@
 <template>
+<div class="float-btn">
+  <a href="/insight/inquiry" style="color:#12d7d5;" >
+    <font-awesome-icon :icon="['fas', 'fa-comment-dots']" style="font-size: 50px; z-index: 999999;"/>
+    <div style="font-size:20px; font-weight:bold;">REQUEST NOW</div>
+  </a>    
+</div>
   <div class="foot-wrap">
     <el-col
       :xs="24"
@@ -19,18 +25,23 @@
           </div>
 
           <dl class="dl-foot-nav">
-            <dt class="font-size14">Phone:408-422-9864</dt>
-            <dt class="font-size14">Email: obio.us@obiosh.com</dt>
-            <dt class="font-size14"></dt>
-            <dd></dd>
-            <div class="link-list-i">
+
+            <dd class="link-list-i">
               <dl class="dl-foot-nav">
                 <dt class="font-size20 first-tit">
                   <router-link to="/contact">CONTACT</router-link>
                 </dt>
-                <dd></dd>
               </dl>
-            </div>
+            </dd>
+
+            <dt class="font-size14">
+              Phone: 408-422-9864
+              <br />
+              Email: obio.us@obiosh.com
+              <br />
+              Address: 132 Charles Street, Suite 202, Auburndale, MA 02466
+            </dt>
+            
           </dl>
         </div>
         <div class="link-list-i">
@@ -138,7 +149,7 @@
             </dd>
             <dd class="font-size14">
               <a href="https://www.obiosh.com/tzz/gg/" target="_blank"
-                >Partnership</a
+                >Partnerships</a
               >
             </dd>
           </dl>
@@ -158,7 +169,7 @@
               <router-link to="/careers/life">Life at OBiO</router-link>
             </dd>
             <dd class="font-size14">
-              <router-link to="/careers/job">Job Opening</router-link>
+              <router-link to="/careers/job">Job Openings</router-link>
             </dd>
             <dt class="font-size14">
               <!-- <router-link href="/cn/home/ys/cid/861">Privacy Policy</router-link> -->
@@ -174,10 +185,10 @@
             :icon="['fab', 'linkedin']"
         /></a>
         <a href="https://www.youtube.com/@obiotechnology" aria-label="Company YouTube">
-          <font-awesome-icon size="2xl" :icon="['fab', 'youtube']"
+          <font-awesome-icon class="footer-icon" size="2xl" :icon="['fab', 'youtube']"
         /></a>
         <a href="https://www.facebook.com/profile.php?id=61555811491695" aria-label="Company Facebook">
-          <font-awesome-icon size="2xl" :icon="['fab', 'facebook']" />
+          <font-awesome-icon class="footer-icon" size="2xl" :icon="['fab', 'facebook']" />
         </a>
       </div>
     </el-col>
@@ -238,6 +249,18 @@ h2 {
   font-size: 100%;
   font-weight: 400;
   font-variant: normal;
+}
+.float-btn {
+  position: fixed;
+  text-align: center;
+  z-index: 999999;
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
+  bottom:50px;
+  right: 50px;
+}
+.footer-icon {
+  color: #12d7d5
 }
 
 .footer_container {

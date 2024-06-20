@@ -3,13 +3,167 @@ import { handleViteImages } from "@/utils";
 
 export const releases = ref([
   {
+    id: 21,
+    type: "news",
+    title: `Three Benefits Of Partnering With A CDMO For Cell And Gene Therapy Manufacturing`,
+    time: "June 15th 2024",
+    img: handleViteImages("uploads/image/20240615/Picture2.png"),
+    subhead: "",
+    content: "As cell and gene therapies (CGTs) continue to take the biopharmaceutical industry by storm, drug companies must ensure that their therapeutics are manufactured on reliable timelines while keeping quality and patient safety top of mind. Whether a sponsor is launching their first clinical trial or is already an established pharma powerhouse with multiple commercial drugs, opting to partner with a contract development and manufacturing organization (CDMO) can help drug developers...",
+    html: `<div class="Insights-detail-text text">
+            <p class="font-size18 fontf3 textColor mb-3">
+                Source:
+                <a href="https://www.cellandgene.com/ecommcenter/obiotech">
+                    OBiO Tech
+                </a>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+              <img src="${handleViteImages("uploads/image/20240615/Picture1.png")}" alt="" class="center"/>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                As cell and gene therapies (CGTs) continue to take the biopharmaceutical
+                industry by storm, drug companies must ensure that their therapeutics are
+                manufactured on reliable timelines while keeping quality and patient safety
+                top of mind. Whether a sponsor is launching their first clinical trial or is
+                already an established pharma powerhouse with multiple commercial drugs,
+                opting to partner with a contract development and manufacturing organization
+                (CDMO) can help drug developers better leverage cost efficiency,
+                flexibility, and project management throughout production. If your drug
+                development team is wondering whether a CDMO partnership makes sense with
+                your budget and goals, consider the beneficial impact a manufacturer can
+                have on the development of your cell or gene therapy.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                <strong>Develop Better Cost Control</strong>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                Every CDMO has distinct offerings, expertise, and personalized professional
+                services; working with a team whose experience aligns with your goals can
+                help guarantee greater cost management. Overall, cost control encompasses
+                labor, materials, factory operations, and quality management. Working with a
+                CDMO affords sponsors access to a ready-made professional team and a
+                high-quality management system, both of which help reduce the time and labor
+                costs associated with drug development. An established CDMO will have the
+                experience to manage a robust and diversified supply chain that provides
+                consistent prices thanks to long-term cooperation with material suppliers. A
+                strong supply chain will also help shorten the procurement cycle of
+                materials or provide back-up options if needed.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                Existing, high-quality facilities also help your team save manufacturing
+                costs. OBiO Technology, a CDMO specializing in CGTs, offers our clients
+                access to high-quality, established facilities, helping to reduce factory
+                construction costs and allowing for speedy timelines.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                <strong></strong>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                <strong>Ensure High Project Flexibility</strong>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+              <img src="${handleViteImages("uploads/image/20240615/Picture2.png")}" alt="" class="center"/>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                As the CGT industry continues to grow and evolve, drug companies need
+                partners that offer flexibility and adaptability to meet shifting product
+                demand. A knowledgeable CDMO will be equipped to accommodate flexible needs
+                in a variety of ways.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                While running multiple projects with diverse needs, a CDMO should use
+                strategic material allocation to reduce the probability of expiration. They
+                will also offer expansive factory facilities that enable flexible scheduling
+                based on research and patient needs. At OBiO, our team provides end-to-end
+                CDMO capabilities to guide a product from pre-IND to commercialization. Our
+                current good manufacturing practice (cGMP) facilities are equipped with
+                suites, airflows, material storage, documentation processes, quality
+                systems, and knowledgeable engineers. OBiO’s cGMP platform and single-use
+                technologies can accommodate flexible co-line manufacturing of different
+                products, enabling sponsors to easily adjust to shifting demands.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                <strong>Gain Access to Experienced Project Management and Execution</strong>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                Throughout your project partnership, a CDMO should provide an experienced
+                project manager to help your team better understand the process, define your
+                goals, and share them with relevant personnel. During the length of your
+                partnership, it is critical to create an environment of collaboration and
+                transparent communication which will help to foster trust and achieve
+                mutually beneficial project goals.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                Many abnormal situations that arise during CGT manufacturing require the
+                experienced judgment of on-site personnel. An expert CDMO execution team
+                will be equipped to discover abnormal situations and provide timely and
+                effective remedial control measures. This helps increase the production
+                success rate.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+              <img src="${handleViteImages("uploads/image/20240615/Picture3.png")}" alt="" class="center"/>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                At OBiO, our platform has a positive sample production workshop. This
+                includes a dedicated production area and an independent air conditioning
+                purification system, both of which satisfy regulatory requirements and meet
+                the production needs of donor materials containing infectious pathogens.
+                According to current process requirements, OBiO’s cell therapy platform is
+                capable of providing three different solutions.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                In cell therapy, products are human-sourced live cells. Sterility cannot be
+                ensured through final sterilization filtration; it can only be achieved
+                through aseptic operations, process control, or closed systems with high
+                requirements for sterility. OBiO’s cell therapy platform provides production
+                facilities with a full-site isolator and hive culture chamber, ensuring that
+                all production operations of cell therapy products are carried out in a
+                sterile environment. The hive culture chamber uses rapid transfer port (RTP)
+                docking interfaces, allowing quick docking with the full-site isolator. This
+                process fulfills internal resource supply in a closed aseptic environment,
+                meets the conditions for independent simultaneous cultivation of multiple
+                batches, greatly increases production capacity, and effectively reduces the
+                risk of cross-contamination.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                <strong>The Bottom Line</strong>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                If you’re looking to manufacture your cell or gene therapy safely, quickly,
+                and cost-effectively for clinical or commercial development, consider an
+                end-to-end CDMO with the CGT expertise to produce the highest quality
+                version of your therapeutic. A knowledgeable manufacturer will help you to
+                achieve First Time Right manufacturing, reliable timelines, and flexibility
+                to meet your evolving needs.
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                Do not hesitate to send an inquiry or question here:
+                https://lnkd.in/g8BzXQfQ
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                Phone: +1 408-422-9864 (U.S.)
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3">
+                Email: <a href="mailto:obio.us@obiosh.com">obio.us@obiosh.com</a>
+            </p>
+            <div>
+            <p class="font-size18 fontf3 textColor mb-3" style="display:inline-block;">
+              <img src="${handleViteImages("uploads/image/20240615/Picture4.png")}" alt="" class="center"/>
+            </p>
+            <p class="font-size18 fontf3 textColor mb-3" style="display:inline-block;">
+              <img src="${handleViteImages("uploads/image/20240615/Picture5.png")}" alt="" class="center"/>
+            </p>
+            </div>
+            </div>`
+  },
+  {
     id: 20,
     type: "news",
     title: `Meet OBiO Technology at ASGCT 2024! May 7th to 11th`,
     time: "April 27th 2024",
     img: handleViteImages("uploads/image/20240427/Picture1.png"),
     subhead: "",
-    content: ``,
+    content: "We are looking forward to ASGCT in Baltimore and excited to see you there! You’re invited to stop by OBiO Tech booth #1644. We will present 9 posters. Among these presentations are three self-developed patented achievements, four notable advancements in process optimization, and two cutting-edge technology introductions.",
     html: `<div class="Insights-detail-text text">
     <img src="${handleViteImages("uploads/image/20240427/Picture1.png")}" alt="" class="center"/>
     <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;text-align:center;'><br></p>
@@ -60,7 +214,7 @@ export const releases = ref([
     time: "April 3rd 2024",
     img: handleViteImages("uploads/image/20240404/20240404103641_22819.png"),
     subhead: "",
-    content: ``,
+    content: `Recently, OBiO Technology (Shanghai) Co., Ltd. (hereinafter referred to as " OBiO," stock code: 688238) and Shenzhen magicRNA Technology Co., Ltd. (hereinafter referred to as " magicRNA ") announced the signing of a strategic cooperation agreement. Both sides will carry out comprehensive cooperation in the field of LNP delivery systems...`,
     html: `<div class="Insights-detail-text text">
     <p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;text-align:justify;">
 Recently, OBiO Technology (Shanghai) Co., Ltd. (hereinafter referred to as " OBiO," stock code: 688238) and Shenzhen magicRNA Technology Co., Ltd. (hereinafter referred to as " magicRNA ") announced the signing of a strategic cooperation agreement. Both sides will carry out comprehensive cooperation in the field of LNP delivery systems, jointly promoting the clinical application of mRNA and other nucleic acid products in the fields of vaccines and cancer therapy. They aim to provide comprehensive and high-quality services to customers, enabling the industry and benefiting patients.
@@ -114,7 +268,7 @@ The state-of-the-art 77,000 ㎡ (828,821 ft²) Facility for Global Supply exempl
     title: `The 2024 Cell and Gene Therapy Workshop, "Horizons Unveiled: Exploring the Future of Cell and Gene Therapy," concluded successfully this past Saturday`,
     time: "April 3rd 2024",
     subhead: "",
-    content: ``,
+    content: `OBiO Tech want to extend our heartfelt thanks to all the speakers for delivering insightful presentations and sharing the latest topics and solutions. With over 100 attendees, we appreciate the passion and professionalism demonstrated through your engaging questions. We hope you all found the workshop enriching and enjoyable.`,
     html: `<div class="Insights-detail-text text">
     OBiO Tech want to extend our heartfelt thanks to all the speakers for delivering insightful presentations and sharing the latest topics and solutions. With over 100 attendees, we appreciate the passion and professionalism demonstrated through your engaging questions. We hope you all found the workshop enriching and enjoyable.<br>
 <p>
@@ -198,7 +352,7 @@ OBiO Tech want to extend our heartfelt thanks to all the speakers for delivering
     img: handleViteImages("uploads/image/20240326/20240326104925_47289.png"),
     subhead:
       "This partnership addressed critical gaps in the treatment of neurodegenerative diseases, autoimmune diseases, and metabolic disorders.",
-    content: ``,
+    content: `We are thrilled to announce a groundbreaking collaboration between OBiO Technology (Shanghai) Co., Ltd. ("OBiO Technology", stock code: 688238) and Shanghai Novabio Therapeutics ("Novabio"). On March 22, 2024, both entities formally inked a strategic cooperation agreement that promises to reshape the landscape of Treg cell therapy.`,
     html: `<div class="Insights-detail-text text">
     <p class="MsoNormal" style="font-size:12pt;font-family:Aptos, sans-serif;">
 <span style="font-size:12pt;"><br>
@@ -283,7 +437,7 @@ About OBiO Technology
     title: `Embark on a Journey to 'Cure the Future' with Dr. Pan, the visionary founder and chairman of OBiO Biotechnology`,
     time: "March 17th 2024",
     subhead: "",
-    content: ``,
+    content: `Join us as we share our daring and relentless entrepreneurial quest, beginning in 2006, dedicated to innovating in the CGT arena.`,
     html: `<div class="Insights-detail-text text">
     <p>
 Join us as we share our daring and relentless entrepreneurial quest, beginning in 2006, dedicated to innovating in the CGT arena.
@@ -299,7 +453,7 @@ Join us as we share our daring and relentless entrepreneurial quest, beginning i
     title: `We are thrilled to introduce Hung Trinh, who has joined OBiO Tech as our Senior BD Director. Another all-in team player!`,
     time: "March 2nd 2024",
     subhead: "",
-    content: ``,
+    content: `Dr. Trinh brings with him a wealth of expertise, having been trained as a virologist at the University of Zurich, Switzerland. With a remarkable portfolio of over 30 peer-reviewed articles in virology and vaccine development...`,
     html: `<div class="Insights-detail-text text">
     <p>
 <span style="font-size:14px;">We are thrilled to introduce Hung Trinh, who has joined OBiO Tech as our Senior BD Director. Another all-in team player!</span> 
@@ -327,7 +481,7 @@ Join us as we share our daring and relentless entrepreneurial quest, beginning i
     title: `Please join us in welcoming Swati to OBiO Tech`,
     time: "February 16th 2024",
     subhead: "",
-    content: ``,
+    content: `We are excited to announce Swati Dhage joined OBiO Tech as HR Manager   Swati has garnered broad HR expertise across a range of industries over the course of 12 years, including IT, pharmaceutical manufacturing, healthcare, and life sciences.`,
     html: `<div class="Insights-detail-text text">
                    <p style="text-align:justify;">
 	<span style="color:rgba(0, 0, 0, 0.9);font-family:&quot;font-size:14px;">We are excited to announce Swati Dhage joined OBiO Tech as HR Manager
@@ -1921,13 +2075,46 @@ about OBiO, visit </span><a href="http://www.obio-tech.com"><span style="font-si
 
 export const events = ref([
   {
+    id: 9,
+    type: "event",
+    title: '2024 Global Rare Diseases Research Symposium & The Second China Rare Disease Research and Translational Medicine Annual Conference is coming soon',
+    time: "May 20th 2024",
+    img: handleViteImages("uploads/image/20240520/6281716217459_.pic.jpg"),
+    subhead: "",
+    content: '',
+    eventTime: 'May 23-25, 2024',
+    location: 'Primus Hotel Shanghai SanJiaGang, 6666 E Huaxia Rd #3, Pudong New district, Shanghai, China.',
+    html: `<div class="Insights-detail-text text">
+    <img src="${handleViteImages("uploads/image/20240520/6281716217459_.pic.jpg")}" alt="" class="center"/>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:.0001pt;'><br></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:.0001pt;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>The conference is co-hosted by #Hope for Rare Foundation, International Rare Diseases Research Consortium (IRDiRC)), and&nbsp;</span><span style='font-size:19px;font-family:"Microsoft YaHei",sans-serif;color:black;background:white;'>复旦大学</span><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>&nbsp;Fudan University.&nbsp;</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>&nbsp;</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>Time: May 23rd to 25th, details shown on the pictures</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>Location: Primus Hotel Shanghai SanJiaGang</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;6666 E Huaxia Rd #3</span><span style='font-size:19px;font-family:"Microsoft YaHei",sans-serif;color:black;background:white;'>，</span><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>Pudong New district, Shanghai, China.</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>&nbsp;</span></p>
+    <img src="${handleViteImages("uploads/image/20240520/6291716217459_.pic.jpg")}" alt="" class="center"/>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>The conference will last for 2.5 days with 21 parallel sessions and several satellite meetings. It will bring together over 100 speakers from global universities, hospitals, academic institutions, and pharmaceutical companies. Topics will cover basic research on rare diseases, gene and cell therapies, Investigator Initiated Trials (IIT), clinical studies, drug development, and international research collaborations. The conference will present the latest developments and original findings in rare diseases research, highlighting China&rsquo;s contributions in the context of a global perspective</span></p>
+    <img src="${handleViteImages("uploads/image/20240520/6301716217539_.pic.jpg")}" alt="" class="center"/>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>&nbsp;</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>Contact Information:</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>Rufang Huang +86 860-046-3832 kevin.huang@hope4rare.org.cn</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>Business Cooperation: Wenjun Zhang +86 133-7253-0505 wenjun.zhang@hope4rare.org.cn&nbsp;</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>Speaker Recommendations/Academic Collaboration</span><span style='font-size:19px;font-family:"Microsoft YaHei",sans-serif;color:black;background:white;'>：</span><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>Boya Yu +86 188-9854-8654 boya.yu@hope4rare.org.cn&nbsp;</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>Official Website: <a href="https://lnkd.in/gTRSfPfb" target="_blank" style="text-decoration: underline;">https://lnkd.in/gTRSfPfb</a></span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>&nbsp;</span></p>
+    <p style='margin-right:0in;margin-left:0in;font-size:16px;font-family:"Calibri",sans-serif;margin:0in;margin-bottom:8.0pt;margin-top:0in;'><span style='font-size:19px;font-family:"Verdana",sans-serif;color:black;background:white;'>#cgt #cellandgenetherapy #genetherapy #celltherapy #cdmo #2024trends #globaldata #asgct #viralvector #biotech #equipment #development #manufacturing</span></p></div>`
+  },
+  {
     id: 8,
     type: "event",
     title: `Meet OBiO Technology at ASGCT 2024! May 7th to 11th`,
     time: "April 27th 2024",
     img: handleViteImages("uploads/image/20240427/Picture1.png"),
     subhead: "",
-    content: ``,
+    content: '',
+    eventTime: 'May 7-11, 2024',
+    location: 'Baltimore, Maryland, USA',
     html: `<div class="Insights-detail-text text">
     <img src="${handleViteImages("uploads/image/20240427/Picture1.png")}" alt="" class="center"/>
     <p style='margin-top:0in;margin-right:0in;margin-bottom:8.0pt;margin-left:0in;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;text-align:center;'><br></p>
@@ -1977,6 +2164,8 @@ export const events = ref([
     title: `Join US @ Sino-American Pharmaceutical Professionals Association (SAPA) Meeting in Boston! Exploring the Future of Cell and Gene Therapy`,
     time: "March 7th 2024",
     content: `Waltham, MA United States`,
+    eventTime: 'March 30, 2024',
+    location: '300 3rd Ave, Waltham, MA 02451',
     html: `<div class="Insights-detail-text text">
     <span style="font-size:14px;">Join US @ Sino-American Pharmaceutical Professionals Association (SAPA) Meeting in Boston! Exploring the Future of Cell and Gene Therapy</span><br>
 <br>

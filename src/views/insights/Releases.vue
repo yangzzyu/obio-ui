@@ -31,8 +31,8 @@
             >
               <div v-if="item.img">
                 <el-row :gutter="100">
-                  <el-col :xs="24" :span="12"
-                    ><div
+                  <el-col :xs="24" :span="6" style="padding: 0px;">
+                    <div
                       class="animate-imgxx uof img"
                       style="
                         display: flex;
@@ -44,12 +44,12 @@
                       <img :src="item.img" alt="SPIRO Site" style="width:100%;"/>
                     </div>
                   </el-col>
-                  <el-col :xs="24" :span="12">
+                  <el-col :xs="24" :span="18">
                     <div class="font-size18">{{ item.time }}</div>
-                    <div class="title fontf4 font-size24 title-color">
+                    <div class="title fontf4 font-size18 title-color">
                       {{ item.title }}
                     </div>
-                    <div class="font-size18 ut-s2">
+                    <div class="font-size18 ut-s4">
                       {{ item.content }}
                     </div>
                   </el-col>
@@ -57,7 +57,7 @@
               </div>
               <div v-else>
                 <div class="font-size18">{{ item.time }}</div>
-                <div class="title fontf4 font-size24 title-color">
+                <div class="title fontf4 font-size18 title-color">
                   {{ item.title }}
                 </div>
                 <div class="font-size18 ut-s2">

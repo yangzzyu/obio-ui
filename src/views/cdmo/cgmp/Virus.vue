@@ -35,6 +35,10 @@
           and new castle disease virus. Our flexible cGMP manufacturing platform
           can meet your manufacturing demands of different scales.
         </div>
+        <br />
+        <div class="content" style="text-align:center;">
+          <img :src="handleViteImages('uploads/image/20240601/2-Oncolytic-Virus.png')" alt="Oncolytic Virus" style="max-width:1024px;"/>
+        </div>
         <div class="list">
           <div class="bg"></div>
           <el-row class="row">

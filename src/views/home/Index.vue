@@ -24,29 +24,29 @@
             class="container"
           >
             <div class="content">
-              <p class="font-size18 fontf7 cro-p textColor">
-                OBiO Technology leads the way in gene and cell therapy as a pioneering Contract Research Organization (CRO) and Contract Development and Manufacturing Organization (CDMO), dedicated to providing comprehensive solutions. Guided by our mission to "enable gene therapy for better lives," we prioritize delivering top-tier services worldwide. From laboratory to clinic, we continuously advance your products, positively impacting populations worldwide. 
+              <p class="font-size18 fontf10 cro-p textColor">
+                OBiO Technology is a pioneering Contract Research Organization (CRO) and Contract Development and Manufacturing Organization (CDMO) in gene and cell therapy, delivering top-tier services worldwide. 
+                From laboratories to clinics, we will continue to support the production of and advancement of your products to benefit populations worldwide. 
               </p>
-              <p class="font-size18 fontf7 cro-p textColor">
-                OBiO Tech leverages a decade of industry expertise, dedicated exclusively to advancing gene and cell therapies. Through unwavering commitment and the trust of our clientele, we've facilitated the progression of over 150 gene and cell therapy initiatives, with 25 programs achieving approval for clinical trials in both the US and China by April 2023.
-              </p>
-              <p class="font-size18 fontf7 cro-p textColor">
-                Our comprehensive suite of services encompasses plasmids, mRNA, AAV vectors, oncolytic viruses, immuno cell therapies, stem cells, and more, enabling us to cater to diverse client needs. Bolstered by state-of-the-art cGMP facilities, the largest of their kind in the Asian Pacific region, we offer unparalleled proficiency and capacity, poised to drive success for clients worldwide.
+              <p class="font-size18 fontf10 cro-p textColor">
+                OBiO leverages a decade of industry expertise and has facilitated the progression of over 150 gene and cell therapy initiatives, 
+                25 of which achieved approval for clinical trials in both the US and China by April 2023.
+                Our comprehensive set of services encompasses therapies using plasmids, mRNA, AAV vectors, oncolytic viruses, immuno cells, stem cells, and more.
+                OBiO's cGMP facilities are also the largest of their kind in the Asian Pacific region, allowing us to offer unparalleled proficiency and capacity for gene and cell therapies.
               </p>
             </div>
-            <h2 class="title-color our-txt font-size30 section-title fontf7">
+            <h2 class="title-color our-txt font-size30 section-title fontf8">
               Manufacturing Facilities
             </h2>
             <div class="content">
-              <p class="font-size18 fontf7 cro-p textColor">
-                As a trusted Contract Development and Manufacturing Organization (CDMO), we understand that flexible capacities and regulatory-compliant facilities are essential for delivering top-tier services to gene and cell therapy developers. To cater to our global clientele, we've strategically established an integrated research platform spanning over 5,000 ㎡ (53,819 ft²) and a GMP footprint exceeding 10,000 ㎡ (107,639 ft²) at the Shanghai International Medical Park. Additionally, our GMP manufacturing site, sprawling across 77,000 ㎡ (828,821 ft²) , is located at the Lin-Gang Free-Trade Zone.
+              <p class="font-size18 fontf10 cro-p textColor">
+                As a trusted Contract Development and Manufacturing Organization (CDMO), we understand that flexible capacities and regulatory-compliant facilities are essential for delivering top-tier services to gene and cell therapy developers.
+                For our global clientele, we have strategically established an integrated research platform with sties at the Lin-Gang Free-Trade Zone and the Shanghai International Medical Park. 
               </p>
-              <p class="font-size18 fontf7 cro-p textColor">
-                With our strategic footprint across these three locations, we are poised to provide high-quality contract research and manufacturing services to meet the diverse needs of our clients worldwide.
-              </p>
+              <br>
             </div>
             <div class="fac-con">
-              <el-row class="row" :gutter="10">
+              <el-row class="row" :gutter="24">
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
                   <div class="manufacturing-list bg-pinkbluelfr">
                     <div class="content">
@@ -59,18 +59,37 @@
                   <div class="font-size18 fontf7 iti">
                     Lin-Gang Free-Trade Zone
                   </div>
-                  <div class="font-size30 fontf7 iti">OBiO Intelli-M</div>
-                  <p class="font-size18 textColor txt-bold">
-                    Process Development Characterization Clinical and Commercial
-                    Manufacturing.
-                    <text class="title-color txt-bold">77,000</text
-                    > ㎡ (828,821 ft²) Facility for Global Supply
-                  </p>
                   <router-link
                     to="/about/facilities/intellim"
-                    class="read-more font-size18 fontf7"
-                    >Read More</router-link
-                  >
+                    class="read-more font-size30 fontf7 iti"> 
+                    OBiO Intelli-M
+                  </router-link>
+                  <p class="font-size18 textColor txt-bold">
+                    Process Development Characterization Clinical and Commercial
+                    Manufacturing. Facility for Global Supply.
+                    <text class="title-color txt-bold">77,000</text
+                    > m² (828,821 ft²).
+                  </p>
+                  <ul class="txt-ul mt-2">
+                    <li class="font-size18 textColor txt-bold">
+                      GMP Manufacturing Campus
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      33 Production Lines
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Phase I-III Manufacturing
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Commercial Manufacturing
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Analytical Development
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Tech-Transfer
+                    </li>
+                  </ul>
                 </el-col>
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
                   <div class="manufacturing-list bg-pinkbluelfr">
@@ -84,17 +103,36 @@
                   <div class="font-size18 fontf7 iti">
                     International Medical Park
                   </div>
-                  <div class="font-size30 fontf7 iti">SPIRO Site</div>
 
-                  <p class="font-size18 textColor txt-bold">
-                    Integrated Laboratory Services Processand Analytical Method
-                    Development. Research and Development Center
-                  </p>
                   <router-link
                     to="/about/facilities/spiro"
-                    class="read-more font-size18 fontf7"
-                    >Read More</router-link
-                  >
+                    class="read-more font-size30 fontf7 iti"> 
+                    SPIRO Site
+                  </router-link>
+
+                  <p class="font-size18 textColor txt-bold">
+                    Integrated Laboratory Services Process and Analytical Method
+                    Development. Research and Development Center.
+                    <text class="title-color txt-bold">5,000 m²</text>
+                    (54,000 ft²).
+                  </p>
+                  <ul class="txt-ul mt-2">
+                    <li class="font-size18 textColor txt-bold">
+                      Vector Engineering
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Animal Studies
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Cellular Biology
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Bioassay & Testing
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Novel Capsid Screening
+                    </li>
+                  </ul>
                 </el-col>
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
                   <div class="manufacturing-list bg-pinkbluelfr">
@@ -108,18 +146,45 @@
                   <div class="font-size18 fontf7 iti">
                     International Medical Park
                   </div>
-                  <div class="font-size30 fontf7 iti">PINE Site</div>
-                  <p class="font-size18 textColor txt-bold">
-                    Process and Analytical Method Development. Pre-clinical and
-                    Clinical Manufacturing. Three-building,
-                    <text class="title-color txt-bold">10,000</text
-                    > ㎡ (107,639 ft²) campus
-                  </p>
+
                   <router-link
                     to="/about/facilities/pine"
-                    class="read-more font-size18 fontf7"
-                    >Read More</router-link
-                  >
+                    class="read-more font-size30 fontf7 iti"> 
+                    PINE Site
+                  </router-link>
+
+                  <p class="font-size18 textColor txt-bold">
+                    Process and Analytical Method Development. Pre-clinical and
+                    Clinical Manufacturing. Three-building campus.
+                    <text class="title-color txt-bold">10,000</text
+                    > m² (107,639 ft²).
+                  </p>
+                  <ul class="txt-ul mt-2">
+                    <li class="font-size18 textColor txt-bold">
+                      GMP Manufacturing Building
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      8 Production Lines
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      IND-Enabling CMC
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Phase I & II Manufacturing
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Bank Construction
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Aseptic Fill & Finish
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Non-Clinical Investigation
+                    </li>
+                    <li class="font-size18 textColor txt-bold">
+                      Tech-Transfer
+                    </li>
+                  </ul>
                 </el-col>
               </el-row>
             </div></el-col
@@ -311,7 +376,7 @@
           class="container"
         >
           <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-3">
-            See Our Capabilities
+            Our Capabilities
           </h1>
           <el-row :gutter="20" class="mb-4">
             <el-col :span="8" :xs="24">

@@ -48,7 +48,7 @@
                   <div class="service--box align-items-start">
                     <div class="manufacturing-list mt-3">
                       <div class="content">
-                        <img :src="item.imgUrl" alt="" srcset="" />
+                        <img :src="item.imgUrl" :alt="item.title" srcset="" />
                       </div>
                     </div>
                     <div class="font-size18 fontf7 iti">
@@ -70,28 +70,32 @@
       </div>
     </section>
     <section class="in-about-wrap quality-box cro-list mt-2" id="quality-dom">
-      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
-          Quality & Regulatory
-        </h1>
-         <h2 class="title-color our-txt font-size30 section-title fontf7">
-          International Compliant Quality Control System
-        </h2>
-      </el-col>
-      <el-row class="row" :gutter="10">
-        <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
+      <el-row :gutter="10" style="margin: auto" class="container">
+        <el-col :xs="24" :span="12" >
+          <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+            Quality & Regulatory
+          </h1>
+          <h2 class="title-color our-txt font-size30 section-title fontf7">
+            International Compliant Quality Control System
+          </h2>
           <div class="wysiwyg--content colour-white mb-3">
             <p class="fontf4 textColor">
               De-risk Your Regulatory Pathway
-              <li>Competitive compensation and benefits</li>
-              <li>
+              <div>Competitive compensation and benefits</div>
+              <div>
                 We provide e-CTD ready CMC related documents writing and review for your submission
-              </li>
-              <li>Analytical Development</li>
+              </div>
+              <div>Analytical Development</div>
             </p>
           </div>
           <router-link to="/cdmo/quality_regulatory" class="read-more font-size18 fontf7" style="justify-content: flex-start;">Read
             More</router-link>
+        </el-col>
+        <el-col :xs="24" :span="12" >
+          <div style="text-align:center;" class="mt-6">
+            <br />
+            <img :src="handleViteImages('uploads/image/20240601/6-Quarlity-control.png')" alt="Quality Control" style="width:80%"/>
+          </div>
         </el-col>
       </el-row>
     </section>
@@ -105,7 +109,7 @@
         <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
           <el-row :gutter="40" class="equipments-box-row">
             <el-col :span="item.imgSpan" :xs="24" :class="index % 2 === 0 ? '' : 'visible-xs-block'" class="text-conent">
-              <el-image style="width: 100%" v-for="(i,k) in item.imgUrl" :key="k" :src="i" fit="contain" />
+              <el-image style="width: 100%" v-for="(i,k) in item.imgUrl" :key="k" :src="i" :alt="item.title" fit="contain" />
             </el-col>
             <el-col :span="item.textSpan" :xs="24" class="font-size18 fontf3 text-conent">
               <div>
@@ -114,7 +118,7 @@
               </div>
             </el-col>
             <el-col :span="item.imgSpan" :xs="24" class="hidden-xs text-conent" v-if="index % 2 !== 0">
-              <el-image style="width: 100%" v-for="(i,k) in item.imgUrl" :key="k" :src="i" fit="contain" />
+              <el-image style="width: 100%" v-for="(i,k) in item.imgUrl" :key="k" :src="i" :alt="`${item.title} ${k + 1}`" fit="contain" />
               <!-- <el-image style="width: 100%" :src="item.imgUrl" fit="contain" /> -->
             </el-col>
           </el-row>

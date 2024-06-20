@@ -19,18 +19,17 @@
         class="container"
       >
         <div class="slide-title">
-          <h2 class="font-size50 fontf8 txt-bold">
+          <h2 class="font-size50 fontf8">
             Enable Gene Therapy for Better Lives
           </h2>
         </div>
         <div class="slide-subtitle">
-          <p class="font-size20 fontf8 txt-bold">
+          <p class="font-size20 fontf7">
             Your Trustful Partner in Research and Manufacturing for Gene and
             Cell Therapy
           </p>
-          <p class="font-size20 fontf8 txt-bold">
-            Providing client-centered and high-quality service as our
-            commitment, we strive to become a world leading gene and cell
+          <p class="font-size20 fontf7">
+            Providing client-centered and high-quality service, we strive to become a world leading gene and cell
             therapy CRO/CDMO group.
           </p>
         </div>
@@ -38,13 +37,13 @@
         <div class="btns">
           <router-link
             to="/cdmo"
-            class="btn1 btn-i txt-bold font-size18 fontf7"
+            class="btn1 btn-i txt-bold font-size24 fontf7"
             data-animation="animated bounceInUp"
             >Our Solutions</router-link
           >
           <router-link
             to="/capability"
-            class="btn2 btn-i txt-bold font-size18 fontf7"
+            class="btn2 btn-i txt-bold font-size24 fontf7"
             data-animation="animated bounceInUp"
             >Our Commitment</router-link
           >
@@ -91,9 +90,9 @@ onBeforeMount(() => {});
 </script>
 <style lang="scss" scoped>
 .slide-title {
-  font-family: Roboto;
+  font-family: Arial !important;
   font-weight: bold;
-  color: #00ffea;
+  color: #ffffff; //#00ffea
   overflow: hidden;
 }
 .slide-subtitle {
@@ -120,9 +119,10 @@ onBeforeMount(() => {});
   position: relative;
   // width: 360px;
   .btn-i {
-    background: linear-gradient(50deg, #014c97 0, #00818b 66%);
-    border-radius: 30px;
-    padding: 5px 10px;
+    //background: linear-gradient(50deg, #014c97 0, #00818b 66%);
+    background: #00828bcf;
+    border-radius: 7px;
+    padding: 5px 13px;
     cursor: pointer;
     // position: absolute;
     z-index: 99;
@@ -133,9 +133,9 @@ onBeforeMount(() => {});
     }
     @media (max-width: 767px) {
       &:nth-child(2) {
-      margin-left: 30px;
-      right: 0;
-    }
+        margin-left: 30px;
+        right: 0;
+      }
     }
   }
   .btn-i:hover {
