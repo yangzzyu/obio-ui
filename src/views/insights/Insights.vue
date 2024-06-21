@@ -17,7 +17,7 @@
               </el-col>
               <el-col :xs="24" :span="18">
                 <p class="font-size18 iti textColor">
-                  {{ item.time }}
+                  {{ item.categoryId == '1' ? item.pubDate : item.eventTime }}
                 </p>
                 <h1 class="title fontf4 font-size18 title-color">
                   {{ item.title }}
@@ -35,7 +35,7 @@
                     <b>Location:</b> {{ item.location }}
                   </div>
                 </div>
-                <router-link :to="item.type == 'news'
+                <router-link :to="item.categoryId == '1'
         ? '/news-details/releases/' + item.id
         : '/news-details/events/' + item.id
         " class="read-more font-size18 fontf7">Read More</router-link>
@@ -44,7 +44,7 @@
           </div>
           <div v-else>
             <p class="font-size18 iti textColor">
-              {{ item.time }}
+              {{ item.categoryId == '1' ? item.pubDate : item.eventTime }}
             </p>
             <h1 class="title fontf4 font-size18 title-color">
               {{ item.title }}
@@ -52,7 +52,7 @@
             <div class="font-size18 ut-s2">
               {{ item.content }}
             </div>
-            <router-link :to="item.type == 'news'
+            <router-link :to="item.categoryId == '1'
         ? '/news-details/releases/' + item.id
         : '/news-details/events/' + item.id
         " class="read-more font-size18 fontf7">Read More</router-link>
@@ -203,6 +203,7 @@ import Events from "@/components/Events.vue";
 import { handleViteImages } from "@/utils";
 import emailjs from "@emailjs/browser";
 import type { FormInstance, FormRules } from "element-plus";
+import { articlesPages } from './api.ts'
 
 let loading = ref(false);
 const form = reactive({
@@ -227,10 +228,38 @@ const changeCdmo = (e) => {
   form.inquired_item = arr.join("\n");
 };
 const releasesList = ref([]);
-releasesList.value = [
-  ...releases.value.slice(0, 3),
-  ...events.value.slice(0, 2),
-];
+
+function getNews() {
+  return new Promise((resolve, reject) => {
+    articlesPages('news', {
+      page: 1,
+      limit: 3,
+    }).then(res => {
+      resolve(res?.data?.list || [])
+    })
+  });
+}
+
+function getEvents() {
+  return new Promise((resolve, reject) => {
+    articlesPages('event', {
+      page: 1,
+      limit: 2,
+    }).then(res => {
+      resolve(res?.data?.list || [])
+    })
+  });
+}
+
+function getReleasesList() {
+  Promise.all([getNews(), getEvents()])
+    .then(([news, events]: any) => {
+      releasesList.value = [...news, ...events]
+    })
+    .catch(error => {
+    });
+}
+getReleasesList()
 const validatePhone = (rule, value, callback) => {
   if (!value) {
     callback();
@@ -369,9 +398,11 @@ const sendEmail = async (formEl: FormInstance | undefined) => {
     justify-content: center;
   }
 }
-.el-checkbox{
+
+.el-checkbox {
   font-size: inherit !important;
 }
+
 .check-txt :deep(.el-checkbox__label) {
   color: #747475;
   // font-family: "puhuiti-2-45";
