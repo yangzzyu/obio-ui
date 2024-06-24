@@ -2,13 +2,14 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-22 21:59:54
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-16 16:55:54
+ * @LastEditTime: 2024-06-24 14:38:22
  * @FilePath: \obio-ui\src\components\Header.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
   <!-- :class="{ shadow: headerShadowActive }" -->
   <div role="banner" class="header">
+
     <div class="header_container">
       <div class="header_content">
         <div class="logo">
@@ -28,7 +29,9 @@
             class="hidden-sm-and-down" active-text-color="#008689" background-color="transparent" :popper-offset="0">
             <!-- popper-class="sub-popper" -->
             <el-sub-menu index="/about" :class="{
-              'is-active': ['/about', '/history', '/facilities'].includes(activeIndex),
+              'is-active': ['/about', '/history', '/facilities'].includes(
+                activeIndex
+              ),
             }" popper-class="sub-popper">
               <template #title>
                 <div @click="router.push('/about')" class="menu-t1">
@@ -47,7 +50,8 @@
                 <el-menu-item index="/about/facilities/intellim">OBiO Intelli-M</el-menu-item>
               </el-sub-menu>
               <el-menu-item index="/about/who">Who We Are</el-menu-item>
-              <el-menu-item index="/about/commitment">Our Commitment </el-menu-item>
+              <el-menu-item index="/about/commitment">Our Commitment
+              </el-menu-item>
               <el-menu-item index="/about/life">Life at OBiO </el-menu-item>
             </el-sub-menu>
             <el-sub-menu index="/capability" popper-class="sub-popper" :class="{
@@ -81,7 +85,22 @@
               </el-menu-item>
               <el-menu-item index="/cdmo/innovation"> Innovation </el-menu-item>
             </el-sub-menu>
-            <el-menu-item index="/cro" class="menu-t1">CRO Service</el-menu-item>
+            <el-sub-menu index="/cro" class="menu-t1" popper-class="sub-popper">
+              <template #title>
+                <div @click="router.push('/cro')" class="menu-t1">
+                  Scientific Services
+                </div>
+              </template>
+              <template v-for="item in publicListData" :key="item.id">
+                <el-sub-menu :index="item.id">
+                  <template #title>
+                    <span @click="router.push('/service-details/' + item?.children?.[0]?.id)">{{ item.title }}</span>
+                  </template>
+                  <el-menu-item v-for="child in item.children" :key="child.id" :index="'/service-details/' + child.id">
+                    {{ child.title }}
+                  </el-menu-item>
+                </el-sub-menu>
+              </template> </el-sub-menu>
             <el-sub-menu index="/insight" popper-class="sub-popper" :class="{
               'is-active': ['/insight'].includes(activeIndex),
             }">
@@ -161,12 +180,26 @@
             </div>
           </template>
           <el-menu-item index="/cdmo/cdmo"> CDMO </el-menu-item>
-          <el-menu-item index="/cdmo/manufacturing">
-            Facilities
-          </el-menu-item>
+          <el-menu-item index="/cdmo/manufacturing"> Facilities </el-menu-item>
           <el-menu-item index="/cdmo/innovation"> Innovation </el-menu-item>
         </el-sub-menu>
-        <el-menu-item index="/cro" class="menu-t1">CRO Service</el-menu-item>
+        <el-sub-menu index="/cro" class="menu-t1">
+          <template #title>
+            <div @click="router.push('/cro')" class="menu-t1">
+              Scientific Services
+            </div>
+          </template>
+          <template v-for="item in publicListData" :key="item.id">
+            <el-sub-menu :index="item.id">
+              <template #title>
+                <span @click="router.push('/service-details/' + item?.children?.[0]?.id)">{{ item.title }}</span>
+              </template>
+              <el-menu-item v-for="child in item.children" :key="child.id" :index="'/service-details/' + child.id">
+                {{ child.title }}
+              </el-menu-item>
+            </el-sub-menu>
+          </template>
+        </el-sub-menu>
         <el-sub-menu index="/insight" popper-class="sub-popper" :class="{
               'is-active': ['/insight'].includes(activeIndex),
             }">
@@ -201,7 +234,40 @@ import { Fold } from "@element-plus/icons-vue";
 import { useRouter } from "vue-router";
 import { computed, onBeforeMount, ref, toRefs } from "vue";
 import { handleViteImages } from "@/utils";
-// import { mapState, useStore } from 'pinia'
+import { publicList } from '@/views/labSciences/api.ts'
+import { servicesStore } from '@/stores/Services'
+import bus from "@/utils/mitt";
+
+const setServicesStore = servicesStore()
+
+const publicListData = computed(() => setServicesStore?.publicListData)
+function getPublicList() {
+  publicList().then(res => {
+    const treeStructure = res.data.reduce((acc, item) => {
+      if (!acc[item.categoryId]) {
+        acc[item.categoryId] = {
+          id: item.categoryId,
+          title: '',
+          children: []
+        };
+      }
+      if (item.type === 0) {
+        acc[item.categoryId].title = item.title;
+      } else {
+        acc[item.categoryId].children.push({
+          ...item
+        });
+      }
+      return acc;
+    }, {});
+
+    const treeArray = Object.values(treeStructure);
+    setServicesStore.setPublicList(treeArray)
+    bus.emit("changePublicList");
+  })
+}
+
+getPublicList()
 const props = defineProps({
   headerShadowActive: {
     type: Boolean,
@@ -452,4 +518,4 @@ h2 {
     }
   }
 }
-</style>
+</style>@/stores/Services

@@ -126,7 +126,7 @@ const router = createRouter({
         },
         {
           path: "/cro",
-          name: "CRO Service",
+          name: "Scientific Services",
           component: () => import("@/views/labSciences/Index.vue"),
         },
         {
@@ -257,6 +257,12 @@ const router = createRouter({
           name: "News Details",
           path: "/news-details/:type/:id",
           component: () => import("@/views/insights/Detail.vue"),
+        },
+        {
+          // src\views\labSciences\ServiceDetail.vue
+          name: "Service Details",
+          path: "/service-details/:id",
+          component: () => import("@/views/labSciences/ServiceDetail.vue"),
         },
         {
           path: "/contact",

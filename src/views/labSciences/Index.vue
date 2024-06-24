@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-15 15:55:24
+ * @LastEditTime: 2024-06-24 14:15:26
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -10,39 +10,24 @@
   <div class="lab-sciences Laboratory-wrap">
     <Focus :focusObj="FocusData" />
     <section id="cro" class="cro-list">
-      <div
-        class="cro-list-item row"
-        v-for="(item, index) in croList"
-        :key="index"
-      >
-        <el-col
-          :xs="22"
-          :sm="20"
-          :md="20"
-          :lg="20"
-          :xl="22"
-          style="margin: auto"
-          class="container"
-        >
+      <div class="cro-list-item row" v-for="(item, index) in publicListData" :key="index">
+        <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
           <el-row :gutter="100">
-            <el-col :xs="24" :span="4"
-              ><div
-                class="animate-imgxx uof img"
-                style="
+            <el-col :xs="24" :span="4">
+              <div class="animate-imgxx uof img" style="
                   display: flex;
                   align-items: center;
                   justify-content: center;
                   height: 100%;
-                "
-              >
-                <img :src="item.imgUrl" alt="SPIRO Site" />
+                ">
+                <img :src="handleViteImages(`cro${index + 1}.png`)" alt="SPIRO Site" />
               </div>
             </el-col>
             <el-col :xs="24" :span="14">
               <h1 class="font-size30 fontf8 iti item-tit">
                 {{ item.title }}
               </h1>
-              <p class="font-size18 cro-p textColor">
+              <!-- <p class="font-size18 cro-p textColor">
                 {{ item.text }}
               </p>
               <a
@@ -50,15 +35,12 @@
                 style="cursor: pointer"
                 @click="popLabora(item.popLaboraId)"
                 >Read More</a
-              >
-              <ul
-                class="ul-pop font-size24 fontf5 color666"
-                v-if="item.linkList"
-              >
-                <li class="ub" v-for="(i, k) in item.linkList" :key="k">
+              > -->
+              <ul class="ul-pop font-size24 fontf5 color666" v-if="item.children">
+                <li class="ub" v-for="(i, k) in item.children" :key="k">
                   <div class="ub ub-ac stn" @click="popLabora(i.id)">
                     <i class="pub-ico-rights2"></i>
-                    <div class="stx">{{ i.txt }}</div>
+                    <div class="stx">{{ i.title }}</div>
                   </div>
                 </li>
               </ul>
@@ -69,12 +51,7 @@
     </section>
     <Events />
   </div>
-  <el-dialog
-    v-model="dialogVisible"
-    title=""
-    width="60%"
-    :before-close="handleClose"
-  >
+  <el-dialog v-model="dialogVisible" title="" width="60%" :before-close="handleClose">
     <div class="popLaboraBox-main">
       <div class="font-size30 fontf8 title title-color">
         <span>{{ Labora.title }}</span>
@@ -95,87 +72,123 @@
 </template>
 
 <script lang="ts" setup name="LabSciences">
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import Focus from "@/components/Focus.vue";
 import Events from "@/components/Events.vue";
 import { handleViteImages, goRouter } from "@/utils";
+import { servicesStore } from '@/stores/Services'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const setServicesStore = servicesStore()
+const publicListData = computed(() => setServicesStore?.publicListData)
+// import { publicList } from './api.ts'
 
 const FocusData = ref({
-  title: "CRO Service",
+  title: "Scientific Services",
   hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
   visibleXsImgUrl: handleViteImages("head_bg.jpg"),
 });
+// function getPublicList() {
+//   publicList().then(res => {
+//     // console.log(res.data, 'llllllll');
+//     const treeStructure = res.data.reduce((acc, item) => {
+//       if (!acc[item.categoryId]) {
+//         acc[item.categoryId] = {
+//           id: item.categoryId,
+//           title: '',
+//           children: []
+//         };
+//       }
+//       if (item.type === 0) {
+//         acc[item.categoryId].title = item.title;
+//       } else {
+//         acc[item.categoryId].children.push({
+//           ...item
+//         });
+//       }
+//       return acc;
+//     }, {});
+
+//     const treeArray = Object.values(treeStructure);
+//     croList.value = treeArray
+
+
+//   })
+// }
+
+// getPublicList()
 const dialogVisible = ref(false);
 function handleClose() {
   Labora.value = {};
   dialogVisible.value = false;
 }
 const croList = ref([
-  {
-    popLaboraId: 7,
-    imgUrl: handleViteImages("cro1.png"),
-    title: "Plasmid",
-    text: `At OBiO Technology, our dedicated development team is
-committed to assisting you in designing,
-constructing, and manufacturing plasmids
-for fuctional genomics research, as well as 
-providing expertise in viral packaging.`,
-  },
-  {
-    popLaboraId: 8,
-    imgUrl: handleViteImages("cro2.png"),
-    title: "Viral Vector",
-    text: `We specialize in offering comprehensive services
-encompassing the design, construction, and
-packaging of various types of viral vectors.
-Additionally, we assist in executing a diverse 
-range of biomolecular operations tailored to 
-your specific gene of interest, ensuring
-thorough support throughout the process.`,
-  },
-  {
-    popLaboraId: 9,
-    imgUrl: handleViteImages("cro3.png"),
-    title: "Experiment Solutions",
-    text: `We offer an extensive array of contract 
-research services tailored for functional 
-genomics studies.`,
-    linkList: [
-      { id: 1, txt: "Cell Biology" },
-      { id: 2, txt: "Stable Cell Line" },
-      { id: 3, txt: "Animal Studies" },
-    ],
-  },
-  {
-    popLaboraId: 10,
-    imgUrl: handleViteImages("cro4.png"),
-    title: "Related Products",
-    text: `We offer a comprehensive range of
-in-stock virus vectors, proteins, 
-gRNA libraries, and relevant reagents, 
-catering to diverse research needs across 
-various aspects of your project.`,
-    linkList: [
-      { id: 4, txt: "In-stock viral vectors" },
-      { id: 5, txt: "In-stock protein and relevant reagents" },
-      { id: 6, txt: "gRNA library" },
-    ],
-  },
-  {
-    popLaboraId: 11,
-    imgUrl: handleViteImages("cro5.png"),
-    title: "Extracellular Vesicle",
-    text: `Our services for extracellular vesicle include
-isolation, identification, and functional 
-research at the laboratory stage. 
-For samples from different sources, 
-our scientist team has developed multiple
-isolation solutions which have been 
-successfully applied in samples of cells,
-body fluids and tissue exosomes such as
-cerebrospinal fluid, urine, brain tissue and liver.
-`,
-  },
+  //   {
+  //     popLaboraId: 7,
+  //     imgUrl: handleViteImages("cro1.png"),
+  //     title: "Plasmid",
+  //     text: `At OBiO Technology, our dedicated development team is
+  // committed to assisting you in designing,
+  // constructing, and manufacturing plasmids
+  // for fuctional genomics research, as well as 
+  // providing expertise in viral packaging.`,
+  //   },
+  //   {
+  //     popLaboraId: 8,
+  //     imgUrl: handleViteImages("cro2.png"),
+  //     title: "Viral Vector",
+  //     text: `We specialize in offering comprehensive services
+  // encompassing the design, construction, and
+  // packaging of various types of viral vectors.
+  // Additionally, we assist in executing a diverse 
+  // range of biomolecular operations tailored to 
+  // your specific gene of interest, ensuring
+  // thorough support throughout the process.`,
+  //   },
+  //   {
+  //     popLaboraId: 9,
+  //     imgUrl: handleViteImages("cro3.png"),
+  //     title: "Experiment Solutions",
+  //     text: `We offer an extensive array of contract 
+  // research services tailored for functional 
+  // genomics studies.`,
+  //     linkList: [
+  //       { id: 1, txt: "Cell Biology" },
+  //       { id: 2, txt: "Stable Cell Line" },
+  //       { id: 3, txt: "Animal Studies" },
+  //     ],
+  //   },
+  //   {
+  //     popLaboraId: 10,
+  //     imgUrl: handleViteImages("cro4.png"),
+  //     title: "Related Products",
+  //     text: `We offer a comprehensive range of
+  // in-stock virus vectors, proteins, 
+  // gRNA libraries, and relevant reagents, 
+  // catering to diverse research needs across 
+  // various aspects of your project.`,
+  //     linkList: [
+  //       { id: 4, txt: "In-stock viral vectors" },
+  //       { id: 5, txt: "In-stock protein and relevant reagents" },
+  //       { id: 6, txt: "gRNA library" },
+  //     ],
+  //   },
+  //   {
+  //     popLaboraId: 11,
+  //     imgUrl: handleViteImages("cro5.png"),
+  //     title: "Extracellular Vesicle",
+  //     text: `Our services for extracellular vesicle include
+  // isolation, identification, and functional 
+  // research at the laboratory stage. 
+  // For samples from different sources, 
+  // our scientist team has developed multiple
+  // isolation solutions which have been 
+  // successfully applied in samples of cells,
+  // body fluids and tissue exosomes such as
+  // cerebrospinal fluid, urine, brain tissue and liver.
+  // `,
+  //   },
 ]);
 const Labora = ref(<any>{});
 const LaboraList = ref([
@@ -247,8 +260,9 @@ To request a list of the available in-stock viral vector, please contact one of 
   },
 ]);
 function popLabora(id) {
-  Labora.value = LaboraList.value.find((i) => i.id === id) || {};
-  dialogVisible.value = true;
+  // Labora.value = LaboraList.value.find((i) => i.id === id) || {};
+  // dialogVisible.value = true;
+  router.push(`/service-details/${id}`)
 }
 </script>
 
