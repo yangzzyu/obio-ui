@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-06-24 14:26:39
+ * @LastEditTime: 2024-06-24 15:19:24
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -16,20 +16,15 @@
             {{ item.title }}
           </h1>
           <ul class="mcd-menu">
-            <!-- <li v-for="(o, k) in item.children">
-              <a href="">
-                <i class="fa fa-home"></i> <strong>{{ o.title }}</strong>
-                <small>sweet home</small>
-              </a>
-            </li> -->
             <li v-for="(o, k) in item.children">
               <a href="#" :class="activeId == o.id ? 'active' : ''" @click="getpublicInfo(o.id)">
-                <i class="fa fa-comments-o"></i> <strong>{{ o.title }}</strong>
+                <!-- <i class="fa fa-comments-o"></i>  -->
+                <span>{{ o.title }}</span>
                 <!-- <small>what they say</small> -->
               </a>
               <ul v-if="o.children">
                 <li v-for="(i, s) in o.children">
-                  <a href="#"><i class="fa fa-globe"></i>{{ i.title }}</a>
+                  <a href="#">{{ i.title }}</a>
                 </li>
               </ul>
             </li>
@@ -55,7 +50,6 @@ import { useRoute } from 'vue-router';
 const route = useRoute();
 
 watch(() => route.params.id, (newId, oldId) => {
-  // console.log('Route ID changed from', oldId, 'to', newId);
   getpublicInfo(newId)
 });
 
@@ -69,7 +63,6 @@ const FocusData = ref({
   visibleXsImgUrl: handleViteImages("head_bg.jpg"),
 });
 
-const newsItem = ref({});
 const publicInfoItem = ref({})
 
 function getpublicInfo(id) {

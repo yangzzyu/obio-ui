@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-06-24 14:15:26
+ * @LastEditTime: 2024-06-24 15:19:57
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -82,42 +82,12 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 const setServicesStore = servicesStore()
 const publicListData = computed(() => setServicesStore?.publicListData)
-// import { publicList } from './api.ts'
 
 const FocusData = ref({
   title: "Scientific Services",
   hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
   visibleXsImgUrl: handleViteImages("head_bg.jpg"),
 });
-// function getPublicList() {
-//   publicList().then(res => {
-//     // console.log(res.data, 'llllllll');
-//     const treeStructure = res.data.reduce((acc, item) => {
-//       if (!acc[item.categoryId]) {
-//         acc[item.categoryId] = {
-//           id: item.categoryId,
-//           title: '',
-//           children: []
-//         };
-//       }
-//       if (item.type === 0) {
-//         acc[item.categoryId].title = item.title;
-//       } else {
-//         acc[item.categoryId].children.push({
-//           ...item
-//         });
-//       }
-//       return acc;
-//     }, {});
-
-//     const treeArray = Object.values(treeStructure);
-//     croList.value = treeArray
-
-
-//   })
-// }
-
-// getPublicList()
 const dialogVisible = ref(false);
 function handleClose() {
   Labora.value = {};
