@@ -8,7 +8,7 @@
 -->
 <template>
   <div class="intelli-m">
-    
+    <Process />
     <div class="Intelli-M-wrap">
       <el-col
         :xs="22"

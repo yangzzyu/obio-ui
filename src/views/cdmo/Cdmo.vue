@@ -25,7 +25,7 @@
             </div>
           </el-col>
           <el-col :xs="24" :span="14">
-            <p class="font-size18 fontf7 cro-p textColor">
+            <p class="font-size18 fontf4 cro-p textColor">
               We provide comprehensive CDMO services encompassing process
               development, analytical methods, IND-enabling CMC (Chemistry,
               Manufacturing, and Controls), as well as clinical and commercial
@@ -34,14 +34,14 @@
               tailored to support the industrialization and commercialization of
               various products at the Pre-IND stage and beyond.
             </p>
-            <p class="font-size18 fontf7 cro-p textColor">
+            <p class="font-size18 fontf4 cro-p textColor">
               Through years of dedicated effort, OBiO Technology has built an integrated
               process development system, supported by a flexible cGMP
               manufacturing platform, comprehensive quality system and efficient
               project management. Our experienced team of experts will navigate
               the industrialization process with you side-by-side.
             </p>
-            <p class="font-size18 fontf7 cro-p textColor">
+            <p class="font-size18 fontf4 cro-p textColor">
               With our technical expertise in viral vector, oncolytic virus and
               cell therapy, we will help you to accelerate your product
               life-cycle from pre-clinical to commercially ready.
