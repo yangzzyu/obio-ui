@@ -148,10 +148,7 @@
               <router-link to="/insight">News</router-link>
             </dt>
             <dd class="font-size14">
-              <router-link to="/insight/news">News</router-link>
-            </dd>
-            <dd class="font-size14">
-              <router-link to="/insight/events">Events</router-link>
+              <router-link to="/insight/events">News</router-link>
             </dd>
             <dd class="font-size14">
               <router-link to="/insight/inquiry">Inquiry</router-link>

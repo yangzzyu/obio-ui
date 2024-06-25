@@ -441,7 +441,6 @@
         </el-col>
       </section>
       <Events />
-      <Career />
     </div>
   </div>
   <el-dialog
