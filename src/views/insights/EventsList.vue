@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-06-21 15:32:01
+ * @LastEditTime: 2024-06-25 09:40:39
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -26,7 +26,7 @@
         <div class="in-news-list1">
           <div class="item" v-for="(item, index) in tableData" :key="index">
             <router-link :to="'/news-details/events/' + item.id" class="block">
-              <div v-if="item.img">
+              <div v-if="item.subPic">
                 <el-row :gutter="100">
                   <el-col :xs="24" :span="6" style="padding: 0px">
                     <div
@@ -38,7 +38,7 @@
                         height: 100%;
                       "
                     >
-                      <img :src="item.img" alt="Event" style="width: 100%" />
+                      <img :src="item.subPic" alt="Event" style="width: 100%" />
                     </div>
                   </el-col>
                   <el-col :xs="24" :span="18">
