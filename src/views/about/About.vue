@@ -139,8 +139,8 @@
               <div class="font-size30 fontf7 iti">SPIRO Site</div>
 
               <p class="font-size18 textColor txt-bold">
-                Integrated Laboratory Services Processand Analytical Method
-                DevelopmentResearch and Development Center
+                Integrated Laboratory Services Process and Analytical Method
+                Development Research and Development Center
               </p>
               <router-link to="/about/facilities/spiro" class="read-more font-size18 fontf7" LARGE>Read
                 More</router-link>

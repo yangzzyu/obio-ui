@@ -527,7 +527,7 @@ const cdmoList = ref([
   {
     imgUrl: handleViteImages("cdmo_service3.png"),
     actImgUrl: handleViteImages("cdmo_service_act3.png"),
-    title: "Cell Therapy Products",
+    title: "Cell Line",
     headTit: "Autologous and homologous immunocyte therapies",
     path: "/cdmo/cgmp/cell_therapy_products",
     list: [

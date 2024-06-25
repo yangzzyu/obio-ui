@@ -194,7 +194,7 @@ const router = createRouter({
                 },
                 {
                   path: "/cdmo/cgmp/cell_therapy_products",
-                  name: "Cell Therapy Products",
+                  name: "Cell Line",
                   component: () => import("@/views/cdmo/cgmp/Products.vue"),
                 },
                 {
