@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-06-21 15:28:51
+ * @LastEditTime: 2024-06-25 14:46:54
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -22,7 +22,7 @@
               <div class="font-size18 fontf4 textColor">
                 {{ item.title }}
               </div>
-              <p class="title-color font-size18 fontf3">{{ item.pubDate }}</p>
+              <p class="title-color font-size18 fontf3">{{ formatDate(item.pubDate) }}</p>
             </router-link>
           </div>
           <router-link v-if="isShow" to="/insight/news" class="btn-a font-size18 fontf7 bg-pinkbluelfr events-btn">All
@@ -38,6 +38,7 @@ import { ref } from "vue";
 import { releases, events } from "@/views/insights/data/Index";
 import { handleViteImages } from "@/utils";
 import { articlesPages } from '@/views/insights/api.ts'
+import { formatDate } from '@/utils/index'
 
 const props = defineProps({
   isShow: {

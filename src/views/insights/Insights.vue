@@ -17,7 +17,7 @@
               </el-col>
               <el-col :xs="24" :span="18">
                 <p class="font-size18 iti textColor">
-                  {{ item.categoryId == "1" ? item.pubDate : item.eventTime }}
+                  {{ item.categoryId == "1" ? formatDate(item.pubDate) : formatDate(item.eventTime) }}
                 </p>
                 <h1 class="title fontf4 font-size18 title-color">
                   {{ item.title }}
@@ -26,10 +26,10 @@
                   {{ item.summary }}
                 </div>
                 <div v-if="item.categoryId == '2'">
-                  <div class="font-size18 ut-s2">
-                    <b>Time:</b> {{ item.eventTime }}
+                  <div class="font-size18 ut-s2" v-if="item.eventTime">
+                    <b>Time:</b> {{ formatDate(item.eventTime) }}
                   </div>
-                  <div class="font-size18 ut-s2">
+                  <div class="font-size18 ut-s2" v-if="item.location">
                     <b>Location:</b> {{ item.location }}
                   </div>
                 </div>
@@ -42,7 +42,7 @@
           </div>
           <div v-else>
             <p class="font-size18 iti textColor">
-              {{ item.categoryId == "1" ? item.pubDate : item.eventTime }}
+              {{ item.categoryId == "1" ? formatDate(item.pubDate) : formatDate(item.eventTime) }}
             </p>
             <h1 class="title fontf4 font-size18 title-color">
               {{ item.title }}
@@ -51,10 +51,10 @@
               {{ item.summary }}
             </div>
             <div v-if="item.categoryId == '2'">
-              <div class="font-size18 ut-s2">
-                <b>Time:</b> {{ item.eventTime }}
+              <div class="font-size18 ut-s2" v-if="item.eventTime">
+                <b>Time:</b> {{ formatDate(item.eventTime) }}
               </div>
-              <div class="font-size18 ut-s2">
+              <div class="font-size18 ut-s2" v-if="item.location">
                 <b>Location:</b> {{ item.location }}
               </div>
             </div>
@@ -210,6 +210,7 @@ import { handleViteImages } from "@/utils";
 import emailjs from "@emailjs/browser";
 import type { FormInstance, FormRules } from "element-plus";
 import { articlesPages } from "./api.ts";
+import { formatDate } from '@/utils/index'
 
 let loading = ref(false);
 const form = reactive({

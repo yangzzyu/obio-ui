@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-06-21 14:40:57
+ * @LastEditTime: 2024-06-25 14:46:38
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -31,7 +31,7 @@
                     </div>
                   </el-col>
                   <el-col :xs="24" :span="18">
-                    <div class="font-size18">{{ item.pubDate }}</div>
+                    <div class="font-size18">{{ formatDate(item.pubDate) }}</div>
                     <div class="title fontf4 font-size18 title-color">
                       {{ item.title }}
                     </div>
@@ -43,7 +43,7 @@
                 </el-row>
               </div>
               <div v-else>
-                <div class="font-size18">{{ item.pubDate }}</div>
+                <div class="font-size18">{{ formatDate(item.pubDate) }}</div>
                 <div class="title fontf4 font-size18 title-color">
                   {{ item.title }}
                 </div>
@@ -68,6 +68,7 @@
 import { ref } from "vue";
 import { releases } from "./data/Index";
 import { articlesPages } from './api.ts'
+import { formatDate } from '@/utils/index'
 const tableData = ref<any>();
 
 const pageinfo = ref({
