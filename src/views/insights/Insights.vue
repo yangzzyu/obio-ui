@@ -50,6 +50,14 @@
             <div class="font-size18 ut-s2">
               {{ item.summary }}
             </div>
+            <div v-if="item.categoryId == '2'">
+              <div class="font-size18 ut-s2">
+                <b>Time:</b> {{ item.eventTime }}
+              </div>
+              <div class="font-size18 ut-s2">
+                <b>Location:</b> {{ item.location }}
+              </div>
+            </div>
             <router-link :to="item.categoryId == '1'
         ? '/news-details/releases/' + item.id
         : '/news-details/events/' + item.id
