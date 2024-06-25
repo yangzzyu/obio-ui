@@ -115,7 +115,7 @@
             <Swiper
               :modules="[Autoplay, Navigation, Scrollbar]"
               :freeMode="true"
-              :initialSlide="100"
+              :initialSlide="0"
               :slidesPerView="4"
               :watchSlidesVisibility="true"
               :navigation="navigation"

@@ -89,7 +89,7 @@
                 <div @click="router.push('/insight')" class="menu-t1">News</div>
               </template>
               <el-menu-item index="/insight/news">News</el-menu-item>
-              <el-menu-item index="/insight/events">Events</el-menu-item>
+              <el-menu-item index="/insight/events">Resource Center</el-menu-item>
               <el-menu-item index="/insight/inquiry">Inquiry</el-menu-item>
               <el-menu-item index="/insight/partnership">
                 <a href="https://www.obiosh.com/tzz/gg/" target="_blank">Partnership</a>
@@ -105,7 +105,7 @@
               </template>
               <el-menu-item index="/careers/culture">Our Culture</el-menu-item>
               <el-menu-item index="/careers/life"> Life at OBiO </el-menu-item>
-              <el-menu-item index="/careers/job"> Job Opening </el-menu-item>
+              <el-menu-item index="/careers/job"> Job Openings </el-menu-item>
             </el-sub-menu>
           </el-menu>
         </div>

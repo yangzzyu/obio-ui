@@ -76,7 +76,7 @@ const pageData = ref([
   {
     path: "/cdmo/cgmp/cell_therapy_products",
     focusObj: {
-      title: "Cell Therapy Products",
+      title: "Cell Line",
       hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
 
       visibleXsImgUrl: handleViteImages("head_bg.jpg"),

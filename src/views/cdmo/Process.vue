@@ -367,7 +367,7 @@ import { IntelliMItemList } from "./data/IntelliM";
 const cellSource = ref(0);
 const processSource = ref(0);
 const analyticalSource = ref(0);
-cellSource.value = 170;
+cellSource.value = 300;
 processSource.value = 200;
 analyticalSource.value = 500;
 
