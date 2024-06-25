@@ -1,30 +1,45 @@
 <template>
   <div class="Insights-wrap">
     <section id="cro" class="cro-list">
-      <div class="cro-list-item row" v-for="(item, index) in releasesList" :key="index">
-        <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
+      <div
+        class="cro-list-item row"
+        v-for="(item, index) in releasesList"
+        :key="index"
+      >
+        <el-col
+          :xs="22"
+          :sm="20"
+          :md="20"
+          :lg="20"
+          :xl="22"
+          style="margin: auto"
+          class="container"
+        >
           <div v-if="item.img">
             <el-row :gutter="100">
-              <el-col :xs="24" :span="6" style="padding: 0px;">
-                <div class="animate-imgxx uof img" style="
+              <el-col :xs="24" :span="6" style="padding: 0px">
+                <div
+                  class="animate-imgxx uof img"
+                  style="
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     height: 100%;
-                  ">
-                  <img :src="item.img" alt="SPIRO Site" style="width:100%;" />
+                  "
+                >
+                  <img :src="item.img" alt="SPIRO Site" style="width: 100%" />
                 </div>
               </el-col>
               <el-col :xs="24" :span="18">
                 <p class="font-size18 iti textColor">
-                  {{ item.categoryId == '1' ? item.pubDate : item.eventTime }}
+                  {{ item.categoryId == "1" ? item.pubDate : item.eventTime }}
                 </p>
                 <h1 class="title fontf4 font-size18 title-color">
                   {{ item.title }}
                 </h1>
-                <div v-if="item.content">
+                <div v-if="item.summary">
                   <div class="font-size18 ut-s4">
-                    {{ item.content }}
+                    {{ item.summary }}
                   </div>
                 </div>
                 <div v-else>
@@ -35,37 +50,58 @@
                     <b>Location:</b> {{ item.location }}
                   </div>
                 </div>
-                <router-link :to="item.categoryId == '1'
-        ? '/news-details/releases/' + item.id
-        : '/news-details/events/' + item.id
-        " class="read-more font-size18 fontf7">Read More</router-link>
+                <router-link
+                  :to="
+                    item.categoryId == '1'
+                      ? '/news-details/releases/' + item.id
+                      : '/news-details/events/' + item.id
+                  "
+                  class="read-more font-size18 fontf7"
+                  >Read More</router-link
+                >
               </el-col>
             </el-row>
           </div>
           <div v-else>
             <p class="font-size18 iti textColor">
-              {{ item.categoryId == '1' ? item.pubDate : item.eventTime }}
+              {{ item.categoryId == "1" ? item.pubDate : item.eventTime }}
             </p>
             <h1 class="title fontf4 font-size18 title-color">
               {{ item.title }}
             </h1>
             <div class="font-size18 ut-s2">
-              {{ item.content }}
+              {{ item.summary }}
             </div>
-            <router-link :to="item.categoryId == '1'
-        ? '/news-details/releases/' + item.id
-        : '/news-details/events/' + item.id
-        " class="read-more font-size18 fontf7">Read More</router-link>
+            <router-link
+              :to="
+                item.categoryId == '1'
+                  ? '/news-details/releases/' + item.id
+                  : '/news-details/events/' + item.id
+              "
+              class="read-more font-size18 fontf7"
+              >Read More</router-link
+            >
           </div>
         </el-col>
       </div>
-      <router-link to="/insight/news" class="btn-a font-size18 fontf7 bg-pinkbluelfr mb-5">
+      <router-link
+        to="/insight/news"
+        class="btn-a font-size18 fontf7 bg-pinkbluelfr mb-5"
+      >
         All Press Releases
       </router-link>
     </section>
     <Events :isShow="true" />
     <section id="productions" class="productions-list">
-      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
         <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Inquiry</h1>
         <el-row :gutter="50" class="cdmo-top">
           <el-col :xs="24" :span="12">
@@ -73,25 +109,44 @@
               Laboratory Sciences
             </h2>
 
-            <el-checkbox-group v-model="form.laboratory" @change="changeLaboratory" class="check-txt fontf4 font-size18"
+            <el-checkbox-group
+              v-model="form.laboratory"
+              @change="changeLaboratory"
+              class="check-txt fontf4 font-size18"
               style="
                 display: flex;
                 flex-flow: column nowrap;
                 align-items: flex-start;
-              ">
-              <el-checkbox value="AAV PACKAGING SERVICES" label="AAV PACKAGING SERVICES">
+              "
+            >
+              <el-checkbox
+                value="AAV PACKAGING SERVICES"
+                label="AAV PACKAGING SERVICES"
+              >
                 AAV PACKAGING SERVICES
               </el-checkbox>
-              <el-checkbox value="LENTIVIRUS PACKAGING SERVICES" label="LENTIVIRUS PACKAGING SERVICES">
+              <el-checkbox
+                value="LENTIVIRUS PACKAGING SERVICES"
+                label="LENTIVIRUS PACKAGING SERVICES"
+              >
                 LENTIVIRUS PACKAGING SERVICES
               </el-checkbox>
-              <el-checkbox value="AAV-Lung X AAV-Lung M3" label="AAV-Lung X AAV-Lung M3">
+              <el-checkbox
+                value="AAV-Lung X AAV-Lung M3"
+                label="AAV-Lung X AAV-Lung M3"
+              >
                 AAV-Lung X AAV-Lung M3
               </el-checkbox>
-              <el-checkbox value="AAVneO + AAVMeta Platform" label="AAVneO + AAVMeta Platform">
+              <el-checkbox
+                value="AAVneO + AAVMeta Platform"
+                label="AAVneO + AAVMeta Platform"
+              >
                 AAVneO + AAVMeta Platform
               </el-checkbox>
-              <el-checkbox value="Off-the-Shelf AAV PRODUCTS" label="Off-the-Shelf AAV PRODUCTS">
+              <el-checkbox
+                value="Off-the-Shelf AAV PRODUCTS"
+                label="Off-the-Shelf AAV PRODUCTS"
+              >
                 Off-the-Shelf AAV PRODUCTS
               </el-checkbox>
             </el-checkbox-group>
@@ -100,32 +155,56 @@
             <h2 class="title-color font-size18 txt-bold fontf7">
               CDMO Solutions
             </h2>
-            <el-checkbox-group v-model="form.cdmo" @change="changeCdmo" class="check-txt fontf4 font-size18" style="
+            <el-checkbox-group
+              v-model="form.cdmo"
+              @change="changeCdmo"
+              class="check-txt fontf4 font-size18"
+              style="
                 display: flex;
                 flex-flow: column nowrap;
                 align-items: flex-start;
-              ">
-              <el-checkbox value="GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO"
-                label="GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO">
+              "
+            >
+              <el-checkbox
+                value="GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO"
+                label="GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO"
+              >
                 GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO
               </el-checkbox>
-              <el-checkbox value="CELL THERAPY CDMO SOLUTIONS" label="CELL THERAPY CDMO SOLUTIONS">
+              <el-checkbox
+                value="CELL THERAPY CDMO SOLUTIONS"
+                label="CELL THERAPY CDMO SOLUTIONS"
+              >
                 CELL THERAPY CDMO SOLUTIONS
               </el-checkbox>
-              <el-checkbox value="ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS" label="ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS">
+              <el-checkbox
+                value="ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS"
+                label="ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS"
+              >
                 ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS
               </el-checkbox>
-              <el-checkbox value="iPSC CDMO SERVICES" label="iPSC CDMO SERVICES">
+              <el-checkbox
+                value="iPSC CDMO SERVICES"
+                label="iPSC CDMO SERVICES"
+              >
                 iPSC CDMO SERVICES
               </el-checkbox>
-              <el-checkbox value="PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS"
-                label="PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS">
+              <el-checkbox
+                value="PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS"
+                label="PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS"
+              >
                 PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS
               </el-checkbox>
-              <el-checkbox value="LENTIVIRAL VECTOR CDMO SOLUTIONS" label="LENTIVIRAL VECTOR CDMO SOLUTIONS">
+              <el-checkbox
+                value="LENTIVIRAL VECTOR CDMO SOLUTIONS"
+                label="LENTIVIRAL VECTOR CDMO SOLUTIONS"
+              >
                 LENTIVIRAL VECTOR CDMO SOLUTIONS
               </el-checkbox>
-              <el-checkbox value="ONCOLYTIC VIRUS CDMO SOLUTIONS" label="ONCOLYTIC VIRUS CDMO SOLUTIONS">
+              <el-checkbox
+                value="ONCOLYTIC VIRUS CDMO SOLUTIONS"
+                label="ONCOLYTIC VIRUS CDMO SOLUTIONS"
+              >
                 ONCOLYTIC VIRUS CDMO SOLUTIONS
               </el-checkbox>
             </el-checkbox-group>
@@ -133,8 +212,15 @@
         </el-row>
         <el-row>
           <el-col :span="24" :xs="24">
-            <el-form ref="ruleFormRef" :model="form" label-width="200px" class="form-contact-main font-size18 fontf4"
-              :label-position="'top'" :rules="rules" status-icon>
+            <el-form
+              ref="ruleFormRef"
+              :model="form"
+              label-width="200px"
+              class="form-contact-main font-size18 fontf4"
+              :label-position="'top'"
+              :rules="rules"
+              status-icon
+            >
               <el-row :gutter="20">
                 <el-col :span="4" :xs="24">
                   <el-form-item label="First Name" required prop="first_name">
@@ -143,18 +229,26 @@
                 </el-col>
                 <el-col :span="5" :xs="24">
                   <el-form-item label="Last Name" required prop="last_name">
-                    <el-input v-model="form.last_name" /> </el-form-item></el-col>
+                    <el-input v-model="form.last_name" /> </el-form-item
+                ></el-col>
                 <el-col :span="5" :xs="24">
                   <el-form-item label="Company" required prop="company">
-                    <el-input v-model="form.company" /> </el-form-item></el-col>
+                    <el-input v-model="form.company" /> </el-form-item
+                ></el-col>
                 <el-col :span="5" :xs="24">
                   <el-form-item label="Email" required prop="email">
-                    <el-input v-model="form.email" /> </el-form-item></el-col>
+                    <el-input v-model="form.email" /> </el-form-item
+                ></el-col>
                 <el-col :span="5" :xs="24">
                   <el-form-item label="Phone Number" required prop="phone">
-                    <el-input v-model="form.phone" /> </el-form-item></el-col></el-row>
+                    <el-input v-model="form.phone" /> </el-form-item></el-col
+              ></el-row>
               <el-form-item label="Comments">
-                <el-input v-model="form.inquired_item" type="textarea" :rows="10" />
+                <el-input
+                  v-model="form.inquired_item"
+                  type="textarea"
+                  :rows="10"
+                />
               </el-form-item>
               <!-- <el-form-item label="Security Code" required prop="verify">
                 <el-col :span="11">
@@ -183,8 +277,12 @@
                 </div>
               </el-form-item> -->
               <div class="fontf3 font-size14">
-                <el-button :loading="loading" round class="btn-a font-size18 fontf7"
-                  @click.prevent="sendEmail(ruleFormRef)">
+                <el-button
+                  :loading="loading"
+                  round
+                  class="btn-a font-size18 fontf7"
+                  @click.prevent="sendEmail(ruleFormRef)"
+                >
                   Submit
                 </el-button>
               </div>
@@ -203,7 +301,7 @@ import Events from "@/components/Events.vue";
 import { handleViteImages } from "@/utils";
 import emailjs from "@emailjs/browser";
 import type { FormInstance, FormRules } from "element-plus";
-import { articlesPages } from './api.ts'
+import { articlesPages } from "./api.ts";
 
 let loading = ref(false);
 const form = reactive({
@@ -231,35 +329,34 @@ const releasesList = ref([]);
 
 function getNews() {
   return new Promise((resolve, reject) => {
-    articlesPages('news', {
+    articlesPages("news", {
       page: 1,
       limit: 3,
-    }).then(res => {
-      resolve(res?.data?.list || [])
-    })
+    }).then((res) => {
+      resolve(res?.data?.list || []);
+    });
   });
 }
 
 function getEvents() {
   return new Promise((resolve, reject) => {
-    articlesPages('event', {
+    articlesPages("event", {
       page: 1,
       limit: 2,
-    }).then(res => {
-      resolve(res?.data?.list || [])
-    })
+    }).then((res) => {
+      resolve(res?.data?.list || []);
+    });
   });
 }
 
 function getReleasesList() {
   Promise.all([getNews(), getEvents()])
     .then(([news, events]: any) => {
-      releasesList.value = [...news, ...events]
+      releasesList.value = [...news, ...events];
     })
-    .catch(error => {
-    });
+    .catch((error) => {});
 }
-getReleasesList()
+getReleasesList();
 const validatePhone = (rule, value, callback) => {
   if (!value) {
     callback();

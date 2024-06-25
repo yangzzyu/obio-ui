@@ -9,7 +9,15 @@
 <template>
   <div class="Insights-wrap">
     <div class="section-1">
-      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
+      <el-col
+        :xs="22"
+        :sm="20"
+        :md="20"
+        :lg="20"
+        :xl="22"
+        style="margin: auto"
+        class="container"
+      >
         <div class="pub-title pub-title-p ub ub-ver ub-pe">
           <i class="line"></i>
           <span class="fontf8 font-size50">Events</span>
@@ -20,14 +28,17 @@
             <router-link :to="'/news-details/events/' + item.id" class="block">
               <div v-if="item.img">
                 <el-row :gutter="100">
-                  <el-col :xs="24" :span="6" style="padding: 0px;">
-                    <div class="animate-imgxx uof img" style="
+                  <el-col :xs="24" :span="6" style="padding: 0px">
+                    <div
+                      class="animate-imgxx uof img"
+                      style="
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         height: 100%;
-                      ">
-                      <img :src="item.img" alt="Event" style="width:100%;" />
+                      "
+                    >
+                      <img :src="item.img" alt="Event" style="width: 100%" />
                     </div>
                   </el-col>
                   <el-col :xs="24" :span="18">
@@ -49,14 +60,21 @@
                 <div class="title fontf4 font-size24 title-color">
                   {{ item.title }}
                 </div>
-                <div class="font-size18 ut-s2">{{ item.content }}</div>
+                <div class="font-size18 ut-s2">{{ item.summary }}</div>
               </div>
             </router-link>
           </div>
         </div>
-        <el-pagination class="page ub-ac" v-model:current-page="pageinfo.page" v-model:page-size="pageinfo.limit"
-          background layout="prev, pager, next" :total="pageinfo.total" @size-change="handleSizeChange"
-          @current-change="handleCurrentChange" />
+        <el-pagination
+          class="page ub-ac"
+          v-model:current-page="pageinfo.page"
+          v-model:page-size="pageinfo.limit"
+          background
+          layout="prev, pager, next"
+          :total="pageinfo.total"
+          @size-change="handleSizeChange"
+          @current-change="handleCurrentChange"
+        />
       </el-col>
     </div>
   </div>
@@ -65,7 +83,7 @@
 <script lang="ts" setup name="Cdmo">
 import { ref } from "vue";
 import { events } from "./data/Index";
-import { articlesPages } from './api.ts'
+import { articlesPages } from "./api.ts";
 const tableData = ref<any>();
 
 const pageinfo = ref({
@@ -80,10 +98,10 @@ const getProp = () => {
   //   pageinfo.value.page * pageinfo.value.limit
   // );
   // pageinfo.value.total = events.value.length;
-  articlesPages('event', pageinfo.value).then(res => {
-    tableData.value = res.data.list || []
-    pageinfo.value.total = res.data.total || 0
-  })
+  articlesPages("event", pageinfo.value).then((res) => {
+    tableData.value = res.data.list || [];
+    pageinfo.value.total = res.data.total || 0;
+  });
 };
 
 const handleSizeChange = (val: number) => {

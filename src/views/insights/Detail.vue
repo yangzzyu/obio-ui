@@ -10,11 +10,19 @@
   <Focus :focusObj="FocusData" />
   <!-- <Breadcrumb :matchedData="matchedData" /> -->
   <!-- <router-view></router-view> -->
-  <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto;" class="container">
-    <div class="pub-title pub-title-p ">
+  <el-col
+    :xs="22"
+    :sm="20"
+    :md="20"
+    :lg="20"
+    :xl="22"
+    style="margin: auto"
+    class="container"
+  >
+    <div class="pub-title pub-title-p">
       <i class="line"></i>
       <span class="fontf8 font-size30 font-color-ts">{{ newsItem.title }}</span>
-      <div class=" font-size18">
+      <div class="font-size18">
         <div class="font-size24 fontf5" style="color: #000; margin: 5px 0">
           {{ newsItem.pubDate }}
         </div>
@@ -36,10 +44,12 @@ import { useRouter } from "vue-router";
 import { computed, onBeforeMount, ref, toRefs, watch, onMounted } from "vue";
 import { releases, events } from "./data/Index";
 import { handleViteImages, goRouter } from "@/utils";
-import { articlesDetail } from './api.ts'
+import { articlesDetail } from "./api.ts";
 
 const router = useRouter();
+
 const currentRoute = router.currentRoute.value;
+console.log(currentRoute.params.type, "router");
 const routerName = ref("");
 const matchedData = ref([
   {
@@ -56,20 +66,20 @@ const matchedData = ref([
   },
 ]);
 const FocusData = ref({
-  title: "News",
+  title: currentRoute.params.type == "events" ? "Events" : "News",
   hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
   visibleXsImgUrl: handleViteImages("head_bg.jpg"),
 });
 const newsItem = ref({});
 function getArticlesDetail(id) {
-  articlesDetail(id).then(res => {
-    newsItem.value = res.data || {}
-  })
+  articlesDetail(id).then((res) => {
+    newsItem.value = res.data || {};
+  });
 }
 onMounted(() => {
   // const currentRoute = router.currentRoute.value;
   // console.log(router, "currentRout2121212121e");
-  getArticlesDetail(currentRoute.params.id)
+  getArticlesDetail(currentRoute.params.id);
   // const routerType = currentRoute.params.type;
   // console.log(routerType, "routerType");
   // if (routerType == "releases") {

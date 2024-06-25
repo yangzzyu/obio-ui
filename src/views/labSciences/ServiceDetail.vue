@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-06-24 15:50:32
+ * @LastEditTime: 2024-06-25 09:19:33
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -80,10 +80,53 @@ onMounted(() => {
   })
 });
 </script>
+<style lang="scss">
+.content-b {
+  img{
+    width: 100%;
+  }
+  table {
+    width: 100%;
+    word-break: break-all;
+    border-collapse: collapse;
+  }
+
+  table th,
+  table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  table th {
+    background-color: #f2f2f2;
+    color: #333333;
+    font-weight: bold;
+  }
+
+  table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  table tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  table td a {
+    color: #d9534f;
+    /* Red color */
+    text-decoration: none;
+  }
+
+  table td a:hover {
+    text-decoration: underline;
+  }
+}
+</style>
 
 <style lang="scss" scoped>
 .public-box {
-  width: 100%;
+  // width: 100%;
   display: grid;
   grid-template-columns: 275px auto;
   overflow: hidden;
@@ -104,6 +147,11 @@ onMounted(() => {
 
     .content-b {
       padding: 20px;
+      // overflow: auto; 
+      word-wrap: break-word;
+      /* 旧版浏览器支持 */
+      overflow-wrap: break-word;
+      /* 标准属性 */
     }
   }
 }
