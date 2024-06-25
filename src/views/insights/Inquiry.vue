@@ -180,7 +180,7 @@
                     <el-input v-model="form.company" /> </el-form-item
                 ></el-col>
                 <el-col :span="12" :xs="24">
-                  <el-form-item label="Title">
+                  <el-form-item label="Title" required prop="title">
                     <el-input v-model="form.title" /> </el-form-item
                 ></el-col>
               </el-row>

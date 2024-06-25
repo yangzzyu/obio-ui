@@ -24,11 +24,11 @@
             class="container"
           >
             <div class="content">
-              <p class="font-size18 fontf10 cro-p textColor">
+              <p class="font-size18 fontf4 cro-p textColor">
                 OBiO Technology is a pioneering Contract Research Organization (CRO) and Contract Development and Manufacturing Organization (CDMO) in gene and cell therapy, delivering top-tier services worldwide. 
                 From laboratories to clinics, we will continue to support the production of and advancement of your products to benefit populations worldwide. 
               </p>
-              <p class="font-size18 fontf10 cro-p textColor">
+              <p class="font-size18 fontf4 cro-p textColor">
                 OBiO leverages a decade of industry expertise and has facilitated the progression of over 150 gene and cell therapy initiatives, 
                 25 of which achieved approval for clinical trials in both the US and China by April 2023.
                 Our comprehensive set of services encompasses therapies using plasmids, mRNA, AAV vectors, oncolytic viruses, immuno cells, stem cells, and more.
@@ -39,7 +39,7 @@
               Manufacturing Facilities
             </h2>
             <div class="content">
-              <p class="font-size18 fontf10 cro-p textColor">
+              <p class="font-size18 fontf4 cro-p textColor">
                 As a trusted Contract Development and Manufacturing Organization (CDMO), we understand that flexible capacities and regulatory-compliant facilities are essential for delivering top-tier services to gene and cell therapy developers.
                 For our global clientele, we have strategically established an integrated research platform with sties at the Lin-Gang Free-Trade Zone and the Shanghai International Medical Park. 
               </p>

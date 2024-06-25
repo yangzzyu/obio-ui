@@ -53,8 +53,8 @@
             <el-col :span="4" :xs="24" class="tx-c">
               <div class="nums-list bg-pinkbluelfr">
                 <div class="content">
-                  <div class="pn fontf7 font-size24">
-                    Assist Clients to Obtain
+                  <div class="pn fontf5 font-size24">
+                    Assisted Clients to Obtain
                   </div>
                   <el-statistic :value="indApprovalsValue" class="number-c">
                     <template #suffix>
@@ -63,10 +63,10 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24" style="margin-bottom: -10px">
                     IND Approvals
                   </div>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24">
                     Including
                   </div>
                   <el-statistic :value="fdaApprovalsValue" class="number-c">
@@ -76,7 +76,7 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24">
                     FDA Approvals
                   </div>
                 </div>
@@ -92,7 +92,7 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24">
                     Gene and Cell Therapy Programs
                   </div>
                 </div>
@@ -102,12 +102,12 @@
                 <div class="content">
                   <el-statistic :value="squareFeetValue" class="number-c">
                     <template #suffix>
-                      <div class="nums fontf10">
+                      <div class="nums fontf4">
                         <span class="fh">K ft²</span>
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24">
                     of CRO & CDMO service operational area
                   </div>
                 </div>
@@ -123,7 +123,7 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24">
                     Global Service Clients
                   </div>
                 </div>
@@ -133,12 +133,12 @@
                 <div class="content">
                   <el-statistic :value="suspendedValue" class="number-c">
                     <template #suffix>
-                      <div class="nums fontf10">
+                      <div class="nums fontf4">
                         <span class="fh">L</span>
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24">
                     Suspended Cell Culture Production System
                   </div>
                 </div>
@@ -154,7 +154,7 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24">
                     Cumulative CGT CDMO Projects
                   </div>
                 </div>
@@ -169,7 +169,7 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24">
                     Process Development Projects
                   </div>
                 </div>
@@ -185,7 +185,7 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24">
                     Analytical Method Development Projects
                   </div>
                 </div>
@@ -200,7 +200,7 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24" style="margin-bottom: 52px">
                     Batches
                   </div>
                 </div>
@@ -677,7 +677,7 @@ const analyticalSourceValue = useTransition(analyticalSource, {
 const batchValue = useTransition(batchSource, {
   duration: 1500,
 })
-cellSource.value = 170;
+cellSource.value = 300;
 cumulativeCgt.value = 300;
 indApprovals.value = 38;
 fdaApprovals.value = 11;
