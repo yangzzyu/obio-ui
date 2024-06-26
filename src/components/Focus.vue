@@ -33,25 +33,25 @@
           class="container"
         >
           <h1
-            class="font-size50 focus-title fontf7 txt-bold"
+            class="font-size50 focus-title fontf7 txt-bold" style="color: #fff"
             v-if="focusObj.title && focusObj.title !== 'About Us'"
           >
             {{ focusObj.title }}
           </h1>
           <div v-else>
-            <h1 class="font-size36 fontf8 txt-bold">
+            <h1 class="font-size36 fontf8 txt-bold" style="color: #fff">
               Make Gene Delivery Accessible:
             </h1>
             <p class="font-size20 fontf8 mb-3" style="color: #fff">
-              side by side navigation for your innovations
+              Side-by-side navigation for your innovations
             </p>
-            <h1 class="font-size36 fontf8 txt-bold">
-              Industrialize Your Products:
+            <h1 class="font-size36 fontf8 txt-bold" style="color: #fff">
+              Industrialize Your Products
             </h1>
             <p class="font-size20 fontf8 mb-3" style="color: #fff">
-              End-to-End offering with versatile technical platform
+              End-to-End offerings with a versatile technical platform
             </p>
-            <h1 class="font-size36 fontf8 txt-bold">For Global customers:</h1>
+            <h1 class="font-size36 fontf8 txt-bold" style="color: #fff">For Global customers:</h1>
             <p class="font-size20 fontf8 mb-3" style="color: #fff">
               We have launched state-of-the-art Intelli-M GMP facility in 2023
             </p>
