@@ -17,7 +17,7 @@
               </el-col>
               <el-col :xs="24" :span="18">
                 <p class="font-size18 iti textColor">
-                  {{ item.categoryId == "1" ? formatDate(item.pubDate) : formatDate(item.eventTime) }}
+                  {{ item.categoryId == "1" ? formatDate(item.pubDate) : item.eventTime }}
                 </p>
                 <h1 class="title fontf4 font-size18 title-color">
                   {{ item.title }}
@@ -27,7 +27,7 @@
                 </div>
                 <div v-if="item.categoryId == '2'">
                   <div class="font-size18 ut-s2" v-if="item.eventTime">
-                    <b>Time:</b> {{ formatDate(item.eventTime) }}
+                    <b>Time:</b> {{ item.eventTime }}
                   </div>
                   <div class="font-size18 ut-s2" v-if="item.location">
                     <b>Location:</b> {{ item.location }}
@@ -42,7 +42,7 @@
           </div>
           <div v-else>
             <p class="font-size18 iti textColor">
-              {{ item.categoryId == "1" ? formatDate(item.pubDate) : formatDate(item.eventTime) }}
+              {{ item.categoryId == "1" ? formatDate(item.pubDate) : item.eventTime }}
             </p>
             <h1 class="title fontf4 font-size18 title-color">
               {{ item.title }}
@@ -52,7 +52,7 @@
             </div>
             <div v-if="item.categoryId == '2'">
               <div class="font-size18 ut-s2" v-if="item.eventTime">
-                <b>Time:</b> {{ formatDate(item.eventTime) }}
+                <b>Time:</b> {{ item.eventTime }}
               </div>
               <div class="font-size18 ut-s2" v-if="item.location">
                 <b>Location:</b> {{ item.location }}
