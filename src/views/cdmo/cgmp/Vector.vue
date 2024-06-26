@@ -39,7 +39,7 @@
             <el-row class="row" :gutter="10">
               <el-col :xs="24" :span="5" class="">
                 <div class="content" style="width: 100%; overflow: hidden; border-bottom: 3px solid #039d8f;">
-                  <el-image
+                  <el-image class="zoom"
                     style="width: 100%; margin: 10px;"
                     :src="handleViteImages('uploads/image/20240601/1-1-AAV-Flyers.png')"
                     alt="viral vectors"
@@ -51,7 +51,7 @@
                   />
                 </div>
                 <div class="content" style="width: 100%; overflow: hidden; border-bottom: 3px solid #039d8f;">
-                  <el-image
+                  <el-image class="zoom"
                     style="width: 100%; margin: 10px;"
                     :src="handleViteImages('uploads/image/20240601/1-2-AAV.png')"
                     alt="viral vectors"
@@ -63,7 +63,7 @@
                   />
                 </div>
                 <div class="content" style="width: 100%; overflow: hidden">
-                  <el-image
+                  <el-image class="zoom"
                     style="width: 100%; margin: 18px;"
                     :src="handleViteImages('uploads/image/20240601/1-6-Exsome.png')"
                     alt="viral vectors"
@@ -77,11 +77,11 @@
               </el-col>
               <el-col :xs="24" :span="12" class="">
                 <div class="content" style="width: 100%; overflow: hidden; border-left: 3px solid #039d8f; border-right: 3px solid #039d8f;">
-                  <el-image
+                  <el-image class="zoom"
                     style="width: 100%; height: 100%"
                     :src="handleViteImages('uploads/image/20240601/viral_vectors.png')"
                     alt="viral vectors"
-                    :preview-src-list="viralVectorList"
+                    :preview-src-list="viralVectorList4"
                     fit="cover"
                     :z-index="99999"
                     :preview-teleported="true"
@@ -91,11 +91,11 @@
               </el-col>
               <el-col :xs="24" :span="6" class="">
                 <div class="content" style="width: 100%; overflow: hidden; border-bottom: 3px solid #039d8f;">
-                  <el-image
+                  <el-image class="zoom"
                     style="width: 100%; margin: 10px;"
                     :src="handleViteImages('uploads/image/20240601/1-3-LV-flyer-1.png')"
                     alt="viral vectors"
-                    :preview-src-list="viralVectorList3"
+                    :preview-src-list="viralVectorList5"
                     fit="cover"
                     :z-index="99999"
                     :preview-teleported="true"
@@ -103,11 +103,11 @@
                   />
                 </div>
                 <div class="content" style="width: 100%; overflow: hidden; border-bottom: 3px solid #039d8f;">
-                  <el-image
+                  <el-image class="zoom"
                     style="width: 100%; margin: 18px;"
                     :src="handleViteImages('uploads/image/20240601/1-4-LV-flyer-2.png')"
                     alt="viral vectors"
-                    :preview-src-list="viralVectorList1"
+                    :preview-src-list="viralVectorList6"
                     fit="cover"
                     :z-index="99999"
                     :preview-teleported="true"
@@ -115,11 +115,11 @@
                   />
                 </div>
                 <div class="content" style="width: 100%; overflow: hidden">
-                  <el-image
+                  <el-image class="zoom"
                     style="width: 100%; margin: 20px;"
                     :src="handleViteImages('uploads/image/20240601/1-5-iPSC flyer .png')"
                     alt="viral vectors"
-                    :preview-src-list="viralVectorList2"
+                    :preview-src-list="viralVectorList7"
                     fit="cover"
                     :z-index="99999"
                     :preview-teleported="true"
@@ -234,17 +234,26 @@ import "swiper/css/pagination"; // 轮播图底面的小圆点
 import "swiper/css/navigation"; // 轮播图两边的左右箭头
 import "swiper/css/scrollbar"; // 轮播图的滚动条
 
-const viralVectorList = reactive([
-  handleViteImages("uploads/image/20240601/viral_vectors.png"),
-]);
 const viralVectorList1 = reactive([
-  handleViteImages("uploads/image/20240601/1-1-AAV-Flyers.png"),
+  handleViteImages('uploads/image/20240601/1-1-AAV-Flyers.png'),
 ]);
 const viralVectorList2 = reactive([
-  handleViteImages("uploads/image/20240601/1-2-AAV.png"),
+  handleViteImages('uploads/image/20240601/1-2-AAV.png'),
 ]);
 const viralVectorList3 = reactive([
-  handleViteImages("uploads/image/20240601/1-3-LV-flyer-1.png"),
+  handleViteImages('uploads/image/20240601/1-6-Exsome.png'),
+]);
+const viralVectorList4 = reactive([
+  handleViteImages('uploads/image/20240601/viral_vectors.png'),
+]);
+const viralVectorList5 = reactive([
+  handleViteImages('uploads/image/20240601/1-3-LV-flyer-1.png'),
+]);
+const viralVectorList6 = reactive([
+  handleViteImages('uploads/image/20240601/1-4-LV-flyer-2.png'),
+]);
+const viralVectorList7 = reactive([
+handleViteImages('uploads/image/20240601/1-5-iPSC flyer .png'),
 ]);
 
 const navigation = ref({
@@ -343,3 +352,15 @@ const vectorFooterList = ref([
   },
 ]);
 </script>
+
+<style lang="scss" scoped>
+
+.zoom {
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+}
+.zoom:hover {
+  transform: scale(1.05);
+}
+
+</style>

@@ -284,7 +284,6 @@
       </el-col>
     </section>
     <section id="whyobio">
-      <div class="in-about-wrap">
         <div class="section-3">
           <el-col
             :xs="22"
@@ -316,7 +315,6 @@
               </div>
             </div>
           </el-col>
-        </div>
       </div>
     </section>
     <section id="innovation">

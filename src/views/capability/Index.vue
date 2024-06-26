@@ -90,12 +90,23 @@
             <router-link to="/cdmo/quality_regulatory" class="read-more font-size18 fontf7" style="justify-content: flex-start;">Read
               More</router-link>
           </el-col>
+
+
           <el-col :xs="24" :span="16" >
-            <div style="text-align:center;" class="mt-6">
-              <br />
-              <img :src="handleViteImages('uploads/image/20240601/6-Quarlity-control.png')" alt="Quality Control" style="width:80%"/>
+            <div style="text-align: right; overflow: hidden;" class="mt-6 zoom">
+              <el-image
+                :src="handleViteImages('uploads/image/20240601/6-Quarlity-control.png')"
+                alt="Quality Control"
+                style="width:100%;"
+                :preview-src-list="qualityControl"
+                :z-index="99999"
+                :preview-teleported="true"
+                :hide-on-click-modal="true"
+              />
             </div>
           </el-col>
+
+          
         </el-row>
       </el-col>
     </section>
@@ -177,6 +188,10 @@ import Events from "@/components/Events.vue";
 import Career from "@/components/Career.vue";
 import { handleViteImages, goRouter } from "@/utils";
 
+const qualityControl = reactive([
+  handleViteImages('uploads/image/20240601/6-Quarlity-control.png'),
+]);
+
 const FocusData = ref({
   title: "Capability",
   hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
@@ -249,7 +264,7 @@ const industrializeList = reactive([
     txtList: [
       "Upstream Process",
       "Downstream Process",
-      "Analytical Developmen",
+      "Analytical Development",
       "Process Validation",
     ],
   },
@@ -259,9 +274,9 @@ const industrializeList = reactive([
                   Platform:`,
     path: "/cdmo/cgmp",
     txtList: [
-      "End-to-End Offerin",
-      "Pre-IND services",
-      "Post-IND service",
+      "End-to-End Offerings",
+      "Pre-IND Services",
+      "Post-IND Services",
       "Capacity for Global",
     ],
   },
@@ -371,6 +386,16 @@ const Labora = ref(<any>{});
 </script>
 
 <style lang="scss" scoped>
+
+.zoom {
+  padding: 50px;
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+}
+.zoom:hover {
+  transform: scale(1.15);
+}
+
 .cap-section {
   margin-top: -100px;
   position: relative;
