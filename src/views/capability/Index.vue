@@ -11,7 +11,7 @@
     <Focus :focusObj="FocusData" />
     <section id="cap" class="cap-section hero-style-top">
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
-        <h1 class="title-color font-size50 txt-bold section-title fontf8 mb-3 mt-5">
+        <h1 class="title-color font-size50 txt-bold section-title fontf8 mb-3 mt-4">
           Why Us
         </h1>
         <h2 class="title-color our-txt font-size30 section-title fontf7">
@@ -397,7 +397,7 @@ const Labora = ref(<any>{});
 }
 
 .cap-section {
-  margin-top: -100px;
+  //margin-top: -100px;
   position: relative;
 }
 

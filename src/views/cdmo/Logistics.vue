@@ -16,7 +16,7 @@
       :xl="22"
       style="margin: auto"
       class="container">
-      <div class="text font-size18">
+      <div class="text font-size18 mt-3">
         <span style="line-height: 2"
             >The top priority of gene and cell therapy products during
             transportation is to maintain the integrity of the products, as well

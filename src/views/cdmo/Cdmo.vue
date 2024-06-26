@@ -8,7 +8,7 @@
 -->
 <template>
   <div class="CDMO-Solutions-wrap">
-    <div class="section-1 mb-3">
+    <div class="section-1 mb-3 mt-3">
       <el-col
         :xs="22"
         :sm="20"

@@ -77,7 +77,7 @@ export const homeFacilitiesData = ref<FacilitiesDataItem[]>([
     pmText: [
       "Process Development  Characterization",
       "Clinical and Commercial Manufacturing",
-      "77,000 ㎡ (828,821 ft²) Facility for Global Supply",
+      "77,000 m² (828,821 ft²) Facility for Global Supply",
     ],
     pTxt: "Lin-Gang Free-Trade Zone",
     imgUrl: handleViteImages("facilities_img2.jpg"),

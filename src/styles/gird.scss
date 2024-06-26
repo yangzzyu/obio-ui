@@ -50,7 +50,7 @@
   }
   .hero-style-1,
   .hero-style-2 {
-    height: 450px !important;
+    height: 400px !important;
   }
   .focus .txt {
     height: 95% !important;
@@ -273,7 +273,7 @@
   }
   .pub-pal20,
   .in-about-wrap .section-3 .fac-con {
-    padding-left: 8px;
+    padding-left: 0px;
   }
   .in-team-wrap,
   .CDMO-Solutions-wrap .section-1 {
@@ -901,7 +901,7 @@
 }
 @media (min-width: 768px) {
   .image--callout {
-    border-radius: 30px;
+    border-radius: 12px;
   }
   .image--callout .image--callout_image {
     // position: absolute;
@@ -970,7 +970,7 @@
   }
   .hero-style-1,
   .hero-style-2 {
-    height: 565px;
+    height: 400px;
   }
   .link-list {
     grid-template-columns: repeat(4, auto) !important; /* 设置8列 */
@@ -1209,10 +1209,11 @@
   }
 }
 
+//
 @media (max-width: 2560px) and (min-width: 1700px) {
   .hero-style-1,
   .hero-style-2 {
-    height: 750px;
+    height: 450px;
   }
   .home-offering-wrap .list .item:nth-child(2n) .txt-con {
     margin-left: 195px;

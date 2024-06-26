@@ -48,7 +48,6 @@
               </el-sub-menu>
               <el-menu-item index="/about/who">Who We Are</el-menu-item>
               <el-menu-item index="/about/commitment">Our Commitment </el-menu-item>
-              <el-menu-item index="/about/life">Life at OBiO </el-menu-item>
             </el-sub-menu>
             <el-sub-menu index="/capability" popper-class="sub-popper" :class="{
               'is-active': ['/capability'].includes(activeIndex),
