@@ -94,8 +94,8 @@ export const historyList = ref<HistoryItem[]>([
       `<text class=" txt-color txt-bold"
       >Round 4 fund-raising completed
     </text>
-    (Amount raised in RMB: XXX yuan)`,
-      `GMP platform expanded to about 7000 ㎡ (75,347 ft²)`,
+    `, //(Amount raised in RMB: XXX yuan)
+      `GMP platform expanded to about 7000 m² (75,347 ft²)`,
       `Construction of Lingang Precision Medicine Industry Base started`,
       `Accredited to be cGMP-compliant in an audit by a
       third-party Notified Body`,
@@ -149,7 +149,7 @@ export const historyList = ref<HistoryItem[]>([
     id: 11,
     year: "Future",
     txt: [
-      `For Global Customer Becoming a leading multi-service
+      `Becoming a leading multi-service
                             provider in biopharmaceutical industry`,
     ],
   },

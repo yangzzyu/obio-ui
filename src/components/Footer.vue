@@ -70,9 +70,6 @@
             <dd class="font-size14">
               <router-link to="/about/commitment">Our Commitment</router-link>
             </dd>
-            <dd class="font-size14">
-              <router-link to="/about/life">Life at OBiO</router-link>
-            </dd>
             <!-- <dd class="font-size14">
               <router-link to="/about/mission">Mission</router-link>
             </dd> -->

@@ -192,7 +192,9 @@ a:focus {
 .is-details {
   display: none;
 }
+
 .manufacturing-list:hover {
+  border-radius: 12px;
   .is-details {
     display: block;
   }
@@ -552,17 +554,17 @@ a:focus {
 .hero-style-2:before {
   content: "";
   width: 100%;
-  height: 110%;
+  height: 107%;
   position: absolute;
   left: 0;
-  top: -10%;
+  top: -7%;
   background: url(https://obio-tech.com/obio-img/head_bg.jpg) no-repeat center
     center / cover;
   z-index: -2;
 }
 .hero-style-1,
 .hero-style-2 {
-  height: 650px;
+  height: 450px;
   position: relative;
 }
 .btn-a {
@@ -1304,7 +1306,7 @@ a:focus {
 }
 .in-about-wrap .section-1 {
   // background: #f6f6f6;
-  padding-top: 0px;
+  padding-top: 70px;
   padding-bottom: 70px;
 }
 .in-about-wrap .section-2 {
@@ -1373,7 +1375,7 @@ a:focus {
 }
 .about-history-swp .swiper-slide .year {
   font-family: puhuiti-2-105;
-  font-size: 36px;
+  font-size: 28px;
   position: absolute;
   top: 0;
   left: -34px;
@@ -1452,7 +1454,7 @@ a:focus {
   overflow: hidden;
 }
 .in-about-wrap .section-3 .fac-con {
-  padding-left: 20px;
+  //padding-left: 20px;
   .el-col {
     margin-bottom: 30px;
   }
@@ -1463,7 +1465,7 @@ a:focus {
 }
 .manufacturing-list {
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 12px;
   .content {
     margin-bottom: 10px;
     transition: all 0.5s;
@@ -1677,7 +1679,7 @@ header {
   align-items: center;
 }
 .cdmo-txt {
-  padding: 3rem;
+  padding: 1.7rem;
   color: #fff;
 }
 .news--slider-i {
@@ -1722,6 +1724,7 @@ header {
   height: 100%;
 }
 .cro--service {
+  text-align: center;
   .cro--service-i {
     img {
       width: 60%;
@@ -2319,7 +2322,7 @@ header {
   overflow: hidden;
 }
 .cGMP-wrap .cGMP-main {
-  // padding-top: 60px;
+  padding-top: 20px;
   position: relative;
   z-index: 9;
 }
@@ -2627,7 +2630,7 @@ header {
   border-bottom-right-radius: 30px !important;
 }
 .Process-Development-wrap {
-  // padding-top: 80px;
+   padding-top: 20px;
   // background: #f6f6f6;
   overflow: hidden;
 }

@@ -24,27 +24,28 @@
             class="container"
           >
             <div class="content">
-              <p class="font-size18 fontf4 cro-p textColor">
+              <p class="font-size18 cro-p textColor">
                 OBiO Technology is a pioneering Contract Research Organization (CRO) and Contract Development and Manufacturing Organization (CDMO) in gene and cell therapy, delivering top-tier services worldwide. 
                 From laboratories to clinics, we will continue to support the production of and advancement of your products to benefit populations worldwide. 
               </p>
-              <p class="font-size18 fontf4 cro-p textColor">
+              <p class="font-size18 cro-p textColor">
                 OBiO leverages a decade of industry expertise and has facilitated the progression of over 150 gene and cell therapy initiatives, 
                 25 of which achieved approval for clinical trials in both the US and China by April 2023.
                 Our comprehensive set of services encompasses therapies using plasmids, mRNA, AAV vectors, oncolytic viruses, immuno cells, stem cells, and more.
                 OBiO's cGMP facilities are also the largest of their kind in the Asian Pacific region, allowing us to offer unparalleled proficiency and capacity for gene and cell therapies.
               </p>
             </div>
-            <h2 class="title-color our-txt font-size30 section-title fontf8">
+            <h2 class="title-color our-txt font-size30 section-title fontf6">
               Manufacturing Facilities
             </h2>
             <div class="content">
-              <p class="font-size18 fontf4 cro-p textColor">
+              <p class="font-size18 cro-p textColor mb-3">
                 As a trusted Contract Development and Manufacturing Organization (CDMO), we understand that flexible capacities and regulatory-compliant facilities are essential for delivering top-tier services to gene and cell therapy developers.
-                For our global clientele, we have strategically established an integrated research platform with sties at the Lin-Gang Free-Trade Zone and the Shanghai International Medical Park. 
+                For our global clientele, we have strategically established an integrated research platform with sites at the Lin-Gang Free-Trade Zone and the Shanghai International Medical Park. 
               </p>
-              <br>
             </div>
+
+            <!-- facility locations -->
             <div class="fac-con">
               <el-row class="row" :gutter="24">
                 <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
@@ -56,37 +57,37 @@
                       />
                     </div>
                   </div>
-                  <div class="font-size18 fontf7 iti">
+                  <div class="font-size18 fontf6 iti">
                     Lin-Gang Free-Trade Zone
                   </div>
                   <router-link
                     to="/about/facilities/intellim"
-                    class="read-more font-size30 fontf7 iti"> 
+                    class="read-more font-size24 fontf6 iti"> 
                     OBiO Intelli-M
                   </router-link>
-                  <p class="font-size18 textColor txt-bold">
-                    Process Development Characterization Clinical and Commercial
+                  <p class="font-size18 textColor">
+                    Process Development Characterization. Clinical and Commercial
                     Manufacturing. Facility for Global Supply.
-                    <text class="title-color txt-bold">77,000</text
-                    > m² (828,821 ft²).
+                    <text class="title-color txt-bold">77,000 m²</text
+                    > (828,821 ft²).
                   </p>
                   <ul class="txt-ul mt-2">
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       GMP Manufacturing Campus
                     </li>
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       33 Production Lines
                     </li>
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       Phase I-III Manufacturing
                     </li>
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       Commercial Manufacturing
                     </li>
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       Analytical Development
                     </li>
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       Tech-Transfer
                     </li>
                   </ul>
@@ -100,36 +101,36 @@
                       />
                     </div>
                   </div>
-                  <div class="font-size18 fontf7 iti">
+                  <div class="font-size18 fontf6 iti">
                     International Medical Park
                   </div>
 
                   <router-link
                     to="/about/facilities/spiro"
-                    class="read-more font-size30 fontf7 iti"> 
+                    class="read-more font-size24 fontf6 iti"> 
                     SPIRO Site
                   </router-link>
 
-                  <p class="font-size18 textColor txt-bold">
-                    Integrated Laboratory Services Process and Analytical Method
+                  <p class="font-size18 textColor">
+                    Integrated Laboratory Services. Process and Analytical Method
                     Development. Research and Development Center.
                     <text class="title-color txt-bold">5,000 m²</text>
                     (54,000 ft²).
                   </p>
                   <ul class="txt-ul mt-2">
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       Vector Engineering
                     </li>
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       Animal Studies
                     </li>
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       Cellular Biology
                     </li>
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       Bioassay & Testing
                     </li>
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       Novel Capsid Screening
                     </li>
                   </ul>
@@ -143,52 +144,57 @@
                       />
                     </div>
                   </div>
-                  <div class="font-size18 fontf7 iti">
+                  <div class="font-size18 fontf6 iti">
                     International Medical Park
                   </div>
 
                   <router-link
                     to="/about/facilities/pine"
-                    class="read-more font-size30 fontf7 iti"> 
+                    class="read-more font-size24 fontf6 iti"> 
                     PINE Site
                   </router-link>
 
-                  <p class="font-size18 textColor txt-bold">
+                  <p class="font-size18 textColor">
                     Process and Analytical Method Development. Pre-clinical and
                     Clinical Manufacturing. Three-building campus.
-                    <text class="title-color txt-bold">10,000</text
-                    > m² (107,639 ft²).
+                    <text class="title-color txt-bold">10,000 m²</text
+                    > (107,639 ft²).
                   </p>
                   <ul class="txt-ul mt-2">
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       GMP Manufacturing Building
                     </li>
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       8 Production Lines
                     </li>
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       IND-Enabling CMC
                     </li>
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       Phase I & II Manufacturing
                     </li>
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       Bank Construction
                     </li>
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       Aseptic Fill & Finish
                     </li>
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       Non-Clinical Investigation
                     </li>
-                    <li class="font-size18 textColor txt-bold">
+                    <li class="font-size18 textColor">
                       Tech-Transfer
                     </li>
                   </ul>
                 </el-col>
               </el-row>
-            </div></el-col
-          >
+            </div>
+
+            <!-- facility locations -->
+
+
+
+          </el-col>
         </div>
       </div>
       <section id="callout" class="">
@@ -201,8 +207,8 @@
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size30 txt-bold fontf8 mb-3 mt-5">
-            CDMO Service
+          <h1 class="p-title font-size30 section-title fontf6 mb-2 mt-0">
+            CDMO Services
           </h1>
           <el-row class="image--callout">
             <el-col :span="8" :xs="24" class="visible-xs-block">
@@ -214,18 +220,18 @@
               ></div>
             </el-col>
             <el-col
-              :span="16"
+              :span="15"
               :xs="24"
-              class="cdmo-txt bg-pinkbluelfr font-size24 fontf3"
+              class="cdmo-txt bg-pinkbluelfr font-size18"
               >We provide comprehensive CDMO services encompassing process
               development, analytical methods, IND-enabling CMC (Chemistry,
               Manufacturing, and Controls), as well as clinical and commercial
               manufacturing for viral vector, oncolytic virus, and cell therapy
               products. Our expertise extends to offering holistic solutions
               tailored to support the industrialization and commercialization of
-              various products at the Pre-IND stage and beyond.</el-col
-            >
-            <el-col :span="8" :xs="24" class="hidden-xs">
+              various products at the Pre-IND stage and beyond.
+            </el-col>
+            <el-col :span="9" :xs="24" class="hidden-xs">
               <div
                 class="image--callout_image"
                 style="
@@ -234,8 +240,7 @@
               ></div>
             </el-col>
           </el-row>
-
-          <el-row class="news--slider row" :gutter="10">
+          <el-row class="news--slider row" :gutter="24">
             <el-col
               :xs="24"
               :span="6"
@@ -243,48 +248,41 @@
               v-for="(item, index) in cdmoList"
               :key="index"
             >
-              <router-link
-                to="/about/facilities/spiro"
-                class="block tans service--box_link bg-pinkbluelfr"
-              >
+              <div class="block tans service--box_link bg-pinkbluelfr">
                 <div class="service--box align-items-start">
-                  <div class="service--box_icon mb-3 min-width-70">
+                  <div class="service--box_icon mb-2 min-width-70">
                     <img
-                      class="icon--white"
-                      :src="item.actImgUrl"
-                      alt="GMP Vector Manufacturing icon"
-                    />
-                    <img
-                      class="icon--colour"
-                      :src="item.imgUrl"
-                      alt="GMP Vector Manufacturing icon"
+                    class="icon--colour"
+                    :src="item.imgUrl"
+                    alt="GMP Vector Manufacturing icon"
                     />
                   </div>
-                  <div class="font-bold p-large mb-3 font-size24 fontf8">
+                  <span class="font-bold p-large mb-3 font-size24 fontf6">
                     {{ item.title }}
-                  </div>
-                  <div style="height: 200px" class="cdmo-cont">
+                  </span>
+                  <div class="cdmo-cont">
                     <ul class="txt-ul">
                       <li
                         v-for="(i, idx) in item.list"
                         :key="idx"
-                        class="fontf2 font-size18"
+                        class="font-size18"
                       >
                         {{ i }}
                       </li>
                     </ul>
                   </div>
+                  <br>
                   <router-link
                     :to="item.path"
-                    class="mt-auto flex-shrink-0 btn--underline blog-btn font-size18 fontf7"
+                    class="mt-auto flex-shrink-0 btn--underline blog-btn font-size18 fontf6"
                     >Read More</router-link
                   >
                 </div>
-              </router-link>
+              </div>
             </el-col>
           </el-row>
         </el-col>
-      </section>
+    </section>
       <section id="CROout" class="">
         <el-col
           :xs="22"
@@ -295,14 +293,13 @@
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size30 txt-bold fontf8 mb-0 mt-5">
+          <h1 class="p-title font-size30 txt-bold fontf6 mb-0 mt-4">
             CRO Service
           </h1>
-          <div class="wysiwyg--content colour-white mb-3">
-            <p class="textColor fontf4 font-size24">
+          <div class="wysiwyg--content colour-white mb-2">
+            <p class="textColor font-size18">
               OBiO provides an integrated portfolio of plasmid construction,
-              viral packaging, <br />
-              cell biology and animal study services for biomedical researchers
+              viral packaging, cell biology and animal study services for biomedical researchers.
             </p>
           </div>
           <el-row class="cro--service row" :gutter="10">
@@ -319,18 +316,17 @@
                     class="service--box_icon mb-2 min-width-70"
                     style="margin: auto"
                   >
-                    <!-- <img class="icon--white" :src="item.actImgUrl" alt="GMP Vector Manufacturing icon" /> -->
-                    <!-- class="icon--colour" -->
                     <img
                       :src="item.imgUrl"
-                      alt="GMP Vector Manufacturing icon"
+                      alt="GMP Manufacturing icon"
                     />
                   </div>
-                  <p class="textColor font-size18">{{ item.text }}</p>
+                  <p class="textColor font-size18" style="margin-bottom:40px">{{ item.text }}</p>
+                  <br>
                   <a
                     @click="croPopLabora(item.popLaboraId)"
-                    class="read-more font-size18 fontf7 service--box-a"
-                    style="cursor: pointer"
+                    class="read-more font-size18 fontf6 service--box-a"
+                    style="cursor: pointer;"
                     >Read More</a
                   >
                 </div>
@@ -375,7 +371,7 @@
           style="margin: auto"
           class="container"
         >
-          <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-3">
+          <h1 class="p-title font-size30 txt-bold fontf6 mb-2 mt-4">
             Our Capabilities
           </h1>
           <el-row :gutter="20" class="mb-4">
@@ -559,10 +555,7 @@ const croList = ref([
     popLaboraId: 1,
     imgUrl: handleViteImages("croIcon1.png"),
     title: "Plasmid",
-    text: `At OBiO, our dedicated
-development team is
-committed to assisting
-you in designing,
+    text: `We offer assistance in designing,
 constructing, and
 manufacturing plasmids
 for fuctional genomics
@@ -574,20 +567,17 @@ viral packaging.`,
     popLaboraId: 2,
     imgUrl: handleViteImages("croIcon2.png"),
     title: "Viral Vector",
-    text: `We specialize in offering
-comprehensive services
-encompassing the
+    text: `We offer services
+including the
 design, construction, and
 packaging of various
 types of viral vectors.
-Additionally, we assist in
+We can also assist in
 executing a diverse 
 range of biomolecular
 operations tailored to 
 your specific gene of
-interest, ensuring
-thorough support
-throughout the process.`,
+interest.`,
   },
   {
     popLaboraId: 3,
@@ -596,7 +586,7 @@ throughout the process.`,
     text: `We offer an extensive 
 array of contract 
 research services 
-tailored for functional 
+tailored to functional 
 genomics studies.`,
   },
   {
@@ -617,10 +607,9 @@ project.`,
     popLaboraId: 5,
     imgUrl: handleViteImages("croIcon5.png"),
     title: "Extracellular Vesicle",
-    text: `Our services for extracellular vesicle include isolation, 
+    text: `We offer extracellular vesicle services including isolation, 
 identification, and functional 
-research at the laboratory stage. For samples from different sources, our scientist team has developed multiple isolation solutions which have been 
-successfully applied in samples of cells, body fluids and tissue exosomes such as cerebrospinal fluid, urine, brain tissue and liver.
+research at the laboratory stage. Our scientists have successfully developed various isolation techniques for samples from different sources.
 `,
   },
 ]);
@@ -628,27 +617,33 @@ const croLaboraList = reactive([
   {
     id: 1,
     title: "Plasmid",
-    txt: `Artificial constructed plasmid DNA is one of the most commonly used vector tools for gene therapy research. At OBiO, our reliable development team will help you design, construct and manufacture plasmid for functional genomics research and viral packaging. We provide you with efficient vector construction services in a shorten delivery cycle, optimize your molecule cloning operation with reduced time and cost, and advance the progress of your research project. All customized plasmid products are regulated with strict internal quality controls to ensure that our product fulfills your design requirements.`,
+    txt: `Artificial constructed plasmid DNA is one of the most commonly used vector tools for gene therapy research. 
+    At OBiO, our reliable development team will help you design, construct and manufacture plasmids for functional genomics research and viral packaging. 
+    We provide you with efficient vector construction services with a short delivery cycle, optimize your molecule cloning operations with reduced time and cost, and advance the progress of your research project. 
+    All customized plasmid products are regulated with strict internal quality controls to ensure that our product fulfills your design requirements.`,
   },
   {
     id: 2,
     title: "Viral Vector",
-    txt: `Viral vectors are widely used as gene transduction tools in biomedical research and gene therapy product development. At OBiO, we provide the design, construction and packaging services for adeno-associated virus, adenovirus, lentivirus, and retrovirus. We will help you complete a variety of biomolecular operations for your gene of interest, including overexpression, interference, knock-out, cell marking and physiological regulation, fully meeting your diversified demands in your study.`,
+    txt: `Viral vectors are widely used as gene transduction tools in biomedical research and gene therapy product development. 
+    At OBiO, we provide the design, construction, and packaging services for adeno-associated virus, adenovirus, lentivirus, and retrovirus. 
+    We will help you complete a variety of biomolecular operations for your gene of interest, including overexpression, interference, knock-out, cell marking, and physiological regulation.`,
   },
   {
     id: 3,
     title: "Experiment Solutions",
-    txt: `“Bridging resources for life science” as our commitment, we provide a wide spectrum of contract research services for functional genomics studies including stable producer cell line construction at laboratory phase, cell biology experiments, animal model construction, and parameter testing, as well as other specialty services for exosome, CRISPR/Cas9 library and non-coding RNA.`,
+    txt: `We are committed to bridging resources for life science, so we provide a wide spectrum of contract research services for functional genomics studies, including stable producer cell line construction at laboratory phase, cell biology experiments, animal model construction, and parameter testing, as well as other specialty services for exosome, CRISPR/Cas9 library, and non-coding RNA.`,
   },
   {
     id: 4,
     title: "Related Products",
-    txt: `In addition to our contract research service, we provide in-stock virus vectors, proteins, gRNA library, and relevant reagent, meeting your research demand from different aspects.`,
+    txt: `In addition to our contract research service, we provide in-stock virus vectors, proteins, gRNA library, and relevant reagents, to meet your research demands.`,
   },
   {
     id: 5,
     title: "Extracellular Vesicle",
-    txt: `Our services for extracellular vesicle include isolation, identification, and functional research at the laboratory stage. For samples from different sources, our scientist team has developed multiple isolation solutions which have been successfully applied in samples of cells, body fluids and tissue exosomes such as cerebrospinal fluid, urine, brain tissue and liver.`,
+    txt: `Our services for extracellular vesicle include isolation, identification, and functional research at the laboratory stage. 
+    For samples from different sources, our scientists have developed multiple isolation solutions that have been successfully applied in samples of cells, body fluids, and tissue exosomes, such as cerebrospinal fluid, urine, brain tissue, and liver.`,
   },
 ]);
 function croPopLabora(id) {
@@ -767,13 +762,21 @@ function handleClose() {
 }
 #CROout {
   .service--box_link {
-    height: 550px;
+    height: 100%;
   }
   .service--box_link .service--box {
-    padding: 0.5rem;
+    padding: 1.5rem;
   }
   .service--box_link:hover .service--box {
     background-color: #fff;
+  }
+}
+#callout {
+  .service--box_link {
+    height: 100%;
+  }
+  .service--box_link .service--box {
+    padding: 1.5rem;
   }
 }
 @media (max-width: 765px) {

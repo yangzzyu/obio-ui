@@ -17,11 +17,11 @@
       style="margin: auto"
       class="container"
     >
-      <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-4">
+      <h1 class="p-title font-size30 txt-bold fontf6 mb-1 mt-4">
         News and Events
       </h1>
       <el-row class="image--callout mb-6" :gutter="40">
-        <el-col :span="24" :xs="24" class="font-size20 news-list">
+        <el-col :span="24" :xs="24" class="font-size18 news-list">
           <div class="news-i" v-for="(item, index) in eventsList" :key="index">
             <router-link
               :to="
@@ -30,17 +30,17 @@
                   : '/news-details/events/' + item.id
               "
               >
-              <div class="font-size18 fontf4 textColor">
+              <div class="font-size18 fontf3 textColor">
                 {{ item.title }}
               </div>
-              <p class="title-color font-size18 fontf3">{{ item.time }}</p>
+              <p class="title-color font-size14">{{ item.time }}</p>
             </router-link
             >
           </div>
           <router-link
             v-if="isShow"
             to="/insight/news"
-            class="btn-a font-size18 fontf7 bg-pinkbluelfr events-btn"
+            class="btn-a font-size18 fontf6 bg-pinkbluelfr events-btn"
             >All News</router-link
           >
         </el-col>
@@ -72,6 +72,7 @@ eventsList.value = [...releases.value.slice(0, 2), ...events.value.slice(0, 1)];
   align-items: center;
 }
 .btn-a {
-  margin-top: 20px;
+  margin-top: 10px;
+  border-radius: 12px;
 }
 </style>

@@ -246,9 +246,9 @@
           <p>
             <span style="line-height: 2"
               >The current operating manufacturing footprint at OBiO covers of a
-              pilot testing platform of +1,000 sqm, and a three-building cGMP
-              manufacturing platform with +10,000 sqm (107,639 ft²) in total. Furthermore, we
-              have constructed OBiO Intelli-M site with 77,000 sqm (828,821 ft²) cGMP
+              pilot testing platform of +1,000 m², and a three-building cGMP
+              manufacturing platform with +10,000 m² (107,639 ft²) in total. Furthermore, we
+              have constructed OBiO Intelli-M site with 77,000 m² (828,821 ft²) cGMP
               footprint, 33 cGMP production lines, and up to 2,000 L bioreactor
               capacity at Shanghai Lin-Gang Free Trade Zone to satisfy the
               global demand of gene and cell therapy products.</span

@@ -307,7 +307,7 @@
           <p style="line-height: 2">
             In sync with the growing global demand, we have initiated the
             construction of OBiO Intelli-M GMP manufacturing site with a
-            footprint of 77,000 ㎡ (828,821 ft²) at Lin-Gang Free Trade Zone in
+            footprint of 77,000 m² (828,821 ft²) at Lin-Gang Free Trade Zone in
             Shanghai. Complemented by digitalized management system and enhanced
             manufacturing & testing facilities, OBiO Intelli-M will be able to
             capture diverse manufacturing needs and offer high-quality contract

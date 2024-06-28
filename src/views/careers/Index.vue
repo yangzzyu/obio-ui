@@ -11,7 +11,7 @@
     <Focus :focusObj="FocusData" />
     <section class="culture-box hero-style-top careers-box" id="mission-box">
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
-        <h1 class="title-color font-size50 txt-bold section-title fontf8">
+        <h1 class="mt-4 title-color font-size50 txt-bold section-title fontf8">
           Our Culture
         </h1>
         <br />
@@ -202,7 +202,7 @@ therapy CXO group.
     text: `Developing gene therapies for the welfare of 
 mankind by virtue of its in-house developed 
 all-round technology platform, its R&D and GMP 
-production centers (floorage: 15,000 ㎡ (161,458 ft²)), and its <text class="title-color txt-bold">77,000</text> ㎡ (<text class="title-color txt-bold">828,821</text> ft²) Lingang base (under construction), 
+production centers (floorage: 15,000 ㎡ (161,458 ft²)), and its <text class="title-color txt-bold">77,000</text> m² (<text class="title-color txt-bold">828,821</text> ft²) Lingang base (under construction), 
 OBiO is dedicated to constantly accelerating 
 gene therapies researches, drug discovery, 
 pharmaceutical studies, clinical and commercial 
@@ -219,7 +219,7 @@ const Labora = ref(<any>{});
 }
 
 .culture-box {
-  margin-top: -100px;
+  //margin-top: -100px;
   position: relative;
 }
 
