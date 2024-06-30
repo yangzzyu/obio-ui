@@ -11,7 +11,7 @@
     <Focus :focusObj="FocusData" />
     <section id="cap" class="cap-section hero-style-top">
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
-        <h1 class="title-color font-size50 txt-bold section-title fontf8 mb-3 mt-5">
+        <h1 class="title-color font-size50 txt-bold section-title fontf8 mb-3 mt-4">
           Why Us
         </h1>
         <h2 class="title-color our-txt font-size30 section-title fontf7">
@@ -70,34 +70,45 @@
       </div>
     </section>
     <section class="in-about-wrap quality-box cro-list mt-2" id="quality-dom">
-      <el-row :gutter="10" style="margin: auto" class="container">
-        <el-col :xs="24" :span="12" >
-          <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
-            Quality & Regulatory
-          </h1>
-          <h2 class="title-color our-txt font-size30 section-title fontf7">
-            International Compliant Quality Control System
-          </h2>
-          <div class="wysiwyg--content colour-white mb-3">
-            <p class="fontf4 textColor">
-              De-risk Your Regulatory Pathway
-              <div>Competitive compensation and benefits</div>
-              <div>
-                We provide e-CTD ready CMC related documents writing and review for your submission
-              </div>
-              <div>Analytical Development</div>
-            </p>
-          </div>
-          <router-link to="/cdmo/quality_regulatory" class="read-more font-size18 fontf7" style="justify-content: flex-start;">Read
-            More</router-link>
-        </el-col>
-        <el-col :xs="24" :span="12" >
-          <div style="text-align:center;" class="mt-6">
-            <br />
-            <img :src="handleViteImages('uploads/image/20240601/6-Quarlity-control.png')" alt="Quality Control" style="width:80%"/>
-          </div>
-        </el-col>
-      </el-row>
+      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
+        <el-row :gutter="10" style="margin: auto" class="container">
+          <el-col :xs="24" :span="8" >
+            <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+              Quality & Regulatory
+            </h1>
+            <h2 class="title-color our-txt font-size24 section-title fontf7">
+              International Compliant Quality Control System
+            </h2>
+            <div class="wysiwyg--content colour-white mb-3">
+              <p class="fontf4 textColor font-size18">
+                De-risk Your Regulatory Pathway
+                <div>Competitive compensation and benefits</div>
+                <div>We provide e-CTD ready CMC related documents writing and review for your submission</div>
+                <div>Analytical Development</div>
+              </p>
+            </div>
+            <router-link to="/cdmo/quality_regulatory" class="read-more font-size18 fontf7" style="justify-content: flex-start;">Read
+              More</router-link>
+          </el-col>
+
+
+          <el-col :xs="24" :span="16" >
+            <div style="text-align: right; overflow: hidden;" class="mt-6 zoom">
+              <el-image
+                :src="handleViteImages('uploads/image/20240601/6-Quarlity-control.png')"
+                alt="Quality Control"
+                style="width:100%;"
+                :preview-src-list="qualityControl"
+                :z-index="99999"
+                :preview-teleported="true"
+                :hide-on-click-modal="true"
+              />
+            </div>
+          </el-col>
+
+          
+        </el-row>
+      </el-col>
     </section>
     <section class="in-about-wrap equipments-box cro-list mb-2" id="equipments-dom">
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
@@ -113,6 +124,7 @@
             </el-col>
             <el-col :span="item.textSpan" :xs="24" class="font-size18 fontf3 text-conent">
               <div>
+                <br>
                 <p class="font-size30 fontf7 iti item-tit">{{ item.title }}</p>
                 <p class="font-size18 fontf3 textColor" v-html="item.text"></p>
               </div>
@@ -175,6 +187,10 @@ import Focus from "@/components/Focus.vue";
 import Events from "@/components/Events.vue";
 import Career from "@/components/Career.vue";
 import { handleViteImages, goRouter } from "@/utils";
+
+const qualityControl = reactive([
+  handleViteImages('uploads/image/20240601/6-Quarlity-control.png'),
+]);
 
 const FocusData = ref({
   title: "Capability",
@@ -248,7 +264,7 @@ const industrializeList = reactive([
     txtList: [
       "Upstream Process",
       "Downstream Process",
-      "Analytical Developmen",
+      "Analytical Development",
       "Process Validation",
     ],
   },
@@ -258,9 +274,9 @@ const industrializeList = reactive([
                   Platform:`,
     path: "/cdmo/cgmp",
     txtList: [
-      "End-to-End Offerin",
-      "Pre-IND services",
-      "Post-IND service",
+      "End-to-End Offerings",
+      "Pre-IND Services",
+      "Post-IND Services",
       "Capacity for Global",
     ],
   },
@@ -282,8 +298,8 @@ specified temperature ranges. `,
 const GMPDevicesList = ref([
   {
     imgUrl:[ handleViteImages("gmp_img1.png")],
-    imgSpan: 12,
-    textSpan: 12,
+    imgSpan: 8,
+    textSpan: 16,
     title: "Stainless Steel 100 L Fermentation Tank",
     text: ` High automation, closed end-to-end process culture design.<br /><br />
                 The stainless steel fermentation system is extensively employed for the amplification and cultivation of
@@ -295,15 +311,15 @@ const GMPDevicesList = ref([
   },
   {
     imgUrl: [handleViteImages("gmp_img2.png")],
-    imgSpan: 12,
-    textSpan: 12,
+    imgSpan: 6,
+    textSpan: 18,
     title: "Triple-tank stainless steel fermentation system",
     text: `Accommodate multiple culture volumes, offer versatility and scalability for various production requirements.`,
   },
   {
     imgUrl: [handleViteImages("gmp_img3.png")],
-    imgSpan: 6,
-    textSpan: 18,
+    imgSpan: 5,
+    textSpan: 19,
     title: "Single-use Continuous Flow Centrifuge",
     text: ` Mitigate cross-contamination risks between different batches.<br/><br />
 Enhanced recovery of the target product, with a maximum processing capacity of 240 L/h.<br/><br />
@@ -325,22 +341,22 @@ Scalability: The construction materials and fluid path of theUFcassette allow la
   },
   {
     imgUrl: [handleViteImages("gmp_img5_1.png"),handleViteImages("gmp_img5.png")],
-    imgSpan: 12,
-    textSpan: 12,
+    imgSpan: 6,
+    textSpan: 18,
     title: "AKTA Ready ",
     text: `A single-use chromatography system equipped with 2 sets of flow paths, including the Low Flow Kit and High Flow Kit. The single-use system mitigates the risk of  cross-contamination.`,
   },
   {
     imgUrl: [handleViteImages("gmp_img6.png")],
-    imgSpan: 12,
-    textSpan: 12,
+    imgSpan: 8,
+    textSpan: 16,
     title: "KR2i",
     text: `A benchtop Tangential Flow Ultrafiltration (TFUF). Combined with adisposable flow path, it can concentrate and diafiltrate vectors in a biosafety cabinet to meet the project requirements in downstream purification`,
   },
   {
     imgUrl: [handleViteImages("gmp_img7.png")],
-    imgSpan: 12,
-    textSpan: 12,
+    imgSpan: 6,
+    textSpan: 18,
     title: "Fully sealed cell preparation in a Class C+A environment",
     text: `Cellular products must be produced in an aseptic environment to ensure the sterility assurance level required for safe transfusion back to patients.<br/><br />
 The isolator and incubator management system utilize the RTP (Rapid Transfer Port) device for aseptic docking, facilitating rapid and straightforward operation, enabling the seamless exchange of internal resources within a sealed, aseptic environment, meeting the requirements for spatial and temporal isolation in the production of cellular products.
@@ -348,15 +364,15 @@ The isolator and incubator management system utilize the RTP (Rapid Transfer Por
   },
   {
     imgUrl: [handleViteImages("gmp_img8.png"),handleViteImages("gmp_img8_1.png")],
-    imgSpan: 12,
-    textSpan: 12,
+    imgSpan: 10,
+    textSpan: 14,
     title: "Magnetic separation",
     text: ``,
   },
   {
     imgUrl: [handleViteImages("gmp_img9.png")],
-    imgSpan: 12,
-    textSpan: 12,
+    imgSpan: 10,
+    textSpan: 14,
     title: "Efficient gas-phase liquid nitrogen tank",
     text: `
     The Biosafe smart intelligent control system integrates liquid level control and container monitoring functions, displaying container safety monitoring information throughout the entire process from warehouse entry to exit.
@@ -370,8 +386,18 @@ const Labora = ref(<any>{});
 </script>
 
 <style lang="scss" scoped>
+
+.zoom {
+  padding: 50px;
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+}
+.zoom:hover {
+  transform: scale(1.15);
+}
+
 .cap-section {
-  margin-top: -100px;
+  //margin-top: -100px;
   position: relative;
 }
 

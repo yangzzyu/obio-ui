@@ -43,7 +43,7 @@ export const ViralList = ref<ViralItem[]>([
   {
     id: 2,
     imgUrl: handleViteImages("cdmo_icon3.png"),
-    title: "Cell Therapy Products",
+    title: "Cell Line",
     content: `We provide autologous, such as CAR-T therapy, and allogeneic
     cell therapy products, such as universal T-cell therapy, natural
     killer cell therapy, and hematopoietic stem cell therapy.`,

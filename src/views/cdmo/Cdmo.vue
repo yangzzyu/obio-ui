@@ -8,7 +8,7 @@
 -->
 <template>
   <div class="CDMO-Solutions-wrap">
-    <div class="section-1 mb-3">
+    <div class="section-1 mb-3 mt-3">
       <el-col
         :xs="22"
         :sm="20"
@@ -25,7 +25,7 @@
             </div>
           </el-col>
           <el-col :xs="24" :span="14">
-            <p class="font-size18 fontf7 cro-p textColor">
+            <p class="font-size18 fontf4 cro-p textColor">
               We provide comprehensive CDMO services encompassing process
               development, analytical methods, IND-enabling CMC (Chemistry,
               Manufacturing, and Controls), as well as clinical and commercial
@@ -34,14 +34,14 @@
               tailored to support the industrialization and commercialization of
               various products at the Pre-IND stage and beyond.
             </p>
-            <p class="font-size18 fontf7 cro-p textColor">
+            <p class="font-size18 fontf4 cro-p textColor">
               Through years of dedicated effort, OBiO Technology has built an integrated
               process development system, supported by a flexible cGMP
               manufacturing platform, comprehensive quality system and efficient
               project management. Our experienced team of experts will navigate
               the industrialization process with you side-by-side.
             </p>
-            <p class="font-size18 fontf7 cro-p textColor">
+            <p class="font-size18 fontf4 cro-p textColor">
               With our technical expertise in viral vector, oncolytic virus and
               cell therapy, we will help you to accelerate your product
               life-cycle from pre-clinical to commercially ready.
@@ -53,8 +53,8 @@
             <el-col :span="4" :xs="24" class="tx-c">
               <div class="nums-list bg-pinkbluelfr">
                 <div class="content">
-                  <div class="pn fontf7 font-size24">
-                    Assist Clients to Obtain
+                  <div class="pn fontf5 font-size24">
+                    Assisted Clients to Obtain
                   </div>
                   <el-statistic :value="indApprovalsValue" class="number-c">
                     <template #suffix>
@@ -63,10 +63,10 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24" style="margin-bottom: -10px">
                     IND Approvals
                   </div>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24">
                     Including
                   </div>
                   <el-statistic :value="fdaApprovalsValue" class="number-c">
@@ -76,7 +76,7 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24">
                     FDA Approvals
                   </div>
                 </div>
@@ -92,7 +92,7 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24">
                     Gene and Cell Therapy Programs
                   </div>
                 </div>
@@ -102,12 +102,12 @@
                 <div class="content">
                   <el-statistic :value="squareFeetValue" class="number-c">
                     <template #suffix>
-                      <div class="nums fontf10">
+                      <div class="nums fontf4">
                         <span class="fh">K ft²</span>
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24">
                     of CRO & CDMO service operational area
                   </div>
                 </div>
@@ -123,7 +123,7 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24">
                     Global Service Clients
                   </div>
                 </div>
@@ -133,12 +133,12 @@
                 <div class="content">
                   <el-statistic :value="suspendedValue" class="number-c">
                     <template #suffix>
-                      <div class="nums fontf10">
+                      <div class="nums fontf4">
                         <span class="fh">L</span>
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24">
                     Suspended Cell Culture Production System
                   </div>
                 </div>
@@ -154,7 +154,7 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24">
                     Cumulative CGT CDMO Projects
                   </div>
                 </div>
@@ -169,7 +169,7 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24">
                     Process Development Projects
                   </div>
                 </div>
@@ -185,7 +185,7 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24">
                     Analytical Method Development Projects
                   </div>
                 </div>
@@ -200,7 +200,7 @@
                       </div>
                     </template>
                   </el-statistic>
-                  <div class="pn fontf7 font-size24">
+                  <div class="pn fontf5 font-size24" style="margin-bottom: 52px">
                     Batches
                   </div>
                 </div>
@@ -210,7 +210,7 @@
         </div>
       </el-col>
     </div>
-    <section id="cdmo-service-box" class="cro-list">
+    <section id="cdmo-service-box" class="cro-list" style="margin-top: -100px">
       <el-col
         :xs="22"
         :sm="20"
@@ -283,102 +283,40 @@
         </el-row>
       </el-col>
     </section>
-    <div class="in-about-wrap facilities-box mt-5" id="manufacturing-box">
-      <div class="section-3">
-        <el-col
-          :xs="22"
-          :sm="20"
-          :md="20"
-          :lg="20"
-          :xl="22"
-          style="margin: auto"
-          class="container"
-        >
-          <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
-            Facilities
-          </h1>
-
-          <div class="fac-con">
-            <el-row class="row" :gutter="10">
-              <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8" class="">
-                <div class="manufacturing-list bg-pinkbluelfr">
-                  <div class="content">
-                    <img
-                      :src="handleViteImages('facilities1.jpg')"
-                      alt="OBiO Intelli-M"
-                    />
-                  </div>
-                </div>
-                <div class="font-size18 fontf7 iti">
-                  Lin-Gang Free-Trade Zone
-                </div>
-                <div class="font-size30 fontf7 iti">OBiO Intelli-M</div>
-                <p class="font-size18 textColor txt-bold">
-                  Process Development Characterization Clinical and Commercial
-                  Manufacturing.
-                  <text class="title-color txt-bold">77,000</text>㎡ (828,821 ft²)
-                  Facility for Global Supply
-                </p>
-                <router-link
-                  to="/about/facilities/intellim"
-                  class="read-more font-size18 fontf7"
-                  >Read More</router-link
-                >
-              </el-col>
-              <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-                <div class="manufacturing-list bg-pinkbluelfr">
-                  <div class="content">
-                    <img
-                      :src="handleViteImages('facilities2.jpg')"
-                      alt="SPIRO Site"
-                    />
-                  </div>
-                </div>
-                <div class="font-size18 fontf7 iti">
-                  International Medical Park
-                </div>
-                <div class="font-size30 fontf7 iti">SPIRO Site</div>
-
-                <p class="font-size18 textColor txt-bold">
-                  Integrated Laboratory Services Processand Analytical Method
-                  Development. Research and Development Center
-                </p>
-                <router-link
-                  to="/about/facilities/spiro"
-                  class="read-more font-size18 fontf7"
-                  >Read More</router-link
-                >
-              </el-col>
-              <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
-                <div class="manufacturing-list bg-pinkbluelfr">
-                  <div class="content">
-                    <img
-                      :src="handleViteImages('facilities3.jpg')"
-                      alt="PINE Site"
-                    />
-                  </div>
-                </div>
-                <div class="font-size18 fontf7 iti">
-                  International Medical Park
-                </div>
-                <div class="font-size30 fontf7 iti">PINE Site</div>
-                <p class="font-size18 textColor txt-bold">
-                  Process and Analytical Method Development. Pre-clinical and
-                  Clinical Manufacturing. Three-building,
-                  <text class="title-color txt-bold">10,000</text> ㎡
-                  (107,639 ft²) campus
-                </p>
-                <router-link
-                  to="/about/facilities/pine"
-                  class="read-more font-size18 fontf7"
-                  >Read More</router-link
-                >
-              </el-col>
-            </el-row>
-          </div></el-col
-        >
+    <section id="whyobio">
+        <div class="section-3">
+          <el-col
+            :xs="22"
+            :sm="20"
+            :md="20"
+            :lg="20"
+            :xl="22"
+            style="margin: auto"
+            class="container"
+          >
+            <div class="cGMP-title-t2">
+              <div class="fontf7 font-size50 ct"><span>Why OBiO?</span></div>
+                <i class="bg"></i>
+            </div>
+            <div class="Viral-Vector-wrap cGMP-zIndex">
+              <div class="section-3" style="background: transparent">
+                <el-row class="list row" style="margin-top: 0">
+                  <el-col :sm="12" v-for="(i, k) in vectorList" :key="k">
+                    <div class="boxs">
+                      <div class="ub ub-ac">
+                        <img class="ico" :src="i.bgUrl" alt="" srcset="" />
+                        <div class="txt fontf5 font-size18 color666 ub-f1">
+                          {{ i.txt }}
+                        </div>
+                      </div>
+                    </div>
+                  </el-col>
+                </el-row>
+              </div>
+            </div>
+          </el-col>
       </div>
-    </div>
+    </section>
     <section id="innovation">
       <div class="in-about-wrap innovation-box">
         <div class="section-3">
@@ -465,8 +403,7 @@
                   </a>
                 </el-col>
               </el-row>
-            </div></el-col
-          >
+            </div></el-col>
         </div>
       </div>
     </section>
@@ -499,6 +436,35 @@ import { useTransition } from "@vueuse/core";
 import { ViralList } from "./data/Index";
 import { ArrowRight } from "@element-plus/icons-vue";
 import { handleViteImages } from "@/utils";
+import Process from "@/views/cdmo/Process.vue";
+
+const vectorList = ref([
+  {
+    bgUrl: handleViteImages("highlights/1.png"),
+    txt: "10+ years of dedication to gene and cell therapy",
+  },
+  {
+    bgUrl: handleViteImages("highlights/2.png"),
+    txt: `130 process development projects 230
+                      analytical methods developed`,
+  },
+  {
+    bgUrl: handleViteImages("highlights/3.png"),
+    txt: "Quality-driven team of experts with in-time responding",
+  },
+  {
+    bgUrl: handleViteImages("highlights/4.png"),
+    txt: `Efficient technology transfer with optimizing process validation`,
+  },
+  {
+    bgUrl: handleViteImages("highlights/5.png"),
+    txt: `Process development versatility for various product needs stages`,
+  },
+  {
+    bgUrl: handleViteImages("highlights/6.png"),
+    txt: `End-to-end regulatory support with side-by-side navigation`,
+  },
+]);
 
 import {
   Autoplay,
@@ -609,7 +575,7 @@ const croList = ref([
   },
   {
     imgUrl: handleViteImages("cdmo3.png"),
-    title: "Cell Therapy Products",
+    title: "Cell Line",
     path: "/cdmo/cgmp/cell_therapy_products",
     textArr: [
       "Autologous and homologous immunocyte therapies",
@@ -677,7 +643,7 @@ const analyticalSourceValue = useTransition(analyticalSource, {
 const batchValue = useTransition(batchSource, {
   duration: 1500,
 })
-cellSource.value = 170;
+cellSource.value = 300;
 cumulativeCgt.value = 300;
 indApprovals.value = 38;
 fdaApprovals.value = 11;
