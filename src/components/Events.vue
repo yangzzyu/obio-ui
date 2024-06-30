@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-04-01 16:20:59
+ * @LastEditTime: 2024-06-25 14:46:54
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -53,6 +53,8 @@
 import { ref } from "vue";
 import { releases, events } from "@/views/insights/data/Index";
 import { handleViteImages } from "@/utils";
+import { articlesPages } from '@/views/insights/api.ts'
+import { formatDate } from '@/utils/index'
 
 const props = defineProps({
   isShow: {
@@ -61,7 +63,38 @@ const props = defineProps({
   },
 });
 const eventsList = ref([]);
-eventsList.value = [...releases.value.slice(0, 2), ...events.value.slice(0, 1)];
+// eventsList.value = [...releases.value.slice(0, 2), ...events.value.slice(0, 1)];
+function getNews() {
+  return new Promise((resolve, reject) => {
+    articlesPages('news', {
+      page: 1,
+      limit: 2,
+    }).then(res => {
+      resolve(res?.data?.list || [])
+    })
+  });
+}
+
+function getEvents() {
+  return new Promise((resolve, reject) => {
+    articlesPages('event', {
+      page: 1,
+      limit: 1,
+    }).then(res => {
+      resolve(res?.data?.list || [])
+    })
+  });
+}
+
+function getReleasesList() {
+  Promise.all([getNews(), getEvents()])
+    .then(([news, events]: any) => {
+      eventsList.value = [...news, ...events]
+    })
+    .catch(error => {
+    });
+}
+getReleasesList()
 </script>
 
 <style scoped>
@@ -71,6 +104,7 @@ eventsList.value = [...releases.value.slice(0, 2), ...events.value.slice(0, 1)];
   justify-content: center;
   align-items: center;
 }
+
 .btn-a {
   margin-top: 10px;
   border-radius: 12px;

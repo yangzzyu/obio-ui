@@ -3,39 +3,37 @@
     <section id="cro" class="cro-list">
       <div class="cro-list-item row" v-for="(item, index) in releasesList" :key="index">
         <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
-          <div v-if="item.img">
+          <div v-if="item.subPic">
             <el-row :gutter="100">
-              <el-col :xs="24" :span="6" style="padding: 0px;">
+              <el-col :xs="24" :span="6" style="padding: 0px">
                 <div class="animate-imgxx uof img" style="
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     height: 100%;
                   ">
-                  <img :src="item.img" alt="SPIRO Site" style="width:100%;" />
+                  <img :src="item.subPic" alt="SPIRO Site" style="width: 100%" />
                 </div>
               </el-col>
               <el-col :xs="24" :span="18">
                 <p class="font-size18 iti textColor">
-                  {{ item.time }}
+                  {{ item.categoryId == "1" ? formatDate(item.pubDate) : item.eventTime }}
                 </p>
                 <h1 class="title fontf4 font-size18 title-color">
                   {{ item.title }}
                 </h1>
-                <div v-if="item.content">
-                  <div class="font-size18 ut-s4">
-                    {{ item.content }}
-                  </div>
+                <div v-if="item.summary" class="font-size18 ut-s4">
+                  {{ item.summary }}
                 </div>
-                <div v-else>
-                  <div class="font-size18 ut-s2">
+                <div v-if="item.categoryId == '2'">
+                  <div class="font-size18 ut-s2" v-if="item.eventTime">
                     <b>Time:</b> {{ item.eventTime }}
                   </div>
-                  <div class="font-size18 ut-s2">
+                  <div class="font-size18 ut-s2" v-if="item.location">
                     <b>Location:</b> {{ item.location }}
                   </div>
                 </div>
-                <router-link :to="item.type == 'news'
+                <router-link :to="item.categoryId == '1'
         ? '/news-details/releases/' + item.id
         : '/news-details/events/' + item.id
         " class="read-more font-size18 fontf7">Read More</router-link>
@@ -44,15 +42,23 @@
           </div>
           <div v-else>
             <p class="font-size18 iti textColor">
-              {{ item.time }}
+              {{ item.categoryId == "1" ? formatDate(item.pubDate) : item.eventTime }}
             </p>
             <h1 class="title fontf4 font-size18 title-color">
               {{ item.title }}
             </h1>
             <div class="font-size18 ut-s2">
-              {{ item.content }}
+              {{ item.summary }}
             </div>
-            <router-link :to="item.type == 'news'
+            <div v-if="item.categoryId == '2'">
+              <div class="font-size18 ut-s2" v-if="item.eventTime">
+                <b>Time:</b> {{ item.eventTime }}
+              </div>
+              <div class="font-size18 ut-s2" v-if="item.location">
+                <b>Location:</b> {{ item.location }}
+              </div>
+            </div>
+            <router-link :to="item.categoryId == '1'
         ? '/news-details/releases/' + item.id
         : '/news-details/events/' + item.id
         " class="read-more font-size18 fontf7">Read More</router-link>
@@ -211,6 +217,8 @@ import Events from "@/components/Events.vue";
 import { handleViteImages } from "@/utils";
 import emailjs from "@emailjs/browser";
 import type { FormInstance, FormRules } from "element-plus";
+import { articlesPages } from "./api.ts";
+import { formatDate } from '@/utils/index'
 
 let loading = ref(false);
 const form = reactive({
@@ -235,10 +243,37 @@ const changeCdmo = (e) => {
   form.inquired_item = arr.join("\n");
 };
 const releasesList = ref([]);
-releasesList.value = [
-  ...releases.value.slice(0, 3),
-  ...events.value.slice(0, 2),
-];
+
+function getNews() {
+  return new Promise((resolve, reject) => {
+    articlesPages("news", {
+      page: 1,
+      limit: 3,
+    }).then((res) => {
+      resolve(res?.data?.list || []);
+    });
+  });
+}
+
+function getEvents() {
+  return new Promise((resolve, reject) => {
+    articlesPages("event", {
+      page: 1,
+      limit: 2,
+    }).then((res) => {
+      resolve(res?.data?.list || []);
+    });
+  });
+}
+
+function getReleasesList() {
+  Promise.all([getNews(), getEvents()])
+    .then(([news, events]: any) => {
+      releasesList.value = [...news, ...events];
+    })
+    .catch((error) => { });
+}
+getReleasesList();
 const validatePhone = (rule, value, callback) => {
   if (!value) {
     callback();
@@ -377,9 +412,11 @@ const sendEmail = async (formEl: FormInstance | undefined) => {
     justify-content: center;
   }
 }
-.el-checkbox{
+
+.el-checkbox {
   font-size: inherit !important;
 }
+
 .check-txt :deep(.el-checkbox__label) {
   color: #747475;
   // font-family: "puhuiti-2-45";
