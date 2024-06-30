@@ -18,8 +18,8 @@
       :xs="24"
       :sm="16"
       :md="18"
-      :lg="20"
-      :xl="22"
+      :lg="18"
+      :xl="18"
       class="container"
       style="margin: 0 auto"
     >
@@ -29,6 +29,7 @@
             <img
               :src="handleViteImages('footer_logo.png')"
               alt="OBiO Tech, Inc."
+              style="max-width: 250px;"
             />
           </div>
 
