@@ -2,12 +2,12 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-06-25 09:19:33
+ * @LastEditTime: 2024-07-01 09:56:26
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
-  <!-- <Focus :focusObj="FocusData" /> -->
+  <Focus :focusObj="FocusData" />
   <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container  mb-3">
     <div class="public-box">
       <div class="nav-box">
@@ -41,6 +41,7 @@
 
 <script lang="ts" setup name="ServiceDetail">
 import { ref, onMounted, computed, nextTick, watch } from "vue";
+import Focus from "@/components/Focus.vue";
 import { handleViteImages, goRouter } from "@/utils";
 import { publicInfo } from './api.ts'
 import { servicesStore } from '@/stores/Services'
@@ -58,7 +59,7 @@ const publicListData = computed(() => setServicesStore?.publicListData)
 
 const activeId = ref('')
 const FocusData = ref({
-  title: "News",
+  title: "Scientific Services",
   hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
   visibleXsImgUrl: handleViteImages("head_bg.jpg"),
 });
@@ -68,7 +69,8 @@ const publicInfoItem = ref({})
 function getpublicInfo(id) {
   activeId.value = id
   publicInfo({ id: id }).then(res => {
-    publicInfoItem.value = res?.data || {}
+    publicInfoItem.value = res?.data || {};
+    FocusData.value.title = publicInfoItem.value.title
   })
 }
 onMounted(() => {
@@ -82,9 +84,10 @@ onMounted(() => {
 </script>
 <style lang="scss">
 .content-b {
-  img{
+  img {
     width: 100%;
   }
+
   table {
     width: 100%;
     word-break: break-all;
@@ -114,7 +117,6 @@ onMounted(() => {
 
   table td a {
     color: #d9534f;
-    /* Red color */
     text-decoration: none;
   }
 
@@ -125,12 +127,26 @@ onMounted(() => {
 </style>
 
 <style lang="scss" scoped>
+.public-focus {
+  height: 200px;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .txt {
+    height: 100%;
+    color: #fff;
+  }
+}
+
 .public-box {
   // width: 100%;
   display: grid;
   grid-template-columns: 275px auto;
   overflow: hidden;
-
+  padding-top: 20px;
 
   .nav-box {
     min-width: 0;
