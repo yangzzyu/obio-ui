@@ -2,29 +2,12 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-07-01 09:44:13
+ * @LastEditTime: 2024-07-01 09:56:26
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
-  <!-- <Focus :FocusData="FocusData" /> -->
-  <div class="focus public-focus" :class="'hero-style-2'">
-    <div class="hidden-xs-only focus-img" v-if="FocusData.title">
-      <img :src="FocusData.hiddenXsImgUrl" :alt="FocusData.title" />
-    </div>
-    <div class="hidden-sm-only hidden-md-only hidden-lg-only hidden-xl-only focus-img" v-if="FocusData.title">
-      <img :src="FocusData.visibleXsImgUrl" :alt="FocusData.title" />
-    </div>
-    <div class="txt ub ub-ac">
-      <div class="ub-f1">
-        <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
-          <h1 class="font-size50 focus-title fontf7 txt-bold" v-if="FocusData.title">
-            {{ FocusData.title }}
-          </h1>
-        </el-col>
-      </div>
-    </div>
-  </div>
+  <Focus :focusObj="FocusData" />
   <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container  mb-3">
     <div class="public-box">
       <div class="nav-box">
@@ -76,7 +59,7 @@ const publicListData = computed(() => setServicesStore?.publicListData)
 
 const activeId = ref('')
 const FocusData = ref({
-  title: "",
+  title: "Scientific Services",
   hiddenXsImgUrl: handleViteImages("head_bg.jpg"),
   visibleXsImgUrl: handleViteImages("head_bg.jpg"),
 });
@@ -151,7 +134,8 @@ onMounted(() => {
     width: 100%;
     object-fit: cover;
   }
-   .txt{
+
+  .txt {
     height: 100%;
     color: #fff;
   }
