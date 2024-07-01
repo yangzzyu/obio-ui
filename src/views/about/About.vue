@@ -8,47 +8,44 @@
 -->
 <template>
   <div class="in-about-wrap about-box">
-    <div class="section-1" id="who-box">
-      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+    <div class="section-1" id="">
+      <el-col 
+        :xs="22" 
+        :sm="20" 
+        :md="20" 
+        :lg="20" 
+        :xl="22" 
+        style="margin: auto" 
+        class="container"
+      >
+        <h1 class="p-title font-size30 txt-bold fontf6 mb-2 mt-5">
           Who We Are
         </h1>
         <div class="text font-size18">
-          <p class="textColor">
+          <p class="textColor mb-2">
             Established in 2013, 
-            <text class="txt-bold fontf8">
-              OBiO Technology is a pioneering Contract Research Organization (CRO) and Contract Development and Manufacturing Organization (CDMO) in gene and cell therapy, 
+            <text class="fontf8">
+              OBiO Technology
             </text>
-            offering comprehensive solutions.
-          </p>
-          <br />
-          <p class="textColor">
-            With years of dedicated effort, OBiO has developed  flexible cGMP manufacturing platform, comprehensive quality system, and efficient project management. Our 
-            <text class="txt-bold fontf8">
-              state-of-the-art 77,000㎡ (830,000 ft²) facility 
-            </text>
-            for Global Supply ensures high-quality CDMO services across preclinical, IND, clinical, and commercial stages to meet global demand.
-          </p>
-          <br />
-          <p class="textColor">
+            is a pioneering Contract Research Organization (CRO) and Contract Development and Manufacturing Organization (CDMO) in gene and cell therapy, offering comprehensive solutions.
             Guided by our mission 
-            <text class="txt-bold fontf8">
-              "Enable Gene Therapy for Better Lives," 
+            <text class="fontf8">
+              Enable Gene Therapy for Better Lives,
             </text>
             we are dedicated to delivering top-tier services globally. From bench to clinic, we are committed to advancing your product and benefiting populations worldwide.
           </p>
-          <br />
-          <p class="textColor">
-            We 
-            <text class="txt-bold fontf8">
-              specialize in 
-            </text>
+          <p class="textColor mb-2">
+            With years of dedicated effort, OBiO has developed  flexible cGMP manufacturing platform, comprehensive quality system, and efficient project management. Our 
+            state-of-the-art 77,000 m² (830,000 ft²) facility 
+            for Global Supply ensures high-quality CDMO services across preclinical, IND, clinical, and commercial stages to meet global demand.
+          </p>
+          <p class="textColor mb-2">
+            We specialize in 
             vectorology studies, functional genomics, and process and analytics development,  IND-enabling CMC, ensuring Investigational New Drug (IND) readiness and supporting all clinical and commercial manufacturing phases.
           </p>
-          <br />
           <p class="textColor">
             Our unwavering dedication ensures high-quality 
-            <text class="txt-bold fontf8">
+            <text class="fontf8">
               CDMO services 
             </text>
             for consumers worldwide across preclinical, IND, clinical, and commercial stages, including  plasmids, mRNA, AAV, LVV, Ad viral vectors, cell therapy (CAR-T, NK, Treg, iPSCs), exosomes, and cutting-edge technologies like inducible viral vector packaging, ultralow endotoxin processes, and AAVneO for tissue-specific AAV variants.
@@ -59,7 +56,7 @@
     <div class="section-2" id="history-box">
       <el-col :xs="14" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
         <div class="pub-title style2 ub ub-ver ub-pe">
-          <i class="line"></i><span class="fontf8 font-size50">History</span>
+          <i class="line"></i><span class="fontf8 font-size36">History</span>
         </div>
         <div class="about-history-swp">
           <!-- <div
@@ -88,7 +85,7 @@
             <swiper-slide v-for="(item, index) in historyList" :key="index" :class="index % 2 === 0 ? 'even' : 'odd'">
               <div class="boxs">
                 <div class="cons">
-                  <div class="year font-size30">{{ item.year }} <i></i></div>
+                  <div class="year font-size24">{{ item.year }} <i></i></div>
                   <div class="txt font-size18">
                     <ul>
                       <li v-for="(i, k) in item.txt" :key="k">
@@ -106,7 +103,7 @@
     </div>
     <section class="in-about-wrap about-box mt-5" id="facilities-box">
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container section-3">
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+        <h1 class="p-title font-size30 txt-bold fontf6 mb-3 mt-0">
           Facilities
         </h1>
         <div class="fac-con">
@@ -117,15 +114,14 @@
                   <img :src="handleViteImages('facilities1.jpg')" alt="OBiO Intelli-M" />
                 </div>
               </div>
-              <div class="font-size18 fontf7 iti">Lin-Gang Free-Trade Zone</div>
-              <div class="font-size30 fontf7 iti">OBiO Intelli-M</div>
-              <p class="font-size18 textColor txt-bold">
-                Process Development Characterization Clinical and Commercial
-                Manufacturing
-                <text class="title-color txt-bold">77,000</text> ㎡ (828,821 ft²)
-                Facility for Global Supply
+              <div class="font-size18 fontf6 iti">Lin-Gang Free-Trade Zone</div>
+              <div class="font-size24 fontf6 iti">OBiO Intelli-M</div>
+              <p class="font-size18 textColor">
+                Process Development Characterization. Clinical and Commercial
+                Manufacturing. Facility for Global Supply.
+                <text class="title-color txt-bold">77,000 m²</text>  (828,821 ft²).
               </p>
-              <router-link to="/about/facilities/intellim" class="read-more font-size18 fontf7">Read More</router-link>
+              <router-link to="/about/facilities/intellim" class="mt-2 read-more font-size18 fontf7">Read More</router-link>
             </el-col>
             <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
               <div class="manufacturing-list bg-pinkbluelfr">
@@ -133,16 +129,16 @@
                   <img :src="handleViteImages('facilities2.jpg')" alt="SPIRO Site" />
                 </div>
               </div>
-              <div class="font-size18 fontf7 iti">
+              <div class="font-size18 fontf6 iti">
                 International Medical Park
               </div>
-              <div class="font-size30 fontf7 iti">SPIRO Site</div>
+              <div class="font-size24 fontf6 iti">SPIRO Site</div>
 
-              <p class="font-size18 textColor txt-bold">
-                Integrated Laboratory Services Processand Analytical Method
-                DevelopmentResearch and Development Center
+              <p class="font-size18 textColor">
+                Integrated Laboratory Services Process and Analytical Method
+                Development Research and Development Center.
               </p>
-              <router-link to="/about/facilities/spiro" class="read-more font-size18 fontf7" LARGE>Read
+              <router-link to="/about/facilities/spiro" class="mt-2 read-more font-size18 fontf7" LARGE>Read
                 More</router-link>
             </el-col>
             <el-col :xs="24" :sm="8" :md="8" :lg="8" :xl="8">
@@ -151,38 +147,38 @@
                   <img :src="handleViteImages('facilities3.jpg')" alt="PINE Site" />
                 </div>
               </div>
-              <div class="font-size18 fontf7 iti">
+              <div class="font-size18 fontf6 iti">
                 International Medical Park
               </div>
-              <div class="font-size30 fontf7 iti">PINE Site</div>
-              <p class="font-size18 textColor txt-bold">
-                Process and Analytical Method Development Pre-clinical and
-                Clinical Manufacturing Three-building,<text class="title-color txt-bold">10,000</text> ㎡ (107,639 ft²) campus
+              <div class="font-size24 fontf6 iti">PINE Site</div>
+              <p class="font-size18 textColor">
+                Process and Analytical Method Development. Pre-clinical and
+                Clinical Manufacturing. Three-building campus.<text class="title-color txt-bold">10,000 m²</text> (107,639 ft²).
               </p>
-              <router-link to="/about/facilities/pine" class="read-more font-size18 fontf7">Read More</router-link>
+              <router-link to="/about/facilities/pine" class="mt-2 read-more font-size18 fontf7">Read More</router-link>
             </el-col>
           </el-row>
         </div>
       </el-col>
     </section>
-    <section class="in-about-wrap about-box mt-5" style="margin: 0;">
+    <section class="in-about-wrap about-box mt-0">
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container section-3">
         <!-- <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
           Factory Images
         </h1> -->
+
+        <h1 class="p-title font-size30 txt-bold fontf6 mb-3 mt-5">
+          Intelligent Medical Industrialization Base
+        </h1>
         <div class="fac-con">
           <el-row class="row" :gutter="10">
-            <el-col :xs="24" :span="6" class="">
+            <el-col :xs="12" :span="6" class="">
               <div class="manufacturing-list">
                 <div class="content">
                   <div class="factory-text">
                     <h1 class="font-size30 txt-bold fontf8">LARGE</h1>
-                    <p class="font-size18 txt-bold fontf7" style="color: #fff; margin-bottom: 10px">
-                      OBiO Technology’s intelligent medical industrialization
-                      base
-                    </p>
                     <ul class="font-size16 txt-bold is-details details-ul" style="color: #fff">
-                      <li>The only 77,000 ㎡ (828,821 ft²) scale GMP-compliant facility in the world</li>
+                      <li>The only 77,000 m² (828,821 ft²) scale GMP-compliant facility in the world</li>
                       <li>Gene cell therapy commercial production service base</li>
                     </ul>
                   </div>
@@ -191,43 +187,33 @@
                 </div>
               </div>
             </el-col>
-            <el-col :xs="24" :span="6">
+            <el-col :xs="12" :span="6">
               <div class="manufacturing-list">
                 <div class="content">
                   <div class="factory-text">
                     <h1 class="font-size30 txt-bold fontf8">COMPREHENSIVE</h1>
-                    <p class="font-size18 txt-bold fontf7" style="color: #fff; margin-bottom: 10px">
-                      OBiO Technology’s intelligent medical industrialization
-                      base
-                    </p>
                     <ul class="font-size16 txt-bold is-details details-ul" style="color: #fff">
-                      <li>Large-scale; Large production capacity</li>
-                      <li>More than 30 gene cell therapy production lines</li>
-                      <li>Large-scale multi-option prokaryocyteproduction capacity</li>
-                      <li>20 cell therapy product manufacturing lines of varied characteristics</li>
-                      <li>50-2000L comprehensive and flexible viral vector manufacturing process</li>
-                      <li>Filling and lyophilizing platform that meets the requirements for manufacturing multiple dosage forms</li>
-                      <li>Meeting the requirements of clients worldwide</li>
-                      <li>From DNA to INDto NDA</li>
+                      <li>30+ gene cell therapy production lines</li>
+                      <li>Large-scale multi-option prokaryotic production capacity</li>
+                      <li>20 cell therapy product manufacturing lines</li>
+                      <li>50-2000L comprehensive and flexible viral vector manufacturing processes</li>
+                      <li>Filling and lyophilizing platform for manufacturing multiple dosage forms</li>
+                      <li>From DNA to IND to NDA</li>
                     </ul>
                   </div>
                   <img :src="handleViteImages('facility2.png')" alt="PINE Site" />
                 </div>
               </div>
             </el-col>
-            <el-col :xs="24" :span="6">
+            <el-col :xs="12" :span="6">
               <div class="manufacturing-list">
                 <div class="content">
                   <div class="factory-text">
                     <h1 class="font-size30 txt-bold fontf8">INNOVATIVE</h1>
-                    <p class="font-size18 txt-bold fontf7" style="color: #fff; margin-bottom: 10px">
-                      OBiO Technology’s intelligent medical industrialization
-                      base
-                    </p>
                     <ul class="font-size16 txt-bold is-details details-ul" style="color: #fff">
                       <li>Single-use process vector production line</li>
                       <li>Single-use process prokaryocyteculture production line</li>
-                      <li>Filling+lyophilizingintegrated innovative filling system</li>
+                      <li>Filling and lyophilizing-integrated innovative filling system</li>
                       <li>Positive sample cell therapy product manufacturing line</li>
                     </ul>
                     <!-- <p class="font-size18 txt-bold is-details" style="color: #fff">
@@ -241,17 +227,13 @@
                 </div>
               </div>
             </el-col>
-            <el-col :xs="24" :span="6">
+            <el-col :xs="12" :span="6">
               <div class="manufacturing-list">
                 <div class="content">
                   <div class="factory-text">
                     <h1 class="font-size30 txt-bold fontf8">INTELLIGENT</h1>
-                    <p class="font-size18 txt-bold fontf7" style="color: #fff; margin-bottom: 10px">
-                      OBiO Technology’s intelligent medical industrialization
-                      base
-                    </p>
                     <ul class="font-size16 txt-bold is-details details-ul" style="color: #fff">
-                      <li>Digitization and intelligentificationbased mechanical arm material charging system</li>
+                      <li>Digitization and intelligentification-based mechanical arm material charging system</li>
                       <li>Automatic dispensing system</li>
                       <li>Automatic sample storage system in liquid nitrogen</li>
                       <li>Chip-based automatic management of cleanroom suits</li>
@@ -270,7 +252,7 @@
     </section>
     <section class="our-box mb-5" id="commitment-box">
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
-        <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">
+        <h1 class="p-title font-size30 txt-bold fontf6 mb-0 mt-1">
           Our Commitment: F-A-S-T
         </h1>
         <div style="text-align:center;">
@@ -372,9 +354,11 @@ onMounted(() => { });
   position: absolute;
   padding: 10px;
   height: 100%;
+  margin: 10px;
 
   h1 {
-    background: linear-gradient(0deg, #26fddc 0%, #3d8bd3 100%);
+    background-color: #fff;
+    //background: linear-gradient(0deg, #26fddc 0%, #3d8bd3 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

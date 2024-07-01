@@ -7,7 +7,7 @@
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
-  <section class="hero hero-slider-wrapper hero-style-1 hero-style-2">
+  <section class="hero hero-slider-wrapper hero-style-1 hero-style-2" style="height:450px;">
     <div class="hero-slider">
       <el-col
         :xs="22"
@@ -19,16 +19,16 @@
         class="container"
       >
         <div class="slide-title">
-          <h2 class="font-size50 fontf8">
+          <h2 class="font-size36 fontf8">
             Enable Gene Therapy for Better Lives
           </h2>
         </div>
         <div class="slide-subtitle">
-          <p class="font-size20 fontf7">
+          <p class="font-size20 fontf8">
             Your Trustful Partner in Research and Manufacturing for Gene and
             Cell Therapy
           </p>
-          <p class="font-size20 fontf7">
+          <p class="font-size20 fontf8">
             Providing client-centered and high-quality service, we strive to become a world leading gene and cell
             therapy CRO/CDMO group.
           </p>
@@ -49,9 +49,6 @@
           >
         </div>
       </el-col>
-      <div class="ab-svg_color">
-        <img src="@/assets/icons/radian.svg" alt="ab-svg" />
-      </div>
     </div>
   </section>
 </template>
@@ -149,7 +146,7 @@ onBeforeMount(() => {});
 @media (max-width: 1199px) {
   .hero-style-1,
   .hero-style-2 {
-    height: 550px;
+    height: 450px;
   }
 }
 

@@ -11,8 +11,6 @@
     <Focus :focusObj="FocusData" />
     <!-- <Breadcrumb v-if="routerName !== 'About Us'" :matchedData="matchedData" /> -->
     <router-view></router-view>
-    <Events />
-    <Career />
   </div>
 </template>
 
