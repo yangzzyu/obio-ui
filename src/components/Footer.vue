@@ -47,9 +47,6 @@
               <b>Phone:</b> 408-422-9864
               <br />
               <b>Email:</b> obio.us@obiosh.com
-              <br />
-              <b>Address:</b> 132 Charles Street, Suite 202, 
-              <br/>   Auburndale, MA 02466
             </dt>
             
           </dl>
