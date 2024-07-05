@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-05-09 09:29:06
+ * @LastEditTime: 2024-07-05 09:09:51
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -42,7 +42,7 @@
         <el-form-item label="I'm interested in…" required prop="interest">
           <el-select v-model="ruleForm.interest" placeholder="">
             <el-option label="General Inquiry" value="General Inquiry" />
-            <el-option label="Laboratory Sciences" value="Laboratory Sciences" />
+            <el-option label="scientific services" value="scientific services" />
             <el-option label="Process Development" value="Process Development" />
             <el-option label="Analytical/Formulation Development" value="Analytical/Formulation Development" />
             <el-option label="Non-IND (IIT) Service" value="Non-IND (IIT) Service" />

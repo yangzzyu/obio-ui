@@ -1,167 +1,111 @@
 <template>
   <div class="in-contact-form">
     <section id="Inquiry" class="productions-list">
-      <el-col
-        :xs="22"
-        :sm="20"
-        :md="20"
-        :lg="20"
-        :xl="22"
-        style="margin: auto"
-        class="container"
-      >
+      <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
         <h1 class="p-title font-size50 txt-bold fontf8 mb-3">Inquiry</h1>
         <!--
         <el-row :gutter="50" class="cdmo-top">
           <el-col :xs="24" :span="24"> 
             -->
-            <h2 class="title-color font-size18 txt-bold fontf7">
-              CDMO Solutions
-            </h2>
-            <el-checkbox-group
-              v-model="form.cdmo"
-              @change="changeCdmo"
-              class="check-txt fontf4 font-size18"
-              style="
+        <h2 class="title-color font-size18 txt-bold fontf7">
+          CDMO Solutions
+        </h2>
+        <el-checkbox-group v-model="form.cdmo" @change="changeCdmo" class="check-txt fontf4 font-size18" style="
                 display: flex;
                 flex-flow: column nowrap;
                 align-items: flex-start;
-              "
-            >
-              <el-checkbox
-                value="GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO"
-                label="GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO"
-              >
-                GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO
-              </el-checkbox>
-              <el-checkbox
-                value="CELL THERAPY CDMO SOLUTIONS"
-                label="CELL THERAPY CDMO SOLUTIONS"
-              >
-                CELL THERAPY CDMO SOLUTIONS
-              </el-checkbox>
-              <el-checkbox
-                value="ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS"
-                label="ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS"
-              >
-                ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS
-              </el-checkbox>
-              <el-checkbox
-                value="iPSC CDMO SERVICES"
-                label="iPSC CDMO SERVICES"
-              >
-                iPSC CDMO SERVICES
-              </el-checkbox>
-              <el-checkbox
-                value="PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS"
-                label="PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS"
-              >
-                PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS
-              </el-checkbox>
-              <el-checkbox
-                value="LENTIVIRAL VECTOR CDMO SOLUTIONS"
-                label="LENTIVIRAL VECTOR CDMO SOLUTIONS"
-              >
-                LENTIVIRAL VECTOR CDMO SOLUTIONS
-              </el-checkbox>
-              <el-checkbox
-                value="ONCOLYTIC VIRUS CDMO SOLUTIONS"
-                label="ONCOLYTIC VIRUS CDMO SOLUTIONS"
-              >
-                ONCOLYTIC VIRUS CDMO SOLUTIONS
-              </el-checkbox>
-              <el-checkbox
-                value="mRNA CDMO SOLUTIONS"
-                label="mRNA CDMO SOLUTIONS"
-              >
-                mRNA CDMO SOLUTIONS
-              </el-checkbox>
-              <el-checkbox
-                value="EXOSOME CDMO SOLUTIONS"
-                label="EXOSOME CDMO SOLUTIONS"
-              >
-                EXOSOME CDMO SOLUTIONS
-              </el-checkbox>
+              ">
+          <el-checkbox value="GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO"
+            label="GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO">
+            GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO
+          </el-checkbox>
+          <el-checkbox value="CELL THERAPY CDMO SOLUTIONS" label="CELL THERAPY CDMO SOLUTIONS">
+            CELL THERAPY CDMO SOLUTIONS
+          </el-checkbox>
+          <el-checkbox value="ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS" label="ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS">
+            ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS
+          </el-checkbox>
+          <el-checkbox value="iPSC CDMO SERVICES" label="iPSC CDMO SERVICES">
+            iPSC CDMO SERVICES
+          </el-checkbox>
+          <el-checkbox value="PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS"
+            label="PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS">
+            PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS
+          </el-checkbox>
+          <el-checkbox value="LENTIVIRAL VECTOR CDMO SOLUTIONS" label="LENTIVIRAL VECTOR CDMO SOLUTIONS">
+            LENTIVIRAL VECTOR CDMO SOLUTIONS
+          </el-checkbox>
+          <el-checkbox value="ONCOLYTIC VIRUS CDMO SOLUTIONS" label="ONCOLYTIC VIRUS CDMO SOLUTIONS">
+            ONCOLYTIC VIRUS CDMO SOLUTIONS
+          </el-checkbox>
+          <el-checkbox value="mRNA CDMO SOLUTIONS" label="mRNA CDMO SOLUTIONS">
+            mRNA CDMO SOLUTIONS
+          </el-checkbox>
+          <el-checkbox value="EXOSOME CDMO SOLUTIONS" label="EXOSOME CDMO SOLUTIONS">
+            EXOSOME CDMO SOLUTIONS
+          </el-checkbox>
 
-              <el-checkbox
-                value="CAR-T CDMO SOLUTIONS"
-                label="CAR-T CDMO SOLUTIONS"
-              >
-                CAR-T CDMO SOLUTIONS
-              </el-checkbox>
+          <el-checkbox value="CAR-T CDMO SOLUTIONS" label="CAR-T CDMO SOLUTIONS">
+            CAR-T CDMO SOLUTIONS
+          </el-checkbox>
 
-              <el-checkbox
-                value="NK CELL CDMO SOLUTIONS"
-                label="NK CELL CDMO SOLUTIONS"
-              >
-                NK CELL CDMO SOLUTIONS
-              </el-checkbox>
+          <el-checkbox value="NK CELL CDMO SOLUTIONS" label="NK CELL CDMO SOLUTIONS">
+            NK CELL CDMO SOLUTIONS
+          </el-checkbox>
 
-            </el-checkbox-group>
-          <!-- 
+        </el-checkbox-group>
+        <!-- 
           </el-col>
 
           <el-col :xs="24" :span="24">
             -->
-            <br>
-            <h2 class="title-color font-size18 txt-bold fontf7">
-              Laboratory Sciences
-            </h2>
-            <el-checkbox-group
-              v-model="form.laboratory"
-              @change="changeLaboratory"
-              class="check-txt fontf4 font-size18"
-              style="
+        <br>
+        <h2 class="title-color font-size18 txt-bold fontf7">
+          scientific services
+        </h2>
+        <el-checkbox-group v-model="form.laboratory" @change="changeLaboratory" class="check-txt fontf4 font-size18"
+          style="
                 display: flex;
                 flex-flow: column nowrap;
                 align-items: flex-start;
-              "
-            >
-              <el-checkbox
-                value="AAV PACKAGING SERVICES"
-                label="AAV PACKAGING SERVICES"
-              >
-                AAV PACKAGING SERVICES
-              </el-checkbox>
-              <el-checkbox
-                value="LENTIVIRUS PACKAGING SERVICES"
-                label="LENTIVIRUS PACKAGING SERVICES"
-              >
-                LENTIVIRUS PACKAGING SERVICES
-              </el-checkbox>
-              <el-checkbox
-                value="AAV-Lung X AAV-Lung M3"
-                label="AAV-Lung X AAV-Lung M3"
-              >
-                AAV-Lung X AAV-Lung M3
-              </el-checkbox>
-              <el-checkbox
-                value="AAVneO + AAVMeta Platform"
-                label="AAVneO + AAVMeta Platform"
-              >
-                AAVneO + AAVMeta PLATFORM
-              </el-checkbox>
-              <el-checkbox
-                value="Off-the-Shelf AAV PRODUCTS"
-                label="Off-the-Shelf AAV PRODUCTS"
-              >
-                Off-the-Shelf AAV PRODUCTS
-              </el-checkbox>
-            </el-checkbox-group>
-          <!--
+              ">
+          <el-checkbox value="Plasmid & siRNA" label="Plasmid & siRNA">
+            <!-- AAV PACKAGING SERVICES -->
+            Plasmid & siRNA
+          </el-checkbox>
+          <el-checkbox value="Adeno-associated Virus" label="Adeno-associated Virus">
+            <!-- LENTIVIRUS PACKAGING SERVICES -->
+            Adeno-associated Virus
+          </el-checkbox>
+          <el-checkbox value="Adenovirus" label="Adenovirus">
+            Adenovirus
+          </el-checkbox>
+          <el-checkbox value="Lentivirus" label="Lentivirus">
+            Lentivirus
+          </el-checkbox>
+          <el-checkbox value="off-the-shelf-AAV products" label="off-the-shelf-AAV products">
+            off-the-shelf-AAV products
+          </el-checkbox>
+          <el-checkbox value="CRISPR Library Servics" label="CRISPR Library Servics">
+            CRISPR Library Servics
+          </el-checkbox>
+          <el-checkbox value="Cell Experimental" label="Cell Experimental">
+            Cell Experimental
+          </el-checkbox>
+          <el-checkbox value="Animal Experimental" label="Animal Experimental">
+            Animal Experimental
+          </el-checkbox>
+          <el-checkbox value="Reagents" label="Reagents">
+            Reagents
+          </el-checkbox>
+        </el-checkbox-group>
+        <!--
           </el-col>
         </el-row> -->
         <el-row>
           <el-col :span="24" :xs="24">
-            <el-form
-              ref="ruleFormRef"
-              :model="form"
-              label-width="200px"
-              class="form-contact-main fontf4 font-size18"
-              :label-position="'top'"
-              :rules="rules"
-              status-icon
-            >
+            <el-form ref="ruleFormRef" :model="form" label-width="200px" class="form-contact-main fontf4 font-size18"
+              :label-position="'top'" :rules="rules" status-icon>
               <!-- @submit.prevent="sendEmail" -->
               <el-row :gutter="20">
                 <el-col :span="12" :xs="24">
@@ -171,46 +115,32 @@
                 </el-col>
                 <el-col :span="12" :xs="24">
                   <el-form-item label="Last Name" required prop="last_name">
-                    <el-input v-model="form.last_name" /> </el-form-item
-                ></el-col>
+                    <el-input v-model="form.last_name" /> </el-form-item></el-col>
               </el-row>
               <el-row :gutter="20">
                 <el-col :span="12" :xs="24">
                   <el-form-item label="Company" required prop="company">
-                    <el-input v-model="form.company" /> </el-form-item
-                ></el-col>
+                    <el-input v-model="form.company" /> </el-form-item></el-col>
                 <el-col :span="12" :xs="24">
                   <el-form-item label="Title" required prop="title">
-                    <el-input v-model="form.title" /> </el-form-item
-                ></el-col>
+                    <el-input v-model="form.title" /> </el-form-item></el-col>
               </el-row>
               <el-row :gutter="20">
                 <el-col :span="12" :xs="24">
                   <el-form-item label="Email" required prop="email">
-                    <el-input v-model="form.email" /> </el-form-item
-                ></el-col>
+                    <el-input v-model="form.email" /> </el-form-item></el-col>
                 <el-col :span="12" :xs="24">
                   <el-form-item label="Phone Number" required prop="phone">
-                    <el-input v-model="form.phone" /> </el-form-item></el-col
-              ></el-row>
+                    <el-input v-model="form.phone" /> </el-form-item></el-col></el-row>
               <el-form-item label="Inquired Items">
-                <el-input
-                  v-model="form.inquired_item"
-                  type="textarea"
-                  :rows="5"
-                  readonly
-                />
+                <el-input v-model="form.inquired_item" type="textarea" :rows="5" readonly />
               </el-form-item>
               <el-form-item label="Comments">
                 <el-input v-model="form.comment" type="textarea" :rows="5" />
               </el-form-item>
               <el-form-item>
-                <el-button
-                  :loading="loading"
-                  round
-                  class="btn-a font-size18 fontf7"
-                  @click.prevent="sendEmail(ruleFormRef)"
-                >
+                <el-button :loading="loading" round class="btn-a font-size18 fontf7"
+                  @click.prevent="sendEmail(ruleFormRef)">
                   Submit
                 </el-button>
               </el-form-item>
@@ -377,11 +307,13 @@ const sendEmail = async (formEl: FormInstance | undefined) => {
 .my-slide-visible {
   margin-right: 10px;
 }
+
 .Insights-wrap {
   .read-more {
     justify-content: flex-start;
     margin-top: 20px;
   }
+
   .btn-a {
     width: 255px;
     text-align: center;
@@ -391,9 +323,11 @@ const sendEmail = async (formEl: FormInstance | undefined) => {
     justify-content: center;
   }
 }
-.el-checkbox{
+
+.el-checkbox {
   font-size: inherit !important;
 }
+
 // .el-checkbox__label {
 // }
 .check-txt :deep(.el-checkbox__label) {
@@ -402,15 +336,18 @@ const sendEmail = async (formEl: FormInstance | undefined) => {
   font-size: inherit !important;
   // font-size: 18px;
 }
+
 .form-contact-main :deep(.el-form-item__label) {
   color: #747475;
   // font-family: "puhuiti-2-45";
   font-size: inherit !important;
 }
+
 .check-txt :deep(.el-checkbox__input.is-checked .el-checkbox__inner) {
   background-color: #1f757b;
   border-color: #1f757b;
 }
+
 .btn-a {
   color: #fff;
 }
