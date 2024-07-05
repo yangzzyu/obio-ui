@@ -71,7 +71,12 @@
   font-weight: normal;
   font-style: normal;
 }
-
+@font-face {
+  font-family: SegoeUI;
+  src: url("../assets/Fonts/Segoe UI.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: "puhuiti-2-45", "Segoe UI", "Lucida Grande", Helvetica, Arial,
     SimSun, FreeSans, Arimo, "Droid Sans", "Hiragino Sans GB",
@@ -158,6 +163,9 @@ li {
 }
 .fontf9 {
   font-family: "puhuiti-2-115";
+}
+.SegoeUI {
+  font-family: "SegoeUI";
 }
 
 /*.fontf10 {

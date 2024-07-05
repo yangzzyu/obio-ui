@@ -73,77 +73,89 @@
     <section id="productions" class="productions-list">
       <el-col :xs="22" :sm="20" :md="20" :lg="20" :xl="22" style="margin: auto" class="container">
         <h1 class="p-title font-size50 txt-bold fontf8 mb-3 mt-5">Inquiry</h1>
-          <h2 class="title-color font-size18 txt-bold fontf7">
-            CDMO Solutions
-          </h2>
-          <el-checkbox-group v-model="form.cdmo" @change="changeCdmo" class="check-txt fontf4 font-size18" style="
+        <h2 class="title-color font-size18 txt-bold fontf7">
+          CDMO Solutions
+        </h2>
+        <el-checkbox-group v-model="form.cdmo" @change="changeCdmo" class="check-txt fontf4 font-size18" style="
               display: flex;
               flex-flow: column nowrap;
               align-items: flex-start;
             ">
-            <el-checkbox value="GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO"
-              label="GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO">
-              GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO
-            </el-checkbox>
-            <el-checkbox value="CELL THERAPY CDMO SOLUTIONS" label="CELL THERAPY CDMO SOLUTIONS">
-              CELL THERAPY CDMO SOLUTIONS
-            </el-checkbox>
-            <el-checkbox value="ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS" label="ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS">
-              ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS
-            </el-checkbox>
-            <el-checkbox value="iPSC CDMO SERVICES" label="iPSC CDMO SERVICES">
-              iPSC CDMO SERVICES
-            </el-checkbox>
-            <el-checkbox value="PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS"
-              label="PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS">
-              PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS
-            </el-checkbox>
-            <el-checkbox value="LENTIVIRAL VECTOR CDMO SOLUTIONS" label="LENTIVIRAL VECTOR CDMO SOLUTIONS">
-              LENTIVIRAL VECTOR CDMO SOLUTIONS
-            </el-checkbox>
-            <el-checkbox value="ONCOLYTIC VIRUS CDMO SOLUTIONS" label="ONCOLYTIC VIRUS CDMO SOLUTIONS">
-              ONCOLYTIC VIRUS CDMO SOLUTIONS
-            </el-checkbox>
-            <el-checkbox value="mRNA CDMO SOLUTIONS" label="mRNA CDMO SOLUTIONS">
-              mRNA CDMO SOLUTIONS
-            </el-checkbox>
-            <el-checkbox value="EXOSOME CDMO SOLUTIONS" label="EXOSOME CDMO SOLUTIONS">
-              EXOSOME CDMO SOLUTIONS
-            </el-checkbox>
-            <el-checkbox value="CAR-T CDMO SOLUTIONS" label="CAR-T CDMO SOLUTIONS">
-              CAR-T CDMO SOLUTIONS
-            </el-checkbox>
-            <el-checkbox value="NK CELL CDMO SOLUTIONS" label="NK CELL CDMO SOLUTIONS">
-              NK CELL CDMO SOLUTIONS
-            </el-checkbox>
-          </el-checkbox-group>
-          <br>
-          <h2 class="title-color font-size18 txt-bold fontf7">
-            Laboratory Sciences
-          </h2>
-          <el-checkbox-group v-model="form.laboratory" @change="changeLaboratory" class="check-txt fontf4 font-size18"
-            style="
+          <el-checkbox value="GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO"
+            label="GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO">
+            GENE AND CELL THERAPY CDMO SOLUTIONS AT OBiO
+          </el-checkbox>
+          <el-checkbox value="CELL THERAPY CDMO SOLUTIONS" label="CELL THERAPY CDMO SOLUTIONS">
+            CELL THERAPY CDMO SOLUTIONS
+          </el-checkbox>
+          <el-checkbox value="ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS" label="ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS">
+            ADENO-ASSOCIATED VIRUS CDMO SOLUTIONS
+          </el-checkbox>
+          <el-checkbox value="iPSC CDMO SERVICES" label="iPSC CDMO SERVICES">
+            iPSC CDMO SERVICES
+          </el-checkbox>
+          <el-checkbox value="PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS"
+            label="PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS">
+            PHASE-APPROPRIATE PLASMID CDMO SOLUTIONS
+          </el-checkbox>
+          <el-checkbox value="LENTIVIRAL VECTOR CDMO SOLUTIONS" label="LENTIVIRAL VECTOR CDMO SOLUTIONS">
+            LENTIVIRAL VECTOR CDMO SOLUTIONS
+          </el-checkbox>
+          <el-checkbox value="ONCOLYTIC VIRUS CDMO SOLUTIONS" label="ONCOLYTIC VIRUS CDMO SOLUTIONS">
+            ONCOLYTIC VIRUS CDMO SOLUTIONS
+          </el-checkbox>
+          <el-checkbox value="mRNA CDMO SOLUTIONS" label="mRNA CDMO SOLUTIONS">
+            mRNA CDMO SOLUTIONS
+          </el-checkbox>
+          <el-checkbox value="EXOSOME CDMO SOLUTIONS" label="EXOSOME CDMO SOLUTIONS">
+            EXOSOME CDMO SOLUTIONS
+          </el-checkbox>
+          <el-checkbox value="CAR-T CDMO SOLUTIONS" label="CAR-T CDMO SOLUTIONS">
+            CAR-T CDMO SOLUTIONS
+          </el-checkbox>
+          <el-checkbox value="NK CELL CDMO SOLUTIONS" label="NK CELL CDMO SOLUTIONS">
+            NK CELL CDMO SOLUTIONS
+          </el-checkbox>
+        </el-checkbox-group>
+        <br>
+        <h2 class="title-color font-size18 txt-bold fontf7">
+          scientific services
+        </h2>
+        <el-checkbox-group v-model="form.laboratory" @change="changeLaboratory" class="check-txt fontf4 font-size18"
+          style="
               display: flex;
               flex-flow: column nowrap;
               align-items: flex-start;
             ">
-            <el-checkbox value="AAV PACKAGING SERVICES" label="AAV PACKAGING SERVICES">
-              AAV PACKAGING SERVICES
-            </el-checkbox>
-            <el-checkbox value="LENTIVIRUS PACKAGING SERVICES" label="LENTIVIRUS PACKAGING SERVICES">
-              LENTIVIRUS PACKAGING SERVICES
-            </el-checkbox>
-            <el-checkbox value="AAV-Lung X AAV-Lung M3" label="AAV-Lung X AAV-Lung M3">
-              AAV-Lung X AAV-Lung M3
-            </el-checkbox>
-            <el-checkbox value="AAVneO + AAVMeta Platform" label="AAVneO + AAVMeta Platform">
-              AAVneO + AAVMeta Platform
-            </el-checkbox>
-            <el-checkbox value="Off-the-Shelf AAV PRODUCTS" label="Off-the-Shelf AAV PRODUCTS">
-              Off-the-Shelf AAV PRODUCTS
-            </el-checkbox>
-          </el-checkbox-group>
-          <br>
+          <el-checkbox value="Plasmid & siRNA" label="Plasmid & siRNA">
+            Plasmid & siRNA
+          </el-checkbox>
+          <el-checkbox value="Adeno-associated Virus" label="Adeno-associated Virus">
+            Adeno-associated Virus
+          </el-checkbox>
+          <el-checkbox value="Adenovirus" label="Adenovirus">
+            Adenovirus
+          </el-checkbox>
+          <el-checkbox value="Lentivirus" label="Lentivirus">
+            Lentivirus
+          </el-checkbox>
+          <el-checkbox value="off-the-shelf-AAV products" label="off-the-shelf-AAV products">
+            off-the-shelf-AAV products
+          </el-checkbox>
+          <el-checkbox value="CRISPR Library Servics" label="CRISPR Library Servics">
+            CRISPR Library Servics
+          </el-checkbox>
+          <el-checkbox value="Cell Experimental" label="Cell Experimental">
+            Cell Experimental
+          </el-checkbox>
+          <el-checkbox value="Animal Experimental" label="Animal Experimental">
+            Animal Experimental
+          </el-checkbox>
+          <el-checkbox value="Reagents" label="Reagents">
+            Reagents
+          </el-checkbox>
+        </el-checkbox-group>
+        <br>
         <el-row>
           <el-col :span="24" :xs="24">
             <el-form ref="ruleFormRef" :model="form" label-width="200px" class="form-contact-main font-size18 fontf4"
