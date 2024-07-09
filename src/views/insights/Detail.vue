@@ -2,7 +2,7 @@
  * @Author: yangyu 1431330771@qq.com
  * @Date: 2024-01-18 08:59:26
  * @LastEditors: yangyu 1431330771@qq.com
- * @LastEditTime: 2024-06-21 14:37:08
+ * @LastEditTime: 2024-07-09 09:45:45
  * @FilePath: \obio-ui\src\views\AboutView.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -19,7 +19,7 @@
     style="margin: auto"
     class="container"
   >
-    <div class="pub-title pub-title-p">
+    <div class="pub-title pub-title-p mb-5 mt-5">
       <i class="line"></i>
       <span class="fontf8 font-size30 font-color-ts">{{ newsItem.title }}</span>
       <div class="font-size18">
@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <div v-html="newsItem.content"></div>
+    <div class="auto-wrap mb-2" v-html="newsItem.content"></div>
   </el-col>
   <Events />
 </template>
@@ -97,5 +97,9 @@ onMounted(() => {
 <style scoped>
 .pub-title-p {
   height: auto !important;
+}
+
+.auto-wrap {
+  word-wrap: break-word;
 }
 </style>
