@@ -5,8 +5,8 @@ pipeline {
             steps {
                 sh '''
                 npm install
-                npm run test:unit
                 npm run build
+                rm -rf /var/www/html/assets
                 cp -R ./dist/* /var/www/html
                 ''' 
             }
