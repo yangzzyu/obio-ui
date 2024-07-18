@@ -1,36 +1,20 @@
 <template>
-<div class="float-btn">
-  <router-link
-    to="/insight/inquiry"
-    class="btn1 btn-i txt-bold font-size24 fontf7"
-    data-animation="animated bounceInUp"
-    >Request Now</router-link
-  >
-  <!--
+  <div class="float-btn">
+    <router-link to="/insight/inquiry" class="btn1 btn-i txt-bold font-size24 fontf7"
+      data-animation="animated bounceInUp">Request Now</router-link>
+    <!--
   <a href="/insight/inquiry" style="color:#12d7d5;" >
     <font-awesome-icon :icon="['fas', 'fa-comment-dots']" style="font-size: 50px; z-index: 999999;"/>
     <div style="font-size:20px; font-weight:bold;">REQUEST NOW</div>
   </a>  
   -->
-</div>
+  </div>
   <div class="foot-wrap">
-    <el-col
-      :xs="24"
-      :sm="16"
-      :md="18"
-      :lg="18"
-      :xl="18"
-      class="container"
-      style="margin: 0 auto"
-    >
+    <el-col :xs="24" :sm="16" :md="18" :lg="20" :xl="22" class="container" style="margin: 0 auto">
       <div class="link-list">
         <div class="link-list-i">
           <div class="foot-log">
-            <img
-              :src="handleViteImages('footer_logo.png')"
-              alt="OBiO Tech, Inc."
-              style="max-width: 250px;"
-            />
+            <img :src="handleViteImages('footer_logo.png')" alt="OBiO Tech, Inc." />
           </div>
 
           <dl class="dl-foot-nav">
@@ -44,11 +28,15 @@
             </dd>
 
             <dt class="font-size14">
-              <b>Phone:</b> 408-422-9864
+              <!-- <b>Phone:</b> 408-422-9864
+              <br /> -->
+              <b>Email:</b> bd@obiosh.com
+               <!-- obio.us@obiosh.com -->
               <br />
-              <b>Email:</b> obio.us@obiosh.com
+              <b>Address:</b> 132 Charles Street, Suite 202,
+              <br /> Auburndale, MA 02466
             </dt>
-            
+
           </dl>
         </div>
         <div class="link-list-i">
@@ -80,9 +68,7 @@
         <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/capability"
-                >Capability</router-link
-              >
+              <router-link to="/capability">Capability</router-link>
             </dt>
             <dd class="font-size14">
               <router-link to="/capability/whyus">
@@ -134,7 +120,11 @@
             <dt class="font-size20 first-tit">
               <router-link to="/cro">CRO</router-link>
             </dt>
-            <dd></dd>
+            <!-- <dd>{{ publicListData }}</dd> -->
+            <!-- router.push('/service-details/' + item?.children?.[0]?.id) -->
+            <dd class="font-size14" v-for="item in publicListData" :key="item.id">
+              <router-link :to="'/service-details/' + item?.children?.[0]?.id">{{ item.title }}</router-link>
+            </dd>
           </dl>
         </div>
         <div class="link-list-i">
@@ -152,18 +142,14 @@
               <router-link to="/insight/inquiry">Inquiry</router-link>
             </dd>
             <dd class="font-size14">
-              <a href="https://www.obiosh.com/tzz/gg/" target="_blank"
-                >Partnerships</a
-              >
+              <a href="https://www.obiosh.com/tzz/gg/" target="_blank">Partnerships</a>
             </dd>
           </dl>
         </div>
         <div class="link-list-i">
           <dl class="dl-foot-nav">
             <dt class="font-size20 first-tit">
-              <router-link to="/careers"
-                >Careers</router-link
-              >
+              <router-link to="/careers">Careers</router-link>
             </dt>
             <dd class="font-size14">
               <router-link to="/careers/culture">Our Culture</router-link>
@@ -183,14 +169,9 @@
       </div>
       <div class="foot-link ub">
         <a href="https://www.linkedin.com/company/41870372" aria-label="Company LinkedIn">
-          <font-awesome-icon
-            class="footer-icon"
-            size="2xl"
-            :icon="['fab', 'linkedin']"
-        /></a>
+          <font-awesome-icon class="footer-icon" size="2xl" :icon="['fab', 'linkedin']" /></a>
         <a href="https://www.youtube.com/@obiotechnology" aria-label="Company YouTube">
-          <font-awesome-icon class="footer-icon" size="2xl" :icon="['fab', 'youtube']"
-        /></a>
+          <font-awesome-icon class="footer-icon" size="2xl" :icon="['fab', 'youtube']" /></a>
         <a href="https://www.facebook.com/profile.php?id=61555811491695" aria-label="Company Facebook">
           <font-awesome-icon class="footer-icon" size="2xl" :icon="['fab', 'facebook']" />
         </a>
@@ -204,12 +185,17 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, computed } from "vue";
 import { handleViteImages } from "@/utils";
 import "wow.js/css/libs/animate.css";
 import WOW from "wow.js";
 import { useRouter } from "vue-router";
+import { servicesStore } from '@/stores/Services'
 
+
+const setServicesStore = servicesStore()
+
+const publicListData = computed(() => setServicesStore?.publicListData)
 const router = useRouter();
 type ConcatItem = {
   name: string;
@@ -240,7 +226,7 @@ onMounted(() => {
     offset: 0,
     mobile: true,
     live: true,
-    callback: function (box) {},
+    callback: function (box) { },
     scrollContainer: null,
     resetAnimation: true,
   });
@@ -254,13 +240,14 @@ h2 {
   font-weight: 400;
   font-variant: normal;
 }
+
 .float-btn {
   position: fixed;
   text-align: center;
   z-index: 999999;
   flex-wrap: wrap-reverse;
   flex-direction: row-reverse;
-  bottom:50px;
+  bottom: 50px;
   right: 50px;
 
   .btn-i {
@@ -270,6 +257,7 @@ h2 {
     cursor: pointer;
     color: #fff;
   }
+
   .btn-i:hover {
     background: #fff;
     color: #1f757b;
@@ -417,7 +405,7 @@ h2 {
       padding-left: 0;
     }
 
-    .focus_us div:last-of-type > span {
+    .focus_us div:last-of-type>span {
       margin-right: 0;
     }
 
@@ -442,16 +430,22 @@ h2 {
     height: 80px;
     margin-bottom: 10px;
   }
+
   //margin-left: 30px;
 }
+
 .foot-log {
   margin-bottom: 20px;
 }
+
 .link-list {
   display: grid;
-  grid-template-columns: repeat(8, auto); /* 设置8列 */
-  gap: 10px; /* 添加间距（可选）*/
+  grid-template-columns: repeat(8, auto);
+  /* 设置8列 */
+  gap: 10px;
+  /* 添加间距（可选）*/
 }
+
 .foot-link {
   justify-content: end;
 }
