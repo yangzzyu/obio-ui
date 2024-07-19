@@ -22,7 +22,7 @@
             <dd class="link-list-i">
               <dl class="dl-foot-nav">
                 <dt class="font-size20 first-tit">
-                  <router-link to="/contact">CONTACT</router-link>
+                  <router-link to="/insight/inquiry">CONTACT</router-link>
                 </dt>
               </dl>
             </dd>
