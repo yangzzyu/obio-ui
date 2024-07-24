@@ -28,6 +28,7 @@ export function sendMail(data) {
     return request({
         url: `/cms/inquiry/save`,
         method: "post",
+		timeout: 1000 * 60 * 3, //3分钟
         data:data
     });
 }
