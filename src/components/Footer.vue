@@ -14,7 +14,7 @@
       <div class="link-list">
         <div class="link-list-i">
           <div class="foot-log">
-            <img :src="handleViteImages('footer_logo.png')" alt="OBiO Tech, Inc." />
+            <img :src="handleViteImages('footer_logo.png')" alt="OBiO Tech, Inc." style="max-width: 250px;"/>
           </div>
 
           <dl class="dl-foot-nav">
@@ -28,13 +28,7 @@
             </dd>
 
             <dt class="font-size14">
-              <!-- <b>Phone:</b> 408-422-9864
-              <br /> -->
               <b>Email:</b> bd@obiosh.com
-               <!-- obio.us@obiosh.com -->
-              <br />
-              <b>Address:</b> 132 Charles Street, Suite 202,
-              <br /> Auburndale, MA 02466
             </dt>
 
           </dl>
